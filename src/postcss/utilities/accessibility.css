@@ -1,0 +1,23 @@
+/*
+
+  utilities/accessibility
+
+*/
+
+
+/* Screen Reader Visibility */
+
+@define-mixin visible-for-screen-readers {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  margin: -1px;
+  padding: 0;
+}
+
+.visible-for-screen-readers {
+  @mixin visible-for-screen-readers;
+}

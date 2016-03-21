@@ -1,0 +1,29 @@
+//- ================
+//- Search Block
+//- ================
+
+form(
+  method="get"
+  action="#"
+  role="search"
+  class="site-search"
+)
+  label(
+    for="site-search-input"
+    class="visible-for-screen-readers"
+  ) Search this site for:
+  input(
+    type="text"
+    placeholder="Search"
+    value=""
+    aria-required="true"
+    required
+    name="site-search-input"
+    class="site-search-input"
+  )
+  button(
+    type="submit"
+    title="Query search"
+    aria-label="Query search"
+    class="site-search-button"
+  )

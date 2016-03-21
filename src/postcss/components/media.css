@@ -1,0 +1,49 @@
+/*
+
+  components/media
+
+*/
+
+
+/* ================
+// Common Media
+// ============= */
+
+img,
+svg,
+video,
+canvas {
+  height: auto;
+  max-width: 100%;
+}
+
+
+/* ================
+// Images
+// ============= */
+
+img {
+  display: block;
+}
+
+
+/* ================
+// Figure
+// ============= */
+
+figure {
+  margin: 0;
+}
+
+  figcaption {}
+
+
+/* ================
+// Iframes
+// ============= */
+
+iframe {
+  max-width: 100%;
+  width: 100%;
+  border: 0;
+}

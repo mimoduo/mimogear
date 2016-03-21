@@ -1,0 +1,36 @@
+/*
+
+  components/logo
+
+*/
+
+
+/* ================
+// Site Logo Anchor
+// ============= */
+
+/* Use if the site logo is image based */
+
+.site-logo {
+  display: block;
+  overflow: hidden;
+  background-image: url("");
+  background-position: 50% 50%;
+  background-size: contain;
+  color: transparent;
+
+  &:hover {
+    color: transparent;
+  }
+
+}
+
+/* Use if the site logo is text based */
+
+.site-link {
+  display: block;
+  text-decoration: none;
+
+  &:hover {}
+
+}

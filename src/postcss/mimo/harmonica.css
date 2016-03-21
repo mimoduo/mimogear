@@ -1,0 +1,53 @@
+/*
+
+  mimo/harmonica
+    http://codepen.io/mimoduo/pen/epZaMq
+
+*/
+
+
+/* ================
+// Harmonica
+// ============= */
+
+/* When do accordions become harmonicas? */
+$accordion-to-harmonica: 900px;
+
+.harmonica {
+
+  @media(min-width: $accordion-to-harmonica) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+}
+
+  .harmonica-header {
+    cursor: pointer;
+
+    @media(min-width: $accordion-to-harmonica) {
+      flex: 1 auto;
+      order: 1;
+    }
+
+    &:hover {}
+
+    &.active {
+
+      & + * {
+        display: block;
+      }
+
+    }
+
+  }
+
+  .harmonica-content {
+    display: none;
+
+    @media(min-width: $accordion-to-harmonica) {
+      order: 2;
+      width: 100%;
+    }
+
+  }

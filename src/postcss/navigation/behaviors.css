@@ -1,0 +1,31 @@
+/*
+
+  navigation/behaviors
+
+*/
+
+
+/* ================
+// Generic Navigation/Menu Behaviors
+// ============= */
+
+nav,
+menu {
+
+  & ul {
+    @mixin list-reset;
+  }
+
+    & a {
+      display: block;
+
+      &:hover {}
+
+    }
+
+}
+
+
+/* ================
+// Generic Dropdown Behaviors
+// ============= */

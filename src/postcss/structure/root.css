@@ -1,0 +1,34 @@
+/*
+
+  structure/root
+
+*/
+
+
+/* ================
+// Universal Structure
+// ============= */
+
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+/* ================
+// html & body
+// ============= */
+
+html {
+  font-family: $sansSerif;
+}
+
+  body {
+    font-size: em($bodySize, 16);
+    line-height: nu($bodyLine, $bodySize);
+  }

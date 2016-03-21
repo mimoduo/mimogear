@@ -1,0 +1,19 @@
+//- ================
+//- Address Block
+//- ================
+
+.vcard(
+  itemscope
+  itemtype="http://schema.org/Organization"
+)
+  .org(itemprop="name") Organization
+  a.email(
+    href="mailto:organization@gmail.com"
+    itemprop="email"
+  ) organization@gmail.com
+  .adr
+    .street-address(itemprop="streetAddress") 82 West Pegasus St.
+    span.locality(itemprop="addressLocality") Washington
+    span.region(itemprop="addressRegion") MA
+    span.postal-code(itemprop="postalCode") 480124
+  .tel(itemprop="telephone") 428-242-2020

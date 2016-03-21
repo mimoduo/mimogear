@@ -1,0 +1,19 @@
+/*
+
+  components/sprite
+
+*/
+
+
+/* ================
+// Symbols
+// ============= */
+
+.symbol {
+
+  &-logo {
+    height: em(100);
+    width: em(150);
+  }
+
+}

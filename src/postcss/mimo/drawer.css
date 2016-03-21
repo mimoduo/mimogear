@@ -1,0 +1,111 @@
+/*
+
+  mimo/drawer
+    http://codepen.io/mimoduo/pen/kuobi
+
+*/
+
+
+/* ================
+// Drawer Mixin
+// ============= */
+
+@define-mixin drawer $transform-intensity: 20% {
+  position: absolute;
+  min-height: 100%;
+  width: 100%;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate($transform-intensity * -1, 0);
+  transform: translate3d($transform-intensity * -1, 0, 0);
+}
+
+@define-mixin active-drawer {
+  pointer-events: auto;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+
+/* ================
+// Drawer
+// ============= */
+
+.drawer {
+  @mixin drawer;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  max-width: em(500);
+  background: #fff;
+}
+
+  .drawer-active .drawer {
+    @mixin active-drawer;
+  }
+
+
+/* ================
+// Drawer Trigger
+// ============= */
+
+/* Define the total trigger height and width */
+$trigger-dimension: 60;
+
+/* Define the height of each stripe */
+$stripe-height: 2;
+
+/* Define the space between each stripe */
+$stripe-space: 2;
+
+/* Define the color of every stripe */
+$stripe-color: #000;
+
+.drawer-trigger {
+  height: em($trigger-dimension);
+  width: em($trigger-dimension);
+  cursor: pointer;
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: em($stripe-height);
+    width: em(20);
+    content: '';
+    background: $stripe-color;
+    transform: translate(-50%, -50%);
+    transition:
+      background .4s,
+      box-shadow .4s,
+      margin .4s,
+      transform .4s;
+  }
+
+  &:before {
+    margin-top: em(-4);
+  }
+
+  &:after {
+    box-shadow: 0 em(4) 0 0 $stripe-color;
+  }
+
+}
+
+  .drawer-active .drawer-trigger:before {
+    margin-top: 0;
+    transform:
+      translate(-50%, -50%)
+      rotate(-45deg);
+  }
+
+  .drawer-active .drawer-trigger:after {
+    box-shadow: 0 0 0 0 transparent;
+    transform:
+      translate(-50%, -50%)
+      rotate(45deg);
+  }

@@ -1,0 +1,18 @@
+/*
+
+  utilities/clear
+
+*/
+
+
+/* Clear */
+
+@define-mixin clear {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+.clear:after {
+  @mixin clear;
+}

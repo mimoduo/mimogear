@@ -1,0 +1,23 @@
+/*
+
+  utilities/font-face
+
+*/
+
+
+/* Font Face */
+
+@define-mixin font-face $name $style: normal $weight: normal {
+
+  @font-face {
+    font-family: "#{$name}";
+    font-style: $style;
+    font-weight: $weight;
+    src: url("../fonts/#{$name}.eot") format("eot"),
+         url("../fonts/#{$name}.woff2") format("woff2"),
+         url("../fonts/#{$name}.woff") format("woff"),
+         url("../fonts/#{$name}.ttf") format("truetype"),
+         url("../fonts/#{$name}.svg##{$name}") format("svg");
+  }
+
+}

@@ -1,0 +1,43 @@
+/*
+
+  components/buttons
+
+*/
+
+
+/* ================
+// Generic Buttons
+// ============= */
+
+.button {
+  display: inline-block;
+  vertical-align: top;
+  border: 0;
+  margin: 0 em(10) em(10) 0;
+  padding: em(10) em(20);
+  cursor: pointer;
+  text-align: center;
+  transition:
+    border .2s,
+    background .2s,
+    box-shadow .2s,
+    color .2s,
+    transform .2s;
+
+  &:hover {}
+
+  &:active {}
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+
+}
+
+/* Extended Button */
+
+.button-modifier {}
+
+/* HTML Button */
+
+button {}

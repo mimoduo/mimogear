@@ -1,0 +1,106 @@
+/*
+
+  components/html
+
+*/
+
+
+/* ================
+// Anchors
+// ============= */
+
+a {
+
+  &:hover {}
+
+  &:visited {}
+
+}
+
+
+/* ================
+// Blockquote / Cite
+// ============= */
+
+blockquote {
+  margin: em(20);
+
+  &:before {
+    content: '\201C';
+  }
+
+  &:after {
+    content: '\201D';
+  }
+
+}
+
+cite {
+  margin: em(20);
+  font-style: normal;
+
+  &:before {
+    content: '';
+  }
+
+}
+
+
+/* ================
+// Lists
+// ============= */
+
+ul {}
+
+ol {}
+
+  li {}
+
+dl {}
+
+  dt {}
+
+  dd {}
+
+
+/* ================
+// Paragraphs
+// ============= */
+
+p {
+  margin: em(20) 0;
+}
+
+
+/* ================
+// Table
+// ============= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: em(20) 0;
+}
+
+  tr {
+
+    &:nth-of-type(odd) td {
+      background: rgba(0, 0, 0, .025);
+    }
+
+  }
+
+    th,
+    td {
+      vertical-align: top;
+    }
+
+    th {
+      padding: em(20) rem(20);
+      font-weight: normal;
+      text-align: left;
+    }
+
+    td {
+      padding: em(20);
+    }

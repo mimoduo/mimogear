@@ -1,0 +1,37 @@
+{
+  "auto_complete": true,
+  "auto_complete_commit_on_tab": true,
+  "auto_complete_with_fields": true,
+  "bold_folder_labels": true,
+  "caret_style": "phase",
+  "color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+  "default_encoding": "UTF-8",
+  "detect_indentation": true,
+  "draw_white_space": "all",
+  "ensure_newline_at_eof_on_save": true,
+  "fade_fold_buttons": true,
+  "folder_exclude_patterns": [
+    ".svn",
+    ".git",
+    ".hg",
+    "CVS",
+    "tmp",
+    ".bundle",
+    ".sass-cache"
+  ],
+  "font_size": 22,
+  "highlight_line": true,
+  "highlight_modified_tabs": true,
+  "ignored_packages": [
+    "Vintage"
+  ],
+  "material_theme_contrast_mode": true,
+  "rulers": [
+    80
+  ],
+  "tab_size": 2,
+  "theme": "Material-Theme.sublime-theme",
+  "translate_tabs_to_spaces": true,
+  "trim_trailing_white_space_on_save": true,
+  "word_wrap": true
+}

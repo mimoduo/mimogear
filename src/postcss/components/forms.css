@@ -1,0 +1,69 @@
+/*
+
+  components/forms
+
+*/
+
+
+/* ================
+// Form Container
+// ============= */
+
+form {}
+
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+
+/* ================
+// Input
+// ============= */
+
+input {
+
+  &:default {}
+
+  &:disabled {}
+
+  &:checked {}
+
+}
+
+[type='text'] {}
+
+[type='radio'] {}
+
+[type='checkbox'] {}
+
+[type='range'] {}
+
+
+/* ================
+// Textarea
+// ============= */
+
+textarea {}
+
+
+/* ================
+// Label
+// ============= */
+
+label {}
+
+
+/* ================
+// Placeholder
+// ============= */
+
+::placeholder {}
+
+
+/* ================
+// Select
+// ============= */
+
+select {}

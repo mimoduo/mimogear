@@ -1,0 +1,61 @@
+/*
+
+  mimo/lantern
+    http://codepen.io/mimoduo/pen/EPerjv
+
+*/
+
+
+/* ================
+// Lantern
+// ============= */
+
+.lantern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity .3s,
+    visibility .3s;
+}
+
+.display-lantern {
+  opacity: 1;
+  visibility: visible;
+}
+
+  .lantern-content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+    /* Lantern Image Container */
+    .lantern-holder {
+      position: relative;
+      top: 50%;
+      display: block;
+      max-height: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      transform: translate(0, -50%);
+    }
+
+    /* Lantern User Controls */
+    .lantern-control {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    .lantern-previous {
+      left: 0;
+    }
+
+    .lantern-next {
+      right: 0;
+    }

@@ -1,0 +1,19 @@
+/*
+
+  mimo/collage
+    http://codepen.io/mimoduo/pen/VYwamv
+
+*/
+
+
+/* ================
+// Collage
+// ============= */
+
+.collage {
+
+  & li {
+    position: absolute;
+  }
+
+}

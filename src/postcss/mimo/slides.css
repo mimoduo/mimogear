@@ -1,0 +1,84 @@
+/*
+
+  mimo/slides
+    http://codepen.io/mimoduo/pen/gabWmN
+
+*/
+
+
+/* ================
+// Swift Slide
+// ============= */
+
+.swift-slide {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+
+  & li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity .4s,
+      visibility .4s,
+      transform .4s;
+
+    &.active {
+      position: relative;
+      pointer-events: auto;
+      opacity: 1;
+      visibility: visible;
+    }
+
+  }
+
+}
+
+
+/* ================
+// Swift Controls
+// ============= */
+
+.swift-controls {
+  user-select: none;
+
+  & button {
+    outline: 0;
+
+    /* Previous Button */
+    &:first-child {}
+
+    /* Next Button */
+    &:last-child {}
+
+    &:hover {}
+
+  }
+
+}
+
+
+/* ================
+// Swift Pager
+// ============= */
+
+.swift-pager {
+  user-select: none;
+
+  & span {
+    display: inline-block;
+    cursor: pointer;
+
+    &:hover {}
+
+    &.active {}
+
+  }
+
+}

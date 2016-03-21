@@ -1,0 +1,18 @@
+/*
+
+  utilities/compartment
+
+*/
+
+
+/* Compartment */
+
+@define-mixin compartment $max-width: 1180 {
+  max-width: rem($max-width);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.compartment {
+  @mixin compartment;
+}
