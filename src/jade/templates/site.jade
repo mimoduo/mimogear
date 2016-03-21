@@ -16,10 +16,11 @@ html(
   body
     a(
       class="visible-for-screen-readers"
-      href="#main"
+      href="#site-main"
     ) Skip to main content
     figure.site-sprite(style="display: none;")
       include ../../../dist/svg/sprite.symbol.svg
     include ../regions/header.jade
-    block main
+    main.site-main#site-main(role="main")
+      block main
     include ../regions/footer.jade

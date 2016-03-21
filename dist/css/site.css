@@ -930,7 +930,6 @@ optgroup {
 [class*='flush'] {
     padding-right: 0;
     padding-left: 0;
-    width: 100%;
   }
 
 
@@ -1533,7 +1532,7 @@ h6, .h6 {
 
 h1,
 .h1 {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   line-height: 1.25;
 }
 
@@ -1543,7 +1542,7 @@ h1,
 
 h2,
 .h2 {
-  font-size: 2.1875em;
+  font-size: 2.1875rem;
   line-height: 1.2857142857142858;
 }
 
@@ -1553,7 +1552,7 @@ h2,
 
 h3,
 .h3 {
-  font-size: 1.875em;
+  font-size: 1.875rem;
   line-height: 1.3333333333333333;
 }
 
@@ -1563,7 +1562,7 @@ h3,
 
 h4,
 .h4 {
-  font-size: 1.5625em;
+  font-size: 1.5625rem;
   line-height: 1.4;
 }
 
@@ -1573,7 +1572,7 @@ h4,
 
 h5,
 .h5 {
-  font-size: 1.25em;
+  font-size: 1.25rem;
   line-height: 1.5;
 }
 
@@ -1583,7 +1582,7 @@ h5,
 
 h6,
 .h6 {
-  font-size: 1em;
+  font-size: 1rem;
   line-height: 1.375;
 }
 
@@ -1740,7 +1739,7 @@ th {
 
 
 td {
-      padding: 1.25em;
+      padding: 1.25em 1.25rem;
     }
 
 

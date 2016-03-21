@@ -102,5 +102,5 @@ table {
     }
 
     td {
-      padding: em(20);
+      padding: em(20) rem(20);
     }
