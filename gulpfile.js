@@ -15,7 +15,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     jade = require('gulp-jade'),
     postcss = require('gulp-postcss'),
-    cssCondense = require('gulp-css-condense');
+    cleanCss = require('gulp-clean-css'),
     rename = require('gulp-rename'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
@@ -93,7 +93,7 @@ gulp.task('postcss', function() {
     ]))
     .pipe(gulp.dest(site + 'css'))
     .pipe(browserSync.stream())
-    .pipe(cssCondense())
+    .pipe(cleanCss())
     .pipe(rename(function(path) {
       path.basename += '.min';
     }))
@@ -156,7 +156,7 @@ gulp.task('sprite', function() {
       mode: {
         inline: true,
         symbol: {
-          bust: true,
+          bust: false,
           dest: './'
         }
       },
