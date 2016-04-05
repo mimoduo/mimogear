@@ -156,9 +156,14 @@ gulp.task('sprite', function() {
       mode: {
         inline: true,
         symbol: {
-          bust: false,
+          bust: true,
           dest: './'
         }
+      },
+      svg: {
+        xmlDeclaration: false,
+        doctypeDeclaration: false,
+        dimensionAttributes: false
       }
     }))
     .pipe(gulp.dest(site))
