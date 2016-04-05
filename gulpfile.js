@@ -93,7 +93,10 @@ gulp.task('postcss', function() {
     ]))
     .pipe(gulp.dest(site + 'css'))
     .pipe(browserSync.stream())
-    .pipe(cleanCss())
+    .pipe(cleanCss({
+      keepSpecialComments: 0,
+      restructuring: false
+    }))
     .pipe(rename(function(path) {
       path.basename += '.min';
     }))
