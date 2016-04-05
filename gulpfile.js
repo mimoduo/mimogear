@@ -87,7 +87,7 @@ gulp.task('postcss', function() {
         }
       }),
       require('autoprefixer')({
-        browsers: ['last 8 versions'],
+        browsers: ['last 12 versions'],
         cascade: false
       })
     ]))
