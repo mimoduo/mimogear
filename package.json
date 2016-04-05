@@ -1,29 +1,29 @@
 {
-  "name": "MimoCollection",
-  "version": "2.0.1",
+  "name": "MimoGear",
+  "version": "2.0.2",
   "description": "A small library for building sites",
   "license": "BSD-2-Clause",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mimoduo/Mimo-Collection.git"
+    "url": "https://github.com/mimoduo/Mimo-Gear.git"
   },
   "devDependencies": {
-    "autoprefixer": "^6.2.3",
-    "browser-sync": "^2.11.0",
-    "gulp": "^3.9.0",
+    "autoprefixer": "^6.3.6",
+    "browser-sync": "^2.11.2",
+    "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
-    "gulp-cssnano": "^2.1.0",
+    "gulp-css-condense": "^1.1.2",
     "gulp-imagemin": "^2.4.0",
     "gulp-jade": "^1.1.0",
     "gulp-postcss": "^6.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-svg-sprite": "^1.2.18",
-    "gulp-uglify": "^1.5.1",
+    "gulp-svg-sprite": "^1.2.19",
+    "gulp-uglify": "^1.5.3",
     "postcss-functions": "^2.1.0",
-    "postcss-import": "^8.0.2",
-    "postcss-mixins": "^4.0.0",
-    "postcss-nesting": "^2.2.0",
-    "postcss-simple-grid": "^0.6.2",
+    "postcss-import": "^8.1.0",
+    "postcss-mixins": "^4.0.1",
+    "postcss-nesting": "^2.3.1",
+    "postcss-simple-grid": "^0.7.1",
     "postcss-simple-vars": "^1.2.0"
   }
 }
