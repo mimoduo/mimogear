@@ -683,16 +683,29 @@ optgroup {
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
-  -webkit-transform: translate(20% * -1, 0);
-  -ms-transform: translate(20% * -1, 0);
-  transform: translate(20% * -1, 0);
-  -webkit-transform: translate3d(20% * -1, 0, 0);
-  transform: translate3d(20% * -1, 0, 0);
-  top: 0;
+  -webkit-transform: translate(-20%, 0);
+  -ms-transform: translate(-20%, 0);
+  transform: translate(-20%, 0);
+  -webkit-transform: translate3d(-20%, 0, 0);
+  transform: translate3d(-20%, 0, 0);
+  top: 100%;
   left: 0;
   z-index: 200;
   max-width: 31.25em;
-  background: #fff;
+  -webkit-transition: opacity .3s,
+    visibility .3s,
+    -webkit-transform .3s;
+  transition: opacity .3s,
+    visibility .3s,
+    -webkit-transform .3s;
+  transition: opacity .3s,
+    visibility .3s,
+    transform .3s;
+  transition:
+    opacity .3s,
+    visibility .3s,
+    transform .3s,
+    -webkit-transform .3s;
 }
 
 
