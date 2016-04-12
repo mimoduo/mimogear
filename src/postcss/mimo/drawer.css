@@ -59,16 +59,12 @@
 /* Define the total trigger height and width */
 $trigger-dimension: 60;
 
-/* Define the height of each stripe */
-$stripe-height: 2;
-
-/* Define the space between each stripe */
-$stripe-space: 2;
-
 /* Define the color of every stripe */
 $stripe-color: #000;
 
 .drawer-trigger {
+  position: relative;
+  z-index: 400;
   height: em($trigger-dimension);
   width: em($trigger-dimension);
   cursor: pointer;
@@ -78,7 +74,7 @@ $stripe-color: #000;
     position: absolute;
     top: 50%;
     left: 50%;
-    height: em($stripe-height);
+    height: em(2);
     width: em(20);
     content: '';
     background: $stripe-color;

@@ -716,16 +716,12 @@ optgroup {
 /* Define the total trigger height and width */
 
 
-/* Define the height of each stripe */
-
-
-/* Define the space between each stripe */
-
-
 /* Define the color of every stripe */
 
 
 .drawer-trigger {
+  position: relative;
+  z-index: 400;
   height: 3.75em;
   width: 3.75em;
   cursor: pointer
@@ -920,16 +916,7 @@ optgroup {
 
 [class^='col-'] {
     float: left;
-    margin-bottom: 1.25em;
-    padding-right: 0.625em;
-    padding-left: 0.625em;
     width: 100%;
-  }
-
-
-[class*='flush'] {
-    padding-right: 0;
-    padding-left: 0;
   }
 
 

@@ -27,20 +27,20 @@
     </header>
     <main id="site-main" role="main" class="site-main">
       <div class="compartment">
-        <article role="listitem" itemscope itemtype="http://schema.org/NewsArticle">
-          <header>
-            <h4 itemprop="headline">Article Title</h4>
-            <time datetime="2010-08-07 11:11:03-0400">11:11</time>
+        <article role="listitem" itemscope itemtype="http://schema.org/NewsArticle" class="article">
+          <header class="article-header">
+            <h4 itemprop="headline" class="article-title">Article Title</h4>
+            <time itemprop="datePublished" datetime="2010-08-07 11:11:03-0400" class="article-byline">11:11</time>
           </header>
-          <div class="article-figure">
-            <figure><img alt="" src="" itemprop="image">
-              <figcaption>Image Caption</figcaption>
+          <div class="article-body">
+            <figure class="article-figure"><img alt="" src="" itemprop="image" class="article-image">
+              <figcaption class="article-image-caption">Image Caption</figcaption>
             </figure>
+            <div itemprop="description" class="article-description">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+            </div>
           </div>
-          <div itemprop="description" class="article-description">
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
-          </div>
-          <footer><a href="" itemprop="url">Read More</a></footer>
+          <footer class="article-footer"><a href="" itemprop="url" class="article-read-more">Read More</a></footer>
         </article>
         <table>
           <thead>

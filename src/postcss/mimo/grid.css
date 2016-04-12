@@ -16,15 +16,7 @@
 
   [class^='col-'] {
     float: left;
-    margin-bottom: em(20);
-    padding-right: em(10);
-    padding-left: em(10);
     width: 100%;
-  }
-
-  [class*='flush'] {
-    padding-right: 0;
-    padding-left: 0;
   }
 
   @media (min-width: 300px) {

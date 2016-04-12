@@ -1,6 +1,6 @@
 #Mimo Gear
 
-The primary intention of Mimo Gear is to provide a skeleton library for developers of any skill level to use as a simple start to any project. If a style doesn't exist in one project, it mustn't exist in a library.
+Mimo Gear is a light-weight skeleton library for developers of any skill level to use as a simple start to any project. If a style doesn't exist in one project, it mustn't exist in a library.
 
 ##Features
 
@@ -32,6 +32,7 @@ The primary intention of Mimo Gear is to provide a skeleton library for develope
 * Starter template
 * Well structured head element setup
 * Several frequently used starter blocks
+* Accessibility measures added onto jade blocks from: (https://github.com/nhall/Accessible-Components)
 * SVG symbol mixin
 
 ###JS Features

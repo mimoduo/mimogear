@@ -19,6 +19,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-svg-sprite": "^1.2.19",
     "gulp-uglify": "^1.5.3",
+    "postcss-custom-properties": "^5.0.0",
     "postcss-functions": "^2.1.0",
     "postcss-import": "^8.1.0",
     "postcss-mixins": "^4.0.1",
