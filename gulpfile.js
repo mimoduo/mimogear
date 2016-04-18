@@ -45,7 +45,7 @@ gulp.task('jade', ['sprite'], function() {
 
 gulp.task('postcss', function() {
 
-  gulp.src('src/postcss/site.css')
+  return gulp.src('src/postcss/site.css')
     .pipe(postcss([
       require('postcss-import'),
       require('postcss-mixins')({
