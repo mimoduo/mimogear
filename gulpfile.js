@@ -192,7 +192,7 @@ gulp.task('browser-sync', function() {
 
 
 /* ================
-// Watch Tasks
+// Watch Task
 // ============= */
 
 gulp.task('watch', function() {
@@ -207,7 +207,7 @@ gulp.task('watch', function() {
 
 
 /* ================
-// Default Gulp Tasks
+// Default Gulp Task
 // ============= */
 
 gulp.task('default', [
