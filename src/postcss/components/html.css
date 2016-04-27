@@ -23,24 +23,26 @@ a {
 // ============= */
 
 blockquote {
-  margin: em(20);
+  margin: em(20) 0;
 
   &:before {
     content: '\201C';
+    speak: none;
   }
 
   &:after {
     content: '\201D';
+    speak: none;
   }
 
 }
 
 cite {
-  margin: em(20);
   font-style: normal;
 
   &:before {
     content: '';
+    speak: none;
   }
 
 }

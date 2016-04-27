@@ -1644,23 +1644,24 @@ a:visited {
 
 
 blockquote {
-  margin: 1.25em
+  margin: 1.25em 0
 
 }
 
 
 blockquote:before {
   content: '\201C';
+  speak: none;
 }
 
 
 blockquote:after {
   content: '\201D';
+  speak: none;
 }
 
 
 cite {
-  margin: 1.25em;
   font-style: normal
 
 }
@@ -1668,6 +1669,7 @@ cite {
 
 cite:before {
   content: '';
+  speak: none;
 }
 
 
