@@ -10,7 +10,7 @@
 // Lantern
 // ============= */
 
-function lantern() {
+function lantern(parameters) {
 
   var lantern = document.querySelector('.lantern');
   var lanternContent = document.querySelector('.lantern-content');

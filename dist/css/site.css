@@ -921,6 +921,18 @@ optgroup {
 
 
 .grid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap
+
+}
+
+
+.grid:after {
   display: table;
   clear: both;
   content: '';
@@ -1397,9 +1409,9 @@ optgroup {
 
 /*
 
-  mimo/mimo
+  mimo/mimo-theme
     Safe to delete mimo theme
-    
+
 */
 
 
@@ -1945,6 +1957,14 @@ fieldset {
 
 
 /* ================
+// Label
+// ============= */
+
+
+label {}
+
+
+/* ================
 // Input
 // ============= */
 
@@ -1990,11 +2010,11 @@ textarea {}
 
 
 /* ================
-// Label
+// Select
 // ============= */
 
 
-label {}
+select {}
 
 
 /* ================
@@ -2012,14 +2032,6 @@ label {}
 
 
 ::placeholder {}
-
-
-/* ================
-// Select
-// ============= */
-
-
-select {}
 
 
 /* ================

@@ -11,7 +11,13 @@
 // ============= */
 
 .grid {
-  @mixin clear;
+  display: flex;
+  flex-wrap: wrap;
+
+  &:after {
+    @mixin clear;
+  }
+
 }
 
   [class^='col-'] {
