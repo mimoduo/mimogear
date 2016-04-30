@@ -24,6 +24,11 @@ canvas {
 
 img {
   display: block;
+
+  &.full-width {
+    width: 100%;
+  }
+
 }
 
 
@@ -36,6 +41,17 @@ figure {
 }
 
   figcaption {}
+
+
+/* ================
+// Spotlights
+// ============= */
+
+.spotlight {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
 /* ================

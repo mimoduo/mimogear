@@ -1,11 +1,4 @@
-/*
-
-  utilities/accessibility
-
-*/
-
-
-/* Screen Reader Visibility */
+/* utilities/accessibility */
 
 @define-mixin visible-for-screen-readers {
   position: absolute;

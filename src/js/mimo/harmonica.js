@@ -40,7 +40,7 @@ function harmonica(parameters) {
 
   function toggleNote(event) {
 
-    currentNote = event.target;
+    currentNote = event.currentTarget;
 
     clearClasses();
     assignClasses(currentNote);

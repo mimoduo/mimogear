@@ -15,6 +15,7 @@
 @import 'utilities/cover';
 @import 'utilities/font-face';
 @import 'utilities/list-reset';
+@import 'utilities/media-query';
 
 
 /* ================
@@ -30,8 +31,9 @@
 
 @import 'mimo/collage';
 @import 'mimo/drawer';
-@import 'mimo/harmonica';
 @import 'mimo/grid';
+@import 'mimo/harmonica';
+@import 'mimo/lantern';
 @import 'mimo/slides';
 @import 'mimo/mimo-theme';
 

@@ -8,19 +8,34 @@ block themeSelection
   - theme = "mimo-theme"
 
 block main  
-  //- .section.grid-section
-  //-   .compartment
-  //-     .grid.mimo-grid
-  //-       include ../mimo/grid.jade
-  //- .section.collage-section
-  //-   .compartment
-  //-     ol.collage.mimo-collage
-  //-       include ../mimo/collage.jade
-  //- .section.harmonica-section
-  //-   .compartment
-  //-     .harmonica.mimo-harmonica
-  //-       include ../mimo/harmonica.jade
-  //- .section.lantern-section
-  //-   .compartment
-  //-     .lantern.mimo-lantern
-  //-       include ../mimo/lantern.jade
+  .section.grid-section
+    .compartment
+      .grid.mimo-grid
+        include ../mimo/grid.jade
+  .section.collage-section
+    .compartment
+      ol.collage.mimo-collage.list-reset
+        include ../mimo/collage.jade
+  .section.swift-section
+    .compartment
+      ol.swift-slide.mimo-swift-slide
+        include ../mimo/swift-slide.jade
+  .section.lantern-section
+    .compartment
+      .lantern.mimo-lantern
+        include ../mimo/lantern.jade
+      .grid.lantern-grid
+        .col-big-4
+          img.lantern-light.full-width(
+            src="./dist/images/exia.jpg"
+            title="Gundam Exia Repair"
+          )
+        .col-big-8
+          img.lantern-light.full-width(
+            src="./dist/images/riser.jpg"
+            title="Gundam 00 Riser Renewal"
+          )
+  .section.harmonica-section
+    .compartment
+      .harmonica.mimo-harmonica
+        include ../mimo/harmonica.jade

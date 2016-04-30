@@ -5,7 +5,154 @@
 
 */
 
+/* ================
+// Type
+// ============= */
+
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+
+.mimo-theme {
+
+  & body {
+    font-family: 'Quicksand';
+  }
+
+}
+
 
 /* ================
-// Mimo
+// Regions
+// ============= */
+
+.scarf,
+.lace {
+  padding: em(20);
+}
+
+
+/* ================
+// Section
+// ============= */
+
+.section {
+  padding: em(40, 18) em(20, 18);
+  font-size: em(18);
+  line-height: nu(30, 18);
+
+  &:nth-of-type(odd) {
+    background: #222;
+    color: #eee;
+  }
+
+}
+
+
+/* ================
+// Grid
+// ============= */
+
+.mimo-grid {
+  margin: 0 em(-20, 18);
+
+  & [class^="col"] {
+    padding: 0 em(20, 18);
+  }
+
+}
+
+
+/* ================
+// Collage
+// ============= */
+
+.mimo-collage {
+  height: em(700, 18);
+  border-top: 1px solid;
+  border-left: 1px solid;
+
+  & li {
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+
+    &:nth-child(1) {
+      @mixin collage 2, 4, 0, 0, 6, 4;
+    }
+
+    &:nth-child(2) {
+      @mixin collage 4, 2, 2, 0, 6, 4;
+    }
+
+    &:nth-child(3) {
+      @mixin collage 4, 1, 2, 2, 6, 4;
+
+      @mixin media $big {
+        @mixin collage 2, 2, 2, 2, 6, 4;
+      }
+
+    }
+
+    &:nth-child(4) {
+      @mixin collage 4, 1, 2, 3, 6, 4;
+
+      @mixin media $big {
+        @mixin collage 2, 2, 4, 2, 6, 4;
+      }
+
+    }
+
+  }
+
+    & h4 {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      margin: 0;
+      text-align: center;
+      transform: translate(0, -50%);
+    }
+
+}
+
+
+/* ================
+// Harmonica
+// ============= */
+
+.harmonica-header {
+  border-bottom: 1px solid;
+  margin: 0 0 em(20, 18);
+
+  & h4 {
+    margin-top: 0;
+  }
+
+}
+
+
+/* ================
+// Lantern
+// ============= */
+
+.lantern-grid {
+  margin: 0 em(-5, 18);
+
+  & [class^="col"] {
+    padding: 0 em(5, 18);
+  }
+
+}
+
+  .lantern {
+    padding: em(30, 18);
+    background: rgba(255, 255, 255, .75);
+  }
+
+    .lantern-holder {
+      border: em(5, 18) solid #fff;
+    }
+
+
+/* ================
+// Slideshow
 // ============= */

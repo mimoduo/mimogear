@@ -1,11 +1,4 @@
-/*
-
-  utilities/list-reset
-
-*/
-
-
-/* List Reset */
+/* utilities/list-reset */
 
 @define-mixin list-reset {
   margin-top: 0;

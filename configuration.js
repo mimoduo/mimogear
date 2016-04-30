@@ -27,13 +27,15 @@ module.exports = {
   h6Size: 16,
   h6Line: 22,
 
-  mini: 300,
-  tiny: 400,
-  small: 500,
-  medium: 600,
-  big: 700,
-  large: 800,
-  huge: 900,
-  aldnoah: 1000
+  boundary: 1200,
+
+  mini: '300px',
+  tiny: '400px',
+  small: '500px',
+  medium: '600px',
+  big: '700px',
+  large: '800px',
+  huge: '900px',
+  aldnoah: '1000px'
 
 }

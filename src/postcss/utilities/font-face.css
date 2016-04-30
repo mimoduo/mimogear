@@ -1,11 +1,4 @@
-/*
-
-  utilities/font-face
-
-*/
-
-
-/* Font Face */
+/* utilities/font-face */
 
 @define-mixin font-face $name $style: normal $weight: normal {
 

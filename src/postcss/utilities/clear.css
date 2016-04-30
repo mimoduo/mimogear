@@ -1,11 +1,4 @@
-/*
-
-  utilities/clear
-
-*/
-
-
-/* Clear */
+/* utilities/clear */
 
 @define-mixin clear {
   display: table;

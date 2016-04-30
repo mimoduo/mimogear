@@ -65,7 +65,7 @@ function harmonica(parameters) {
 
   function toggleNote(event) {
 
-    currentNote = event.target;
+    currentNote = event.currentTarget;
 
     clearClasses();
     assignClasses(currentNote);
@@ -287,17 +287,17 @@ function site() {
 
   drawer();
 
-  // harmonica({
-  //   container: '.harmonica',
-  //   header: '.harmonica-header',
-  //   content: '.harmonica-content'
-  // });
+  swift({
+    container: '.swift-slide',
+    elements: 'li'
+  });
 
-  // lantern();
+  harmonica({
+    container: '.harmonica',
+    header: '.harmonica-header',
+    content: '.harmonica-content'
+  });
 
-  // swift({
-  //   container: '.swift-slide',
-  //   elements: 'li'
-  // });
+  lantern();
 
 }

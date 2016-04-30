@@ -1,11 +1,4 @@
-/*
-
-  utilities/cover
-
-*/
-
-
-/* Cover */
+/* utilities/cover */
 
 @define-mixin cover {
   position: absolute;
