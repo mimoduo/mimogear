@@ -26,6 +26,8 @@ function site() {
     content: '.harmonica-content'
   });
 
-  lantern();
+  lantern({
+    container: '.lantern',
+  });
 
 }

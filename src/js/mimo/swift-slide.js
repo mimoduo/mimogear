@@ -17,23 +17,20 @@ function swift(parameters) {
 
   var controller = document.createElement('div');
   controller.classList.add('swift-controls');
-
   container.appendChild(controller);
 
   var prev = document.createElement('button');
   prev.addEventListener('click', previousSlide, false);
+  controller.appendChild(prev);
 
   var next = document.createElement('button');
   next.addEventListener('click', nextSlide, false);
-
-  controller.appendChild(prev);
   controller.appendChild(next);
 
   var currentSlide = 1;
 
   var pager = document.createElement('div');
   pager.classList.add('swift-pager');
-
   container.appendChild(pager);
 
   var pages = [];

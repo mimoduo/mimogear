@@ -88,13 +88,31 @@ function harmonica(parameters) {
 
 function lantern(parameters) {
 
-  var lantern = document.querySelector('.lantern');
-  var lanternContent = document.querySelector('.lantern-content');
-  var lanternHolder = document.querySelector('.lantern-holder');
-  var lanternLights = document.querySelectorAll('.lantern-light');
+  var lantern = document.querySelector(parameters.container);
 
-  var lanternPrevious = document.querySelector('.lantern-previous');
-  var lanternNext = document.querySelector('.lantern-next');
+  var lanternContent = document.createElement('div');
+  lanternContent.classList.add('lantern-content');
+  lantern.appendChild(lanternContent);
+
+  var lanternHolder = document.createElement('img');
+  lanternHolder.classList.add('lantern-holder');
+  lanternContent.appendChild(lanternHolder);
+
+  var lanternPrevious = document.createElement('button');
+  lanternPrevious.classList.add('lantern-control');
+  lanternPrevious.classList.add('lantern-previous');
+  lanternContent.appendChild(lanternPrevious);
+
+  var lanternNext = document.createElement('button');
+  lanternNext.classList.add('lantern-control');
+  lanternNext.classList.add('lantern-next');
+  lanternContent.appendChild(lanternNext);
+
+  var lanternClose = document.createElement('button');
+  lanternClose.classList.add('lantern-close');
+  lanternContent.appendChild(lanternClose);
+
+  var lanternLights = document.querySelectorAll('.lantern-light');
 
   var lightCollection = [];
   var lightIndex = 0;
@@ -110,7 +128,10 @@ function lantern(parameters) {
   }
 
   lanternPrevious.addEventListener('click', previousLight, false);
+
   lanternNext.addEventListener('click', nextLight, false);
+
+  lanternClose.addEventListener('click', removeLight, false);
 
   function previousLight() {
 
@@ -142,6 +163,12 @@ function lantern(parameters) {
     setLight();
 
     lantern.classList.add('display-lantern');
+
+  }
+
+  function removeLight() {
+
+    lantern.classList.remove('display-lantern');
 
   }
 
@@ -188,23 +215,20 @@ function swift(parameters) {
 
   var controller = document.createElement('div');
   controller.classList.add('swift-controls');
-
   container.appendChild(controller);
 
   var prev = document.createElement('button');
   prev.addEventListener('click', previousSlide, false);
+  controller.appendChild(prev);
 
   var next = document.createElement('button');
   next.addEventListener('click', nextSlide, false);
-
-  controller.appendChild(prev);
   controller.appendChild(next);
 
   var currentSlide = 1;
 
   var pager = document.createElement('div');
   pager.classList.add('swift-pager');
-
   container.appendChild(pager);
 
   var pages = [];
@@ -298,6 +322,8 @@ function site() {
     content: '.harmonica-content'
   });
 
-  lantern();
+  lantern({
+    container: '.lantern',
+  });
 
 }

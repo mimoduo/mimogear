@@ -116,18 +116,8 @@
 
 
 /* ================
-// Harmonica
+// Slideshow
 // ============= */
-
-.harmonica-header {
-  border-bottom: 1px solid;
-  margin: 0 0 em(20, 18);
-
-  & h4 {
-    margin-top: 0;
-  }
-
-}
 
 
 /* ================
@@ -154,5 +144,16 @@
 
 
 /* ================
-// Slideshow
+// Harmonica
 // ============= */
+
+.harmonica-header {
+  border-bottom: 1px solid;
+  margin: 0 0 em(20, 18);
+
+  & h4 {
+    margin-top: 0;
+    margin-bottom: em(20, 25);
+  }
+
+}
