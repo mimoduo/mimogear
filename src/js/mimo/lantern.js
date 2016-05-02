@@ -22,18 +22,22 @@ function lantern(parameters) {
   lanternHolder.classList.add('lantern-holder');
   lanternContent.appendChild(lanternHolder);
 
-  var lanternPrevious = document.createElement('button');
-  lanternPrevious.classList.add('lantern-control');
-  lanternPrevious.classList.add('lantern-previous');
-  lanternContent.appendChild(lanternPrevious);
+  var lanternPrev = document.createElement('button');
+  lanternPrev.classList.add('lantern-control');
+  lanternPrev.classList.add('lantern-previous');
+  lanternPrev.innerHTML = '<svg class="symbol symbol-prev"><use xlink:href="' + parameters.prevSymbol + '"></use></svg>';
+  lanternContent.appendChild(lanternPrev);
 
   var lanternNext = document.createElement('button');
   lanternNext.classList.add('lantern-control');
   lanternNext.classList.add('lantern-next');
+  lanternNext.innerHTML = '<svg class="symbol symbol-next"><use xlink:href="' + parameters.nextSymbol + '"></use></svg>';
   lanternContent.appendChild(lanternNext);
 
   var lanternClose = document.createElement('button');
+  lanternClose.classList.add('lantern-control');
   lanternClose.classList.add('lantern-close');
+  lanternClose.innerHTML = '<svg class="symbol symbol-close"><use xlink:href="' + parameters.closeSymbol + '"></use></svg>';
   lanternContent.appendChild(lanternClose);
 
   var lanternLights = document.querySelectorAll('.lantern-light');
@@ -51,7 +55,7 @@ function lantern(parameters) {
     );
   }
 
-  lanternPrevious.addEventListener('click', previousLight, false);
+  lanternPrev.addEventListener('click', previousLight, false);
 
   lanternNext.addEventListener('click', nextLight, false);
 

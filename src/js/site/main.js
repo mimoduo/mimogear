@@ -17,7 +17,9 @@ function site() {
 
   swift({
     container: '.swift-slide',
-    elements: 'li'
+    elements: 'li',
+    prevSymbol: '#arrow-back',
+    nextSymbol: '#arrow-forward'
   });
 
   harmonica({
@@ -28,6 +30,9 @@ function site() {
 
   lantern({
     container: '.lantern',
+    prevSymbol: '#arrow-back',
+    nextSymbol: '#arrow-forward',
+    closeSymbol: '#close'
   });
 
 }

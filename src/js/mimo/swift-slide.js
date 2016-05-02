@@ -21,10 +21,12 @@ function swift(parameters) {
 
   var prev = document.createElement('button');
   prev.addEventListener('click', previousSlide, false);
+  prev.innerHTML = '<svg class="symbol symbol-prev"><use xlink:href="' + parameters.prevSymbol + '"></use></svg>';
   controller.appendChild(prev);
 
   var next = document.createElement('button');
   next.addEventListener('click', nextSlide, false);
+  next.innerHTML = '<svg class="symbol symbol-next"><use xlink:href="' + parameters.nextSymbol + '"></use></svg>';
   controller.appendChild(next);
 
   var currentSlide = 1;

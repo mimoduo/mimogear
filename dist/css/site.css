@@ -1124,6 +1124,14 @@ optgroup {
   font-family: 'Quicksand';
 }
 /* ================
+// Icons
+// ============= */
+.symbol {
+  display: block;
+  height: 1.1111111111111112em;
+  width: 1.1111111111111112em;
+}
+/* ================
 // Regions
 // ============= */
 .scarf,
@@ -1152,6 +1160,9 @@ optgroup {
 }
 .mimo-grid [class^="col"]{
   padding: 0 1.1111111111111112em;
+}
+.mimo-grid h4{
+  margin: 0;
 }
 /* ================
 // Collage
@@ -1184,7 +1195,7 @@ optgroup {
   height: 25%;
   width: 66.66666666666666%;
 }
-@media (min-width: 700px){
+@media (min-width: 900px){
   .mimo-collage li:nth-child(3){
     top: 50%;
     left: 33.33333333333333%;
@@ -1198,7 +1209,7 @@ optgroup {
   height: 25%;
   width: 66.66666666666666%;
 }
-@media (min-width: 700px){
+@media (min-width: 900px){
   .mimo-collage li:nth-child(4){
     top: 50%;
     left: 66.66666666666666%;
@@ -1220,34 +1231,75 @@ optgroup {
 /* ================
 // Slideshow
 // ============= */
+.mimo-swift-slide {
+  text-align: center
+
+}
+.mimo-swift-slide li{
+  margin-bottom: 0.5714285714285714em;
+  font-size: 1.9444444444444444em;
+}
+.mimo-swift-slide .swift-controls{
+  margin-bottom: 1.1111111111111112em;
+}
+.mimo-swift-slide .swift-controls button{
+  border: 0;
+  padding: 0 0.2857142857142857em;
+  font-size: 1.9444444444444444em;
+  background: none;
+  color: inherit;
+}
+.mimo-swift-slide .swift-controls svg{
+  fill: currentColor;
+}
+.mimo-swift-slide .swift-pager{
+
+}
+.mimo-swift-slide .swift-pager span{
+  height: 1.1111111111111112em;
+  width: 1.1111111111111112em;
+  border: 0.1111111111111111em solid;
+  margin: 0 0.2777777777777778em;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+.mimo-swift-slide .swift-pager .active{
+  background: currentColor;
+}
 /* ================
 // Lantern
 // ============= */
 .lantern-grid {
-  margin: 0 -0.2777777777777778em
-
+  margin: 0 -0.2777777777777778em;
 }
-.lantern-grid [class^="col"]{
-  padding: 0 0.2777777777777778em;
-}
-.lantern {
-    padding: 1.6666666666666667em;
-    background: rgba(255, 255, 255, .75);
+.lantern-col {
+    padding: 0 0.2777777777777778em 0.5555555555555556em;
   }
-.lantern-holder {
-      border: 0.2777777777777778em solid #fff;
+.lantern {
+      padding: 1.6666666666666667em;
+      background: rgba(255, 255, 255, .75);
     }
+.lantern-holder {
+        border: 0.2777777777777778em solid #fff;
+      }
+.lantern-control {
+        border: 0;
+        background: none;
+      }
+.lantern-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
 /* ================
 // Harmonica
 // ============= */
-.harmonica-header {
-  border-bottom: 1px solid;
-  margin: 0 0 1.1111111111111112em
+.mimo-harmonica {
 
 }
-.harmonica-header h4{
-  margin-top: 0;
-  margin-bottom: 0.8em;
+.mimo-harmonica .harmonica-header{
+  border-bottom: 1px solid;
+  margin: 0 0 1.1111111111111112em;
 }
 /* ================
 // Structure

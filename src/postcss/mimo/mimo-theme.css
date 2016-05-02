@@ -21,6 +21,17 @@
 
 
 /* ================
+// Icons
+// ============= */
+
+.symbol {
+  display: block;
+  height: em(20, 18);
+  width: em(20, 18);
+}
+
+
+/* ================
 // Regions
 // ============= */
 
@@ -58,6 +69,10 @@
     padding: 0 em(20, 18);
   }
 
+    & h4 {
+      margin: 0;
+    }
+
 }
 
 
@@ -85,7 +100,7 @@
     &:nth-child(3) {
       @mixin collage 4, 1, 2, 2, 6, 4;
 
-      @mixin media $big {
+      @mixin media $huge {
         @mixin collage 2, 2, 2, 2, 6, 4;
       }
 
@@ -94,7 +109,7 @@
     &:nth-child(4) {
       @mixin collage 4, 1, 2, 3, 6, 4;
 
-      @mixin media $big {
+      @mixin media $huge {
         @mixin collage 2, 2, 4, 2, 6, 4;
       }
 
@@ -119,6 +134,49 @@
 // Slideshow
 // ============= */
 
+.mimo-swift-slide {
+  text-align: center;
+
+  & li {
+    margin-bottom: em(20, 35);
+    font-size: em(35, 18);
+  }
+
+  & .swift-controls {
+    margin-bottom: em(20, 18);
+
+    & button {
+      border: 0;
+      padding: 0 em(10, 35);
+      font-size: em(35, 18);
+      background: none;
+      color: inherit;
+    }
+
+      & svg {
+        fill: currentColor;
+      }
+
+  }
+
+  & .swift-pager {
+
+    & span {
+      height: em(20, 18);
+      width: em(20, 18);
+      border: em(2, 18) solid;
+      margin: 0 em(5, 18);
+      border-radius: 100%;
+    }
+
+    & .active {
+      background: currentColor;
+    }
+
+  }
+
+}
+
 
 /* ================
 // Lantern
@@ -126,34 +184,42 @@
 
 .lantern-grid {
   margin: 0 em(-5, 18);
-
-  & [class^="col"] {
-    padding: 0 em(5, 18);
-  }
-
 }
 
-  .lantern {
-    padding: em(30, 18);
-    background: rgba(255, 255, 255, .75);
+  .lantern-col {
+    padding: 0 em(5, 18) em(10, 18);
   }
 
-    .lantern-holder {
-      border: em(5, 18) solid #fff;
+    .lantern {
+      padding: em(30, 18);
+      background: rgba(255, 255, 255, .75);
     }
 
+      .lantern-holder {
+        border: em(5, 18) solid #fff;
+      }
+
+      .lantern-control {
+        border: 0;
+        background: none;
+      }
+
+      .lantern-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      
 
 /* ================
 // Harmonica
 // ============= */
 
-.harmonica-header {
-  border-bottom: 1px solid;
-  margin: 0 0 em(20, 18);
+.mimo-harmonica {
 
-  & h4 {
-    margin-top: 0;
-    margin-bottom: em(20, 25);
+  & .harmonica-header {
+    border-bottom: 1px solid;
+    margin: 0 0 em(20, 18);
   }
 
 }
