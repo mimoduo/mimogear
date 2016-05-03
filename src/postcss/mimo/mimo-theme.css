@@ -155,6 +155,7 @@
 
       & svg {
         fill: currentColor;
+        font-size: em(22, 35);
       }
 
   }
@@ -209,7 +210,7 @@
         top: 0;
         right: 0;
       }
-      
+
 
 /* ================
 // Harmonica
