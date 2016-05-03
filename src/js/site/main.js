@@ -13,7 +13,9 @@ site();
 
 function site() {
 
-  drawer();
+  drawer({
+    trigger: '.drawer-trigger'
+  });
 
   swift({
     container: '.swift-slide',

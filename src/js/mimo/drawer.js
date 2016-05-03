@@ -9,9 +9,9 @@
 // Drawer
 // ============= */
 
-function drawer() {
+function drawer(parameters) {
 
-  var drawerTrigger = document.querySelector('.drawer-trigger');
+  var drawerTrigger = document.querySelector(parameters.trigger);
 
   drawerTrigger.addEventListener('click', activateDrawer, false);
 
