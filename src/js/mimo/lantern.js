@@ -115,8 +115,6 @@ function lantern(parameters) {
     holder.setAttribute('alt', lightCollection[lightIndex][1]);
     holder.setAttribute('title', lightCollection[lightIndex][1]);
 
-    content.setAttribute('title', lightCollection[lightIndex][1]);
-
   }
 
 }
