@@ -1,5 +1,3 @@
-/* utilities/compartment */
-
 @define-mixin compartment $max-width: $boundary {
   max-width: rem($max-width);
   margin-right: auto;

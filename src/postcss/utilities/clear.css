@@ -1,5 +1,3 @@
-/* utilities/clear */
-
 @define-mixin clear {
   display: table;
   clear: both;

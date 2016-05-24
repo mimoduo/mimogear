@@ -24,6 +24,8 @@ function site() {
     nextSymbol: '#arrow-forward'
   });
 
+  sail();
+
   harmonica({
     container: '.harmonica',
     header: '.harmonica-header',

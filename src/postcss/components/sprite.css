@@ -10,7 +10,10 @@
 // ============= */
 
 .symbol {
-
+  transition:
+    fill .3s,
+    stroke .3s;
+    
   &-logo {
     height: em(100);
     width: em(150);

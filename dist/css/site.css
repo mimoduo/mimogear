@@ -1,15 +1,9 @@
 
 
 @import url(https://fonts.googleapis.com/css?family=Quicksand);
-/*
-
-  site
-
-*/
 /* ================
 // Utilities
 // ============= */
-/* utilities/accessibility */
 .visible-for-screen-readers {
   position: absolute;
   overflow: hidden;
@@ -20,19 +14,16 @@
   margin: -1px;
   padding: 0;
 }
-/* utilities/clear */
 .clear:after {
   display: table;
   clear: both;
   content: '';
 }
-/* utilities/compartment */
 .compartment {
   max-width: 75rem;
   margin-right: auto;
   margin-left: auto;
 }
-/* utilities/cover */
 .cover {
   position: absolute;
   top: 0;
@@ -40,15 +31,12 @@
   height: 100%;
   width: 100%;
 }
-/* utilities/font-face */
-/* utilities/list-reset */
 .list-reset {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
 }
-/* utilities/media-query */
 /* ================
 // Vendor
 // ============= */
@@ -397,14 +385,9 @@ optgroup {
 /* ================
 // Mimo
 // ============= */
-/*
-
-  mimo/collage
-    http://codepen.io/mimoduo/pen/VYwamv
-
-*/
 /* ================
 // Collage
+//   http://codepen.io/mimoduo/pen/VYwamv
 // ============= */
 .collage {
 
@@ -412,14 +395,9 @@ optgroup {
 .collage li{
   position: absolute;
 }
-/*
-
-  mimo/drawer
-    http://codepen.io/mimoduo/pen/kuobi
-
-*/
 /* ================
 // Drawer Mixin
+//   http://codepen.io/mimoduo/pen/kuobi
 // ============= */
 /* ================
 // Drawer
@@ -468,8 +446,6 @@ optgroup {
 /* ================
 // Drawer Trigger
 // ============= */
-/* Define the total trigger height and width */
-/* Define the color of every stripe */
 .drawer-trigger {
   position: relative;
   z-index: 400;
@@ -486,7 +462,8 @@ optgroup {
   height: 0.125em;
   width: 1.25em;
   content: '';
-  background: #000;
+  background: currentColor;
+  color: #000;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -513,8 +490,8 @@ optgroup {
   margin-top: -0.25em;
 }
 .drawer-trigger:after{
-  -webkit-box-shadow: 0 0.25em 0 0 #000;
-  box-shadow: 0 0.25em 0 0 #000;
+  -webkit-box-shadow: 0 0.25em 0 0 currentColor;
+  box-shadow: 0 0.25em 0 0 currentColor;
 }
 .drawer-active .drawer-trigger:before {
     margin-top: 0;
@@ -541,14 +518,9 @@ optgroup {
       translate(-50%, -50%)
       rotate(45deg);
   }
-/*
-
-  mimo/grid
-    http://codepen.io/mimoduo/pen/vOMxLE
-
-*/
 /* ================
 // Grid / Columns
+//   http://codepen.io/mimoduo/pen/vOMxLE
 // ============= */
 .grid {
   display: -webkit-box;
@@ -897,14 +869,9 @@ optgroup {
   }
 
   }
-/*
-
-  mimo/harmonica
-    http://codepen.io/mimoduo/pen/epZaMq
-
-*/
 /* ================
 // Harmonica
+//   http://codepen.io/mimoduo/pen/epZaMq
 // ============= */
 /* When do accordions become harmonicas? */
 .harmonica {
@@ -959,14 +926,9 @@ optgroup {
     width: 100%;
   }
     }
-/*
-
-  mimo/lantern
-    http://codepen.io/mimoduo/pen/EPerjv
-
-*/
 /* ================
 // Lantern
+//   http://codepen.io/mimoduo/pen/EPerjv
 // ============= */
 .lantern {
   position: fixed;
@@ -1020,14 +982,9 @@ optgroup {
 .lantern-light {
   cursor: pointer;
 }
-/*
-
-  mimo/slides
-    http://codepen.io/mimoduo/pen/gabWmN
-
-*/
 /* ================
 // Swift Slide
+//   http://codepen.io/mimoduo/pen/gabWmN
 // ============= */
 .swift-slide {
   margin-top: 0;
@@ -1108,12 +1065,6 @@ optgroup {
 .swift-pager span.active{
 
 }
-/*
-
-  mimo/mimo-theme
-    Safe to delete mimo theme
-
-*/
 /* ================
 // Type
 // ============= */
@@ -1305,11 +1256,6 @@ optgroup {
 /* ================
 // Structure
 // ============= */
-/*
-
-  structure/root
-
-*/
 /* ================
 // Universal Structure
 // ============= */
@@ -1333,11 +1279,6 @@ body {
     font-size: 1em;
     line-height: 1.375;
   }
-/*
-
-  structure/regions
-
-*/
 /* ================
 // Header
 // ============= */
@@ -1350,11 +1291,6 @@ body {
 // Footer
 // ============= */
 .site-footer {}
-/*
-
-  structure/sections
-
-*/
 /* ================
 // Section
 // ============= */
@@ -1362,11 +1298,6 @@ body {
 /* ================
 // Components
 // ============= */
-/*
-
-  components/type
-
-*/
 /* ================
 // Headings
 // ============= */
@@ -1423,17 +1354,17 @@ h6,
 // Symbols
 // ============= */
 .symbol {
+  -webkit-transition: fill .3s,
+    stroke .3s;
+  transition:
+    fill .3s,
+    stroke .3s
 
 }
 .symbol-logo{
   height: 6.25em;
   width: 9.375em;
 }
-/*
-
-  components/html
-
-*/
 /* ================
 // Anchors
 // ============= */
@@ -1510,11 +1441,6 @@ th {
 td {
       padding: 1.25em 1.25rem;
     }
-/*
-
-  components/buttons
-
-*/
 /* ================
 // Generic Buttons
 // ============= */
@@ -1564,11 +1490,6 @@ td {
 .button-modifier {}
 /* HTML Button */
 button {}
-/*
-
-  components/logo
-
-*/
 /* ================
 // Site Logo Anchor
 // ============= */
@@ -1594,11 +1515,6 @@ button {}
 .site-link:hover{
 
 }
-/*
-
-  components/media
-
-*/
 /* ================
 // Common Media
 // ============= */
@@ -1642,11 +1558,6 @@ iframe {
   width: 100%;
   border: 0;
 }
-/*
-
-  components/forms
-
-*/
 /* ================
 // Form Container
 // ============= */
@@ -1697,11 +1608,6 @@ select {}
 /* ================
 // Navigation
 // ============= */
-/*
-
-  navigation/behaviors
-
-*/
 /* ================
 // Generic Navigation/Menu Behaviors
 // ============= */
@@ -1724,11 +1630,6 @@ nav a:hover, menu a:hover{
 /* ================
 // Generic Dropdown Behaviors
 // ============= */
-/*
-
-  navigation/main
-
-*/
 /* ================
 // Main Navigation
 // ============= */
@@ -1747,11 +1648,6 @@ nav a:hover, menu a:hover{
 .nav-main > ul > li > a:hover{
 
 }
-/*
-
-  navigation/template
-
-*/
 /* ================
 // Template Navigation
 // ============= */

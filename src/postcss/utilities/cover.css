@@ -1,5 +1,3 @@
-/* utilities/cover */
-
 @define-mixin cover {
   position: absolute;
   top: 0;

@@ -1,13 +1,6 @@
-/*
-
-  mimo/drawer
-    http://codepen.io/mimoduo/pen/kuobi
-
-*/
-
-
 /* ================
 // Drawer Mixin
+//   http://codepen.io/mimoduo/pen/kuobi
 // ============= */
 
 @define-mixin drawer $transform-value: 20% {
@@ -60,17 +53,11 @@
 // Drawer Trigger
 // ============= */
 
-/* Define the total trigger height and width */
-$trigger-dimension: 60;
-
-/* Define the color of every stripe */
-$stripe-color: #000;
-
 .drawer-trigger {
   position: relative;
   z-index: 400;
-  height: em($trigger-dimension);
-  width: em($trigger-dimension);
+  height: em(60);
+  width: em(60);
   cursor: pointer;
 
   &:before,
@@ -81,7 +68,8 @@ $stripe-color: #000;
     height: em(2);
     width: em(20);
     content: '';
-    background: $stripe-color;
+    background: currentColor;
+    color: #000;
     transform: translate(-50%, -50%);
     transition:
       background .4s,
@@ -95,7 +83,7 @@ $stripe-color: #000;
   }
 
   &:after {
-    box-shadow: 0 em(4) 0 0 $stripe-color;
+    box-shadow: 0 em(4) 0 0 currentColor;
   }
 
 }

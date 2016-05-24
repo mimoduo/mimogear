@@ -1,5 +1,3 @@
-/* utilities/accessibility */
-
 @define-mixin visible-for-screen-readers {
   position: absolute;
   overflow: hidden;
