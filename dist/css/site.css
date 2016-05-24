@@ -537,7 +537,7 @@ optgroup {
   clear: both;
   content: '';
 }
-[class^='col-'] {
+.col {
     float: left;
     width: 100%;
   }
@@ -1599,13 +1599,6 @@ textarea {}
 // ============= */
 select {}
 /* ================
-// Placeholder
-// ============= */
-::-webkit-input-placeholder {}
-::-moz-placeholder {}
-:-ms-input-placeholder {}
-::placeholder {}
-/* ================
 // Navigation
 // ============= */
 /* ================
@@ -1651,18 +1644,18 @@ nav a:hover, menu a:hover{
 /* ================
 // Template Navigation
 // ============= */
-nav {
+.nav-template {
 
 }
-nav ul{
+.nav-template ul{
 
 }
-nav li{
+.nav-template li{
 
 }
-nav a{
+.nav-template a{
 
 }
-nav a:hover{
+.nav-template a:hover{
 
 }

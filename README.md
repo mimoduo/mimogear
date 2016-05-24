@@ -9,14 +9,12 @@ Mimo Gear is a light-weight skeleton library for developers of any skill level t
 **Jade** as a HTML template engine<br>
 **Vanilla JS** starter file
 
-###Postcss Features
-
 * Grid system based on postcss-simple-grid
-* [Drawer/off-canvas](http://codepen.io/mimoduo/pen/kuobi) (vanilla js as well)
-* [Lantern/lightbox](http://codepen.io/mimoduo/pen/EPerjv) (vanilla js as well)
-* [Collage system](http://codepen.io/mimoduo/pen/VYwamv) (mixin constructed within gulpfile.js)
-* [Slideshow module](http://codepen.io/mimoduo/pen/gabWmN) (vanilla js as well)
-* [Harmonica/Accordion module](http://codepen.io/mimoduo/pen/epZaMq) (vanilla js as well)
+* [Drawer/off-canvas](http://codepen.io/mimoduo/pen/kuobi)
+* [Lantern/lightbox](http://codepen.io/mimoduo/pen/EPerjv)
+* [Collage system](http://codepen.io/mimoduo/pen/VYwamv)
+* [Slideshow module](http://codepen.io/mimoduo/pen/gabWmN)
+* [Harmonica/Accordion module](http://codepen.io/mimoduo/pen/epZaMq)
 
 ###Gulp Features
 

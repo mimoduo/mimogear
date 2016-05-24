@@ -1,13 +1,6 @@
-/*
-
-  mimo/swift-slide
-    http://codepen.io/mimoduo/pen/gabWmN
-
-*/
-
-
 /* ================
 // Swift Slide
+//   http://codepen.io/mimoduo/pen/gabWmN
 // ============= */
 
 function swift(parameters) {

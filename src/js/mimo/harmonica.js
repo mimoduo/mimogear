@@ -1,13 +1,6 @@
-/*
-
-  mimo/harmonica
-    http://codepen.io/mimoduo/pen/epZaMq
-
-*/
-
-
 /* ================
 // Harmonica
+//   http://codepen.io/mimoduo/pen/epZaMq
 // ============= */
 
 function harmonica(parameters) {

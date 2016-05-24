@@ -1,10 +1,3 @@
-/*
-
-  mimo/drawer
-
-*/
-
-
 /* ================
 // Drawer
 // ============= */
@@ -23,16 +16,9 @@ function activateDrawer() {
 
 }
 
-/*
-
-  mimo/harmonica
-    http://codepen.io/mimoduo/pen/epZaMq
-
-*/
-
-
 /* ================
 // Harmonica
+//   http://codepen.io/mimoduo/pen/epZaMq
 // ============= */
 
 function harmonica(parameters) {
@@ -74,16 +60,9 @@ function harmonica(parameters) {
 
 }
 
-/*
-
-  mimo/lantern
-    http://codepen.io/mimoduo/pen/EPerjv
-
-*/
-
-
 /* ================
 // Lantern
+//   http://codepen.io/mimoduo/pen/EPerjv
 // ============= */
 
 function lantern(parameters) {
@@ -195,13 +174,6 @@ function lantern(parameters) {
 
 }
 
-/*
-
-  mimo/sail-slide
-
-*/
-
-
 /* ================
 // Sail Slide
 // ============= */
@@ -274,21 +246,14 @@ function sail(parameters) {
   }
 
   function sailTo(event) {
-    
+
   }
 
 }
 
-/*
-
-  mimo/swift-slide
-    http://codepen.io/mimoduo/pen/gabWmN
-
-*/
-
-
 /* ================
 // Swift Slide
+//   http://codepen.io/mimoduo/pen/gabWmN
 // ============= */
 
 function swift(parameters) {

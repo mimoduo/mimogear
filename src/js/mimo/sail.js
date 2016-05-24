@@ -1,10 +1,3 @@
-/*
-
-  mimo/sail-slide
-
-*/
-
-
 /* ================
 // Sail Slide
 // ============= */
@@ -77,7 +70,7 @@ function sail(parameters) {
   }
 
   function sailTo(event) {
-    
+
   }
 
 }

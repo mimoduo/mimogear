@@ -1,13 +1,6 @@
-/*
-
-  mimo/lantern
-    http://codepen.io/mimoduo/pen/EPerjv
-
-*/
-
-
 /* ================
 // Lantern
+//   http://codepen.io/mimoduo/pen/EPerjv
 // ============= */
 
 function lantern(parameters) {
