@@ -1,9 +1,9 @@
 
 
 @import url(https://fonts.googleapis.com/css?family=Quicksand);
-/* ================
+/* ::::::::::::::::
 // Utilities
-// ============= */
+// ::::::::::::: */
 .visible-for-screen-readers {
   position: absolute;
   overflow: hidden;
@@ -37,9 +37,9 @@
   padding-left: 0;
   list-style: none;
 }
-/* ================
+/* ::::::::::::::::
 // Vendor
-// ============= */
+// ::::::::::::: */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -382,9 +382,9 @@ textarea {
 optgroup {
   font-weight: bold;
 }
-/* ================
+/* ::::::::::::::::
 // Mimo
-// ============= */
+// ::::::::::::: */
 /* ================
 // Collage
 //   http://codepen.io/mimoduo/pen/VYwamv
@@ -1253,9 +1253,9 @@ optgroup {
   border-bottom: 1px solid;
   margin: 0 0 1.1111111111111112em;
 }
-/* ================
+/* ::::::::::::::::
 // Structure
-// ============= */
+// ::::::::::::: */
 /* ================
 // Universal Structure
 // ============= */
@@ -1295,9 +1295,9 @@ body {
 // Section
 // ============= */
 .section {}
-/* ================
+/* ::::::::::::::::
 // Components
-// ============= */
+// ::::::::::::: */
 /* ================
 // Headings
 // ============= */
@@ -1598,9 +1598,9 @@ textarea {}
 // Select
 // ============= */
 select {}
-/* ================
+/* ::::::::::::::::
 // Navigation
-// ============= */
+// ::::::::::::: */
 /* ================
 // Generic Navigation/Menu Behaviors
 // ============= */

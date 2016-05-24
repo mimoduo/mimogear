@@ -1,6 +1,6 @@
-/* ================
+/* ::::::::::::::::
 // Utilities
-// ============= */
+// ::::::::::::: */
 
 @import 'utilities/accessibility';
 @import 'utilities/clear';
@@ -11,16 +11,16 @@
 @import 'utilities/media-query';
 
 
-/* ================
+/* ::::::::::::::::
 // Vendor
-// ============= */
+// ::::::::::::: */
 
 @import 'vendor/normalize';
 
 
-/* ================
+/* ::::::::::::::::
 // Mimo
-// ============= */
+// ::::::::::::: */
 
 @import 'mimo/collage';
 @import 'mimo/drawer';
@@ -31,18 +31,18 @@
 @import 'mimo/mimo-theme';
 
 
-/* ================
+/* ::::::::::::::::
 // Structure
-// ============= */
+// ::::::::::::: */
 
 @import 'structure/root';
 @import 'structure/regions';
 @import 'structure/sections';
 
 
-/* ================
+/* ::::::::::::::::
 // Components
-// ============= */
+// ::::::::::::: */
 
 @import 'components/type';
 @import 'components/sprite';
@@ -53,9 +53,9 @@
 @import 'components/forms';
 
 
-/* ================
+/* ::::::::::::::::
 // Navigation
-// ============= */
+// ::::::::::::: */
 
 @import 'navigation/behaviors';
 @import 'navigation/main';
