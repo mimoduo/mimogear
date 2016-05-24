@@ -346,13 +346,6 @@ function swift(parameters) {
 
 }
 
-/*
-
-  site/main
-
-*/
-
-
 /* ================
 // Main Site Function
 // ============= */
