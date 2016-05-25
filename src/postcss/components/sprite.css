@@ -1,19 +1,12 @@
-/*
-
-  components/sprite
-
-*/
-
-
 /* ================
 // Symbols
 // ============= */
 
 .symbol {
   transition:
-    fill .3s,
-    stroke .3s;
-    
+    fill .25s,
+    stroke .25s;
+
   &-logo {
     height: em(100);
     width: em(150);

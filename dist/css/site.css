@@ -617,7 +617,7 @@ optgroup {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 400;
+  z-index: 800;
   height: 100%;
   width: 100%;
   opacity: 0;
@@ -1027,20 +1027,15 @@ h6,
   font-size: 1rem;
   line-height: 1.375;
 }
-/*
-
-  components/sprite
-
-*/
 /* ================
 // Symbols
 // ============= */
 .symbol {
-  -webkit-transition: fill .3s,
-    stroke .3s;
+  -webkit-transition: fill .25s,
+    stroke .25s;
   transition:
-    fill .3s,
-    stroke .3s
+    fill .25s,
+    stroke .25s
 
 }
 .symbol-logo{
@@ -1173,7 +1168,7 @@ td {
 /* HTML Button */
 button {}
 /* ================
-// Site Logo Anchor
+// Site Logo Link
 // ============= */
 /* Use if the site logo is image based */
 .site-logo {
@@ -1225,20 +1220,20 @@ figure {
 }
 figcaption {}
 /* ================
-// Spotlights
-// ============= */
-.spotlight {
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-/* ================
 // Iframes
 // ============= */
 iframe {
   max-width: 100%;
   width: 100%;
   border: 0;
+}
+/* ================
+// Spotlights
+// ============= */
+.spotlight {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /* ================
 // Form Container
