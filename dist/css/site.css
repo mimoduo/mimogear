@@ -895,7 +895,6 @@ optgroup {
   width: 1.1111111111111112em;
   border: 0.1111111111111111em solid;
   margin: 0 0.2777777777777778em;
-  -webkit-border-radius: 100%;
   border-radius: 100%;
 }
 .mimo-swift-slide .swift-pager .active{
