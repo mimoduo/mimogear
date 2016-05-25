@@ -18,66 +18,10 @@
     width: 100%;
   }
 
-  @media (min-width: 300px) {
-
-    .col-mini {
-      create-grid: 2;
-    }
-
-  }
-
-  @media (min-width: 400px) {
-
-    .col-tiny {
-      create-grid: 2;
-    }
-
-  }
-
-  @media (min-width: 500px) {
-
-    .col-small {
-      create-grid: 12;
-    }
-
-  }
-
   @media (min-width: 600px) {
 
     .col-medium {
-      create-grid: 12;
-    }
-
-  }
-
-  @media (min-width: 700px) {
-
-    .col-big {
-      create-grid: 12;
-    }
-
-  }
-
-  @media (min-width: 800px) {
-
-    .col-large {
-      create-grid: 12;
-    }
-
-  }
-
-  @media (min-width: 900px) {
-
-    .col-huge {
-      create-grid: 12;
-    }
-
-  }
-
-  @media (min-width: 1000px) {
-
-    .col-aldnoah {
-      create-grid: 12;
+      create-grid: 2;
     }
 
   }
