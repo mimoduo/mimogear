@@ -1,6 +1,6 @@
 module.exports = {
 
-  name: "Mimo-Gear",
+  name: 'Mimo-Gear',
 
   sansSerif: null,
   serif: null,
@@ -8,6 +8,7 @@ module.exports = {
 
   bodySize: 16,
   bodyLine: 22,
+  bodyColor: '#222',
 
   h1Size: 40,
   h1Line: 50,

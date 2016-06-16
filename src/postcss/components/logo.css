@@ -7,7 +7,7 @@
 .site-logo {
   display: block;
   overflow: hidden;
-  background-image: url("");
+  background-image: url('');
   background-position: 50% 50%;
   background-size: contain;
   color: transparent;

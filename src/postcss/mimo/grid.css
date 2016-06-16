@@ -11,6 +11,11 @@
     @mixin clear;
   }
 
+  &-centered {
+    align-items: center;
+    align-content: center;
+  }
+  
 }
 
   .col {

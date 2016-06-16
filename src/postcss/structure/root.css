@@ -19,6 +19,7 @@
 
 html {
   font-family: $sansSerif;
+  color: $bodyColor;
 }
 
   body {

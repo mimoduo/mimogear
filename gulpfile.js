@@ -6,6 +6,7 @@ var site = 'dist/';
 var gulp = require('gulp'),
     configuration = require('./configuration'),
     browserSync = require('browser-sync').create(),
+    changed = require('gulp-changed'),
     jade = require('gulp-jade'),
     postcss = require('gulp-postcss'),
     cleanCss = require('gulp-clean-css'),

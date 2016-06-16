@@ -56,3 +56,8 @@
 .lantern-light {
   cursor: pointer;
 }
+
+/* Body when a lantern is visible */
+.lantern-triggered {
+  overflow: hidden;
+}

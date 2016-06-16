@@ -48,9 +48,6 @@ function lantern(parameters) {
     );
   }
 
-
-
-
   function previousLight() {
 
     if(lightIndex == 0) {
@@ -81,12 +78,14 @@ function lantern(parameters) {
     setLight();
 
     lantern.classList.add('display-lantern');
+    document.body.classList.add('lantern-triggered');
 
   }
 
   function removeLight() {
 
     lantern.classList.remove('display-lantern');
+    document.body.classList.remove('lantern-triggered');
 
   }
 

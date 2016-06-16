@@ -37,7 +37,7 @@
   top: 100%;
   left: 0;
   z-index: 200;
-  max-width: em(500);
+  max-width: em(400);
   transition:
     opacity .3s,
     visibility .3s,
