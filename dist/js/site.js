@@ -177,11 +177,11 @@ function lantern(parameters) {
 // Sail Slide
 // ============= */
 
-function sail(parameters) {
+function sail(container, backSymbol, forwardSymbol) {
 
   var sail = {};
 
-  if(parameters === undefined) {
+  if(container === undefined) {
     sail.container = '.sail';
   } else {
     sail.container = parameters.container;
@@ -189,50 +189,53 @@ function sail(parameters) {
 
   sail.container = document.querySelectorAll(sail.container);
 
-  if(parameters === undefined) {
+  if(backSymbol === undefined) {
     sail.backSymbol = '#arrow-back';
   } else {
     sail.backSymbol = parameters.backSymbol;
   }
 
-  if(parameters === undefined) {
+  if(forwardSymbol === undefined) {
     sail.forwardSymbol = '#arrow-forward';
   } else {
     sail.forwardSymbol = parameters.forwardSymbol;
   }
 
   for(var i = 0; i < sail.container.length; i++) {
+
     var sailFragment = document.createDocumentFragment();
-    var container = sail.container[i];
+    var boat = sail.container[i];
 
-    container.directions = document.createElement('nav');
-    container.directions.classList.add('sail-directions');
-    sailFragment.appendChild(container.directions);
+    boat.directions = document.createElement('nav');
+    boat.directions.classList.add('sail-directions');
+    sailFragment.appendChild(boat.directions);
 
-    container.back = document.createElement('button');
-    container.back.innerHTML = '<svg class="symbol symbol-sail-direction"><use xlink:href="' + sail.backSymbol + '"></use></svg>';
-    container.back.classList.add('sail-direction', 'sail-back');
-    container.back.addEventListener('click', sailBack, false);
-    container.directions.appendChild(container.back);
+    boat.back = document.createElement('button');
+    boat.back.innerHTML = '<svg class="symbol symbol-sail-direction"><use xlink:href="' + sail.backSymbol + '"></use></svg>';
+    boat.back.classList.add('sail-direction', 'sail-back');
+    boat.back.addEventListener('click', sailBack, false);
+    boat.directions.appendChild(boat.back);
 
-    container.forward = document.createElement('button');
-    container.forward.innerHTML = '<svg class="symbol symbol-sail-direction"><use xlink:href="' + sail.forwardSymbol + '"></use></svg>';
-    container.forward.classList.add('sail-direction', 'sail-forward');
-    container.forward.addEventListener('click', sailForward, false);
-    container.directions.appendChild(container.forward);
+    boat.forward = document.createElement('button');
+    boat.forward.innerHTML = '<svg class="symbol symbol-sail-direction"><use xlink:href="' + sail.forwardSymbol + '"></use></svg>';
+    boat.forward.classList.add('sail-direction', 'sail-forward');
+    boat.forward.addEventListener('click', sailForward, false);
+    boat.directions.appendChild(boat.forward);
 
-    container.markers = document.createElement('nav');
-    container.markers.classList.add('sail-markers');
-    sailFragment.appendChild(container.markers);
+    boat.markers = document.createElement('nav');
+    boat.markers.classList.add('sail-markers');
+    sailFragment.appendChild(boat.markers);
 
-    for(var x = 0; x < container.children.length; x++) {
-      container.key = document.createElement('button');
-      container.key.classList.add('sail-key');
-      container.key.addEventListener('click', sailTo, false);
-      container.markers.appendChild(container.key);
+    for(var x = 0; x < boat.children.length; x++) {
+
+      boat.key = document.createElement('button');
+      boat.key.classList.add('sail-key');
+      boat.key.addEventListener('click', sailTo.bind(null, i), false);
+      boat.markers.appendChild(boat.key);
+      
     }
 
-    container.appendChild(sailFragment);
+    boat.appendChild(sailFragment);
 
   }
 
