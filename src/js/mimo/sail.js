@@ -57,22 +57,57 @@ function sail(container, backSymbol, forwardSymbol) {
       boat.key.classList.add('sail-key');
       boat.key.addEventListener('click', sailTo.bind(null, i), false);
       boat.markers.appendChild(boat.key);
-      
+
     }
 
     boat.appendChild(sailFragment);
 
   }
 
+  function clearClasses() {
+
+    for (var i = 0; i < elements.length; i++) {
+      pages[i].classList.remove('active');
+      elements[i].classList.remove('active');
+    }
+
+  }
+
+  function assignClasses(index) {
+
+    pages[index].classList.add('active');
+    elements[index].classList.add('active');
+
+  }
+
   function sailBack() {
+
+    if(currentSlide === 0) {
+      currentSlide = elements.length;
+    }
+
+    currentSlide = currentSlide - 1;
+
+    sailTo(currentSlide);
 
   }
 
   function sailForward() {
 
+    if (currentSlide == elements.length - 1) {
+      currentSlide = -1;
+    }
+
+    currentSlide = currentSlide + 1;
+
+    sailTo(currentSlide);
+
   }
 
-  function sailTo(event) {
+  function sailTo(currentSlide) {
+
+    clearClasses();
+    assignClasses(currentSlide);
 
   }
 
