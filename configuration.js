@@ -37,6 +37,8 @@ module.exports = {
   big: '700px',
   large: '800px',
   huge: '900px',
-  aldnoah: '1000px'
+  aldnoah: '1000px',
+  yatterman: '1100px',
+  gamagori: '1200px'
 
 }

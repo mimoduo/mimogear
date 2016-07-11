@@ -30,6 +30,8 @@ input {
 
   &:checked {}
 
+  &::placeholder {}
+
 }
 
 [type='text'] {}

@@ -6,7 +6,7 @@
 
 }
 
-@define-mixin tall-media $width, $height {
+@define-mixin expanded-media $width, $height {
 
   @media (min-width: $width) and (min-height: $height) {
     @mixin-content;

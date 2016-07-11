@@ -1159,12 +1159,14 @@ h6, .h6 {
 /* 1:Heading One */
 h1,
 .h1 {
+  margin: 1.25rem 0;
   font-size: 2.5rem;
   line-height: 1.25;
 }
 /* 2:Heading Two */
 h2,
 .h2 {
+  margin: 1.25rem 0;
   font-size: 2.1875rem;
   line-height: 1.2857142857142858;
 }
@@ -1183,12 +1185,14 @@ h4,
 /* 5:Heading Five */
 h5,
 .h5 {
+  margin: 1.25rem 0;
   font-size: 1.25rem;
   line-height: 1.5;
 }
 /* 6:Heading Six */
 h6,
 .h6 {
+  margin: 1.25rem 0;
   font-size: 1rem;
   line-height: 1.375;
 }
@@ -1431,6 +1435,18 @@ input:disabled{
 
 }
 input:checked{
+
+}
+input::-webkit-input-placeholder{
+
+}
+input::-moz-placeholder{
+
+}
+input:-ms-input-placeholder{
+
+}
+input::placeholder{
 
 }
 [type='text'] {}
