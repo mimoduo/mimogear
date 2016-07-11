@@ -772,6 +772,14 @@ optgroup {
   font-family: 'Quicksand';
 }
 /* ================
+// Drawer
+// ============= */
+.drawer {
+  padding: 1.25em;
+  background: #000;
+  color: #fff;
+}
+/* ================
 // Grids
 // ============= */
 @media (min-width: 700px) {
@@ -882,20 +890,44 @@ optgroup {
 .mimo-collage li:nth-child(1){
   top: 0%;
   left: 0%;
-  height: 100%;
-  width: 33.33333333333333%;
+  height: 25%;
+  width: 100%;
+}
+@media (min-width: 900px){
+  .mimo-collage li:nth-child(1){
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 33.33333333333333%;
+  }
 }
 .mimo-collage li:nth-child(2){
-  top: 0%;
-  left: 33.33333333333333%;
-  height: 50%;
-  width: 66.66666666666666%;
+  top: 25%;
+  left: 0%;
+  height: 25%;
+  width: 100%;
+}
+@media (min-width: 900px){
+  .mimo-collage li:nth-child(2){
+    top: 0%;
+    left: 33.33333333333333%;
+    height: 50%;
+    width: 66.66666666666666%;
+  }
 }
 .mimo-collage li:nth-child(3){
   top: 50%;
-  left: 33.33333333333333%;
+  left: 0%;
   height: 25%;
-  width: 66.66666666666666%;
+  width: 100%;
+}
+@media (min-width: 600px){
+  .mimo-collage li:nth-child(3){
+    top: 50%;
+    left: 0%;
+    height: 50%;
+    width: 50%;
+  }
 }
 @media (min-width: 900px){
   .mimo-collage li:nth-child(3){
@@ -907,9 +939,17 @@ optgroup {
 }
 .mimo-collage li:nth-child(4){
   top: 75%;
-  left: 33.33333333333333%;
+  left: 0%;
   height: 25%;
-  width: 66.66666666666666%;
+  width: 100%;
+}
+@media (min-width: 600px){
+  .mimo-collage li:nth-child(4){
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    width: 50%;
+  }
 }
 @media (min-width: 900px){
   .mimo-collage li:nth-child(4){

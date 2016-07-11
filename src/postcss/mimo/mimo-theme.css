@@ -14,6 +14,17 @@
 
 
 /* ================
+// Drawer
+// ============= */
+
+.drawer {
+  padding: em(20);
+  background: #000;
+  color: #fff;
+}
+
+
+/* ================
 // Grids
 // ============= */
 
@@ -96,15 +107,29 @@
     border-bottom: 1px solid;
 
     &:nth-child(1) {
-      @mixin collage 2, 4, 0, 0, 6, 4;
+      @mixin collage 6, 1, 0, 0, 6, 4;
+
+      @mixin media $huge {
+        @mixin collage 2, 4, 0, 0, 6, 4;
+      }
+
     }
 
     &:nth-child(2) {
-      @mixin collage 4, 2, 2, 0, 6, 4;
+      @mixin collage 6, 1, 0, 1, 6, 4;
+
+      @mixin media $huge {
+        @mixin collage 4, 2, 2, 0, 6, 4;
+      }
+
     }
 
     &:nth-child(3) {
-      @mixin collage 4, 1, 2, 2, 6, 4;
+      @mixin collage 6, 1, 0, 2, 6, 4;
+
+      @mixin media $medium {
+        @mixin collage 3, 2, 0, 2, 6, 4;
+      }
 
       @mixin media $huge {
         @mixin collage 2, 2, 2, 2, 6, 4;
@@ -113,7 +138,11 @@
     }
 
     &:nth-child(4) {
-      @mixin collage 4, 1, 2, 3, 6, 4;
+      @mixin collage 6, 1, 0, 3, 6, 4;
+
+      @mixin media $medium {
+        @mixin collage 3, 2, 3, 2, 6, 4;
+      }
 
       @mixin media $huge {
         @mixin collage 2, 2, 4, 2, 6, 4;
