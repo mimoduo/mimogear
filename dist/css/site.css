@@ -1245,6 +1245,7 @@ button {}
   overflow: hidden;
   background-image: url('');
   background-position: 50% 50%;
+  background-repeat: no-repeat;
   background-size: contain;
   color: transparent
 

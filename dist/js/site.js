@@ -177,88 +177,78 @@ function lantern(parameters) {
 // Sail Slide
 // ============= */
 
-function sail(container, backSymbol, forwardSymbol) {
+function sail(container, elements, backSymbol, forwardSymbol) {
 
   var sail = {};
 
-  if(container === undefined) {
-    sail.container = '.sail';
-  } else {
-    sail.container = parameters.container;
-  }
+  sail.container = '.sail' || container;
+  sail.sails = 'li' || elements;
+  sail.backSymbol = '#arrow-back' || backSymbol;
+  sail.forwardSymbol = '#arrow-forward' || forwardSymbol;
 
-  sail.container = document.querySelectorAll(sail.container);
+  sail.sails = document.querySelectorAll(sail.container + ' ' + sail.sails);
+  sail.container = document.querySelector(sail.container);
 
-  if(backSymbol === undefined) {
-    sail.backSymbol = '#arrow-back';
-  } else {
-    sail.backSymbol = parameters.backSymbol;
-  }
+  var sailFragment = document.createDocumentFragment();
+  var boat = sail.container;
 
-  if(forwardSymbol === undefined) {
-    sail.forwardSymbol = '#arrow-forward';
-  } else {
-    sail.forwardSymbol = parameters.forwardSymbol;
-  }
+  boat.directions = document.createElement('nav');
+  boat.directions.classList.add('sail-directions');
+  sailFragment.appendChild(boat.directions);
 
-  for(var i = 0; i < sail.container.length; i++) {
+  boat.back = document.createElement('button');
+  boat.back.innerHTML = '<svg class="symbol symbol-sail-direction"><use xlink:href="' + sail.backSymbol + '"></use></svg>';
+  boat.back.classList.add('sail-direction', 'sail-back');
+  boat.back.addEventListener('click', sailBack, false);
+  boat.directions.appendChild(boat.back);
 
-    var sailFragment = document.createDocumentFragment();
-    var boat = sail.container[i];
+  boat.forward = document.createElement('button');
+  boat.forward.innerHTML = '<svg class="symbol symbol-sail-direction"><use xlink:href="' + sail.forwardSymbol + '"></use></svg>';
+  boat.forward.classList.add('sail-direction', 'sail-forward');
+  boat.forward.addEventListener('click', sailForward, false);
+  boat.directions.appendChild(boat.forward);
 
-    boat.directions = document.createElement('nav');
-    boat.directions.classList.add('sail-directions');
-    sailFragment.appendChild(boat.directions);
+  boat.markers = document.createElement('nav');
+  boat.markers.classList.add('sail-markers');
+  sailFragment.appendChild(boat.markers);
 
-    boat.back = document.createElement('button');
-    boat.back.innerHTML = '<svg class="symbol symbol-sail-direction"><use xlink:href="' + sail.backSymbol + '"></use></svg>';
-    boat.back.classList.add('sail-direction', 'sail-back');
-    boat.back.addEventListener('click', sailBack, false);
-    boat.directions.appendChild(boat.back);
+  boat.keys = [];
 
-    boat.forward = document.createElement('button');
-    boat.forward.innerHTML = '<svg class="symbol symbol-sail-direction"><use xlink:href="' + sail.forwardSymbol + '"></use></svg>';
-    boat.forward.classList.add('sail-direction', 'sail-forward');
-    boat.forward.addEventListener('click', sailForward, false);
-    boat.directions.appendChild(boat.forward);
+  for(var x = 0; x < boat.children.length; x++) {
 
-    boat.markers = document.createElement('nav');
-    boat.markers.classList.add('sail-markers');
-    sailFragment.appendChild(boat.markers);
-
-    for(var x = 0; x < boat.children.length; x++) {
-
-      boat.key = document.createElement('button');
-      boat.key.classList.add('sail-key');
-      boat.key.addEventListener('click', sailTo.bind(null, i), false);
-      boat.markers.appendChild(boat.key);
-
-    }
-
-    boat.appendChild(sailFragment);
+    boat.key = document.createElement('button');
+    boat.key.classList.add('sail-key');
+    boat.key.addEventListener('click', sailTo.bind(null, x), false);
+    boat.keys.push(boat.key);
+    boat.markers.appendChild(boat.key);
 
   }
+
+  boat.appendChild(sailFragment);
+
+  var currentSlide = 0;
+  sailTo(currentSlide);
 
   function clearClasses() {
 
-    for (var i = 0; i < elements.length; i++) {
-      pages[i].classList.remove('active');
-      elements[i].classList.remove('active');
+    for (var i = 0; i < sail.sails.length; i++) {
+      boat.keys[i].classList.remove('active');
+      sail.sails[i].classList.remove('active');
     }
 
   }
 
   function assignClasses(index) {
 
-    pages[index].classList.add('active');
-    elements[index].classList.add('active');
+    boat.keys[index].classList.add('active');
+    sail.sails[index].classList.add('active');
 
   }
 
   function sailBack() {
 
     if(currentSlide === 0) {
-      currentSlide = elements.length;
+      currentSlide = sail.sails.length;
     }
 
     currentSlide = currentSlide - 1;
@@ -269,7 +259,7 @@ function sail(container, backSymbol, forwardSymbol) {
 
   function sailForward() {
 
-    if (currentSlide == elements.length - 1) {
+    if (currentSlide == sail.sails.length - 1) {
       currentSlide = -1;
     }
 
@@ -418,3 +408,74 @@ function site() {
   });
 
 }
+
+(function () {
+
+if (typeof window.Element === "undefined" || "classList" in document.documentElement) return;
+
+var prototype = Array.prototype,
+    push = prototype.push,
+    splice = prototype.splice,
+    join = prototype.join;
+
+function DOMTokenList(el) {
+  this.el = el;
+  // The className needs to be trimmed and split on whitespace
+  // to retrieve a list of classes.
+  var classes = el.className.replace(/^\s+|\s+$/g,'').split(/\s+/);
+  for (var i = 0; i < classes.length; i++) {
+    push.call(this, classes[i]);
+  }
+};
+
+DOMTokenList.prototype = {
+  add: function(token) {
+    if(this.contains(token)) return;
+    push.call(this, token);
+    this.el.className = this.toString();
+  },
+  contains: function(token) {
+    return this.el.className.indexOf(token) != -1;
+  },
+  item: function(index) {
+    return this[index] || null;
+  },
+  remove: function(token) {
+    if (!this.contains(token)) return;
+    for (var i = 0; i < this.length; i++) {
+      if (this[i] == token) break;
+    }
+    splice.call(this, i, 1);
+    this.el.className = this.toString();
+  },
+  toString: function() {
+    return join.call(this, ' ');
+  },
+  toggle: function(token) {
+    if (!this.contains(token)) {
+      this.add(token);
+    } else {
+      this.remove(token);
+    }
+
+    return this.contains(token);
+  }
+};
+
+window.DOMTokenList = DOMTokenList;
+
+function defineElementGetter (obj, prop, getter) {
+    if (Object.defineProperty) {
+        Object.defineProperty(obj, prop,{
+            get : getter
+        });
+    } else {
+        obj.__defineGetter__(prop, getter);
+    }
+}
+
+defineElementGetter(Element.prototype, 'classList', function () {
+  return new DOMTokenList(this);
+});
+
+})();
