@@ -1,5 +1,6 @@
 /* ================
 // Sail Slide
+//   http://codepen.io/mimoduo/pen/gabWmN
 // ============= */
 
 function sail(container, elements, backSymbol, forwardSymbol) {
