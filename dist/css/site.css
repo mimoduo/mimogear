@@ -760,7 +760,7 @@ optgroup {
 // Type
 // ============= */
 /* ================
-// Mimo Specific
+// Layout
 // ============= */
 .mimo-theme {
 
@@ -768,6 +768,73 @@ optgroup {
 .mimo-theme body{
   font-family: 'Quicksand';
   color: #9e12ef;
+}
+/* ================
+// Drawer
+// ============= */
+.mimo-theme {
+
+}
+.mimo-theme .drawer-trigger{
+
+}
+.mimo-theme .drawer-trigger:before,
+    .mimo-theme .drawer-trigger:after{
+  color: #9e12ef;
+}
+.mimo-theme .drawer{
+  padding: 1.25em;
+  background: #9e12ef;
+  color: #fff;
+}
+/* ================
+// Icons
+// ============= */
+.mimo-theme {
+
+}
+.mimo-theme .symbol{
+  display: block;
+  height: 1.1111111111111112em;
+  width: 1.1111111111111112em;
+}
+.mimo-theme .symbol-logo{
+  height: 2.888888888888889em;
+  width: 11.11111111111111em;
+  fill: #9e12ef;
+}
+/* ================
+// Regions
+// ============= */
+.mimo-theme {
+
+}
+.mimo-theme .scarf,
+  .mimo-theme .lace{
+  padding: 1.25em;
+}
+/* ================
+// Section
+// ============= */
+.mimo-theme {
+
+}
+.mimo-theme .section{
+  padding: 1.1111111111111112em;
+  font-size: 1.125em;
+  line-height: 1.6666666666666667;
+  color: #9e12ef;
+}
+.mimo-theme .section:nth-of-type(odd){
+  padding: 3.3333333333333335em 1.1111111111111112em;
+  background: #9e12ef;
+  color: #f0d0ff;
+}
+/* ================
+// Grid
+// ============= */
+.mimo-theme {
+
 }
 @media (min-width: 700px) {
   .mimo-theme{
@@ -811,113 +878,66 @@ optgroup {
   }
 
   }
-.mimo-theme .drawer-trigger{
-
+.mimo-theme .grid{
+  margin: 0 -1.1111111111111112em;
 }
-.mimo-theme .drawer-trigger:before,
-      .mimo-theme .drawer-trigger:after{
-  color: #9e12ef;
-}
-.mimo-theme .drawer{
-  padding: 1.25em;
-  background: #9e12ef;
-  color: #fff;
-}
-.mimo-theme .symbol-logo{
-  fill: #9e12ef;
-}
-/* ================
-// Icons
-// ============= */
-.symbol {
-  display: block;
-  height: 1.1111111111111112em;
-  width: 1.1111111111111112em;
-}
-/* ================
-// Regions
-// ============= */
-.scarf,
-.lace {
-  padding: 1.25em;
-}
-/* ================
-// Section
-// ============= */
-.section {
-  padding: 1.1111111111111112em;
-  font-size: 1.125em;
-  line-height: 1.6666666666666667;
-  color: #9e12ef
-
-}
-.section:nth-of-type(odd){
-  padding: 3.3333333333333335em 1.1111111111111112em;
-  background: #9e12ef;
-  color: #f0d0ff;
-}
-/* ================
-// Grid
-// ============= */
-.mimo-grid {
-  margin: 0 -1.1111111111111112em
-
-}
-.mimo-grid [class^="col"]{
+.mimo-theme .grid [class^="col"]{
   padding: 0 1.1111111111111112em;
 }
-.mimo-grid h4{
+.mimo-theme .grid h3{
   margin: 0;
 }
 /* ================
 // Collage
 // ============= */
-.mimo-collage {
-  height: 38.888888888888886em;
-  border-top: 1.1111111111111112em solid;
-  border-left: 1.1111111111111112em solid
+.mimo-theme {
 
 }
-.mimo-collage li{
+.mimo-theme .collage{
+  height: 38.888888888888886em;
+  border-top: 1.1111111111111112em solid;
+  border-left: 1.1111111111111112em solid;
+}
+.mimo-theme .collage li{
   border-right: 1.1111111111111112em solid;
   border-bottom: 1.1111111111111112em solid;
 }
-.mimo-collage li:nth-child(1){
+.mimo-theme .collage li:nth-child(1){
   top: 0%;
   left: 0%;
   height: 25%;
   width: 100%;
 }
 @media (min-width: 900px){
-  .mimo-collage li:nth-child(1){
+  .mimo-theme .collage li:nth-child(1){
     top: 0%;
     left: 0%;
     height: 100%;
     width: 33.33333333333333%;
   }
 }
-.mimo-collage li:nth-child(2){
+.mimo-theme .collage li:nth-child(2){
   top: 25%;
   left: 0%;
   height: 25%;
   width: 100%;
 }
 @media (min-width: 900px){
-  .mimo-collage li:nth-child(2){
+  .mimo-theme .collage li:nth-child(2){
     top: 0%;
     left: 33.33333333333333%;
     height: 50%;
     width: 66.66666666666666%;
   }
 }
-.mimo-collage li:nth-child(3){
+.mimo-theme .collage li:nth-child(3){
   top: 50%;
   left: 0%;
   height: 25%;
   width: 100%;
 }
 @media (min-width: 600px){
-  .mimo-collage li:nth-child(3){
+  .mimo-theme .collage li:nth-child(3){
     top: 50%;
     left: 0%;
     height: 50%;
@@ -925,21 +945,21 @@ optgroup {
   }
 }
 @media (min-width: 900px){
-  .mimo-collage li:nth-child(3){
+  .mimo-theme .collage li:nth-child(3){
     top: 50%;
     left: 33.33333333333333%;
     height: 50%;
     width: 33.33333333333333%;
   }
 }
-.mimo-collage li:nth-child(4){
+.mimo-theme .collage li:nth-child(4){
   top: 75%;
   left: 0%;
   height: 25%;
   width: 100%;
 }
 @media (min-width: 600px){
-  .mimo-collage li:nth-child(4){
+  .mimo-theme .collage li:nth-child(4){
     top: 50%;
     left: 50%;
     height: 50%;
@@ -947,14 +967,14 @@ optgroup {
   }
 }
 @media (min-width: 900px){
-  .mimo-collage li:nth-child(4){
+  .mimo-theme .collage li:nth-child(4){
     top: 50%;
     left: 66.66666666666666%;
     height: 50%;
     width: 33.33333333333333%;
   }
 }
-.mimo-collage h4{
+.mimo-theme .collage h4{
   position: absolute;
   top: 50%;
   left: 0;
@@ -968,92 +988,115 @@ optgroup {
 /* ================
 // Slideshow
 // ============= */
-.mimo-sail-slide {
-  text-align: center
+.mimo-theme {
 
 }
-.mimo-sail-slide li{
+.mimo-theme .sail-slide{
+  text-align: center;
+}
+.mimo-theme .sail-slide li{
   margin-bottom: 0.5714285714285714em;
   font-size: 1.9444444444444444em;
   line-height: 1;
 }
-.sail-directions {
-    margin-bottom: 0.8333333333333334em;
-  }
-.sail-direction {
-      display: inline-block;
-      vertical-align: top;
-      border: 0;
-      padding: 0 0.2857142857142857em;
-      font-size: 1.9444444444444444em;
-      background: none;
-      color: inherit;
-    }
-.symbol-sail-direction {
-        fill: currentColor;
-        font-size: 0.6285714285714286em;
-      }
-.sail-key {
-    height: 1.1111111111111112em;
-    width: 1.1111111111111112em;
-    background: none;
-    border: 0.1111111111111111em solid;
-    margin: 0 0.2777777777777778em;
-    border-radius: 100%;
-    color: #fff;
-    -webkit-transition: background .2s;
-    transition: background .2s
-
-  }
-.sail-key:hover{
+.mimo-theme .sail-directions{
+  margin-bottom: 0.8333333333333334em;
+}
+.mimo-theme .sail-direction{
+  display: inline-block;
+  vertical-align: top;
+  border: 0;
+  padding: 0 0.2857142857142857em;
+  font-size: 1.9444444444444444em;
+  background: none;
+  color: inherit;
+}
+.mimo-theme .symbol-sail-direction{
+  fill: currentColor;
+  font-size: 0.6285714285714286em;
+}
+.mimo-theme .sail-key{
+  height: 1.1111111111111112em;
+  width: 1.1111111111111112em;
+  background: none;
+  border: 0.1111111111111111em solid;
+  margin: 0 0.2777777777777778em;
+  border-radius: 100%;
+  color: #f0d0ff;
+  -webkit-transition: background .2s;
+  transition: background .2s;
+}
+.mimo-theme .sail-key:hover{
   background: rgba(255, 255, 255, .75);
 }
-.sail-key.active{
+.mimo-theme .sail-key.active{
   background: currentColor;
 }
 /* ================
 // Lantern
 // ============= */
-.lantern-grid {
+.mimo-theme {
+
+}
+.mimo-theme .lantern-grid{
   margin: 0 -0.5555555555555556em;
 }
-.lantern-col {
-    display: block;
-    min-height: 25em;
-    width: 100%;
-    border-right: 0.5555555555555556em solid #fff;
-    border-left: 0.5555555555555556em solid #fff;
+.mimo-theme .lantern-col{
+  display: block;
+  min-height: 25em;
+  width: 100%;
+  border-right: 0.5555555555555556em solid #fff;
+  border-left: 0.5555555555555556em solid #fff;
+}
+.mimo-theme .lantern-col:first-child{
+
+}
+@media (min-width: 700px){
+  .mimo-theme .lantern-col:first-child{
+    width: 60%;
   }
-.lantern {
-      padding: 1.6666666666666667em;
-      background: rgba(255, 255, 255, .75);
-    }
-.lantern-holder {
-        border: 0.2777777777777778em solid #fff;
-      }
-.lantern-control {
-        border: 0;
-        background: none;
-      }
-.lantern-close {
-        position: absolute;
-        top: 0;
-        right: 0;
-      }
+}
+.mimo-theme .lantern-col:last-child{
+
+}
+@media (min-width: 700px){
+  .mimo-theme .lantern-col:last-child{
+    width: 40%;
+  }
+}
+.mimo-theme .lantern{
+  padding: 1.6666666666666667em;
+  background: rgba(255, 255, 255, .75);
+}
+.mimo-theme .lantern-holder{
+  border: 0.2777777777777778em solid #fff;
+}
+.mimo-theme .lantern-control{
+  border: 0;
+  background: none;
+}
+.mimo-theme .lantern-close{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 /* ================
 // Harmonica
 // ============= */
-.mimo-harmonica {
+.mimo-theme {
 
 }
-.mimo-harmonica .harmonica-header{
+.mimo-theme .harmonica{
+
+}
+.mimo-theme .harmonica .harmonica-header{
   border-bottom: 1px solid;
   margin: 0 0 1.1111111111111112em;
 }
-.mimo-harmonica h4{
+.mimo-theme .harmonica h4{
   margin: 0.4em 0;
 }
-.mimo-harmonica .harmonica-content{
+.mimo-theme .harmonica .harmonica-content{
   margin-bottom: 1.25em;
 }
 /* ::::::::::::::::

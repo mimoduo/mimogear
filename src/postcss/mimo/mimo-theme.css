@@ -6,7 +6,7 @@
 
 
 /* ================
-// Mimo Specific
+// Layout
 // ============= */
 
 .mimo-theme {
@@ -16,32 +16,29 @@
     color: #9e12ef;
   }
 
-  @media (min-width: 700px) {
+}
 
-    & .col-big {
-      create-grid: 12;
+
+/* ================
+// Drawer
+// ============= */
+
+.mimo-theme {
+
+  & .drawer-trigger {
+
+    &:before,
+    &:after {
+      color: #9e12ef;
     }
 
   }
 
-    & .drawer-trigger {
-
-      &:before,
-      &:after {
-        color: #9e12ef;
-      }
-
-    }
-
-    & .drawer {
-      padding: em(20);
-      background: #9e12ef;
-      color: #fff;
-    }
-
-    & .symbol-logo {
-      fill: #9e12ef;
-    }
+  & .drawer {
+    padding: em(20);
+    background: #9e12ef;
+    color: #fff;
+  }
 
 }
 
@@ -50,10 +47,20 @@
 // Icons
 // ============= */
 
-.symbol {
-  display: block;
-  height: em(20, 18);
-  width: em(20, 18);
+.mimo-theme {
+
+  & .symbol {
+    display: block;
+    height: em(20, 18);
+    width: em(20, 18);
+  }
+
+  & .symbol-logo {
+    height: em(52, 18);
+    width: em(200, 18);
+    fill: #9e12ef;
+  }
+
 }
 
 
@@ -61,9 +68,13 @@
 // Regions
 // ============= */
 
-.scarf,
-.lace {
-  padding: em(20);
+.mimo-theme {
+
+  & .scarf,
+  & .lace {
+    padding: em(20);
+  }
+
 }
 
 
@@ -71,16 +82,20 @@
 // Section
 // ============= */
 
-.section {
-  padding: em(20, 18);
-  font-size: em(18);
-  line-height: nu(30, 18);
-  color: #9e12ef;
+.mimo-theme {
 
-  &:nth-of-type(odd) {
-    padding: em(60, 18) em(20, 18);
-    background: #9e12ef;
-    color: #f0d0ff;
+  & .section {
+    padding: em(20, 18);
+    font-size: em(18);
+    line-height: nu(30, 18);
+    color: #9e12ef;
+
+    &:nth-of-type(odd) {
+      padding: em(60, 18) em(20, 18);
+      background: #9e12ef;
+      color: #f0d0ff;
+    }
+
   }
 
 }
@@ -90,16 +105,28 @@
 // Grid
 // ============= */
 
-.mimo-grid {
-  margin: 0 em(-20, 18);
+.mimo-theme {
 
-  & [class^="col"] {
-    padding: 0 em(20, 18);
+  @media (min-width: 700px) {
+
+    & .col-big {
+      create-grid: 12;
+    }
+
   }
 
-    & h4 {
-      margin: 0;
+  & .grid {
+    margin: 0 em(-20, 18);
+
+    & [class^="col"] {
+      padding: 0 em(20, 18);
     }
+
+      & h3 {
+        margin: 0;
+      }
+
+  }
 
 }
 
@@ -108,70 +135,74 @@
 // Collage
 // ============= */
 
-.mimo-collage {
-  height: em(700, 18);
-  border-top: em(20, 18) solid;
-  border-left: em(20, 18) solid;
+.mimo-theme {
 
-  & li {
-    border-right: em(20, 18) solid;
-    border-bottom: em(20, 18) solid;
+  & .collage {
+    height: em(700, 18);
+    border-top: em(20, 18) solid;
+    border-left: em(20, 18) solid;
 
-    &:nth-child(1) {
-      @mixin collage 6, 1, 0, 0, 6, 4;
+    & li {
+      border-right: em(20, 18) solid;
+      border-bottom: em(20, 18) solid;
 
-      @mixin media $huge {
-        @mixin collage 2, 4, 0, 0, 6, 4;
+      &:nth-child(1) {
+        @mixin collage 6, 1, 0, 0, 6, 4;
+
+        @mixin media $huge {
+          @mixin collage 2, 4, 0, 0, 6, 4;
+        }
+
+      }
+
+      &:nth-child(2) {
+        @mixin collage 6, 1, 0, 1, 6, 4;
+
+        @mixin media $huge {
+          @mixin collage 4, 2, 2, 0, 6, 4;
+        }
+
+      }
+
+      &:nth-child(3) {
+        @mixin collage 6, 1, 0, 2, 6, 4;
+
+        @mixin media $medium {
+          @mixin collage 3, 2, 0, 2, 6, 4;
+        }
+
+        @mixin media $huge {
+          @mixin collage 2, 2, 2, 2, 6, 4;
+        }
+
+      }
+
+      &:nth-child(4) {
+        @mixin collage 6, 1, 0, 3, 6, 4;
+
+        @mixin media $medium {
+          @mixin collage 3, 2, 3, 2, 6, 4;
+        }
+
+        @mixin media $huge {
+          @mixin collage 2, 2, 4, 2, 6, 4;
+        }
+
       }
 
     }
 
-    &:nth-child(2) {
-      @mixin collage 6, 1, 0, 1, 6, 4;
-
-      @mixin media $huge {
-        @mixin collage 4, 2, 2, 0, 6, 4;
+      & h4 {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        transform: translate(0, -50%);
       }
-
-    }
-
-    &:nth-child(3) {
-      @mixin collage 6, 1, 0, 2, 6, 4;
-
-      @mixin media $medium {
-        @mixin collage 3, 2, 0, 2, 6, 4;
-      }
-
-      @mixin media $huge {
-        @mixin collage 2, 2, 2, 2, 6, 4;
-      }
-
-    }
-
-    &:nth-child(4) {
-      @mixin collage 6, 1, 0, 3, 6, 4;
-
-      @mixin media $medium {
-        @mixin collage 3, 2, 3, 2, 6, 4;
-      }
-
-      @mixin media $huge {
-        @mixin collage 2, 2, 4, 2, 6, 4;
-      }
-
-    }
 
   }
-
-    & h4 {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 100%;
-      margin: 0;
-      text-align: center;
-      transform: translate(0, -50%);
-    }
 
 }
 
@@ -180,111 +211,140 @@
 // Slideshow
 // ============= */
 
-.mimo-sail-slide {
-  text-align: center;
+.mimo-theme {
 
-  & li {
-    margin-bottom: em(20, 35);
-    font-size: em(35, 18);
-    line-height: 1;
-  }
+  & .sail-slide {
+    text-align: center;
 
-}
-
-  .sail-directions {
-    margin-bottom: em(15, 18);
-  }
-
-    .sail-direction {
-      display: inline-block;
-      vertical-align: top;
-      border: 0;
-      padding: 0 em(10, 35);
+    & li {
+      margin-bottom: em(20, 35);
       font-size: em(35, 18);
-      background: none;
-      color: inherit;
+      line-height: 1;
     }
 
-      .symbol-sail-direction {
-        fill: currentColor;
-        font-size: em(22, 35);
+  }
+
+    & .sail-directions {
+      margin-bottom: em(15, 18);
+    }
+
+      & .sail-direction {
+        display: inline-block;
+        vertical-align: top;
+        border: 0;
+        padding: 0 em(10, 35);
+        font-size: em(35, 18);
+        background: none;
+        color: inherit;
       }
 
-  .sail-key {
-    height: em(20, 18);
-    width: em(20, 18);
-    background: none;
-    border: em(2, 18) solid;
-    margin: 0 em(5, 18);
-    border-radius: 100%;
-    color: #fff;
-    transition: background .2s;
+        & .symbol-sail-direction {
+          fill: currentColor;
+          font-size: em(22, 35);
+        }
 
-    &:hover {
-      background: rgba(255, 255, 255, .75);
+    & .sail-key {
+      height: em(20, 18);
+      width: em(20, 18);
+      background: none;
+      border: em(2, 18) solid;
+      margin: 0 em(5, 18);
+      border-radius: 100%;
+      color: #f0d0ff;
+      transition: background .2s;
+
+      &:hover {
+        background: rgba(255, 255, 255, .75);
+      }
+
+      &.active {
+        background: currentColor;
+      }
+
     }
 
-    &.active {
-      background: currentColor;
-    }
-
-  }
+}
 
 
 /* ================
 // Lantern
 // ============= */
 
-.lantern-grid {
-  margin: 0 em(-10, 18);
-}
+.mimo-theme {
 
-  .lantern-col {
-    display: block;
-    min-height: em(400);
-    width: 100%;
-    border-right: em(10, 18) solid #fff;
-    border-left: em(10, 18) solid #fff;
+  & .lantern-grid {
+    margin: 0 em(-10, 18);
   }
 
-    .lantern {
-      padding: em(30, 18);
-      background: rgba(255, 255, 255, .75);
+    & .lantern-col {
+      display: block;
+      min-height: em(400);
+      width: 100%;
+      border-right: em(10, 18) solid #fff;
+      border-left: em(10, 18) solid #fff;
+
+      &:first-child {
+
+        @mixin media $big {
+          width: 60%;
+        }
+
+      }
+
+      &:last-child {
+
+        @mixin media $big {
+          width: 40%;
+        }
+
+      }
+
     }
 
-      .lantern-holder {
-        border: em(5, 18) solid #fff;
+      & .lantern {
+        padding: em(30, 18);
+        background: rgba(255, 255, 255, .75);
       }
 
-      .lantern-control {
-        border: 0;
-        background: none;
-      }
+        & .lantern-holder {
+          border: em(5, 18) solid #fff;
+        }
 
-      .lantern-close {
-        position: absolute;
-        top: 0;
-        right: 0;
-      }
+        & .lantern-control {
+          border: 0;
+          background: none;
+        }
+
+        & .lantern-close {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+
+}
 
 
 /* ================
 // Harmonica
 // ============= */
 
-.mimo-harmonica {
+.mimo-theme {
 
-  & .harmonica-header {
-    border-bottom: 1px solid;
-    margin: 0 0 em(20, 18);
-  }
+  & .harmonica {
 
-    & h4 {
-      margin: em(10, $h4Size) 0;
+    & .harmonica-header {
+      border-bottom: 1px solid;
+      margin: 0 0 em(20, 18);
     }
 
-  & .harmonica-content {
-    margin-bottom: em(20);
+      & h4 {
+        margin: em(10, $h4Size) 0;
+      }
+
+    & .harmonica-content {
+      margin-bottom: em(20);
+    }
+
   }
 
 }

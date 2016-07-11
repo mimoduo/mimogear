@@ -8,33 +8,33 @@ block themeSelection
   - theme = "mimo-theme"
 
 block main  
-  .section.grid-section
+  .section
     .compartment
-      .grid.mimo-grid
+      .grid
         include ../mimo/grid.jade
-  .section.collage-section
+  .section
     .compartment
-      ol.collage.mimo-collage.list-reset
+      ol.collage.list-reset
         include ../mimo/collage.jade
-  .section.sail-section
+  .section
     .compartment
-      ol.sail-slide.mimo-sail-slide
+      ol.sail-slide
         include ../mimo/sail.jade
-  .section.lantern-section
+  .section
     .compartment
-      .lantern.mimo-lantern
+      .lantern
       .grid.lantern-grid
-        .col-big-5.lantern-col.spotlight(style="background-image: url('http://i.imgur.com/TN4ivtD.jpg');")
+        .col.lantern-col.spotlight(style="background-image: url('http://i.imgur.com/TN4ivtD.jpg');")
           img.lantern-light.full-width(
             src="http://i.imgur.com/TN4ivtD.jpg"
             title="The 'Cathedral Cliffs' of Kauai's Na Pali Coast. Kauai, Hawaii "
           )
-        .col-big-7.lantern-col.spotlight(style="background-image: url('http://i.imgur.com/SOABm96.jpg);")
+        .col.lantern-col.spotlight(style="background-image: url('http://i.imgur.com/SOABm96.jpg);")
           img.lantern-light.full-width(
             src="http://i.imgur.com/SOABm96.jpg"
             title="Petrified Forest National Park, Arizona"
           )
-  .section.harmonica-section
+  .section
     .compartment
-      .harmonica.mimo-harmonica
+      .harmonica
         include ../mimo/harmonica.jade
