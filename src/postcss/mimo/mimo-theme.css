@@ -4,35 +4,44 @@
 
 @import url(https://fonts.googleapis.com/css?family=Quicksand);
 
+
+/* ================
+// Mimo Specific
+// ============= */
+
 .mimo-theme {
 
   & body {
     font-family: 'Quicksand';
+    color: #9e12ef;
   }
 
-}
+  @media (min-width: 700px) {
 
+    & .col-big {
+      create-grid: 12;
+    }
 
-/* ================
-// Drawer
-// ============= */
-
-.drawer {
-  padding: em(20);
-  background: #000;
-  color: #fff;
-}
-
-
-/* ================
-// Grids
-// ============= */
-
-@media (min-width: 700px) {
-
-  .col-big {
-    create-grid: 12;
   }
+
+    & .drawer-trigger {
+
+      &:before,
+      &:after {
+        color: #9e12ef;
+      }
+
+    }
+
+    & .drawer {
+      padding: em(20);
+      background: #9e12ef;
+      color: #fff;
+    }
+
+    & .symbol-logo {
+      fill: #9e12ef;
+    }
 
 }
 
@@ -63,13 +72,15 @@
 // ============= */
 
 .section {
-  padding: em(40, 18) em(20, 18);
+  padding: em(20, 18);
   font-size: em(18);
   line-height: nu(30, 18);
+  color: #9e12ef;
 
   &:nth-of-type(odd) {
-    background: #222;
-    color: #eee;
+    padding: em(60, 18) em(20, 18);
+    background: #9e12ef;
+    color: #f0d0ff;
   }
 
 }
@@ -99,12 +110,12 @@
 
 .mimo-collage {
   height: em(700, 18);
-  border-top: 1px solid;
-  border-left: 1px solid;
+  border-top: em(20, 18) solid;
+  border-left: em(20, 18) solid;
 
   & li {
-    border-right: 1px solid;
-    border-bottom: 1px solid;
+    border-right: em(20, 18) solid;
+    border-bottom: em(20, 18) solid;
 
     &:nth-child(1) {
       @mixin collage 6, 1, 0, 0, 6, 4;
@@ -169,18 +180,24 @@
 // Slideshow
 // ============= */
 
-.mimo-swift-slide {
+.mimo-sail-slide {
   text-align: center;
 
   & li {
     margin-bottom: em(20, 35);
     font-size: em(35, 18);
+    line-height: 1;
   }
 
-  & .swift-controls {
-    margin-bottom: em(20, 18);
+}
 
-    & button {
+  .sail-directions {
+    margin-bottom: em(15, 18);
+  }
+
+    .sail-direction {
+      display: inline-block;
+      vertical-align: top;
       border: 0;
       padding: 0 em(10, 35);
       font-size: em(35, 18);
@@ -188,30 +205,30 @@
       color: inherit;
     }
 
-      & svg {
+      .symbol-sail-direction {
         fill: currentColor;
         font-size: em(22, 35);
       }
 
-  }
+  .sail-key {
+    height: em(20, 18);
+    width: em(20, 18);
+    background: none;
+    border: em(2, 18) solid;
+    margin: 0 em(5, 18);
+    border-radius: 100%;
+    color: #fff;
+    transition: background .2s;
 
-  & .swift-pager {
-
-    & span {
-      height: em(20, 18);
-      width: em(20, 18);
-      border: em(2, 18) solid;
-      margin: 0 em(5, 18);
-      border-radius: 100%;
+    &:hover {
+      background: rgba(255, 255, 255, .75);
     }
 
-    & .active {
+    &.active {
       background: currentColor;
     }
 
   }
-
-}
 
 
 /* ================
@@ -219,11 +236,15 @@
 // ============= */
 
 .lantern-grid {
-  margin: 0 em(-5, 18);
+  margin: 0 em(-10, 18);
 }
 
   .lantern-col {
-    padding: 0 em(5, 18) em(10, 18);
+    display: block;
+    min-height: em(400);
+    width: 100%;
+    border-right: em(10, 18) solid #fff;
+    border-left: em(10, 18) solid #fff;
   }
 
     .lantern {
@@ -256,6 +277,14 @@
   & .harmonica-header {
     border-bottom: 1px solid;
     margin: 0 0 em(20, 18);
+  }
+
+    & h4 {
+      margin: em(10, $h4Size) 0;
+    }
+
+  & .harmonica-content {
+    margin-bottom: em(20);
   }
 
 }

@@ -4,76 +4,79 @@
 
 function sail(container, elements, backSymbol, forwardSymbol) {
 
-  var sail = {};
+  var sailboat = {};
 
-  sail.container = '.sail' || container;
-  sail.sails = 'li' || elements;
-  sail.backSymbol = '#arrow-back' || backSymbol;
-  sail.forwardSymbol = '#arrow-forward' || forwardSymbol;
+  sailboat.container = '.sail-slide' || container;
+  sailboat.slides = 'li' || elements;
+  sailboat.backSymbol = '#arrow-back' || backSymbol;
+  sailboat.forwardSymbol = '#arrow-forward' || forwardSymbol;
 
-  sail.sails = document.querySelectorAll(sail.container + ' ' + sail.sails);
-  sail.container = document.querySelector(sail.container);
+  sailboat.slides = document.querySelectorAll(sailboat.container + ' ' + sailboat.slides);
+  sailboat.container = document.querySelector(sailboat.container);
 
+  /* Create a document fragment to hold sail controls */
   var sailFragment = document.createDocumentFragment();
-  var boat = sail.container;
+  var sail = sailboat.container;
 
-  boat.directions = document.createElement('nav');
-  boat.directions.classList.add('sail-directions');
-  sailFragment.appendChild(boat.directions);
+  sail.directions = document.createElement('nav');
+  sail.directions.classList.add('sail-directions');
+  sailFragment.appendChild(sail.directions);
 
-  boat.back = document.createElement('button');
-  boat.back.innerHTML = '<svg class="symbol symbol-sail-direction"><use xlink:href="' + sail.backSymbol + '"></use></svg>';
-  boat.back.classList.add('sail-direction', 'sail-back');
-  boat.back.addEventListener('click', sailBack, false);
-  boat.directions.appendChild(boat.back);
+  sail.back = document.createElement('button');
+  sail.back.innerHTML = '<svg class="symbol symbol-sail-direction"><use xlink:href="' + sailboat.backSymbol + '"></use></svg>';
+  sail.back.classList.add('sail-direction', 'sail-back');
+  sail.back.addEventListener('click', sailBack, false);
+  sail.directions.appendChild(sail.back);
 
-  boat.forward = document.createElement('button');
-  boat.forward.innerHTML = '<svg class="symbol symbol-sail-direction"><use xlink:href="' + sail.forwardSymbol + '"></use></svg>';
-  boat.forward.classList.add('sail-direction', 'sail-forward');
-  boat.forward.addEventListener('click', sailForward, false);
-  boat.directions.appendChild(boat.forward);
+  sail.forward = document.createElement('button');
+  sail.forward.innerHTML = '<svg class="symbol symbol-sail-direction"><use xlink:href="' + sailboat.forwardSymbol + '"></use></svg>';
+  sail.forward.classList.add('sail-direction', 'sail-forward');
+  sail.forward.addEventListener('click', sailForward, false);
+  sail.directions.appendChild(sail.forward);
 
-  boat.markers = document.createElement('nav');
-  boat.markers.classList.add('sail-markers');
-  sailFragment.appendChild(boat.markers);
+  sail.markers = document.createElement('nav');
+  sail.markers.classList.add('sail-markers');
+  sailFragment.appendChild(sail.markers);
 
-  boat.keys = [];
+  sail.keys = [];
 
-  for(var x = 0; x < boat.children.length; x++) {
+  for(var i = 0; i < sailboat.slides.length; i++) {
 
-    boat.key = document.createElement('button');
-    boat.key.classList.add('sail-key');
-    boat.key.addEventListener('click', sailTo.bind(null, x), false);
-    boat.keys.push(boat.key);
-    boat.markers.appendChild(boat.key);
+    sail.key = document.createElement('button');
+    sail.key.classList.add('sail-key');
+    sail.key.addEventListener('click', sailTo.bind(null, i), false);
+    sail.keys.push(sail.key);
+    sail.markers.appendChild(sail.key);
+
+    sailboat.slides[i].classList.add('sail');
 
   }
 
-  boat.appendChild(sailFragment);
+  sail.appendChild(sailFragment);
 
   var currentSlide = 0;
   sailTo(currentSlide);
 
   function clearClasses() {
 
-    for (var i = 0; i < sail.sails.length; i++) {
-      boat.keys[i].classList.remove('active');
-      sail.sails[i].classList.remove('active');
+    for (var i = 0; i < sailboat.slides.length; i++) {
+      sail.keys[i].classList.remove('active');
+      sailboat.slides[i].classList.remove('active');
     }
 
   }
 
   function assignClasses(index) {
 
-    boat.keys[index].classList.add('active');
-    sail.sails[index].classList.add('active');
+    sail.keys[index].classList.add('active');
+    sailboat.slides[index].classList.add('active');
 
   }
 
   function sailBack() {
 
     if(currentSlide === 0) {
-      currentSlide = sail.sails.length;
+      currentSlide = sailboat.slides.length;
     }
 
     currentSlide = currentSlide - 1;
@@ -84,7 +87,7 @@ function sail(container, elements, backSymbol, forwardSymbol) {
 
   function sailForward() {
 
-    if (currentSlide == sail.sails.length - 1) {
+    if (currentSlide == sailboat.slides.length - 1) {
       currentSlide = -1;
     }
 

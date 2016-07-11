@@ -10,13 +10,6 @@ function site() {
     trigger: '.drawer-trigger'
   });
 
-  swift({
-    container: '.swift-slide',
-    elements: 'li',
-    prevSymbol: '#arrow-back',
-    nextSymbol: '#arrow-forward'
-  });
-
   sail();
 
   harmonica({

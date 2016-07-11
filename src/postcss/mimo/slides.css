@@ -1,9 +1,16 @@
 /* ================
-// Swift Slide
+// Sail Slide
 //   http://codepen.io/mimoduo/pen/gabWmN
 // ============= */
 
-.swift-slide {
+@define-mixin active-slide {
+  position: relative;
+  pointer-events: auto;
+  opacity: 1;
+  visibility: visible;
+}
+
+.sail-slide {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -23,10 +30,7 @@
       transform .4s;
 
     &.active {
-      position: relative;
-      pointer-events: auto;
-      opacity: 1;
-      visibility: visible;
+      @mixin active-slide;
     }
 
   }
@@ -35,36 +39,34 @@
 
 
 /* ================
-// Swift Controls
+// Sail Directions
 // ============= */
 
-.swift-controls {
+.sail-directions {
   user-select: none;
+}
 
-  & button {
+  .sail-direction {
     outline: 0;
 
-    /* Previous Button */
-    &:first-child {}
-
-    /* Next Button */
-    &:last-child {}
-
     &:hover {}
-
+      
   }
 
-}
+  .sail-back {}
+
+  .sail-forward {}
 
 
 /* ================
-// Swift Pager
+// Sail Markers
 // ============= */
 
-.swift-pager {
+.sail-markers {
   user-select: none;
+}
 
-  & span {
+  .sail-key {
     display: inline-block;
     cursor: pointer;
 
@@ -73,5 +75,3 @@
     &.active {}
 
   }
-
-}
