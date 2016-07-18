@@ -25,6 +25,9 @@ gulp.task('jade', ['sprite'], function() {
 
   return gulp.src('src/jade/pages/*.jade')
     .pipe(jade({
+      locals: {
+        pageTitle: configuration.name
+      },
       pretty: true
     }))
     .pipe(gulp.dest('./'))
@@ -75,6 +78,9 @@ gulp.task('postcss', function() {
             return emValue + 'rem';
           },
           nu: function(value, context) {
+            if(context == null) {
+              context = configuration.bodySize;
+            }
             var nuValue = value / context;
             return nuValue;
           }

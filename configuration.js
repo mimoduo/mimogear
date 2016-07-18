@@ -1,6 +1,6 @@
 module.exports = {
 
-  name: 'Mimo-Gear',
+  name: 'Mimogear',
 
   sansSerif: null,
   serif: null,

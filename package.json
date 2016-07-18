@@ -1,11 +1,11 @@
 {
-  "name": "MimoGear",
+  "name": "Mimogear",
   "version": "2.2.0",
   "description": "A small library for building sites",
   "license": "BSD-2-Clause",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mimoduo/Mimo-Gear.git"
+    "url": "https://github.com/mimoduo/Mimogear"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.7",

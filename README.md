@@ -1,6 +1,6 @@
-#Mimo Gear
+#Mimogear
 
-Mimo Gear is a light-weight skeleton library for developers of any skill level to use as a simple start to any project. If a style doesn't exist in one project, it mustn't exist in a library.
+Mimogear is a light-weight skeleton library for developers of any skill level to use as a simple start to any project. If a style doesn't exist in one project, it mustn't exist in a library.
 
 ##Features
 
@@ -35,7 +35,7 @@ Mimo Gear is a light-weight skeleton library for developers of any skill level t
 
 ###JS Features
 
-* Swift Slide slideshow module
+* Sail Slide slideshow module
 * Harmonica/Accordion module
 * Lantern/Lightbox module
 * Drawer trigger event setup
