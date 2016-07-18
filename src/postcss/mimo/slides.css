@@ -11,10 +11,7 @@
 }
 
 .sail-slide {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style: none;
+  @mixin list-reset;
 
   & li {
     position: absolute;
@@ -50,7 +47,7 @@
     outline: 0;
 
     &:hover {}
-      
+
   }
 
   .sail-back {}

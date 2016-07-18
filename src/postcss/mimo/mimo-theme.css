@@ -70,8 +70,9 @@
 
 .mimo-theme {
 
-  & .scarf,
-  & .lace {
+  & .site-header,
+  & .site-footer {
+    @mixin compartment 1240;
     padding: em(20);
   }
 

@@ -22,17 +22,7 @@ label {}
 // Input
 // ============= */
 
-input {
-
-  &:default {}
-
-  &:disabled {}
-
-  &:checked {}
-
-  &::placeholder {}
-
-}
+input {}
 
 [type='text'] {}
 

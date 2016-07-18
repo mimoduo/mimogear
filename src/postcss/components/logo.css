@@ -7,8 +7,8 @@
 .site-logo {
   display: block;
   overflow: hidden;
-  background-image: url('');
-  background-position: 50% 50%;
+  background-image: url('../images/logo.svg');
+  background-position: 0 50%;
   background-repeat: no-repeat;
   background-size: contain;
   color: transparent;

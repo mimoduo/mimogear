@@ -16,18 +16,13 @@
     <figure style="display: none;" class="site-sprite"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 24 24" id="arrow-back"><path d="M20.016 11.016v1.969H7.828l5.578 5.625L12 20.016 3.984 12 12 3.984l1.406 1.406-5.578 5.625h12.188z"/></symbol><symbol viewBox="0 0 24 24" id="arrow-forward"><path d="M12 3.984L20.016 12 12 20.016l-1.406-1.406 5.578-5.625H3.984v-1.969h12.188l-5.578-5.625z"/></symbol><symbol viewBox="0 0 24 24" id="close"><path d="M18.984 6.422L13.406 12l5.578 5.578-1.406 1.406L12 13.406l-5.578 5.578-1.406-1.406L10.594 12 5.016 6.422l1.406-1.406L12 10.594l5.578-5.578z"/></symbol><symbol viewBox="0 0 200 52" id="logo"><title>MIMO</title><text fill-rule="evenodd" font-size="70" font-family="Quicksand-Light, Quicksand" font-weight="300"><tspan x="0" y="50">MIMO</tspan></text></symbol></svg>
     </figure>
     <header role="banner" class="site-header">
-      <div class="hat">
-        <div class="drawer-trigger"></div>
-        <div class="drawer">
-          <p>Drawer content</p>
-        </div>
-      </div>
-      <div class="scarf">
-        <div class="compartment"><a href="/" class="site-logo">
-              <svg class="symbol symbol-logo symbol-logo-undefined">
-                <use xlink:href="#logo"></use>
-              </svg></a></div>
-      </div>
+      <button class="drawer-trigger"></button>
+      <div class="drawer">
+        <p>Drawer content</p>
+      </div><a href="/" class="site-logo">
+          <svg class="symbol symbol-logo symbol-logo-undefined">
+            <use xlink:href="#logo"></use>
+          </svg></a>
     </header>
     <main id="site-main" role="main" class="site-main">
       <div class="section">
@@ -92,16 +87,12 @@
       </div>
     </main>
     <footer role="contentinfo" class="site-footer">
-      <div class="lace">
-        <div class="compartment">
-          <div itemscope itemtype="http://schema.org/Organization" class="vcard">
-            <div itemprop="name" class="org">Organization</div><a href="mailto:organization@gmail.com" itemprop="email" class="email">organization@gmail.com</a>
-            <div class="adr">
-              <div itemprop="streetAddress" class="street-address">82 West Pegasus St.</div><span itemprop="addressLocality" class="locality">Washington</span><span itemprop="addressRegion" class="region">MA</span><span itemprop="postalCode" class="postal-code">480124</span>
-            </div>
-            <div itemprop="telephone" class="tel">428-242-2020</div>
-          </div>
+      <div itemscope itemtype="http://schema.org/Organization" class="vcard">
+        <div itemprop="name" class="org">Organization</div><a href="mailto:organization@gmail.com" itemprop="email" class="email">organization@gmail.com</a>
+        <div class="adr">
+          <div itemprop="streetAddress" class="street-address">82 West Pegasus St.</div><span itemprop="addressLocality" class="locality">Washington</span><span itemprop="addressRegion" class="region">MA</span><span itemprop="postalCode" class="postal-code">480124</span>
         </div>
+        <div itemprop="telephone" class="tel">428-242-2020</div>
       </div>
     </footer>
     <script src="dist/js/site.js"></script>

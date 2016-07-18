@@ -58,7 +58,10 @@
   z-index: 400;
   height: em(60);
   width: em(60);
+  border: 0;
+  padding: 0;
   cursor: pointer;
+  background: none;
 
   &:before,
   &:after {

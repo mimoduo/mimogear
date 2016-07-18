@@ -451,7 +451,10 @@ optgroup {
   z-index: 400;
   height: 3.75em;
   width: 3.75em;
-  cursor: pointer
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  background: none
 
 }
 .drawer-trigger:before,
@@ -530,7 +533,7 @@ optgroup {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap
-  
+
 }
 .grid:after{
   display: table;
@@ -729,7 +732,7 @@ optgroup {
 }
 .sail-direction {
     outline: 0
-      
+
   }
 .sail-direction:hover{
 
@@ -809,8 +812,11 @@ optgroup {
 .mimo-theme {
 
 }
-.mimo-theme .scarf,
-  .mimo-theme .lace{
+.mimo-theme .site-header,
+  .mimo-theme .site-footer{
+  max-width: 77.5rem;
+  margin-right: auto;
+  margin-left: auto;
   padding: 1.25em;
 }
 /* ================
@@ -1230,13 +1236,15 @@ blockquote {
   margin: 1.25em 0
 
 }
+blockquote:before,
+  blockquote:after{
+  speak: none;
+}
 blockquote:before{
   content: '\201C';
-  speak: none;
 }
 blockquote:after{
   content: '\201D';
-  speak: none;
 }
 cite {
   font-style: normal
@@ -1295,29 +1303,29 @@ td {
   padding: 0.625em 1.25em;
   cursor: pointer;
   text-align: center;
-  -webkit-transition: border .2s,
-    background .2s,
-    color .2s,
-    -webkit-box-shadow .2s,
-    -webkit-transform .2s;
-  transition: border .2s,
-    background .2s,
-    color .2s,
-    -webkit-box-shadow .2s,
-    -webkit-transform .2s;
-  transition: border .2s,
-    background .2s,
-    box-shadow .2s,
-    color .2s,
-    transform .2s;
+  -webkit-transition: border .25s,
+    background .25s,
+    color .25s,
+    -webkit-box-shadow .25s,
+    -webkit-transform .25s;
+  transition: border .25s,
+    background .25s,
+    color .25s,
+    -webkit-box-shadow .25s,
+    -webkit-transform .25s;
+  transition: border .25s,
+    background .25s,
+    box-shadow .25s,
+    color .25s,
+    transform .25s;
   transition:
-    border .2s,
-    background .2s,
-    box-shadow .2s,
-    color .2s,
-    transform .2s,
-    -webkit-box-shadow .2s,
-    -webkit-transform .2s
+    border .25s,
+    background .25s,
+    box-shadow .25s,
+    color .25s,
+    transform .25s,
+    -webkit-box-shadow .25s,
+    -webkit-transform .25s
 
 }
 .button:hover{
@@ -1340,8 +1348,8 @@ button {}
 .site-logo {
   display: block;
   overflow: hidden;
-  background-image: url('');
-  background-position: 50% 50%;
+  background-image: url('../images/logo.svg');
+  background-position: 0 50%;
   background-repeat: no-repeat;
   background-size: contain;
   color: transparent
@@ -1422,30 +1430,7 @@ label {}
 /* ================
 // Input
 // ============= */
-input {
-
-}
-input:default{
-
-}
-input:disabled{
-
-}
-input:checked{
-
-}
-input::-webkit-input-placeholder{
-
-}
-input::-moz-placeholder{
-
-}
-input:-ms-input-placeholder{
-
-}
-input::placeholder{
-
-}
+input {}
 [type='text'] {}
 [type='radio'] {}
 [type='checkbox'] {}

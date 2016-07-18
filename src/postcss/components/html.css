@@ -18,14 +18,17 @@ a {
 blockquote {
   margin: em(20) 0;
 
+  &:before,
+  &:after {
+    speak: none;
+  }
+
   &:before {
     content: '\201C';
-    speak: none;
   }
 
   &:after {
     content: '\201D';
-    speak: none;
   }
 
 }
