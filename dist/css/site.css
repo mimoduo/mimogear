@@ -1049,10 +1049,8 @@ optgroup {
 }
 .mimo-theme .lantern-col{
   display: block;
-  min-height: 25em;
   width: 100%;
-  border-right: 0.5555555555555556em solid #fff;
-  border-left: 0.5555555555555556em solid #fff;
+  margin-bottom: 1.25em;
 }
 .mimo-theme .lantern-col:first-child{
 
@@ -1063,7 +1061,7 @@ optgroup {
   }
 }
 .mimo-theme .lantern-col:last-child{
-
+  margin-bottom: 0;
 }
 @media (min-width: 700px){
   .mimo-theme .lantern-col:last-child{
@@ -1071,7 +1069,7 @@ optgroup {
   }
 }
 .mimo-theme .lantern{
-  padding: 1.6666666666666667em;
+  padding: 3.3333333333333335em;
   background: rgba(255, 255, 255, .75);
 }
 .mimo-theme .lantern-holder{

@@ -279,10 +279,8 @@
 
     & .lantern-col {
       display: block;
-      min-height: em(400);
       width: 100%;
-      border-right: em(10, 18) solid #fff;
-      border-left: em(10, 18) solid #fff;
+      margin-bottom: em(20);
 
       &:first-child {
 
@@ -293,7 +291,8 @@
       }
 
       &:last-child {
-
+        margin-bottom: 0;
+        
         @mixin media $big {
           width: 40%;
         }
@@ -303,7 +302,7 @@
     }
 
       & .lantern {
-        padding: em(30, 18);
+        padding: em(60, 18);
         background: rgba(255, 255, 255, .75);
       }
 
