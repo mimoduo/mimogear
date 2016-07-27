@@ -4,6 +4,7 @@
 
 var site = 'dist/';
 var gulp = require('gulp'),
+    packageJSON = require('./package.json'),
     configuration = require('./configuration'),
     browserSync = require('browser-sync').create(),
     changed = require('gulp-changed'),
@@ -27,7 +28,7 @@ gulp.task('jade', ['sprite'], function() {
   return gulp.src('src/jade/pages/*.jade')
     .pipe(jade({
       locals: {
-        pageTitle: configuration.name
+        pageTitle: packageJSON.name
       },
       pretty: true
     }))

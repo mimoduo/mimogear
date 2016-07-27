@@ -1,7 +1,5 @@
 module.exports = {
-
-  name: 'Mimogear',
-
+  
   sansSerif: null,
   serif: null,
   slab: null,
