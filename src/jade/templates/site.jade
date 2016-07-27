@@ -2,14 +2,14 @@
 //- Site Template
 //- ================
 
-block themeSelection
-  - var theme = ""
+block theme
+  - var themeName = ""
 
 doctype html
 html(
   dir="ltr",
   lang="en-US",
-  class="#{theme}"
+  class="#{themeName}"
 )
   include ../regions/head.jade
   include ../mixins/symbol.jade
