@@ -3,7 +3,6 @@
 // ============= */
 
 img,
-svg,
 video,
 canvas {
   height: auto;
@@ -59,5 +58,5 @@ iframe {
   & img {
     display: none;
   }
-  
+
 }

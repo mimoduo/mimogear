@@ -70,6 +70,35 @@ defineElementGetter(Element.prototype, 'classList', function () {
 })();
 
 /* ================
+// Main Site Function
+// ============= */
+
+site();
+
+function site() {
+
+  drawer({
+    trigger: '.drawer-trigger'
+  });
+
+  sail();
+
+  harmonica({
+    container: '.harmonica',
+    header: '.harmonica-header',
+    content: '.harmonica-content'
+  });
+
+  lantern({
+    container: '.lantern',
+    prevSymbol: '#arrow-back',
+    nextSymbol: '#arrow-forward',
+    closeSymbol: '#close'
+  });
+
+}
+
+/* ================
 // Drawer
 // ============= */
 
@@ -98,7 +127,7 @@ function harmonica(parameters) {
   var headings = document.querySelectorAll(parameters.header);
   var articles = document.querySelectorAll(parameters.content);
 
-  var currentNote = '';
+  var currentNote;
 
   for (var i = 0; i < headings.length; i++) {
     headings[i].addEventListener('click', toggleNote, false);
@@ -350,34 +379,5 @@ function sail(container, elements, backSymbol, forwardSymbol) {
     assignClasses(currentSlide);
 
   }
-
-}
-
-/* ================
-// Main Site Function
-// ============= */
-
-site();
-
-function site() {
-
-  drawer({
-    trigger: '.drawer-trigger'
-  });
-
-  sail();
-
-  harmonica({
-    container: '.harmonica',
-    header: '.harmonica-header',
-    content: '.harmonica-content'
-  });
-
-  lantern({
-    container: '.lantern',
-    prevSymbol: '#arrow-back',
-    nextSymbol: '#arrow-forward',
-    closeSymbol: '#close'
-  });
 
 }

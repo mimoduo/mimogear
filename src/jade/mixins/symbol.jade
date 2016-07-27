@@ -3,5 +3,9 @@
 //- ================
 
 mixin symbol(name, modifier)
-  svg(class="symbol symbol-#{name} symbol-#{name}-#{modifier}")
-    use(xlink:href="##{name}")
+  if modifier
+    svg(class="symbol symbol-#{name} symbol-#{name}-#{modifier}")
+      use(xlink:href="##{name}")
+  else
+    svg(class="symbol symbol-#{name}")
+      use(xlink:href="##{name}")

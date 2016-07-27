@@ -9,7 +9,7 @@ function harmonica(parameters) {
   var headings = document.querySelectorAll(parameters.header);
   var articles = document.querySelectorAll(parameters.content);
 
-  var currentNote = '';
+  var currentNote;
 
   for (var i = 0; i < headings.length; i++) {
     headings[i].addEventListener('click', toggleNote, false);

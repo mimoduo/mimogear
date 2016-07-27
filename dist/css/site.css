@@ -470,24 +470,24 @@ optgroup {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  -webkit-transition: background .4s,
-      margin .4s,
-      -webkit-box-shadow .4s,
-      -webkit-transform .4s;
-  transition: background .4s,
-      margin .4s,
-      -webkit-box-shadow .4s,
-      -webkit-transform .4s;
-  transition: background .4s,
-      box-shadow .4s,
-      margin .4s,
-      transform .4s;
-  transition: background .4s,
-      box-shadow .4s,
-      margin .4s,
-      transform .4s,
-      -webkit-box-shadow .4s,
-      -webkit-transform .4s;
+  -webkit-transition: background .25s,
+      margin .25s,
+      -webkit-box-shadow .25s,
+      -webkit-transform .25s;
+  transition: background .25s,
+      margin .25s,
+      -webkit-box-shadow .25s,
+      -webkit-transform .25s;
+  transition: background .25s,
+      box-shadow .25s,
+      margin .25s,
+      transform .25s;
+  transition: background .25s,
+      box-shadow .25s,
+      margin .25s,
+      transform .25s,
+      -webkit-box-shadow .25s,
+      -webkit-transform .25s;
 }
 .drawer-trigger:before{
   margin-top: -0.25em;
@@ -635,11 +635,11 @@ optgroup {
   width: 100%;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity .3s,
-    visibility .3s;
+  -webkit-transition: opacity .25s,
+    visibility .25s;
   transition:
-    opacity .3s,
-    visibility .3s;
+    opacity .25s,
+    visibility .25s;
 }
 .display-lantern {
   opacity: 1;
@@ -701,19 +701,19 @@ optgroup {
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity .4s,
-      visibility .4s,
-      -webkit-transform .4s;
-  transition: opacity .4s,
-      visibility .4s,
-      -webkit-transform .4s;
-  transition: opacity .4s,
-      visibility .4s,
-      transform .4s;
-  transition: opacity .4s,
-      visibility .4s,
-      transform .4s,
-      -webkit-transform .4s;
+  -webkit-transition: opacity .5s,
+      visibility .5s,
+      -webkit-transform .5s;
+  transition: opacity .5s,
+      visibility .5s,
+      -webkit-transform .5s;
+  transition: opacity .5s,
+      visibility .5s,
+      transform .5s;
+  transition: opacity .5s,
+      visibility .5s,
+      transform .5s,
+      -webkit-transform .5s;
 }
 .sail-slide li.active{
   position: relative;
@@ -1090,17 +1090,14 @@ optgroup {
 .mimo-theme {
 
 }
-.mimo-theme .harmonica{
-
-}
-.mimo-theme .harmonica .harmonica-header{
+.mimo-theme .harmonica-header{
   border-bottom: 1px solid;
   margin: 0 0 1.1111111111111112em;
 }
-.mimo-theme .harmonica h4{
+.mimo-theme h4{
   margin: 0.4em 0;
 }
-.mimo-theme .harmonica .harmonica-content{
+.mimo-theme .harmonica-content{
   margin-bottom: 1.25em;
 }
 /* ::::::::::::::::
@@ -1255,7 +1252,7 @@ cite:before{
 /* ================
 // Lists
 // ============= */
-ul {}
+ul,
 ol {}
 li {}
 /* ================
@@ -1337,8 +1334,6 @@ td {
 }
 /* Extended Button */
 .button-modifier {}
-/* HTML Button */
-button {}
 /* ================
 // Site Logo Link
 // ============= */
@@ -1369,7 +1364,6 @@ button {}
 // Common Media
 // ============= */
 img,
-svg,
 video,
 canvas {
   height: auto;
@@ -1407,7 +1401,7 @@ iframe {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover
-  
+
 }
 .spotlight img{
   display: none;
@@ -1459,9 +1453,6 @@ nav ul, menu ul{
 }
 nav a, menu a{
   display: block;
-}
-nav a:hover, menu a:hover{
-
 }
 /* ================
 // Generic Dropdown Behaviors

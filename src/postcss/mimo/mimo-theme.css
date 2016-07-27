@@ -292,7 +292,7 @@
 
       &:last-child {
         margin-bottom: 0;
-        
+
         @mixin media $big {
           width: 40%;
         }
@@ -330,21 +330,17 @@
 
 .mimo-theme {
 
-  & .harmonica {
+  & .harmonica-header {
+    border-bottom: 1px solid;
+    margin: 0 0 em(20, 18);
+  }
 
-    & .harmonica-header {
-      border-bottom: 1px solid;
-      margin: 0 0 em(20, 18);
+    & h4 {
+      margin: em(10, $h4Size) 0;
     }
 
-      & h4 {
-        margin: em(10, $h4Size) 0;
-      }
-
-    & .harmonica-content {
-      margin-bottom: em(20);
-    }
-
+  & .harmonica-content {
+    margin-bottom: em(20);
   }
 
 }

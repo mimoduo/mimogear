@@ -22,9 +22,9 @@
     opacity: 0;
     visibility: hidden;
     transition:
-      opacity .4s,
-      visibility .4s,
-      transform .4s;
+      opacity .5s,
+      visibility .5s,
+      transform .5s;
 
     &.active {
       @mixin active-slide;

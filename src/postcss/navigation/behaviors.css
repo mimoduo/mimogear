@@ -11,9 +11,6 @@ menu {
 
     & a {
       display: block;
-
-      &:hover {}
-
     }
 
 }

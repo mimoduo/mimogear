@@ -75,10 +75,10 @@
     color: #000;
     transform: translate(-50%, -50%);
     transition:
-      background .4s,
-      box-shadow .4s,
-      margin .4s,
-      transform .4s;
+      background .25s,
+      box-shadow .25s,
+      margin .25s,
+      transform .25s;
   }
 
   &:before {

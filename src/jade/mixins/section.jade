@@ -1,0 +1,13 @@
+//- ================
+//- Section Inclusion
+//- ================
+
+mixin section(modifier)
+  if modifier
+    .section(class="section-#{modifier}")
+      .compartment
+        block
+  else
+    .section
+      .compartment
+        block
