@@ -7,11 +7,9 @@ var gulp = require('gulp'),
     packageJSON = require('./package.json'),
     configuration = require('./configuration'),
     browserSync = require('browser-sync').create(),
-    changed = require('gulp-changed'),
     jade = require('gulp-jade'),
     postcss = require('gulp-postcss'),
     cleanCss = require('gulp-clean-css'),
-    unCss = require('gulp-uncss'),
     rename = require('gulp-rename'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
@@ -184,7 +182,7 @@ gulp.task('sprite', function() {
 gulp.task('browser-sync', function() {
 
   browserSync.init({
-    logPrefix: configuration.name,
+    logPrefix: packageJSON.name,
     server: {
       baseDir: './',
     }

@@ -4,22 +4,23 @@
 
 * {
   position: relative;
-  box-sizing: border-box;
-}
-
-*:before,
-*:after {
-  box-sizing: border-box;
 }
 
 
 /* ================
-// html & body
+// html, universal, & body
 // ============= */
 
 html {
+  box-sizing: border-box;
   font-family: $sansSerif;
   color: $bodyColor;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
   body {

@@ -10,8 +10,6 @@ function site() {
     trigger: '.drawer-trigger'
   });
 
-  sail();
-
   harmonica({
     container: '.harmonica',
     header: '.harmonica-header',
@@ -24,5 +22,7 @@ function site() {
     nextSymbol: '#arrow-forward',
     closeSymbol: '#close'
   });
+
+  sail();
 
 }
