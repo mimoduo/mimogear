@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     packageJSON = require('./package.json'),
     configuration = require('./configuration'),
     browserSync = require('browser-sync').create(),
-    jade = require('gulp-jade'),
+    pug = require('gulp-pug'),
     postcss = require('gulp-postcss'),
     cleanCss = require('gulp-clean-css'),
     rename = require('gulp-rename'),
@@ -18,13 +18,13 @@ var gulp = require('gulp'),
 
 
 /* ================
-// Compile Jade
+// Compile Pug
 // ============= */
 
-gulp.task('jade', ['sprite'], function() {
+gulp.task('pug', ['sprite'], function() {
 
-  return gulp.src('src/jade/pages/*.jade')
-    .pipe(jade({
+  return gulp.src('src/pug/pages/*.pug')
+    .pipe(pug({
       locals: {
         pageTitle: packageJSON.name
       },
@@ -185,6 +185,15 @@ gulp.task('browser-sync', function() {
     logPrefix: packageJSON.name,
     server: {
       baseDir: './',
+    },
+    notify: {
+      styles: {
+        top: 'auto',
+        bottom: '0',
+        borderBottomLeftRadius: '0',
+        fontSize: '12px',
+        padding: '4px'
+      }
     }
   });
 
@@ -197,7 +206,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('watch', function() {
 
-  gulp.watch('src/jade/**/*.jade', ['jade']);
+  gulp.watch('src/pug/**/*.pug', ['pug']);
   gulp.watch('src/postcss/**/*.css', ['postcss']);
   gulp.watch('src/js/**/*.js', ['js']);
   gulp.watch('src/images/*', ['images']);
@@ -215,7 +224,7 @@ gulp.task('default', [
   'sprite',
   'postcss',
   'js',
-  'jade',
+  'pug',
   'watch',
   'browser-sync'
 ]);

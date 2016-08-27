@@ -2,15 +2,16 @@
 //- Home Page
 //- ================
 
-extends ../templates/site.jade
+extends ../templates/site.pug
 
 block theme
   - themeName = "mimo-theme"
 
-block main  
+block main
   +section
     .grid
       .col-big-6
+        include ../partials/nav-main.pug
         h3 Grid Element
         p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
       .col-big-6
@@ -44,9 +45,9 @@ block main
         )
   +section
     .harmonica
-      header.harmonica-header(role="tab") 
+      header.harmonica-header(role="tab")
         h4.harmonica-heading Harmonica One
       article.harmonica-content(role="tabpanel") Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
-      header.harmonica-header(role="tab") 
+      header.harmonica-header(role="tab")
         h4.harmonica-heading Harmonica Two
       article.harmonica-content(role="tabpanel") Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.

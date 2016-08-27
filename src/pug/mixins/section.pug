@@ -4,7 +4,7 @@
 
 mixin section(modifier)
   if modifier
-    .section(class="section-#{modifier}")
+    .section(class="section-" + modifier)
       .compartment
         block
   else

@@ -2,12 +2,7 @@
 // Headings
 // ============= */
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
@@ -20,8 +15,7 @@ h6, .h6 {
   line-height: nu($h1Line, $h1Size);
 }
 
-h1,
-.h1 {
+h1 {
   @mixin h1;
 }
 
@@ -34,8 +28,7 @@ h1,
   line-height: nu($h2Line, $h2Size);
 }
 
-h2,
-.h2 {
+h2 {
   @mixin h2;
 }
 
@@ -47,8 +40,7 @@ h2,
   line-height: nu($h3Line, $h3Size);
 }
 
-h3,
-.h3 {
+h3 {
   @mixin h3;
 }
 
@@ -60,8 +52,7 @@ h3,
   line-height: nu($h4Line, $h4Size);
 }
 
-h4,
-.h4 {
+h4 {
   @mixin h4;
 }
 
@@ -74,8 +65,7 @@ h4,
   line-height: nu($h5Line, $h5Size);
 }
 
-h5,
-.h5 {
+h5 {
   @mixin h5;
 }
 
@@ -88,7 +78,6 @@ h5,
   line-height: nu($h6Line, $h6Size);
 }
 
-h6,
-.h6 {
+h6 {
   @mixin h6;
 }

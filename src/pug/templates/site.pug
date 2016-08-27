@@ -9,11 +9,11 @@ doctype html
 html(
   dir="ltr",
   lang="en-US",
-  class="#{themeName}"
+  class=themeName
 )
-  include ../regions/head.jade
-  include ../mixins/symbol.jade
-  include ../mixins/section.jade
+  include ../regions/head.pug
+  include ../mixins/symbol.pug
+  include ../mixins/section.pug
   body
     a(
       class="visible-for-screen-readers",
@@ -21,7 +21,7 @@ html(
     ) Skip to main content
     figure.site-sprite(style="display: none;")
       include ../../../dist/svg/sprite.symbol.svg
-    include ../regions/header.jade
+    include ../regions/header.pug
     main.site-main#site-main(role="main")
       block main
-    include ../regions/footer.jade
+    include ../regions/footer.pug

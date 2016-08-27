@@ -14,23 +14,18 @@ canvas {
 // Images
 // ============= */
 
-img {
-  display: block;
-
-  &.full-width {
-    width: 100%;
-  }
-
-}
-
-
-/* ================
-// Figure
-// ============= */
-
 figure {
   margin: 0;
 }
+
+  img {
+    display: block;
+
+    &.full-width {
+      width: 100%;
+    }
+
+  }
 
   figcaption {}
 

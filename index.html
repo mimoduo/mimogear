@@ -1,34 +1,39 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US" class="mimo-theme">
+<html class="mimo-theme" dir="ltr" lang="en-US">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Mimogear</title>
-    <meta name="description" content="">
+    <meta name="description" content="#{description}">
     <link rel="icon" href="favicon-16.png" sizes="16x16" type="image/png">
     <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="favicon-48.png" sizes="48x48" type="image/png">
     <link rel="icon" href="favicon-62.png" sizes="62x62" type="image/png">
     <link rel="stylesheet" href="dist/css/site.css">
   </head>
-  <body><a href="#site-main" class="visible-for-screen-readers">Skip to main content</a>
-    <figure style="display: none;" class="site-sprite"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 24 24" id="arrow-back"><path d="M20.016 11.016v1.969H7.828l5.578 5.625L12 20.016 3.984 12 12 3.984l1.406 1.406-5.578 5.625h12.188z"/></symbol><symbol viewBox="0 0 24 24" id="arrow-forward"><path d="M12 3.984L20.016 12 12 20.016l-1.406-1.406 5.578-5.625H3.984v-1.969h12.188l-5.578-5.625z"/></symbol><symbol viewBox="0 0 24 24" id="close"><path d="M18.984 6.422L13.406 12l5.578 5.578-1.406 1.406L12 13.406l-5.578 5.578-1.406-1.406L10.594 12 5.016 6.422l1.406-1.406L12 10.594l5.578-5.578z"/></symbol><symbol viewBox="0 0 200 52" id="logo"><title>MIMO</title><text fill-rule="evenodd" font-size="70" font-family="Quicksand-Light, Quicksand" font-weight="300"><tspan x="0" y="50">MIMO</tspan></text></symbol></svg>
-    </figure>
-    <header role="banner" class="site-header">
+  <body><a class="visible-for-screen-readers" href="#site-main">Skip to main content</a>
+    <figure class="site-sprite" style="display: none"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 24 24" id="arrow-back"><path d="M20.016 11.016v1.969H7.828l5.578 5.625L12 20.016 3.984 12 12 3.984l1.406 1.406-5.578 5.625h12.188z"/></symbol><symbol viewBox="0 0 24 24" id="arrow-forward"><path d="M12 3.984L20.016 12 12 20.016l-1.406-1.406 5.578-5.625H3.984v-1.969h12.188l-5.578-5.625z"/></symbol><symbol viewBox="0 0 24 24" id="close"><path d="M18.984 6.422L13.406 12l5.578 5.578-1.406 1.406L12 13.406l-5.578 5.578-1.406-1.406L10.594 12 5.016 6.422l1.406-1.406L12 10.594l5.578-5.578z"/></symbol><symbol viewBox="0 0 200 52" id="logo"><title>MIMO</title><text fill-rule="evenodd" font-size="70" font-family="Quicksand-Light, Quicksand" font-weight="300"><tspan x="0" y="50">MIMO</tspan></text></symbol></svg></figure>
+    <header class="site-header" role="banner">
       <button class="drawer-trigger"></button>
       <div class="drawer">
         <p>Drawer content</p>
-      </div><a href="/" class="site-logo">
+      </div><a class="site-logo" href="/">
           <svg class="symbol symbol-logo">
             <use xlink:href="#logo"></use>
           </svg></a>
     </header>
-    <main id="site-main" role="main" class="site-main">
+    <main class="site-main" id="site-main" role="main">
         <div class="section">
           <div class="compartment">
             <div class="grid">
               <div class="col-big-6">
+                <ol>
+                  <li><a href="/" itemprop="url">About</a></li>
+                  <li><a href="/" itemprop="url">Team</a></li>
+                  <li><a href="/" itemprop="url">Ideas</a></li>
+                  <li><a href="/" itemprop="url">Contact</a></li>
+                </ol>
                 <h3>Grid Element</h3>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
               </div>
@@ -42,8 +47,8 @@
         <div class="section">
           <div class="compartment">
             <ol class="collage list-reset">
-              <li style="background-image: url(http://i.imgur.com/e1H18Sz.jpg);" class="spotlight"></li>
-              <li style="background-image: url(http://i.imgur.com/f26omz5.jpg);" class="spotlight"></li>
+              <li class="spotlight" style="background-image: url(http://i.imgur.com/e1H18Sz.jpg)"></li>
+              <li class="spotlight" style="background-image: url(http://i.imgur.com/f26omz5.jpg)"></li>
               <li>
                 <h4>RMNP Collage</h4>
               </li>
@@ -66,33 +71,33 @@
           <div class="compartment">
             <div class="lantern"></div>
             <div class="grid lantern-grid">
-              <div class="col lantern-col"><img src="http://i.imgur.com/TN4ivtD.jpg" title="The 'Cathedral Cliffs' of Kauai's Na Pali Coast. Kauai, Hawaii " class="lantern-light full-width"></div>
-              <div class="col lantern-col"><img src="http://i.imgur.com/SOABm96.jpg" title="Petrified Forest National Park, Arizona" class="lantern-light full-width"></div>
+              <div class="col lantern-col"><img class="lantern-light full-width" src="http://i.imgur.com/TN4ivtD.jpg" title="The 'Cathedral Cliffs' of Kauai's Na Pali Coast. Kauai, Hawaii "></div>
+              <div class="col lantern-col"><img class="lantern-light full-width" src="http://i.imgur.com/SOABm96.jpg" title="Petrified Forest National Park, Arizona"></div>
             </div>
           </div>
         </div>
         <div class="section">
           <div class="compartment">
             <div class="harmonica">
-              <header role="tab" class="harmonica-header"> 
+              <header class="harmonica-header" role="tab">
                 <h4 class="harmonica-heading">Harmonica One</h4>
               </header>
-              <article role="tabpanel" class="harmonica-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</article>
-              <header role="tab" class="harmonica-header"> 
+              <article class="harmonica-content" role="tabpanel">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</article>
+              <header class="harmonica-header" role="tab">
                 <h4 class="harmonica-heading">Harmonica Two</h4>
               </header>
-              <article role="tabpanel" class="harmonica-content">Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</article>
+              <article class="harmonica-content" role="tabpanel">Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</article>
             </div>
           </div>
         </div>
     </main>
-    <footer role="contentinfo" class="site-footer">
-      <div itemscope itemtype="http://schema.org/Organization" class="vcard">
-        <div itemprop="name" class="org">Organization</div><a href="mailto:organization@gmail.com" itemprop="email" class="email">organization@gmail.com</a>
+    <footer class="site-footer" role="contentinfo">
+      <div class="vcard" itemscope itemtype="http://schema.org/Organization">
+        <div class="org" itemprop="name">Organization</div><a class="email" href="mailto:organization@gmail.com" itemprop="email">organization@gmail.com</a>
         <div class="adr">
-          <div itemprop="streetAddress" class="street-address">82 West Pegasus St.</div><span itemprop="addressLocality" class="locality">Washington</span><span itemprop="addressRegion" class="region">MA</span><span itemprop="postalCode" class="postal-code">480124</span>
+          <div class="street-address" itemprop="streetAddress">82 West Pegasus St.</div><span class="locality" itemprop="addressLocality">Washington</span><span class="region" itemprop="addressRegion">MA</span><span class="postal-code" itemprop="postalCode">480124</span>
         </div>
-        <div itemprop="telephone" class="tel">428-242-2020</div>
+        <div class="tel" itemprop="telephone">428-242-2020</div>
       </div>
     </footer>
     <script src="dist/js/site.js"></script>
