@@ -150,12 +150,6 @@ gulp.task('sprite', function() {
 
   return gulp.src('src/svg/*')
     .pipe(svgSprite({
-      shape: {
-        dimension: {
-          maxWidth: 300,
-          maxHeight: 300
-        }
-      },
       mode: {
         inline: true,
         symbol: {
