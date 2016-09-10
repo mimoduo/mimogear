@@ -177,9 +177,8 @@ gulp.task('browser-sync', function() {
 
   browserSync.init({
     logPrefix: packageJSON.name,
-    server: {
-      baseDir: './',
-    },
+    ui: false,
+    server: './',
     notify: {
       styles: {
         top: 'auto',
