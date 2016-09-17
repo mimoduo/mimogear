@@ -3,7 +3,3 @@
   margin-right: auto;
   margin-left: auto;
 }
-
-.compartment {
-  @mixin compartment;
-}

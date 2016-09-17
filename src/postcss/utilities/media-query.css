@@ -1,6 +1,6 @@
 @define-mixin media $width {
 
-  @media (min-width: $width) {
+  @media screen and (min-width: $width) {
     @mixin-content;
   }
 
@@ -8,7 +8,7 @@
 
 @define-mixin expanded-media $width, $height {
 
-  @media (min-width: $width) and (min-height: $height) {
+  @media screen and (min-width: $width) and (min-height: $height) {
     @mixin-content;
   }
 

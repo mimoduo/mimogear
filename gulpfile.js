@@ -26,7 +26,8 @@ gulp.task('pug', ['sprite'], function() {
   return gulp.src('src/pug/pages/*.pug')
     .pipe(pug({
       locals: {
-        pageTitle: packageJSON.name
+        siteTitle: packageJSON.name,
+        siteDescription: packageJSON.name,
       },
       pretty: true
     }))

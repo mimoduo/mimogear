@@ -4,39 +4,6 @@
 /* ::::::::::::::::
 // Utilities
 // ::::::::::::: */
-.visible-for-screen-readers {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  border: 0;
-  margin: -1px;
-  padding: 0;
-}
-.clear:after {
-  display: table;
-  clear: both;
-  content: '';
-}
-.compartment {
-  max-width: 75rem;
-  margin-right: auto;
-  margin-left: auto;
-}
-.cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-.list-reset {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style: none;
-}
 /* ::::::::::::::::
 // Vendor
 // ::::::::::::: */
@@ -914,7 +881,7 @@ optgroup {
   height: 25%;
   width: 100%;
 }
-@media (min-width: 900px){
+@media screen and (min-width: 900px){
   .mimo-theme .collage li:nth-child(1){
     top: 0%;
     left: 0%;
@@ -928,7 +895,7 @@ optgroup {
   height: 25%;
   width: 100%;
 }
-@media (min-width: 900px){
+@media screen and (min-width: 900px){
   .mimo-theme .collage li:nth-child(2){
     top: 0%;
     left: 33.33333333333333%;
@@ -942,7 +909,7 @@ optgroup {
   height: 25%;
   width: 100%;
 }
-@media (min-width: 600px){
+@media screen and (min-width: 600px){
   .mimo-theme .collage li:nth-child(3){
     top: 50%;
     left: 0%;
@@ -950,7 +917,7 @@ optgroup {
     width: 50%;
   }
 }
-@media (min-width: 900px){
+@media screen and (min-width: 900px){
   .mimo-theme .collage li:nth-child(3){
     top: 50%;
     left: 33.33333333333333%;
@@ -964,7 +931,7 @@ optgroup {
   height: 25%;
   width: 100%;
 }
-@media (min-width: 600px){
+@media screen and (min-width: 600px){
   .mimo-theme .collage li:nth-child(4){
     top: 50%;
     left: 50%;
@@ -972,7 +939,7 @@ optgroup {
     width: 50%;
   }
 }
-@media (min-width: 900px){
+@media screen and (min-width: 900px){
   .mimo-theme .collage li:nth-child(4){
     top: 50%;
     left: 66.66666666666666%;
@@ -1055,7 +1022,7 @@ optgroup {
 .mimo-theme .lantern-col:first-child{
 
 }
-@media (min-width: 700px){
+@media screen and (min-width: 700px){
   .mimo-theme .lantern-col:first-child{
     width: 60%;
   }
@@ -1063,7 +1030,7 @@ optgroup {
 .mimo-theme .lantern-col:last-child{
   margin-bottom: 0;
 }
-@media (min-width: 700px){
+@media screen and (min-width: 700px){
   .mimo-theme .lantern-col:last-child{
     width: 40%;
   }
@@ -1143,7 +1110,11 @@ body {
 /* ================
 // Section
 // ============= */
-.section {}
+.compartment {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto;
+}
 /* ::::::::::::::::
 // Components
 // ::::::::::::: */

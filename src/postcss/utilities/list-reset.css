@@ -4,7 +4,3 @@
   padding-left: 0;
   list-style: none;
 }
-
-.list-reset {
-  @mixin list-reset;
-}

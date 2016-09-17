@@ -6,7 +6,7 @@ Mimogear is a light-weight skeleton library for developers of any skill level to
 
 **Postcss** as a post-processer<br>
 **Gulp** as a task runner<br>
-**Jade** as a HTML template engine<br>
+**Pug** as a HTML template engine<br>
 **Vanilla JS** starter file
 
 * Grid system based on postcss-simple-grid
@@ -18,14 +18,14 @@ Mimogear is a light-weight skeleton library for developers of any skill level to
 
 ###Gulp Features
 
-* Jade compilation
+* Pug compilation
 * Postcss compilation with autoprefixing and minification
 * JS concatenation and uglification
 * Image optimization
 * SVG Sprite Creator
 * Browsersync
 
-###Jade Features
+###Pug Features
 
 * Starter template
 * Well structured head element setup

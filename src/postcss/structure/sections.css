@@ -2,4 +2,6 @@
 // Section
 // ============= */
 
-.section {}
+.compartment {
+  @mixin compartment;
+}
