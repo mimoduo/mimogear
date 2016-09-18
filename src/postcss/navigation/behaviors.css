@@ -5,7 +5,7 @@
 nav,
 menu {
 
-  & ul {
+  & ol {
     @mixin list-reset;
   }
 

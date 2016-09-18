@@ -1298,29 +1298,20 @@ td {
 /* ================
 // Site Logo Link
 // ============= */
-/* Use if the site logo is image based */
 .site-logo {
   display: block;
   overflow: hidden;
-  background-image: url('../images/logo.svg');
-  background-position: 0 50%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  color: transparent
-
 }
-.site-logo:hover{
-  color: transparent;
-}
-/* Use if the site logo is text based */
-.site-link {
-  display: block;
-  text-decoration: none
-
-}
-.site-link:hover{
-
-}
+.site-logo-text {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    margin: -1px;
+    padding: 0;
+  }
 /* ================
 // Common Media
 // ============= */
@@ -1393,7 +1384,7 @@ nav,
 menu {
 
 }
-nav ul, menu ul{
+nav ol, menu ol{
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -1411,15 +1402,15 @@ nav a, menu a{
 .nav-main {
 
 }
-.nav-main > ul{
+.nav-main > ol{
 
 }
-.nav-main > ul > li{
+.nav-main > ol > li{
 
 }
-.nav-main > ul > li > a{
+.nav-main > ol > li > a{
 
 }
-.nav-main > ul > li > a:hover{
+.nav-main > ol > li > a:hover{
 
 }

@@ -2,29 +2,11 @@
 // Site Logo Link
 // ============= */
 
-/* Use if the site logo is image based */
-
 .site-logo {
   display: block;
   overflow: hidden;
-  background-image: url('../images/logo.svg');
-  background-position: 0 50%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  color: transparent;
+}
 
-  &:hover {
-    color: transparent;
+  .site-logo-text {
+    @mixin visually-hidden;
   }
-
-}
-
-/* Use if the site logo is text based */
-
-.site-link {
-  display: block;
-  text-decoration: none;
-
-  &:hover {}
-
-}
