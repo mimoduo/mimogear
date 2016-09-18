@@ -27,7 +27,7 @@ gulp.task('pug', ['sprite'], function() {
     .pipe(pug({
       locals: {
         siteTitle: packageJSON.name,
-        siteDescription: packageJSON.name,
+        siteDescription: packageJSON.description,
       },
       pretty: true
     }))
@@ -115,7 +115,11 @@ gulp.task('postcss', function() {
 
 gulp.task('js', function() {
 
-  return gulp.src('src/js/**/*.js')
+  return gulp.src([
+    'src/js/vendor/*.js',
+    'src/js/mimo/*.js',
+    'src/js/site/*.js'
+  ])
     .pipe(concat('site.js'))
     .pipe(gulp.dest(site + 'js'))
     .pipe(browserSync.stream())

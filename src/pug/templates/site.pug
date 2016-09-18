@@ -15,10 +15,7 @@ html(
   include ../mixins/symbol.pug
   include ../mixins/section.pug
   body
-    a(
-      class="visible-for-screen-readers"
-      href="#site-main"
-    ) Skip to main content
+    a.skip-link(href="#site-main") Skip to main content
     figure.site-sprite(style="display: none;")
       include ../../../dist/svg/sprite.symbol.svg
     include ../regions/header.pug

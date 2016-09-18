@@ -70,314 +70,408 @@ defineElementGetter(Element.prototype, 'classList', function () {
 })();
 
 /* ================
-// Main Site Function
-// ============= */
-
-site();
-
-function site() {
-
-  drawer({
-    trigger: '.drawer-trigger'
-  });
-
-  harmonica({
-    container: '.harmonica',
-    header: '.harmonica-header',
-    content: '.harmonica-content'
-  });
-
-  lantern({
-    container: '.lantern',
-    prevSymbol: '#arrow-back',
-    nextSymbol: '#arrow-forward',
-    closeSymbol: '#close'
-  });
-
-  sail();
-
-}
-
-/* ================
 // Drawer
 // ============= */
 
-function drawer(parameters) {
+var d,
+Drawer = {
 
-  var drawerTrigger = document.querySelector(parameters.trigger);
+  settings: {
+    trigger: document.querySelector('.drawer-trigger')
+  },
 
-  drawerTrigger.addEventListener('click', activateDrawer, false);
+  init: function(options) {
 
-}
+    d = this.settings;
 
-function activateDrawer() {
+    for (var key in options) {
+      if(options.hasOwnProperty(key)) {
+        d[key] = options[key];
+      }
+    }
 
-  document.body.classList.toggle('drawer-active');
+    d.trigger.addEventListener('click', function() {
+      Drawer.activateDrawer('drawer-active');
+    });
 
-}
+  },
+
+  activateDrawer: function(className) {
+    document.body.classList.toggle(className);
+  }
+
+};
 
 /* ================
 // Harmonica
 //   http://codepen.io/mimoduo/pen/epZaMq
 // ============= */
 
-function harmonica(parameters) {
+var h,
+Harmonica = {
 
-  var container = document.querySelector(parameters.container);
-  var headings = document.querySelectorAll(parameters.header);
-  var articles = document.querySelectorAll(parameters.content);
+  settings: {
+    container: document.querySelector('.harmonica'),
+    headings: document.querySelectorAll('.harmonica-header'),
+    articles: document.querySelectorAll('.harmonica-content')
+  },
 
-  var currentNote;
+  init: function(options) {
 
-  for (var i = 0; i < headings.length; i++) {
-    headings[i].addEventListener('click', toggleNote, false);
-  }
+    h = this.settings;
 
-  headings[0].click();
-
-  function clearClasses() {
-
-    for (var i = 0; i < headings.length; i++) {
-      headings[i].classList.remove('active');
+    for (var key in options) {
+      if(options.hasOwnProperty(key)) {
+        h[key] = options[key];
+      }
     }
 
+    h.headings.forEach(function(heading) {
+      heading.addEventListener('click', function() {
+        Harmonica.toggleNote(event);
+      });
+    });
+
+    h.headings[0].click();
+
+  },
+
+  clearClasses: function() {
+
+    h.headings.forEach(function(heading) {
+      heading.classList.remove('active');
+    });
+
+  },
+
+  assignClasses: function(note) {
+
+    note.classList.add('active');
+
+  },
+
+  toggleNote: function(event) {
+
+    Harmonica.clearClasses();
+    Harmonica.assignClasses(event.currentTarget);
+
   }
 
-  function assignClasses(currentNote) {
-
-    currentNote.classList.add('active');
-
-  }
-
-  function toggleNote(event) {
-
-    currentNote = event.currentTarget;
-
-    clearClasses();
-    assignClasses(currentNote);
-
-  }
-
-}
+};
 
 /* ================
 // Lantern
 //   http://codepen.io/mimoduo/pen/EPerjv
 // ============= */
 
-function lantern(parameters) {
+var l,
+Lantern = {
 
-  var lantern = document.querySelector(parameters.container);
+  settings: {
+    lantern: document.querySelector('.lantern'),
+    lanternLights: document.querySelectorAll('.lantern-light'),
+    lightCollection: [],
+    lightIndex: 0,
+    symbols: {
+      prev: '#arrow-back',
+      next: '#arrow-forward',
+      close: '#close'
+    },
+    vdom: {}
+  },
 
-  var content = document.createElement('div');
-  content.classList.add('lantern-content');
-  lantern.appendChild(content);
+  init: function(options) {
 
-  var holder = document.createElement('img');
-  holder.classList.add('lantern-holder');
-  content.appendChild(holder);
+    l = this.settings;
 
-  var prev = document.createElement('button');
-  prev.addEventListener('click', previousLight, false);
-  prev.classList.add('lantern-control', 'lantern-previous');
-  prev.innerHTML = '<svg class="symbol symbol-prev"><use xlink:href="' + parameters.prevSymbol + '"></use></svg>';
-  content.appendChild(prev);
-
-  var next = document.createElement('button');
-  next.addEventListener('click', nextLight, false);
-  next.classList.add('lantern-control', 'lantern-next');
-  next.innerHTML = '<svg class="symbol symbol-next"><use xlink:href="' + parameters.nextSymbol + '"></use></svg>';
-  content.appendChild(next);
-
-  var close = document.createElement('button');
-  close.addEventListener('click', removeLight, false);
-  close.classList.add('lantern-control', 'lantern-close');
-  close.innerHTML = '<svg class="symbol symbol-close"><use xlink:href="' + parameters.closeSymbol + '"></use></svg>';
-  content.appendChild(close);
-
-  var lanternLights = document.querySelectorAll('.lantern-light');
-
-  var lightCollection = [];
-  var lightIndex = 0;
-
-  for(var i = 0; i < lanternLights.length; i++) {
-    lanternLights[i].addEventListener('click', displayLight, false);
-
-    lightCollection[i] = [];
-    lightCollection[i].push(
-      lanternLights[i].getAttribute('src'),
-      lanternLights[i].getAttribute('title')
-    );
-  }
-
-  function previousLight() {
-
-    if(lightIndex == 0) {
-      lightIndex = lightCollection.length - 1;
-    } else {
-      lightIndex--;
+    for (var key in options) {
+      if(options.hasOwnProperty(key)) {
+        l[key] = options[key];
+      }
     }
 
-    setLight();
+    Lantern.constructLantern();
 
-  }
+  },
 
-  function nextLight() {
+  constructLantern: function() {
 
-    if(lightIndex == lightCollection.length - 1) {
-      lightIndex = 0;
-    } else {
-      lightIndex++;
+    var content = document.createElement('div');
+    content.classList.add('lantern-content');
+    l.lantern.appendChild(content);
+    l.vdom.content = content;
+
+    var holder = document.createElement('img');
+    holder.classList.add('lantern-holder');
+    content.appendChild(holder);
+    l.vdom.holder = holder;
+
+    var prev = document.createElement('button');
+    prev.addEventListener('click', function() {
+      Lantern.previousLight();
+    });
+    prev.classList.add('lantern-control', 'lantern-prev');
+    prev.innerHTML =
+      '<svg class="symbol symbol-prev">'
+      + '<use xlink:href="' + l.symbols.prev + '"></use>'
+      + '</svg>';
+    content.appendChild(prev);
+    l.vdom.prev = prev;
+
+    var next = document.createElement('button');
+    next.addEventListener('click', function() {
+      Lantern.nextLight();
+    });
+    next.classList.add('lantern-control', 'lantern-next');
+    next.innerHTML =
+      '<svg class="symbol symbol-next">'
+      + '<use xlink:href="' + l.symbols.next + '"></use>'
+      + '</svg>';
+    content.appendChild(next);
+    l.vdom.next = next;
+
+    var close = document.createElement('button');
+    close.addEventListener('click', function() {
+      Lantern.removeLight();
+    });
+    close.classList.add('lantern-control', 'lantern-close');
+    close.innerHTML = '<svg class="symbol symbol-close"><use xlink:href="' + l.symbols.close + '"></use></svg>';
+    content.appendChild(close);
+    l.vdom.close = close;
+
+    for(var i = 0; i < l.lanternLights.length; i++) {
+      l.lanternLights[i].addEventListener('click', function() {
+        Lantern.displayLight(event);
+      });
+
+      l.lightCollection[i] = [];
+      l.lightCollection[i].push(
+        l.lanternLights[i].getAttribute('src'),
+        l.lanternLights[i].getAttribute('title')
+      );
     }
 
-    setLight();
+  },
 
-  }
+  previousLight: function() {
 
-  function displayLight(light) {
+    if(l.lightIndex == 0) {
+      l.lightIndex = l.lightCollection.length - 1;
+    } else {
+      l.lightIndex--;
+    }
 
-    grabLight(light);
-    setLight();
+    Lantern.setLight();
 
-    lantern.classList.add('display-lantern');
+  },
+
+  nextLight: function() {
+
+    if(l.lightIndex == l.lightCollection.length - 1) {
+      l.lightIndex = 0;
+    } else {
+      l.lightIndex++;
+    }
+
+    Lantern.setLight();
+
+  },
+
+  displayLight: function(light) {
+
+    Lantern.grabLight(light);
+    Lantern.setLight();
+
+    l.lantern.classList.add('display-lantern');
     document.body.classList.add('lantern-triggered');
 
-  }
+  },
 
-  function removeLight() {
+  removeLight: function() {
 
-    lantern.classList.remove('display-lantern');
+    l.lantern.classList.remove('display-lantern');
     document.body.classList.remove('lantern-triggered');
 
-  }
+  },
 
-  function grabLight(light) {
+  grabLight: function(light) {
 
-    for (i = 0; i < lightCollection.length; i++) {
+    for (i = 0; i < l.lightCollection.length; i++) {
 
-      if (light.target.getAttribute('src') == lightCollection[i][0]) {
-        lightIndex = i;
+      if (light.target.getAttribute('src') == l.lightCollection[i][0]) {
+        l.lightIndex = i;
       }
 
     }
 
+  },
+
+  setLight: function() {
+
+    l.vdom.holder.setAttribute('src', l.lightCollection[l.lightIndex][0]);
+    l.vdom.holder.setAttribute('alt', l.lightCollection[l.lightIndex][1]);
+    l.vdom.holder.setAttribute('title', l.lightCollection[l.lightIndex][1]);
+
   }
 
-  function setLight() {
-
-    holder.setAttribute('src', lightCollection[lightIndex][0]);
-    holder.setAttribute('alt', lightCollection[lightIndex][1]);
-    holder.setAttribute('title', lightCollection[lightIndex][1]);
-
-  }
-
-}
+};
 
 /* ================
 // Sail Slide
 //   http://codepen.io/mimoduo/pen/gabWmN
 // ============= */
 
-function sail(container, elements, backSymbol, forwardSymbol) {
+var s,
+Sail = {
 
-  var sailboat = {};
+  settings: {
+    slides: document.querySelector('.sail-slide'),
+    slide: document.querySelectorAll('.sail-slide li'),
+    currentSlide: 0,
+    symbols: {
+      prev: '#arrow-back',
+      next: '#arrow-forward'
+    },
+    vdom: {}
+  },
 
-  sailboat.container = '.sail-slide' || container;
-  sailboat.slides = 'li' || elements;
-  sailboat.backSymbol = '#arrow-back' || backSymbol;
-  sailboat.forwardSymbol = '#arrow-forward' || forwardSymbol;
+  init: function(options) {
 
-  sailboat.slides = document.querySelectorAll(sailboat.container + ' ' + sailboat.slides);
-  sailboat.container = document.querySelector(sailboat.container);
+    s = this.settings;
 
-  /* Create a document fragment to hold sail controls */
-  var sailFragment = document.createDocumentFragment();
-  var sail = sailboat.container;
-
-  sail.directions = document.createElement('nav');
-  sail.directions.classList.add('sail-directions');
-  sailFragment.appendChild(sail.directions);
-
-  sail.back = document.createElement('button');
-  sail.back.innerHTML = '<svg class="symbol symbol-sail-direction"><use xlink:href="' + sailboat.backSymbol + '"></use></svg>';
-  sail.back.classList.add('sail-direction', 'sail-back');
-  sail.back.addEventListener('click', sailBack, false);
-  sail.directions.appendChild(sail.back);
-
-  sail.forward = document.createElement('button');
-  sail.forward.innerHTML = '<svg class="symbol symbol-sail-direction"><use xlink:href="' + sailboat.forwardSymbol + '"></use></svg>';
-  sail.forward.classList.add('sail-direction', 'sail-forward');
-  sail.forward.addEventListener('click', sailForward, false);
-  sail.directions.appendChild(sail.forward);
-
-  sail.markers = document.createElement('nav');
-  sail.markers.classList.add('sail-markers');
-  sailFragment.appendChild(sail.markers);
-
-  sail.keys = [];
-
-  for(var i = 0; i < sailboat.slides.length; i++) {
-
-    sail.key = document.createElement('button');
-    sail.key.classList.add('sail-key');
-    sail.key.addEventListener('click', sailTo.bind(null, i), false);
-    sail.keys.push(sail.key);
-    sail.markers.appendChild(sail.key);
-
-    sailboat.slides[i].classList.add('sail');
-
-  }
-
-  sail.appendChild(sailFragment);
-
-  var currentSlide = 0;
-  sailTo(currentSlide);
-
-  function clearClasses() {
-
-    for (var i = 0; i < sailboat.slides.length; i++) {
-      sail.keys[i].classList.remove('active');
-      sailboat.slides[i].classList.remove('active');
+    for (var key in options) {
+      if(options.hasOwnProperty(key)) {
+        s[key] = options[key];
+      }
     }
 
-  }
+    Sail.constructSail();
+    Sail.sailTo(s.currentSlide);
 
-  function assignClasses(index) {
+  },
 
-    sail.keys[index].classList.add('active');
-    sailboat.slides[index].classList.add('active');
+  constructSail: function() {
 
-  }
+    var controls = document.createElement('div');
+    controls.classList.add('sail-controls');
+    s.slides.appendChild(controls);
+    s.vdom.controls = controls;
 
-  function sailBack() {
+    var prev = document.createElement('button');
+    prev.innerHTML =
+      '<svg class="symbol symbol-sail-control">'
+      + '<use xlink:href="' + s.symbols.prev + '"></use>'
+      + '</svg>';
+    prev.classList.add('sail-control', 'sail-prev');
+    prev.addEventListener('click', function() {
+      Sail.sailThrough(-1);
+    });
+    s.vdom.controls.appendChild(prev);
+    s.vdom.controls.prev = prev;
 
-    if(currentSlide === 0) {
-      currentSlide = sailboat.slides.length;
+    var next = document.createElement('button');
+    next.innerHTML =
+      '<svg class="symbol symbol-sail-control">'
+      + '<use xlink:href="' + s.symbols.next + '"></use>'
+      + '</svg>';
+    next.classList.add('sail-control', 'sail-next');
+    next.addEventListener('click', function() {
+      Sail.sailThrough(1);
+    });
+    s.vdom.controls.appendChild(next);
+    s.vdom.controls.next = next;
+
+    var pages = document.createElement('div');
+    pages.classList.add('sail-pages');
+    s.slides.appendChild(pages);
+    s.vdom.pages = pages;
+    s.vdom.pages.page = [];
+
+    s.slide.forEach(function(value, i) {
+      var page = document.createElement('button');
+      page.classList.add('sail-page');
+      page.addEventListener('click', function() {
+        Sail.sailTo(i);
+      });
+      s.vdom.pages.appendChild(page);
+      s.vdom.pages.page.push(page);
+    });
+
+  },
+
+  sail: function(i) {
+
+    Sail.determineDisabledStates();
+
+    Sail.clearClasses();
+    s.slide[i].classList.add('sail-active');
+    s.vdom.pages.page[i].classList.add('sail-page-active');
+
+  },
+
+  sailThrough: function(modifier) {
+
+    s.currentSlide += modifier;
+
+    Sail.sail(s.currentSlide);
+
+  },
+
+  sailTo: function(i) {
+
+    s.currentSlide = i;
+
+    Sail.sail(i);
+
+  },
+
+  determineDisabledStates: function() {
+
+    if (s.currentSlide == 0) {
+      s.vdom.controls.prev.disabled = true;
+      s.vdom.controls.prev.setAttribute('aria-disabled', 'true');
+      s.vdom.controls.next.disabled = false;
+      s.vdom.controls.next.setAttribute('aria-disabled', 'false');
+    } else if (s.currentSlide < s.slide.length - 1) {
+      s.vdom.controls.prev.disabled = false;
+      s.vdom.controls.prev.setAttribute('aria-disabled', 'false');
+      s.vdom.controls.next.disabled = false;
+      s.vdom.controls.next.setAttribute('aria-disabled', 'false');
+    } else if (s.currentSlide == s.slide.length - 1) {
+      s.vdom.controls.prev.disabled = false;
+      s.vdom.controls.prev.setAttribute('aria-disabled', 'false');
+      s.vdom.controls.next.disabled = true;
+      s.vdom.controls.next.setAttribute('aria-disabled', 'true');
     }
 
-    currentSlide = currentSlide - 1;
+  },
 
-    sailTo(currentSlide);
+  clearClasses: function() {
 
-  }
+    s.slide.forEach(function(slide) {
+      slide.classList.remove('sail-active');
+    });
 
-  function sailForward() {
-
-    if (currentSlide == sailboat.slides.length - 1) {
-      currentSlide = -1;
-    }
-
-    currentSlide = currentSlide + 1;
-
-    sailTo(currentSlide);
+    s.vdom.pages.page.forEach(function(page) {
+      page.classList.remove('sail-page-active');
+    });
 
   }
 
-  function sailTo(currentSlide) {
+};
 
-    clearClasses();
-    assignClasses(currentSlide);
+/* ================
+// Main Site Function
+// ============= */
 
-  }
+(function() {
 
-}
+  Drawer.init();
+
+  Harmonica.init();
+
+  Lantern.init();
+
+  Sail.init();
+
+})();

@@ -225,11 +225,11 @@
 
   }
 
-    & .sail-directions {
+    & .sail-controls {
       margin-bottom: em(15, 18);
     }
 
-      & .sail-direction {
+      & .sail-control {
         display: inline-block;
         vertical-align: top;
         border: 0;
@@ -239,12 +239,12 @@
         color: inherit;
       }
 
-        & .symbol-sail-direction {
+        & .symbol-sail-control {
           fill: currentColor;
           font-size: em(22, 35);
         }
 
-    & .sail-key {
+    & .sail-page {
       height: em(20, 18);
       width: em(20, 18);
       background: none;
@@ -258,7 +258,7 @@
         background: rgba(255, 255, 255, .75);
       }
 
-      &.active {
+      &.sail-page-active {
         background: currentColor;
       }
 

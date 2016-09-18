@@ -19,3 +19,12 @@ menu {
 /* ================
 // Generic Dropdown Behaviors
 // ============= */
+
+
+/* ================
+// Skip Link
+// ============= */
+
+.skip-link {
+  @mixin visually-hidden;
+}

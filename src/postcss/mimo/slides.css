@@ -26,7 +26,7 @@
       visibility .5s,
       transform .5s;
 
-    &.active {
+    &.sail-active {
       @mixin active-slide;
     }
 
@@ -39,31 +39,30 @@
 // Sail Directions
 // ============= */
 
-.sail-directions {
+.sail-controls {
   user-select: none;
 }
 
-  .sail-direction {
-    outline: 0;
+  .sail-control {
 
     &:hover {}
 
   }
 
-  .sail-back {}
+  .sail-prev {}
 
-  .sail-forward {}
+  .sail-next {}
 
 
 /* ================
 // Sail Markers
 // ============= */
 
-.sail-markers {
+.sail-pages {
   user-select: none;
 }
 
-  .sail-key {
+  .sail-page {
     display: inline-block;
     cursor: pointer;
 

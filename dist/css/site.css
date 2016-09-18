@@ -685,9 +685,9 @@ input[type="search"]::-webkit-search-decoration {
   margin-bottom: 0.5714285714285714em;
   font-size: 1.9444444444444444em;
   line-height: 1;
-}.mimo-theme .sail-directions{
+}.mimo-theme .sail-controls{
   margin-bottom: 0.8333333333333334em;
-}.mimo-theme .sail-direction{
+}.mimo-theme .sail-control{
   display: inline-block;
   vertical-align: top;
   border: 0;
@@ -695,10 +695,10 @@ input[type="search"]::-webkit-search-decoration {
   font-size: 1.9444444444444444em;
   background: none;
   color: inherit;
-}.mimo-theme .symbol-sail-direction{
+}.mimo-theme .symbol-sail-control{
   fill: currentColor;
   font-size: 0.6285714285714286em;
-}.mimo-theme .sail-key{
+}.mimo-theme .sail-page{
   height: 1.1111111111111112em;
   width: 1.1111111111111112em;
   background: none;
@@ -708,9 +708,9 @@ input[type="search"]::-webkit-search-decoration {
   color: #f0d0ff;
   -webkit-transition: background .2s;
   transition: background .2s;
-}.mimo-theme .sail-key:hover{
+}.mimo-theme .sail-page:hover{
   background: rgba(255, 255, 255, .75);
-}.mimo-theme .sail-key.active{
+}.mimo-theme .sail-page.sail-page-active{
   background: currentColor;
 }/* ================
 // Lantern
@@ -785,37 +785,36 @@ input[type="search"]::-webkit-search-decoration {
       visibility .5s,
       transform .5s,
       -webkit-transform .5s;
-}.sail-slide li.active{
+}.sail-slide li.sail-active{
   position: relative;
   pointer-events: auto;
   opacity: 1;
   visibility: visible;
 }/* ================
 // Sail Directions
-// ============= */.sail-directions {
+// ============= */.sail-controls {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}.sail-direction {
-    outline: 0
+}.sail-control {
 
-  }.sail-direction:hover{
+  }.sail-control:hover{
 
-}.sail-back {}.sail-forward {}/* ================
+}.sail-prev {}.sail-next {}/* ================
 // Sail Markers
-// ============= */.sail-markers {
+// ============= */.sail-pages {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}.sail-key {
+}.sail-page {
     display: inline-block;
     cursor: pointer
 
-  }.sail-key:hover{
+  }.sail-page:hover{
 
-}.sail-key.active{
+}.sail-page.active{
 
 }/* Structure
 // ::::::::::::: *//* ================
@@ -1046,6 +1045,17 @@ menu {
 }/* ================
 // Generic Dropdown Behaviors
 // ============= *//* ================
+// Skip Link
+// ============= */.skip-link {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  margin: -1px;
+  padding: 0;
+}/* ================
 // Main Navigation
 // ============= */.nav-main {
 
