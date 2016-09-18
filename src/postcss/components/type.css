@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* 1:Heading One */
+/* h1:Heading One */
 
 @define-mixin h1 {
   margin: rem(20) 0;
@@ -20,7 +20,7 @@ h1 {
 }
 
 
-/* 2:Heading Two */
+/* h2:Heading Two */
 
 @define-mixin h2 {
   margin: rem(20) 0;
@@ -33,7 +33,7 @@ h2 {
 }
 
 
-/* 3:Heading Three */
+/* h3:Heading Three */
 
 @define-mixin h3 {
   font-size: rem($h3Size);
@@ -45,7 +45,7 @@ h3 {
 }
 
 
-/* 4:Heading Four */
+/* h4:Heading Four */
 
 @define-mixin h4 {
   font-size: rem($h4Size);
@@ -57,7 +57,7 @@ h4 {
 }
 
 
-/* 5:Heading Five */
+/* h5:Heading Five */
 
 @define-mixin h5 {
   margin: rem(20) 0;
@@ -70,7 +70,7 @@ h5 {
 }
 
 
-/* 6:Heading Six */
+/* h6:Heading Six */
 
 @define-mixin h6 {
   margin: rem(20) 0;

@@ -1,38 +1,25 @@
 
 
-@import url(https://fonts.googleapis.com/css?family=Quicksand);
-/* ::::::::::::::::
-// Utilities
-// ::::::::::::: */
-/* ::::::::::::::::
-// Vendor
-// ::::::::::::: */
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-/**
+@import url(https://fonts.googleapis.com/css?family=Quicksand);/* Vendor
+// ::::::::::::: *//*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css *//**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
- */
-html {
+ */html {
   font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
-}
-/**
+}/**
  * Remove default margin.
- */
-body {
+ */body {
   margin: 0;
-}
-/* HTML5 display definitions
-   ========================================================================== */
-/**
+}/* HTML5 display definitions
+   ========================================================================== *//**
  * Correct `block` display not defined for any HTML5 element in IE 8/9.
  * Correct `block` display not defined for `details` or `summary` in IE 10/11
  * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
- */
-article,
+ */article,
 aside,
 details,
 figcaption,
@@ -45,331 +32,246 @@ nav,
 section,
 summary {
   display: block;
-}
-/**
+}/**
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
- */
-audio,
+ */audio,
 canvas,
 progress,
 video {
   display: inline-block; /* 1 */
   vertical-align: baseline; /* 2 */
-}
-/**
+}/**
  * Prevent displaying `audio` without controls in Mobile Safari 4/5/6/7.
- */
-audio:not([controls]) {
+ */audio:not([controls]) {
   display: none;
   height: 0;
-}
-/**
+}/**
  * Address `[hidden]` styling not present in IE 8/9/10.
  * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
- */
-[hidden],
+ */[hidden],
 template {
   display: none;
-}
-/* Links
-   ========================================================================== */
-/**
+}/* Links
+   ========================================================================== *//**
  * Remove the gray background color from active links in IE 10.
- */
-a {
+ */a {
   background-color: transparent;
-}
-/**
+}/**
  * Improve readability of focused elements when they are also in an
  * active/hover state.
- */
-a:active,
+ */a:active,
 a:hover {
   outline: 0;
-}
-/* Text-level semantics
-   ========================================================================== */
-/**
+}/* Text-level semantics
+   ========================================================================== *//**
  * Address inconsistent styling of `abbr[title]`.
  * 1. Correct styling in Firefox 39 and Opera 12.
  * 2. Correct missing styling in Chrome, Edge, IE, Opera, and Safari.
- */
-abbr[title] {
+ */abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
   text-decoration: underline dotted; /* 2 */
-}
-/**
+}/**
  * Address inconsistent styling of b and strong.
  * 1. Correct duplicate application of `bolder` in Safari 6.0.2.
  * 2. Correct style set to `bold` in Edge 12+, Safari 6.2+, and Chrome 18+.
- */
-b,
+ */b,
 strong {
   font-weight: inherit; /* 1 */
-}
-b,
+}b,
 strong {
   font-weight: bolder; /* 2 */
-}
-/**
+}/**
  * Address styling not present in Safari and Chrome.
- */
-dfn {
+ */dfn {
   font-style: italic;
-}
-/**
+}/**
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
- */
-h1 {
+ */h1 {
   font-size: 2em;
   margin: 0.67em 0;
-}
-/**
+}/**
  * Address styling not present in IE 8/9.
- */
-mark {
+ */mark {
   background-color: #ff0;
   color: #000;
-}
-/**
+}/**
  * Address inconsistent and variable font size in all browsers.
- */
-small {
+ */small {
   font-size: 80%;
-}
-/**
+}/**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
-sub,
+ */sub,
 sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
-}
-sup {
+}sup {
   top: -0.5em;
-}
-sub {
+}sub {
   bottom: -0.25em;
-}
-/* Embedded content
-   ========================================================================== */
-/**
+}/* Embedded content
+   ========================================================================== *//**
  * Remove border when inside `a` element in IE 8/9/10.
- */
-img {
+ */img {
   border: 0;
-}
-/**
+}/**
  * Correct overflow not hidden in IE 9/10/11.
- */
-svg:not(:root) {
+ */svg:not(:root) {
   overflow: hidden;
-}
-/* Grouping content
-   ========================================================================== */
-/**
+}/* Grouping content
+   ========================================================================== *//**
  * Address margin not present in IE 8/9 and Safari.
- */
-figure {
+ */figure {
   margin: 1em 40px;
-}
-/**
+}/**
  * Address inconsistent styling of `hr`.
  * 1. Correct `box-sizing` set to `border-box` in Firefox.
  * 2. Correct `overflow` set to `hidden` in IE 8/9/10/11 and Edge 12.
- */
-hr {
+ */hr {
   -webkit-box-sizing: content-box;
   box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
-}
-/**
+}/**
  * Contain overflow in all browsers.
- */
-pre {
+ */pre {
   overflow: auto;
-}
-/**
+}/**
  * 1. Correct inheritance and scaling of font-size for preformatted text.
  * 2. Address odd `em`-unit font size rendering in all browsers.
- */
-code,
+ */code,
 kbd,
 pre,
 samp {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
-}
-/* Forms
-   ========================================================================== */
-/**
+}/* Forms
+   ========================================================================== *//**
  * Known limitation: by default, Chrome and Safari on OS X allow very limited
  * styling of `select`, unless a `border` property is set.
- */
-/**
+ *//**
  * 1. Correct font properties not being inherited.
  * 2. Address margins set differently in Firefox 4+, Safari, and Chrome.
- */
-button,
+ */button,
 input,
 optgroup,
 select,
 textarea {
   font: inherit; /* 1 */
   margin: 0; /* 2 */
-}
-/**
+}/**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
- */
-button {
+ */button {
   overflow: visible;
-}
-/**
+}/**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
  * All other form control elements do not inherit `text-transform` values.
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
- */
-button,
+ */button,
 select {
   text-transform: none;
-}
-/**
+}/**
  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
  *    and `video` controls.
  * 2. Correct inability to style clickable `input` types in iOS.
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
- */
-button,
+ */button,
 html input[type="button"], /* 1 */
 input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button; /* 2 */
   cursor: pointer; /* 3 */
-}
-/**
+}/**
  * Re-set default cursor for disabled elements.
- */
-button[disabled],
+ */button[disabled],
 html input[disabled] {
   cursor: default;
-}
-/**
+}/**
  * Remove inner padding and border in Firefox 4+.
- */
-button::-moz-focus-inner,
+ */button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
-}
-/**
+}/**
  * Restore focus style in Firefox 4+ (unset by a rule above)
- */
-button:-moz-focusring,
+ */button:-moz-focusring,
 input:-moz-focusring {
   outline: 1px dotted ButtonText;
-}
-/**
+}/**
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
- */
-input {
+ */input {
   line-height: normal;
-}
-/**
+}/**
  * It's recommended that you don't attempt to style these elements.
  * Firefox's implementation doesn't respect box-sizing, padding, or width.
  *
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
- */
-input[type="checkbox"],
+ */input[type="checkbox"],
 input[type="radio"] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
-}
-/**
+}/**
  * Fix the cursor style for Chrome's increment/decrement buttons. For certain
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
- */
-input[type="number"]::-webkit-inner-spin-button,
+ */input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
-}
-/**
+}/**
  * Address `appearance` set to `searchfield` in Safari and Chrome.
- */
-input[type="search"] {
+ */input[type="search"] {
   -webkit-appearance: textfield;
-}
-/**
+}/**
  * Remove inner padding and search cancel button in Safari and Chrome on OS X.
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
- */
-input[type="search"]::-webkit-search-cancel-button,
+ */input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
-}
-/**
+}/**
  * Define consistent border, margin, and padding.
- */
-fieldset {
+ */fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
-}
-/**
+}/**
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
-legend {
+ */legend {
   border: 0; /* 1 */
   padding: 0; /* 2 */
-}
-/**
+}/**
  * Remove default vertical scrollbar in IE 8/9/10/11.
- */
-textarea {
+ */textarea {
   overflow: auto;
-}
-/**
+}/**
  * Restore font weight (unset by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
- */
-optgroup {
+ */optgroup {
   font-weight: bold;
-}
-/* ::::::::::::::::
-// Mimo
-// ::::::::::::: */
-/* ================
+}/* Mimo
+// ::::::::::::: *//* ================
 // Collage
 //   http://codepen.io/mimoduo/pen/VYwamv
-// ============= */
-.collage {
+// ============= */.collage {
 
-}
-.collage li{
+}.collage li{
   position: absolute;
-}
-/* ================
+}/* ================
 // Drawer Mixin
 //   http://codepen.io/mimoduo/pen/kuobi
-// ============= */
-/* ================
+// ============= *//* ================
 // Drawer
-// ============= */
-.drawer {
+// ============= */.drawer {
   position: absolute;
   min-height: 100%;
   width: 100%;
@@ -399,8 +301,7 @@ optgroup {
     visibility .3s,
     transform .3s,
     -webkit-transform .3s;
-}
-.drawer-active .drawer {
+}.drawer-active .drawer {
     pointer-events: auto;
     opacity: 1;
     visibility: visible;
@@ -409,11 +310,9 @@ optgroup {
     transform: translate(0, 0);
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-  }
-/* ================
+  }/* ================
 // Drawer Trigger
-// ============= */
-.drawer-trigger {
+// ============= */.drawer-trigger {
   position: relative;
   z-index: 400;
   height: 3.75em;
@@ -423,8 +322,7 @@ optgroup {
   cursor: pointer;
   background: none
 
-}
-.drawer-trigger:before,
+}.drawer-trigger:before,
   .drawer-trigger:after{
   position: absolute;
   top: 50%;
@@ -455,15 +353,12 @@ optgroup {
       transform .25s,
       -webkit-box-shadow .25s,
       -webkit-transform .25s;
-}
-.drawer-trigger:before{
+}.drawer-trigger:before{
   margin-top: -0.25em;
-}
-.drawer-trigger:after{
+}.drawer-trigger:after{
   -webkit-box-shadow: 0 0.25em 0 0 currentColor;
   box-shadow: 0 0.25em 0 0 currentColor;
-}
-.drawer-active .drawer-trigger:before {
+}.drawer-active .drawer-trigger:before {
     margin-top: 0;
     -webkit-transform:
       translate(-50%, -50%)
@@ -474,8 +369,7 @@ optgroup {
     transform:
       translate(-50%, -50%)
       rotate(-45deg);
-  }
-.drawer-active .drawer-trigger:after {
+  }.drawer-active .drawer-trigger:after {
     -webkit-box-shadow: 0 0 0 0 transparent;
     box-shadow: 0 0 0 0 transparent;
     -webkit-transform:
@@ -487,12 +381,10 @@ optgroup {
     transform:
       translate(-50%, -50%)
       rotate(45deg);
-  }
-/* ================
+  }/* ================
 // Grid / Columns
 //   http://codepen.io/mimoduo/pen/vOMxLE
-// ============= */
-.grid {
+// ============= */.grid {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -501,13 +393,11 @@ optgroup {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap
 
-}
-.grid:after{
+}.grid:after{
   display: table;
   clear: both;
   content: '';
-}
-.grid-centered{
+}.grid-centered{
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -516,12 +406,10 @@ optgroup {
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
-}
-.col {
+}.col {
     float: left;
     width: 100%;
-  }
-@media (min-width: 600px) {
+  }@media (min-width: 600px) {
 
     .col-medium-1{
     width: 50%;
@@ -531,17 +419,12 @@ optgroup {
     width: 100%;
   }
 
-  }
-/* ================
+  }/* ================
 // Harmonica
 //   http://codepen.io/mimoduo/pen/epZaMq
-// ============= */
-/* When do accordions become harmonicas? */
-.harmonica {
+// ============= *//* When do accordions become harmonicas? */.harmonica {
 
-}
-@media(min-width: 900px) {
-  .harmonica{
+}@media(min-width: 900px) {.harmonica{
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -550,13 +433,10 @@ optgroup {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
-  }
-.harmonica-header {
+  }.harmonica-header {
     cursor: pointer
 
-  }
-@media(min-width: 900px) {
-  .harmonica-header{
+  }@media(min-width: 900px) {.harmonica-header{
     -webkit-box-flex: 1;
     -webkit-flex: 1 auto;
     -ms-flex: 1 auto;
@@ -566,34 +446,26 @@ optgroup {
     -ms-flex-order: 1;
     order: 1;
   }
-    }
-.harmonica-header:hover{
+    }.harmonica-header:hover{
 
-}
-.harmonica-header.active{
+}.harmonica-header.active{
 
-}
-.harmonica-header.active + *{
+}.harmonica-header.active + *{
   display: block;
-}
-.harmonica-content {
+}.harmonica-content {
     display: none
 
-  }
-@media(min-width: 900px) {
-  .harmonica-content{
+  }@media(min-width: 900px) {.harmonica-content{
     -webkit-box-ordinal-group: 3;
     -webkit-order: 2;
     -ms-flex-order: 2;
     order: 2;
     width: 100%;
   }
-    }
-/* ================
+    }/* ================
 // Lantern
 //   http://codepen.io/mimoduo/pen/EPerjv
-// ============= */
-.lantern {
+// ============= */.lantern {
   position: fixed;
   top: 0;
   left: 0;
@@ -607,17 +479,13 @@ optgroup {
   transition:
     opacity .25s,
     visibility .25s;
-}
-.display-lantern {
+}.display-lantern {
   opacity: 1;
   visibility: visible;
-}
-.lantern-content {
+}.lantern-content {
     height: 100%;
     width: 100%;
-  }
-/* Lantern Image Container */
-.lantern-holder {
+  }/* Lantern Image Container */.lantern-holder {
       top: 50%;
       display: block;
       max-height: 100%;
@@ -626,41 +494,282 @@ optgroup {
       -webkit-transform: translate(0, -50%);
       -ms-transform: translate(0, -50%);
       transform: translate(0, -50%);
-    }
-/* Lantern User Controls */
-.lantern-control {
+    }/* Lantern User Controls */.lantern-control {
       position: absolute;
       top: 50%;
       -webkit-transform: translate(0, -50%);
       -ms-transform: translate(0, -50%);
       transform: translate(0, -50%);
-    }
-.lantern-previous {
+    }.lantern-previous {
       left: 0;
-    }
-.lantern-next {
+    }.lantern-next {
       right: 0;
-    }
-/* Inline lantern image */
-.lantern-light {
+    }/* Inline lantern image */.lantern-light {
   cursor: pointer;
-}
-/* Body when a lantern is visible */
-.lantern-triggered {
+}/* Body when a lantern is visible */.lantern-triggered {
   overflow: hidden;
-}
-/* ================
+}/* ================
+// Type
+// ============= *//* ================
+// Layout
+// ============= */.mimo-theme {
+
+}.mimo-theme body{
+  font-family: 'Quicksand';
+  color: #9e12ef;
+}/* ================
+// Drawer
+// ============= */.mimo-theme {
+
+}.mimo-theme .drawer-trigger{
+
+}.mimo-theme .drawer-trigger:before,
+    .mimo-theme .drawer-trigger:after{
+  color: #9e12ef;
+}.mimo-theme .drawer{
+  padding: 1.25em;
+  background: #9e12ef;
+  color: #fff;
+}/* ================
+// Icons
+// ============= */.mimo-theme {
+
+}.mimo-theme .symbol{
+  display: block;
+  height: 1.1111111111111112em;
+  width: 1.1111111111111112em;
+}.mimo-theme .symbol-logo{
+  height: 2.888888888888889em;
+  width: 11.11111111111111em;
+  fill: #9e12ef;
+}/* ================
+// Regions
+// ============= */.mimo-theme {
+
+}.mimo-theme .site-header,
+  .mimo-theme .site-footer{
+  max-width: 77.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1.25em;
+}/* ================
+// Section
+// ============= */.mimo-theme {
+
+}.mimo-theme .section{
+  padding: 1.1111111111111112em;
+  font-size: 1.125em;
+  line-height: 1.6666666666666667;
+  color: #9e12ef;
+}.mimo-theme .section:nth-of-type(odd){
+  padding: 3.3333333333333335em 1.1111111111111112em;
+  background: #9e12ef;
+  color: #f0d0ff;
+}/* ================
+// Grid
+// ============= */.mimo-theme {
+
+}@media (min-width: 700px) {.mimo-theme{
+
+}.mimo-theme .col-big-1{
+    width: 8.33333%;
+  }.mimo-theme .col-big-2{
+    width: 16.66667%;
+  }.mimo-theme .col-big-3{
+    width: 25%;
+  }.mimo-theme .col-big-4{
+    width: 33.33333%;
+  }.mimo-theme .col-big-5{
+    width: 41.66667%;
+  }.mimo-theme .col-big-6{
+    width: 50%;
+  }.mimo-theme .col-big-7{
+    width: 58.33333%;
+  }.mimo-theme .col-big-8{
+    width: 66.66667%;
+  }.mimo-theme .col-big-9{
+    width: 75%;
+  }.mimo-theme .col-big-10{
+    width: 83.33333%;
+  }.mimo-theme .col-big-11{
+    width: 91.66667%;
+  }.mimo-theme .col-big-12{
+    width: 100%;
+  }
+
+  }.mimo-theme .grid{
+  margin: 0 -1.1111111111111112em;
+}.mimo-theme .grid [class^="col"]{
+  padding: 0 1.1111111111111112em;
+}.mimo-theme .grid h3{
+  margin: 0;
+}/* ================
+// Collage
+// ============= */.mimo-theme {
+
+}.mimo-theme .collage{
+  height: 38.888888888888886em;
+  border-top: 1.1111111111111112em solid;
+  border-left: 1.1111111111111112em solid;
+}.mimo-theme .collage li{
+  border-right: 1.1111111111111112em solid;
+  border-bottom: 1.1111111111111112em solid;
+}.mimo-theme .collage li:nth-child(1){
+  top: 0%;
+  left: 0%;
+  height: 25%;
+  width: 100%;
+}@media screen and (min-width: 900px){.mimo-theme .collage li:nth-child(1){
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 33.33333333333333%;
+  }
+}.mimo-theme .collage li:nth-child(2){
+  top: 25%;
+  left: 0%;
+  height: 25%;
+  width: 100%;
+}@media screen and (min-width: 900px){.mimo-theme .collage li:nth-child(2){
+    top: 0%;
+    left: 33.33333333333333%;
+    height: 50%;
+    width: 66.66666666666666%;
+  }
+}.mimo-theme .collage li:nth-child(3){
+  top: 50%;
+  left: 0%;
+  height: 25%;
+  width: 100%;
+}@media screen and (min-width: 600px){.mimo-theme .collage li:nth-child(3){
+    top: 50%;
+    left: 0%;
+    height: 50%;
+    width: 50%;
+  }
+}@media screen and (min-width: 900px){.mimo-theme .collage li:nth-child(3){
+    top: 50%;
+    left: 33.33333333333333%;
+    height: 50%;
+    width: 33.33333333333333%;
+  }
+}.mimo-theme .collage li:nth-child(4){
+  top: 75%;
+  left: 0%;
+  height: 25%;
+  width: 100%;
+}@media screen and (min-width: 600px){.mimo-theme .collage li:nth-child(4){
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    width: 50%;
+  }
+}@media screen and (min-width: 900px){.mimo-theme .collage li:nth-child(4){
+    top: 50%;
+    left: 66.66666666666666%;
+    height: 50%;
+    width: 33.33333333333333%;
+  }
+}.mimo-theme .collage h4{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}/* ================
+// Slideshow
+// ============= */.mimo-theme {
+
+}.mimo-theme .sail-slide{
+  text-align: center;
+}.mimo-theme .sail-slide li{
+  margin-bottom: 0.5714285714285714em;
+  font-size: 1.9444444444444444em;
+  line-height: 1;
+}.mimo-theme .sail-directions{
+  margin-bottom: 0.8333333333333334em;
+}.mimo-theme .sail-direction{
+  display: inline-block;
+  vertical-align: top;
+  border: 0;
+  padding: 0 0.2857142857142857em;
+  font-size: 1.9444444444444444em;
+  background: none;
+  color: inherit;
+}.mimo-theme .symbol-sail-direction{
+  fill: currentColor;
+  font-size: 0.6285714285714286em;
+}.mimo-theme .sail-key{
+  height: 1.1111111111111112em;
+  width: 1.1111111111111112em;
+  background: none;
+  border: 0.1111111111111111em solid;
+  margin: 0 0.2777777777777778em;
+  border-radius: 100%;
+  color: #f0d0ff;
+  -webkit-transition: background .2s;
+  transition: background .2s;
+}.mimo-theme .sail-key:hover{
+  background: rgba(255, 255, 255, .75);
+}.mimo-theme .sail-key.active{
+  background: currentColor;
+}/* ================
+// Lantern
+// ============= */.mimo-theme {
+
+}.mimo-theme .lantern-grid{
+  margin: 0 -0.5555555555555556em;
+}.mimo-theme .lantern-col{
+  display: block;
+  width: 100%;
+  margin-bottom: 1.25em;
+}.mimo-theme .lantern-col:first-child{
+
+}@media screen and (min-width: 700px){.mimo-theme .lantern-col:first-child{
+    width: 60%;
+  }
+}.mimo-theme .lantern-col:last-child{
+  margin-bottom: 0;
+}@media screen and (min-width: 700px){.mimo-theme .lantern-col:last-child{
+    width: 40%;
+  }
+}.mimo-theme .lantern{
+  padding: 3.3333333333333335em;
+  background: rgba(255, 255, 255, .75);
+}.mimo-theme .lantern-holder{
+  border: 0.2777777777777778em solid #fff;
+}.mimo-theme .lantern-control{
+  border: 0;
+  background: none;
+}.mimo-theme .lantern-close{
+  position: absolute;
+  top: 0;
+  right: 0;
+}/* ================
+// Harmonica
+// ============= */.mimo-theme {
+
+}.mimo-theme .harmonica-header{
+  border-bottom: 1px solid;
+  margin: 0 0 1.1111111111111112em;
+}.mimo-theme h4{
+  margin: 0.4em 0;
+}.mimo-theme .harmonica-content{
+  margin-bottom: 1.25em;
+}/* ================
 // Sail Slide
 //   http://codepen.io/mimoduo/pen/gabWmN
-// ============= */
-.sail-slide {
+// ============= */.sail-slide {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
   list-style: none
 
-}
-.sail-slide li{
+}.sail-slide li{
   position: absolute;
   top: 0;
   left: 0;
@@ -681,577 +790,74 @@ optgroup {
       visibility .5s,
       transform .5s,
       -webkit-transform .5s;
-}
-.sail-slide li.active{
+}.sail-slide li.active{
   position: relative;
   pointer-events: auto;
   opacity: 1;
   visibility: visible;
-}
-/* ================
+}/* ================
 // Sail Directions
-// ============= */
-.sail-directions {
+// ============= */.sail-directions {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-.sail-direction {
+}.sail-direction {
     outline: 0
 
-  }
-.sail-direction:hover{
+  }.sail-direction:hover{
 
-}
-.sail-back {}
-.sail-forward {}
-/* ================
+}.sail-back {}.sail-forward {}/* ================
 // Sail Markers
-// ============= */
-.sail-markers {
+// ============= */.sail-markers {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-.sail-key {
+}.sail-key {
     display: inline-block;
     cursor: pointer
 
-  }
-.sail-key:hover{
+  }.sail-key:hover{
 
-}
-.sail-key.active{
+}.sail-key.active{
 
-}
-/* ================
-// Type
-// ============= */
-/* ================
-// Layout
-// ============= */
-.mimo-theme {
-
-}
-.mimo-theme body{
-  font-family: 'Quicksand';
-  color: #9e12ef;
-}
-/* ================
-// Drawer
-// ============= */
-.mimo-theme {
-
-}
-.mimo-theme .drawer-trigger{
-
-}
-.mimo-theme .drawer-trigger:before,
-    .mimo-theme .drawer-trigger:after{
-  color: #9e12ef;
-}
-.mimo-theme .drawer{
-  padding: 1.25em;
-  background: #9e12ef;
-  color: #fff;
-}
-/* ================
-// Icons
-// ============= */
-.mimo-theme {
-
-}
-.mimo-theme .symbol{
-  display: block;
-  height: 1.1111111111111112em;
-  width: 1.1111111111111112em;
-}
-.mimo-theme .symbol-logo{
-  height: 2.888888888888889em;
-  width: 11.11111111111111em;
-  fill: #9e12ef;
-}
-/* ================
-// Regions
-// ============= */
-.mimo-theme {
-
-}
-.mimo-theme .site-header,
-  .mimo-theme .site-footer{
-  max-width: 77.5rem;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 1.25em;
-}
-/* ================
-// Section
-// ============= */
-.mimo-theme {
-
-}
-.mimo-theme .section{
-  padding: 1.1111111111111112em;
-  font-size: 1.125em;
-  line-height: 1.6666666666666667;
-  color: #9e12ef;
-}
-.mimo-theme .section:nth-of-type(odd){
-  padding: 3.3333333333333335em 1.1111111111111112em;
-  background: #9e12ef;
-  color: #f0d0ff;
-}
-/* ================
-// Grid
-// ============= */
-.mimo-theme {
-
-}
-@media (min-width: 700px) {
-  .mimo-theme{
-
-}
-  .mimo-theme .col-big-1{
-    width: 8.33333%;
-  }
-  .mimo-theme .col-big-2{
-    width: 16.66667%;
-  }
-  .mimo-theme .col-big-3{
-    width: 25%;
-  }
-  .mimo-theme .col-big-4{
-    width: 33.33333%;
-  }
-  .mimo-theme .col-big-5{
-    width: 41.66667%;
-  }
-  .mimo-theme .col-big-6{
-    width: 50%;
-  }
-  .mimo-theme .col-big-7{
-    width: 58.33333%;
-  }
-  .mimo-theme .col-big-8{
-    width: 66.66667%;
-  }
-  .mimo-theme .col-big-9{
-    width: 75%;
-  }
-  .mimo-theme .col-big-10{
-    width: 83.33333%;
-  }
-  .mimo-theme .col-big-11{
-    width: 91.66667%;
-  }
-  .mimo-theme .col-big-12{
-    width: 100%;
-  }
-
-  }
-.mimo-theme .grid{
-  margin: 0 -1.1111111111111112em;
-}
-.mimo-theme .grid [class^="col"]{
-  padding: 0 1.1111111111111112em;
-}
-.mimo-theme .grid h3{
-  margin: 0;
-}
-/* ================
-// Collage
-// ============= */
-.mimo-theme {
-
-}
-.mimo-theme .collage{
-  height: 38.888888888888886em;
-  border-top: 1.1111111111111112em solid;
-  border-left: 1.1111111111111112em solid;
-}
-.mimo-theme .collage li{
-  border-right: 1.1111111111111112em solid;
-  border-bottom: 1.1111111111111112em solid;
-}
-.mimo-theme .collage li:nth-child(1){
-  top: 0%;
-  left: 0%;
-  height: 25%;
-  width: 100%;
-}
-@media screen and (min-width: 900px){
-  .mimo-theme .collage li:nth-child(1){
-    top: 0%;
-    left: 0%;
-    height: 100%;
-    width: 33.33333333333333%;
-  }
-}
-.mimo-theme .collage li:nth-child(2){
-  top: 25%;
-  left: 0%;
-  height: 25%;
-  width: 100%;
-}
-@media screen and (min-width: 900px){
-  .mimo-theme .collage li:nth-child(2){
-    top: 0%;
-    left: 33.33333333333333%;
-    height: 50%;
-    width: 66.66666666666666%;
-  }
-}
-.mimo-theme .collage li:nth-child(3){
-  top: 50%;
-  left: 0%;
-  height: 25%;
-  width: 100%;
-}
-@media screen and (min-width: 600px){
-  .mimo-theme .collage li:nth-child(3){
-    top: 50%;
-    left: 0%;
-    height: 50%;
-    width: 50%;
-  }
-}
-@media screen and (min-width: 900px){
-  .mimo-theme .collage li:nth-child(3){
-    top: 50%;
-    left: 33.33333333333333%;
-    height: 50%;
-    width: 33.33333333333333%;
-  }
-}
-.mimo-theme .collage li:nth-child(4){
-  top: 75%;
-  left: 0%;
-  height: 25%;
-  width: 100%;
-}
-@media screen and (min-width: 600px){
-  .mimo-theme .collage li:nth-child(4){
-    top: 50%;
-    left: 50%;
-    height: 50%;
-    width: 50%;
-  }
-}
-@media screen and (min-width: 900px){
-  .mimo-theme .collage li:nth-child(4){
-    top: 50%;
-    left: 66.66666666666666%;
-    height: 50%;
-    width: 33.33333333333333%;
-  }
-}
-.mimo-theme .collage h4{
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  margin: 0;
-  text-align: center;
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-}
-/* ================
-// Slideshow
-// ============= */
-.mimo-theme {
-
-}
-.mimo-theme .sail-slide{
-  text-align: center;
-}
-.mimo-theme .sail-slide li{
-  margin-bottom: 0.5714285714285714em;
-  font-size: 1.9444444444444444em;
-  line-height: 1;
-}
-.mimo-theme .sail-directions{
-  margin-bottom: 0.8333333333333334em;
-}
-.mimo-theme .sail-direction{
-  display: inline-block;
-  vertical-align: top;
-  border: 0;
-  padding: 0 0.2857142857142857em;
-  font-size: 1.9444444444444444em;
-  background: none;
-  color: inherit;
-}
-.mimo-theme .symbol-sail-direction{
-  fill: currentColor;
-  font-size: 0.6285714285714286em;
-}
-.mimo-theme .sail-key{
-  height: 1.1111111111111112em;
-  width: 1.1111111111111112em;
-  background: none;
-  border: 0.1111111111111111em solid;
-  margin: 0 0.2777777777777778em;
-  border-radius: 100%;
-  color: #f0d0ff;
-  -webkit-transition: background .2s;
-  transition: background .2s;
-}
-.mimo-theme .sail-key:hover{
-  background: rgba(255, 255, 255, .75);
-}
-.mimo-theme .sail-key.active{
-  background: currentColor;
-}
-/* ================
-// Lantern
-// ============= */
-.mimo-theme {
-
-}
-.mimo-theme .lantern-grid{
-  margin: 0 -0.5555555555555556em;
-}
-.mimo-theme .lantern-col{
-  display: block;
-  width: 100%;
-  margin-bottom: 1.25em;
-}
-.mimo-theme .lantern-col:first-child{
-
-}
-@media screen and (min-width: 700px){
-  .mimo-theme .lantern-col:first-child{
-    width: 60%;
-  }
-}
-.mimo-theme .lantern-col:last-child{
-  margin-bottom: 0;
-}
-@media screen and (min-width: 700px){
-  .mimo-theme .lantern-col:last-child{
-    width: 40%;
-  }
-}
-.mimo-theme .lantern{
-  padding: 3.3333333333333335em;
-  background: rgba(255, 255, 255, .75);
-}
-.mimo-theme .lantern-holder{
-  border: 0.2777777777777778em solid #fff;
-}
-.mimo-theme .lantern-control{
-  border: 0;
-  background: none;
-}
-.mimo-theme .lantern-close{
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-/* ================
-// Harmonica
-// ============= */
-.mimo-theme {
-
-}
-.mimo-theme .harmonica-header{
-  border-bottom: 1px solid;
-  margin: 0 0 1.1111111111111112em;
-}
-.mimo-theme h4{
-  margin: 0.4em 0;
-}
-.mimo-theme .harmonica-content{
-  margin-bottom: 1.25em;
-}
-/* ::::::::::::::::
-// Structure
-// ::::::::::::: */
-/* ================
+}/* Structure
+// ::::::::::::: *//* ================
+// Header
+// ============= */.site-header {}/* ================
+// Main
+// ============= */.site-main {}/* ================
+// Footer
+// ============= */.site-footer {}/* ================
 // Universal Structure
-// ============= */
-* {
+// ============= */* {
   position: relative;
-}
-/* ================
+}/* ================
 // html, universal, & body
-// ============= */
-html {
+// ============= */html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: null;
   color: #222;
-}
-*,
+}*,
 *:before,
 *:after {
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
-}
-body {
+}body {
     font-size: 1em;
     line-height: 1.375;
-  }
-/* ================
-// Header
-// ============= */
-.site-header {}
-/* ================
-// Main
-// ============= */
-.site-main {}
-/* ================
-// Footer
-// ============= */
-.site-footer {}
-/* ================
+  }/* ================
 // Section
-// ============= */
-.compartment {
+// ============= */.compartment {
   max-width: 75rem;
   margin-right: auto;
   margin-left: auto;
-}
-/* ::::::::::::::::
-// Components
-// ::::::::::::: */
-/* ================
-// Headings
-// ============= */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-}
-/* 1:Heading One */
-h1 {
-  margin: 1.25rem 0;
-  font-size: 2.5rem;
-  line-height: 1.25;
-}
-/* 2:Heading Two */
-h2 {
-  margin: 1.25rem 0;
-  font-size: 2.1875rem;
-  line-height: 1.2857142857142858;
-}
-/* 3:Heading Three */
-h3 {
-  font-size: 1.875rem;
-  line-height: 1.3333333333333333;
-}
-/* 4:Heading Four */
-h4 {
-  font-size: 1.5625rem;
-  line-height: 1.4;
-}
-/* 5:Heading Five */
-h5 {
-  margin: 1.25rem 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-/* 6:Heading Six */
-h6 {
-  margin: 1.25rem 0;
-  font-size: 1rem;
-  line-height: 1.375;
-}
-/* ================
-// Symbols
-// ============= */
-.symbol {
-  -webkit-transition: fill .25s,
-    stroke .25s;
-  transition:
-    fill .25s,
-    stroke .25s
-
-}
-.symbol-logo{
-  height: 6.25em;
-  width: 9.375em;
-}
-/* ================
-// Anchors
-// ============= */
-a {
-
-}
-a:hover{
-
-}
-a:visited{
-
-}
-/* ================
-// Blockquote / Cite
-// ============= */
-blockquote {
-  margin: 1.25em 0
-
-}
-blockquote:before,
-  blockquote:after{
-  speak: none;
-}
-blockquote:before{
-  content: '\201C';
-}
-blockquote:after{
-  content: '\201D';
-}
-cite {
-  font-style: normal
-
-}
-cite:before{
-  content: '';
-  speak: none;
-}
-/* ================
-// Lists
-// ============= */
-ul,
-ol {}
-li {}
-/* ================
-// Paragraphs
-// ============= */
-p {
-  margin: 1.25em 0;
-}
-/* ================
-// Table
-// ============= */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.25em 0;
-}
-tr {
-
-  }
-tr:nth-of-type(odd) td{
-  background: rgba(0, 0, 0, .025);
-}
-th,
-    td {
-      vertical-align: top;
-    }
-th {
-      padding: 1.25em 1.25rem;
-      font-weight: normal;
-      text-align: left;
-    }
-td {
-      padding: 1.25em 1.25rem;
-    }
-/* ================
+}/* Components
+// ::::::::::::: *//* ================
 // Generic Buttons
-// ============= */
-.button {
+// ============= */.button {
   display: inline-block;
   vertical-align: top;
   border: 0;
@@ -1283,26 +889,78 @@ td {
     -webkit-box-shadow .25s,
     -webkit-transform .25s
 
-}
-.button:hover{
+}.button:hover{
 
-}
-.button:active{
+}.button:active{
 
-}
-.button[disabled]{
+}.button[disabled]{
   cursor: not-allowed;
-}
-/* Extended Button */
-.button-modifier {}
-/* ================
+}/* Extended Button */.button-modifier {}/* ================
+// Form Container
+// ============= */form {}fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }/* ================
+// Form Elements
+// ============= */label {}input {}[type='text'] {}[type='radio'] {}[type='checkbox'] {}select {}textarea {}/* ================
+// Anchors
+// ============= */a {
+
+}a:hover{
+
+}a:visited{
+
+}/* ================
+// Blockquote / Cite
+// ============= */blockquote {
+  margin: 1.25em 0
+
+}blockquote:before,
+  blockquote:after{
+  speak: none;
+}blockquote:before{
+  content: '\201C';
+}blockquote:after{
+  content: '\201D';
+}cite {
+  font-style: normal
+
+}cite:before{
+  content: '';
+  speak: none;
+}/* ================
+// Lists
+// ============= */ul,
+ol {}li {}/* ================
+// Paragraphs
+// ============= */p {
+  margin: 1.25em 0;
+}/* ================
+// Table
+// ============= */table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25em 0;
+}tr {
+
+  }tr:nth-of-type(odd) td{
+  background: rgba(0, 0, 0, .025);
+}th,
+    td {
+      vertical-align: top;
+    }th {
+      padding: 1.25em 1.25rem;
+      font-weight: normal;
+      text-align: left;
+    }td {
+      padding: 1.25em 1.25rem;
+    }/* ================
 // Site Logo Link
-// ============= */
-.site-logo {
+// ============= */.site-logo {
   display: block;
   overflow: hidden;
-}
-.site-logo-text {
+}.site-logo-text {
     position: absolute;
     overflow: hidden;
     clip: rect(0 0 0 0);
@@ -1311,106 +969,112 @@ td {
     border: 0;
     margin: -1px;
     padding: 0;
-  }
-/* ================
+  }/* ================
 // Common Media
-// ============= */
-img,
+// ============= */img,
 video,
 canvas {
   height: auto;
   max-width: 100%;
-}
-/* ================
+}/* ================
 // Images
-// ============= */
-figure {
+// ============= */figure {
   margin: 0;
-}
-img {
+}img {
     display: block
 
-  }
-img.full-width{
+  }img.full-width{
   width: 100%;
-}
-figcaption {}
-/* ================
+}figcaption {}/* ================
 // Iframes
-// ============= */
-iframe {
+// ============= */iframe {
   max-width: 100%;
   width: 100%;
   border: 0;
-}
-/* ================
+}/* ================
 // Spotlights
-// ============= */
-.spotlight {
+// ============= */.spotlight {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover
 
-}
-.spotlight img{
+}.spotlight img{
   display: none;
-}
-/* ================
-// Form Container
-// ============= */
-form {}
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-  }
-/* ================
-// Form Elements
-// ============= */
-label {}
-input {}
-[type='text'] {}
-[type='radio'] {}
-[type='checkbox'] {}
-select {}
-textarea {}
-/* ::::::::::::::::
-// Navigation
-// ::::::::::::: */
-/* ================
+}/* ================
+// Symbols
+// ============= */.symbol {
+  -webkit-transition: fill .25s,
+    stroke .25s;
+  transition:
+    fill .25s,
+    stroke .25s
+
+}.symbol-logo{
+  height: 6.25em;
+  width: 9.375em;
+}/* ================
+// Headings
+// ============= */h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}/* h1:Heading One */h1 {
+  margin: 1.25rem 0;
+  font-size: 2.5rem;
+  line-height: 1.25;
+}/* h2:Heading Two */h2 {
+  margin: 1.25rem 0;
+  font-size: 2.1875rem;
+  line-height: 1.2857142857142858;
+}/* h3:Heading Three */h3 {
+  font-size: 1.875rem;
+  line-height: 1.3333333333333333;
+}/* h4:Heading Four */h4 {
+  font-size: 1.5625rem;
+  line-height: 1.4;
+}/* h5:Heading Five */h5 {
+  margin: 1.25rem 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}/* h6:Heading Six */h6 {
+  margin: 1.25rem 0;
+  font-size: 1rem;
+  line-height: 1.375;
+}/* Navigation
+// ::::::::::::: *//* ================
 // Generic Navigation/Menu Behaviors
-// ============= */
-nav,
+// ============= */nav,
 menu {
 
-}
-nav ol, menu ol{
+}nav ol, menu ol{
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
-}
-nav a, menu a{
+}nav a, menu a{
   display: block;
-}
-/* ================
+}/* ================
 // Generic Dropdown Behaviors
-// ============= */
-/* ================
+// ============= *//* ================
 // Main Navigation
-// ============= */
-.nav-main {
+// ============= */.nav-main {
 
-}
-.nav-main > ol{
+}.nav-main > ol{
 
-}
-.nav-main > ol > li{
+}.nav-main > ol > li{
 
-}
-.nav-main > ol > li > a{
+}.nav-main > ol > li > a{
 
-}
-.nav-main > ol > li > a:hover{
+}.nav-main > ol > li > a:hover{
+
+}/* ================
+// Template Navigation
+// ============= */.nav-template {
+
+}.nav-template ol{
+
+}.nav-template li{
+
+}.nav-template a{
+
+}.nav-template a:hover{
 
 }

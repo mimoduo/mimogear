@@ -45,7 +45,9 @@ gulp.task('postcss', function() {
 
   return gulp.src('src/postcss/site.css')
     .pipe(postcss([
-      require('postcss-import'),
+      require('postcss-easy-import')({
+        glob: true
+      }),
       require('postcss-mixins')({
         mixins: {
           collage: function(mixin, xspan, yspan, xpoint, ypoint, xmax, ymax) {

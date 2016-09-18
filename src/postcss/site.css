@@ -1,61 +1,26 @@
-/* ::::::::::::::::
-// Utilities
+@import 'utilities/*';
+
+/* Vendor
 // ::::::::::::: */
 
-@import 'utilities/accessibility';
-@import 'utilities/clear';
-@import 'utilities/compartment';
-@import 'utilities/cover';
-@import 'utilities/font-face';
-@import 'utilities/list-reset';
-@import 'utilities/media-query';
+@import 'vendor/*';
 
-
-/* ::::::::::::::::
-// Vendor
+/* Mimo
 // ::::::::::::: */
 
-@import 'vendor/normalize';
+@import 'mimo/*';
 
-
-/* ::::::::::::::::
-// Mimo
+/* Structure
 // ::::::::::::: */
 
-@import 'mimo/collage';
-@import 'mimo/drawer';
-@import 'mimo/grid';
-@import 'mimo/harmonica';
-@import 'mimo/lantern';
-@import 'mimo/slides';
-@import 'mimo/mimo-theme';
+@import 'structure/*';
 
-
-/* ::::::::::::::::
-// Structure
+/* Components
 // ::::::::::::: */
 
-@import 'structure/root';
-@import 'structure/regions';
-@import 'structure/sections';
+@import 'components/*';
 
-
-/* ::::::::::::::::
-// Components
+/* Navigation
 // ::::::::::::: */
 
-@import 'components/type';
-@import 'components/sprite';
-@import 'components/html';
-@import 'components/buttons';
-@import 'components/logo';
-@import 'components/media';
-@import 'components/forms';
-
-
-/* ::::::::::::::::
-// Navigation
-// ::::::::::::: */
-
-@import 'navigation/behaviors';
-@import 'navigation/main';
+@import 'navigation/*';
