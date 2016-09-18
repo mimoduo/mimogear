@@ -132,7 +132,6 @@ sup {
  * 1. Correct `box-sizing` set to `border-box` in Firefox.
  * 2. Correct `overflow` set to `hidden` in IE 8/9/10/11 and Edge 12.
  */hr {
-  -webkit-box-sizing: content-box;
   box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
@@ -216,7 +215,6 @@ input:-moz-focusring {
  * 2. Remove excess padding in IE 8/9/10.
  */input[type="checkbox"],
 input[type="radio"] {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }/**
@@ -336,12 +334,12 @@ input[type="search"]::-webkit-search-decoration {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   -webkit-transition: background .25s,
+      box-shadow .25s,
       margin .25s,
-      -webkit-box-shadow .25s,
       -webkit-transform .25s;
   transition: background .25s,
+      box-shadow .25s,
       margin .25s,
-      -webkit-box-shadow .25s,
       -webkit-transform .25s;
   transition: background .25s,
       box-shadow .25s,
@@ -351,12 +349,10 @@ input[type="search"]::-webkit-search-decoration {
       box-shadow .25s,
       margin .25s,
       transform .25s,
-      -webkit-box-shadow .25s,
       -webkit-transform .25s;
 }.drawer-trigger:before{
   margin-top: -0.25em;
 }.drawer-trigger:after{
-  -webkit-box-shadow: 0 0.25em 0 0 currentColor;
   box-shadow: 0 0.25em 0 0 currentColor;
 }.drawer-active .drawer-trigger:before {
     margin-top: 0;
@@ -370,7 +366,6 @@ input[type="search"]::-webkit-search-decoration {
       translate(-50%, -50%)
       rotate(-45deg);
   }.drawer-active .drawer-trigger:after {
-    -webkit-box-shadow: 0 0 0 0 transparent;
     box-shadow: 0 0 0 0 transparent;
     -webkit-transform:
       translate(-50%, -50%)
@@ -836,14 +831,12 @@ input[type="search"]::-webkit-search-decoration {
 }/* ================
 // html, universal, & body
 // ============= */html {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: null;
   color: #222;
 }*,
 *:before,
 *:after {
-  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }body {
     font-size: 1em;
@@ -867,13 +860,13 @@ input[type="search"]::-webkit-search-decoration {
   text-align: center;
   -webkit-transition: border .25s,
     background .25s,
+    box-shadow .25s,
     color .25s,
-    -webkit-box-shadow .25s,
     -webkit-transform .25s;
   transition: border .25s,
     background .25s,
+    box-shadow .25s,
     color .25s,
-    -webkit-box-shadow .25s,
     -webkit-transform .25s;
   transition: border .25s,
     background .25s,
@@ -886,7 +879,6 @@ input[type="search"]::-webkit-search-decoration {
     box-shadow .25s,
     color .25s,
     transform .25s,
-    -webkit-box-shadow .25s,
     -webkit-transform .25s
 
 }.button:hover{

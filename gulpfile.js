@@ -153,11 +153,12 @@ gulp.task('sprite', function() {
 
   return gulp.src('src/svg/*')
     .pipe(svgSprite({
+      dest: '.',
       mode: {
         inline: true,
         symbol: {
-          bust: false,
-          dest: './'
+          dest: 'dist/',
+          bust: false
         }
       },
       svg: {
@@ -166,7 +167,7 @@ gulp.task('sprite', function() {
         dimensionAttributes: false
       }
     }))
-    .pipe(gulp.dest(site))
+    .pipe(gulp.dest('.'))
     .pipe(browserSync.stream());
 
 });
