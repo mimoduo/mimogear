@@ -114,7 +114,8 @@ Harmonica = {
   settings: {
     container: document.querySelector('.harmonica'),
     headings: document.querySelectorAll('.harmonica-header'),
-    articles: document.querySelectorAll('.harmonica-content')
+    articles: document.querySelectorAll('.harmonica-content'),
+    activeClass: 'note-active'
   },
 
   init: function(options) {
@@ -140,14 +141,14 @@ Harmonica = {
   clearClasses: function() {
 
     h.headings.forEach(function(heading) {
-      heading.classList.remove('active');
+      heading.classList.remove(h.activeClass);
     });
 
   },
 
   assignClasses: function(note) {
 
-    note.classList.add('active');
+    note.classList.add(h.activeClass);
 
   },
 

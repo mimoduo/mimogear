@@ -443,9 +443,9 @@ input[type="search"]::-webkit-search-decoration {
   }
     }.harmonica-header:hover{
 
-}.harmonica-header.active{
+}.harmonica-header.note-active{
 
-}.harmonica-header.active + *{
+}.harmonica-header.note-active + *{
   display: block;
 }.harmonica-content {
     display: none
