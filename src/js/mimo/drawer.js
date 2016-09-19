@@ -6,7 +6,8 @@ var d,
 Drawer = {
 
   settings: {
-    trigger: document.querySelector('.drawer-trigger')
+    trigger: document.querySelector('.drawer-trigger'),
+    activeClass: 'drawer-active'
   },
 
   init: function(options) {
@@ -20,7 +21,7 @@ Drawer = {
     }
 
     d.trigger.addEventListener('click', function() {
-      Drawer.activateDrawer('drawer-active');
+      Drawer.activateDrawer(d.activeClass);
     });
 
   },
