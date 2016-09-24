@@ -275,7 +275,6 @@ input[type="search"]::-webkit-search-decoration {
   opacity: 0;
   visibility: hidden;
   -webkit-transform: translate(-20%, 0);
-  -ms-transform: translate(-20%, 0);
   transform: translate(-20%, 0);
   -webkit-transform: translate3d(-20%, 0, 0);
   transform: translate3d(-20%, 0, 0);
@@ -302,7 +301,6 @@ input[type="search"]::-webkit-search-decoration {
     opacity: 1;
     visibility: visible;
     -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
     transform: translate(0, 0);
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -332,7 +330,6 @@ input[type="search"]::-webkit-search-decoration {
   background: currentColor;
   color: #000;
   -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   -webkit-transition: background .25s,
       box-shadow .25s,
@@ -360,18 +357,12 @@ input[type="search"]::-webkit-search-decoration {
     -webkit-transform:
       translate(-50%, -50%)
       rotate(-45deg);
-    -ms-transform:
-      translate(-50%, -50%)
-      rotate(-45deg);
     transform:
       translate(-50%, -50%)
       rotate(-45deg);
   }.drawer-active .drawer-trigger:after {
     box-shadow: 0 0 0 0 transparent;
     -webkit-transform:
-      translate(-50%, -50%)
-      rotate(45deg);
-    -ms-transform:
       translate(-50%, -50%)
       rotate(45deg);
     transform:
@@ -382,11 +373,7 @@ input[type="search"]::-webkit-search-decoration {
 //   http://codepen.io/mimoduo/pen/vOMxLE
 // ============= */.grid {
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap
 
 }.grid:after{
@@ -395,12 +382,8 @@ input[type="search"]::-webkit-search-decoration {
   content: '';
 }.grid-centered{
   -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   -ms-grid-row-align: center;
   align-items: center;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
   align-content: center;
 }.col {
     float: left;
@@ -420,11 +403,7 @@ input[type="search"]::-webkit-search-decoration {
 //   http://codepen.io/mimoduo/pen/epZaMq
 // ============= *//* When do accordions become harmonicas? */@media(min-width: 900px) {.harmonica{
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   }.harmonica-header {
@@ -432,12 +411,8 @@ input[type="search"]::-webkit-search-decoration {
 
   }@media(min-width: 900px) {.harmonica-header{
     -webkit-box-flex: 1;
-    -webkit-flex: 1 auto;
-    -ms-flex: 1 auto;
     flex: 1 auto;
     -webkit-box-ordinal-group: 2;
-    -webkit-order: 1;
-    -ms-flex-order: 1;
     order: 1;
   }
     }.harmonica-header.harmonica-header-active + *{
@@ -447,8 +422,6 @@ input[type="search"]::-webkit-search-decoration {
 
   }@media(min-width: 900px) {.harmonica-content{
     -webkit-box-ordinal-group: 3;
-    -webkit-order: 2;
-    -ms-flex-order: 2;
     order: 2;
     width: 100%;
   }
@@ -485,13 +458,11 @@ input[type="search"]::-webkit-search-decoration {
       max-width: 100%;
       margin: 0 auto;
       -webkit-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
       transform: translate(0, -50%);
     }/* Lantern User Controls */.lantern-control {
       position: absolute;
       top: 50%;
       -webkit-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
       transform: translate(0, -50%);
     }.lantern-previous {
       left: 0;
@@ -653,7 +624,6 @@ input[type="search"]::-webkit-search-decoration {
   margin: 0;
   text-align: center;
   -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }/* ================
 // Slideshow
