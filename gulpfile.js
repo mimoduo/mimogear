@@ -94,7 +94,8 @@ gulp.task('postcss', function() {
       require('autoprefixer')({
         browsers: ['last 8 versions'],
         cascade: false
-      })
+      }),
+      require('postcss-discard-empty')
     ]))
     .pipe(gulp.dest(site + 'css'))
     .pipe(browserSync.stream())

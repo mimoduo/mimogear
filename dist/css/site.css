@@ -260,9 +260,7 @@ input[type="search"]::-webkit-search-decoration {
 // ::::::::::::: *//* ================
 // Collage
 //   http://codepen.io/mimoduo/pen/VYwamv
-// ============= */.collage {
-
-}.collage li{
+// ============= */.collage li{
   position: absolute;
 }/* ================
 // Drawer Mixin
@@ -420,9 +418,7 @@ input[type="search"]::-webkit-search-decoration {
   }/* ================
 // Harmonica
 //   http://codepen.io/mimoduo/pen/epZaMq
-// ============= *//* When do accordions become harmonicas? */.harmonica {
-
-}@media(min-width: 900px) {.harmonica{
+// ============= *//* When do accordions become harmonicas? */@media(min-width: 900px) {.harmonica{
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -444,11 +440,7 @@ input[type="search"]::-webkit-search-decoration {
     -ms-flex-order: 1;
     order: 1;
   }
-    }.harmonica-header:hover{
-
-}.harmonica-header.harmonica-header-active{
-
-}.harmonica-header.harmonica-header-active + *{
+    }.harmonica-header.harmonica-header-active + *{
   display: block;
 }.harmonica-content {
     display: none
@@ -513,18 +505,12 @@ input[type="search"]::-webkit-search-decoration {
 // Type
 // ============= *//* ================
 // Layout
-// ============= */.mimo-theme {
-
-}.mimo-theme body{
+// ============= */.mimo-theme body{
   font-family: 'Quicksand';
   color: #9e12ef;
 }/* ================
 // Drawer
-// ============= */.mimo-theme {
-
-}.mimo-theme .drawer-trigger{
-
-}.mimo-theme .drawer-trigger:before,
+// ============= */.mimo-theme .drawer-trigger:before,
     .mimo-theme .drawer-trigger:after{
   color: #9e12ef;
 }.mimo-theme .drawer{
@@ -533,9 +519,7 @@ input[type="search"]::-webkit-search-decoration {
   color: #fff;
 }/* ================
 // Icons
-// ============= */.mimo-theme {
-
-}.mimo-theme .symbol{
+// ============= */.mimo-theme .symbol{
   display: block;
   height: 1.1111111111111112em;
   width: 1.1111111111111112em;
@@ -545,9 +529,7 @@ input[type="search"]::-webkit-search-decoration {
   fill: #9e12ef;
 }/* ================
 // Regions
-// ============= */.mimo-theme {
-
-}.mimo-theme .site-header,
+// ============= */.mimo-theme .site-header,
   .mimo-theme .site-footer{
   max-width: 77.5rem;
   margin-right: auto;
@@ -555,9 +537,7 @@ input[type="search"]::-webkit-search-decoration {
   padding: 1.25em;
 }/* ================
 // Section
-// ============= */.mimo-theme {
-
-}.mimo-theme .section{
+// ============= */.mimo-theme .section{
   padding: 1.1111111111111112em;
   font-size: 1.125em;
   line-height: 1.6666666666666667;
@@ -568,11 +548,7 @@ input[type="search"]::-webkit-search-decoration {
   color: #f0d0ff;
 }/* ================
 // Grid
-// ============= */.mimo-theme {
-
-}@media (min-width: 700px) {.mimo-theme{
-
-}.mimo-theme .col-big-1{
+// ============= */@media (min-width: 700px) {.mimo-theme .col-big-1{
     width: 8.33333%;
   }.mimo-theme .col-big-2{
     width: 16.66667%;
@@ -606,9 +582,7 @@ input[type="search"]::-webkit-search-decoration {
   margin: 0;
 }/* ================
 // Collage
-// ============= */.mimo-theme {
-
-}.mimo-theme .collage{
+// ============= */.mimo-theme .collage{
   height: 38.888888888888886em;
   border-top: 1.1111111111111112em solid;
   border-left: 1.1111111111111112em solid;
@@ -683,9 +657,7 @@ input[type="search"]::-webkit-search-decoration {
   transform: translate(0, -50%);
 }/* ================
 // Slideshow
-// ============= */.mimo-theme {
-
-}.mimo-theme .sail-slide{
+// ============= */.mimo-theme .sail-slide{
   text-align: center;
 }.mimo-theme .sail-slide li{
   margin-bottom: 0.5714285714285714em;
@@ -720,16 +692,12 @@ input[type="search"]::-webkit-search-decoration {
   background: currentColor;
 }/* ================
 // Lantern
-// ============= */.mimo-theme {
-
-}.mimo-theme .lantern-grid{
+// ============= */.mimo-theme .lantern-grid{
   margin: 0 -0.5555555555555556em;
 }.mimo-theme .lantern-col{
   display: block;
   width: 100%;
   margin-bottom: 1.25em;
-}.mimo-theme .lantern-col:first-child{
-
 }@media screen and (min-width: 700px){.mimo-theme .lantern-col:first-child{
     width: 60%;
   }
@@ -752,9 +720,7 @@ input[type="search"]::-webkit-search-decoration {
   right: 0;
 }/* ================
 // Harmonica
-// ============= */.mimo-theme {
-
-}.mimo-theme .harmonica-header{
+// ============= */.mimo-theme .harmonica-header{
   border-bottom: 1px solid;
   margin: 0 0 1.1111111111111112em;
 }.mimo-theme h4{
@@ -813,11 +779,7 @@ input[type="search"]::-webkit-search-decoration {
 }@media print {.sail-controls{
     display: none;
   }
-  }.sail-control {
-
-  }.sail-control:hover{
-
-}.sail-prev {}.sail-next {}/* ================
+  }/* ================
 // Sail Markers
 // ============= */.sail-pages {
   -webkit-user-select: none;
@@ -832,18 +794,14 @@ input[type="search"]::-webkit-search-decoration {
     display: inline-block;
     cursor: pointer
 
-  }.sail-page:hover{
-
-}.sail-page.active{
-
-}/* Structure
+  }/* Structure
 // ::::::::::::: *//* ================
 // Header
-// ============= */.site-header {}/* ================
+// ============= *//* ================
 // Main
-// ============= */.site-main {}/* ================
+// ============= *//* ================
 // Footer
-// ============= */.site-footer {}/* ================
+// ============= *//* ================
 // Universal Structure
 // ============= */* {
   position: relative;
@@ -900,30 +858,20 @@ input[type="search"]::-webkit-search-decoration {
     transform .25s,
     -webkit-transform .25s
 
-}.button:hover{
-
-}.button:active{
-
 }.button[disabled]{
   cursor: not-allowed;
   pointer-events: none;
-}/* Extended Button */.button-modifier {}/* ================
+}/* Extended Button *//* ================
 // Form Container
-// ============= */form {}fieldset {
+// ============= */fieldset {
     border: 0;
     margin: 0;
     padding: 0;
   }/* ================
 // Form Elements
-// ============= */label {}input {}[type='text'] {}[type='radio'] {}[type='checkbox'] {}select {}textarea {}/* ================
+// ============= *//* ================
 // Anchors
-// ============= */a {
-
-}a:hover{
-
-}a:visited{
-
-}/* ================
+// ============= *//* ================
 // Blockquote / Cite
 // ============= */blockquote {
   margin: 1.25em 0
@@ -943,8 +891,7 @@ input[type="search"]::-webkit-search-decoration {
   speak: none;
 }/* ================
 // Lists
-// ============= */ul,
-ol {}li {}/* ================
+// ============= *//* ================
 // Paragraphs
 // ============= */p {
   margin: 1.25em 0;
@@ -954,9 +901,7 @@ ol {}li {}/* ================
   width: 100%;
   border-collapse: collapse;
   margin: 1.25em 0;
-}tr {
-
-  }tr:nth-of-type(odd) td{
+}tr:nth-of-type(odd) td{
   background: rgba(0, 0, 0, .025);
 }th,
     td {
@@ -994,7 +939,7 @@ canvas {
 
   }img.full-width{
   width: 100%;
-}figcaption {}/* ================
+}/* ================
 // Iframes
 // ============= */iframe {
   max-width: 100%;
@@ -1050,10 +995,7 @@ canvas {
 }/* Navigation
 // ::::::::::::: *//* ================
 // Generic Navigation/Menu Behaviors
-// ============= */nav,
-menu {
-
-}nav ol, menu ol{
+// ============= */nav ol, menu ol{
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -1078,26 +1020,6 @@ menu {
   width: auto;
 }/* ================
 // Main Navigation
-// ============= */.nav-main {
-
-}.nav-main > ol{
-
-}.nav-main > ol > li{
-
-}.nav-main > ol > li > a{
-
-}.nav-main > ol > li > a:hover{
-
-}/* ================
+// ============= *//* ================
 // Template Navigation
-// ============= */.nav-template {
-
-}.nav-template ol{
-
-}.nav-template li{
-
-}.nav-template a{
-
-}.nav-template a:hover{
-
-}
+// ============= */
