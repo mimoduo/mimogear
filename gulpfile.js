@@ -32,7 +32,9 @@ gulp.task('pug', ['sprite'], function() {
       pretty: true
     }))
     .pipe(gulp.dest('./'))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream({
+      once: true
+    }));
 
 });
 

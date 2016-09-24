@@ -831,7 +831,7 @@ input[type="search"]::-webkit-search-decoration {
 // html, universal, & body
 // ============= */html {
   box-sizing: border-box;
-  font-family: null;
+  font-family: 'Open Sans', sans-serif;
   color: #222;
 }*,
 *:before,
