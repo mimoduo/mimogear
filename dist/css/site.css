@@ -320,7 +320,10 @@ input[type="search"]::-webkit-search-decoration {
   cursor: pointer;
   background: none
 
-}.drawer-trigger:before,
+}@media print {.drawer-trigger{
+    display: none;
+  }
+  }.drawer-trigger:before,
   .drawer-trigger:after{
   position: absolute;
   top: 50%;
@@ -456,6 +459,9 @@ input[type="search"]::-webkit-search-decoration {
     -ms-flex-order: 2;
     order: 2;
     width: 100%;
+  }
+    }@media print {.harmonica-content{
+    display: block;
   }
     }/* ================
 // Lantern
@@ -785,6 +791,12 @@ input[type="search"]::-webkit-search-decoration {
       visibility .5s,
       transform .5s,
       -webkit-transform .5s;
+}@media print{.sail-slide li{
+    position: relative;
+    pointer-events: auto;
+    opacity: 1;
+    visibility: visible;
+  }
 }.sail-slide li.sail-active{
   position: relative;
   pointer-events: auto;
@@ -796,8 +808,12 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
-}.sail-control {
+  user-select: none
+
+}@media print {.sail-controls{
+    display: none;
+  }
+  }.sail-control {
 
   }.sail-control:hover{
 
@@ -807,8 +823,12 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
-}.sail-page {
+  user-select: none
+  
+}@media print {.sail-pages{
+    display: none;
+  }
+  }.sail-page {
     display: inline-block;
     cursor: pointer
 

@@ -43,4 +43,8 @@ $accordion-to-harmonica: 900px;
       width: 100%;
     }
 
+    @media print {
+      display: block;
+    }
+
   }

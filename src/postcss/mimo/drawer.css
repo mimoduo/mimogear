@@ -63,6 +63,10 @@
   cursor: pointer;
   background: none;
 
+  @media print {
+    display: none;
+  }
+  
   &:before,
   &:after {
     position: absolute;

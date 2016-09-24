@@ -26,6 +26,10 @@
       visibility .5s,
       transform .5s;
 
+    @media print {
+      @mixin active-slide;
+    }
+
     &.sail-active {
       @mixin active-slide;
     }
@@ -41,6 +45,11 @@
 
 .sail-controls {
   user-select: none;
+
+  @media print {
+    display: none;
+  }
+
 }
 
   .sail-control {
@@ -60,6 +69,11 @@
 
 .sail-pages {
   user-select: none;
+
+  @media print {
+    display: none;
+  }
+  
 }
 
   .sail-page {
