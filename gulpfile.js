@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     pug = require('gulp-pug'),
     postcss = require('gulp-postcss'),
-    cleanCss = require('gulp-clean-css'),
+    cssnano = require('gulp-cssnano'),
     rename = require('gulp-rename'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
@@ -99,10 +99,7 @@ gulp.task('postcss', function() {
     ]))
     .pipe(gulp.dest(site + 'css'))
     .pipe(browserSync.stream())
-    .pipe(cleanCss({
-      keepSpecialComments: 0,
-      restructuring: false
-    }))
+    .pipe(cssnano())
     .pipe(rename(function(path) {
       path.basename += '.min';
     }))
