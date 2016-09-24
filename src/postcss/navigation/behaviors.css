@@ -27,4 +27,9 @@ menu {
 
 .skip-link {
   @mixin visually-hidden;
+
+  &:focus {
+    @mixin focused-and-visually-hidden;
+  }
+  
 }

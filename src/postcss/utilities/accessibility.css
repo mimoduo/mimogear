@@ -4,7 +4,12 @@
   clip: rect(0 0 0 0);
   height: 1px;
   width: 1px;
-  border: 0;
-  margin: -1px;
-  padding: 0;
+}
+
+@define-mixin focused-and-visually-hidden {
+  position: relative;
+  overflow: hidden;
+  clip: auto;
+  height: auto;
+  width: auto;
 }

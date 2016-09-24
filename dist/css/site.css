@@ -886,6 +886,7 @@ input[type="search"]::-webkit-search-decoration {
 
 }.button[disabled]{
   cursor: not-allowed;
+  pointer-events: none;
 }/* Extended Button */.button-modifier {}/* ================
 // Form Container
 // ============= */form {}fieldset {
@@ -957,9 +958,6 @@ ol {}li {}/* ================
     clip: rect(0 0 0 0);
     height: 1px;
     width: 1px;
-    border: 0;
-    margin: -1px;
-    padding: 0;
   }/* ================
 // Common Media
 // ============= */img,
@@ -1051,10 +1049,14 @@ menu {
   overflow: hidden;
   clip: rect(0 0 0 0);
   height: 1px;
-  width: 1px;
-  border: 0;
-  margin: -1px;
-  padding: 0;
+  width: 1px
+  
+}.skip-link:focus{
+  position: relative;
+  overflow: hidden;
+  clip: auto;
+  height: auto;
+  width: auto;
 }/* ================
 // Main Navigation
 // ============= */.nav-main {
