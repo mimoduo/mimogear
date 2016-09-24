@@ -17,7 +17,7 @@
     visibility .25s;
 }
 
-.display-lantern {
+.lantern-active {
   opacity: 1;
   visibility: visible;
 }

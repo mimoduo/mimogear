@@ -10,7 +10,7 @@ Harmonica = {
     container: document.querySelector('.harmonica'),
     headings: document.querySelectorAll('.harmonica-header'),
     articles: document.querySelectorAll('.harmonica-content'),
-    activeClass: 'note-active'
+    activeClass: 'harmonica-header-active'
   },
 
   init: function(options) {

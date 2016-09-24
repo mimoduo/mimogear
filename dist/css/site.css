@@ -443,9 +443,9 @@ input[type="search"]::-webkit-search-decoration {
   }
     }.harmonica-header:hover{
 
-}.harmonica-header.note-active{
+}.harmonica-header.harmonica-header-active{
 
-}.harmonica-header.note-active + *{
+}.harmonica-header.harmonica-header-active + *{
   display: block;
 }.harmonica-content {
     display: none
@@ -474,7 +474,7 @@ input[type="search"]::-webkit-search-decoration {
   transition:
     opacity .25s,
     visibility .25s;
-}.display-lantern {
+}.lantern-active {
   opacity: 1;
   visibility: visible;
 }.lantern-content {

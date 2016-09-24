@@ -25,7 +25,7 @@ $accordion-to-harmonica: 900px;
 
     &:hover {}
 
-    &.note-active {
+    &.harmonica-header-active {
 
       & + * {
         display: block;

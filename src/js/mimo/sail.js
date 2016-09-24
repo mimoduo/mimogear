@@ -14,7 +14,9 @@ Sail = {
       prev: '#arrow-back',
       next: '#arrow-forward'
     },
-    vdom: {}
+    vdom: {},
+    activeSlideClass: 'sail-active',
+    activePageClass: 'sail-page-active'
   },
 
   init: function(options) {
@@ -86,8 +88,8 @@ Sail = {
     Sail.determineDisabledStates();
 
     Sail.clearClasses();
-    s.slide[i].classList.add('sail-active');
-    s.vdom.pages.page[i].classList.add('sail-page-active');
+    s.slide[i].classList.add(s.activeSlideClass);
+    s.vdom.pages.page[i].classList.add(s.activePageClass);
 
   },
 
@@ -131,11 +133,11 @@ Sail = {
   clearClasses: function() {
 
     s.slide.forEach(function(slide) {
-      slide.classList.remove('sail-active');
+      slide.classList.remove(s.activeSlideClass);
     });
 
     s.vdom.pages.page.forEach(function(page) {
-      page.classList.remove('sail-page-active');
+      page.classList.remove(s.activePageClass);
     });
 
   }

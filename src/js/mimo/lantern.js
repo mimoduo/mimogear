@@ -16,7 +16,9 @@ Lantern = {
       next: '#arrow-forward',
       close: '#close'
     },
-    vdom: {}
+    vdom: {},
+    activeClass: 'lantern-active',
+    activeBodyClass: 'latern-triggered'
   },
 
   init: function(options) {
@@ -121,15 +123,15 @@ Lantern = {
     Lantern.grabLight(light);
     Lantern.setLight();
 
-    l.lantern.classList.add('display-lantern');
-    document.body.classList.add('lantern-triggered');
+    l.lantern.classList.add(l.activeClass);
+    document.body.classList.add(l.activeBodyClass);
 
   },
 
   removeLight: function() {
 
-    l.lantern.classList.remove('display-lantern');
-    document.body.classList.remove('lantern-triggered');
+    l.lantern.classList.remove(l.activeClass);
+    document.body.classList.remove(l.activeBodyClass);
 
   },
 
