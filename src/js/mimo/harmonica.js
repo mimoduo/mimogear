@@ -23,11 +23,12 @@ Harmonica = {
       }
     }
 
-    h.headings.forEach(function(heading) {
-      heading.addEventListener('click', function() {
-        Harmonica.toggleNote(event);
+    for(var i = 0; i < h.headings.length; i++) {
+      h.headings[i].addEventListener('click', function(event) {
+        Harmonica.clearClasses();
+        Harmonica.assignClasses(event);
       });
-    });
+    }
 
     h.headings[0].click();
 
@@ -35,22 +36,15 @@ Harmonica = {
 
   clearClasses: function() {
 
-    h.headings.forEach(function(heading) {
-      heading.classList.remove(h.activeClass);
-    });
+    for(var i = 0; i < h.headings.length; i++) {
+      h.headings[i].classList.remove(h.activeClass);
+    }
 
   },
 
-  assignClasses: function(note) {
+  assignClasses: function(event) {
 
-    note.classList.add(h.activeClass);
-
-  },
-
-  toggleNote: function(event) {
-
-    Harmonica.clearClasses();
-    Harmonica.assignClasses(event.currentTarget);
+    event.currentTarget.classList.add(h.activeClass);
 
   }
 

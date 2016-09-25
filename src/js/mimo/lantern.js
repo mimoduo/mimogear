@@ -80,8 +80,6 @@ Lantern = {
     content.appendChild(close);
     l.vdom.close = close;
 
-    console.log('no');
-
     for(var i = 0; i < l.lanternLights.length; i++) {
       l.lanternLights[i].addEventListener('click', function() {
         Lantern.displayLight(event);
