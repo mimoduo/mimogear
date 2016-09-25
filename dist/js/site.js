@@ -710,7 +710,7 @@ Sail = {
     pages.classList.add('sail-pages');
     s.slides.appendChild(pages);
     s.vdom.pages = pages;
-    s.vdom.pages.page = [];
+    s.vdom.page = [];
 
     for (var i = 0; i < s.slide.length; i++) {
       var page = document.createElement('button');
@@ -719,7 +719,7 @@ Sail = {
         Sail.sailTo(i);
       });
       s.vdom.pages.appendChild(page);
-      s.vdom.pages.page.push(page);
+      s.vdom.page.push(page);
     }
 
   },
@@ -730,7 +730,7 @@ Sail = {
 
     Sail.clearClasses();
     s.slide[i].classList.add(s.activeSlideClass);
-    s.vdom.pages.page[i].classList.add(s.activePageClass);
+    s.vdom.page[i].classList.add(s.activePageClass);
 
   },
 
@@ -777,8 +777,8 @@ Sail = {
       s.slide[i].classList.remove(s.activeSlideClass);
     }
 
-    for (var i = 0; i < s.vdom.pages.page.length; i++) {
-      s.vdom.pages.page[i].classList.remove(s.activePageClass);
+    for (var i = 0; i < s.vdom.page.length; i++) {
+      s.vdom.page[i].classList.remove(s.activePageClass);
     }
 
   }
