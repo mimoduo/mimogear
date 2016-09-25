@@ -627,9 +627,9 @@ input[type="search"]::-webkit-search-decoration {
   transform: translate(0, -50%);
 }/* ================
 // Slideshow
-// ============= */.mimo-theme .sail-slide{
+// ============= */.mimo-theme .sail-slides{
   text-align: center;
-}.mimo-theme .sail-slide li{
+}.mimo-theme .sail-slides li{
   margin-bottom: 0.5714285714285714em;
   font-size: 1.9444444444444444em;
   line-height: 1;
@@ -700,13 +700,13 @@ input[type="search"]::-webkit-search-decoration {
 }/* ================
 // Sail Slide
 //   http://codepen.io/mimoduo/pen/gabWmN
-// ============= */.sail-slide {
+// ============= */.sail-slides {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
   list-style: none
 
-}.sail-slide li{
+}.sail-slides li{
   position: absolute;
   top: 0;
   left: 0;
@@ -727,13 +727,13 @@ input[type="search"]::-webkit-search-decoration {
       visibility .5s,
       transform .5s,
       -webkit-transform .5s;
-}@media print{.sail-slide li{
+}@media print{.sail-slides li{
     position: relative;
     pointer-events: auto;
     opacity: 1;
     visibility: visible;
   }
-}.sail-slide li.sail-active{
+}.sail-slides li.sail-active{
   position: relative;
   pointer-events: auto;
   opacity: 1;
@@ -756,7 +756,7 @@ input[type="search"]::-webkit-search-decoration {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none
-  
+
 }@media print {.sail-pages{
     display: none;
   }

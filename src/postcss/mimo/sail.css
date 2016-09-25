@@ -10,7 +10,7 @@
   visibility: visible;
 }
 
-.sail-slide {
+.sail-slides {
   @mixin list-reset;
 
   & li {
@@ -73,7 +73,7 @@
   @media print {
     display: none;
   }
-  
+
 }
 
   .sail-page {

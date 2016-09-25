@@ -7,8 +7,8 @@ var s,
 Sail = {
 
   settings: {
-    slides: document.querySelector('.sail-slide'),
-    slide: document.querySelectorAll('.sail-slide li'),
+    slides: document.querySelector('.sail-slides'),
+    slide: document.querySelectorAll('.sail-slides li'),
     currentSlide: 0,
     symbols: {
       prev: '#arrow-back',
@@ -69,25 +69,15 @@ Sail = {
     s.vdom.pages = pages;
     s.vdom.page = [];
 
-    for (var i = 0; i < s.slide.length; i++) {
+    s.slide.forEach(function(value, i) {
       var page = document.createElement('button');
       page.classList.add('sail-page');
-      page.addEventListener('click', function(i) {
+      page.addEventListener('click', function() {
         Sail.sailTo(i);
       });
       s.vdom.pages.appendChild(page);
       s.vdom.page.push(page);
-    }
-
-  },
-
-  sail: function(i) {
-
-    Sail.determineDisabledStates();
-
-    Sail.clearClasses();
-    s.slide[i].classList.add(s.activeSlideClass);
-    s.vdom.page[i].classList.add(s.activePageClass);
+    });
 
   },
 
@@ -104,6 +94,16 @@ Sail = {
     s.currentSlide = i;
 
     Sail.sail(i);
+
+  },
+
+  sail: function(i) {
+
+    Sail.determineDisabledStates();
+
+    Sail.clearClasses();
+    s.slide[i].classList.add(s.activeSlideClass);
+    s.vdom.page[i].classList.add(s.activePageClass);
 
   },
 
