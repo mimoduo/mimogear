@@ -157,11 +157,13 @@ gulp.task('sprite', function() {
 
   return gulp.src('src/svg/*')
     .pipe(svgSprite({
-      dest: '.',
       mode: {
         inline: true,
         symbol: {
-          dest: 'dist/',
+          dest: site
+        },
+        view: {
+          dest: site,
           bust: false
         }
       },
