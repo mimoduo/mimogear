@@ -42,10 +42,9 @@ Sail = {
     s.vdom.controls = controls;
 
     var prev = document.createElement('button');
-    prev.innerHTML =
-      '<svg class="symbol symbol-sail-control">'
-      + '<use xlink:href="' + s.symbols.prev + '"></use>'
-      + '</svg>';
+    prev.innerHTML = '<svg class="symbol symbol-sail-control">' +
+    '<use xlink:href="' + s.symbols.prev + '"></use>' +
+    '</svg>';
     prev.classList.add('sail-control', 'sail-prev');
     prev.addEventListener('click', function() {
       Sail.sailThrough(-1);
@@ -54,10 +53,9 @@ Sail = {
     s.vdom.controls.prev = prev;
 
     var next = document.createElement('button');
-    next.innerHTML =
-      '<svg class="symbol symbol-sail-control">'
-      + '<use xlink:href="' + s.symbols.next + '"></use>'
-      + '</svg>';
+    next.innerHTML = '<svg class="symbol symbol-sail-control">' +
+    '<use xlink:href="' + s.symbols.next + '"></use>' +
+    '</svg>';
     next.classList.add('sail-control', 'sail-next');
     next.addEventListener('click', function() {
       Sail.sailThrough(1);
@@ -111,7 +109,7 @@ Sail = {
 
   determineDisabledStates: function() {
 
-    if (s.currentSlide == 0) {
+    if (s.currentSlide === 0) {
       s.vdom.controls.prev.disabled = true;
       s.vdom.controls.prev.setAttribute('aria-disabled', 'true');
       s.vdom.controls.next.disabled = false;
