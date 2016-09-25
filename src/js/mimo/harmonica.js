@@ -18,12 +18,12 @@ Harmonica = {
     h = this.settings;
 
     for (var key in options) {
-      if(options.hasOwnProperty(key)) {
+      if (options.hasOwnProperty(key)) {
         h[key] = options[key];
       }
     }
 
-    for(var i = 0; i < h.headings.length; i++) {
+    for (var i = 0; i < h.headings.length; i++) {
       h.headings[i].addEventListener('click', function(event) {
         Harmonica.clearClasses();
         Harmonica.assignClasses(event);
@@ -36,7 +36,7 @@ Harmonica = {
 
   clearClasses: function() {
 
-    for(var i = 0; i < h.headings.length; i++) {
+    for (var i = 0; i < h.headings.length; i++) {
       h.headings[i].classList.remove(h.activeClass);
     }
 

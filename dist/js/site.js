@@ -413,7 +413,7 @@ Drawer = {
     d = this.settings;
 
     for (var key in options) {
-      if(options.hasOwnProperty(key)) {
+      if (options.hasOwnProperty(key)) {
         d[key] = options[key];
       }
     }
@@ -450,12 +450,12 @@ Harmonica = {
     h = this.settings;
 
     for (var key in options) {
-      if(options.hasOwnProperty(key)) {
+      if (options.hasOwnProperty(key)) {
         h[key] = options[key];
       }
     }
 
-    for(var i = 0; i < h.headings.length; i++) {
+    for (var i = 0; i < h.headings.length; i++) {
       h.headings[i].addEventListener('click', function(event) {
         Harmonica.clearClasses();
         Harmonica.assignClasses(event);
@@ -468,7 +468,7 @@ Harmonica = {
 
   clearClasses: function() {
 
-    for(var i = 0; i < h.headings.length; i++) {
+    for (var i = 0; i < h.headings.length; i++) {
       h.headings[i].classList.remove(h.activeClass);
     }
 
@@ -510,7 +510,7 @@ Lantern = {
     l = this.settings;
 
     for (var key in options) {
-      if(options.hasOwnProperty(key)) {
+      if (options.hasOwnProperty(key)) {
         l[key] = options[key];
       }
     }
@@ -564,7 +564,7 @@ Lantern = {
     content.appendChild(close);
     l.vdom.close = close;
 
-    for(var i = 0; i < l.lanternLights.length; i++) {
+    for (var i = 0; i < l.lanternLights.length; i++) {
       l.lanternLights[i].addEventListener('click', function() {
         Lantern.displayLight(event);
       });
@@ -580,7 +580,7 @@ Lantern = {
 
   previousLight: function() {
 
-    if(l.lightIndex === 0) {
+    if (l.lightIndex === 0) {
       l.lightIndex = l.lightCollection.length - 1;
     } else {
       l.lightIndex--;
@@ -592,7 +592,7 @@ Lantern = {
 
   nextLight: function() {
 
-    if(l.lightIndex == l.lightCollection.length - 1) {
+    if (l.lightIndex == l.lightCollection.length - 1) {
       l.lightIndex = 0;
     } else {
       l.lightIndex++;
@@ -667,7 +667,7 @@ Sail = {
     s = this.settings;
 
     for (var key in options) {
-      if(options.hasOwnProperty(key)) {
+      if (options.hasOwnProperty(key)) {
         s[key] = options[key];
       }
     }
@@ -712,7 +712,7 @@ Sail = {
     s.vdom.pages = pages;
     s.vdom.pages.page = [];
 
-    for(var i = 0; i < s.slide.length; i++) {
+    for (var i = 0; i < s.slide.length; i++) {
       var page = document.createElement('button');
       page.classList.add('sail-page');
       page.addEventListener('click', function(i) {
@@ -773,11 +773,11 @@ Sail = {
 
   clearClasses: function() {
 
-    for(var i = 0; i < s.slide.length; i++) {
+    for (var i = 0; i < s.slide.length; i++) {
       s.slide[i].classList.remove(s.activeSlideClass);
     }
 
-    for(var i = 0; i < s.vdom.pages.page.length; i++) {
+    for (var i = 0; i < s.vdom.pages.page.length; i++) {
       s.vdom.pages.page[i].classList.remove(s.activePageClass);
     }
 

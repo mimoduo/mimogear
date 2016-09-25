@@ -24,7 +24,7 @@ Sail = {
     s = this.settings;
 
     for (var key in options) {
-      if(options.hasOwnProperty(key)) {
+      if (options.hasOwnProperty(key)) {
         s[key] = options[key];
       }
     }
@@ -69,7 +69,7 @@ Sail = {
     s.vdom.pages = pages;
     s.vdom.pages.page = [];
 
-    for(var i = 0; i < s.slide.length; i++) {
+    for (var i = 0; i < s.slide.length; i++) {
       var page = document.createElement('button');
       page.classList.add('sail-page');
       page.addEventListener('click', function(i) {
@@ -130,11 +130,11 @@ Sail = {
 
   clearClasses: function() {
 
-    for(var i = 0; i < s.slide.length; i++) {
+    for (var i = 0; i < s.slide.length; i++) {
       s.slide[i].classList.remove(s.activeSlideClass);
     }
 
-    for(var i = 0; i < s.vdom.pages.page.length; i++) {
+    for (var i = 0; i < s.vdom.pages.page.length; i++) {
       s.vdom.pages.page[i].classList.remove(s.activePageClass);
     }
 

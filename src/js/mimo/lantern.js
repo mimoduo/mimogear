@@ -26,7 +26,7 @@ Lantern = {
     l = this.settings;
 
     for (var key in options) {
-      if(options.hasOwnProperty(key)) {
+      if (options.hasOwnProperty(key)) {
         l[key] = options[key];
       }
     }
@@ -80,7 +80,7 @@ Lantern = {
     content.appendChild(close);
     l.vdom.close = close;
 
-    for(var i = 0; i < l.lanternLights.length; i++) {
+    for (var i = 0; i < l.lanternLights.length; i++) {
       l.lanternLights[i].addEventListener('click', function() {
         Lantern.displayLight(event);
       });
@@ -96,7 +96,7 @@ Lantern = {
 
   previousLight: function() {
 
-    if(l.lightIndex === 0) {
+    if (l.lightIndex === 0) {
       l.lightIndex = l.lightCollection.length - 1;
     } else {
       l.lightIndex--;
@@ -108,7 +108,7 @@ Lantern = {
 
   nextLight: function() {
 
-    if(l.lightIndex == l.lightCollection.length - 1) {
+    if (l.lightIndex == l.lightCollection.length - 1) {
       l.lightIndex = 0;
     } else {
       l.lightIndex++;

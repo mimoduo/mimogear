@@ -15,7 +15,7 @@ Drawer = {
     d = this.settings;
 
     for (var key in options) {
-      if(options.hasOwnProperty(key)) {
+      if (options.hasOwnProperty(key)) {
         d[key] = options[key];
       }
     }
