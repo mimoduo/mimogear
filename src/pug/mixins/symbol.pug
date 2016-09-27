@@ -4,8 +4,8 @@
 
 mixin symbol(name, modifier)
   if modifier
-    svg(class="symbol symbol-" + name + " symbol-" + name + "-" + modifier)
+    svg.symbol(class="symbol-" + name + " symbol-" + name + "-" + modifier)
       use(xlink:href="#" + name)
   else
-    svg(class="symbol symbol-" + name)
+    svg.symbol(class="symbol-" + name)
       use(xlink:href="#" + name)

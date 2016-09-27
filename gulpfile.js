@@ -9,6 +9,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     pug = require('gulp-pug'),
     postcss = require('gulp-postcss'),
+    stylefmt = require('gulp-stylefmt'),
     cssnano = require('gulp-cssnano'),
     rename = require('gulp-rename'),
     concat = require('gulp-concat'),
@@ -97,6 +98,7 @@ gulp.task('postcss', function() {
       }),
       require('postcss-discard-empty')
     ]))
+    .pipe(stylefmt())
     .pipe(gulp.dest(site + 'css'))
     .pipe(browserSync.stream())
     .pipe(cssnano())
@@ -118,7 +120,7 @@ gulp.task('js', function() {
   return gulp.src([
     'src/js/vendor/*.js',
     'src/js/mimo/*.js',
-    'src/js/site/*.js'
+    'src/js/main.js'
   ])
     .pipe(concat('site.js'))
     .pipe(gulp.dest(site + 'js'))
