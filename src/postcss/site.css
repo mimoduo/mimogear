@@ -15,10 +15,10 @@
 
 @import 'structure/*';
 
-/* Components
+/* Elements
 // ::::::::::::: */
 
-@import 'components/*';
+@import 'elements/*';
 
 /* Navigation
 // ::::::::::::: */

@@ -7,12 +7,11 @@ Mimogear is a light-weight skeleton library for developers of any skill level to
 **Postcss** as a post-processer<br>
 **Gulp** as a task runner<br>
 **Pug** as a HTML template engine<br>
-**Vanilla JS** starter file
+**Vanilla JS** modules
 
 * Grid system based on postcss-simple-grid
 * [Drawer/off-canvas](http://codepen.io/mimoduo/pen/kuobi)
 * [Lantern/lightbox](http://codepen.io/mimoduo/pen/EPerjv)
-* [Collage system](http://codepen.io/mimoduo/pen/VYwamv)
 * [Slideshow module](http://codepen.io/mimoduo/pen/gabWmN)
 * [Harmonica/Accordion module](http://codepen.io/mimoduo/pen/epZaMq)
 

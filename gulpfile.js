@@ -51,18 +51,7 @@ gulp.task('postcss', function() {
       require('postcss-easy-import')({
         glob: true
       }),
-      require('postcss-mixins')({
-        mixins: {
-          collage: function(mixin, xspan, yspan, xpoint, ypoint, xmax, ymax) {
-            return {
-              top: ypoint / ymax * 100 + '%',
-              left: xpoint / xmax * 100 + '%',
-              height: yspan / ymax * 100 + '%',
-              width: xspan / xmax * 100 + '%'
-            }
-          }
-        }
-      }),
+      require('postcss-mixins'),
       require('postcss-nesting'),
       require('postcss-simple-grid')({
         separator: '-'
@@ -98,9 +87,7 @@ gulp.task('postcss', function() {
       }),
       require('postcss-discard-empty')
     ]))
-    .pipe(stylefmt())
     .pipe(gulp.dest(site + 'css'))
-    .pipe(browserSync.stream())
     .pipe(cssnano())
     .pipe(rename(function(path) {
       path.basename += '.min';
@@ -124,7 +111,6 @@ gulp.task('js', function() {
   ])
     .pipe(concat('site.js'))
     .pipe(gulp.dest(site + 'js'))
-    .pipe(browserSync.stream())
     .pipe(uglify({
       mangle: false
     }))

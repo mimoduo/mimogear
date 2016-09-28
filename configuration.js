@@ -1,4 +1,4 @@
-{
+module.exports = {
 
   "sansSerif": "'Open Sans', sans-serif",
   "serif": "'Playfair Display', serif",

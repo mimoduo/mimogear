@@ -10,12 +10,6 @@
   padding: em(10) em(20);
   cursor: pointer;
   text-align: center;
-  transition:
-    border .25s,
-    background .25s,
-    box-shadow .25s,
-    color .25s,
-    transform .25s;
 
   &:hover {}
 

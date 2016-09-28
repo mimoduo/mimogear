@@ -1,6 +1,7 @@
 {
   "name": "Mimogear",
   "version": "2.4.0",
+  "author": "Mimoduo",
   "description": "A small library for building sites",
   "license": "BSD-2-Clause",
   "repository": {
