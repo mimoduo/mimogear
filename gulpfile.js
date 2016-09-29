@@ -81,12 +81,13 @@ gulp.task('postcss', function() {
         }
       }),
       require('autoprefixer')({
-        browsers: ['> 1%'],
+        browsers: ['> 2%'],
         cascade: false
       }),
       require('postcss-discard-empty')
     ]))
     .pipe(gulp.dest(site + 'css'))
+    .pipe(browserSync.stream())
     .pipe(cssnano())
     .pipe(rename(function(path) {
       path.basename += '.min';
@@ -110,6 +111,7 @@ gulp.task('js', function() {
   ])
     .pipe(concat('site.js'))
     .pipe(gulp.dest(site + 'js'))
+    .pipe(browserSync.stream())
     .pipe(uglify({
       mangle: false
     }))
@@ -142,7 +144,7 @@ gulp.task('images', function() {
 
 gulp.task('sprite', function() {
 
-  return gulp.src('src/svg/*')
+  return gulp.src('src/svg/*.svg')
     .pipe(svgSprite({
       mode: {
         inline: true,
