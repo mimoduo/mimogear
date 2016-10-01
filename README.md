@@ -1,6 +1,6 @@
 #Mimogear
 
-Mimogear is a light-weight skeleton library for developers of any skill level to use as a simple start to any project. If a style doesn't exist in one project, it mustn't exist in a library.
+Mimogear is a light-weight starter-kit for developers of any skill level to use as a simple start to any project. The main principle of Mimogear is to strike a balance between simplicity and features, to secure quality, and to be as project agnostic as possible.
 
 ##Features
 
