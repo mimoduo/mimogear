@@ -490,8 +490,9 @@ input[type="search"]::-webkit-search-decoration {
   height: 1.1111111111111112em;
   width: 1.1111111111111112em;
 }.mimo-theme .symbol-logo{
-  height: 2.888888888888889em;
-  width: 11.11111111111111em;
+  height: 3.5555555555555554em;
+  max-width: 21.11111111111111em;
+  width: 100%;
   fill: #9e12ef;
 }/* ================
 // Regions

@@ -56,8 +56,9 @@
   }
 
   & .symbol-logo {
-    height: em(52, 18);
-    width: em(200, 18);
+    height: em(64, 18);
+    max-width: em(380, 18);
+    width: 100%;
     fill: #9e12ef;
   }
 

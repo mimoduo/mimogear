@@ -4,40 +4,48 @@ Mimogear is a light-weight skeleton library for developers of any skill level to
 
 ##Features
 
-**Postcss** as a post-processer<br>
 **Gulp** as a task runner<br>
 **Pug** as a HTML template engine<br>
-**Vanilla JS** modules
+**Postcss** as a post-processer<br>
+**Vanilla JS** based Mimogear modules
 
-* Grid system based on postcss-simple-grid
-* [Drawer/off-canvas](http://codepen.io/mimoduo/pen/kuobi)
-* [Lantern/lightbox](http://codepen.io/mimoduo/pen/EPerjv)
-* [Slideshow module](http://codepen.io/mimoduo/pen/gabWmN)
-* [Harmonica/Accordion module](http://codepen.io/mimoduo/pen/epZaMq)
+###[Gulp](http://gulpjs.com/) Features
 
-###Gulp Features
+Gulp was chosen for its legibility, ease of customization, plugin environment, community support, and speed. For specific details on which modules are used within Mimogear, visit the [package.json file](https://github.com/mimoduo/Mimogear/blob/master/package.json) for a complete list of dependencies.
 
 * Pug compilation
 * Postcss compilation with autoprefixing and minification
 * JS concatenation and uglification
 * Image optimization
-* SVG Sprite Creator
-* Browsersync
+* Inline SVG Sprite Creator
+* Browsersync auto reloading
 
-###Pug Features
+###[Pug](https://pugjs.org/api/getting-started.html) Features
+
+Pug was chosen for its extreme simplicity and robust inheritance structure.
 
 * Starter template
 * Well structured head element setup
-* Several frequently used starter blocks
-* Accessibility measures added onto jade blocks from: (https://github.com/nhall/Accessible-Components)
+* Several frequently used starter partials
+* Accessibility measures added into pug partials from: (https://github.com/nhall/Accessible-Components)
 * SVG symbol mixin
+
+###[Postcss](http://postcss.org/) Features
+
+Postcss was chosen for its natural closeness to css, flexibility, and plugin environment.
+
+* Idiomatic css formatting
+* Common helper utilities
+* Functions for calculating popular css units
+* [Postcss-simple-grid](https://github.com/iamfrntdv/postcss-simple-grid) integration
 
 ###JS Features
 
-* Sail Slide slideshow module
-* Harmonica/Accordion module
-* Lantern/Lightbox module
-* Drawer trigger event setup
+Standard JS was chosen for its community support and to reduce the number of dependencies required by Mimogear. Each module uses the module pattern as detailed by the [Oneone project](https://github.com/mimoduo/Oneone).
+
+* [Slideshow/Sail module](http://codepen.io/mimoduo/pen/gabWmN)
+* [Accordion/Harmonica module](http://codepen.io/mimoduo/pen/epZaMq)
+* [Lightbox/Lantern](http://codepen.io/mimoduo/pen/EPerjv)
 
 ##Final Notes
 
