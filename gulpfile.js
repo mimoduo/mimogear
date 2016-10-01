@@ -23,7 +23,7 @@ var gulp = require('gulp'),
 
 gulp.task('pug', ['sprite'], function() {
 
-  return gulp.src('src/pug/pages/*.pug')
+  return gulp.src('src/pug/pages/**/*.pug')
     .pipe(pug({
       locals: {
         siteTitle: packageJSON.name,
