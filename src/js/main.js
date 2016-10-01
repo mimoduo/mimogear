@@ -1,10 +1,13 @@
 /* ================
-// Main Site Function
+// Main Site Anonymous Function
 // ============= */
 
 (function() {
 
-  Drawer.init();
+  Trigger.init({
+    trigger: '.drawer-trigger',
+    activeClass: 'drawer-active',
+  });
 
   Harmonica.init();
 

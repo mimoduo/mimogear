@@ -397,40 +397,6 @@ defineElementGetter(Element.prototype, 'classList', function () {
 }(typeof window !== "undefined" ? window : this, document));
 
 /* ================
-// Drawer
-// ============= */
-
-var d,
-Drawer = {
-
-  settings: {
-    trigger: document.querySelector('.drawer-trigger'),
-    activeClass: 'drawer-active'
-  },
-
-  init: function(options) {
-
-    d = this.settings;
-
-    for (var key in options) {
-      if (options.hasOwnProperty(key)) {
-        d[key] = options[key];
-      }
-    }
-
-    d.trigger.addEventListener('click', function() {
-      Drawer.activateDrawer(d.activeClass);
-    });
-
-  },
-
-  activateDrawer: function(className) {
-    document.body.classList.toggle(className);
-  }
-
-};
-
-/* ================
 // Harmonica
 //   http://codepen.io/mimoduo/pen/epZaMq
 // ============= */
@@ -786,12 +752,51 @@ Sail = {
 };
 
 /* ================
-// Main Site Function
+// Trigger
+// ============= */
+
+var t,
+Trigger = {
+
+  settings: {
+    trigger: '.trigger',
+    activeClass: 'trigger-active'
+  },
+
+  init: function(options) {
+
+    t = this.settings;
+
+    for (var key in options) {
+      if (options.hasOwnProperty(key)) {
+        t[key] = options[key];
+      }
+    }
+
+    t.trigger = document.querySelector(t.trigger);
+
+    t.trigger.addEventListener('click', function() {
+      Trigger.activateTrigger(t.activeClass);
+    });
+
+  },
+
+  activateTrigger: function(className) {
+    document.body.classList.toggle(className);
+  }
+
+};
+
+/* ================
+// Main Site Anonymous Function
 // ============= */
 
 (function() {
 
-  Drawer.init();
+  Trigger.init({
+    trigger: '.drawer-trigger',
+    activeClass: 'drawer-active',
+  });
 
   Harmonica.init();
 
