@@ -1,12 +1,13 @@
 {
   "name": "Mimogear",
   "version": "2.4.0",
-  "author": "Mimoduo",
+  "homepage": "https://github.com/mimoduo/Mimogear",
+  "author": "Bryan Stoner",
   "description": "A small library for building sites",
-  "license": "BSD-2-Clause",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mimoduo/Mimogear"
+    "url": "https://github.com/mimoduo/Mimogear.git"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.7",
