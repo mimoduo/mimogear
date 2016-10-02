@@ -7,7 +7,7 @@ var h,
 Harmonica = {
 
   settings: {
-    container: document.querySelector('.harmonica'),
+    harmonica: document.querySelector('.harmonica'),
     headings: document.querySelectorAll('.harmonica-header'),
     articles: document.querySelectorAll('.harmonica-content'),
     activeClass: 'harmonica-header-active'
@@ -23,14 +23,18 @@ Harmonica = {
       }
     }
 
-    for (var i = 0; i < h.headings.length; i++) {
-      h.headings[i].addEventListener('click', function(event) {
-        Harmonica.clearClasses();
-        Harmonica.assignClasses(event);
-      });
-    }
+    if(document.body.contains(h.harmonica)) {
 
-    h.headings[0].click();
+      for (var i = 0; i < h.headings.length; i++) {
+        h.headings[i].addEventListener('click', function(event) {
+          Harmonica.clearClasses();
+          Harmonica.assignClasses(event);
+        });
+      }
+
+      h.headings[0].click();
+
+    }
 
   },
 

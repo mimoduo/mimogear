@@ -29,8 +29,12 @@ Sail = {
       }
     }
 
-    Sail.constructSail();
-    Sail.sailTo(s.currentSlide);
+    if(document.body.contains(s.slides)) {
+
+      Sail.constructSail();
+      Sail.sailTo(s.currentSlide);
+
+    }
 
   },
 

@@ -405,7 +405,7 @@ var h,
 Harmonica = {
 
   settings: {
-    container: document.querySelector('.harmonica'),
+    harmonica: document.querySelector('.harmonica'),
     headings: document.querySelectorAll('.harmonica-header'),
     articles: document.querySelectorAll('.harmonica-content'),
     activeClass: 'harmonica-header-active'
@@ -421,14 +421,18 @@ Harmonica = {
       }
     }
 
-    for (var i = 0; i < h.headings.length; i++) {
-      h.headings[i].addEventListener('click', function(event) {
-        Harmonica.clearClasses();
-        Harmonica.assignClasses(event);
-      });
-    }
+    if(document.body.contains(h.harmonica)) {
 
-    h.headings[0].click();
+      for (var i = 0; i < h.headings.length; i++) {
+        h.headings[i].addEventListener('click', function(event) {
+          Harmonica.clearClasses();
+          Harmonica.assignClasses(event);
+        });
+      }
+
+      h.headings[0].click();
+
+    }
 
   },
 
@@ -481,7 +485,9 @@ Lantern = {
       }
     }
 
-    Lantern.constructLantern();
+    if(document.body.contains(l.lantern)) {
+      Lantern.constructLantern();
+    }
 
   },
 
@@ -638,8 +644,12 @@ Sail = {
       }
     }
 
-    Sail.constructSail();
-    Sail.sailTo(s.currentSlide);
+    if(document.body.contains(s.slides)) {
+
+      Sail.constructSail();
+      Sail.sailTo(s.currentSlide);
+
+    }
 
   },
 
@@ -775,9 +785,13 @@ Trigger = {
 
     t.trigger = document.querySelector(t.trigger);
 
-    t.trigger.addEventListener('click', function() {
-      Trigger.activateTrigger(t.activeClass);
-    });
+    if(document.body.contains(t.trigger)) {
+
+      t.trigger.addEventListener('click', function() {
+        Trigger.activateTrigger(t.activeClass);
+      });
+
+    }
 
   },
 

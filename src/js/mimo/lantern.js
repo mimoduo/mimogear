@@ -31,7 +31,9 @@ Lantern = {
       }
     }
 
-    Lantern.constructLantern();
+    if(document.body.contains(l.lantern)) {
+      Lantern.constructLantern();
+    }
 
   },
 

@@ -22,9 +22,13 @@ Trigger = {
 
     t.trigger = document.querySelector(t.trigger);
 
-    t.trigger.addEventListener('click', function() {
-      Trigger.activateTrigger(t.activeClass);
-    });
+    if(document.body.contains(t.trigger)) {
+
+      t.trigger.addEventListener('click', function() {
+        Trigger.activateTrigger(t.activeClass);
+      });
+
+    }
 
   },
 
