@@ -12,7 +12,7 @@
   "devDependencies": {
     "autoprefixer": "^6.3.7",
     "browser-sync": "^2.13.0",
-    "gulp": "^3.9.1",
+    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-concat": "^2.6.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-imagemin": "^3.0.3",
@@ -24,6 +24,7 @@
     "postcss-discard-empty": "^2.1.0",
     "postcss-easy-import": "^1.0.1",
     "postcss-functions": "^2.1.0",
+    "postcss-import": "^8.1.2",
     "postcss-mixins": "^5.0.1",
     "postcss-nesting": "^2.3.1",
     "postcss-simple-grid": "^0.7.1",
