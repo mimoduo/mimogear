@@ -26,7 +26,7 @@ module.exports = {
   "h6Size": "16",
   "h6Line": "22",
 
-  "boundary": "1200",
+  "boundary": "1000",
 
   "mini": "300px",
   "tiny": "400px",

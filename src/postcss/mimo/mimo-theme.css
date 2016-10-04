@@ -73,7 +73,7 @@
 
   & .site-header,
   & .site-footer {
-    @mixin compartment 1240;
+    @mixin compartment 1040;
     padding: em(20);
   }
 

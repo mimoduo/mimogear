@@ -1,6 +1,6 @@
 {
   "name": "Mimogear",
-  "version": "2.4.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/mimoduo/Mimogear",
   "author": "Bryan Stoner",
   "description": "A small library for building sites",
@@ -24,7 +24,6 @@
     "postcss-discard-empty": "^2.1.0",
     "postcss-easy-import": "^1.0.1",
     "postcss-functions": "^2.1.0",
-    "postcss-import": "^8.1.2",
     "postcss-mixins": "^5.0.1",
     "postcss-nesting": "^2.3.1",
     "postcss-simple-grid": "^0.7.1",

@@ -1,6 +1,6 @@
 #Mimogear
 
-Mimogear is a light-weight starter-kit for developers of any skill level to use as a simple start to any project. The main principle of Mimogear is to strike a balance between simplicity and features, to secure quality, and to be as project agnostic as possible.
+Mimogear is a complete starter kit for developers of any skill level to use as a simple start to any project. The main principle of Mimogear is to strike a balance between simplicity and features, to secure quality and consistency, to be as developer friendly as can be, and to be as project agnostic as possible.
 
 ##Features
 
@@ -47,6 +47,17 @@ Standard JS was chosen for its community support and to reduce the number of dep
 * [Accordion/Harmonica module](http://codepen.io/mimoduo/pen/epZaMq)
 * [Lightbox/Lantern](http://codepen.io/mimoduo/pen/EPerjv)
 
-##Final Notes
+##Installation
+
+Make sure you have [node.js](https://nodejs.org/en/) installed as we will need those in order to download all of our dependencies. Since we are going to run an alpha build of gulp, there is an extra step in downloading and installing the newly separated gulp cli.
+
+```sh
+cd <folder-of-Mimogear>
+npm install
+npm install gulpjs/gulp-cli -g
+gulp
+```
+
+##And a Big Thank you!
 
 This starter kit wouldn't be possible without all the help of my friends. They've contributed to every single aspect of this without knowing it ^w^ Most notably [Nick Hall](https://github.com/nhall): For being the best mentor in the world!

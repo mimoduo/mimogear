@@ -365,7 +365,6 @@ input[type="search"]::-webkit-search-decoration {
       rotate(45deg);
   }/* ================
 // Grid / Columns
-//   http://codepen.io/mimoduo/pen/vOMxLE
 // ============= */.grid {
   display: -webkit-box;
   display: flex;
@@ -498,7 +497,7 @@ input[type="search"]::-webkit-search-decoration {
 // Regions
 // ============= */.mimo-theme .site-header,
   .mimo-theme .site-footer{
-  max-width: 77.5rem;
+  max-width: 65rem;
   margin-right: auto;
   margin-left: auto;
   padding: 1.25em;
@@ -713,7 +712,7 @@ input[type="search"]::-webkit-search-decoration {
   }/* ================
 // Section
 // ============= */.compartment {
-  max-width: 75rem;
+  max-width: 62.5rem;
   margin-right: auto;
   margin-left: auto;
 }/* Elements
