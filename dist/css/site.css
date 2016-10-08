@@ -376,7 +376,6 @@ input[type="search"]::-webkit-search-decoration {
   content: '';
 }.grid-centered{
   -webkit-box-align: center;
-  -ms-grid-row-align: center;
   align-items: center;
   align-content: center;
 }.col {

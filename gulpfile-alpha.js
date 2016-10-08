@@ -21,7 +21,7 @@ var gulp = require('gulp'),
 // Compile Pug
 // ============= */
 
-gulp.task('pug', ['sprite'], function() {
+gulp.task('pug', function() {
 
   return gulp.src('src/pug/pages/**/*.pug')
     .pipe(pug({
@@ -198,11 +198,11 @@ gulp.task('browser-sync', function() {
 
 gulp.task('watch', function() {
 
-  gulp.watch('src/pug/**/*.pug', ['pug']);
-  gulp.watch('src/postcss/**/*.css', ['postcss']);
-  gulp.watch('src/js/**/*.js', ['js']);
-  gulp.watch('src/images/*', ['images']);
-  gulp.watch('src/svg/*', ['sprite']);
+  gulp.watch('src/pug/**/*.pug', gulp.series('pug'));
+  gulp.watch('src/postcss/**/*.css', gulp.series('postcss'));
+  gulp.watch('src/js/**/*.js', gulp.series('js'));
+  gulp.watch('src/images/*', gulp.series('images'));
+  gulp.watch('src/svg/*', gulp.series('sprite'));
 
 });
 
@@ -211,12 +211,15 @@ gulp.task('watch', function() {
 // Default Gulp Task
 // ============= */
 
-gulp.task('default', [
-  'images',
-  'sprite',
-  'postcss',
-  'js',
-  'pug',
-  'watch',
-  'browser-sync'
-]);
+gulp.task(
+  'default',
+  gulp.parallel(
+    'images',
+    'sprite',
+    'postcss',
+    'js',
+    'pug',
+    'watch',
+    'browser-sync'
+  )
+);
