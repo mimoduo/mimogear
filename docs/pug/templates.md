@@ -1,3 +1,3 @@
 #Templates
 
-##Site
+Templates are a way to share frequently used html between all pages. This usually includes the header, head, and footer of the page. By default there is a main site template that also includes the automatically generated svg sprite, a skip link for screen readers, and a block to inject content into.
