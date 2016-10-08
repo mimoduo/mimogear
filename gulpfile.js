@@ -107,7 +107,7 @@ gulp.task('js', function() {
   return gulp.src([
     'src/js/vendor/*.js',
     'src/js/mimo/*.js',
-    'src/js/main.js'
+    'src/js/site/*.js'
   ])
     .pipe(concat('site.js'))
     .pipe(gulp.dest(site + 'js'))
