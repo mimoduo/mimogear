@@ -4,7 +4,7 @@ Mimogear is a complete starter kit for developers of any skill level to use as a
 
 ##Tools Used in Mimogear
 
-Under the hood, Mimogear uses gulp as a task runner, pug as a HTML pre-processor, postcss as a CSS post-processer, and standard javascript.
+Under the hood, Mimogear uses [gulp](http://gulpjs.com/) as a task runner, [pug](https://pugjs.org/api/getting-started.html) as a HTML pre-processor, [postcss](http://postcss.org/) as a CSS post-processer, and standard javascript.
 
 ###[Gulp](http://gulpjs.com/) Features
 
@@ -38,13 +38,20 @@ Under the hood, Mimogear uses gulp as a task runner, pug as a HTML pre-processor
 
 ##Installation
 
-Make sure you have [node.js](https://nodejs.org/en/) installed as we will need those in order to download all of our dependencies. Additionally, in order to run the alpha build of gulp, there is an extra step in downloading and installing the newly separated gulp cli. However, if you run into any issues related to running the alpha build of gulp, there is a legacy gulpfile that is compatible with the stable version of gulp.
+Make sure you have [node.js](https://nodejs.org/en/) installed as we will need those in order to download all of our dependencies. The next few steps should be entered within a terminal after node has completed its installation.
 
 ```sh
 cd <folder-of-Mimogear>
 npm install
-npm install gulpjs/gulp-cli -g
 gulp
+```
+
+##Optional Installation Steps
+
+If you're comfortable with running an alpha version of gulp (and willing to dive into additional steps); there is an alpha gulpfile that mimics the tasks of the stable gulpfile. By switching the alpha version of the gulpfile you should notice a significant improvement in performance. In order to use the new gulpfile, make sure to download the alpha version of gulp and the newly separated gulp-cli globally.
+
+```sh
+npm install gulpjs/gulp-cli -g
 ```
 
 ##And a Big Thank You!
