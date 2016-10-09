@@ -589,12 +589,12 @@ input[type="search"]::-webkit-search-decoration {
   width: 100%;
   margin-bottom: 1.25em;
 }@media screen and (min-width: 700px){.mimo-theme .lantern-col:first-child{
-    width: 60%;
+    width: 57.5%;
   }
 }.mimo-theme .lantern-col:last-child{
   margin-bottom: 0;
 }@media screen and (min-width: 700px){.mimo-theme .lantern-col:last-child{
-    width: 40%;
+    width: 42.5%;
   }
 }.mimo-theme .lantern{
   padding: 3.3333333333333335em;
@@ -611,8 +611,13 @@ input[type="search"]::-webkit-search-decoration {
 }/* ================
 // Harmonica
 // ============= */.mimo-theme .harmonica-header{
+  border: 0;
   border-bottom: 1px solid;
   margin: 0 0 1.1111111111111112em;
+  padding: 0;
+  text-align: left;
+  background: none;
+  color: inherit;
 }.mimo-theme h4{
   margin: 0.4em 0;
 }.mimo-theme .harmonica-content{
@@ -781,17 +786,6 @@ input[type="search"]::-webkit-search-decoration {
     }td {
       padding: 1.25em 1.25rem;
     }/* ================
-// Site Logo Link
-// ============= */.site-logo {
-  display: block;
-  overflow: hidden;
-}.site-logo-text {
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    width: 1px;
-  }/* ================
 // Common Media
 // ============= */img,
 video,
@@ -860,7 +854,27 @@ canvas {
   margin: 1.25rem 0;
   font-size: 1rem;
   line-height: 1.375;
-}/* Navigation
+}/* Components
+// ::::::::::::: *//* ================
+// Site Logo Link
+// ============= */.site-logo {
+  display: block;
+  overflow: hidden;
+}.site-logo-label {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+  }/* ================
+// Search Form
+// ============= */.site-search-label {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+  }/* Navigation
 // ::::::::::::: *//* ================
 // Generic Navigation/Menu Behaviors
 // ============= */nav ol, menu ol{

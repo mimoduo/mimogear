@@ -25,6 +25,7 @@ Harmonica = {
     if(document.body.contains(h.headings[0])) {
 
       for (var i = 0; i < h.headings.length; i++) {
+        h.headings[i].setAttribute('tabindex', '0');
         h.headings[i].addEventListener('click', function(event) {
           Harmonica.clearClasses();
           Harmonica.assignClasses(event);

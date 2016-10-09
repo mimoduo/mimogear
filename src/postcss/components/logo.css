@@ -7,6 +7,6 @@
   overflow: hidden;
 }
 
-  .site-logo-text {
+  .site-logo-label {
     @mixin visually-hidden;
   }

@@ -20,6 +20,11 @@
 
 @import 'elements/*';
 
+/* Components
+// ::::::::::::: */
+
+@import 'components/*';
+
 /* Navigation
 // ::::::::::::: */
 
