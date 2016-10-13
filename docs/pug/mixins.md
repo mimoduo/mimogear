@@ -11,6 +11,8 @@ The section mixin allows you to pass in content to a common structural element. 
   p Any pug code can be nested here
 ```
 
+**Output**
+
 ```html
 <div class="section">
   <div class="compartment">
