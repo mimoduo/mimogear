@@ -394,6 +394,7 @@ input[type="search"]::-webkit-search-decoration {
   }/* ================
 // Harmonica
 //   http://codepen.io/mimoduo/pen/epZaMq
+//   https://github.com/mimoduo/Harmonica
 // ============= *//* When do accordions become harmonicas? */@media(min-width: 900px) {.harmonica{
     display: -webkit-box;
     display: flex;
@@ -424,6 +425,7 @@ input[type="search"]::-webkit-search-decoration {
     }/* ================
 // Lantern
 //   http://codepen.io/mimoduo/pen/EPerjv
+//   https://github.com/mimoduo/Lantern
 // ============= */.lantern {
   position: fixed;
   top: 0;
@@ -576,7 +578,8 @@ input[type="search"]::-webkit-search-decoration {
   color: #f0d0ff;
   -webkit-transition: background .2s;
   transition: background .2s;
-}.mimo-theme .sail-page:hover{
+}.mimo-theme .sail-page:focus,
+      .mimo-theme .sail-page:hover{
   background: rgba(255, 255, 255, .75);
 }.mimo-theme .sail-page.sail-page-active{
   background: currentColor;
@@ -618,13 +621,14 @@ input[type="search"]::-webkit-search-decoration {
   text-align: left;
   background: none;
   color: inherit;
-}.mimo-theme h4{
+}.mimo-theme .harmonica-header h4{
   margin: 0.4em 0;
 }.mimo-theme .harmonica-content{
   margin-bottom: 1.25em;
 }/* ================
 // Sail Slide
 //   http://codepen.io/mimoduo/pen/gabWmN
+//   https://github.com/mimoduo/Sail
 // ============= */.sail-slides {
   margin-top: 0;
   margin-bottom: 0;
@@ -841,9 +845,11 @@ canvas {
   font-size: 2.1875rem;
   line-height: 1.2857142857142858;
 }/* h3:Heading Three */h3 {
+  margin: 1.25rem 0;
   font-size: 1.875rem;
   line-height: 1.3333333333333333;
 }/* h4:Heading Four */h4 {
+  margin: 1.25rem 0;
   font-size: 1.5625rem;
   line-height: 1.4;
 }/* h5:Heading Five */h5 {

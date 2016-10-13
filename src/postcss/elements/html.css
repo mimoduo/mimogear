@@ -4,6 +4,7 @@
 
 a {
 
+  &:focus,
   &:hover {}
 
   &:visited {}

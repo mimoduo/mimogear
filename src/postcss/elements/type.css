@@ -30,6 +30,7 @@ h2 {
 
 /* h3:Heading Three */
 @define-mixin h3 {
+  margin: rem(20) 0;
   font-size: rem($h3Size);
   line-height: nu($h3Line, $h3Size);
 }
@@ -40,6 +41,7 @@ h3 {
 
 /* h4:Heading Four */
 @define-mixin h4 {
+  margin: rem(20) 0;
   font-size: rem($h4Size);
   line-height: nu($h4Line, $h4Size);
 }

@@ -3,7 +3,7 @@
 //   http://codepen.io/mimoduo/pen/kuobi
 // ============= */
 
-@define-mixin drawer $transform-value: 20% {
+@define-mixin drawer $transform-value: -20% {
   position: absolute;
   min-height: 100%;
   width: 100%;

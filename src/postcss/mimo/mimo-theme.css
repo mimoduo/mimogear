@@ -179,6 +179,7 @@
       color: #f0d0ff;
       transition: background .2s;
 
+      &:focus,
       &:hover {
         background: rgba(255, 255, 255, .75);
       }
@@ -263,11 +264,12 @@
     text-align: left;
     background: none;
     color: inherit;
-  }
 
     & h4 {
       margin: em(10, $h4Size) 0;
     }
+
+  }
 
   & .harmonica-content {
     margin-bottom: em(20);

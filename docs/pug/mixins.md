@@ -11,11 +11,29 @@ The section mixin allows you to pass in content to a common structural element. 
   p Any pug code can be nested here
 ```
 
+```html
+<div class="section">
+  <div class="compartment">
+    <p>Any pug code can be nested here</p>
+  </div>
+</div>
+```
+
 If there's a need to modify a section beyond it's original styles, there is an optional parameter to accomplish this. This will add a class to the section element that will be injected into the template.
 
 ```pug
 +section("condensed-section")
   p Any pug code can be nested here
+```
+
+**Output**
+
+```html
+<div class="section condensed-section">
+  <div class="compartment">
+    <p>Any pug code can be nested here</p>
+  </div>
+</div>
 ```
 
 ##Symbol
@@ -26,6 +44,14 @@ The symbol mixin allows you to inject icons into your html using the automatical
 +symbol("arrow-forward")
 ```
 
+**Output**
+
+```html
+<svg class="symbol symbol-arrow-forward">
+  <use xlink:href="#arrow-forward"></use>
+</svg>
+```
+
 If there's a need to modify an icon behond it's original styles, there is an optional parameter to accomplish this. This will add a class to the svg element that will be injected into the template.
 
 ```pug
@@ -33,4 +59,12 @@ If there's a need to modify an icon behond it's original styles, there is an opt
   "arrow-forward",
   "larger-arrow-forward"
 )
+```
+
+**Output**
+
+```html
+<svg class="symbol symbol-arrow-forward larger-arrow-forward">
+  <use xlink:href="#arrow-forward"></use>
+</svg>
 ```
