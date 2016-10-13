@@ -1,14 +1,15 @@
 /* ================
 // Harmonica
 //   http://codepen.io/mimoduo/pen/epZaMq
+//   https://github.com/mimoduo/Harmonica
 // ============= */
 
 var h,
 Harmonica = {
 
   settings: {
-    headings: document.querySelectorAll('.harmonica-header'),
-    articles: document.querySelectorAll('.harmonica-content'),
+    headings: '.harmonica-header',
+    articles: '.harmonica-content',
     activeClass: 'harmonica-header-active'
   },
 
@@ -21,6 +22,9 @@ Harmonica = {
         h[key] = options[key];
       }
     }
+
+    h.headings = document.querySelectorAll(h.headings);
+    h.articles = document.querySelectorAll(h.articles);
 
     if(document.body.contains(h.headings[0])) {
 

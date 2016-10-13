@@ -1,14 +1,15 @@
 /* ================
 // Lantern
 //   http://codepen.io/mimoduo/pen/EPerjv
+//   https://github.com/mimoduo/Lantern
 // ============= */
 
 var l,
 Lantern = {
 
   settings: {
-    lantern: document.querySelector('.lantern'),
-    lanternLights: document.querySelectorAll('.lantern-light'),
+    lantern: '.lantern',
+    lanternLights: '.lantern-light',
     lightCollection: [],
     lightIndex: 0,
     symbols: {
@@ -30,6 +31,9 @@ Lantern = {
         l[key] = options[key];
       }
     }
+
+    l.lantern = document.querySelector(l.lantern);
+    l.lanternLights = document.querySelectorAll(l.lanternLights);
 
     if(document.body.contains(l.lantern)) {
       Lantern.constructLantern();

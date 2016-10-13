@@ -1,14 +1,15 @@
 /* ================
 // Sail Slide
 //   http://codepen.io/mimoduo/pen/gabWmN
+//   https://github.com/mimoduo/Sail
 // ============= */
 
 var s,
 Sail = {
 
   settings: {
-    slides: document.querySelector('.sail-slides'),
-    slide: document.querySelectorAll('.sail-slides li'),
+    slides: '.sail-slides',
+    slide: '.sail-slides li',
     currentSlide: 0,
     symbols: {
       prev: '#arrow-back',
@@ -28,6 +29,9 @@ Sail = {
         s[key] = options[key];
       }
     }
+
+    s.slides = document.querySelector(s.slides);
+    s.slide = document.querySelectorAll(s.slide);
 
     if(document.body.contains(s.slides)) {
 

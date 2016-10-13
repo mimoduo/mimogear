@@ -399,14 +399,15 @@ defineElementGetter(Element.prototype, 'classList', function () {
 /* ================
 // Harmonica
 //   http://codepen.io/mimoduo/pen/epZaMq
+//   https://github.com/mimoduo/Harmonica
 // ============= */
 
 var h,
 Harmonica = {
 
   settings: {
-    headings: document.querySelectorAll('.harmonica-header'),
-    articles: document.querySelectorAll('.harmonica-content'),
+    headings: '.harmonica-header',
+    articles: '.harmonica-content',
     activeClass: 'harmonica-header-active'
   },
 
@@ -419,6 +420,9 @@ Harmonica = {
         h[key] = options[key];
       }
     }
+
+    h.headings = document.querySelectorAll(h.headings);
+    h.articles = document.querySelectorAll(h.articles);
 
     if(document.body.contains(h.headings[0])) {
 
@@ -454,14 +458,15 @@ Harmonica = {
 /* ================
 // Lantern
 //   http://codepen.io/mimoduo/pen/EPerjv
+//   https://github.com/mimoduo/Lantern
 // ============= */
 
 var l,
 Lantern = {
 
   settings: {
-    lantern: document.querySelector('.lantern'),
-    lanternLights: document.querySelectorAll('.lantern-light'),
+    lantern: '.lantern',
+    lanternLights: '.lantern-light',
     lightCollection: [],
     lightIndex: 0,
     symbols: {
@@ -483,6 +488,9 @@ Lantern = {
         l[key] = options[key];
       }
     }
+
+    l.lantern = document.querySelector(l.lantern);
+    l.lanternLights = document.querySelectorAll(l.lanternLights);
 
     if(document.body.contains(l.lantern)) {
       Lantern.constructLantern();
@@ -615,14 +623,15 @@ Lantern = {
 /* ================
 // Sail Slide
 //   http://codepen.io/mimoduo/pen/gabWmN
+//   https://github.com/mimoduo/Sail
 // ============= */
 
 var s,
 Sail = {
 
   settings: {
-    slides: document.querySelector('.sail-slides'),
-    slide: document.querySelectorAll('.sail-slides li'),
+    slides: '.sail-slides',
+    slide: '.sail-slides li',
     currentSlide: 0,
     symbols: {
       prev: '#arrow-back',
@@ -642,6 +651,9 @@ Sail = {
         s[key] = options[key];
       }
     }
+
+    s.slides = document.querySelector(s.slides);
+    s.slide = document.querySelectorAll(s.slide);
 
     if(document.body.contains(s.slides)) {
 
