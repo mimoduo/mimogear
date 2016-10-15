@@ -1,10 +1,26 @@
 #Pages
 
-Pug pages are ultimately compiled into html files. Each page extends the main pug template and contains several optionally blocks.
+Pug pages are ultimately compiled into html files. Each page extends the main pug template and contains several optional blocks.
+
+##Extending a Template
+
+Each page extends the main site.pug template as the first command within a pug page. In the case of adding a subfolder of pug pages, make sure to correct the path the extend function looks for. And of course, this also applies when you want to change the extended template.
+
+**Base Level**
+
+```pug
+extends ../templates/site.pug
+```
+
+**Within 1 Subfolder**
+
+```pug
+extends ../../templates/site.pug
+```
 
 ##Changing the Theme
 
-In some cases there are special treatments that are particular only to a certain page. Usually this is the case when modifying common structural elements such as making the header overlay a featured image. The theme variable will allow you to change a theme specific class on the html element.
+In some cases there are special treatments that are particular only to a certain type of page. For example, the index.pug page adds a class of mimo-theme which is used as a hook for the mimo-theme.css styles. The theme variable will allow you to change a theme specific class on the html element.
 
 ```pug
 block theme
@@ -40,7 +56,7 @@ In the case you would like to add additional stylesheets on a page per page base
 block additional-stylesheets
   link(
     rel="stylesheet"
-    href="/dist/css/additional-stylesheet.css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/additional-stylesheet.css"
   )
 ```
 
@@ -50,5 +66,5 @@ In the case you would like to add additional scripts on a page per page bases, t
 
 ```pug
 block additional-scripts
-  script(src="/dist/js/site.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/additional-script.js")
 ```

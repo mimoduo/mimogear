@@ -17,9 +17,11 @@ $accordion-to-harmonica: 900px;
 }
 
   .harmonica-header {
+    width: 100%;
     cursor: pointer;
 
     @media(min-width: $accordion-to-harmonica) {
+      width: auto;
       flex: 1 auto;
       order: 1;
     }

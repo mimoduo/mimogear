@@ -401,9 +401,11 @@ input[type="search"]::-webkit-search-decoration {
     flex-wrap: wrap;
   }
   }.harmonica-header {
+    width: 100%;
     cursor: pointer
 
   }@media(min-width: 900px) {.harmonica-header{
+    width: auto;
     -webkit-box-flex: 1;
     flex: 1 auto;
     -webkit-box-ordinal-group: 2;
@@ -565,6 +567,8 @@ input[type="search"]::-webkit-search-decoration {
   font-size: 1.9444444444444444em;
   background: none;
   color: inherit;
+}.mimo-theme .sail-control[disabled]{
+  opacity: .25;
 }.mimo-theme .symbol-sail-control{
   fill: currentColor;
   font-size: 0.6285714285714286em;
@@ -617,10 +621,13 @@ input[type="search"]::-webkit-search-decoration {
   border: 0;
   border-bottom: 1px solid;
   margin: 0 0 1.1111111111111112em;
-  padding: 0;
+  padding: .5em 1em;
   text-align: left;
   background: none;
   color: inherit;
+}.mimo-theme .harmonica-header.harmonica-header-active{
+  background: #9e12ef;
+  color: #fff;
 }.mimo-theme .harmonica-header h4{
   margin: 0.4em 0;
 }.mimo-theme .harmonica-content{

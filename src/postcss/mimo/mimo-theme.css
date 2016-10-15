@@ -162,6 +162,10 @@
         font-size: em(35, 18);
         background: none;
         color: inherit;
+
+        &[disabled] {
+          opacity: .25;
+        }
       }
 
         & .symbol-sail-control {
@@ -260,10 +264,15 @@
     border: 0;
     border-bottom: 1px solid;
     margin: 0 0 em(20, 18);
-    padding: 0;
+    padding: .5em 1em;
     text-align: left;
     background: none;
     color: inherit;
+
+    &.harmonica-header-active {
+      background: #9e12ef;
+      color: #fff;
+    }
 
     & h4 {
       margin: em(10, $h4Size) 0;
