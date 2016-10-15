@@ -15,13 +15,11 @@ Under the hood, Mimogear uses [gulp](http://gulpjs.com/) as a task runner, [pug]
 * Inline SVG Sprite Creator
 * Browsersync auto reloading
 
-###[Pug](https://pugjs.org/api/getting-started.html) Features
+###JS Features
 
-* Starter template
-* Well structured head element setup
-* Several frequently used starter partials
-* Accessibility measures added into pug partials from: (https://github.com/nhall/Accessible-Components)
-* SVG symbol mixin
+* [Slideshow/Sail module](http://codepen.io/mimoduo/pen/gabWmN)
+* [Accordion/Harmonica module](http://codepen.io/mimoduo/pen/epZaMq)
+* [Lightbox/Lantern](http://codepen.io/mimoduo/pen/EPerjv)
 
 ###[Postcss](http://postcss.org/) Features
 
@@ -30,11 +28,13 @@ Under the hood, Mimogear uses [gulp](http://gulpjs.com/) as a task runner, [pug]
 * Functions for calculating popular css units
 * [Postcss-simple-grid](https://github.com/iamfrntdv/postcss-simple-grid) integration
 
-###JS Features
+###[Pug](https://pugjs.org/api/getting-started.html) Features
 
-* [Slideshow/Sail module](http://codepen.io/mimoduo/pen/gabWmN)
-* [Accordion/Harmonica module](http://codepen.io/mimoduo/pen/epZaMq)
-* [Lightbox/Lantern](http://codepen.io/mimoduo/pen/EPerjv)
+* Starter template
+* Well structured head element setup
+* Several frequently used starter partials
+* Accessibility measures added into pug partials from: (https://github.com/nhall/Accessible-Components)
+* SVG symbol mixin
 
 ##Installation
 
