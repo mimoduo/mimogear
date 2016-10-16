@@ -3,12 +3,12 @@
 If you wish to modify any of the tasks provided by Mimogear, below are a list of the plugins used with the respective links to their github repo and documentation.
 
 * [**autoprefixer**](https://github.com/postcss/autoprefixer)
-* [**browser-sync**](https://github.com/BrowserSync/browser-sync), [site](https://www.browsersync.io/)
-* [**gulp**](https://github.com/gulpjs/gulp), [site](http://gulpjs.com/)
+* [**browser-sync**](https://github.com/BrowserSync/browser-sync) / [official site](https://www.browsersync.io/)
+* [**gulp**](https://github.com/gulpjs/gulp) / [official site](http://gulpjs.com/)
 * [**gulp-concat**](https://github.com/contra/gulp-concat)
-* [**gulp-cssnano**](https://github.com/ben-eb/gulp-cssnano), [site](http://cssnano.co/)
+* [**gulp-cssnano**](https://github.com/ben-eb/gulp-cssnano) / [official site](http://cssnano.co/)
 * [**gulp-imagemin**](https://github.com/sindresorhus/gulp-imagemin)
-* [**gulp-postcss**](https://github.com/postcss/gulp-postcss), [site](http://postcss.org/)
+* [**gulp-postcss**](https://github.com/postcss/gulp-postcss) / [official site](http://postcss.org/)
 * [**gulp-pug**](https://github.com/jamen/gulp-pug)
 * [**gulp-rename**](https://github.com/hparra/gulp-rename)
 * [**gulp-svg-sprite**](https://github.com/jkphl/gulp-svg-sprite)
