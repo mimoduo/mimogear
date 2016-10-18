@@ -1,6 +1,6 @@
 #Formatting
 
-Pug is a very strict enforcer of properly formatted syntax. There is however one forgiving aspect that will be addressed to help ensure consistency during production.
+Pug is a very strict enforcer of properly formatted syntax. There are however a few forgiving aspects that will be addressed to help ensure consistency during production.
 
 ##Multiple Attributes
 
@@ -17,4 +17,12 @@ img.lantern-light.full-width(
   src="http://i.imgur.com/SOABm96.jpg"
   title="Petrified Forest National Park, Arizona"
 )
+```
+
+##Flexible Classes
+
+In the case of dynamic classing, if a static class exists it should be placed where the element is defined to clear way for the dynamic class declaration.
+
+```pug
+.section(class="section-" + modifier)
 ```

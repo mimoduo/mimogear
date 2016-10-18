@@ -48,11 +48,17 @@ gulp
 
 ##Optional Installation Steps
 
-If you're comfortable with running an alpha version of gulp (and willing to dive into additional steps); there is an alpha gulpfile that mimics the tasks of the stable gulpfile. By switching the alpha version of the gulpfile you should notice a significant improvement in performance from the use of parallel task processing. In order to use the new gulpfile, make sure to download the alpha version of gulp and the newly separated gulp-cli globally. Afterwards, rename the gulpfile-alpha.js and rename the original gulpfile to a name of your choice.
+If you're comfortable with running an alpha version of gulp (and willing to dive into additional steps); there is an alpha gulpfile that mirrors the tasks of the stable gulpfile. By switching the alpha version of the gulpfile you should notice a significant improvement in performance from the use of parallel task processing. In order to use the new gulpfile, make sure to download the alpha version of gulp and the newly separated gulp-cli globally. Afterwards, rename the gulpfile-alpha.js and rename the original gulpfile to a name of your choice.
 
 ```sh
 npm install gulpjs/gulp-cli -g
 ```
+
+##Share Your Sites Using Mimogear
+
+If you have used Mimogear and you'd love to share it here, feel free to create a pull request and add it to the list below.
+
+* [mimoduo](http://mimoduo.github.io/)
 
 ##Thank You, Everyone!
 

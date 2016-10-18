@@ -1,8 +1,8 @@
 #Mixins
 
-Mixins are a great way to take mini shortcuts within pug. The available Mimogear mixins are already included into the main template file so there is no need to worry if you're wondering if they will be there on a page level. If you wish to create additional mixins, make sure to create them within the pug/mixins folder and to also include them within your template under pug/templates.
+Mixins are a great way to take mini shortcuts within pug. The available Mimogear mixins are already included into the main template file. This will allow you to use the default mixins within each page that extends the default site template. If you wish to create additional mixins, make sure to create them within the pug/mixins folder and to also include them within your template under pug/templates.
 
-##Adding a New Mixins
+##Adding a New Mixin
 
 In order to add a new mixin, first create a pug file within pug/mixins with a file name relative to its output. After you've successfully created your mixin, make sure to add it to your desired template within pug/templates.
 

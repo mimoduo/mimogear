@@ -1,10 +1,10 @@
 #Pages
 
-Pug pages are ultimately compiled into html files. Each page extends the main pug template and contains several optional blocks.
+Pug pages are the bread and butter of your markup. These pages will ultimately be compiled into the html files that represent your site. The default pages (index.pug and style-guide.pug) extend the default site template and pass in extra content via the content block. This is how most pages will be structured during production.
 
 ##Extending a Template
 
-Each page extends the main site.pug template as the first command within a pug page. In the case of adding a subfolder of pug pages, make sure to correct the path the extend function looks for. And of course, this also applies when you want to change the extended template.
+Each page extends the default site.pug template as the first command within a pug page. In the case of adding a subfolder of pug pages, make sure to correct the path the extend function looks for. And of course, this also applies when you want to change the extended template.
 
 **Base Level**
 
@@ -18,6 +18,15 @@ extends ../templates/site.pug
 extends ../../templates/site.pug
 ```
 
+##Injecting Content
+
+In order to add content and component markup to your page, there is a content block that is setup by default on each of the default pages (index.pug and style-guide.pug) within Mimogear. This content will be nested directly into the main element of your site as dictated within the default site template.
+
+```pug
+block content
+  p Any pug code can be nested here
+```
+
 ##Changing the Theme
 
 In some cases there are special treatments that are particular only to a certain type of page. For example, the index.pug page adds a class of mimo-theme which is used as a hook for the mimo-theme.css styles. The theme variable will allow you to change a theme specific class on the html element.
@@ -25,15 +34,6 @@ In some cases there are special treatments that are particular only to a certain
 ```pug
 block theme
   - pageTheme = "homepage"
-```
-
-##Injecting Content
-
-In order to add content to your page, there is a content block that is setup by default on each of the two included pages within Mimogear. This content will be nested directly into the main element of your site.
-
-```pug
-block content
-  p Any pug code can be nested here
 ```
 
 ##Changing the Page's Title and Description
