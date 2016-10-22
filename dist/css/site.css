@@ -375,19 +375,59 @@ input[type="search"]::-webkit-search-decoration {
   clear: both;
   content: '';
 }.grid-centered{
+  align-content: center;
   -webkit-box-align: center;
   align-items: center;
-  align-content: center;
 }.col {
     float: left;
     width: 100%;
   }@media (min-width: 600px) {
 
     .col-medium-1{
-    width: 50%;
+    width: 8.33333%;
   }
 
     .col-medium-2{
+    width: 16.66667%;
+  }
+
+    .col-medium-3{
+    width: 25%;
+  }
+
+    .col-medium-4{
+    width: 33.33333%;
+  }
+
+    .col-medium-5{
+    width: 41.66667%;
+  }
+
+    .col-medium-6{
+    width: 50%;
+  }
+
+    .col-medium-7{
+    width: 58.33333%;
+  }
+
+    .col-medium-8{
+    width: 66.66667%;
+  }
+
+    .col-medium-9{
+    width: 75%;
+  }
+
+    .col-medium-10{
+    width: 83.33333%;
+  }
+
+    .col-medium-11{
+    width: 91.66667%;
+  }
+
+    .col-medium-12{
     width: 100%;
   }
 
@@ -405,13 +445,13 @@ input[type="search"]::-webkit-search-decoration {
     cursor: pointer
 
   }@media(min-width: 900px) {.harmonica-header{
-    width: auto;
     -webkit-box-flex: 1;
     flex: 1 auto;
     -webkit-box-ordinal-group: 2;
     order: 1;
+    width: auto;
   }
-    }.harmonica-header.harmonica-header-active + *{
+    }.harmonica-header-active + .harmonica-content{
   display: block;
 }.harmonica-content {
     display: none
@@ -473,7 +513,7 @@ input[type="search"]::-webkit-search-decoration {
 // Type
 // ============= *//* ================
 // Layout
-// ============= */.mimo-theme body{
+// ============= */.mimo-theme {
   font-family: 'Quicksand';
   color: #9e12ef;
 }/* ================
@@ -488,7 +528,6 @@ input[type="search"]::-webkit-search-decoration {
 }/* ================
 // Icons
 // ============= */.mimo-theme .symbol{
-  display: block;
   height: 1.1111111111111112em;
   width: 1.1111111111111112em;
 }.mimo-theme .symbol-logo{
@@ -512,7 +551,7 @@ input[type="search"]::-webkit-search-decoration {
   line-height: 1.6666666666666667;
   color: #9e12ef;
 }.mimo-theme .section:nth-of-type(odd){
-  padding: 3.3333333333333335em 1.1111111111111112em;
+  padding: 2.2222222222222223em 1.1111111111111112em;
   background: #9e12ef;
   color: #f0d0ff;
 }/* ================
@@ -545,9 +584,9 @@ input[type="search"]::-webkit-search-decoration {
 
   }.mimo-theme .grid{
   margin: 0 -1.1111111111111112em;
-}.mimo-theme .grid [class^="col"]{
+}.mimo-theme [class^="col"]{
   padding: 0 1.1111111111111112em;
-}.mimo-theme .grid h3{
+}.mimo-theme [class^="col"] h3{
   margin: 0;
 }/* ================
 // Slideshow
@@ -560,8 +599,6 @@ input[type="search"]::-webkit-search-decoration {
 }.mimo-theme .sail-controls{
   margin-bottom: 0.8333333333333334em;
 }.mimo-theme .sail-control{
-  display: inline-block;
-  vertical-align: top;
   border: 0;
   padding: 0 0.2857142857142857em;
   font-size: 1.9444444444444444em;
@@ -571,7 +608,7 @@ input[type="search"]::-webkit-search-decoration {
   opacity: .25;
 }.mimo-theme .symbol-sail-control{
   fill: currentColor;
-  font-size: 0.6285714285714286em;
+  font-size: 75%;
 }.mimo-theme .sail-page{
   height: 1.1111111111111112em;
   width: 1.1111111111111112em;
@@ -579,24 +616,24 @@ input[type="search"]::-webkit-search-decoration {
   border: 0.1111111111111111em solid;
   margin: 0 0.2777777777777778em;
   border-radius: 100%;
-  color: #f0d0ff;
+  color: currentColor;
   -webkit-transition: background .2s;
   transition: background .2s;
 }.mimo-theme .sail-page:focus,
       .mimo-theme .sail-page:hover{
   background: rgba(255, 255, 255, .75);
-}.mimo-theme .sail-page.sail-page-active{
+}.mimo-theme .sail-page-active{
   background: currentColor;
 }/* ================
 // Lantern
 // ============= */.mimo-theme .lantern-grid{
   margin: 0 -0.5555555555555556em;
 }.mimo-theme .lantern-col{
-  display: block;
   width: 100%;
   margin-bottom: 1.25em;
 }@media screen and (min-width: 700px){.mimo-theme .lantern-col:first-child{
     width: 57.5%;
+    margin-bottom: 0;
   }
 }.mimo-theme .lantern-col:last-child{
   margin-bottom: 0;
@@ -625,11 +662,11 @@ input[type="search"]::-webkit-search-decoration {
   text-align: left;
   background: none;
   color: inherit;
-}.mimo-theme .harmonica-header.harmonica-header-active{
-  background: #9e12ef;
-  color: #fff;
 }.mimo-theme .harmonica-header h4{
   margin: 0.4em 0;
+}.mimo-theme .harmonica-header-active{
+  background: #9e12ef;
+  color: #fff;
 }.mimo-theme .harmonica-content{
   margin-bottom: 1.25em;
 }/* ================

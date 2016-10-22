@@ -10,12 +10,8 @@
 // ============= */
 
 .mimo-theme {
-
-  & body {
-    font-family: 'Quicksand';
-    color: #9e12ef;
-  }
-
+  font-family: 'Quicksand';
+  color: #9e12ef;
 }
 
 
@@ -50,7 +46,6 @@
 .mimo-theme {
 
   & .symbol {
-    display: block;
     height: em(20, 18);
     width: em(20, 18);
   }
@@ -93,7 +88,7 @@
     color: #9e12ef;
 
     &:nth-of-type(odd) {
-      padding: em(60, 18) em(20, 18);
+      padding: em(40, 18) em(20, 18);
       background: #9e12ef;
       color: #f0d0ff;
     }
@@ -119,16 +114,16 @@
 
   & .grid {
     margin: 0 em(-20, 18);
+  }
 
     & [class^="col"] {
       padding: 0 em(20, 18);
-    }
 
       & h3 {
         margin: 0;
       }
 
-  }
+    }
 
 }
 
@@ -155,8 +150,6 @@
     }
 
       & .sail-control {
-        display: inline-block;
-        vertical-align: top;
         border: 0;
         padding: 0 em(10, 35);
         font-size: em(35, 18);
@@ -166,11 +159,12 @@
         &[disabled] {
           opacity: .25;
         }
+
       }
 
         & .symbol-sail-control {
           fill: currentColor;
-          font-size: em(22, 35);
+          font-size: 75%;
         }
 
     & .sail-page {
@@ -180,7 +174,7 @@
       border: em(2, 18) solid;
       margin: 0 em(5, 18);
       border-radius: 100%;
-      color: #f0d0ff;
+      color: currentColor;
       transition: background .2s;
 
       &:focus,
@@ -188,10 +182,10 @@
         background: rgba(255, 255, 255, .75);
       }
 
-      &.sail-page-active {
-        background: currentColor;
-      }
+    }
 
+    & .sail-page-active {
+      background: currentColor;
     }
 
 }
@@ -208,7 +202,6 @@
   }
 
     & .lantern-col {
-      display: block;
       width: 100%;
       margin-bottom: em(20);
 
@@ -216,6 +209,7 @@
 
         @mixin media $big {
           width: 57.5%;
+          margin-bottom: 0;
         }
 
       }
@@ -269,15 +263,15 @@
     background: none;
     color: inherit;
 
-    &.harmonica-header-active {
-      background: #9e12ef;
-      color: #fff;
-    }
-
     & h4 {
       margin: em(10, $h4Size) 0;
     }
 
+  }
+
+  & .harmonica-header-active {
+    background: #9e12ef;
+    color: #fff;
   }
 
   & .harmonica-content {

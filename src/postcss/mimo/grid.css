@@ -11,8 +11,8 @@
   }
 
   &-centered {
-    align-items: center;
     align-content: center;
+    align-items: center;
   }
 
 }
@@ -22,10 +22,10 @@
     width: 100%;
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: $medium) {
 
     .col-medium {
-      create-grid: 2;
+      create-grid: 12;
     }
 
   }
