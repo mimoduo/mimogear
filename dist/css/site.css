@@ -837,23 +837,18 @@ input[type="search"]::-webkit-search-decoration {
 // Common Media
 // ============= */img,
 video,
-canvas {
-  height: auto;
+canvas,
+iframe {
   max-width: 100%;
 }/* ================
 // Images
-// ============= */figure {
+// ============= */img {
+  display: block;
+}figure {
   margin: 0;
-}img {
-    display: block
-
-  }img.full-width{
-  width: 100%;
 }/* ================
 // Iframes
 // ============= */iframe {
-  max-width: 100%;
-  width: 100%;
   border: 0;
 }/* ================
 // Spotlights

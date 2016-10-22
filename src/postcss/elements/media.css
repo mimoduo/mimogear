@@ -4,8 +4,8 @@
 
 img,
 video,
-canvas {
-  height: auto;
+canvas,
+iframe {
   max-width: 100%;
 }
 
@@ -14,18 +14,13 @@ canvas {
 // Images
 // ============= */
 
+img {
+  display: block;
+}
+
 figure {
   margin: 0;
 }
-
-  img {
-    display: block;
-
-    &.full-width {
-      width: 100%;
-    }
-
-  }
 
   figcaption {}
 
@@ -35,8 +30,6 @@ figure {
 // ============= */
 
 iframe {
-  max-width: 100%;
-  width: 100%;
   border: 0;
 }
 
