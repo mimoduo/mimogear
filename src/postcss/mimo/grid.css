@@ -17,14 +17,14 @@
 
 }
 
-  .col {
+  .column {
     float: left;
     width: 100%;
   }
 
   @media (min-width: $medium) {
 
-    .col-medium {
+    .column-medium {
       create-grid: 12;
     }
 

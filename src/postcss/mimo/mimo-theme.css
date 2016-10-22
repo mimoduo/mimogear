@@ -106,7 +106,7 @@
 
   @media (min-width: 700px) {
 
-    & .col-big {
+    & .column-big {
       create-grid: 12;
     }
 
@@ -116,7 +116,7 @@
     margin: 0 em(-20, 18);
   }
 
-    & [class^="col"] {
+    & [class^="column"] {
       padding: 0 em(20, 18);
 
       & h3 {
@@ -201,7 +201,7 @@
     margin: 0 em(-10, 18);
   }
 
-    & .lantern-col {
+    & .lantern-column {
       width: 100%;
       margin-bottom: em(20);
 
