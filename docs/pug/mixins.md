@@ -12,7 +12,7 @@ include ../mixins/section.pug
 include ../mixins/new-mixin.pug
 ```
 
-##Section
+##The Section Mixin
 
 The section mixin allows you to pass in content to a common structural element. By default it's a container element and a nested element that keeps content within a predefined boundary.
 
@@ -48,7 +48,7 @@ If there's a need to modify a section beyond it's original styles, there is an o
 </div>
 ```
 
-##Symbol
+##The Symbol Mixin
 
 The symbol mixin allows you to inject icons into your html using the automatically generated svg sprite. By calling the name of the icon, pug will generate an svg that calls a symbol related to that icon within the sprite.
 
