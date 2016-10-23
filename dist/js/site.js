@@ -784,7 +784,7 @@ Trigger = {
 
   settings: {
     trigger: '.trigger',
-    activeClass: 'trigger-active'
+    activeBodyClass: 'trigger-active'
   },
 
   init: function(options) {
@@ -802,7 +802,7 @@ Trigger = {
     if(document.body.contains(t.trigger)) {
 
       t.trigger.addEventListener('click', function() {
-        Trigger.activateTrigger(t.activeClass);
+        Trigger.activateTrigger(t.activeBodyClass);
       });
 
     }
@@ -823,7 +823,7 @@ Trigger = {
 
   Trigger.init({
     trigger: '.drawer-trigger',
-    activeClass: 'drawer-active'
+    activeBodyClass: 'drawer-active'
   });
 
   Harmonica.init();

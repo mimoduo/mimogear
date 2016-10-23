@@ -11,6 +11,6 @@ button.trigger
 ```js
 Trigger.init({
   trigger: '.trigger',
-  activeClass: 'trigger-active'
+  activeBodyClass: 'trigger-active'
 });
 ```

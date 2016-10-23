@@ -656,7 +656,7 @@ input[type="search"]::-webkit-search-decoration {
 // Harmonica
 // ============= */.mimo-theme .harmonica-header{
   border: 0;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #9e12ef;
   margin: 0 0 1.1111111111111112em;
   padding: .5em 1em;
   text-align: left;

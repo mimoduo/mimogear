@@ -6,11 +6,11 @@ A lantern (lightbox) allows the user to see an enlarged picture after interactin
 
 ```pug
 .lantern
-img.lantern-light.full-width(
+img.lantern-light(
   src="http://i.imgur.com/TN4ivtD.jpg"
   title="The 'Cathedral Cliffs' of Kauai's Na Pali Coast. Kauai, Hawaii "
 )
-img.lantern-light.full-width(
+img.lantern-light(
   src="http://i.imgur.com/SOABm96.jpg"
   title="Petrified Forest National Park, Arizona"
 )

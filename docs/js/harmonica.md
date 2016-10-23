@@ -6,12 +6,12 @@ A harmonica provides a way to have accordions on smaller screens and eventually 
 
 ```pug
 .harmonica
-  button.harmonica-header(role="tab")
+  button.harmonica-header
     h4 Harmonica One
-  article.harmonica-content(role="tabpanel") Lorem ipsum dolor.
-  button.harmonica-header(role="tab")
+  article.harmonica-content Lorem ipsum dolor.
+  button.harmonica-header
     h4 Harmonica Two
-  article.harmonica-content(role="tabpanel") Donec quam felis.
+  article.harmonica-content Donec quam felis.
 ```
 
 ```js

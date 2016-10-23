@@ -256,7 +256,7 @@
 
   & .harmonica-header {
     border: 0;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #9e12ef;
     margin: 0 0 em(20, 18);
     padding: .5em 1em;
     text-align: left;
