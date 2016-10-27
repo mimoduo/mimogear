@@ -1,10 +1,10 @@
 #Pages
 
-Pug pages are the bread and butter of your markup. These pages will ultimately be compiled into the html files that represent your site. The default pages (index.pug and style-guide.pug) extend the default site template and pass in extra content via the content block. This is how most pages will be structured during production.
+Pug pages are the bread and butter of your markup. These pages will be compiled into the html files that represent your site. The default pages (index.pug and style-guide.pug) extend the default site template and pass in extra content via the content block. This is how most pages will be structured during production.
 
 ##Extending a Template
 
-Each page extends the default site.pug template as the first command within a pug page. In the case of adding a subfolder of pug pages, make sure to correct the path the extend function looks for. And of course, this also applies when you want to change the extended template.
+Each page extends the default site.pug template as the first command within a pug page. In the case of adding a subfolder of pug pages, make sure to correct the path the extend function looks for.
 
 **Base Level**
 
@@ -38,7 +38,7 @@ block theme
 
 ##Changing the Page's Title and Description
 
-Much like changing the theme per page, there are two variables that also control what the page title and page description are. Changing these values will override the default title and description managed through the package.json.
+Much like changing the theme per page, there are two variables that also control the page title and page description. Changing these values will override the default title and description managed through package.json.
 
 ```pug
 block title
@@ -50,7 +50,7 @@ block description
 
 ##Adding Additional Stylesheets
 
-In the case you would like to add additional stylesheets on a page per page bases, there is an optional block labeled additional-stylesheets at the end of the head region.
+In the case you would like to add additional stylesheets on a page per page bases, there is an optional block called additional-stylesheets at the end of the head region.
 
 ```pug
 block additional-stylesheets
@@ -62,7 +62,7 @@ block additional-stylesheets
 
 ##Adding Additional Scripts
 
-In the case you would like to add additional scripts on a page per page bases, there is an optional block labeled block additional-scripts at the end of the footer region.
+In the case you would like to add additional scripts on a page per page bases, there is an optional block called block additional-scripts at the end of the footer region.
 
 ```pug
 block additional-scripts

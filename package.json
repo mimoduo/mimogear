@@ -3,15 +3,21 @@
   "version": "1.0.0",
   "homepage": "https://github.com/mimoduo/Mimogear",
   "author": "Bryan Stoner",
-  "description": "A small library for building sites",
+  "description": "A starter kit for any front-end project",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/mimoduo/Mimogear.git"
   },
+  "keywords": [
+    "mimogear",
+    "mimoduo",
+    "starter kit",
+    "framework"
+  ],
   "devDependencies": {
-    "autoprefixer": "^6.5.0",
-    "browser-sync": "^2.17.0",
+    "autoprefixer": "^6.5.1",
+    "browser-sync": "^2.17.5",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-cssnano": "^2.1.2",
@@ -23,8 +29,8 @@
     "gulp-uglify": "^2.0.0",
     "postcss-discard-empty": "^2.1.0",
     "postcss-easy-import": "^1.0.1",
-    "postcss-functions": "^2.1.0",
-    "postcss-mixins": "^5.3.0",
+    "postcss-functions": "^2.1.1",
+    "postcss-mixins": "^5.4.0",
     "postcss-nesting": "^2.3.1",
     "postcss-simple-grid": "^0.7.1",
     "postcss-simple-vars": "^3.0.0"

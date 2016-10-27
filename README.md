@@ -1,6 +1,6 @@
 #Mimogear
 
-Mimogear is a complete starter kit for static sites. The main principle of Mimogear is to strike a balance between simplicity and features, to secure quality and consistency, to be as developer friendly as can be, and to be as project agnostic as possible.
+Mimogear is a starter kit for static sites. The main principle of Mimogear is to strike a balance between simplicity and features, to secure quality and consistency, to be as developer friendly as can be, and to be as project agnostic as possible.
 
 ##Tools Used in Mimogear
 
@@ -38,7 +38,7 @@ Under the hood, Mimogear uses [gulp](http://gulpjs.com/) as a task runner, [pug]
 
 ##Installation
 
-Mimogear aims to make development quick and efficient. To accomplish this, Mimogear has adopted the use of node package manager in order to download all the required dependencies. By downloading and installing [node.js](https://nodejs.org/en/) onto your machine, you'll be able to run a set of powerful commands we'll use to setup our starter kit environment. The next few steps should be entered within a terminal after node has completed its installation.
+Mimogear has adopted the use of node package manager in order to download all the required dependencies. By downloading and installing [node.js](https://nodejs.org/en/) onto your machine, you'll be able to run a set of commands we'll use to help setup Mimogear's environment. The next few steps should be entered within a terminal after node has completed its installation.
 
 ```sh
 cd <folder-of-Mimogear>
@@ -48,7 +48,7 @@ gulp
 
 ##Optional Installation Steps
 
-If you're comfortable with running an alpha version of gulp (and willing to dive into additional steps); there is an alpha gulpfile that mirrors the tasks of the stable gulpfile. By switching the alpha version of the gulpfile you should notice a significant improvement in performance from the use of parallel task processing. In order to use the new gulpfile, make sure to download the alpha version of gulp and the newly separated gulp-cli globally. Afterwards, rename the gulpfile-alpha.js and rename the original gulpfile to a name of your choice.
+If you're comfortable with running an alpha version of gulp (and willing to dive into additional steps); there is an alpha gulpfile that mirrors the tasks of the stable gulpfile. By switching the alpha version of the gulpfile you should notice a noticeable improvement in performance from the use of parallel task processing. In order to use the new gulpfile, make sure to download the alpha version of gulp and the newly separated gulp-cli globally. Afterwards, rename the gulpfile-alpha.js to gulpfile.js and rename the original gulpfile to a name of your choice.
 
 ```sh
 npm install gulpjs/gulp-cli -g

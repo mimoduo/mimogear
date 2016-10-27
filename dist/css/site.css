@@ -269,35 +269,21 @@ input[type="search"]::-webkit-search-decoration {
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
-  -webkit-transform: translate(-20%, 0);
   transform: translate(-20%, 0);
-  -webkit-transform: translate3d(-20%, 0, 0);
   transform: translate3d(-20%, 0, 0);
   top: 100%;
   left: 0;
   z-index: 200;
   max-width: 25em;
-  -webkit-transition: opacity .3s,
-    visibility .3s,
-    -webkit-transform .3s;
-  transition: opacity .3s,
-    visibility .3s,
-    -webkit-transform .3s;
-  transition: opacity .3s,
-    visibility .3s,
-    transform .3s;
   transition:
     opacity .3s,
     visibility .3s,
-    transform .3s,
-    -webkit-transform .3s;
+    transform .3s;
 }.drawer-active .drawer {
     pointer-events: auto;
     opacity: 1;
     visibility: visible;
-    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }/* ================
 // Drawer Trigger
@@ -324,49 +310,28 @@ input[type="search"]::-webkit-search-decoration {
   content: '';
   background: currentColor;
   color: #000;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  -webkit-transition: background .25s,
-      box-shadow .25s,
-      margin .25s,
-      -webkit-transform .25s;
-  transition: background .25s,
-      box-shadow .25s,
-      margin .25s,
-      -webkit-transform .25s;
   transition: background .25s,
       box-shadow .25s,
       margin .25s,
       transform .25s;
-  transition: background .25s,
-      box-shadow .25s,
-      margin .25s,
-      transform .25s,
-      -webkit-transform .25s;
 }.drawer-trigger:before{
   margin-top: -0.25em;
 }.drawer-trigger:after{
   box-shadow: 0 0.25em 0 0 currentColor;
 }.drawer-active .drawer-trigger:before {
     margin-top: 0;
-    -webkit-transform:
-      translate(-50%, -50%)
-      rotate(-45deg);
     transform:
       translate(-50%, -50%)
       rotate(-45deg);
   }.drawer-active .drawer-trigger:after {
     box-shadow: 0 0 0 0 transparent;
-    -webkit-transform:
-      translate(-50%, -50%)
-      rotate(45deg);
     transform:
       translate(-50%, -50%)
       rotate(45deg);
   }/* ================
 // Grid / Columns
 // ============= */.grid {
-  display: -webkit-box;
   display: flex;
   flex-wrap: wrap
 
@@ -376,7 +341,6 @@ input[type="search"]::-webkit-search-decoration {
   content: '';
 }.grid-centered{
   align-content: center;
-  -webkit-box-align: center;
   align-items: center;
 }.column {
     float: left;
@@ -436,7 +400,6 @@ input[type="search"]::-webkit-search-decoration {
 //   http://codepen.io/mimoduo/pen/epZaMq
 //   https://github.com/mimoduo/Harmonica
 // ============= *//* When do accordions become harmonicas? */@media(min-width: 900px) {.harmonica{
-    display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
   }
@@ -445,9 +408,7 @@ input[type="search"]::-webkit-search-decoration {
     cursor: pointer
 
   }@media(min-width: 900px) {.harmonica-header{
-    -webkit-box-flex: 1;
     flex: 1 auto;
-    -webkit-box-ordinal-group: 2;
     order: 1;
     width: auto;
   }
@@ -457,7 +418,6 @@ input[type="search"]::-webkit-search-decoration {
     display: none
 
   }@media(min-width: 900px) {.harmonica-content{
-    -webkit-box-ordinal-group: 3;
     order: 2;
     width: 100%;
   }
@@ -477,8 +437,6 @@ input[type="search"]::-webkit-search-decoration {
   width: 100%;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity .25s,
-    visibility .25s;
   transition:
     opacity .25s,
     visibility .25s;
@@ -494,12 +452,10 @@ input[type="search"]::-webkit-search-decoration {
       max-height: 100%;
       max-width: 100%;
       margin: 0 auto;
-      -webkit-transform: translate(0, -50%);
       transform: translate(0, -50%);
     }/* Lantern User Controls */.lantern-control {
       position: absolute;
       top: 50%;
-      -webkit-transform: translate(0, -50%);
       transform: translate(0, -50%);
     }.lantern-previous {
       left: 0;
@@ -617,7 +573,6 @@ input[type="search"]::-webkit-search-decoration {
   margin: 0 0.2777777777777778em;
   border-radius: 100%;
   color: currentColor;
-  -webkit-transition: background .2s;
   transition: background .2s;
 }.mimo-theme .sail-page:focus,
       .mimo-theme .sail-page:hover{
@@ -687,19 +642,9 @@ input[type="search"]::-webkit-search-decoration {
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity .5s,
-      visibility .5s,
-      -webkit-transform .5s;
-  transition: opacity .5s,
-      visibility .5s,
-      -webkit-transform .5s;
   transition: opacity .5s,
       visibility .5s,
       transform .5s;
-  transition: opacity .5s,
-      visibility .5s,
-      transform .5s,
-      -webkit-transform .5s;
 }@media print{.sail-slides li{
     position: relative;
     pointer-events: auto;
@@ -862,8 +807,6 @@ iframe {
 }/* ================
 // Symbols
 // ============= */.symbol {
-  -webkit-transition: fill .25s,
-    stroke .25s;
   transition:
     fill .25s,
     stroke .25s

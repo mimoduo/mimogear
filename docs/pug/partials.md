@@ -1,6 +1,6 @@
 #Partials
 
-Partials are meant to serve as reusable blocks that are frequent throughout the design. Mimogear comes with the following partials which should serve as a formidable start to the beginning of your development.
+Partials are meant to serve as reusable blocks that are frequent throughout the design. The content of a partial will never change. Mimogear comes with the following partials which should serve as a formidable start to the beginning of your development.
 
 * Address
 * Article
