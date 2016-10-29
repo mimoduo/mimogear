@@ -4,11 +4,11 @@ Elements refer to standard html elements.
 
 ##Buttons
 
-Buttons are styled all at once at first and then extended using simple class modifiers.
+Buttons are styled all at once at first and then extended using simple class modifiers. Focus and hover states are also combined to ensure proper keyboard and mouse focus. Disabled styles are also provided to prevent any sort of confusion while interacting with a disabled button.
 
 ```css
 .button-hollow {}
-  
+
 .button-condensed {}
 ```
 
@@ -17,7 +17,7 @@ Buttons are styled all at once at first and then extended using simple class mod
 * form
 * fieldset
 * label
-* input:
+* input
   * text
   * radio
   * checkbox
@@ -36,14 +36,13 @@ Buttons are styled all at once at first and then extended using simple class mod
 
 ##Media
 
-Within the media partials contains all the standard media elements listed below as well as a background covering element called a spotlight.
-
 * images
 * figures
 * figcaption
 * videos
 * iframes
 * canvas
+* spotlight
 
 If you wish to use the spotlight (also commonly referred to as the hero image), place the spotlight class and a background image onto the container of your choice. This class makes sure that the background image is centered and covers the full width and height of the container.
 
@@ -65,7 +64,7 @@ The sprite partial is used to add the width and height for each symbol that is i
 
 ##Type
 
-The type partial contains all of your heading 1-6 styles. Each heading is styled using a respective mixin. By using a mixin, you are able to use these heading styles elsewhere in your project.
+The type partial contains all of your heading 1-6 styles. Each heading is styled using a respective mixin. By using a mixin, you are able to use these heading styles elsewhere in your project. This use is reserved for selectors that aren't headers but have been styled as such in the design.
 
 ```css
 cite {

@@ -27,9 +27,9 @@ The following elements and blocks can be find within the head region.
 
 Information on customizing the head blocks on a page by page basis can be found within the [pug/pages](https://github.com/mimoduo/Mimogear/blob/master/docs/pug/pages.md) documentation.
 
-* page title block
-* page description block
-* additional stylesheet block
+* page title
+* page description
+* additional stylesheet
 
 ##Header
 

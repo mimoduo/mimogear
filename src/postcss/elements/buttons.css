@@ -11,9 +11,8 @@
   cursor: pointer;
   text-align: center;
 
+  &:focus,
   &:hover {}
-
-  &:active {}
 
   &[disabled] {
     cursor: not-allowed;
