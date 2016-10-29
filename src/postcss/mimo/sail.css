@@ -54,7 +54,8 @@
 }
 
   .sail-control {
-
+    cursor: pointer;
+    
     &:hover {}
 
   }

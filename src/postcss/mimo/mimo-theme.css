@@ -179,13 +179,19 @@
 
       &:focus,
       &:hover {
-        background: rgba(255, 255, 255, .75);
+        background: #f0d0ff;
       }
 
     }
 
     & .sail-page-active {
       background: currentColor;
+
+      &:focus,
+      &:hover {
+        background: currentColor;
+      }
+      
     }
 
 }
