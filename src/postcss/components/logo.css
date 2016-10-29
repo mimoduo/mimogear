@@ -5,6 +5,7 @@
 .site-logo {
   display: block;
   overflow: hidden;
+  text-decoration: none;
 }
 
   .site-logo-label {

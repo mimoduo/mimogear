@@ -21,12 +21,16 @@ Under the hood, Mimogear uses [gulp](http://gulpjs.com/) as a task runner, [pug]
 * [Accordion/Harmonica module](http://codepen.io/mimoduo/pen/epZaMq)
 * [Lightbox/Lantern](http://codepen.io/mimoduo/pen/EPerjv)
 
+**Polyfills Included**
+* [classList](https://github.com/remy/polyfills)
+* [html5shiv](https://github.com/aFarkas/html5shiv)
+
 ###[Postcss](http://postcss.org/) Features
 
 * Idiomatic css formatting
 * Common helper utilities
 * Functions for calculating popular css units
-* [Postcss-simple-grid](https://github.com/iamfrntdv/postcss-simple-grid) integration
+* [Postcss-simple-grid](https://github.com/iamfrntdv/postcss-simple-grid) integration with flexbox
 
 ###[Pug](https://pugjs.org/api/getting-started.html) Features
 
@@ -35,6 +39,13 @@ Under the hood, Mimogear uses [gulp](http://gulpjs.com/) as a task runner, [pug]
 * Several frequently used starter partials
 * Accessibility measures added into pug partials from: (https://github.com/nhall/Accessible-Components)
 * SVG symbol mixin
+
+##Browser Support
+
+* IE _currently testing_
+* Chrome 29+
+* Firefox 29+
+* Opera 16+
 
 ##Installation
 

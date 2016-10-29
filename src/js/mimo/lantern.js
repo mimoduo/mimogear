@@ -57,7 +57,8 @@ Lantern = {
     prev.addEventListener('click', function() {
       Lantern.previousLight();
     });
-    prev.classList.add('lantern-control', 'lantern-prev');
+    prev.classList.add('lantern-control');
+    prev.classList.add('lantern-prev');
     prev.innerHTML = '<svg class="symbol symbol-prev">' +
     '<use xlink:href="' + l.symbols.prev + '"></use>' +
     '</svg>';
@@ -68,7 +69,8 @@ Lantern = {
     next.addEventListener('click', function() {
       Lantern.nextLight();
     });
-    next.classList.add('lantern-control', 'lantern-next');
+    next.classList.add('lantern-control');
+    next.classList.add('lantern-next');
     next.innerHTML = '<svg class="symbol symbol-next">' +
     '<use xlink:href="' + l.symbols.next + '"></use>' +
     '</svg>';
@@ -79,7 +81,8 @@ Lantern = {
     close.addEventListener('click', function() {
       Lantern.removeLight();
     });
-    close.classList.add('lantern-control', 'lantern-close');
+    close.classList.add('lantern-control');
+    close.classList.add('lantern-close');
     close.innerHTML = '<svg class="symbol symbol-close">' +
     '<use xlink:href="' + l.symbols.close + '"></use>' +
     '</svg>';
@@ -87,7 +90,7 @@ Lantern = {
     l.vdom.close = close;
 
     for (var i = 0; i < l.lanternLights.length; i++) {
-      l.lanternLights[i].addEventListener('click', function() {
+      l.lanternLights[i].addEventListener('click', function(event) {
         Lantern.displayLight(event);
       });
 

@@ -81,7 +81,7 @@ gulp.task('postcss', function() {
         }
       }),
       require('autoprefixer')({
-        browsers: ['> 2%'],
+        browsers: ['> 1%'],
         cascade: false
       }),
       require('postcss-discard-empty')

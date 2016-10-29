@@ -21,7 +21,7 @@ $accordion-to-harmonica: 900px;
     cursor: pointer;
 
     @media(min-width: $accordion-to-harmonica) {
-      flex: 1 auto;
+      flex: auto;
       order: 1;
       width: auto;
     }

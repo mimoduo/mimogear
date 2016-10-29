@@ -1,6 +1,6 @@
 #Variables
 
-Variables are housed within the configuration js file within the root of Mimogear. This provides the additional benefit of being able to use these variables outside postcss such as the gulpfile. The downside of this method is that every time a variable is changed, the gulp task will have to be re-run for the changes to take effect.
+Variables are housed within the configuration.js file within the root of Mimogear. This provides the additional benefit of being able to use these variables outside postcss such as the gulpfile. The downside of this method is that every time a variable is changed, the gulp task will have to be re-run for the changes to take effect.
 
 * fonts
   * font-family
