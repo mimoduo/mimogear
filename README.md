@@ -74,4 +74,4 @@ If you have used Mimogear and you'd love to share it here, feel free to create a
 
 ##Thank You, Everyone!
 
-I hope you enjoy developing with Mimogear as much as I have enjoyed building it! This starter kit wouldn't be possible without all the help of my friends. They've contributed to every single aspect of this without knowing it ^w^ Most notably [Nick Hall](https://github.com/nhall) for being the best mentor in the world!
+I hope you enjoy developing with Mimogear as much as I have enjoyed building it! Please share it if you love it! This starter kit wouldn't be possible without all the help of my friends. They've contributed to every single aspect of this without knowing it ^w^ Most notably [Nick Hall](https://github.com/nhall) for being the best mentor in the world!
