@@ -285,6 +285,7 @@ menu {
   opacity: 0;
   visibility: hidden;
   -webkit-transform: translate(-20%, 0);
+  -ms-transform: translate(-20%, 0);
   transform: translate(-20%, 0);
   -webkit-transform: translate3d(-20%, 0, 0);
   transform: translate3d(-20%, 0, 0);
@@ -292,6 +293,9 @@ menu {
   left: 0;
   z-index: 200;
   max-width: 25em;
+  -webkit-transition: opacity .3s,
+    visibility .3s,
+    -webkit-transform .3s;
   transition: opacity .3s,
     visibility .3s,
     -webkit-transform .3s;
@@ -308,6 +312,7 @@ menu {
     opacity: 1;
     visibility: visible;
     -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
     transform: translate(0, 0);
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -337,7 +342,12 @@ menu {
   background: currentColor;
   color: #000;
   -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  -webkit-transition: background .25s,
+      box-shadow .25s,
+      margin .25s,
+      -webkit-transform .25s;
   transition: background .25s,
       box-shadow .25s,
       margin .25s,
@@ -360,6 +370,9 @@ menu {
     -webkit-transform:
       translate(-50%, -50%)
       rotate(-45deg);
+    -ms-transform:
+      translate(-50%, -50%)
+      rotate(-45deg);
     transform:
       translate(-50%, -50%)
       rotate(-45deg);
@@ -368,13 +381,21 @@ menu {
     -webkit-transform:
       translate(-50%, -50%)
       rotate(45deg);
+    -ms-transform:
+      translate(-50%, -50%)
+      rotate(45deg);
     transform:
       translate(-50%, -50%)
       rotate(45deg);
   }/* ================
 // Grid / Columns
 // ============= */.grid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap
 
 }.grid:after{
@@ -382,7 +403,12 @@ menu {
   clear: both;
   content: '';
 }.grid-centered{
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
   align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
 }.column {
     float: left;
@@ -442,7 +468,12 @@ menu {
 //   http://codepen.io/mimoduo/pen/epZaMq
 //   https://github.com/mimoduo/Harmonica
 // ============= *//* When do accordions become harmonicas? */@media(min-width: 900px) {.harmonica{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   }.harmonica-header {
@@ -450,7 +481,13 @@ menu {
     cursor: pointer
 
   }@media(min-width: 900px) {.harmonica-header{
+    -webkit-box-flex: 1;
+    -webkit-flex: auto;
+    -ms-flex: auto;
     flex: auto;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
     order: 1;
     width: auto;
   }
@@ -460,6 +497,9 @@ menu {
     display: none
 
   }@media(min-width: 900px) {.harmonica-content{
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
     order: 2;
     width: 100%;
   }
@@ -479,6 +519,8 @@ menu {
   width: 100%;
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: opacity .25s,
+    visibility .25s;
   transition:
     opacity .25s,
     visibility .25s;
@@ -495,11 +537,13 @@ menu {
       max-width: 100%;
       margin: 0 auto;
       -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
       transform: translate(0, -50%);
     }/* Lantern User Controls */.lantern-control {
       position: absolute;
       top: 50%;
       -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
       transform: translate(0, -50%);
     }.lantern-previous {
       left: 0;
@@ -617,6 +661,7 @@ menu {
   margin: 0 0.2777777777777778em;
   border-radius: 100%;
   color: currentColor;
+  -webkit-transition: background .2s;
   transition: background .2s;
 }.mimo-theme .sail-page:focus,
       .mimo-theme .sail-page:hover{
@@ -689,6 +734,9 @@ menu {
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: opacity .5s,
+      visibility .5s,
+      -webkit-transform .5s;
   transition: opacity .5s,
       visibility .5s,
       -webkit-transform .5s;
@@ -861,6 +909,8 @@ iframe {
 }/* ================
 // Symbols
 // ============= */.symbol {
+  -webkit-transition: fill .25s,
+    stroke .25s;
   transition:
     fill .25s,
     stroke .25s

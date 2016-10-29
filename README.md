@@ -42,9 +42,10 @@ Under the hood, Mimogear uses [gulp](http://gulpjs.com/) as a task runner, [pug]
 
 ##Browser Support
 
-* IE _currently testing_
 * Chrome 29+
 * Firefox 29+
+* Safari 6.2+
+* IE 10+
 * Opera 16+
 
 ##Installation
