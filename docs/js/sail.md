@@ -4,12 +4,16 @@ A sail (slideshow) is a carousel of elements that works based on a series of con
 
 ##Usage With All Default Options Shown
 
+**Pug**
+
 ```pug
 ol.sail-slides
   li
   li
   li
 ```
+
+**js**
 
 ```js
 Sail.init({

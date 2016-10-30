@@ -4,9 +4,13 @@ A trigger provides a way of enabling a class on the body element after clicking 
 
 ##Usage With All Default Options Shown
 
+**Pug**
+
 ```pug
 button.trigger
 ```
+
+**js**
 
 ```js
 Trigger.init({

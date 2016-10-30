@@ -4,6 +4,8 @@ A lantern (lightbox) allows the user to see an enlarged picture after interactin
 
 ##Usage With Default Options Shown
 
+**Pug**
+
 ```pug
 .lantern
 img.lantern-light(
@@ -15,6 +17,8 @@ img.lantern-light(
   title="Petrified Forest National Park, Arizona"
 )
 ```
+
+**js**
 
 ```js
 Lantern.init({

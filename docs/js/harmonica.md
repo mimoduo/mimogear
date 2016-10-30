@@ -4,6 +4,8 @@ A harmonica provides a way to have accordions on smaller screens and eventually 
 
 ##Usage With All Default Options Shown
 
+**Pug**
+
 ```pug
 .harmonica
   button.harmonica-header
@@ -13,6 +15,8 @@ A harmonica provides a way to have accordions on smaller screens and eventually 
     h4 Harmonica Two
   article.harmonica-content Donec quam felis.
 ```
+
+**js**
 
 ```js
 Harmonica.init({
