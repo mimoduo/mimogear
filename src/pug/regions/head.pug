@@ -24,30 +24,20 @@ head
     name="description"
     content= description
   )
-  link(
-    rel="icon"
-    href="favicon-16.png"
-    sizes="16x16"
-    type="image/png"
-  )
-  link(
-    rel="icon"
-    href="favicon-32.png"
-    sizes="32x32"
-    type="image/png"
-  )
-  link(
-    rel="icon"
-    href="favicon-48.png"
-    sizes="48x48"
-    type="image/png"
-  )
-  link(
-    rel="icon"
-    href="favicon-62.png"
-    sizes="62x62"
-    type="image/png"
-  )
+
+  mixin favicon(size)
+    link(
+      rel="icon"
+      href="favicon-" + size + ".png"
+      sizes=size + "x" + size
+      type="image/png"
+    )
+
+  +favicon(16)
+  +favicon(32)
+  +favicon(48)
+  +favicon(62)
+  
   link(
     rel="stylesheet"
     href="/dist/css/site.css"
