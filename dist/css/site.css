@@ -1,6 +1,4 @@
-
-
-@import url(https://fonts.googleapis.com/css?family=Quicksand);/* Vendor
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');/* Vendor
 // ::::::::::::: *//*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css *//**
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Correct the line height in all browsers.
@@ -499,6 +497,7 @@ menu {
     }/* Lantern User Controls */.lantern-control {
       position: absolute;
       top: 50%;
+      cursor: pointer;
       -webkit-transform: translate(0, -50%);
       transform: translate(0, -50%);
     }.lantern-previous {
@@ -510,27 +509,51 @@ menu {
 }/* Body when a lantern is visible */.lantern-triggered {
   overflow: hidden;
 }/* ================
+// Variables
+// ============= *//* ================
 // Type
-// ============= */@font-face{
-  font-family: 'Aktiv';
-  font-style: normal;
-  font-weight: normal;
-  src: url('../fonts/Aktiv-Light.eot') format('eot'),
-      url('../fonts/Aktiv-Light.woff') format('woff'),
-      url('../fonts/Aktiv-Light.ttf') format('truetype'),
-      url('../fonts/Aktiv-Light.svg#Aktiv-Light') format('svg');
-}/* ================
-// Layout
 // ============= */.mimo-theme {
   font-family: 'Quicksand';
-  color: #9e12ef;
+  color: #9e12ef
+
+}.mimo-theme body{
+  font-size: 1.125em;
+  line-height: 1.5555555555555556;
+}.mimo-theme h2,
+  .mimo-theme h4{
+  font-weight: 700;
+}.mimo-theme h2{
+  display: inline-block;
+  border-bottom: 0.1875rem solid currentColor;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-size: 1.3333333333333333em;
+}@media screen and (min-width: 400px){.mimo-theme h2{
+    font-size: 1.7777777777777777em;
+  }
+}.mimo-theme h4{
+  margin: 0 0 0.625rem;
+  font-size: 1.1111111111111112em;
+}@media screen and (min-width: 400px){.mimo-theme h4{
+    font-size: 1.3333333333333333em;
+  }
+}.mimo-theme p{
+  margin: 0.625rem 0;
+}.mimo-theme .lead{
+  margin-bottom: 2.2222222222222223em;
+}@media screen and (min-width: 400px){.mimo-theme .lead{
+    font-size: 1.1111111111111112em;
+  }
 }/* ================
 // Drawer
-// ============= */.mimo-theme .drawer-trigger:before,
+// ============= */.mimo-theme .drawer-trigger{
+  left: -0.9375em;
+  font-size: 0.8888888888888888em;
+}.mimo-theme .drawer-trigger:before,
     .mimo-theme .drawer-trigger:after{
   color: #9e12ef;
 }.mimo-theme .drawer{
-  padding: 1.25em;
+  padding: 1.1111111111111112em;
   background: #9e12ef;
   color: #fff;
 }/* ================
@@ -555,16 +578,12 @@ menu {
   max-width: 65rem;
   margin-right: auto;
   margin-left: auto;
-  padding: 1.25em;
+  padding: 1.1111111111111112em;
 }/* ================
 // Section
 // ============= */.mimo-theme .section{
-  padding: 1.1111111111111112em;
-  font-size: 1.125em;
-  line-height: 1.6666666666666667;
   color: #9e12ef;
 }.mimo-theme .section:nth-of-type(odd){
-  padding: 2.2222222222222223em 1.1111111111111112em;
   background: #9e12ef;
   color: #f0d0ff;
 }/* ================
@@ -598,17 +617,37 @@ menu {
   }.mimo-theme .grid{
   margin: 0 -1.1111111111111112em;
 }.mimo-theme [class^="column"]{
+  margin-bottom: 1.1111111111111112em;
   padding: 0 1.1111111111111112em;
 }.mimo-theme [class^="column"] h3{
   margin: 0;
+}/* ================
+// Reasons
+// ============= */.mimo-theme .reason-symbol{
+  display: table-cell;
+  vertical-align: top;
+  padding-right: 1.1111111111111112em;
+}.mimo-theme .reason-symbol .symbol{
+  height: 1.6666666666666667em;
+  width: 1.6666666666666667em;
+  fill: #f0d0ff;
+}.mimo-theme .reason-details{
+  display: table-cell;
+  vertical-align: top;
+  padding-bottom: 1.1111111111111112em;
 }/* ================
 // Slideshow
 // ============= */.mimo-theme .sail-slides{
   text-align: center;
 }.mimo-theme .sail-slides li{
+  display: inline-block;
   margin-bottom: 0.5714285714285714em;
+  padding: 1.4285714285714286em 0.5714285714285714em;
   font-size: 1.9444444444444444em;
+  font-weight: 700;
   line-height: 1;
+  background: #f0d0ff;
+  color: #9e12ef;
 }.mimo-theme .sail-controls{
   margin-bottom: 0.8333333333333334em;
 }.mimo-theme .sail-control{
@@ -617,6 +656,17 @@ menu {
   font-size: 1.9444444444444444em;
   background: none;
   color: inherit;
+  transition: opacity .25s,
+          -webkit-transform .25s;
+  transition: opacity .25s,
+          transform .25s;
+  transition: opacity .25s,
+          transform .25s,
+          -webkit-transform .25s;
+}.mimo-theme .sail-control:not([disabled]):focus,
+        .mimo-theme .sail-control:not([disabled]):hover{
+  -webkit-transform: scale(1.25);
+  transform: scale(1.25);
 }.mimo-theme .sail-control[disabled]{
   opacity: .25;
 }.mimo-theme .symbol-sail-control{
@@ -642,10 +692,10 @@ menu {
 }/* ================
 // Lantern
 // ============= */.mimo-theme .lantern-grid{
-  margin: 0 -0.5555555555555556em;
+  margin: 0 -1.1111111111111112em;
 }.mimo-theme .lantern-column{
   width: 100%;
-  margin-bottom: 1.25em;
+  margin-bottom: 1.1111111111111112em;
 }@media screen and (min-width: 700px){.mimo-theme .lantern-column:first-child{
     width: 57.5%;
     margin-bottom: 0;
@@ -656,13 +706,19 @@ menu {
     width: 42.5%;
   }
 }.mimo-theme .lantern{
-  padding: 3.3333333333333335em;
+  padding: 2.7777777777777777em;
   background: rgba(255, 255, 255, .75);
 }.mimo-theme .lantern-holder{
   border: 0.2777777777777778em solid #fff;
 }.mimo-theme .lantern-control{
   border: 0;
   background: none;
+}.mimo-theme .lantern-prev{
+  -webkit-transform: translate(-100%, -50%);
+  transform: translate(-100%, -50%);
+}.mimo-theme .lantern-next{
+  -webkit-transform: translate(100%, -50%);
+  transform: translate(100%, -50%);
 }.mimo-theme .lantern-close{
   position: absolute;
   top: 0;
@@ -671,12 +727,14 @@ menu {
 // Harmonica
 // ============= */.mimo-theme .harmonica-header{
   border: 0;
-  border-bottom: 1px solid #9e12ef;
   margin: 0 0 1.1111111111111112em;
   padding: .5em 1em;
   text-align: left;
-  background: none;
+  background: #f0d0ff;
   color: inherit;
+  transition: -webkit-transform .25s;
+  transition: transform .25s;
+  transition: transform .25s, -webkit-transform .25s;
 }.mimo-theme .harmonica-header h4{
   margin: 0.4em 0;
 }.mimo-theme .harmonica-header-active{

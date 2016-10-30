@@ -42,6 +42,7 @@
     .lantern-control {
       position: absolute;
       top: 50%;
+      cursor: pointer;
       transform: translate(0, -50%);
     }
 
