@@ -47,7 +47,7 @@ menu {
   @mixin visually-hidden;
 
   &:focus {
-    @mixin unhide-visually-hidden;
+    @mixin reset-visually-hidden;
   }
 
 }
