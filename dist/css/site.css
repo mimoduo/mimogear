@@ -545,12 +545,7 @@ menu {
   fill: #9e12ef;
 }/* ================
 // Navigation
-// ============= */.mimo-theme .nav-main ol{
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style: none;
-}.mimo-theme .nav-main a{
+// ============= */.mimo-theme .nav-main a{
   text-decoration: none;
   color: inherit;
 }/* ================
@@ -945,11 +940,19 @@ iframe {
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
+}nav li:focus ol, nav li:hover ol, menu li:focus ol, menu li:hover ol{
+  opacity: 1;
+  visibility: visible;
+}nav li ol, menu li ol{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
 }nav a, menu a{
   display: block;
 }/* ================
-// Generic Dropdown Behaviors
-// ============= *//* ================
 // Skip Link
 // ============= */.skip-link {
   position: absolute;
@@ -957,7 +960,7 @@ iframe {
   clip: rect(0 0 0 0);
   height: 1px;
   width: 1px
-  
+
 }.skip-link:focus{
   position: relative;
   clip: auto;

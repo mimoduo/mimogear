@@ -9,16 +9,34 @@ menu {
     @mixin list-reset;
   }
 
+    & li {
+
+      &:focus,
+      &:hover {
+
+        & ol {
+          opacity: 1;
+          visibility: visible;
+        }
+
+      }
+
+      & ol {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 20;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+    }
+
     & a {
       display: block;
     }
 
 }
-
-
-/* ================
-// Generic Dropdown Behaviors
-// ============= */
 
 
 /* ================
@@ -31,5 +49,5 @@ menu {
   &:focus {
     @mixin unhide-visually-hidden;
   }
-  
+
 }
