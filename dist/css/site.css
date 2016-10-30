@@ -511,7 +511,15 @@ menu {
   overflow: hidden;
 }/* ================
 // Type
-// ============= *//* ================
+// ============= */@font-face{
+  font-family: 'Aktiv';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Aktiv-Light.eot') format('eot'),
+      url('../fonts/Aktiv-Light.woff') format('woff'),
+      url('../fonts/Aktiv-Light.ttf') format('truetype'),
+      url('../fonts/Aktiv-Light.svg#Aktiv-Light') format('svg');
+}/* ================
 // Layout
 // ============= */.mimo-theme {
   font-family: 'Quicksand';

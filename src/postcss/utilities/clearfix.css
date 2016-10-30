@@ -1,4 +1,4 @@
-@define-mixin clear {
+@define-mixin clearfix {
   display: table;
   clear: both;
   content: '';

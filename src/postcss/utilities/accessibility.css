@@ -6,7 +6,7 @@
   width: 1px;
 }
 
-@define-mixin unhide-visually-hidden {
+@define-mixin reset-visually-hidden {
   position: relative;
   clip: auto;
   height: auto;

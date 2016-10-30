@@ -4,10 +4,11 @@
     font-family: '$name';
     font-style: $style;
     font-weight: $weight;
-    src: url('../fonts/$path.eot') format('eot'),
-         url('../fonts/$path.woff') format('woff'),
-         url('../fonts/$path.ttf') format('truetype'),
-         url('../fonts/$path.svg#$path') format('svg');
+    src:
+      url('../fonts/$path.eot') format('eot'),
+      url('../fonts/$path.woff') format('woff'),
+      url('../fonts/$path.ttf') format('truetype'),
+      url('../fonts/$path.svg#$path') format('svg');
   }
 
 }

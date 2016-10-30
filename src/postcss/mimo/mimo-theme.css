@@ -4,6 +4,8 @@
 
 @import url(https://fonts.googleapis.com/css?family=Quicksand);
 
+@mixin font-face Aktiv, Aktiv-Light;
+
 
 /* ================
 // Layout

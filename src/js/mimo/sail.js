@@ -80,9 +80,7 @@ Sail = {
     for (var i = 0; i < s.slide.length; i++) {
       var page = document.createElement('button');
       page.classList.add('sail-page');
-      page.addEventListener('click', function() {
-        Sail.sailTo(i);
-      });
+      page.addEventListener('click', Sail.sailTo.bind(null, i));
       s.vdom.pages.appendChild(page);
       s.vdom.page.push(page);
     }
