@@ -783,11 +783,13 @@ menu {
     line-height: 1.375;
   }/* ================
 // Section
-// ============= */.compartment {
-  max-width: 62.5rem;
-  margin-right: auto;
-  margin-left: auto;
-}/* Elements
+// ============= */.section {
+  padding: 2.5em 1.25em;
+}.compartment {
+    max-width: 62.5rem;
+    margin-right: auto;
+    margin-left: auto;
+  }/* Elements
 // ::::::::::::: *//* ================
 // Generic Buttons
 // ============= */.button {

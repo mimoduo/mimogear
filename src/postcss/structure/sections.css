@@ -2,6 +2,10 @@
 // Section
 // ============= */
 
-.compartment {
-  @mixin compartment;
+.section {
+  padding: em(40) em(20);
 }
+
+  .compartment {
+    @mixin compartment;
+  }
