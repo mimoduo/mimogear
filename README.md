@@ -45,7 +45,7 @@ Under the hood, Mimogear uses [gulp](http://gulpjs.com/) as a task runner, [pug]
 * Chrome 29+
 * Firefox 29+
 * Safari 6.2+
-* IE 10+
+* IE 10+ _excluding harmonica_
 * Opera 16+
 
 ##Installation
@@ -58,7 +58,7 @@ npm install
 gulp
 ```
 
-After a successful run of the gulp command, you should see the following index page within the automatically opened browser tab.
+After a successful installation and run of the gulp command, you should see the following index page within the automatically opened browser tab.
 
 ![Mimogear index page](http://image.prntscr.com/image/aa1c49706ec647238da6e29d93b66f74.png)
 
