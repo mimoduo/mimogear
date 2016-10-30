@@ -15,7 +15,7 @@ Under the hood, Mimogear uses [gulp](http://gulpjs.com/) as a task runner, [pug]
 * Inline SVG Sprite Creator
 * Browsersync auto reloading
 
-###JS Features
+###Javascript Features
 
 * [Slideshow/Sail module](http://codepen.io/mimoduo/pen/gabWmN)
 * [Accordion/Harmonica module](http://codepen.io/mimoduo/pen/epZaMq)
