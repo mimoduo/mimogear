@@ -58,6 +58,10 @@ npm install
 gulp
 ```
 
+After a successful run of the gulp command, you should see the following index page within the automatically opened browser tab.
+
+![Mimogear index page](http://image.prntscr.com/image/aa1c49706ec647238da6e29d93b66f74.png)
+
 ##Optional Installation Steps
 
 If you're comfortable with running an alpha version of gulp (and willing to dive into additional steps); there is an alpha gulpfile that mirrors the tasks of the stable gulpfile. By switching the alpha version of the gulpfile you should notice a noticeable improvement in performance from the use of parallel task processing. In order to use the new gulpfile, make sure to download the alpha version of gulp and the newly separated gulp-cli globally. Afterwards, rename the gulpfile-alpha.js to gulpfile.js and rename the original gulpfile to a name of your choice.
