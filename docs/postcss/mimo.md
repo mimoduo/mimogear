@@ -6,6 +6,8 @@ The mimo partials refer to all the specialized mimo modules available within Mim
 
 There are three mixins available within the drawer partial as well as default styles for the drawer and respective drawer trigger. By default the drawer will be shifted 20% of itself to the left. The following example will demonstrate the use of the active and reset drawer mixins in order to display drawer content on larger screens in its original stacking order.
 
+**Postcss**
+
 ```postcss
 .drawer {
   // styles
@@ -20,7 +22,7 @@ There are three mixins available within the drawer partial as well as default st
 
 ##Grid
 
-The grid partial contains styles relative to the postcss-simple-grid system. THe following example will create widths for 12 columns within the gamagori breakpoint.
+The grid partial contains styles relative to the [Postcss-simple-grid](https://github.com/iamfrntdv/postcss-simple-grid) system. The following example will create widths for 12 columns within the gamagori breakpoint.
 
 **Postcss**
 
@@ -54,7 +56,7 @@ The grid partial contains styles relative to the postcss-simple-grid system. THe
 
 ##Harmonica
 
-The harmonica partial styles the ordering of active content. The $accordion-to-harmonica variable dictates when the accordion on smaller screens becomes a harmonica on larger screens.
+The harmonica partial styles the ordering of active content within a harmonica. The $accordion-to-harmonica variable dictates when the accordion on smaller screens becomes a harmonica on larger screens.
 
 ##Lantern
 

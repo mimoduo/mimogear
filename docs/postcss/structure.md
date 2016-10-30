@@ -4,7 +4,7 @@ Structure elements are high level components that usually contain styles for spa
 
 ##Regions
 
-Regions refer to their respective pug regions with the addition of the region where content will reside. These elements are included on every page by default.
+Regions refer to their respective pug regions with the addition of main content region. These elements are included on every page by default.
 
 ##Root
 
@@ -12,4 +12,4 @@ The root partial styles universal elements, the html element, and the body eleme
 
 ##Sections
 
-Sections are large areas contained within the document and are to be considered an abstraction from regions. These elements are likely to be included on specific pages only. By default, the compartment class is considered a section because of it's use within full width sections
+Sections are large areas contained within the document and are to be considered an abstraction from regions. These elements are likely to be included on specific pages only. By default, the compartment class is considered a section because of it's use within full width sections.

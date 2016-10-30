@@ -1,6 +1,6 @@
 #Utilities
 
-There are several utlitiy mixins available within Mimogear for use in production. These were included based on the frequent use and value regardless of the project.
+There are several utility mixins available within Mimogear for use in production. These were included based on their frequent use and value regardless of the project.
 
 * visually-hidden: hide an element from sighted users
 * reset-visually-hidden: un-hide an element previously hidden
@@ -8,12 +8,12 @@ There are several utlitiy mixins available within Mimogear for use in production
 * compartment: creates a centered column given a particular width
 * cover: completely overlaps an element onto a container
 * font-face: imports various font files
-* list-reset: resets browser default list styles
-* media-query: calls the specified media query set
+* list-reset: resets default browser styles of lists
+* media-query: calls the specified media query
 
 ##Accessibility
 
-There are two accessibility mixins both of which refer to visually hiding and unhiding elements from the page. An example of using both in tandem can be found on the skip link integrated by default into Mimogear. The following example hides the map-label visually by default and is then revealed on focus.
+There are two accessibility mixins both of which refer to visually hiding and unhiding elements from the page. An example of using both in tandem can be found on the skip link included by default into Mimogear. The following example visually hides the map-label and is then reset on focus.
 
 **Postcss**
 
@@ -49,7 +49,7 @@ There are two accessibility mixins both of which refer to visually hiding and un
 
 ##Clearfix
 
-The clearfix mixin clears out any containers that have floated elements within them. By default the mimo grid uses the clearfix mixin. Make sure the mixin is declared within the after psuedo selector.
+The clearfix mixin prevents the collapse of any containers that have floated elements within them. By default, the mimo grid uses the clearfix mixin as a fallback for floated columns. Make sure the mixin is declared within the after psuedo selector.
 
 **Postcss**
 
@@ -75,7 +75,7 @@ The clearfix mixin clears out any containers that have floated elements within t
 
 ##Compartment
 
-The compartment mixin ensures that a container will be horizontally centered and never exceed the maximum width specified. The compartment class is available which makes use of the compartment mixin. By default, the max-width parameter is the value of the site-boundary specified within configuration.js.
+The compartment mixin ensures that a container will be horizontally centered and never exceed the maximum width specified. The compartment class, which makes use of the compartment mixin, is available within the sections partial. By default, the max-width parameter is the value of the site-boundary specified within configuration.js.
 
 **Postcss**
 
@@ -121,7 +121,7 @@ The cover mixin is used to blanket an element on top of another element. By defa
 
 ##Font Face
 
-The font face mixin helps include fonts that originate from the various font file types. The mixin accepts 4 parameters: the font family name, the font family file path name, the font style, and the font weight. By default, font-style will output to normal and font-weight will also output to normal. The fonts folder should be placed within the dist folder in order for the font files to be properly called.
+The font-face mixin helps include local font files into your project. The mixin accepts 4 parameters: the font family name, the font family file path name, the font-style, and the font-weight. By default, font-style will output to normal and font-weight will also output to normal. The fonts folder should be placed within the dist folder in order for the font files to be properly called.
 
 **Postcss**
 
@@ -146,7 +146,7 @@ The font face mixin helps include fonts that originate from the various font fil
 
 ##List Reset
 
-The list reset mixin is available to help reset the default styles of lists. This is used frequently when styling list based navigation components. The following example assumes the class of sorted cards is either an ol or ul element.
+The list-reset mixin is available to help reset the default browser styles of lists. This is used frequently when styling list based navigation components. The following example assumes the class of sorted-cards is either an ol or ul element.
 
 **Postcss**
 

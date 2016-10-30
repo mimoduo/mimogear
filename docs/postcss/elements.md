@@ -6,7 +6,7 @@ Elements refer to standard html elements.
 
 Buttons are styled all at once at first and then extended using simple class modifiers. Focus and hover states are also combined to ensure proper keyboard and mouse focus. Disabled styles are also provided to prevent any sort of confusion while interacting with a disabled button.
 
-```css
+```postcss
 .button-hollow {}
 
 .button-condensed {}
@@ -53,12 +53,23 @@ If you wish to use the spotlight (also commonly referred to as the hero image), 
 
 ##Sprite
 
-The sprite partial is used to add the width and height for each symbol that is included in the generated svg sprite. The example below styles a symbol called "mage" with the given width and height. This selector should be nested within the .symbol class that is currently present in the sprite partial. By doing so, the generated css selector will be .symbol-mage {}.
+The sprite partial is used to add the width and height for each symbol that is included in the generated svg sprite. The example below styles a symbol called "mage" with a given width and height. This selector should be nested within the .symbol class that is currently present in the sprite partial.
 
-```css
+**Postcss**
+
+```postcss
 &-mage {
   height: em(20);
   width: em(20);
+}
+```
+
+**CSS Output**
+
+```css
+.symbol-mage {
+  height: 1.25em;
+  width: 1.25em;
 }
 ```
 
@@ -66,8 +77,20 @@ The sprite partial is used to add the width and height for each symbol that is i
 
 The type partial contains all of your heading 1-6 styles. Each heading is styled using a respective mixin. By using a mixin, you are able to use these heading styles elsewhere in your project. This use is reserved for selectors that aren't headers but have been styled as such in the design.
 
-```css
+**Postcss**
+
+```postcss
 cite {
   @mixin h6;
+}
+```
+
+**CSS Output**
+
+```css
+cite {
+  margin: 1.25rem 0;
+  font-size: 1rem;
+  line-height: 1.375;
 }
 ```

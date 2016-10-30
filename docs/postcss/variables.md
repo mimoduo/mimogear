@@ -13,7 +13,7 @@ Variables are housed within the configuration.js file within the root of Mimogea
   * compartment boundary
   * query widths / incremented by 100
 
-Colors were excluded in order to provide the freedom of the color naming convention of your choice. The following list provides a two sets of examples of naming conventions you can take inspiration from. The first set is easy to write and color agnostic. The second set clearly defines the color and is easy to refer to.
+Colors were excluded in order to provide the freedom of choosing the color naming convention of your choice. The following list provides two sets of examples of naming conventions you can take inspiration from. The first set is easy to write and color agnostic. The second set clearly defines the color and is easy to refer to.
 
 ```js
 "$m1": "#aae", // Main Color One
