@@ -13,7 +13,7 @@ ol.sail-slides
   li
 ```
 
-**js**
+**Javascript**
 
 ```js
 Sail.init({

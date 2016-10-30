@@ -16,7 +16,7 @@ A harmonica provides a way to have accordions on smaller screens and eventually 
   article.harmonica-content Donec quam felis.
 ```
 
-**js**
+**Javascript**
 
 ```js
 Harmonica.init({

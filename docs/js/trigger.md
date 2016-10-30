@@ -10,7 +10,7 @@ A trigger provides a way of enabling a class on the body element after clicking 
 button.trigger
 ```
 
-**js**
+**Javascript**
 
 ```js
 Trigger.init({

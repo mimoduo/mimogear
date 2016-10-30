@@ -18,7 +18,7 @@ img.lantern-light(
 )
 ```
 
-**js**
+**Javascript**
 
 ```js
 Lantern.init({
