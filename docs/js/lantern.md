@@ -1,6 +1,6 @@
 #Lantern
 
-A lantern (lightbox) allows the user to see an enlarged picture after interacting with a smaller thumbnail.
+A lantern (lightbox) allows the user to see an enlarged picture after interacting with a smaller thumbnail. Captions are not enabled by default, however, you can read about how to add them within the [postcss/mimo documentation](https://github.com/mimoduo/Mimogear/blob/master/docs/postcss/mimo.md#lantern)
 
 ##Usage With Default Options Shown
 

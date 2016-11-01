@@ -45,7 +45,7 @@ The grid partial contains styles relative to the [Postcss-simple-grid](https://g
     width: 8.33333%;
   }
 
-  /* ...columns 2-11... */
+  /* ...generated rules for columns 2-11... */
 
   .column-gamagori-12 {
     width: 100%;
@@ -56,16 +56,27 @@ The grid partial contains styles relative to the [Postcss-simple-grid](https://g
 
 ##Harmonica
 
-The harmonica partial styles the ordering of active content within a harmonica. The $accordion-to-harmonica variable dictates when the accordion on smaller screens becomes a harmonica on larger screens.
+The harmonica partial styles the ordering of active content within an accordion/harmonica. The $accordion-to-harmonica variable dictates when the accordion on smaller screens becomes a harmonica on larger screens. If harmonicas are not need but accordions are, simply delete the media queries within the harmonica partial.
 
 ##Lantern
 
-The lantern partial styles the lantern holder, dictates recommended controller positions, and makes sure that images will fit properly within the viewport.
+The lantern partial styles the lightbox, dictates recommended controller positions, and makes sure that images will fit properly within the viewport. It's possible to show the caption of an image by assessing the title attribute of the lantern-content. The following example uses &:after to extract the title from lantern-content.
+
+```postcss
+.lantern-content {
+  // styles
+
+  &:after {
+    content: attr(title);
+  }
+
+}
+```
 
 ##Mimo Theme
 
-The mimo-theme styles the main index page that is shown by default. This theme is safe to delete during production.
+The mimo-theme styles the main index page that is shown by default. This theme is safe to delete during production. There are some useful examples in the mimo-theme of mixins, functions, and common ways to style mimo modules if you're up for some exploration!
 
 ##Sail
 
-The sail partial contains styles that animate slides and help dictate user interaction with controls. Make sure to style the previous, next, and pagination controls if they are in use.
+The sail partial contains styles that animate slides and help dictate mouse interaction. Make sure to style the previous control, next control, and pagination if they are in use.

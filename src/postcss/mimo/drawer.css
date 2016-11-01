@@ -72,7 +72,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    height: em(2);
+    height: rem(2);
     width: em(20);
     content: '';
     background: currentColor;
@@ -86,11 +86,11 @@
   }
 
   &:before {
-    margin-top: em(-4);
+    margin-top: em(-5);
   }
 
   &:after {
-    box-shadow: 0 em(4) 0 0 currentColor;
+    box-shadow: 0 em(5) 0 0 currentColor;
   }
 
 }

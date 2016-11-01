@@ -4,7 +4,7 @@ Structure elements are high level components that usually contain styles for spa
 
 ##Regions
 
-Regions refer to their respective pug regions with the addition of main content region. These elements are included on every page by default.
+Regions refer to their respective pug regions with the addition of main content region. These elements, namely the header, main content area, and footer, are included on every page by default.
 
 ##Root
 

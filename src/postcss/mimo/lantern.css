@@ -54,6 +54,11 @@
       right: 0;
     }
 
+    .lantern-close {
+      top: 0;
+      right: 0;
+    }
+
 /* Inline lantern image */
 .lantern-light {
   cursor: pointer;

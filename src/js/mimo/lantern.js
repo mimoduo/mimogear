@@ -58,8 +58,8 @@ Lantern = {
       Lantern.previousLight();
     });
     prev.classList.add('lantern-control');
-    prev.classList.add('lantern-prev');
-    prev.innerHTML = '<svg class="symbol symbol-prev">' +
+    prev.classList.add('lantern-previous');
+    prev.innerHTML = '<svg class="symbol symbol-previous">' +
     '<use xlink:href="' + l.symbols.prev + '"></use>' +
     '</svg>';
     content.appendChild(prev);
@@ -161,6 +161,7 @@ Lantern = {
     l.vdom.holder.setAttribute('src', l.lightCollection[l.lightIndex][0]);
     l.vdom.holder.setAttribute('alt', l.lightCollection[l.lightIndex][1]);
     l.vdom.holder.setAttribute('title', l.lightCollection[l.lightIndex][1]);
+    l.vdom.content.setAttribute('title', l.lightCollection[l.lightIndex][1]);
 
   }
 

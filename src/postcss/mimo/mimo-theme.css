@@ -46,6 +46,7 @@ $m2: #f0d0ff;
     @mixin media $tiny {
       font-size: em(24, 18);
     }
+
   }
 
   & p {
@@ -71,8 +72,11 @@ $m2: #f0d0ff;
 .mimo-theme {
 
   & .drawer-trigger {
-    left: em(-15);
+    position: absolute;
+    top: 50%;
+    left: 0;
     font-size: em(16, 18);
+    transform: translate(0, -50%);
 
     &:before,
     &:after {
@@ -101,12 +105,26 @@ $m2: #f0d0ff;
     width: em(20, 18);
   }
 
-  & .symbol-logo {
-    height: em(64, 18);
-    max-width: em(380, 18);
-    width: 100%;
-    fill: $m1;
+}
+
+
+/* ================
+// Logo
+// ============= */
+
+.mimo-theme {
+
+  & .site-logo {
+    margin-left: em(40, 18);
   }
+
+    & .symbol-logo {
+      display: block;
+      height: em(64, 18);
+      max-width: em(380, 18);
+      width: 100%;
+      fill: $m1;
+    }
 
 }
 
@@ -120,6 +138,10 @@ $m2: #f0d0ff;
   & .nav-main {
 
     & a {
+      display: inline-block;
+      margin: em(4, 18) 0;
+      padding: em(4, 18) 0;
+      font-weight: 700;
       text-decoration: none;
       color: inherit;
     }
@@ -169,7 +191,7 @@ $m2: #f0d0ff;
 
 .mimo-theme {
 
-  @media (min-width: 700px) {
+  @media (min-width: $big) {
 
     & .column-big {
       create-grid: 12;
@@ -201,9 +223,13 @@ $m2: #f0d0ff;
 .mimo-theme {
 
   & .reason-symbol {
-    display: table-cell;
+    display: none;
     vertical-align: top;
     padding-right: em(20, 18);
+
+    @mixin media $mini {
+      display: table-cell;
+    }
 
     & .symbol {
       height: em(30, 18);
@@ -321,7 +347,7 @@ $m2: #f0d0ff;
       &:first-child {
 
         @mixin media $big {
-          width: 57.5%;
+          width: 52%;
           margin-bottom: 0;
         }
 
@@ -331,7 +357,7 @@ $m2: #f0d0ff;
         margin-bottom: 0;
 
         @mixin media $big {
-          width: 42.5%;
+          width: 48%;
         }
 
       }
@@ -352,18 +378,12 @@ $m2: #f0d0ff;
           background: none;
         }
 
-        & .lantern-prev {
+        & .lantern-previous {
           transform: translate(-100%, -50%);
         }
 
         & .lantern-next {
           transform: translate(100%, -50%);
-        }
-
-        & .lantern-close {
-          position: absolute;
-          top: 0;
-          right: 0;
         }
 
 }

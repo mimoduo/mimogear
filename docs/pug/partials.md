@@ -22,3 +22,12 @@ include ../partials/nav-main.pug
 ```pug
 include ../../partials/nav-main.pug
 ```
+
+##Navigation Partials
+
+Sometimes you'll need to add a unique class to navigation. Mimogear removes the nav class declaration from the navigation partial in order to allow for this type of flexibility. The following example shows the navigation partial being included on a page. A working example can be found within the header region under pug/regions/header.pug.
+
+```pug
+nav.nav-main.nav-main-condensed
+  include ../partials/nav-main.pug
+```

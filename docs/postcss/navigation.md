@@ -4,7 +4,7 @@ Navigational elements help the user browse the site. Each postcss navigation par
 
 ##Behaviors
 
-Behaviors dictate how each navigation will look by default, includes additional behavior for dropdowns, and also styles the skip link that is included on every page.
+Behaviors dictate how each navigation will look by default, includes interactivity for dropdowns, and also styles the skip link that is included on every page.
 
 ##Main
 
