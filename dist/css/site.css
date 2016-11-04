@@ -649,7 +649,7 @@ menu {
 }.mimo-theme .reason-symbol .symbol{
   height: 1.6666666666666667em;
   width: 1.6666666666666667em;
-  fill: #f0d0ff;
+  fill: currentColor;
 }.mimo-theme .reason-details{
   display: table-cell;
   vertical-align: top;
@@ -661,12 +661,15 @@ menu {
 }.mimo-theme .sail-slides li{
   display: inline-block;
   margin-bottom: 0.5714285714285714em;
-  padding: 1.4285714285714286em 0.5714285714285714em;
+  padding: 1.7142857142857142em 0.5714285714285714em;
   font-size: 1.9444444444444444em;
   font-weight: 700;
   line-height: 1;
   background: #f0d0ff;
   color: #9e12ef;
+}@media print{.mimo-theme .sail-slides li{
+    padding: 0.2857142857142857em;
+  }
 }.mimo-theme .sail-controls{
   margin-bottom: 0.8333333333333334em;
 }.mimo-theme .sail-control{
@@ -710,21 +713,7 @@ menu {
   background: currentColor;
 }/* ================
 // Lantern
-// ============= */.mimo-theme .lantern-grid{
-  margin: 0 -1.1111111111111112em;
-}.mimo-theme .lantern-column{
-  width: 100%;
-  margin-bottom: 1.1111111111111112em;
-}@media screen and (min-width: 700px){.mimo-theme .lantern-column:first-child{
-    width: 52%;
-    margin-bottom: 0;
-  }
-}.mimo-theme .lantern-column:last-child{
-  margin-bottom: 0;
-}@media screen and (min-width: 700px){.mimo-theme .lantern-column:last-child{
-    width: 48%;
-  }
-}.mimo-theme .lantern{
+// ============= */.mimo-theme .lantern{
   padding: 2.7777777777777777em;
   background: rgba(255, 255, 255, .75);
 }.mimo-theme .lantern-holder{
@@ -738,12 +727,26 @@ menu {
 }.mimo-theme .lantern-next{
   -webkit-transform: translate(100%, -50%);
   transform: translate(100%, -50%);
+}.mimo-theme .lantern-grid{
+  margin: 0 -1.1111111111111112em;
+}.mimo-theme .lantern-column{
+  width: 100%;
+  margin-bottom: 1.1111111111111112em;
+}@media screen and (min-width: 700px){.mimo-theme .lantern-column:first-child{
+    width: 52%;
+    margin-bottom: 0;
+  }
+}.mimo-theme .lantern-column:last-child{
+  margin-bottom: 0;
+}@media screen and (min-width: 700px){.mimo-theme .lantern-column:last-child{
+    width: 48%;
+  }
 }/* ================
 // Harmonica
 // ============= */.mimo-theme .harmonica-header{
   border: 0;
   margin: 0 0 1.1111111111111112em;
-  padding: .5em 1em;
+  padding: 0.5555555555555556em 1.1111111111111112em;
   text-align: left;
   background: #f0d0ff;
   color: inherit;
@@ -754,9 +757,33 @@ menu {
   margin: 0.4em 0;
 }.mimo-theme .harmonica-header-active{
   background: #9e12ef;
-  color: #fff;
+  color: #f0d0ff;
 }.mimo-theme .harmonica-content{
   margin-bottom: 1.25em;
+}/* ================
+// Share
+// ============= */.github-link {
+  display: inline-block;
+  padding: 0.5555555555555556em 1.6666666666666667em;
+  padding-left: 0;
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+  transition: color .25s
+
+}.github-link:focus,
+  .github-link:hover{
+  color: #fff;
+}.github-link .symbol{
+  display: inline-block;
+  vertical-align: middle;
+  height: 1.3333333333333333em;
+  width: 1.3333333333333333em;
+  margin-right: 0.5555555555555556em;
+  fill: currentColor;
+}.github-link span{
+  display: inline-block;
+  vertical-align: middle;
 }/* ================
 // Sail Slide
 //   http://codepen.io/mimoduo/pen/gabWmN

@@ -27,18 +27,18 @@ Under the hood, Mimogear uses [gulp](http://gulpjs.com/) as a task runner, [pug]
 
 ###[Postcss](http://postcss.org/) Features
 
-* Idiomatic css formatting
-* Common helper utilities
-* Functions for calculating popular css units
 * [Postcss-simple-grid](https://github.com/iamfrntdv/postcss-simple-grid) integration with flexbox
+* Common helper utilities: clearfix, cover, font-face, etc.
+* Functions for calculating ems and rems
+* Idiomatic css formatting
 
 ###[Pug](https://pugjs.org/api/getting-started.html) Features
 
 * Starter template
 * Well structured head element setup
-* Several frequently used starter partials
+* Several starter partials: address, article, table
 * Accessibility measures added into pug partials from: (https://github.com/nhall/Accessible-Components)
-* SVG symbol mixin
+* SVG symbol mixin to complement the svg sprite
 
 ##Browser Support
 

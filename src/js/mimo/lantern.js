@@ -90,6 +90,8 @@ Lantern = {
     l.vdom.close = close;
 
     for (var i = 0; i < l.lanternLights.length; i++) {
+      l.lanternLights[i].setAttribute('tabindex', '0');
+
       l.lanternLights[i].addEventListener('click', function(event) {
         Lantern.displayLight(event);
       });

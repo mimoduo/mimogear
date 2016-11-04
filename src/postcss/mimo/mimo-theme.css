@@ -234,7 +234,7 @@ $m2: #f0d0ff;
     & .symbol {
       height: em(30, 18);
       width: em(30, 18);
-      fill: $m2;
+      fill: currentColor;
     }
 
   }
@@ -260,12 +260,17 @@ $m2: #f0d0ff;
     & li {
       display: inline-block;
       margin-bottom: em(20, 35);
-      padding: em(50, 35) em(20, 35);
+      padding: em(60, 35) em(20, 35);
       font-size: em(35, 18);
       font-weight: 700;
       line-height: 1;
       background: $m2;
       color: $m1;
+
+      @media print {
+        padding: em(10, 35);
+      }
+
     }
 
   }
@@ -336,6 +341,28 @@ $m2: #f0d0ff;
 
 .mimo-theme {
 
+  & .lantern {
+    padding: em(50, 18);
+    background: rgba(255, 255, 255, .75);
+  }
+
+    & .lantern-holder {
+      border: em(5, 18) solid #fff;
+    }
+
+    & .lantern-control {
+      border: 0;
+      background: none;
+    }
+
+    & .lantern-previous {
+      transform: translate(-100%, -50%);
+    }
+
+    & .lantern-next {
+      transform: translate(100%, -50%);
+    }
+
   & .lantern-grid {
     margin: 0 em(-20, 18);
   }
@@ -364,28 +391,6 @@ $m2: #f0d0ff;
 
     }
 
-      & .lantern {
-        padding: em(50, 18);
-        background: rgba(255, 255, 255, .75);
-      }
-
-        & .lantern-holder {
-          border: em(5, 18) solid #fff;
-        }
-
-        & .lantern-control {
-          border: 0;
-          background: none;
-        }
-
-        & .lantern-previous {
-          transform: translate(-100%, -50%);
-        }
-
-        & .lantern-next {
-          transform: translate(100%, -50%);
-        }
-
 }
 
 
@@ -398,7 +403,7 @@ $m2: #f0d0ff;
   & .harmonica-header {
     border: 0;
     margin: 0 0 em(20, 18);
-    padding: .5em 1em;
+    padding: em(10, 18) em(20, 18);
     text-align: left;
     background: $m2;
     color: inherit;
@@ -412,11 +417,46 @@ $m2: #f0d0ff;
 
   & .harmonica-header-active {
     background: $m1;
-    color: #fff;
+    color: $m2;
   }
 
   & .harmonica-content {
     margin-bottom: em(20);
+  }
+
+}
+
+
+/* ================
+// Share
+// ============= */
+
+.github-link {
+  display: inline-block;
+  padding: em(10, 18) em(30, 18);
+  padding-left: 0;
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+  transition: color .25s;
+
+  &:focus,
+  &:hover {
+    color: #fff;
+  }
+
+  & .symbol {
+    display: inline-block;
+    vertical-align: middle;
+    height: em(24, 18);
+    width: em(24, 18);
+    margin-right: em(10, 18);
+    fill: currentColor;
+  }
+
+  & span {
+    display: inline-block;
+    vertical-align: middle;
   }
 
 }
