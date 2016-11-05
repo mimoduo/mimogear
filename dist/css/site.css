@@ -370,7 +370,7 @@ menu {
       translate(-50%, -50%)
       rotate(45deg);
   }/* ================
-// Grid / Columns
+// Grid System
 // ============= */.grid {
   display: flex;
   flex-wrap: wrap
@@ -385,87 +385,62 @@ menu {
 }.column {
     float: left;
     width: 100%;
-  }@media (min-width: 600px) {
-
-    .column-medium-1{
+  }@media screen and (min-width: 600px){.column-medium-1{
     width: 8.33333%;
-  }
-
-    .column-medium-2{
+  }.column-medium-2{
     width: 16.66667%;
-  }
-
-    .column-medium-3{
+  }.column-medium-3{
     width: 25%;
-  }
-
-    .column-medium-4{
+  }.column-medium-4{
     width: 33.33333%;
-  }
-
-    .column-medium-5{
+  }.column-medium-5{
     width: 41.66667%;
-  }
-
-    .column-medium-6{
+  }.column-medium-6{
     width: 50%;
-  }
-
-    .column-medium-7{
+  }.column-medium-7{
     width: 58.33333%;
-  }
-
-    .column-medium-8{
+  }.column-medium-8{
     width: 66.66667%;
-  }
-
-    .column-medium-9{
+  }.column-medium-9{
     width: 75%;
-  }
-
-    .column-medium-10{
+  }.column-medium-10{
     width: 83.33333%;
-  }
-
-    .column-medium-11{
+  }.column-medium-11{
     width: 91.66667%;
-  }
-
-    .column-medium-12{
+  }.column-medium-12{
     width: 100%;
   }
-
-  }/* ================
+}/* ================
 // Harmonica
 //   http://codepen.io/mimoduo/pen/epZaMq
 //   https://github.com/mimoduo/Harmonica
-// ============= *//* When do accordions become harmonicas? */@media(min-width: 900px) {.harmonica{
+// ============= *//* When do accordions become harmonicas? */@media screen and (min-width: 900px){.harmonica{
     display: flex;
     flex-wrap: wrap;
   }
-  }.harmonica-header {
+}.harmonica-header {
     width: 100%;
     cursor: pointer
 
-  }@media(min-width: 900px) {.harmonica-header{
+  }@media screen and (min-width: 900px){.harmonica-header{
     flex: auto;
     order: 1;
     width: auto;
   }
-    }.harmonica-header-active + .harmonica-content{
+}.harmonica-header-active + .harmonica-content{
   display: block;
 }.harmonica-content {
     display: none
 
-  }@media(min-width: 900px) {.harmonica-content{
+  }@media screen and (min-width: 900px){.harmonica-content{
     order: 2;
     width: 100%;
   }
-    }@media print {.harmonica-content{
+}@media print {.harmonica-content{
     display: block;
   }
     }/* ================
-// Lantern
+// Lantern Lightbox
 //   http://codepen.io/mimoduo/pen/EPerjv
 //   https://github.com/mimoduo/Lantern
 // ============= */.lantern {
@@ -492,6 +467,10 @@ menu {
       max-height: 100%;
       max-width: 100%;
       margin: 0 auto;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
       -webkit-transform: translate(0, -50%);
       transform: translate(0, -50%);
     }/* Lantern User Controls */.lantern-control {
@@ -509,6 +488,10 @@ menu {
       right: 0;
     }/* Inline lantern image */.lantern-light {
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }/* Body when a lantern is visible */.lantern-triggered {
   overflow: hidden;
 }/* ================
@@ -548,45 +531,11 @@ menu {
     font-size: 1.1111111111111112em;
   }
 }/* ================
-// Drawer
-// ============= */.mimo-theme .drawer-trigger{
-  position: absolute;
-  top: 50%;
-  left: 0;
-  font-size: 0.8888888888888888em;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-}.mimo-theme .drawer-trigger:before,
-    .mimo-theme .drawer-trigger:after{
-  color: #9e12ef;
-}.mimo-theme .drawer{
-  padding: 1.1111111111111112em;
-  background: #9e12ef;
-  color: #fff;
-}/* ================
 // Icons
 // ============= */.mimo-theme .symbol{
   height: 1.1111111111111112em;
   width: 1.1111111111111112em;
-}/* ================
-// Logo
-// ============= */.mimo-theme .site-logo{
-  margin-left: 2.2222222222222223em;
-}.mimo-theme .symbol-logo{
-  display: block;
-  height: 3.5555555555555554em;
-  max-width: 21.11111111111111em;
-  width: 100%;
-  fill: #9e12ef;
-}/* ================
-// Navigation
-// ============= */.mimo-theme .nav-main a{
-  display: inline-block;
-  margin: 0.2222222222222222em 0;
-  padding: 0.2222222222222222em 0;
-  font-weight: 700;
-  text-decoration: none;
-  color: inherit;
+  fill: currentColor;
 }/* ================
 // Regions
 // ============= */.mimo-theme .site-header,
@@ -596,6 +545,77 @@ menu {
   margin-left: auto;
   padding: 1.1111111111111112em;
 }/* ================
+// Drawer
+// ============= */.mimo-theme .drawer-trigger{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  font-size: 0.8888888888888888em;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}@media screen and (min-width: 1000px){.mimo-theme .drawer-trigger{
+    display: none;
+  }
+}.mimo-theme .drawer-trigger:before,
+    .mimo-theme .drawer-trigger:after{
+  color: #9e12ef;
+}.mimo-theme .drawer{
+  padding: 1.1111111111111112em 0.5555555555555556em;
+  background: #9e12ef;
+  color: #fff;
+}@media screen and (min-width: 1000px){.mimo-theme .drawer{
+    pointer-events: auto;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    position: relative;
+    top: auto;
+    max-width: inherit;
+    min-height: inherit;
+    transition: none;
+    float: right;
+    width: auto;
+    padding: 0;
+    background: none;
+  }
+}/* ================
+// Navigation
+// ============= */@media screen and (min-width: 1000px){.mimo-theme .main-nav li{
+    display: inline-block;
+  }
+}.mimo-theme .main-nav a{
+  display: inline-block;
+  padding: 0.2222222222222222em 0.5555555555555556em;
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+  transition: background .25s,
+          color .25s;
+}@media screen and (min-width: 1000px){.mimo-theme .main-nav a{
+    padding: 1em 1.1111111111111112em;
+    color: #9e12ef;
+  }
+}.mimo-theme .main-nav a:focus,
+        .mimo-theme .main-nav a:hover{
+  background: #f0d0ff;
+  color: #9e12ef;
+}/* ================
+// Logo
+// ============= */.mimo-theme .site-logo{
+  margin-left: 2.2222222222222223em;
+}@media screen and (min-width: 1000px){.mimo-theme .site-logo{
+    margin-left: 0;
+  }
+}.mimo-theme .symbol-logo{
+  display: block;
+  height: 3.5555555555555554em;
+  max-width: 21.11111111111111em;
+  width: 100%;
+  fill: #9e12ef;
+}/* ================
 // Section
 // ============= */.mimo-theme .section{
   color: #9e12ef;
@@ -604,7 +624,7 @@ menu {
   color: #f0d0ff;
 }/* ================
 // Grid
-// ============= */@media (min-width: 700px) {.mimo-theme .column-big-1{
+// ============= */@media screen and (min-width: 700px){.mimo-theme .column-big-1{
     width: 8.33333%;
   }.mimo-theme .column-big-2{
     width: 16.66667%;
@@ -629,14 +649,11 @@ menu {
   }.mimo-theme .column-big-12{
     width: 100%;
   }
-
-  }.mimo-theme .grid{
+}.mimo-theme .grid{
   margin: 0 -1.1111111111111112em;
-}.mimo-theme [class^="column"]{
+}.mimo-theme .column{
   margin-bottom: 1.1111111111111112em;
   padding: 0 1.1111111111111112em;
-}.mimo-theme [class^="column"] h3{
-  margin: 0;
 }/* ================
 // Reasons
 // ============= */.mimo-theme .reason-symbol{
@@ -649,7 +666,6 @@ menu {
 }.mimo-theme .reason-symbol .symbol{
   height: 1.6666666666666667em;
   width: 1.6666666666666667em;
-  fill: currentColor;
 }.mimo-theme .reason-details{
   display: table-cell;
   vertical-align: top;
@@ -692,17 +708,16 @@ menu {
 }.mimo-theme .sail-control[disabled]{
   opacity: .25;
 }.mimo-theme .symbol-sail-control{
-  fill: currentColor;
-  font-size: 75%;
+  font-size: 80%;
 }.mimo-theme .sail-page{
   height: 1.1111111111111112em;
   width: 1.1111111111111112em;
   background: none;
-  border: 0.1111111111111111em solid;
-  margin: 0 0.2777777777777778em;
+  border: 0.16666666666666666em solid;
+  margin: 0 0.3333333333333333em;
   border-radius: 100%;
   color: currentColor;
-  transition: background .2s;
+  transition: background .25s;
 }.mimo-theme .sail-page:focus,
       .mimo-theme .sail-page:hover{
   background: #f0d0ff;
@@ -714,33 +729,38 @@ menu {
 }/* ================
 // Lantern
 // ============= */.mimo-theme .lantern{
-  padding: 2.7777777777777777em;
+  padding: 2.2222222222222223em;
   background: rgba(255, 255, 255, .75);
 }.mimo-theme .lantern-holder{
   border: 0.2777777777777778em solid #fff;
 }.mimo-theme .lantern-control{
+  height: 1.5625em;
+  width: 1.5625em;
   border: 0;
-  background: none;
+  background: #9e12ef;
+  border-radius: 100%;
+  color: #f0d0ff;
+  transition: background .25s,
+        box-shadow .25s,
+        color .25s;
+}.mimo-theme .lantern-control:focus,
+      .mimo-theme .lantern-control:hover{
+  background: #f0d0ff;
+  box-shadow: 0 0 0 0.125em #9e12ef;
+  color: #9e12ef;
+}.mimo-theme .lantern-control .symbol{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }.mimo-theme .lantern-previous{
   -webkit-transform: translate(-100%, -50%);
   transform: translate(-100%, -50%);
 }.mimo-theme .lantern-next{
   -webkit-transform: translate(100%, -50%);
   transform: translate(100%, -50%);
-}.mimo-theme .lantern-grid{
-  margin: 0 -1.1111111111111112em;
-}.mimo-theme .lantern-column{
-  width: 100%;
-  margin-bottom: 1.1111111111111112em;
-}@media screen and (min-width: 700px){.mimo-theme .lantern-column:first-child{
-    width: 52%;
-    margin-bottom: 0;
-  }
-}.mimo-theme .lantern-column:last-child{
-  margin-bottom: 0;
-}@media screen and (min-width: 700px){.mimo-theme .lantern-column:last-child{
-    width: 48%;
-  }
 }/* ================
 // Harmonica
 // ============= */.mimo-theme .harmonica-header{
@@ -750,9 +770,10 @@ menu {
   text-align: left;
   background: #f0d0ff;
   color: inherit;
-  transition: -webkit-transform .25s;
-  transition: transform .25s;
-  transition: transform .25s, -webkit-transform .25s;
+  transition: box-shadow .25s;
+}.mimo-theme .harmonica-header:focus,
+    .mimo-theme .harmonica-header:hover{
+  box-shadow: inset 0 0 0 0.25em #9e12ef;
 }.mimo-theme .harmonica-header h4{
   margin: 0.4em 0;
 }.mimo-theme .harmonica-header-active{
@@ -780,12 +801,11 @@ menu {
   height: 1.3333333333333333em;
   width: 1.3333333333333333em;
   margin-right: 0.5555555555555556em;
-  fill: currentColor;
 }.github-link span{
   display: inline-block;
   vertical-align: middle;
 }/* ================
-// Sail Slide
+// Sail Slideshow
 //   http://codepen.io/mimoduo/pen/gabWmN
 //   https://github.com/mimoduo/Sail
 // ============= */.sail-slides {
@@ -1034,7 +1054,7 @@ iframe {
     width: 1px;
   }/* Navigation
 // ::::::::::::: *//* ================
-// Generic Navigation/Menu Behaviors
+// Generic Navigation & Menu Behaviors
 // ============= */nav ol, menu ol{
   margin-top: 0;
   margin-bottom: 0;

@@ -99,7 +99,7 @@ Lantern = {
       l.lightCollection[i] = [];
       l.lightCollection[i].push(
         l.lanternLights[i].getAttribute('src'),
-        l.lanternLights[i].getAttribute('title')
+        l.lanternLights[i].getAttribute('alt')
       );
     }
 

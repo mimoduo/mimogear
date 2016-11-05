@@ -1,5 +1,5 @@
 /* ================
-// Grid / Columns
+// Grid System
 // ============= */
 
 .grid {
@@ -22,7 +22,7 @@
     width: 100%;
   }
 
-  @media (min-width: $medium) {
+  @mixin media $medium {
 
     .column-medium {
       create-grid: 12;

@@ -24,7 +24,11 @@
 
 @define-mixin reset-drawer {
   @mixin active-drawer;
+  position: relative;
+  top: auto;
+  max-width: inherit;
   min-height: inherit;
+  transition: none;
 }
 
 

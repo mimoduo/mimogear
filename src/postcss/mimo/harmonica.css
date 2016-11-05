@@ -9,7 +9,7 @@ $accordion-to-harmonica: 900px;
 
 .harmonica {
 
-  @media(min-width: $accordion-to-harmonica) {
+  @mixin media $accordion-to-harmonica {
     display: flex;
     flex-wrap: wrap;
   }
@@ -20,7 +20,7 @@ $accordion-to-harmonica: 900px;
     width: 100%;
     cursor: pointer;
 
-    @media(min-width: $accordion-to-harmonica) {
+    @mixin media $accordion-to-harmonica {
       flex: auto;
       order: 1;
       width: auto;
@@ -41,7 +41,7 @@ $accordion-to-harmonica: 900px;
   .harmonica-content {
     display: none;
 
-    @media(min-width: $accordion-to-harmonica) {
+    @mixin media $accordion-to-harmonica {
       order: 2;
       width: 100%;
     }

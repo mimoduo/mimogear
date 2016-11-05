@@ -6,7 +6,7 @@ Variables are housed within the configuration.js file within the root of Mimogea
   * font-family
   * body font-size
   * body line-height
-* headings
+* headings 1-6
   * font-size
   * line-height
 * media queries

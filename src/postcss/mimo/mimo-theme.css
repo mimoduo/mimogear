@@ -66,35 +66,6 @@ $m2: #f0d0ff;
 
 
 /* ================
-// Drawer
-// ============= */
-
-.mimo-theme {
-
-  & .drawer-trigger {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    font-size: em(16, 18);
-    transform: translate(0, -50%);
-
-    &:before,
-    &:after {
-      color: $m1;
-    }
-
-  }
-
-  & .drawer {
-    padding: em(20, 18);
-    background: $m1;
-    color: #fff;
-  }
-
-}
-
-
-/* ================
 // Icons
 // ============= */
 
@@ -103,49 +74,7 @@ $m2: #f0d0ff;
   & .symbol {
     height: em(20, 18);
     width: em(20, 18);
-  }
-
-}
-
-
-/* ================
-// Logo
-// ============= */
-
-.mimo-theme {
-
-  & .site-logo {
-    margin-left: em(40, 18);
-  }
-
-    & .symbol-logo {
-      display: block;
-      height: em(64, 18);
-      max-width: em(380, 18);
-      width: 100%;
-      fill: $m1;
-    }
-
-}
-
-
-/* ================
-// Navigation
-// ============= */
-
-.mimo-theme {
-
-  & .nav-main {
-
-    & a {
-      display: inline-block;
-      margin: em(4, 18) 0;
-      padding: em(4, 18) 0;
-      font-weight: 700;
-      text-decoration: none;
-      color: inherit;
-    }
-
+    fill: currentColor;
   }
 
 }
@@ -162,6 +91,118 @@ $m2: #f0d0ff;
     @mixin compartment 1040;
     padding: em(20, 18);
   }
+
+}
+
+
+/* ================
+// Drawer
+// ============= */
+
+.mimo-theme {
+
+  & .drawer-trigger {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    font-size: em(16, 18);
+    transform: translate(0, -50%);
+
+    @mixin media $aldnoah {
+      display: none;
+    }
+
+    &:before,
+    &:after {
+      color: $m1;
+    }
+
+  }
+
+  & .drawer {
+    padding: em(20, 18) em(10, 18);
+    background: $m1;
+    color: #fff;
+
+    @mixin media $aldnoah {
+      @mixin reset-drawer;
+      float: right;
+      width: auto;
+      padding: 0;
+      background: none;
+    }
+
+  }
+
+}
+
+
+/* ================
+// Navigation
+// ============= */
+
+.mimo-theme {
+
+  & .main-nav {
+
+    & li {
+
+      @mixin media $aldnoah {
+        display: inline-block;
+      }
+
+    }
+
+      & a {
+        display: inline-block;
+        padding: em(4, 18) em(10, 18);
+        font-weight: 700;
+        text-decoration: none;
+        color: inherit;
+        transition:
+          background .25s,
+          color .25s;
+
+        @mixin media $aldnoah {
+          padding: em(18, 18) em(20, 18);
+          color: $m1;
+        }
+
+        &:focus,
+        &:hover {
+          background: $m2;
+          color: $m1;
+        }
+
+      }
+
+  }
+
+}
+
+
+/* ================
+// Logo
+// ============= */
+
+.mimo-theme {
+
+  & .site-logo {
+    margin-left: em(40, 18);
+
+    @mixin media $aldnoah {
+      margin-left: 0;
+    }
+
+  }
+
+    & .symbol-logo {
+      display: block;
+      height: em(64, 18);
+      max-width: em(380, 18);
+      width: 100%;
+      fill: $m1;
+    }
 
 }
 
@@ -191,7 +232,7 @@ $m2: #f0d0ff;
 
 .mimo-theme {
 
-  @media (min-width: $big) {
+  @mixin media $big {
 
     & .column-big {
       create-grid: 12;
@@ -203,14 +244,9 @@ $m2: #f0d0ff;
     margin: 0 em(-20, 18);
   }
 
-    & [class^="column"] {
+    & .column {
       margin-bottom: em(20, 18);
       padding: 0 em(20, 18);
-
-      & h3 {
-        margin: 0;
-      }
-
     }
 
 }
@@ -234,7 +270,6 @@ $m2: #f0d0ff;
     & .symbol {
       height: em(30, 18);
       width: em(30, 18);
-      fill: currentColor;
     }
 
   }
@@ -301,19 +336,18 @@ $m2: #f0d0ff;
       }
 
         & .symbol-sail-control {
-          fill: currentColor;
-          font-size: 75%;
+          font-size: 80%;
         }
 
     & .sail-page {
       height: em(20, 18);
       width: em(20, 18);
       background: none;
-      border: em(2, 18) solid;
-      margin: 0 em(5, 18);
+      border: em(3, 18) solid;
+      margin: 0 em(6, 18);
       border-radius: 100%;
       color: currentColor;
-      transition: background .2s;
+      transition: background .25s;
 
       &:focus,
       &:hover {
@@ -342,7 +376,7 @@ $m2: #f0d0ff;
 .mimo-theme {
 
   & .lantern {
-    padding: em(50, 18);
+    padding: em(40, 18);
     background: rgba(255, 255, 255, .75);
   }
 
@@ -351,8 +385,32 @@ $m2: #f0d0ff;
     }
 
     & .lantern-control {
+      height: em(25);
+      width: em(25);
       border: 0;
-      background: none;
+      background: $m1;
+      border-radius: 100%;
+      color: $m2;
+      transition:
+        background .25s,
+        box-shadow .25s,
+        color .25s;
+
+      &:focus,
+      &:hover {
+        background: $m2;
+        box-shadow: 0 0 0 em(2) $m1;
+        color: $m1;
+      }
+
+      & .symbol {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        transform: translate(-50%, -50%);
+      }
+
     }
 
     & .lantern-previous {
@@ -361,34 +419,6 @@ $m2: #f0d0ff;
 
     & .lantern-next {
       transform: translate(100%, -50%);
-    }
-
-  & .lantern-grid {
-    margin: 0 em(-20, 18);
-  }
-
-    & .lantern-column {
-      width: 100%;
-      margin-bottom: em(20, 18);
-
-      &:first-child {
-
-        @mixin media $big {
-          width: 52%;
-          margin-bottom: 0;
-        }
-
-      }
-
-      &:last-child {
-        margin-bottom: 0;
-
-        @mixin media $big {
-          width: 48%;
-        }
-
-      }
-
     }
 
 }
@@ -407,7 +437,12 @@ $m2: #f0d0ff;
     text-align: left;
     background: $m2;
     color: inherit;
-    transition: transform .25s;
+    transition: box-shadow .25s;
+
+    &:focus,
+    &:hover {
+      box-shadow: inset 0 0 0 em(4) $m1;
+    }
 
     & h4 {
       margin: em(10, $h4Size) 0;
@@ -451,7 +486,6 @@ $m2: #f0d0ff;
     height: em(24, 18);
     width: em(24, 18);
     margin-right: em(10, 18);
-    fill: currentColor;
   }
 
   & span {

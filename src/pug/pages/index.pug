@@ -9,7 +9,7 @@ block theme
 
 block main
   +section
-    h2 Robust to the Core
+    h2 A Simple Static Site Generator
     p.lead Mimogear was built from scratch using modern front end practices. Under the hood you'll find #[strong gulp, pug, postcss, and javascript]. My goal was to create a #[strong static site generator] that accomplishes a variety of interface challenges while keeping it as simple as possible. I hope you enjoy how easy it is to build as much as I enjoyed creating it!
     .grid.reasons
       .column
@@ -38,7 +38,7 @@ block main
           </svg>
         .reason-details
           h4 Light
-          span No dependencies / 38kb distribution
+          span 38kb minified distribution
       .column
         .reason-symbol
           <svg class="symbol symbol-infinity" viewBox="0 0 24 24">
@@ -58,18 +58,20 @@ block main
   +section
     h2 Flexible Lightbox
     p.lead Lighbox images will scale to the height or width of the container without any javascript to do so
+    .grid
+      .column.column-big-6
+        img.lantern-light(
+          src="./dist/images/super-couple.jpg"
+          alt="A powerful gundam exia next to a cute yellow beetle"
+          title="Don't mess with the best!"
+        )
+      .column.column-big-6
+        img.lantern-light(
+          src="./dist/images/port-clyde.jpg"
+          alt="A symmetrical scene of a lamp between two beds at a b&b at Port Clyde"
+          title="Quite a charming room"
+        )
     .lantern
-    .grid.lantern-grid
-      .column.lantern-column
-        img.lantern-light(
-          src="./dist/images/rolling-girls-key-visual.png"
-          title="Rolling Girls Cycling in the Air"
-        )
-      .column.lantern-column
-        img.lantern-light(
-          src="./dist/images/rolling-girls-road.jpg"
-          title="Rolling Girls on the Road"
-        )
   +section
     h2 Flexbox Accordion Harmonica
     p.lead Accordions on mobile and then harmonicas at the breakpoint of your choice

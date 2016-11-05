@@ -1,6 +1,6 @@
 #Mimogear
 
-Mimogear is a starter kit for static sites. The main principle of Mimogear is to strike a balance between simplicity and features, to secure quality and consistency, to be as developer friendly as can be, and to be as project agnostic as possible.
+Mimogear is a simple static site generator. The main goal of Mimogear is to strike a balance between simplicity and features, to secure quality and consistency, to be as developer friendly as can be, and to be as project agnostic as possible.
 
 ##Tools Used in Mimogear
 
@@ -12,7 +12,7 @@ Under the hood, Mimogear uses [gulp](http://gulpjs.com/) as a task runner, [pug]
 * Postcss compilation with autoprefixing and minification
 * JS concatenation and uglification
 * Image optimization
-* Inline SVG Sprite Creator
+* SVG Sprite Generation
 * Browsersync auto reloading
 
 ###Javascript Features
@@ -22,6 +22,7 @@ Under the hood, Mimogear uses [gulp](http://gulpjs.com/) as a task runner, [pug]
 * [Lightbox/Lantern](http://codepen.io/mimoduo/pen/EPerjv)
 
 **Polyfills Included**
+
 * [classList](https://github.com/remy/polyfills)
 * [html5shiv](https://github.com/aFarkas/html5shiv)
 
@@ -70,7 +71,7 @@ npm install gulpjs/gulp-cli -g
 
 If you have used Mimogear and you'd love to share it here, feel free to create a pull request and add it to the list below.
 
-* [mimoduo](http://mimoduo.github.io/)
+* [mimogear](http://mimoduo.github.io/Mimogear/)
 
 ##Thank You, Everyone!
 

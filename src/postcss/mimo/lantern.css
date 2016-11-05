@@ -1,5 +1,5 @@
 /* ================
-// Lantern
+// Lantern Lightbox
 //   http://codepen.io/mimoduo/pen/EPerjv
 //   https://github.com/mimoduo/Lantern
 // ============= */
@@ -35,6 +35,7 @@
       max-height: 100%;
       max-width: 100%;
       margin: 0 auto;
+      user-select: none;
       transform: translate(0, -50%);
     }
 
@@ -62,6 +63,7 @@
 /* Inline lantern image */
 .lantern-light {
   cursor: pointer;
+  user-select: none;
 }
 
 /* Body when a lantern is visible */

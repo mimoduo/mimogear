@@ -1,5 +1,5 @@
 /* ================
-// Sail Slide
+// Sail Slideshow
 //   http://codepen.io/mimoduo/pen/gabWmN
 //   https://github.com/mimoduo/Sail
 // ============= */
@@ -55,8 +55,11 @@
 
   .sail-control {
     cursor: pointer;
-    
-    &:hover {}
+
+    &:not([disabled]):focus,
+    &:not([disabled]):hover {}
+
+    &[disabled] {}
 
   }
 

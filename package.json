@@ -1,20 +1,24 @@
 {
-  "name": "Mimogear",
+  "name": "mimogear",
   "version": "1.0.0",
   "homepage": "https://github.com/mimoduo/Mimogear",
   "author": "Bryan Stoner",
-  "description": "A starter kit for any front-end project",
+  "description": "Mimogear is a simple static site generator",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/mimoduo/Mimogear.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mimoduo/Mimogear/issues"
   },
   "keywords": [
     "mimogear",
     "mimoduo",
     "responsive",
     "starter kit",
-    "framework"
+    "framework",
+    "static site generator"
   ],
   "devDependencies": {
     "autoprefixer": "^6.5.1",
@@ -22,7 +26,7 @@
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-cssnano": "^2.1.2",
-    "gulp-imagemin": "^3.0.3",
+    "gulp-imagemin": "^3.1.1",
     "gulp-postcss": "^6.1.1",
     "gulp-pug": "^3.1.0",
     "gulp-rename": "^1.2.2",
