@@ -2,16 +2,6 @@
 
 Elements refer to standard html elements.
 
-##Buttons
-
-Buttons are styled all at once at first and then extended using simple class modifiers. Focus and hover states are also combined to ensure proper keyboard and mouse focus. Disabled styles are also provided to prevent any sort of confusion while interacting with a disabled button.
-
-```postcss
-.button-hollow {}
-
-.button-condensed {}
-```
-
 ##Forms
 
 * form
