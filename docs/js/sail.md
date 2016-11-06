@@ -8,9 +8,10 @@ A sail (slideshow) is a slideshow of elements that works based on a series of co
 
 ```pug
 ol.sail-slides
-  li
-  li
-  li
+  li One
+  li Two
+  li Three
+  li Four
 ```
 
 **Javascript**

@@ -12,6 +12,7 @@ Harmonica = {
       open: '#open',
       close: '#close'
     },
+    harmonicaView: 900,
     activeClass: 'harmonica-header-active'
   },
 
@@ -64,7 +65,7 @@ Harmonica = {
 
   clearClasses: function() {
 
-    if(document.body.clientWidth > 900) {
+    if(document.body.clientWidth > h.harmonicaView) {
 
       for (var i = 0; i < h.headings.length; i++) {
         h.headings[i].classList.remove(h.activeClass);
@@ -76,7 +77,7 @@ Harmonica = {
 
   assignClasses: function(event) {
 
-    if(document.body.clientWidth > 900) {
+    if(document.body.clientWidth > h.harmonicaView) {
       event.currentTarget.classList.add(h.activeClass);
     } else {
       event.currentTarget.classList.toggle(h.activeClass);

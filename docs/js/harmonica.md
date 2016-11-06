@@ -7,6 +7,7 @@ A harmonica provides a way to have accordions on smaller screens and eventually 
 * Any sort of markup can be used within the harmonica-header
 * Role attributes are added by default via javascript
 * The usage of a button as the header is required for keyboard entry and focus
+* The harmonicaView variable should be synced with harmonica-view within configuration.js
 
 ##Usage With All Default Options Shown
 
@@ -32,6 +33,7 @@ Harmonica.init({
     open: '#open',
     close: '#close'
   },
+  harmonicaView: 900,
   activeClass: 'harmonica-header-active'
 });
 ```
