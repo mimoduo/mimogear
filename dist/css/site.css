@@ -290,6 +290,9 @@ menu {
   left: 0;
   z-index: 200;
   max-width: 25em;
+  -webkit-transition: opacity .3s,
+    visibility .3s,
+    -webkit-transform .3s;
   transition: opacity .3s,
     visibility .3s,
     -webkit-transform .3s;
@@ -336,6 +339,10 @@ menu {
   color: #000;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  -webkit-transition: background .25s,
+      box-shadow .25s,
+      margin .25s,
+      -webkit-transform .25s;
   transition: background .25s,
       box-shadow .25s,
       margin .25s,
@@ -372,6 +379,7 @@ menu {
   }/* ================
 // Grid System
 // ============= */.grid {
+  display: -webkit-box;
   display: flex;
   flex-wrap: wrap
 
@@ -381,6 +389,7 @@ menu {
   content: '';
 }.grid-centered{
   align-content: center;
+  -webkit-box-align: center;
   align-items: center;
 }.column {
     float: left;
@@ -415,6 +424,7 @@ menu {
 //   http://codepen.io/mimoduo/pen/epZaMq
 //   https://github.com/mimoduo/Harmonica
 // ============= *//* When do accordions become harmonicas? */@media screen and (min-width: 900px){.harmonica{
+    display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
   }
@@ -423,7 +433,9 @@ menu {
     cursor: pointer
 
   }@media screen and (min-width: 900px){.harmonica-header{
+    -webkit-box-flex: 1;
     flex: auto;
+    -webkit-box-ordinal-group: 2;
     order: 1;
     width: auto;
   }
@@ -433,6 +445,7 @@ menu {
     display: none
 
   }@media screen and (min-width: 900px){.harmonica-content{
+    -webkit-box-ordinal-group: 3;
     order: 2;
     width: 100%;
   }
@@ -452,6 +465,8 @@ menu {
   width: 100%;
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: opacity .25s,
+    visibility .25s;
   transition:
     opacity .25s,
     visibility .25s;
@@ -575,6 +590,7 @@ menu {
     top: auto;
     max-width: inherit;
     min-height: inherit;
+    -webkit-transition: none;
     transition: none;
     float: right;
     width: auto;
@@ -592,6 +608,8 @@ menu {
   font-weight: 700;
   text-decoration: none;
   color: inherit;
+  -webkit-transition: background .25s,
+          color .25s;
   transition: background .25s,
           color .25s;
 }@media screen and (min-width: 1000px){.mimo-theme .main-nav a{
@@ -694,6 +712,8 @@ menu {
   font-size: 1.9444444444444444em;
   background: none;
   color: inherit;
+  -webkit-transition: opacity .25s,
+          -webkit-transform .25s;
   transition: opacity .25s,
           -webkit-transform .25s;
   transition: opacity .25s,
@@ -717,6 +737,7 @@ menu {
   margin: 0 0.3333333333333333em;
   border-radius: 100%;
   color: currentColor;
+  -webkit-transition: background .25s;
   transition: background .25s;
 }.mimo-theme .sail-page:focus,
       .mimo-theme .sail-page:hover{
@@ -740,6 +761,9 @@ menu {
   background: #9e12ef;
   border-radius: 100%;
   color: #f0d0ff;
+  -webkit-transition: background .25s,
+        box-shadow .25s,
+        color .25s;
   transition: background .25s,
         box-shadow .25s,
         color .25s;
@@ -770,6 +794,7 @@ menu {
   text-align: left;
   background: #f0d0ff;
   color: inherit;
+  -webkit-transition: box-shadow .25s;
   transition: box-shadow .25s;
 }.mimo-theme .harmonica-header:focus,
     .mimo-theme .harmonica-header:hover{
@@ -790,6 +815,7 @@ menu {
   font-weight: 700;
   text-decoration: none;
   color: inherit;
+  -webkit-transition: color .25s;
   transition: color .25s
 
 }.github-link:focus,
@@ -822,6 +848,9 @@ menu {
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: opacity .5s,
+      visibility .5s,
+      -webkit-transform .5s;
   transition: opacity .5s,
       visibility .5s,
       -webkit-transform .5s;
@@ -996,6 +1025,8 @@ iframe {
 }/* ================
 // Symbols
 // ============= */.symbol {
+  -webkit-transition: fill .25s,
+    stroke .25s;
   transition:
     fill .25s,
     stroke .25s
@@ -1070,6 +1101,8 @@ iframe {
   z-index: 20;
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: opacity .25s,
+          visibility .25s;
   transition: opacity .25s,
           visibility .25s;
 }nav a, menu a{
