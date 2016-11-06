@@ -1,7 +1,6 @@
 /* ================
-// Lantern
+// Lantern Lightbox
 //   http://codepen.io/mimoduo/pen/EPerjv
-//   https://github.com/mimoduo/Lantern
 // ============= */
 
 var l,

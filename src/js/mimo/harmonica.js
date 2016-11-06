@@ -1,7 +1,6 @@
 /* ================
-// Harmonica
+// Harmonica Accordion
 //   http://codepen.io/mimoduo/pen/epZaMq
-//   https://github.com/mimoduo/Harmonica
 // ============= */
 
 var h,

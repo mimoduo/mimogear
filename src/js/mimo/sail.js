@@ -1,7 +1,6 @@
 /* ================
-// Sail Slide
+// Sail Slideshow
 //   http://codepen.io/mimoduo/pen/gabWmN
-//   https://github.com/mimoduo/Sail
 // ============= */
 
 var s,

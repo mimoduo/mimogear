@@ -76,7 +76,7 @@ table {
 
   tr {
 
-    &:nth-of-type(odd) td {
+    &:nth-of-type(even) td {
       background: rgba(0, 0, 0, .025);
     }
 

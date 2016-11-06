@@ -17,21 +17,18 @@ Under the hood, Mimogear uses [gulp](http://gulpjs.com/) as a task runner, [pug]
 
 ###Javascript Features
 
-* [Slideshow/Sail module](http://codepen.io/mimoduo/pen/gabWmN)
-* [Accordion/Harmonica module](http://codepen.io/mimoduo/pen/epZaMq)
+* [Slideshow/Sail](http://codepen.io/mimoduo/pen/gabWmN)
+* [Accordion/Harmonica](http://codepen.io/mimoduo/pen/epZaMq)
 * [Lightbox/Lantern](http://codepen.io/mimoduo/pen/EPerjv)
-
-**Polyfills Included**
-
-* [classList](https://github.com/remy/polyfills)
-* [html5shiv](https://github.com/aFarkas/html5shiv)
+* [classList](https://github.com/remy/polyfills) polyfill
+* [html5shiv](https://github.com/aFarkas/html5shiv) polyfill
 
 ###[Postcss](http://postcss.org/) Features
 
 * [Postcss-simple-grid](https://github.com/iamfrntdv/postcss-simple-grid) integration with flexbox
-* Common helper utilities: clearfix, cover, font-face, etc.
+* Common helper utilities: clearfix, cover, font-face, media etc.
 * Functions for calculating ems and rems
-* Idiomatic css formatting
+* [Idiomatic css](https://github.com/necolas/idiomatic-css) formatting
 
 ###[Pug](https://pugjs.org/api/getting-started.html) Features
 

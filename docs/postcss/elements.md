@@ -47,7 +47,7 @@ Buttons are styled all at once at first and then extended using simple class mod
 If you wish to use the spotlight (also commonly referred to as the hero image), place the spotlight class and a background image onto the container of your choice. This class makes sure that the background image is centered and covers the full width and height of the container.
 
 ```pug
-.spotlight(style="background-image: url('http://i.imgur.com/Gb3SqEL.jpg')")
+.spotlight(style="background-image: url('./dist/images/super-couple.jpg')")
   h1 Page Title
 ```
 
@@ -58,9 +58,14 @@ The sprite partial is used to add the width and height for each symbol that is i
 **Postcss**
 
 ```postcss
-&-mage {
-  height: em(20);
-  width: em(20);
+.symbol {
+  /* styles */
+
+  &-mage {
+    height: em(20);
+    width: em(20);
+  }
+
 }
 ```
 
