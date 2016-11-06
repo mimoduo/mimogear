@@ -62,7 +62,7 @@
 
 /* Inline lantern image */
 .lantern-light {
-  cursor: pointer;
+  cursor: zoom-in;
   user-select: none;
 }
 

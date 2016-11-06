@@ -502,7 +502,7 @@ menu {
       top: 0;
       right: 0;
     }/* Inline lantern image */.lantern-light {
-  cursor: pointer;
+  cursor: zoom-in;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
