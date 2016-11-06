@@ -5,7 +5,7 @@
 // ============= */
 
 $m1: #9e12ef;
-$m2: #f0d0ff;
+$m2: #f0dfff;
 
 
 /* ================
@@ -16,17 +16,17 @@ $m2: #f0d0ff;
   font-family: 'Quicksand';
   color: $m1;
 
-  & body {
+  body {
     font-size: em(18);
     line-height: nu(28, 18);
   }
 
-  & h2,
-  & h4 {
+  h2,
+  h4 {
     font-weight: 700;
   }
 
-  & h2 {
+  h2 {
     display: inline-block;
     border-bottom: rem(3) solid currentColor;
     margin: 0;
@@ -34,27 +34,28 @@ $m2: #f0d0ff;
     font-size: em(24, 18);
 
     @mixin media $tiny {
-      font-size: em(32, 18);
+      font-size: em(34, 18);
+      line-height: nu(40, 34);
     }
 
   }
 
-  & h4 {
+  h4 {
     margin: 0 0 rem(10);
-    font-size: em(20, 18);
+    font-size: em(22, 18);
 
     @mixin media $tiny {
-      font-size: em(24, 18);
+      font-size: em(26, 18);
     }
 
   }
 
-  & p {
+  p {
     margin: rem(10) 0;
   }
 
-  & .lead {
-    margin-bottom: em(40, 18);
+  .lead {
+    margin-bottom: rem(40);
 
     @mixin media $tiny {
       font-size: em(20, 18);
@@ -71,7 +72,7 @@ $m2: #f0d0ff;
 
 .mimo-theme {
 
-  & .symbol {
+  .symbol {
     height: em(20, 18);
     width: em(20, 18);
     fill: currentColor;
@@ -86,8 +87,8 @@ $m2: #f0d0ff;
 
 .mimo-theme {
 
-  & .site-header,
-  & .site-footer {
+  .site-header,
+  .site-footer {
     @mixin compartment 1040;
     padding: em(20, 18);
   }
@@ -101,7 +102,7 @@ $m2: #f0d0ff;
 
 .mimo-theme {
 
-  & .drawer-trigger {
+  .drawer-trigger {
     position: absolute;
     top: 50%;
     left: 0;
@@ -119,10 +120,10 @@ $m2: #f0d0ff;
 
   }
 
-  & .drawer {
+  .drawer {
     padding: em(20, 18) em(10, 18);
-    background: $m1;
-    color: #fff;
+    background: $m2;
+    color: $m1;
 
     @mixin media $aldnoah {
       @mixin reset-drawer;
@@ -143,9 +144,9 @@ $m2: #f0d0ff;
 
 .mimo-theme {
 
-  & .main-nav {
+  .main-nav {
 
-    & li {
+    li {
 
       @mixin media $aldnoah {
         display: inline-block;
@@ -153,14 +154,16 @@ $m2: #f0d0ff;
 
     }
 
-      & a {
-        display: inline-block;
+      a {
+        display: block;
         padding: em(4, 18) em(10, 18);
         font-weight: 700;
         text-decoration: none;
+        border-radius: em(10, 18);
         color: inherit;
         transition:
           background .25s,
+          box-shadow .25s,
           color .25s;
 
         @mixin media $aldnoah {
@@ -171,6 +174,7 @@ $m2: #f0d0ff;
         &:focus,
         &:hover {
           background: $m2;
+          box-shadow: inset 0 0 0 em(4, 18) $m1;
           color: $m1;
         }
 
@@ -187,7 +191,7 @@ $m2: #f0d0ff;
 
 .mimo-theme {
 
-  & .site-logo {
+  .site-logo {
     margin-left: em(40, 18);
 
     @mixin media $aldnoah {
@@ -196,7 +200,7 @@ $m2: #f0d0ff;
 
   }
 
-    & .symbol-logo {
+    .symbol-logo {
       display: block;
       height: em(64, 18);
       max-width: em(380, 18);
@@ -213,12 +217,16 @@ $m2: #f0d0ff;
 
 .mimo-theme {
 
-  & .section {
+  .section {
     color: $m1;
 
     &:nth-of-type(odd) {
       background: $m1;
       color: $m2;
+    }
+
+    &:last-child {
+      border-bottom: em(4) solid $m1;
     }
 
   }
@@ -234,17 +242,17 @@ $m2: #f0d0ff;
 
   @mixin media $big {
 
-    & .column-big {
+    .column-big {
       create-grid: 12;
     }
 
   }
 
-  & .grid {
+  .grid {
     margin: 0 em(-20, 18);
   }
 
-    & .column {
+    .column {
       margin-bottom: em(20, 18);
       padding: 0 em(20, 18);
     }
@@ -258,7 +266,7 @@ $m2: #f0d0ff;
 
 .mimo-theme {
 
-  & .reason-symbol {
+  .reason-bubble {
     display: none;
     vertical-align: top;
     padding-right: em(20, 18);
@@ -267,14 +275,14 @@ $m2: #f0d0ff;
       display: table-cell;
     }
 
-    & .symbol {
-      height: em(30, 18);
-      width: em(30, 18);
-    }
-
   }
 
-  & .reason-details {
+    .symbol-reason {
+      height: em(38, 18);
+      width: em(38, 18);
+    }
+
+  .reason-details {
     display: table-cell;
     vertical-align: top;
     padding-bottom: em(20, 18);
@@ -289,10 +297,11 @@ $m2: #f0d0ff;
 
 .mimo-theme {
 
-  & .sail-slides {
+  .sail-slides {
     text-align: center;
+  }
 
-    & li {
+    .sail-slide {
       display: inline-block;
       margin-bottom: em(20, 35);
       padding: em(60, 35) em(20, 35);
@@ -300,21 +309,25 @@ $m2: #f0d0ff;
       font-weight: 700;
       line-height: 1;
       background: $m2;
+      border-radius: em(20, 35);
       color: $m1;
 
       @media print {
         padding: em(10, 35);
       }
 
+      &:nth-of-type(even) {
+        background: $m1;
+        color: $m2;
+      }
+
     }
 
-  }
-
-    & .sail-controls {
+    .sail-controls {
       margin-bottom: em(15, 18);
     }
 
-      & .sail-control {
+      .sail-control {
         border: 0;
         padding: 0 em(10, 35);
         font-size: em(35, 18);
@@ -335,11 +348,11 @@ $m2: #f0d0ff;
 
       }
 
-        & .symbol-sail-control {
-          font-size: 80%;
+        .symbol-sail {
+          font-size: 85%;
         }
 
-    & .sail-page {
+    .sail-page {
       height: em(20, 18);
       width: em(20, 18);
       background: none;
@@ -354,14 +367,14 @@ $m2: #f0d0ff;
         background: $m2;
       }
 
-    }
-
-    & .sail-page-active {
-      background: currentColor;
-
-      &:focus,
-      &:hover {
+      &-active {
         background: currentColor;
+
+        &:focus,
+        &:hover {
+          background: currentColor;
+        }
+
       }
 
     }
@@ -375,16 +388,16 @@ $m2: #f0d0ff;
 
 .mimo-theme {
 
-  & .lantern {
+  .lantern {
     padding: em(40, 18);
     background: rgba(255, 255, 255, .75);
   }
 
-    & .lantern-holder {
+    .lantern-holder {
       border: em(5, 18) solid #fff;
     }
 
-    & .lantern-control {
+    .lantern-control {
       height: em(25);
       width: em(25);
       border: 0;
@@ -403,7 +416,9 @@ $m2: #f0d0ff;
         color: $m1;
       }
 
-      & .symbol {
+    }
+
+      .symbol-lantern {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -411,14 +426,12 @@ $m2: #f0d0ff;
         transform: translate(-50%, -50%);
       }
 
+    .lantern-previous {
+      transform: translate(calc(-100% - em(5, 18)), -50%);
     }
 
-    & .lantern-previous {
-      transform: translate(-100%, -50%);
-    }
-
-    & .lantern-next {
-      transform: translate(100%, -50%);
+    .lantern-next {
+      transform: translate(calc(100% + em(5, 18)), -50%);
     }
 
 }
@@ -430,32 +443,50 @@ $m2: #f0d0ff;
 
 .mimo-theme {
 
-  & .harmonica-header {
+  .harmonica-header {
     border: 0;
     margin: 0 0 em(20, 18);
-    padding: em(10, 18) em(20, 18);
+    padding: em(9, 18) em(20, 18);
     text-align: left;
     background: $m2;
+    border-radius: em(10, 18);
     color: inherit;
     transition: box-shadow .25s;
+
+    @mixin media $accordion-to-harmonica {
+      text-align: center;
+      border-radius: 0;
+    }
+
+    &:first-of-type {
+
+      @mixin media $accordion-to-harmonica {
+        border-radius: em(20, 18) 0 0 em(20, 18);
+      }
+
+    }
+
+    &:last-of-type {
+
+      @mixin media $accordion-to-harmonica {
+        border-radius: 0 em(20, 18) em(20, 18) 0;
+      }
+
+    }
 
     &:focus,
     &:hover {
       box-shadow: inset 0 0 0 em(4) $m1;
     }
 
-    & h4 {
-      margin: em(10, $h4Size) 0;
+    &-active {
+      background: $m1;
+      color: $m2;
     }
 
   }
 
-  & .harmonica-header-active {
-    background: $m1;
-    color: $m2;
-  }
-
-  & .harmonica-content {
+  .harmonica-content {
     margin-bottom: em(20);
   }
 
@@ -463,34 +494,75 @@ $m2: #f0d0ff;
 
 
 /* ================
-// Share
+// Action Links
 // ============= */
 
-.github-link {
-  display: inline-block;
-  padding: em(10, 18) em(30, 18);
-  padding-left: 0;
-  font-weight: 700;
-  text-decoration: none;
-  color: inherit;
-  transition: color .25s;
+.mimo-theme {
 
-  &:focus,
-  &:hover {
-    color: #fff;
+  .action-links {
+    @mixin list-reset;
   }
 
-  & .symbol {
-    display: inline-block;
-    vertical-align: middle;
-    height: em(24, 18);
-    width: em(24, 18);
-    margin-right: em(10, 18);
-  }
+    .action-link-item {
+      display: inline-block;
+      margin-right: em(7, 18);
+      margin-bottom: em(10, 18);
+    }
 
-  & span {
-    display: inline-block;
-    vertical-align: middle;
-  }
+      .action-link {
+        display: inline-block;
+        padding: em(10, 18) em(20, 18);
+        font-weight: 700;
+        text-decoration: none;
+        border-radius: em(10, 18);
+        transition:
+          background .25s,
+          box-shadow .25s,
+          color .25s;
+
+        @mixin media $medium {
+          display: inline-block;
+        }
+
+        &-github {
+          background: $m2;
+          color: $m1;
+
+          &:focus,
+          &:hover {
+            background: $m1;
+            box-shadow: inset 0 0 0 em(4, 18) $m2;
+            color: $m2;
+          }
+
+        }
+
+        &-share {
+          background: $m1;
+          color: $m2;
+
+          &:focus,
+          &:hover {
+            background: $m2;
+            box-shadow: inset 0 0 0 em(4, 18) $m1;
+            color: $m1;
+          }
+
+        }
+
+      }
+
+        .symbol-action {
+          display: inline-block;
+          vertical-align: middle;
+          height: em(26, 18);
+          width: em(26, 18);
+          margin-right: em(5, 18);
+        }
+
+        .action-link-label {
+          display: inline-block;
+          vertical-align: middle;
+        }
 
 }

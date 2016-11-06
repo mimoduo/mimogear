@@ -1,12 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="380px" height="64px" viewBox="0 0 380 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
-    <title>Mimogear</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="70" font-family="Quicksand-Light, Quicksand" font-weight="300">
-        <text id="MIMO" fill="">
-            <tspan x="0" y="50">Mimogear</tspan>
-        </text>
-    </g>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="380px" height="64px" viewBox="0 0 380 64">
+  <title>Mimogear</title>
+  <desc>Mimogear site logo</desc>
+  <g font-family="Quicksand-Light, Quicksand" font-size="70" font-weight="300">
+    <text fill="">
+      <tspan x="0" y="50">Mimogear</tspan>
+    </text>
+  </g>
 </svg>

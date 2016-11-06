@@ -21,10 +21,10 @@ Sail.init({
   slide: '.sail-slides li',
   currentSlide: 0,
   symbols: {
-    prev: '#arrow-back',
+    previous: '#arrow-back',
     next: '#arrow-forward'
   },
-  activeSlideClass: 'sail-active',
+  activeSlideClass: 'sail-slide-active',
   activePageClass: 'sail-page-active'
 })
 ```

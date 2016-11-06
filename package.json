@@ -36,6 +36,7 @@
     "postcss-easy-import": "^1.0.1",
     "postcss-functions": "^2.1.1",
     "postcss-mixins": "^5.4.0",
+    "postcss-nested": "^1.0.0",
     "postcss-nesting": "^2.3.1",
     "postcss-simple-grid": "^0.7.1",
     "postcss-simple-vars": "^3.0.0"

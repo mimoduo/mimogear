@@ -28,6 +28,10 @@ A harmonica provides a way to have accordions on smaller screens and eventually 
 Harmonica.init({
   headings: '.harmonica-header',
   articles: '.harmonica-content',
+  symbols: {
+    open: '#open',
+    close: '#close'
+  },
   activeClass: 'harmonica-header-active'
 });
 ```

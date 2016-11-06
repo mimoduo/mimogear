@@ -1,6 +1,5 @@
 /* ================
 // Sail Slideshow
-//   http://codepen.io/mimoduo/pen/gabWmN
 // ============= */
 
 var s,
@@ -11,11 +10,11 @@ Sail = {
     slide: '.sail-slides li',
     currentSlide: 0,
     symbols: {
-      prev: '#arrow-back',
+      previous: '#arrow-back',
       next: '#arrow-forward'
     },
     vdom: {},
-    activeSlideClass: 'sail-active',
+    activeSlideClass: 'sail-slide-active',
     activePageClass: 'sail-page-active'
   },
 
@@ -48,22 +47,24 @@ Sail = {
     s.slides.appendChild(controls);
     s.vdom.controls = controls;
 
-    var prev = document.createElement('button');
-    prev.innerHTML = '<svg class="symbol symbol-sail-control">' +
-    '<use xlink:href="' + s.symbols.prev + '"></use>' +
+    var previous = document.createElement('button');
+    previous.classList.add('sail-control');
+    previous.classList.add('sail-previous');
+    previous.innerHTML = '<svg class="symbol symbol-sail symbol-sail-previous">' +
+    '<use xlink:href="' + s.symbols.previous + '"></use>' +
     '</svg>';
-    prev.classList.add('sail-control', 'sail-prev');
-    prev.addEventListener('click', function() {
+    previous.addEventListener('click', function() {
       Sail.sailThrough(-1);
     });
-    s.vdom.controls.appendChild(prev);
-    s.vdom.controls.prev = prev;
+    s.vdom.controls.appendChild(previous);
+    s.vdom.controls.previous = previous;
 
     var next = document.createElement('button');
-    next.innerHTML = '<svg class="symbol symbol-sail-control">' +
+    next.classList.add('sail-control');
+    next.classList.add('sail-next');
+    next.innerHTML = '<svg class="symbol symbol-sail symbol-sail-next">' +
     '<use xlink:href="' + s.symbols.next + '"></use>' +
     '</svg>';
-    next.classList.add('sail-control', 'sail-next');
     next.addEventListener('click', function() {
       Sail.sailThrough(1);
     });
@@ -77,6 +78,8 @@ Sail = {
     s.vdom.page = [];
 
     for (var i = 0; i < s.slide.length; i++) {
+      s.slide[i].classList.add('sail-slide');
+
       var page = document.createElement('button');
       page.classList.add('sail-page');
       page.addEventListener('click', Sail.sailTo.bind(null, i));
@@ -115,18 +118,18 @@ Sail = {
   determineDisabledStates: function() {
 
     if (s.currentSlide === 0) {
-      s.vdom.controls.prev.disabled = true;
-      s.vdom.controls.prev.setAttribute('aria-disabled', 'true');
+      s.vdom.controls.previous.disabled = true;
+      s.vdom.controls.previous.setAttribute('aria-disabled', 'true');
       s.vdom.controls.next.disabled = false;
       s.vdom.controls.next.setAttribute('aria-disabled', 'false');
     } else if (s.currentSlide < s.slide.length - 1) {
-      s.vdom.controls.prev.disabled = false;
-      s.vdom.controls.prev.setAttribute('aria-disabled', 'false');
+      s.vdom.controls.previous.disabled = false;
+      s.vdom.controls.previous.setAttribute('aria-disabled', 'false');
       s.vdom.controls.next.disabled = false;
       s.vdom.controls.next.setAttribute('aria-disabled', 'false');
     } else if (s.currentSlide == s.slide.length - 1) {
-      s.vdom.controls.prev.disabled = false;
-      s.vdom.controls.prev.setAttribute('aria-disabled', 'false');
+      s.vdom.controls.previous.disabled = false;
+      s.vdom.controls.previous.setAttribute('aria-disabled', 'false');
       s.vdom.controls.next.disabled = true;
       s.vdom.controls.next.setAttribute('aria-disabled', 'true');
     }

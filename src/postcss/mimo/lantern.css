@@ -1,7 +1,5 @@
 /* ================
 // Lantern Lightbox
-//   http://codepen.io/mimoduo/pen/EPerjv
-//   https://github.com/mimoduo/Lantern
 // ============= */
 
 .lantern {
@@ -18,7 +16,7 @@
     visibility .25s;
 }
 
-.lantern-active {
+.lantern-visible {
   opacity: 1;
   visibility: visible;
 }
@@ -64,9 +62,4 @@
 .lantern-light {
   cursor: zoom-in;
   user-select: none;
-}
-
-/* Body when a lantern is visible */
-.lantern-triggered {
-  overflow: hidden;
 }

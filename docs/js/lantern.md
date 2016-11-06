@@ -29,11 +29,10 @@ Lantern.init({
   lantern: '.lantern',
   lanternLights: '.lantern-light',
   symbols: {
-    prev: '#arrow-back',
+    previous: '#arrow-back',
     next: '#arrow-forward',
     close: '#close'
   },
-  activeClass: 'lantern-active',
-  activeBodyClass: 'latern-triggered'
+  activeClass: 'lantern-visible'
 });
 ```

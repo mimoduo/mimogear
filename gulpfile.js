@@ -51,7 +51,7 @@ gulp.task('postcss', function() {
         glob: true
       }),
       require('postcss-mixins'),
-      require('postcss-nesting'),
+      require('postcss-nested'),
       require('postcss-simple-grid')({
         separator: '-'
       }),

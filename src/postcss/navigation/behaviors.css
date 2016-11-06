@@ -5,23 +5,23 @@
 nav,
 menu {
 
-  & ol {
+  ol {
     @mixin list-reset;
   }
 
-    & li {
+    li {
 
       &:focus,
       &:hover {
 
-        & ol {
+        ol {
           opacity: 1;
           visibility: visible;
         }
 
       }
 
-      & ol {
+      ol {
         position: absolute;
         top: 100%;
         left: 0;
@@ -35,7 +35,7 @@ menu {
 
     }
 
-    & a {
+    a {
       display: block;
     }
 

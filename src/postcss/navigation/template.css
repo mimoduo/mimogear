@@ -4,11 +4,11 @@
 
 .template-nav {
 
-  & ol {}
+  ol {}
 
-    & li {}
+    li {}
 
-      & a {
+      a {
 
         &:hover {}
 

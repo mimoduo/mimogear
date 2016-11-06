@@ -1,7 +1,5 @@
 /* ================
 // Harmonica
-//   http://codepen.io/mimoduo/pen/epZaMq
-//   https://github.com/mimoduo/Harmonica
 // ============= */
 
 /* When do accordions become harmonicas? */
@@ -26,17 +24,44 @@ $accordion-to-harmonica: 900px;
       width: auto;
     }
 
+    &:focus,
     &:hover {}
 
+    &-active {}
+
   }
 
-  .harmonica-header-active {
+    .harmonica-indicator {
+      display: table-cell;
+      vertical-align: middle;
+      padding-right: em(10);
 
-    & + .harmonica-content {
-      display: block;
+      @mixin media $accordion-to-harmonica {
+        display: none;
+      }
+
     }
 
-  }
+      .symbol-harmonica-open {
+
+        .harmonica-header-active & {
+          display: none;
+        }
+
+      }
+
+      .symbol-harmonica-close {
+        display: none;
+
+        .harmonica-header-active & {
+          display: block;
+        }
+
+      }
+
+    .harmonica-heading {
+      display: table-cell;
+    }
 
   .harmonica-content {
     display: none;
@@ -47,6 +72,10 @@ $accordion-to-harmonica: 900px;
     }
 
     @media print {
+      display: block;
+    }
+
+    .harmonica-header-active + & {
       display: block;
     }
 

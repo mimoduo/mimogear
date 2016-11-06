@@ -7,7 +7,7 @@ Trigger = {
 
   settings: {
     trigger: '.trigger',
-    activeBodyClass: 'trigger-active'
+    activeBodyClass: 'trigger-activated'
   },
 
   init: function(options) {

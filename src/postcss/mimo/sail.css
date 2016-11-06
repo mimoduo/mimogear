@@ -1,7 +1,5 @@
 /* ================
 // Sail Slideshow
-//   http://codepen.io/mimoduo/pen/gabWmN
-//   https://github.com/mimoduo/Sail
 // ============= */
 
 @define-mixin active-slide {
@@ -13,8 +11,9 @@
 
 .sail-slides {
   @mixin list-reset;
+}
 
-  & li {
+  .sail-slide {
     position: absolute;
     top: 0;
     left: 0;
@@ -24,24 +23,21 @@
     visibility: hidden;
     transition:
       opacity .5s,
-      visibility .5s,
-      transform .5s;
+      visibility .5s;
 
     @media print {
       @mixin active-slide;
     }
 
-    &.sail-active {
+    &-active {
       @mixin active-slide;
     }
 
   }
 
-}
-
 
 /* ================
-// Sail Directions
+// Sail Controls
 // ============= */
 
 .sail-controls {
@@ -59,7 +55,9 @@
     &:not([disabled]):focus,
     &:not([disabled]):hover {}
 
-    &[disabled] {}
+    &[disabled] {
+      cursor: not-allowed;
+    }
 
   }
 
@@ -69,7 +67,7 @@
 
 
 /* ================
-// Sail Markers
+// Sail Pagination
 // ============= */
 
 .sail-pages {
@@ -85,8 +83,9 @@
     display: inline-block;
     cursor: pointer;
 
+    &:focus,
     &:hover {}
 
-    &.active {}
+    &-active {}
 
   }

@@ -1,6 +1,5 @@
 /* ================
 // Harmonica Accordion
-//   http://codepen.io/mimoduo/pen/epZaMq
 // ============= */
 
 var h,
@@ -9,6 +8,10 @@ Harmonica = {
   settings: {
     headings: '.harmonica-header',
     articles: '.harmonica-content',
+    symbols: {
+      open: '#open',
+      close: '#close'
+    },
     activeClass: 'harmonica-header-active'
   },
 
@@ -27,18 +30,34 @@ Harmonica = {
 
     if(document.body.contains(h.headings[0])) {
 
-      for (var i = 0; i < h.headings.length; i++) {
-        h.headings[i].setAttribute('role', 'tab')
-        h.articles[i].setAttribute('role', 'tabpanel')
-
-        h.headings[i].addEventListener('click', function(event) {
-          Harmonica.clearClasses();
-          Harmonica.assignClasses(event);
-        });
-      }
-
+      Harmonica.constructHarmonica();
       h.headings[0].click();
 
+    }
+
+  },
+
+  constructHarmonica: function() {
+
+    for (var i = 0; i < h.headings.length; i++) {
+      h.headings[i].setAttribute('role', 'tab');
+      h.articles[i].setAttribute('role', 'tabpanel');
+
+      var indicator = document.createElement('span');
+      indicator.classList.add('harmonica-indicator');
+      indicator.innerHTML = '<svg class="symbol symbol-harmonica symbol-harmonica-open">' +
+      '<use xlink:href="' + h.symbols.open + '"></use>' +
+      '</svg>' +
+      '<svg class="symbol symbol-harmonica symbol-harmonica-close">' +
+      '<use xlink:href="' + h.symbols.close + '"></use>' +
+      '</svg>';
+
+      h.headings[i].insertBefore(indicator, h.headings[i].firstChild);
+
+      h.headings[i].addEventListener('click', function(event) {
+        Harmonica.clearClasses();
+        Harmonica.assignClasses(event);
+      });
     }
 
   },

@@ -6,7 +6,7 @@
 
   Trigger.init({
     trigger: '.drawer-trigger',
-    activeBodyClass: 'drawer-active'
+    activeBodyClass: 'drawer-activated'
   });
 
   Harmonica.init();

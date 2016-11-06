@@ -1,6 +1,5 @@
 /* ================
 // Drawer Mixin
-//   http://codepen.io/mimoduo/pen/kuobi
 // ============= */
 
 @define-mixin drawer $transform-value: -20% {
@@ -46,11 +45,12 @@
     opacity .3s,
     visibility .3s,
     transform .3s;
-}
 
-  .drawer-active .drawer {
+  .drawer-activated & {
     @mixin active-drawer;
   }
+
+}
 
 
 /* ================
@@ -91,24 +91,29 @@
 
   &:before {
     margin-top: em(-5);
+
+    .drawer-activated & {
+      margin-top: 0;
+      transform:
+        translate(-50%, -50%)
+        rotate(-45deg);
+    }
+
   }
 
   &:after {
     box-shadow: 0 em(5) 0 0 currentColor;
+
+    .drawer-activated & {
+      box-shadow: 0 0 0 0 transparent;
+      transform:
+        translate(-50%, -50%)
+        rotate(45deg);
+    }
+
   }
+
+  &:focus,
+  &:hover {}
 
 }
-
-  .drawer-active .drawer-trigger:before {
-    margin-top: 0;
-    transform:
-      translate(-50%, -50%)
-      rotate(-45deg);
-  }
-
-  .drawer-active .drawer-trigger:after {
-    box-shadow: 0 0 0 0 transparent;
-    transform:
-      translate(-50%, -50%)
-      rotate(45deg);
-  }

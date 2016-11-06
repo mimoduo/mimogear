@@ -398,7 +398,6 @@ defineElementGetter(Element.prototype, 'classList', function () {
 
 /* ================
 // Harmonica Accordion
-//   http://codepen.io/mimoduo/pen/epZaMq
 // ============= */
 
 var h,
@@ -407,6 +406,10 @@ Harmonica = {
   settings: {
     headings: '.harmonica-header',
     articles: '.harmonica-content',
+    symbols: {
+      open: '#open',
+      close: '#close'
+    },
     activeClass: 'harmonica-header-active'
   },
 
@@ -425,18 +428,34 @@ Harmonica = {
 
     if(document.body.contains(h.headings[0])) {
 
-      for (var i = 0; i < h.headings.length; i++) {
-        h.headings[i].setAttribute('role', 'tab')
-        h.articles[i].setAttribute('role', 'tabpanel')
-
-        h.headings[i].addEventListener('click', function(event) {
-          Harmonica.clearClasses();
-          Harmonica.assignClasses(event);
-        });
-      }
-
+      Harmonica.constructHarmonica();
       h.headings[0].click();
 
+    }
+
+  },
+
+  constructHarmonica: function() {
+
+    for (var i = 0; i < h.headings.length; i++) {
+      h.headings[i].setAttribute('role', 'tab');
+      h.articles[i].setAttribute('role', 'tabpanel');
+
+      var indicator = document.createElement('span');
+      indicator.classList.add('harmonica-indicator');
+      indicator.innerHTML = '<svg class="symbol symbol-harmonica symbol-harmonica-open">' +
+      '<use xlink:href="' + h.symbols.open + '"></use>' +
+      '</svg>' +
+      '<svg class="symbol symbol-harmonica symbol-harmonica-close">' +
+      '<use xlink:href="' + h.symbols.close + '"></use>' +
+      '</svg>';
+
+      h.headings[i].insertBefore(indicator, h.headings[i].firstChild);
+
+      h.headings[i].addEventListener('click', function(event) {
+        Harmonica.clearClasses();
+        Harmonica.assignClasses(event);
+      });
     }
 
   },
@@ -459,7 +478,6 @@ Harmonica = {
 
 /* ================
 // Lantern Lightbox
-//   http://codepen.io/mimoduo/pen/EPerjv
 // ============= */
 
 var l,
@@ -471,13 +489,12 @@ Lantern = {
     lightCollection: [],
     lightIndex: 0,
     symbols: {
-      prev: '#arrow-back',
+      previous: '#arrow-back',
       next: '#arrow-forward',
       close: '#close'
     },
     vdom: {},
-    activeClass: 'lantern-active',
-    activeBodyClass: 'latern-triggered'
+    activeClass: 'lantern-visible'
   },
 
   init: function(options) {
@@ -511,39 +528,39 @@ Lantern = {
     content.appendChild(holder);
     l.vdom.holder = holder;
 
-    var prev = document.createElement('button');
-    prev.addEventListener('click', function() {
+    var previous = document.createElement('button');
+    previous.classList.add('lantern-control');
+    previous.classList.add('lantern-previous');
+    previous.innerHTML = '<svg class="symbol symbol-lantern symbol-lantern-previous">' +
+    '<use xlink:href="' + l.symbols.previous + '"></use>' +
+    '</svg>';
+    previous.addEventListener('click', function() {
       Lantern.previousLight();
     });
-    prev.classList.add('lantern-control');
-    prev.classList.add('lantern-previous');
-    prev.innerHTML = '<svg class="symbol symbol-previous">' +
-    '<use xlink:href="' + l.symbols.prev + '"></use>' +
-    '</svg>';
-    content.appendChild(prev);
-    l.vdom.prev = prev;
+    content.appendChild(previous);
+    l.vdom.previous = previous;
 
     var next = document.createElement('button');
+    next.classList.add('lantern-control');
+    next.classList.add('lantern-next');
+    next.innerHTML = '<svg class="symbol symbol-lantern symbol-lantern-next">' +
+    '<use xlink:href="' + l.symbols.next + '"></use>' +
+    '</svg>';
     next.addEventListener('click', function() {
       Lantern.nextLight();
     });
-    next.classList.add('lantern-control');
-    next.classList.add('lantern-next');
-    next.innerHTML = '<svg class="symbol symbol-next">' +
-    '<use xlink:href="' + l.symbols.next + '"></use>' +
-    '</svg>';
     content.appendChild(next);
     l.vdom.next = next;
 
     var close = document.createElement('button');
+    close.classList.add('lantern-control');
+    close.classList.add('lantern-close');
+    close.innerHTML = '<svg class="symbol symbol-lantern symbol-lantern-close">' +
+    '<use xlink:href="' + l.symbols.close + '"></use>' +
+    '</svg>';
     close.addEventListener('click', function() {
       Lantern.removeLight();
     });
-    close.classList.add('lantern-control');
-    close.classList.add('lantern-close');
-    close.innerHTML = '<svg class="symbol symbol-close">' +
-    '<use xlink:href="' + l.symbols.close + '"></use>' +
-    '</svg>';
     content.appendChild(close);
     l.vdom.close = close;
 
@@ -560,6 +577,12 @@ Lantern = {
         l.lanternLights[i].getAttribute('alt')
       );
     }
+
+  },
+
+  removeLight: function() {
+
+    l.lantern.classList.remove(l.activeClass);
 
   },
 
@@ -593,21 +616,13 @@ Lantern = {
     Lantern.setLight();
 
     l.lantern.classList.add(l.activeClass);
-    document.body.classList.add(l.activeBodyClass);
-
-  },
-
-  removeLight: function() {
-
-    l.lantern.classList.remove(l.activeClass);
-    document.body.classList.remove(l.activeBodyClass);
 
   },
 
   grabLight: function(light) {
 
     for (i = 0; i < l.lightCollection.length; i++) {
-
+      
       if (light.target.getAttribute('src') == l.lightCollection[i][0]) {
         l.lightIndex = i;
       }
@@ -629,7 +644,6 @@ Lantern = {
 
 /* ================
 // Sail Slideshow
-//   http://codepen.io/mimoduo/pen/gabWmN
 // ============= */
 
 var s,
@@ -640,11 +654,11 @@ Sail = {
     slide: '.sail-slides li',
     currentSlide: 0,
     symbols: {
-      prev: '#arrow-back',
+      previous: '#arrow-back',
       next: '#arrow-forward'
     },
     vdom: {},
-    activeSlideClass: 'sail-active',
+    activeSlideClass: 'sail-slide-active',
     activePageClass: 'sail-page-active'
   },
 
@@ -677,22 +691,24 @@ Sail = {
     s.slides.appendChild(controls);
     s.vdom.controls = controls;
 
-    var prev = document.createElement('button');
-    prev.innerHTML = '<svg class="symbol symbol-sail-control">' +
-    '<use xlink:href="' + s.symbols.prev + '"></use>' +
+    var previous = document.createElement('button');
+    previous.classList.add('sail-control');
+    previous.classList.add('sail-previous');
+    previous.innerHTML = '<svg class="symbol symbol-sail symbol-sail-previous">' +
+    '<use xlink:href="' + s.symbols.previous + '"></use>' +
     '</svg>';
-    prev.classList.add('sail-control', 'sail-prev');
-    prev.addEventListener('click', function() {
+    previous.addEventListener('click', function() {
       Sail.sailThrough(-1);
     });
-    s.vdom.controls.appendChild(prev);
-    s.vdom.controls.prev = prev;
+    s.vdom.controls.appendChild(previous);
+    s.vdom.controls.previous = previous;
 
     var next = document.createElement('button');
-    next.innerHTML = '<svg class="symbol symbol-sail-control">' +
+    next.classList.add('sail-control');
+    next.classList.add('sail-next');
+    next.innerHTML = '<svg class="symbol symbol-sail symbol-sail-next">' +
     '<use xlink:href="' + s.symbols.next + '"></use>' +
     '</svg>';
-    next.classList.add('sail-control', 'sail-next');
     next.addEventListener('click', function() {
       Sail.sailThrough(1);
     });
@@ -706,6 +722,8 @@ Sail = {
     s.vdom.page = [];
 
     for (var i = 0; i < s.slide.length; i++) {
+      s.slide[i].classList.add('sail-slide');
+
       var page = document.createElement('button');
       page.classList.add('sail-page');
       page.addEventListener('click', Sail.sailTo.bind(null, i));
@@ -744,18 +762,18 @@ Sail = {
   determineDisabledStates: function() {
 
     if (s.currentSlide === 0) {
-      s.vdom.controls.prev.disabled = true;
-      s.vdom.controls.prev.setAttribute('aria-disabled', 'true');
+      s.vdom.controls.previous.disabled = true;
+      s.vdom.controls.previous.setAttribute('aria-disabled', 'true');
       s.vdom.controls.next.disabled = false;
       s.vdom.controls.next.setAttribute('aria-disabled', 'false');
     } else if (s.currentSlide < s.slide.length - 1) {
-      s.vdom.controls.prev.disabled = false;
-      s.vdom.controls.prev.setAttribute('aria-disabled', 'false');
+      s.vdom.controls.previous.disabled = false;
+      s.vdom.controls.previous.setAttribute('aria-disabled', 'false');
       s.vdom.controls.next.disabled = false;
       s.vdom.controls.next.setAttribute('aria-disabled', 'false');
     } else if (s.currentSlide == s.slide.length - 1) {
-      s.vdom.controls.prev.disabled = false;
-      s.vdom.controls.prev.setAttribute('aria-disabled', 'false');
+      s.vdom.controls.previous.disabled = false;
+      s.vdom.controls.previous.setAttribute('aria-disabled', 'false');
       s.vdom.controls.next.disabled = true;
       s.vdom.controls.next.setAttribute('aria-disabled', 'true');
     }
@@ -782,7 +800,7 @@ Trigger = {
 
   settings: {
     trigger: '.trigger',
-    activeBodyClass: 'trigger-active'
+    activeBodyClass: 'trigger-activated'
   },
 
   init: function(options) {
@@ -821,7 +839,7 @@ Trigger = {
 
   Trigger.init({
     trigger: '.drawer-trigger',
-    activeBodyClass: 'drawer-active'
+    activeBodyClass: 'drawer-activated'
   });
 
   Harmonica.init();

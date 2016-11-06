@@ -11,7 +11,11 @@
     href="mailto:organization@gmail.com"
     itemprop="email"
   ) organization@gmail.com
-  .adr
+  address(
+    itemprop="address"
+    itemscope
+    itemtype="http://schema.org/PostalAddress"
+  )
     .street-address(itemprop="streetAddress") 82 West Pegasus St.
     span.locality(itemprop="addressLocality") Washington,&nbsp;
     span.region(itemprop="addressRegion") MA&nbsp;
