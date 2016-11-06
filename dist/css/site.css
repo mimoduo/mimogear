@@ -539,11 +539,11 @@ menu {
   display: inline-block;
   border-bottom: 0.1875rem solid currentColor;
   margin: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.3888888888888889em;
   font-size: 1.3333333333333333em;
 }@media screen and (min-width: 400px){.mimo-theme h2{
     font-size: 1.8888888888888888em;
-    line-height: 1.1764705882352942;
+    line-height: 1.0588235294117647;
   }
 }.mimo-theme h4 {
   margin: 0 0 0.625rem;
