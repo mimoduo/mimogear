@@ -182,9 +182,9 @@ gulp.task('browser-sync', function() {
       styles: {
         top: 'auto',
         bottom: '0',
-        borderBottomLeftRadius: '0',
+        padding: '4px',
         fontSize: '12px',
-        padding: '4px'
+        borderBottomLeftRadius: '0'
       }
     }
   });
