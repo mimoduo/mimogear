@@ -462,15 +462,23 @@ Harmonica = {
 
   clearClasses: function() {
 
-    for (var i = 0; i < h.headings.length; i++) {
-      h.headings[i].classList.remove(h.activeClass);
+    if(document.body.clientWidth > 900) {
+
+      for (var i = 0; i < h.headings.length; i++) {
+        h.headings[i].classList.remove(h.activeClass);
+      }
+
     }
 
   },
 
   assignClasses: function(event) {
 
-    event.currentTarget.classList.add(h.activeClass);
+    if(document.body.clientWidth > 900) {
+      event.currentTarget.classList.add(h.activeClass);
+    } else {
+      event.currentTarget.classList.toggle(h.activeClass);
+    }
 
   }
 

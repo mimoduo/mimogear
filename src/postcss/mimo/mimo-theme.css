@@ -453,14 +453,14 @@ $m2: #f0dfff;
     color: inherit;
     transition: box-shadow .25s;
 
-    @mixin media $accordion-to-harmonica {
+    @mixin media $harmonica-view {
       text-align: center;
       border-radius: 0;
     }
 
     &:first-of-type {
 
-      @mixin media $accordion-to-harmonica {
+      @mixin media $harmonica-view {
         border-radius: em(20, 18) 0 0 em(20, 18);
       }
 
@@ -468,7 +468,7 @@ $m2: #f0dfff;
 
     &:last-of-type {
 
-      @mixin media $accordion-to-harmonica {
+      @mixin media $harmonica-view {
         border-radius: 0 em(20, 18) em(20, 18) 0;
       }
 

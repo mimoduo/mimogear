@@ -37,6 +37,8 @@ module.exports = {
   "huge": "900px",
   "aldnoah": "1000px",
   "yatterman": "1100px",
-  "gamagori": "1200px"
+  "gamagori": "1200px",
+
+  "harmonica-view": "900px"
 
 }

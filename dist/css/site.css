@@ -422,7 +422,7 @@ menu {
   }
 }/* ================
 // Harmonica
-// ============= *//* When do accordions become harmonicas? */@media screen and (min-width: 900px){.harmonica{
+// ============= */@media screen and (min-width: 900px){.harmonica{
     display: -webkit-box;
     display: flex;
     flex-wrap: wrap;

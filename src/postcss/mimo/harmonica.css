@@ -2,12 +2,9 @@
 // Harmonica
 // ============= */
 
-/* When do accordions become harmonicas? */
-$accordion-to-harmonica: 900px;
-
 .harmonica {
 
-  @mixin media $accordion-to-harmonica {
+  @mixin media $harmonica-view {
     display: flex;
     flex-wrap: wrap;
   }
@@ -18,7 +15,7 @@ $accordion-to-harmonica: 900px;
     width: 100%;
     cursor: pointer;
 
-    @mixin media $accordion-to-harmonica {
+    @mixin media $harmonica-view {
       flex: auto;
       order: 1;
       width: auto;
@@ -36,7 +33,7 @@ $accordion-to-harmonica: 900px;
       vertical-align: middle;
       padding-right: em(10);
 
-      @mixin media $accordion-to-harmonica {
+      @mixin media $harmonica-view {
         display: none;
       }
 
@@ -66,7 +63,7 @@ $accordion-to-harmonica: 900px;
   .harmonica-content {
     display: none;
 
-    @mixin media $accordion-to-harmonica {
+    @mixin media $harmonica-view {
       order: 2;
       width: 100%;
     }
