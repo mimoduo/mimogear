@@ -2,7 +2,17 @@
 
 A trigger provides a way of enabling a class on the body element after clicking a specified trigger element.
 
-##Usage With All Default Options Shown
+##Quick Use
+
+To get started with triggers, add in the following line inside the anonymous function found in site/main.js:
+
+**Javascript**
+
+```js
+Trigger.init();
+```
+
+Then you'll want to add in some harmonica markup into your pug page:
 
 **Pug**
 
@@ -10,11 +20,15 @@ A trigger provides a way of enabling a class on the body element after clicking 
 button.trigger
 ```
 
+##Detailed Javascript Use
+
+The following example shows the defaults for each of the available settings:
+
 **Javascript**
 
 ```js
 Trigger.init({
-  trigger: '.trigger',
-  activeBodyClass: 'trigger-activated'
+  trigger: '.trigger', // Class String: The selector of the desired trigger
+  activeBodyClass: 'trigger-activated' // String: The class applied to the document body upon trigger activation
 });
 ```

@@ -1,8 +1,18 @@
 #Lantern
 
-A lantern (lightbox) allows the user to see an enlarged picture after interacting with a smaller thumbnail. Captions are not enabled by default, however, you can read about how to add them within the [postcss/mimo documentation](https://github.com/mimoduo/Mimogear/blob/master/docs/postcss/mimo.md#lantern)
+A lantern (lightbox) allows the user to see an enlarged picture after interacting with a smaller thumbnail.
 
-##Usage With Default Options Shown
+##Quick Use
+
+To get started with lanterns, add in the following line inside the anonymous function found in site/main.js:
+
+**Javascript**
+
+```js
+Lantern.init();
+```
+
+Then you'll want to add in some lantern markup into your pug page:
 
 **Pug**
 
@@ -18,17 +28,21 @@ img.lantern-light(
 .lantern
 ```
 
+##Detailed Javascript Use
+
+The following example shows the defaults for each of the available settings:
+
 **Javascript**
 
 ```js
 Lantern.init({
-  lantern: '.lantern',
-  lanternLights: '.lantern-light',
+  lantern: '.lantern', // Class String: The selector of the lantern content container
+  lanternLights: '.lantern-light', // Class String: The class of the image to inject into the lantern content container
   symbols: {
-    previous: '#arrow-back',
-    next: '#arrow-forward',
-    close: '#close'
+    previous: '#arrow-back', // Link String: The previous control svg in lantern view
+    next: '#arrow-forward', // Link String: The next control svg in lantern view
+    close: '#close' // Link String: The close control svg in lantern view
   },
-  activeClass: 'lantern-visible'
+  activeClass: 'lantern-visible' // String: The class applied to an active lantern
 });
 ```

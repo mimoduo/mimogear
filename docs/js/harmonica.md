@@ -1,8 +1,18 @@
 #Harmonica
 
-A harmonica provides a way to have accordions on smaller screens and eventually harmonicas (tabs) on a larger screen.
+A harmonica (tabs) provides a way to have accordions on smaller screens and eventually harmonicas on a larger screen.
 
-##Usage With All Default Options Shown
+##Quick Use
+
+To get started with harmonicas, add in the following line inside the anonymous function found in site/main.js:
+
+**Javascript**
+
+```js
+Harmonica.init();
+```
+
+Then you'll want to add in some harmonica markup into your pug page:
 
 **Pug**
 
@@ -16,17 +26,19 @@ A harmonica provides a way to have accordions on smaller screens and eventually 
   article.harmonica-content Donec quam felis.
 ```
 
-**Javascript**
+##Detailed Javascript Use
+
+The following example shows the defaults for each of the available settings:
 
 ```js
 Harmonica.init({
-  headings: '.harmonica-header',
-  articles: '.harmonica-content',
+  headings: '.harmonica-header', // Class String: The button that activates the content
+  articles: '.harmonica-content', // Class String: The content that is activated by the button
   symbols: {
-    open: '#open',
-    close: '#close'
+    open: '#open', // Link String: The open control svg in the accordion view
+    close: '#close' // Link String: The close control svg in the accordion view
   },
-  harmonicaView: 900,
-  activeClass: 'harmonica-header-active'
+  harmonicaView: 900, // Integer: Breakpoint at which to switch to harmonica view
+  activeClass: 'harmonica-header-active' // String: The class applied to an active header
 });
 ```
