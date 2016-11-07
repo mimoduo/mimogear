@@ -1,6 +1,6 @@
 #Mimogear
 
-Mimogear is a simple static site generator. The main goal of Mimogear is to strike a balance between simplicity and features, to secure quality and consistency, to be as developer friendly as can be, and to be as project agnostic as possible.
+Mimogear is a simple static site generator. By pumping in some pug template files, it will automatically produce a resulting set of html files within the root of your site. The main goal of Mimogear is to strike a balance between simplicity and features, to secure quality and consistency, to be as developer friendly as can be, and to be as project agnostic as possible.
 
 ##Tools Used in Mimogear
 
