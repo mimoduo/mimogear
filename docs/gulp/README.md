@@ -1,6 +1,25 @@
 #Gulp
 
-If you wish to modify any of the tasks provided by Mimogear, below are a list of the plugins used with the respective links to their github repo and documentation.
+##Usage
+
+Once you're all [setup](https://github.com/mimoduo/Mimogear/tree/master/docs), there is one gulp command to get you started. This command will compiled all files into the dist folder, open a new browser window with your site, and begin watching the files within the src folder.
+
+```sh
+gulp
+```
+
+Although, if you want to build only a particular set of files or watch without building, there are several commands you can run.
+
+```sh
+gulp pug
+gulp postcss
+gulp js
+gulp images
+gulp sprite
+gulp watch
+```
+
+##Plugin List
 
 * [**autoprefixer**](https://github.com/postcss/autoprefixer)
 * [**browser-sync**](https://github.com/BrowserSync/browser-sync) / [official site](https://www.browsersync.io/)

@@ -1,6 +1,6 @@
 #Quickstart
 
-Mimogear was built to be simple. In those regards, this installation will be super simple as well, not to mention quick.
+Mimogear was built to be simple. In those regards, this installation will be simple as well, not to mention quick.
 
 ##Installation
 
