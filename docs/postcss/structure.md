@@ -6,12 +6,12 @@ Structure elements are high level components that usually contain styles for spa
 
 Regions refer to their respective pug regions with the addition of main content region. These elements, namely the header, main content area, and footer, are included on every page by default.
 
-|~~~~~~~~~~~~~~~~|
-|  Header        |
-|~~~~~~~~~~~~~~~~|
-|  Main          |
-|~~~~~~~~~~~~~~~~|
-|  Footer        |
+|~~~~~~~~~~~~~~~~|<br />
+|  Header        |<br />
+|~~~~~~~~~~~~~~~~|<br />
+|  Main          |<br />
+|~~~~~~~~~~~~~~~~|<br />
+|  Footer        |<br />
 |~~~~~~~~~~~~~~~~|
 
 ##Root
@@ -22,10 +22,10 @@ The root partial styles universal elements, the html element, and the body eleme
 
 Sections are large areas contained within the main region of the document.
 
-|~~~~~~~~~~~~~~~~|
-|  Main          |
-|    Section     |
-|    Section     |
-|    Section     |
-|    Section     |
+|~~~~~~~~~~~~~~~~|<br />
+|  Main          |<br />
+|    Section     |<br />
+|    Section     |<br />
+|    Section     |<br />
+|    Section     |<br />
 |~~~~~~~~~~~~~~~~|

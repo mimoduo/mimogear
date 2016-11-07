@@ -1,6 +1,6 @@
 #Variables
 
-Variables are housed within the configuration.js file within the root of Mimogear. This provides the additional benefit of being able to use these variables outside postcss such as the gulpfile. The downside of this method is that every time a variable is changed, the gulp task will have to be re-run for the changes to take effect.
+Variables are housed within the configuration.js file within the root of Mimogear. This location provides the additional benefit of being able to use these variables outside postcss such as the gulpfile. The downside of this method is that every time a variable is changed, the gulp task will have to be re-run for the changes to take effect.
 
 * **fonts**
   * font-family
@@ -12,6 +12,9 @@ Variables are housed within the configuration.js file within the root of Mimogea
 * **media queries**
   * compartment boundary
   * query widths / incremented by 100
+  * harmonica view
+
+##Colors
 
 Colors were excluded in order to provide the freedom of choosing the color naming convention of your choice. The following list provides two sets of examples of naming conventions you can take inspiration from. The first set is easy to write and color agnostic. The second set clearly defines the color and is easy to refer to.
 
