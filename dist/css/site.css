@@ -527,7 +527,7 @@ menu {
 // Type
 // ============= */.mimo-theme {
   font-family: 'Quicksand';
-  color: #9e12ef;
+  color: #7986CB;
 
 }.mimo-theme body {
   font-size: 1.125em;
@@ -586,11 +586,11 @@ menu {
   }
 }.mimo-theme .drawer-trigger:before,
     .mimo-theme .drawer-trigger:after {
-  color: #9e12ef;
+  color: #7986CB;
 }.mimo-theme .drawer {
   padding: 1.1111111111111112em 0.5555555555555556em;
-  background: #f0dfff;
-  color: #9e12ef;
+  background: #E8EAF6;
+  color: #7986CB;
 }@media screen and (min-width: 1000px){.mimo-theme .drawer{
     pointer-events: auto;
     opacity: 1;
@@ -631,13 +631,13 @@ menu {
           color .25s;
 }@media screen and (min-width: 1000px){.mimo-theme .main-nav a{
     padding: 1em 1.1111111111111112em;
-    color: #9e12ef;
+    color: #7986CB;
   }
 }.mimo-theme .main-nav a:focus,
         .mimo-theme .main-nav a:hover {
-  background: #f0dfff;
-  box-shadow: inset 0 0 0 0.2222222222222222em #9e12ef;
-  color: #9e12ef;
+  background: #E8EAF6;
+  box-shadow: inset 0 0 0 0.2222222222222222em #7986CB;
+  color: #7986CB;
 }/* ================
 // Logo
 // ============= */.mimo-theme .site-logo {
@@ -650,16 +650,16 @@ menu {
   height: 3.5555555555555554em;
   max-width: 21.11111111111111em;
   width: 100%;
-  fill: #9e12ef;
+  fill: #7986CB;
 }/* ================
 // Section
 // ============= */.mimo-theme .section {
-  color: #9e12ef;
+  color: #7986CB;
 }.mimo-theme .section:nth-of-type(odd) {
-  background: #9e12ef;
-  color: #f0dfff;
+  background: #7986CB;
+  color: #E8EAF6;
 }.mimo-theme .section:last-child {
-  border-bottom: 0.25em solid #9e12ef;
+  border-bottom: 0.25em solid #7986CB;
 }/* ================
 // Grid
 // ============= */@media screen and (min-width: 700px){.mimo-theme .column-big-1{
@@ -709,6 +709,14 @@ menu {
   vertical-align: top;
   padding-bottom: 1.1111111111111112em;
 }/* ================
+// Code
+// ============= */.mimo-theme code {
+  display: block;
+  padding: 1.1111111111111112em;
+  background: #E8EAF6;
+  border-radius: 0.5555555555555556em;
+  color: #7986CB;
+}/* ================
 // Slideshow
 // ============= */.mimo-theme .sail-slides {
   text-align: center;
@@ -719,15 +727,15 @@ menu {
   font-size: 1.9444444444444444em;
   font-weight: 700;
   line-height: 1;
-  background: #f0dfff;
+  background: #E8EAF6;
   border-radius: 0.5714285714285714em;
-  color: #9e12ef;
+  color: #7986CB;
 }@media print {.mimo-theme .sail-slide{
     padding: 0.2857142857142857em;
   }
 }.mimo-theme .sail-slide:nth-of-type(even) {
-  background: #9e12ef;
-  color: #f0dfff;
+  background: #7986CB;
+  color: #E8EAF6;
 }.mimo-theme .sail-controls {
   margin-bottom: 0.8333333333333334em;
 }.mimo-theme .sail-control {
@@ -766,7 +774,7 @@ menu {
   transition: background .25s;
 }.mimo-theme .sail-page:focus,
       .mimo-theme .sail-page:hover {
-  background: #f0dfff;
+  background: #E8EAF6;
 }.mimo-theme .sail-page-active {
   background: currentColor;
 }.mimo-theme .sail-page-active:focus,
@@ -783,9 +791,9 @@ menu {
   height: 1.5625em;
   width: 1.5625em;
   border: 0;
-  background: #9e12ef;
+  background: #7986CB;
   border-radius: 100%;
-  color: #f0dfff;
+  color: #E8EAF6;
   -webkit-transition: background .25s,
         box-shadow .25s,
         color .25s;
@@ -795,9 +803,9 @@ menu {
         color .25s;
 }.mimo-theme .lantern-control:focus,
       .mimo-theme .lantern-control:hover {
-  background: #f0dfff;
-  box-shadow: 0 0 0 0.125em #9e12ef;
-  color: #9e12ef;
+  background: #E8EAF6;
+  box-shadow: 0 0 0 0.125em #7986CB;
+  color: #7986CB;
 }.mimo-theme .symbol-lantern {
   position: absolute;
   top: 50%;
@@ -818,7 +826,7 @@ menu {
   margin: 0 0 1.1111111111111112em;
   padding: 0.5em 1.1111111111111112em;
   text-align: left;
-  background: #f0dfff;
+  background: #E8EAF6;
   border-radius: 0.5555555555555556em;
   color: inherit;
   -webkit-transition: box-shadow .25s;
@@ -835,10 +843,10 @@ menu {
   }
 }.mimo-theme .harmonica-header:focus,
     .mimo-theme .harmonica-header:hover {
-  box-shadow: inset 0 0 0 0.25em #9e12ef;
+  box-shadow: inset 0 0 0 0.25em #7986CB;
 }.mimo-theme .harmonica-header-active {
-  background: #9e12ef;
-  color: #f0dfff;
+  background: #7986CB;
+  color: #E8EAF6;
 }.mimo-theme .harmonica-content {
   margin-bottom: 1.25em;
 }/* ================
@@ -869,21 +877,21 @@ menu {
     display: inline-block;
   }
 }.mimo-theme .action-link-github {
-  background: #f0dfff;
-  color: #9e12ef;
+  background: #E8EAF6;
+  color: #7986CB;
 }.mimo-theme .action-link-github:focus,
           .mimo-theme .action-link-github:hover {
-  background: #9e12ef;
-  box-shadow: inset 0 0 0 0.2222222222222222em #f0dfff;
-  color: #f0dfff;
+  background: #7986CB;
+  box-shadow: inset 0 0 0 0.2222222222222222em #E8EAF6;
+  color: #E8EAF6;
 }.mimo-theme .action-link-share {
-  background: #9e12ef;
-  color: #f0dfff;
+  background: #7986CB;
+  color: #E8EAF6;
 }.mimo-theme .action-link-share:focus,
           .mimo-theme .action-link-share:hover {
-  background: #f0dfff;
-  box-shadow: inset 0 0 0 0.2222222222222222em #9e12ef;
-  color: #9e12ef;
+  background: #E8EAF6;
+  box-shadow: inset 0 0 0 0.2222222222222222em #7986CB;
+  color: #7986CB;
 }.mimo-theme .symbol-action {
   display: inline-block;
   vertical-align: middle;

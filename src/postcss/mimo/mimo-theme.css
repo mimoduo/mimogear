@@ -4,8 +4,8 @@
 // Variables
 // ============= */
 
-$m1: #9e12ef;
-$m2: #f0dfff;
+$m1: #7986CB;
+$m2: #E8EAF6;
 
 
 /* ================
@@ -286,6 +286,23 @@ $m2: #f0dfff;
     display: table-cell;
     vertical-align: top;
     padding-bottom: em(20, 18);
+  }
+
+}
+
+
+/* ================
+// Code
+// ============= */
+
+.mimo-theme {
+
+  code {
+    display: block;
+    padding: em(20, 18);
+    background: $m2;
+    border-radius: em(10, 18);
+    color: $m1;
   }
 
 }
