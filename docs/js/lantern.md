@@ -2,10 +2,6 @@
 
 A lantern (lightbox) allows the user to see an enlarged picture after interacting with a smaller thumbnail. Captions are not enabled by default, however, you can read about how to add them within the [postcss/mimo documentation](https://github.com/mimoduo/Mimogear/blob/master/docs/postcss/mimo.md#lantern)
 
-##Notes
-
-* The lantern is placed at the bottom of the image group for better keyboard accessibility
-
 ##Usage With Default Options Shown
 
 **Pug**
