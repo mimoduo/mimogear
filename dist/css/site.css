@@ -712,6 +712,7 @@ menu {
 // Code
 // ============= */.mimo-theme code {
   display: block;
+  overflow-x: auto;
   padding: 1.1111111111111112em;
   background: #E8EAF6;
   border-radius: 0.5555555555555556em;

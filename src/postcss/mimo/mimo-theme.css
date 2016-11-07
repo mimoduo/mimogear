@@ -299,6 +299,7 @@ $m2: #E8EAF6;
 
   code {
     display: block;
+    overflow-x: auto;
     padding: em(20, 18);
     background: $m2;
     border-radius: em(10, 18);
