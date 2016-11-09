@@ -98,14 +98,27 @@ $m2: #E8EAF6;
 
 .mimo-theme {
 
-  .site-header,
-  .site-footer {
+  .site-header {
     @mixin compartment 1040;
     padding: em(20, 18);
   }
 
   .site-footer {
     background: $m2;
+    padding: em(20, 18);
+  }
+
+}
+
+
+/* ================
+// Address
+// ============= */
+
+.mimo-theme {
+
+  .vcard {
+    @mixin compartment 1000;
   }
 
 }

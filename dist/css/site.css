@@ -934,8 +934,7 @@ template {
 // Regions
 // ============= */
 
-.mimo-theme .site-header,
-  .mimo-theme .site-footer {
+.mimo-theme .site-header {
   max-width: 65rem;
   margin-right: auto;
   margin-left: auto;
@@ -944,6 +943,17 @@ template {
 
 .mimo-theme .site-footer {
   background: #E8EAF6;
+  padding: 1.1111111111111112em;
+}
+
+/* ================
+// Address
+// ============= */
+
+.mimo-theme .vcard {
+  max-width: 62.5rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* ================
