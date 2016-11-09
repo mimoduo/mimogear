@@ -1,6 +1,6 @@
 #Grids
 
-The mimogear grid system is setup using the [Postcss-simple-grid](https://github.com/iamfrntdv/postcss-simple-grid) module. The following example will create markup to match automatically generated classes at the gamagori breakpoint.
+The mimogear grid system is setup using the [Postcss-simple-grid](https://github.com/iamfrntdv/postcss-simple-grid) module. Let's setup a grid example for the gamagori breakpoint (1200px).
 
 **Pug**
 
@@ -23,6 +23,8 @@ The mimogear grid system is setup using the [Postcss-simple-grid](https://github
 
 }
 ```
+
+By calling the create-grid property, postcss-simple-grid will then automatically compile the resulting css containing widths for 12 columns:
 
 **CSS Output**
 

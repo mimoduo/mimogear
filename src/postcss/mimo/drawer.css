@@ -60,12 +60,13 @@
 .drawer-trigger {
   position: relative;
   z-index: 400;
-  height: em(60);
-  width: em(60);
+  height: em(50);
+  width: em(50);
   border: 0;
   padding: 0;
   cursor: pointer;
   background: none;
+  color: #000;
 
   @media print {
     display: none;
@@ -80,7 +81,7 @@
     width: em(20);
     content: '';
     background: currentColor;
-    color: #000;
+    color: inherit;
     transform: translate(-50%, -50%);
     transition:
       background .25s,
@@ -90,7 +91,7 @@
   }
 
   &:before {
-    margin-top: em(-5);
+    margin-top: em(-6);
 
     .drawer-activated & {
       margin-top: 0;
@@ -102,7 +103,7 @@
   }
 
   &:after {
-    box-shadow: 0 em(5) 0 0 currentColor;
+    box-shadow: 0 em(6) 0 0 currentColor;
 
     .drawer-activated & {
       box-shadow: 0 0 0 0 transparent;

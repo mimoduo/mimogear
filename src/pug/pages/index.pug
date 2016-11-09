@@ -7,10 +7,19 @@ extends ../templates/site.pug
 block theme
   - themeName = "mimo-theme"
 
+block additional-stylesheets
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+
 block main
   +section
     h2 A Simple Static Site Generator
-    p.lead Mimogear strives to make template compilation a simple process. By using Mimogear, any arrangement of folders you have within src/pug/pages will be mimicked and distributed as html to the root of the project upon compiling your pug templates. Not only that, any file under src/ will be watched for changes and updated accordingly via gulp and browsersync. Under the hood, you'll find #[strong gulp, pug, postcss, and javascript]. My goal was to create a #[strong static site generator] that accomplishes a variety of interface challenges while keeping it as simple as possible. I hope you enjoy how easy it is to build as much as I enjoyed creating it!
+    p.lead Mimogear was built from the ground up to serve as a skeleton framework for html/pug, css/postcss, and javascript. By mixing in "gulp", a popular task runner, #[strong Mimogear will automatically compile, distribute, and watch development assets]. I hope you enjoy how easy it is to build as much as I enjoyed creating it!
+    h4 Give Mimogear a try with a few setup commands in your terminal:
+    code
+      | $ git #[em clone] https://github.com/mimoduo/Mimogear.git#[br]
+      | $ #[em cd] Mimogear#[br]
+      | $ npm install#[br]
+      | $ gulp
     .grid.reasons
       .column
         .reason-bubble
@@ -38,7 +47,7 @@ block main
           </svg>
         .reason-details
           h4 Light
-          span 40kb minified distribution
+          span #[strong 40kb] minified distribution
       .column
         .reason-bubble
           <svg class="symbol symbol-reason symbol-infinity" viewBox="0 0 24 24">
@@ -47,13 +56,7 @@ block main
           </svg>
         .reason-details
           h4 Well Supported
-          span #[strong Constantly revised] to include only the best practices on the web
-    h4 Give Mimogear a try with a few setup commands in your terminal:
-    code
-      | $ git #[em clone] https://github.com/mimoduo/Mimogear.git#[br]
-      | $ #[em cd] Mimogear#[br]
-      | $ npm install#[br]
-      | $ gulp
+          span #[strong Constantly updated] to include only the best practices on the web
   +section
     h2 Simple Slideshow
     p.lead Arrows, pagination, and a hint of accessibility features

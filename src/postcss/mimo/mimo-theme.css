@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
-
 /* ================
 // Variables
 // ============= */
@@ -30,7 +28,7 @@ $m2: #E8EAF6;
     display: inline-block;
     border-bottom: rem(3) solid currentColor;
     margin: 0;
-    padding-bottom: em(7, 18);
+    padding-bottom: em(6, 18);
     font-size: em(24, 18);
 
     @mixin media $tiny {
@@ -105,9 +103,16 @@ $m2: #E8EAF6;
   .drawer-trigger {
     position: absolute;
     top: 50%;
-    left: 0;
+    left: em(20, 16);
     font-size: em(16, 18);
+    background: $m2;
+    border: em(2, 16) solid $m1;
+    border-radius: 100%;
+    color: $m1;
     transform: translate(0, -50%);
+    transition:
+      background .25s,
+      color .25s;
 
     @mixin media $aldnoah {
       display: none;
@@ -115,7 +120,13 @@ $m2: #E8EAF6;
 
     &:before,
     &:after {
-      color: $m1;
+      height: em(3, 16);
+    }
+
+    &:focus,
+    &:hover {
+      background: $m1;
+      color: $m2;
     }
 
   }
@@ -192,7 +203,7 @@ $m2: #E8EAF6;
 .mimo-theme {
 
   .site-logo {
-    margin-left: em(40, 18);
+    margin-left: em(60, 18);
 
     @mixin media $aldnoah {
       margin-left: 0;
@@ -240,14 +251,6 @@ $m2: #E8EAF6;
 
 .mimo-theme {
 
-  @mixin media $big {
-
-    .column-big {
-      create-grid: 12;
-    }
-
-  }
-
   .grid {
     margin: 0 em(-20, 18);
   }
@@ -255,6 +258,14 @@ $m2: #E8EAF6;
     .column {
       margin-bottom: em(20, 18);
       padding: 0 em(20, 18);
+    }
+
+    @mixin media $big {
+
+      .column-big {
+        create-grid: 12;
+      }
+
     }
 
 }
@@ -300,6 +311,7 @@ $m2: #E8EAF6;
   code {
     display: block;
     overflow-x: auto;
+    margin-bottom: em(60, 18);
     padding: em(20, 18);
     background: $m2;
     border-radius: em(10, 18);
@@ -406,6 +418,10 @@ $m2: #E8EAF6;
 
 .mimo-theme {
 
+  .lantern-light {
+    border-radius: em(20, 18);
+  }
+
   .lantern {
     padding: em(40, 18);
     background: rgba(255, 255, 255, .75);
@@ -413,6 +429,7 @@ $m2: #E8EAF6;
 
     .lantern-holder {
       border: em(5, 18) solid #fff;
+      border-radius: em(20, 18);
     }
 
     .lantern-control {
@@ -467,7 +484,7 @@ $m2: #E8EAF6;
     padding: em(9, 18) em(20, 18);
     text-align: left;
     background: $m2;
-    border-radius: em(10, 18);
+    border-radius: em(50, 18);
     color: inherit;
     transition: box-shadow .25s;
 
@@ -479,7 +496,7 @@ $m2: #E8EAF6;
     &:first-of-type {
 
       @mixin media $harmonica-view {
-        border-radius: em(20, 18) 0 0 em(20, 18);
+        border-radius: em(30, 18) 0 0 em(30, 18);
       }
 
     }
@@ -487,14 +504,14 @@ $m2: #E8EAF6;
     &:last-of-type {
 
       @mixin media $harmonica-view {
-        border-radius: 0 em(20, 18) em(20, 18) 0;
+        border-radius: 0 em(30, 18) em(30, 18) 0;
       }
 
     }
 
     &:focus,
     &:hover {
-      box-shadow: inset 0 0 0 em(4) $m1;
+      box-shadow: inset 0 0 0 em(4, 18) $m1;
     }
 
     &-active {
@@ -532,7 +549,7 @@ $m2: #E8EAF6;
         padding: em(10, 18) em(20, 18);
         font-weight: 700;
         text-decoration: none;
-        border-radius: em(10, 18);
+        border-radius: em(50, 18);
         transition:
           background .25s,
           box-shadow .25s,

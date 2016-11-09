@@ -10,7 +10,7 @@
         <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
         <link rel="icon" href="favicon-48.png" sizes="48x48" type="image/png">
         <link rel="icon" href="favicon-62.png" sizes="62x62" type="image/png">
-    <link rel="stylesheet" href="./dist/css/site.css">
+    <link rel="stylesheet" href="./dist/css/site.css"><link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
   </head>
   <body><a class="skip-link" href="#site-main">Skip to main content</a>
     <figure class="site-sprite" style="display: none"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 24 24" id="arrow-back"><path d="M20.016 11.016v1.969H7.828l5.578 5.625L12 20.016 3.984 12 12 3.984l1.406 1.406-5.578 5.625h12.188z"/></symbol><symbol viewBox="0 0 24 24" id="arrow-forward"><path d="M12 3.984L20.016 12 12 20.016l-1.406-1.406 5.578-5.625H3.984v-1.969h12.188l-5.578-5.625z"/></symbol><symbol viewBox="0 0 24 24" id="close"><path d="M18.984 6.422L13.406 12l5.578 5.578-1.406 1.406L12 13.406l-5.578 5.578-1.406-1.406L10.594 12 5.016 6.422l1.406-1.406L12 10.594l5.578-5.578z"/></symbol><symbol viewBox="0 0 380 64" id="logo"><title>Mimogear</title><desc>Mimogear site logo</desc><text font-family="Quicksand-Light, Quicksand" font-size="70" font-weight="300"><tspan x="0" y="50">Mimogear</tspan></text></symbol><symbol viewBox="0 0 24 24" id="open"><path d="M18.984 12.984h-6v6h-1.969v-6h-6v-1.969h6v-6h1.969v6h6v1.969z"/></symbol></svg></figure>
@@ -32,7 +32,11 @@
       <div class="section">
         <div class="compartment">
           <h2>A Simple Static Site Generator</h2>
-          <p class="lead">Mimogear strives to make template compilation a simple process. By using Mimogear, any arrangement of folders you have within src/pug/pages will be mimicked and distributed as html to the root of the project upon compiling your pug templates. Not only that, any file under src/ will be watched for changes and updated accordingly via gulp and browsersync. Under the hood, you'll find <strong>gulp, pug, postcss, and javascript</strong>. My goal was to create a <strong>static site generator</strong> that accomplishes a variety of interface challenges while keeping it as simple as possible. I hope you enjoy how easy it is to build as much as I enjoyed creating it!</p>
+          <p class="lead">Mimogear was built from the ground up to serve as a skeleton framework for html/pug, css/postcss, and javascript. By mixing in "gulp", a popular task runner, <strong>Mimogear will automatically compile, distribute, and watch development assets</strong>. I hope you enjoy how easy it is to build as much as I enjoyed creating it!</p>
+          <h4>Give Mimogear a try with a few setup commands in your terminal:</h4><code>$ git <em>clone</em> https://github.com/mimoduo/Mimogear.git<br>
+            $ <em>cd</em> Mimogear<br>
+            $ npm install<br>
+            $ gulp</code>
           <div class="grid reasons">
             <div class="column">
               <div class="reason-bubble"><svg class="symbol symbol-reason symbol-devices" viewBox="0 0 24 24">
@@ -61,7 +65,7 @@
 </svg>
               </div>
               <div class="reason-details">
-                <h4>Light</h4><span>40kb minified distribution</span>
+                <h4>Light</h4><span><strong>40kb</strong> minified distribution</span>
               </div>
             </div>
             <div class="column">
@@ -71,14 +75,10 @@
 </svg>
               </div>
               <div class="reason-details">
-                <h4>Well Supported</h4><span><strong>Constantly revised</strong> to include only the best practices on the web</span>
+                <h4>Well Supported</h4><span><strong>Constantly updated</strong> to include only the best practices on the web</span>
               </div>
             </div>
           </div>
-          <h4>Give Mimogear a try with a few setup commands in your terminal:</h4><code>$ git <em>clone</em> https://github.com/mimoduo/Mimogear.git<br>
-            $ <em>cd</em> Mimogear<br>
-            $ npm install<br>
-            $ gulp</code>
         </div>
       </div>
       <div class="section">

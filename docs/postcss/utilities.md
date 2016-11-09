@@ -13,7 +13,7 @@ There are several utility mixins available within Mimogear for use in production
 
 ##Accessibility
 
-There are two accessibility mixins both of which refer to visually hiding and unhiding elements from the page. An example of using both in tandem can be found on the skip link included by default into Mimogear. The following example visually hides the map-label and is then reset on focus.
+There are two accessibility mixins both of which refer to visually hiding and unhiding elements from the page. By visually hiding an element, it will be rendered visible only to screen readers. An example of using both in tandem can be found on the skip link included by default into Mimogear. The following example visually hides the map-label and is then reset on focus.
 
 **Postcss**
 
@@ -49,7 +49,7 @@ There are two accessibility mixins both of which refer to visually hiding and un
 
 ##Clearfix
 
-The clearfix mixin prevents the collapse of any containers that have floated elements within them. By default, the mimo grid uses the clearfix mixin as a fallback for floated columns. Make sure the mixin is declared within the after psuedo selector.
+The clearfix mixin prevents the collapse of any containers that have floated elements within them. The mimo grid uses the clearfix mixin as a fallback for floated columns. When using the clearfix mixin, make sure the mixin is declared within the after psuedo selector.
 
 **Postcss**
 
@@ -97,7 +97,7 @@ The compartment mixin ensures that a container will be horizontally centered and
 
 ##Cover
 
-The cover mixin is used to blanket an element on top of another element. By default, all elements have position relative on them therefor it is not necessary to make sure position: relative is on the parent element of a cover element.
+The cover mixin is used to blanket an element on top of another element. All elements have position relative on them therefore it is not necessary to make sure position: relative is on the parent element of a cover element.
 
 **Postcss**
 
@@ -121,7 +121,12 @@ The cover mixin is used to blanket an element on top of another element. By defa
 
 ##Font Face
 
-The font-face mixin helps include local font files into your project. The mixin accepts 4 parameters: the font family name, the font family file path name, the font-style, and the font-weight. By default, font-style will output to normal and font-weight will also output to normal. The fonts folder should be placed within the dist folder in order for the font files to be properly called.
+The font-face mixin helps include local font files into your project. To call a font file, make sure it is placed within dist/fonts/. There are 2 key parameters and 2 additional yet optional parameters.
+
+1. Font name: _Required_, the name you'd like to use to reference the font in css
+2. File name: _Required_, the file name of the font, make sure all formats have the same name
+3. Font style: _Optional_, the style of the font, normal, italics, etc.
+4. Font weight: _Optional_, the numbered weight of the font
 
 **Postcss**
 
@@ -146,7 +151,7 @@ The font-face mixin helps include local font files into your project. The mixin 
 
 ##List Reset
 
-The list-reset mixin is available to help reset the default browser styles of lists. This is used frequently when styling list based navigation components. The following example assumes the class of sorted-cards is either an ol or ul element.
+The list-reset mixin is available to help reset the default browser styles of lists. The following example assumes the class of sorted-cards is either an ol or ul element.
 
 **Postcss**
 
@@ -169,7 +174,7 @@ The list-reset mixin is available to help reset the default browser styles of li
 
 ##Media Query
 
-There are two available media query mixins for use within Mimogear, "media" and "enlarged-media".
+There are two available media query mixins for use within Mimogear, _media_ and _enlarged-media_.
 
 The **media** mixin is a min-width only media query that accepts a unit width as a parameter. The following example calls the media mixin given a width of aldnoah and then applies the included style to the rosewaal selector.
 

@@ -1,14 +1,14 @@
-@define-mixin font-face $name, $path, $style: normal, $weight: normal {
+@define-mixin font-face $name, $file-name, $style: normal, $weight: normal {
 
   @font-face {
     font-family: '$name';
     font-style: $style;
     font-weight: $weight;
     src:
-      url('../fonts/$path.eot') format('eot'),
-      url('../fonts/$path.woff') format('woff'),
-      url('../fonts/$path.ttf') format('truetype'),
-      url('../fonts/$path.svg#$path') format('svg');
+      url('../fonts/$file-name.eot') format('eot'),
+      url('../fonts/$file-name.woff') format('woff'),
+      url('../fonts/$file-name.ttf') format('truetype'),
+      url('../fonts/$file-name.svg#$path') format('svg');
   }
 
 }

@@ -1,10 +1,19 @@
 #Pages
 
-Pug pages are the bread and butter of your markup. These pages will be compiled into the html files that represent your site. The default pages (index.pug and style-guide.pug) extend the default site template and pass in extra content via the content block. This is how most pages will be structured during production.
+Pug pages are the bread and butter of your site. These pages will be compiled into the html files that represent your site. The default pages (index.pug and style-guide.pug) extend the default site template and pass in extra content via the content block.
+
+##Adding in Content
+
+In order to add content and component markup to your page, there is a content block that is setup by default on each of the default pages (index.pug and style-guide.pug) within Mimogear. This content will be nested directly into the main element of your site as dictated within the default site template.
+
+```pug
+block content
+  p Any pug code can be nested here
+```
 
 ##Extending a Template
 
-Each page extends the default site.pug template as the first command within a pug page. In the case of adding a subfolder of pug pages, make sure to correct the path the extend function looks for.
+Each page extends the default site.pug template as the first command within a pug page. Make sure this is included on your page!
 
 **Base Level**
 
@@ -12,19 +21,12 @@ Each page extends the default site.pug template as the first command within a pu
 extends ../templates/site.pug
 ```
 
+In the case of adding a subfolder within src/pug/pages, make sure to correct the path the extend function looks for.
+
 **Within 1 Subfolder**
 
 ```pug
 extends ../../templates/site.pug
-```
-
-##Injecting Content
-
-In order to add content and component markup to your page, there is a content block that is setup by default on each of the default pages (index.pug and style-guide.pug) within Mimogear. This content will be nested directly into the main element of your site as dictated within the default site template.
-
-```pug
-block content
-  p Any pug code can be nested here
 ```
 
 ##Changing the Theme
@@ -50,7 +52,7 @@ block description
 
 ##Adding Additional Stylesheets
 
-In the case you would like to add additional stylesheets on a page per page bases, there is an optional block called additional-stylesheets at the end of the head region.
+In the case you would like to add an additional stylesheet for your page, there is an optional block called additional-stylesheets at the end of the head region.
 
 ```pug
 block additional-stylesheets
@@ -62,7 +64,7 @@ block additional-stylesheets
 
 ##Adding Additional Scripts
 
-In the case you would like to add additional scripts on a page per page bases, there is an optional block called block additional-scripts at the end of the footer region.
+In the case you would like to add an additional script for your page, there is an optional block called block additional-scripts at the end of the footer region.
 
 ```pug
 block additional-scripts

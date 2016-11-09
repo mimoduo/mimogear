@@ -1,6 +1,6 @@
 #Partials
 
-Partials are meant to serve as reusable blocks that are frequent throughout the design. The content of a partial will never change. Mimogear comes with the following partials which should serve as a formidable start to the beginning of your development.
+Partials serve as reusable blocks. The content of a partial will never change. Mimogear comes with the following partials which should serve as a formidable start to the beginning of your development.
 
 * Address
 * Article
@@ -9,13 +9,15 @@ Partials are meant to serve as reusable blocks that are frequent throughout the 
 * Search
 * Table
 
-In order to include a partial onto a page, you'll need to use pug's include functionality. In the case of adding a subfolder of pug pages, make sure to correct the path the include function looks for.
+In order to include a partial onto a page, you'll need to use pug's include functionality.
 
 **Base Level**
 
 ```pug
 include ../partials/nav-main.pug
 ```
+
+In the case of adding a subfolder of pug pages, make sure to correct the path the include function looks for.
 
 **Within 1 Subfolder**
 

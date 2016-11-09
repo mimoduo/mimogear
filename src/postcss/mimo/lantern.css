@@ -14,11 +14,12 @@
   transition:
     opacity .25s,
     visibility .25s;
-}
 
-.lantern-visible {
-  opacity: 1;
-  visibility: visible;
+  &-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
 }
 
   .lantern-content {

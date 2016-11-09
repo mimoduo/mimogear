@@ -40,7 +40,7 @@ Mimogear enforces a strict postcss formatting standard. The following example de
 
     }
 
-    &.module-in-view {
+    &-in-view {
 
       @mixin media $yatterman {}
 

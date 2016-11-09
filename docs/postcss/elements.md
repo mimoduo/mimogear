@@ -70,7 +70,7 @@ The sprite partial is used to add the width and height for each symbol that is i
 
 ##Type
 
-The type partial contains all of your heading 1-6 styles. Each heading is styled using a respective mixin. By using a mixin, you are able to use these heading styles elsewhere in your project. This use is reserved for selectors that aren't headers but have been styled as such in the design.
+The type partial contains all of your heading 1-6 styles. Each heading is styled using a respective mixin. By using a mixin, you are able to use these heading styles on elements that aren't headers.
 
 **Postcss**
 
