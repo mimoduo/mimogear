@@ -897,10 +897,6 @@ template {
   }
 }
 
-.mimo-theme p {
-  margin: 0.625rem 0;
-}
-
 .mimo-theme .lead {
   margin-bottom: 2.5rem;
 }
@@ -910,6 +906,18 @@ template {
   .mimo-theme .lead {
     font-size: 1.1111111111111112em;
   }
+}
+
+/* ================
+// HTML
+// ============= */
+
+.mimo-theme a {
+  color: inherit;
+}
+
+.mimo-theme p {
+  margin: 0.625rem 0;
 }
 
 /* ================
@@ -932,6 +940,10 @@ template {
   margin-right: auto;
   margin-left: auto;
   padding: 1.1111111111111112em;
+}
+
+.mimo-theme .site-footer {
+  background: #E8EAF6;
 }
 
 /* ================
@@ -1079,10 +1091,6 @@ template {
 .mimo-theme .section:nth-of-type(odd) {
   background: #7986CB;
   color: #E8EAF6;
-}
-
-.mimo-theme .section:last-child {
-  border-bottom: 0.25em solid #7986CB;
 }
 
 /* ================
