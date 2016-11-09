@@ -2,15 +2,15 @@
 // Drawer Mixin
 // ============= */
 
-@define-mixin drawer $transform-value: -20% {
+@define-mixin drawer $translate-value: -20% {
   position: absolute;
   min-height: 100%;
   width: 100%;
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
-  transform: translate($transform-value, 0);
-  transform: translate3d($transform-value, 0, 0);
+  transform: translate($translate-value, 0);
+  transform: translate3d($translate-value, 0, 0);
 }
 
 @define-mixin active-drawer {

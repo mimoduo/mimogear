@@ -769,6 +769,16 @@ template {
 // Lantern Lightbox
 // ============= */
 
+/* Inline lantern image */
+
+.lantern-light {
+  cursor: zoom-in;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .lantern {
   position: fixed;
   top: 0;
@@ -834,16 +844,6 @@ template {
       top: 0;
       right: 0;
     }
-
-/* Inline lantern image */
-
-.lantern-light {
-  cursor: zoom-in;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
 
 /* ================
 // Variables
@@ -1867,8 +1867,6 @@ h6 {
   cursor: not-allowed;
   pointer-events: none;
 }
-
-/* Extended Button */
 
 /* ================
 // Site Logo Link

@@ -2,6 +2,12 @@
 // Lantern Lightbox
 // ============= */
 
+/* Inline lantern image */
+.lantern-light {
+  cursor: zoom-in;
+  user-select: none;
+}
+
 .lantern {
   position: fixed;
   top: 0;
@@ -58,9 +64,3 @@
       top: 0;
       right: 0;
     }
-
-/* Inline lantern image */
-.lantern-light {
-  cursor: zoom-in;
-  user-select: none;
-}
