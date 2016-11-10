@@ -335,7 +335,6 @@ $m2: #E8EAF6;
     display: inline-block;
     margin-bottom: em(20, 18);
     padding: em(60, 18) em(20, 18);
-    font-weight: 700;
     background: $m2;
     border-radius: em(20, 35);
     color: $m1;
