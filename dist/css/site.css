@@ -888,6 +888,7 @@ template {
 .mimo-theme h4 {
   margin: 0 0 0.625rem;
   font-size: 1.2222222222222223em;
+  line-height: 1.0909090909090908em;
 }
 
 @media screen and (min-width: 400px) {
@@ -1199,7 +1200,6 @@ template {
   margin-bottom: 1.1111111111111112em;
   padding: 3.3333333333333335em 1.1111111111111112em;
   font-weight: 700;
-  line-height: 1;
   background: #E8EAF6;
   border-radius: 0.5714285714285714em;
   color: #7986CB;

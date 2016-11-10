@@ -41,6 +41,7 @@ $m2: #E8EAF6;
   h4 {
     margin: 0 0 rem(10);
     font-size: em(22, 18);
+    line-height: em(24, 22);
 
     @mixin media $tiny {
       font-size: em(26, 18);
@@ -335,7 +336,6 @@ $m2: #E8EAF6;
     margin-bottom: em(20, 18);
     padding: em(60, 18) em(20, 18);
     font-weight: 700;
-    line-height: 1;
     background: $m2;
     border-radius: em(20, 35);
     color: $m1;
