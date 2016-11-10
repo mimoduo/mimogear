@@ -2,23 +2,6 @@
 
 The mimo partials refer to each specialized mimo module available within Mimogear.
 
-##Drawer
-
-There are three mixins available within the drawer partial as well as default styles for the drawer and respective drawer trigger. By default the drawer will be shifted 20% of itself to the left. The following example will demonstrate the use of the reset drawer mixins in order to display drawer content on larger screens in its original stacking order.
-
-**Postcss**
-
-```postcss
-.drawer {
-  /* styles */
-
-  @media $aldnoah {
-    @mixin reset-drawer;
-  }
-
-}
-```
-
 ##Grid
 
 The mimogear grid system is setup using the [Postcss-simple-grid](https://github.com/iamfrntdv/postcss-simple-grid) module. Let's setup a grid example for the gamagori breakpoint (1200px).
@@ -63,6 +46,27 @@ The mimogear grid system is setup using the [Postcss-simple-grid](https://github
     p Grid column content
 ```
 
+##Sail
+
+The sail partial contains styles that animate slides and help dictate mouse interaction. Make sure to style the previous control, next control, and pagination if they are in use.
+
+##Drawer
+
+There are three mixins available within the drawer partial as well as default styles for the drawer and respective drawer trigger. By default the drawer will be shifted 20% of itself to the left. The following example will demonstrate the use of the reset drawer mixins in order to display drawer content on larger screens in its original stacking order.
+
+**Postcss**
+
+```postcss
+.drawer {
+  /* styles */
+
+  @media $aldnoah {
+    @mixin reset-drawer;
+  }
+
+}
+```
+
 ##Harmonica
 
 The harmonica partial styles the ordering of active content within an accordion/harmonica. If harmonicas are not need but accordions are, delete the media queries within the harmonica partial. The $harmonica-view variable dictates when the accordion on smaller screens becomes a harmonica on larger screens. If you change the $harmonica-view variable within configuration.js, make sure to also update the harmonicaView option when the harmonica is initiated in the js.
@@ -85,7 +89,3 @@ The lantern partial styles the lightbox, dictates recommended controller positio
 ##Mimo Theme
 
 The mimo-theme styles the main index page that is shown by default. This theme is safe to delete during production. There are some useful examples in the mimo-theme of mixins, functions, and common ways to style mimo modules if you're up for some exploration!
-
-##Sail
-
-The sail partial contains styles that animate slides and help dictate mouse interaction. Make sure to style the previous control, next control, and pagination if they are in use.

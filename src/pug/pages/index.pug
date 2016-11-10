@@ -13,15 +13,18 @@ block additional-stylesheets
 block main
   +section
     h2 A Simple Static Site Generator
-    p.lead Mimogear was built from the ground up to serve as a skeleton framework for html/pug, css/postcss, and javascript. By mixing in "gulp", a popular task runner, #[strong Mimogear will automatically compile, distribute, and watch development assets]. I hope you enjoy how easy it is to build as much as I enjoyed creating it!
+    p.lead Mimogear was built from the ground up to serve as a skeleton framework for html/pug, css/postcss, and javascript. By mixing in gulp, a popular task runner, #[strong Mimogear will automatically compile, distribute, and watch development assets]. I hope you enjoy how easy it is to build as much as I enjoyed creating it!
     h4 Give Mimogear a try with a few setup commands in your terminal:
     code
       | $ git #[em clone] https://github.com/mimoduo/Mimogear.git#[br]
       | $ #[em cd] Mimogear#[br]
       | $ npm install#[br]
       | $ gulp
-    .grid.reasons
-      .column
+  +section
+    h2 Simple Slideshow
+    p.lead Arrows, pagination, and a hint of accessibility features
+    ol.sail-slides
+      li
         .reason-bubble
           <svg class="symbol symbol-reason symbol-devices" viewBox="0 0 24 24">
           <title>devices</title>
@@ -30,7 +33,7 @@ block main
         .reason-details
           h4 Responsive
           span Tested from the ground up for every screen size
-      .column
+      li
         .reason-bubble
           <svg class="symbol symbol-reason symbol-child" viewBox="0 0 24 24">
           <title>child</title>
@@ -39,7 +42,7 @@ block main
         .reason-details
           h4 Simple
           span #[strong Easy to understand] code with thorough documentation to match
-      .column
+      li
         .reason-bubble
           <svg class="symbol symbol-reason symbol-cloud" viewBox="0 0 24 24">
           <title>cloud_queue</title>
@@ -48,7 +51,7 @@ block main
         .reason-details
           h4 Light
           span #[strong 40kb] minified distribution
-      .column
+      li
         .reason-bubble
           <svg class="symbol symbol-reason symbol-infinity" viewBox="0 0 24 24">
           <title>infinity</title>
@@ -57,14 +60,6 @@ block main
         .reason-details
           h4 Well Supported
           span #[strong Constantly updated] to include only the best practices on the web
-  +section
-    h2 Simple Slideshow
-    p.lead Arrows, pagination, and a hint of accessibility features
-    ol.sail-slides
-      li One
-      li Two
-      li Three
-      li Four
   +section
     h2 Flexible Lightbox
     p.lead Lightbox images scale to the height or width of the brower without javascript.
@@ -87,14 +82,14 @@ block main
     p.lead Accordions on mobile and then harmonicas at the breakpoint of your choice.
     .harmonica
       button.harmonica-header
-        h4.harmonica-heading Harmonica One
-      .harmonica-content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis.
+        h4.harmonica-heading Pug to HTML
+      .harmonica-content When it comes to pug, a popular html templating language, Mimogear has you covered. With pug's low barrier of entry, you'll be pumping out content pages in no time flat. There are also some starter partials available in Mimogear to help style general interface elements at the beginning. If you'd like to learn more about pug before diving in, be sure to check our their #[a(href="https://pugjs.org/api/getting-started.html", target="_blank") awesome set of documentation]. Just don't forget to come back!
       button.harmonica-header
-        h4.harmonica-heading Harmonica Two
-      .harmonica-content Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+        h4.harmonica-heading Postcss to CSS
+      .harmonica-content You'll find postcss, a post-processor for css, has both the nature of plain css and the power of popular tools like sass. As an extendible language and a set of Mimogear defaults, you may never look back to other languages. Mimogear also provides a bare skeleton to help you get set up quickly so you can focus on the important elements of your design.
       button.harmonica-header
-        h4.harmonica-heading Harmonica Three
-      .harmonica-content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis.
+        h4.harmonica-heading Just Javascript
+      .harmonica-content Javascript is available on every browser and has tons and tons of documentation. It's a fairly easy language to begin with but if you're feeling a little woozy on this one don't worry; Mimogear has you covered with a default set of modules.
   +section
     h2 Github Links
     p.lead Mimogear is an open source project and available for free on github.

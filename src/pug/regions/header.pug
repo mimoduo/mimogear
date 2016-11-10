@@ -4,9 +4,9 @@
 
 header.site-header(role="banner")
   button.drawer-trigger
-  .drawer
-    nav.main-nav
-      include ../partials/main-nav.pug
   a.site-logo(href="./")
     span.site-logo-label= siteTitle
     +symbol("logo")
+  .drawer
+    nav.main-nav
+      include ../partials/main-nav.pug

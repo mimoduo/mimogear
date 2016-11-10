@@ -19,6 +19,6 @@
     pointer-events: none;
   }
 
-}
+  &-modifier {}
 
-.button-modifier {}
+}

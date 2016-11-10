@@ -2,13 +2,13 @@
 
 ##Usage
 
-Once you're all [setup](https://github.com/mimoduo/Mimogear/tree/master/docs), there is one gulp command to get you started. This command will compiled all files into the dist folder, open a new browser window with your site, and begin watching the files within the src folder.
+Once you're all [setup](https://github.com/mimoduo/Mimogear/tree/master/docs), there is the "gulp" command to get you started. This command will compile all files into the dist folder, open a new browser window with your site, and begin watching the files within the src folder. In other words, the ultimate static site generator command.
 
 ```sh
 gulp
 ```
 
-Although, if you want to build only a particular set of files or watch without building, there are several commands you can run.
+Sometimes you may want to build only a particular set of files or watch without building. In that case, there are several commands you can run.
 
 ```sh
 gulp pug

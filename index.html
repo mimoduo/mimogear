@@ -15,7 +15,10 @@
   <body><a class="skip-link" href="#site-main">Skip to main content</a>
     <figure class="site-sprite" style="display: none"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 24 24" id="arrow-back"><path d="M20.016 11.016v1.969H7.828l5.578 5.625L12 20.016 3.984 12 12 3.984l1.406 1.406-5.578 5.625h12.188z"/></symbol><symbol viewBox="0 0 24 24" id="arrow-forward"><path d="M12 3.984L20.016 12 12 20.016l-1.406-1.406 5.578-5.625H3.984v-1.969h12.188l-5.578-5.625z"/></symbol><symbol viewBox="0 0 24 24" id="close"><path d="M18.984 6.422L13.406 12l5.578 5.578-1.406 1.406L12 13.406l-5.578 5.578-1.406-1.406L10.594 12 5.016 6.422l1.406-1.406L12 10.594l5.578-5.578z"/></symbol><symbol viewBox="0 0 380 64" id="logo"><title>Mimogear</title><desc>Mimogear site logo</desc><text font-family="Quicksand-Light, Quicksand" font-size="70" font-weight="300"><tspan x="0" y="50">Mimogear</tspan></text></symbol><symbol viewBox="0 0 24 24" id="open"><path d="M18.984 12.984h-6v6h-1.969v-6h-6v-1.969h6v-6h1.969v6h6v1.969z"/></symbol></svg></figure>
     <header class="site-header" role="banner">
-      <button class="drawer-trigger"></button>
+      <button class="drawer-trigger"></button><a class="site-logo" href="./"><span class="site-logo-label">mimogear</span>
+        <svg class="symbol symbol-logo">
+          <use xlink:href="#logo"></use>
+        </svg></a>
       <div class="drawer">
         <nav class="main-nav">
           <ol>
@@ -23,22 +26,25 @@
             <li><a href="https://github.com/mimoduo/Mimogear/tree/master/docs" itemprop="url">Documentation</a></li>
           </ol>
         </nav>
-      </div><a class="site-logo" href="./"><span class="site-logo-label">mimogear</span>
-        <svg class="symbol symbol-logo">
-          <use xlink:href="#logo"></use>
-        </svg></a>
+      </div>
     </header>
     <main class="site-main" id="site-main" role="main">
       <div class="section">
         <div class="compartment">
           <h2>A Simple Static Site Generator</h2>
-          <p class="lead">Mimogear was built from the ground up to serve as a skeleton framework for html/pug, css/postcss, and javascript. By mixing in "gulp", a popular task runner, <strong>Mimogear will automatically compile, distribute, and watch development assets</strong>. I hope you enjoy how easy it is to build as much as I enjoyed creating it!</p>
+          <p class="lead">Mimogear was built from the ground up to serve as a skeleton framework for html/pug, css/postcss, and javascript. By mixing in gulp, a popular task runner, <strong>Mimogear will automatically compile, distribute, and watch development assets</strong>. I hope you enjoy how easy it is to build as much as I enjoyed creating it!</p>
           <h4>Give Mimogear a try with a few setup commands in your terminal:</h4><code>$ git <em>clone</em> https://github.com/mimoduo/Mimogear.git<br>
             $ <em>cd</em> Mimogear<br>
             $ npm install<br>
             $ gulp</code>
-          <div class="grid reasons">
-            <div class="column">
+        </div>
+      </div>
+      <div class="section">
+        <div class="compartment">
+          <h2>Simple Slideshow</h2>
+          <p class="lead">Arrows, pagination, and a hint of accessibility features</p>
+          <ol class="sail-slides">
+            <li>
               <div class="reason-bubble"><svg class="symbol symbol-reason symbol-devices" viewBox="0 0 24 24">
 <title>devices</title>
 <path class="path1" d="M11.953 9h3.047l-2.484 1.781 0.938 2.906-2.438-1.828-2.484 1.828 0.938-2.906-2.484-1.781h3.047l0.984-3zM20.016 2.016c1.078 0 1.969 0.844 1.969 1.969v5.016h-1.969v-5.016h-18v12h12.984v2.016h-2.016v2.016h2.016v1.969h-8.016v-1.969h2.016v-2.016h-6.984c-1.125 0-2.016-0.938-2.016-2.016v-12c0-1.125 0.891-1.969 2.016-1.969h18zM23.016 20.016v-7.031h-5.016v7.031h5.016zM23.016 11.016c0.563 0 0.984 0.422 0.984 0.984v9c0 0.563-0.422 0.984-0.984 0.984h-5.016c-0.563 0-0.984-0.422-0.984-0.984v-9c0-0.563 0.422-0.984 0.984-0.984h5.016z"></path>
@@ -47,8 +53,8 @@
               <div class="reason-details">
                 <h4>Responsive</h4><span>Tested from the ground up for every screen size</span>
               </div>
-            </div>
-            <div class="column">
+            </li>
+            <li>
               <div class="reason-bubble"><svg class="symbol symbol-reason symbol-child" viewBox="0 0 24 24">
 <title>child</title>
 <path class="path1" d="M7.5 14.016h9c-0.75 1.781-2.484 3-4.5 3s-3.75-1.219-4.5-3zM12 18.984c3.188 0 5.87-2.101 6.703-5.016 0.094 0 0.188 0.047 0.281 0.047 1.078 0 2.016-0.938 2.016-2.016s-0.938-2.016-2.016-2.016c-0.094 0-0.188 0.047-0.281 0.047-0.833-2.914-3.515-5.016-6.703-5.016s-5.87 2.101-6.703 5.016c-0.094 0-0.188-0.047-0.281-0.047-1.078 0-2.016 0.938-2.016 2.016s0.938 2.016 2.016 2.016c0.094 0 0.188-0.047 0.281-0.047 0.833 2.914 3.515 5.016 6.703 5.016zM22.922 12.656c-0.234 1.5-1.313 2.766-2.766 3.188-1.325 2.771-4.445 5.156-8.156 5.156-3.698 0-6.821-2.346-8.109-5.156-1.453-0.422-2.578-1.688-2.813-3.188-0.047-0.188-0.094-0.422-0.094-0.656s0.047-0.469 0.094-0.656c0.234-1.5 1.359-2.766 2.813-3.188 0.516-1.125 1.219-2.109 2.156-2.906 1.594-1.406 3.656-2.25 5.953-2.25 3.764 0 6.802 2.304 8.109 5.156 1.453 0.422 2.578 1.688 2.813 3.188 0.047 0.188 0.094 0.422 0.094 0.656s-0.047 0.469-0.094 0.656zM8.25 10.5c0-0.703 0.563-1.266 1.266-1.266s1.219 0.563 1.219 1.266-0.516 1.266-1.219 1.266-1.266-0.563-1.266-1.266zM13.266 10.5c0-0.703 0.516-1.266 1.219-1.266s1.266 0.563 1.266 1.266-0.563 1.266-1.266 1.266-1.219-0.563-1.219-1.266z"></path>
@@ -57,8 +63,8 @@
               <div class="reason-details">
                 <h4>Simple</h4><span><strong>Easy to understand</strong> code with thorough documentation to match</span>
               </div>
-            </div>
-            <div class="column">
+            </li>
+            <li>
               <div class="reason-bubble"><svg class="symbol symbol-reason symbol-cloud" viewBox="0 0 24 24">
 <title>cloud_queue</title>
 <path class="path1" d="M18.984 18c1.641 0 3-1.359 3-3s-1.359-3-3-3h-1.5v-0.516c0-3.047-2.438-5.484-5.484-5.484-2.531 0-4.641 1.688-5.297 3.984h-0.703c-2.203 0-3.984 1.828-3.984 4.031s1.781 3.984 3.984 3.984h12.984zM19.359 10.031c2.578 0.188 4.641 2.344 4.641 4.969 0 2.766-2.25 5.016-5.016 5.016h-12.984c-3.328 0-6-2.672-6-6 0-3.094 2.344-5.625 5.344-5.953 1.266-2.391 3.75-4.078 6.656-4.078 3.656 0 6.656 2.578 7.359 6.047z"></path>
@@ -67,8 +73,8 @@
               <div class="reason-details">
                 <h4>Light</h4><span><strong>40kb</strong> minified distribution</span>
               </div>
-            </div>
-            <div class="column">
+            </li>
+            <li>
               <div class="reason-bubble"><svg class="symbol symbol-reason symbol-infinity" viewBox="0 0 24 24">
 <title>infinity</title>
 <path class="path1" d="M18.609 6.609c3 0 5.391 2.438 5.391 5.391s-2.391 5.391-5.391 5.391c-1.453 0-2.813-0.563-3.844-1.594l-1.266-1.125 1.5-1.313 1.172 0.984c0.703 0.703 1.547 1.031 2.438 1.031 1.875 0 3.375-1.5 3.375-3.375s-1.5-3.375-3.375-3.375c-0.891 0-1.734 0.328-2.391 0.984-1.412 1.244-2.835 2.478-4.219 3.75l-2.813 2.484c-0.984 0.984-2.344 1.547-3.797 1.547-3 0-5.391-2.438-5.391-5.391s2.391-5.391 5.391-5.391c1.453 0 2.813 0.563 3.844 1.594l1.266 1.125-1.547 1.313-1.125-0.984c-0.703-0.703-1.547-1.031-2.438-1.031-1.875 0-3.375 1.5-3.375 3.375s1.5 3.375 3.375 3.375c0.891 0 1.734-0.328 2.391-0.984 1.412-1.244 2.835-2.478 4.219-3.75l2.813-2.484c0.984-0.984 2.344-1.547 3.797-1.547z"></path>
@@ -77,19 +83,7 @@
               <div class="reason-details">
                 <h4>Well Supported</h4><span><strong>Constantly updated</strong> to include only the best practices on the web</span>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section">
-        <div class="compartment">
-          <h2>Simple Slideshow</h2>
-          <p class="lead">Arrows, pagination, and a hint of accessibility features</p>
-          <ol class="sail-slides">
-            <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
-            <li>Four</li>
+            </li>
           </ol>
         </div>
       </div>
@@ -110,17 +104,17 @@
           <p class="lead">Accordions on mobile and then harmonicas at the breakpoint of your choice.</p>
           <div class="harmonica">
             <button class="harmonica-header">
-              <h4 class="harmonica-heading">Harmonica One</h4>
+              <h4 class="harmonica-heading">Pug to HTML</h4>
             </button>
-            <div class="harmonica-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis.</div>
+            <div class="harmonica-content">When it comes to pug, a popular html templating language, Mimogear has you covered. With pug's low barrier of entry, you'll be pumping out content pages in no time flat. There are also some starter partials available in Mimogear to help style general interface elements at the beginning. If you'd like to learn more about pug before diving in, be sure to check our their <a href="https://pugjs.org/api/getting-started.html" target="_blank">awesome set of documentation</a>. Just don't forget to come back!</div>
             <button class="harmonica-header">
-              <h4 class="harmonica-heading">Harmonica Two</h4>
+              <h4 class="harmonica-heading">Postcss to CSS</h4>
             </button>
-            <div class="harmonica-content">Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</div>
+            <div class="harmonica-content">You'll find postcss, a post-processor for css, has both the nature of plain css and the power of popular tools like sass. As an extendible language and a set of Mimogear defaults, you may never look back to other languages. Mimogear also provides a bare skeleton to help you get set up quickly so you can focus on the important elements of your design.</div>
             <button class="harmonica-header">
-              <h4 class="harmonica-heading">Harmonica Three</h4>
+              <h4 class="harmonica-heading">Just Javascript</h4>
             </button>
-            <div class="harmonica-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis.</div>
+            <div class="harmonica-content">Javascript is available on every browser and has tons and tons of documentation. It's a fairly easy language to begin with but if you're feeling a little woozy on this one don't worry; Mimogear has you covered with a default set of modules.</div>
           </div>
         </div>
       </div>
@@ -163,7 +157,7 @@
     </main>
     <footer class="site-footer" role="contentinfo">
       <div class="vcard" itemscope itemtype="http://schema.org/Organization">
-        <div class="org" itemprop="name">Organization</div><a class="email" href="mailto:organization@gmail.com" itemprop="email">organization@gmail.com</a>
+        <div class="org" itemprop="name">Organization</div><a class="email" href="mailto:" itemprop="email">organization at gmail.com</a>
         <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
           <div class="street-address" itemprop="streetAddress">82 West Pegasus St.</div><span class="locality" itemprop="addressLocality">Washington,&nbsp;</span><span class="region" itemprop="addressRegion">MA&nbsp;</span><span class="postal-code" itemprop="postalCode">480124</span>
         </address>

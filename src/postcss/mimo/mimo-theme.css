@@ -101,6 +101,11 @@ $m2: #E8EAF6;
   .site-header {
     @mixin compartment 1040;
     padding: em(20, 18);
+
+    &:after {
+      @mixin clearfix;
+    }
+
   }
 
   .site-footer {
@@ -120,6 +125,36 @@ $m2: #E8EAF6;
   .vcard {
     @mixin compartment 1000;
   }
+
+}
+
+
+/* ================
+// Logo
+// ============= */
+
+.mimo-theme {
+
+  .site-logo {
+    height: em(64, 18);
+    max-width: em(440, 18);
+    width: 100%;
+    padding-left: em(60, 18);
+
+    @mixin media $aldnoah {
+      float: left;
+      max-width: em(380, 18);
+      padding-left: 0;
+    }
+
+  }
+
+    .symbol-logo {
+      display: block;
+      height: 100%;
+      width: 100%;
+      fill: $m1;
+    }
 
 }
 
@@ -227,32 +262,6 @@ $m2: #E8EAF6;
 
 
 /* ================
-// Logo
-// ============= */
-
-.mimo-theme {
-
-  .site-logo {
-    margin-left: em(60, 18);
-
-    @mixin media $aldnoah {
-      margin-left: 0;
-    }
-
-  }
-
-    .symbol-logo {
-      display: block;
-      height: em(64, 18);
-      max-width: em(380, 18);
-      width: 100%;
-      fill: $m1;
-    }
-
-}
-
-
-/* ================
 // Section
 // ============= */
 
@@ -298,37 +307,6 @@ $m2: #E8EAF6;
 
 
 /* ================
-// Reasons
-// ============= */
-
-.mimo-theme {
-
-  .reason-bubble {
-    display: none;
-    vertical-align: top;
-    padding-right: em(20, 18);
-
-    @mixin media $mini {
-      display: table-cell;
-    }
-
-  }
-
-    .symbol-reason {
-      height: em(38, 18);
-      width: em(38, 18);
-    }
-
-  .reason-details {
-    display: table-cell;
-    vertical-align: top;
-    padding-bottom: em(20, 18);
-  }
-
-}
-
-
-/* ================
 // Code
 // ============= */
 
@@ -337,7 +315,6 @@ $m2: #E8EAF6;
   code {
     display: block;
     overflow-x: auto;
-    margin-bottom: em(60, 18);
     padding: em(20, 18);
     background: $m2;
     border-radius: em(10, 18);
@@ -353,60 +330,65 @@ $m2: #E8EAF6;
 
 .mimo-theme {
 
-  .sail-slides {
+  .sail-slide {
+    display: inline-block;
+    margin-bottom: em(20, 18);
+    padding: em(60, 18) em(20, 18);
+    font-weight: 700;
+    line-height: 1;
+    background: $m2;
+    border-radius: em(20, 35);
+    color: $m1;
+
+    @mixin media $medium {
+      padding-right: em(40, 18);
+      padding-left: em(40, 18);
+    }
+
+    @media print {
+      padding: em(10, 35);
+    }
+
+    &:nth-of-type(even) {
+      background: $m1;
+      color: $m2;
+    }
+
+  }
+
+  .sail-controls {
+    margin-bottom: em(10, 18);
     text-align: center;
   }
 
-    .sail-slide {
-      display: inline-block;
-      margin-bottom: em(20, 35);
-      padding: em(60, 35) em(20, 35);
+    .sail-control {
+      border: 0;
+      padding: 0 em(10, 35);
       font-size: em(35, 18);
-      font-weight: 700;
-      line-height: 1;
-      background: $m2;
-      border-radius: em(20, 35);
-      color: $m1;
+      background: none;
+      color: inherit;
+      transition:
+        opacity .25s,
+        transform .25s;
 
-      @media print {
-        padding: em(10, 35);
+      &:not([disabled]):focus,
+      &:not([disabled]):hover {
+        transform: scale(1.25);
       }
 
-      &:nth-of-type(even) {
-        background: $m1;
-        color: $m2;
+      &[disabled] {
+        opacity: .25;
       }
 
     }
 
-    .sail-controls {
-      margin-bottom: em(15, 18);
-    }
-
-      .sail-control {
-        border: 0;
-        padding: 0 em(10, 35);
-        font-size: em(35, 18);
-        background: none;
-        color: inherit;
-        transition:
-          opacity .25s,
-          transform .25s;
-
-        &:not([disabled]):focus,
-        &:not([disabled]):hover {
-          transform: scale(1.25);
-        }
-
-        &[disabled] {
-          opacity: .25;
-        }
-
+      .symbol-sail {
+        font-size: 85%;
       }
 
-        .symbol-sail {
-          font-size: 85%;
-        }
+  .sail-pages {
+    text-align: center;
+  }
 
     .sail-page {
       height: em(20, 18);
@@ -434,6 +416,36 @@ $m2: #E8EAF6;
       }
 
     }
+
+}
+
+
+/* ================
+// Reasons
+// ============= */
+
+.mimo-theme {
+
+  .reason-bubble {
+    display: none;
+    vertical-align: top;
+    padding-right: em(20, 18);
+
+    @mixin media $mini {
+      display: table-cell;
+    }
+
+  }
+
+    .symbol-reason {
+      height: em(38, 18);
+      width: em(38, 18);
+    }
+
+  .reason-details {
+    display: table-cell;
+    vertical-align: top;
+  }
 
 }
 
@@ -566,7 +578,7 @@ $m2: #E8EAF6;
 
     .action-link-item {
       display: inline-block;
-      margin-right: em(7, 18);
+      margin-right: em(4, 18);
       margin-bottom: em(10, 18);
     }
 

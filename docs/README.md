@@ -25,4 +25,12 @@ The meat of Mimogear is the "gulp" command. Within your terminal, type in _gulp_
 gulp
 ```
 
-This will automatically open your browser to your site and also watch for any file changes in the source (src) folder. Now get to it, developer!
+This will automatically open your browser to your site and also watch for any file changes in the source (src) folder. The next section will discuss how to get started with your new development workflow.
+
+##Development
+
+All files that you'll be working with are in the src/ folder.
+
+* For postcss to css development, begin working in the postcss folder
+* For pug to html development, begin working in the pug folder
+* For javascript development, begin working in the js/site folder

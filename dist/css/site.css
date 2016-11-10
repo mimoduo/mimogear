@@ -941,6 +941,12 @@ template {
   padding: 1.1111111111111112em;
 }
 
+.mimo-theme .site-header:after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
 .mimo-theme .site-footer {
   background: #E8EAF6;
   padding: 1.1111111111111112em;
@@ -954,6 +960,33 @@ template {
   max-width: 62.5rem;
   margin-right: auto;
   margin-left: auto;
+}
+
+/* ================
+// Logo
+// ============= */
+
+.mimo-theme .site-logo {
+  height: 3.5555555555555554em;
+  max-width: 24.444444444444443em;
+  width: 100%;
+  padding-left: 3.3333333333333335em;
+}
+
+@media screen and (min-width: 1000px) {
+
+  .mimo-theme .site-logo {
+    float: left;
+    max-width: 21.11111111111111em;
+    padding-left: 0;
+  }
+}
+
+.mimo-theme .symbol-logo {
+  display: block;
+  height: 100%;
+  width: 100%;
+  fill: #7986CB;
 }
 
 /* ================
@@ -1068,29 +1101,6 @@ template {
 }
 
 /* ================
-// Logo
-// ============= */
-
-.mimo-theme .site-logo {
-  margin-left: 3.3333333333333335em;
-}
-
-@media screen and (min-width: 1000px) {
-
-  .mimo-theme .site-logo {
-    margin-left: 0;
-  }
-}
-
-.mimo-theme .symbol-logo {
-  display: block;
-  height: 3.5555555555555554em;
-  max-width: 21.11111111111111em;
-  width: 100%;
-  fill: #7986CB;
-}
-
-/* ================
 // Section
 // ============= */
 
@@ -1168,41 +1178,12 @@ template {
 }
 
 /* ================
-// Reasons
-// ============= */
-
-.mimo-theme .reason-bubble {
-  display: none;
-  vertical-align: top;
-  padding-right: 1.1111111111111112em;
-}
-
-@media screen and (min-width: 300px) {
-
-  .mimo-theme .reason-bubble {
-    display: table-cell;
-  }
-}
-
-.mimo-theme .symbol-reason {
-  height: 2.111111111111111em;
-  width: 2.111111111111111em;
-}
-
-.mimo-theme .reason-details {
-  display: table-cell;
-  vertical-align: top;
-  padding-bottom: 1.1111111111111112em;
-}
-
-/* ================
 // Code
 // ============= */
 
 .mimo-theme code {
   display: block;
   overflow-x: auto;
-  margin-bottom: 3.3333333333333335em;
   padding: 1.1111111111111112em;
   background: #E8EAF6;
   border-radius: 0.5555555555555556em;
@@ -1213,20 +1194,23 @@ template {
 // Slideshow
 // ============= */
 
-.mimo-theme .sail-slides {
-  text-align: center;
-}
-
 .mimo-theme .sail-slide {
   display: inline-block;
-  margin-bottom: 0.5714285714285714em;
-  padding: 1.7142857142857142em 0.5714285714285714em;
-  font-size: 1.9444444444444444em;
+  margin-bottom: 1.1111111111111112em;
+  padding: 3.3333333333333335em 1.1111111111111112em;
   font-weight: 700;
   line-height: 1;
   background: #E8EAF6;
   border-radius: 0.5714285714285714em;
   color: #7986CB;
+}
+
+@media screen and (min-width: 600px) {
+
+  .mimo-theme .sail-slide {
+    padding-right: 2.2222222222222223em;
+    padding-left: 2.2222222222222223em;
+  }
 }
 
 @media print {
@@ -1242,7 +1226,8 @@ template {
 }
 
 .mimo-theme .sail-controls {
-  margin-bottom: 0.8333333333333334em;
+  margin-bottom: 0.5555555555555556em;
+  text-align: center;
 }
 
 .mimo-theme .sail-control {
@@ -1252,19 +1237,19 @@ template {
   background: none;
   color: inherit;
   -webkit-transition: opacity .25s,
-          -webkit-transform .25s;
+        -webkit-transform .25s;
   transition: opacity .25s,
-          -webkit-transform .25s;
+        -webkit-transform .25s;
   transition: opacity .25s,
-          transform .25s;
+        transform .25s;
   transition:
-          opacity .25s,
-          transform .25s,
-          -webkit-transform .25s;
+        opacity .25s,
+        transform .25s,
+        -webkit-transform .25s;
 }
 
 .mimo-theme .sail-control:not([disabled]):focus,
-        .mimo-theme .sail-control:not([disabled]):hover {
+      .mimo-theme .sail-control:not([disabled]):hover {
   -webkit-transform: scale(1.25);
   transform: scale(1.25);
 }
@@ -1275,6 +1260,10 @@ template {
 
 .mimo-theme .symbol-sail {
   font-size: 85%;
+}
+
+.mimo-theme .sail-pages {
+  text-align: center;
 }
 
 .mimo-theme .sail-page {
@@ -1301,6 +1290,33 @@ template {
 .mimo-theme .sail-page-active:focus,
         .mimo-theme .sail-page-active:hover {
   background: currentColor;
+}
+
+/* ================
+// Reasons
+// ============= */
+
+.mimo-theme .reason-bubble {
+  display: none;
+  vertical-align: top;
+  padding-right: 1.1111111111111112em;
+}
+
+@media screen and (min-width: 300px) {
+
+  .mimo-theme .reason-bubble {
+    display: table-cell;
+  }
+}
+
+.mimo-theme .symbol-reason {
+  height: 2.111111111111111em;
+  width: 2.111111111111111em;
+}
+
+.mimo-theme .reason-details {
+  display: table-cell;
+  vertical-align: top;
 }
 
 /* ================
@@ -1428,7 +1444,7 @@ template {
 
 .mimo-theme .action-link-item {
   display: inline-block;
-  margin-right: 0.3888888888888889em;
+  margin-right: 0.2222222222222222em;
   margin-bottom: 0.5555555555555556em;
 }
 
