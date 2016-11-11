@@ -481,50 +481,66 @@ $m2: #E8EAF6;
 
   .lantern {
     padding: em(40, 18);
+    padding-bottom: em(60, 18);
     background: rgba(255, 255, 255, .75);
   }
 
-    .lantern-holder {
-      border: em(5, 18) solid #fff;
-      border-radius: em(20, 18);
-    }
+    .lantern-content {
 
-    .lantern-control {
-      height: em(25);
-      width: em(25);
-      border: 0;
-      background: $m1;
-      border-radius: 100%;
-      color: $m2;
-      transition:
-        background .25s,
-        box-shadow .25s,
-        color .25s;
-
-      &:focus,
-      &:hover {
-        background: $m2;
-        box-shadow: 0 0 0 em(2) $m1;
-        color: $m1;
+      &:after {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: em(4, 18) em(10, 18);
+        text-align: center;
+        background: $m1;
+        content: attr(title);
       }
 
     }
 
-      .symbol-lantern {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        display: block;
-        transform: translate(-50%, -50%);
+      .lantern-holder {
+        border: em(5, 18) solid #fff;
+        border-radius: em(20, 18);
       }
 
-    .lantern-previous {
-      transform: translate(calc(-100% - em(5, 18)), -50%);
-    }
+      .lantern-control {
+        height: em(25);
+        width: em(25);
+        border: 0;
+        background: $m1;
+        border-radius: 100%;
+        color: $m2;
+        transition:
+          background .25s,
+          box-shadow .25s,
+          color .25s;
 
-    .lantern-next {
-      transform: translate(calc(100% + em(5, 18)), -50%);
-    }
+        &:focus,
+        &:hover {
+          background: $m2;
+          box-shadow: 0 0 0 em(2) $m1;
+          color: $m1;
+        }
+
+      }
+
+        .symbol-lantern {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          display: block;
+          transform: translate(-50%, -50%);
+        }
+
+      .lantern-previous {
+        transform: translate(calc(-100% - em(5, 18)), -50%);
+      }
+
+      .lantern-next {
+        transform: translate(calc(100% + em(5, 18)), -50%);
+      }
 
 }
 

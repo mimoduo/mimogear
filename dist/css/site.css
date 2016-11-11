@@ -1356,7 +1356,19 @@ template {
 
 .mimo-theme .lantern {
   padding: 2.2222222222222223em;
+  padding-bottom: 3.3333333333333335em;
   background: rgba(255, 255, 255, .75);
+}
+
+.mimo-theme .lantern-content:after {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.2222222222222222em 0.5555555555555556em;
+  text-align: center;
+  background: #7986CB;
+  content: attr(title);
 }
 
 .mimo-theme .lantern-holder {
@@ -1372,16 +1384,16 @@ template {
   border-radius: 100%;
   color: #E8EAF6;
   -webkit-transition: background .25s,
-        box-shadow .25s,
-        color .25s;
+          box-shadow .25s,
+          color .25s;
   transition:
-        background .25s,
-        box-shadow .25s,
-        color .25s;
+          background .25s,
+          box-shadow .25s,
+          color .25s;
 }
 
 .mimo-theme .lantern-control:focus,
-      .mimo-theme .lantern-control:hover {
+        .mimo-theme .lantern-control:hover {
   background: #E8EAF6;
   box-shadow: 0 0 0 0.125em #7986CB;
   color: #7986CB;
