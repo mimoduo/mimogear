@@ -4,7 +4,7 @@ A trigger provides a way of enabling a class on the body element after clicking 
 
 ##Quick Use
 
-To get started with triggers, add in the following line inside the anonymous function found in site/main.js:
+To get started with triggers, add in the following line inside the anonymous function found in /src/site/main.js:
 
 **Javascript**
 

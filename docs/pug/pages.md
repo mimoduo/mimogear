@@ -21,7 +21,7 @@ Each page extends the default site.pug template as the first command within a pu
 extends ../templates/site.pug
 ```
 
-In the case of adding a subfolder within src/pug/pages, make sure to correct the path the extend function looks for.
+In the case of adding a subfolder within /src/pug/pages/, make sure to correct the path the extend function looks for.
 
 **Within 1 Subfolder**
 

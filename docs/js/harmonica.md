@@ -4,7 +4,7 @@ A harmonica (tabs) provides a way to have accordions on smaller screens and even
 
 ##Quick Use
 
-To get started with harmonicas, add in the following line inside the anonymous function found in site/main.js:
+To get started with harmonicas, add in the following line inside the anonymous function found in /src/site/main.js:
 
 **Javascript**
 

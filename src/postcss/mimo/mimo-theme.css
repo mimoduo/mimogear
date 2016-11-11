@@ -332,7 +332,7 @@ $m2: #E8EAF6;
 .mimo-theme {
 
   .sail-slide {
-    display: inline-block;
+    height: em(220, 18);
     margin-bottom: em(20, 18);
     padding: em(60, 18) em(20, 18);
     background: $m2;
@@ -342,6 +342,10 @@ $m2: #E8EAF6;
     @mixin media $medium {
       padding-right: em(40, 18);
       padding-left: em(40, 18);
+    }
+
+    @mixin media $large {
+      height: auto;
     }
 
     @media print {
@@ -424,6 +428,22 @@ $m2: #E8EAF6;
 // ============= */
 
 .mimo-theme {
+
+  .reason {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    padding: 0 em(20, 18);
+    transform: translate(0, -50%);
+
+    @mixin media $large {
+      position: relative;
+      top: 0;
+      padding: 0;
+      transform: none;
+    }
+  }
 
   .reason-bubble {
     display: none;

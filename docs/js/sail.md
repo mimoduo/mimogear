@@ -4,7 +4,7 @@ A sail (slideshow) is a slideshow of elements that works based on a series of co
 
 ##Quick Use
 
-To get started with sails, add in the following line inside the anonymous function found in site/main.js:
+To get started with sails, add in the following line inside the anonymous function found in /src/site/main.js:
 
 **Javascript**
 

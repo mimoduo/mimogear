@@ -1,15 +1,15 @@
 #Mimogear
 
-Mimogear is a simple static site generator. By pumping in some pug template files, it will automatically produce a resulting set of html files within the root of your site. The main goal of Mimogear is to strike a balance between simplicity and features, to secure quality and consistency, to be as developer friendly as can be, and to be as project agnostic as possible.
+Mimogear is a simple static site generator and a development framework. It provides an environment for distributing html template files to the root of your site and a framework to help you write postcss/css and javascript with complete focus.
 
 ##Tools Used in Mimogear
 
-Under the hood, Mimogear uses [gulp](http://gulpjs.com/) as a task runner, [pug](https://pugjs.org/api/getting-started.html) as a HTML pre-processor, [postcss](http://postcss.org/) as a CSS post-processer, and standard javascript.
+The main goal of Mimogear is to strike a balance between simplicity and features, to secure quality and consistency, and to be as developer friendly as possible. To achieve those goals, there are a few tools under the hood. Mimogear uses [gulp](http://gulpjs.com/) as a task runner, [pug](https://pugjs.org/api/getting-started.html) as a HTML pre-processor, [postcss](http://postcss.org/) as a CSS post-processer, and standard javascript.
 
 ###[Gulp](http://gulpjs.com/) Features
 
-* Pug compilation
-* Postcss compilation with autoprefixing and minification
+* Pug to html compilation
+* Postcss to css compilation with autoprefixing and minification
 * JS concatenation and uglification
 * Image optimization
 * SVG Sprite Generation
@@ -40,25 +40,25 @@ Under the hood, Mimogear uses [gulp](http://gulpjs.com/) as a task runner, [pug]
 
 ##Browser Support
 
-* Chrome 29+
-* Firefox 29+
-* Safari 6.2+
-* IE 10+ _excluding harmonica_
-* Opera 16+
+| Chrome | Firefox | Safari | IE* | Opera |
+|--------|---------|--------|-----|-------|
+| 29+    | 29+     | 6.2+   | 10+ | 16+   |
+
+\* Excludes harmonica support
 
 ##Installation
 
-Mimogear has adopted the use of node package manager in order to download all the required dependencies. By downloading and installing [node.js](https://nodejs.org/en/) onto your machine, you'll be able to run a set of commands we'll use to help setup Mimogear's environment. The next few steps should be entered within a terminal after node has completed its installation.
+Mimogear uses the node package manager to download all the required dependencies. By downloading and installing [node.js](https://nodejs.org/en/) onto your machine, you'll be able to run a set of commands we'll use to help setup Mimogear's environment. Now that you've installed node, let's enter in the following to get us started.
 
 ```sh
-cd <folder-of-Mimogear>
+cd <folder-of-Mimogear> (drag the folder into your terminal)
 npm install
 gulp
 ```
 
 ##Optional Installation Steps
 
-If you're comfortable with running an alpha version of gulp (and willing to dive into additional steps); there is an alpha gulpfile that mirrors the tasks of the stable gulpfile. By switching the alpha version of the gulpfile you should notice a noticeable improvement in performance from the use of parallel task processing. In order to use the new gulpfile, make sure to download the alpha version of gulp and the newly separated gulp-cli globally. Afterwards, rename the gulpfile-alpha.js to gulpfile.js and rename the original gulpfile to a name of your choice.
+If you'd like to dive on the daring side and see some subtle task runner performance improvements, there is an alpha gulpfile that mirrors the tasks of the stable gulpfile. To use this new gulpfile, make sure to download the alpha version of gulp and the newly separated gulp-cli globally. Afterwards, rename the gulpfile-alpha.js to gulpfile.js and rename the original gulpfile to a name of your choice.
 
 ```sh
 npm install gulpjs/gulp-cli -g
@@ -72,4 +72,4 @@ If you have used Mimogear and you'd love to share it here, feel free to create a
 
 ##Thank You, Everyone!
 
-I hope you enjoy developing with Mimogear as much as I have enjoyed building it! Please share it if you love it! This starter kit wouldn't be possible without all the help of my friends. They've contributed to every single aspect of this without knowing it ^w^ Most notably [Nick Hall](https://github.com/nhall) for being the best mentor in the world!
+I hope you enjoy developing with Mimogear as much as I have enjoyed building it! Please share it if you love it! This static site generator framework wouldn't be possible without all the help of my friends. They've contributed to every single aspect of this without knowing it ^w^ Most notably [Nick Hall](https://github.com/nhall) for being the best mentor in the world!

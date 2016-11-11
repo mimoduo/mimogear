@@ -17,15 +17,17 @@ form {}
 
 label {}
 
-input {}
+input {
 
-[type='text'] {}
+  &[type='text'] {}
 
-[type='radio'] {}
+  &[type='radio'] {}
 
-[type='checkbox'] {}
+  &[type='checkbox'] {}
 
-[type='submit'] {}
+  &[type='submit'] {}
+
+}
 
 select {}
 

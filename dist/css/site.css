@@ -1196,7 +1196,7 @@ template {
 // ============= */
 
 .mimo-theme .sail-slide {
-  display: inline-block;
+  height: 12.222222222222221em;
   margin-bottom: 1.1111111111111112em;
   padding: 3.3333333333333335em 1.1111111111111112em;
   background: #E8EAF6;
@@ -1209,6 +1209,13 @@ template {
   .mimo-theme .sail-slide {
     padding-right: 2.2222222222222223em;
     padding-left: 2.2222222222222223em;
+  }
+}
+
+@media screen and (min-width: 800px) {
+
+  .mimo-theme .sail-slide {
+    height: auto;
   }
 }
 
@@ -1294,6 +1301,27 @@ template {
 /* ================
 // Reasons
 // ============= */
+
+.mimo-theme .reason {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  padding: 0 1.1111111111111112em;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+@media screen and (min-width: 800px) {
+
+  .mimo-theme .reason {
+    position: relative;
+    top: 0;
+    padding: 0;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
 
 .mimo-theme .reason-bubble {
   display: none;

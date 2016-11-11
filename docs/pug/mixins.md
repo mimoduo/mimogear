@@ -4,7 +4,7 @@ Mixins are a great way to take shortcuts within pug. The available Mimogear mixi
 
 ##Adding a New Mixin
 
-In order to add a new mixin, first create a pug file within src/pug/mixins. After you've successfully created your mixin, make sure to add it to your desired template within pug/templates.
+In order to add a new mixin, first create a pug file within /src/pug/mixins/. After you've successfully created your mixin, make sure to add it to your desired template within pug/templates.
 
 ```pug
 include ../mixins/symbol.pug
