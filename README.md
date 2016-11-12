@@ -1,8 +1,8 @@
 #Mimogear
 
-_Mimogear is a simple static site generator and a development framework_. It provides an environment for distributing html template files to the root of your site and a framework to help you write postcss/css and javascript with complete focus.
+**Mimogear is a simple static site generator and a development framework** that will _automatically compile, distribute, and watch development assets_. This provides an environment for distributing html/pug template files to the root of your site and a framework to help you write postcss/css and javascript with complete focus.
 
-##Tools Used in Mimogear
+##The Goal of Mimogear
 
 The main goal of Mimogear is to strike a balance between simplicity and features, to secure quality and consistency, and to be as developer friendly as possible. To achieve those goals, there are a few tools under the hood. Mimogear uses [gulp](http://gulpjs.com/) as a task runner, [pug](https://pugjs.org/api/getting-started.html) as a HTML pre-processor, [postcss](http://postcss.org/) as a CSS post-processer, and standard javascript.
 
@@ -58,7 +58,7 @@ gulp
 
 After that your project will open up in a browser window automatically and you're ready to get started in developing html/pug, css/postcss, and javascript. Head over to /src/to see your new development framework!
 
-##Optional Installation Steps
+###Optional Installation Steps
 
 If you'd like to dive in the daring side and see some subtle task runner performance improvements, there is an alpha gulpfile that mirrors the tasks of the stable gulpfile. To use this new gulpfile, make sure to download the alpha version of gulp and the newly separated gulp-cli globally. Afterwards, rename the gulpfile-alpha.js to gulpfile.js and rename the original gulpfile to a name of your choice.
 
