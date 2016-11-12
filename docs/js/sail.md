@@ -24,7 +24,7 @@ ol.sail-slides
   li Four
 ```
 
-##Detailed Javascript Use
+##Module Defaults
 
 The following example shows the defaults for each of the available settings:
 

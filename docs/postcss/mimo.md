@@ -1,10 +1,10 @@
 #Mimo
 
-The mimo partials refer to each specialized mimo module available within Mimogear.
+The mimo partials refer to the slideshow, lightbox, and accordion available within Mimogear.
 
 ##Grid
 
-The mimogear grid system is setup using the [Postcss-simple-grid](https://github.com/iamfrntdv/postcss-simple-grid) module. Let's setup a grid example for the gamagori breakpoint (1200px).
+The Mimogear grid system is setup using the [Postcss-simple-grid](https://github.com/iamfrntdv/postcss-simple-grid) module. Let's setup a grid example for the gamagori breakpoint (1200px):
 
 **Postcss**
 
@@ -52,7 +52,7 @@ The sail partial contains styles that animate slides and help dictate mouse inte
 
 ##Drawer
 
-There are three mixins available within the drawer partial as well as default styles for the drawer and respective drawer trigger. By default the drawer will be shifted 20% of itself to the left. The following example will demonstrate the use of the reset drawer mixins in order to display drawer content on larger screens in its original stacking order.
+There are three mixins available within the drawer partial as well as default styles for the drawer and respective drawer trigger. By default the drawer will be translated 20% of itself to the left. The following example will demonstrate the use of the reset drawer mixins in order to display drawer content on larger screens in its original stacking order.
 
 **Postcss**
 
@@ -69,11 +69,11 @@ There are three mixins available within the drawer partial as well as default st
 
 ##Harmonica
 
-The harmonica partial styles the ordering of active content within an accordion/harmonica. If harmonicas are not need but accordions are, delete the media queries within the harmonica partial. The $harmonica-view variable dictates when the accordion on smaller screens becomes a harmonica on larger screens. If you change the $harmonica-view variable within configuration.js, make sure to also update the harmonicaView option when the harmonica is initiated in the js.
+The harmonica partial styles the ordering of active content within an accordion/harmonica. If harmonicas are not needed but accordions are, delete the media queries within the harmonica partial. The `$harmonica-view` variable within configuration.js dictates when accordions on smaller screens become a harmonica on larger screens. If you change the `$harmonica-view` variable within configuration.js, make sure to also update the `harmonicaView` option when the harmonica is initiated in the js.
 
 ##Lantern
 
-The lantern partial styles the lightbox, dictates recommended controller positions, and makes sure that images will fit properly within the viewport. It's possible to show the caption of an image by accessing the title attribute of the lantern-content. The following example uses &:after to extract the title from lantern-content.
+The lantern partial styles the lightbox, dictates recommended controller positions, and makes sure that images will fit properly within the viewport. It's possible to show the caption of an image by accessing the title attribute of the lantern-content. The following example, also used in the mimo-theme, uses &:after to extract the title from lantern-content:
 
 ```postcss
 .lantern-content {
@@ -88,4 +88,4 @@ The lantern partial styles the lightbox, dictates recommended controller positio
 
 ##Mimo Theme
 
-The mimo-theme styles the main index page that is shown by default. This theme is safe to delete during production. There are some useful examples in the mimo-theme of mixins, functions, and common ways to style mimo modules if you're up for some exploration!
+The mimo-theme styles the main index page that is shown by default. _This theme is safe to delete_ during production. There are some useful examples in the mimo-theme of mixins, functions, and common ways to style mimo modules if you're up for some exploration!

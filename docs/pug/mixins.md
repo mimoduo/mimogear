@@ -1,10 +1,10 @@
 #Mixins
 
-Mixins are a great way to take shortcuts within pug. The available Mimogear mixins are already included into the main template file. This will allow you to use the default mixins within each page that extends the default site template.
+Mixins are a great way to take shortcuts with pug. The available Mimogear mixins are already included into the main template file. This will allow you to use the default mixins within each page that extends the default site template.
 
 ##Adding a New Mixin
 
-In order to add a new mixin, first create a pug file within /src/pug/mixins/. After you've successfully created your mixin, make sure to add it to your desired template within pug/templates.
+To add a new mixin, first create a pug file within /src/pug/mixins/. The pug.js site contains some awesome documentation on [how to create a mixin](https://pugjs.org/language/mixins.html). After you've successfully created your mixin, make sure to add it to your desired template within pug/templates.
 
 ```pug
 include ../mixins/symbol.pug
@@ -14,7 +14,7 @@ include ../mixins/new-mixin.pug
 
 ##The Section Mixin
 
-The section mixin allows you to pass in content to a common structural element. By default it's a container element and a nested element that keeps content within a predefined boundary.
+The section mixin allows you to pass in content to a common structural element. By default it's a container element with a nested compartment that keeps content within a predefined boundary.
 
 **Pug**
 
@@ -33,7 +33,7 @@ The section mixin allows you to pass in content to a common structural element. 
 </div>
 ```
 
-Sometime's you may need to modify a section beyond it's default styling. By passing in a string, the section mixin will generate an alternate class.
+Sometimes you may need to modify a section beyond its default styling. By passing in a string, the section mixin will generate an alternate class.
 
 **Pug**
 
@@ -91,7 +91,7 @@ The symbol mixin can also be nested within other elements.
 </div>
 ```
 
-Sometime's you may need to modify a symbol beyond it's default styling. By passing in an extra string parameter, separated by a comma, the symbol mixin will generate an alternate class.
+Sometimes you may need to modify a symbol beyond its default styling. By passing in an extra string parameter, separated by a comma, the symbol mixin will generate an alternate class.
 
 **Pug**
 

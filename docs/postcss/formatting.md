@@ -1,10 +1,9 @@
 #Formatting
 
-Mimogear enforces a strict postcss formatting standard. The following example demonstrates idiomatic css with some modifications and additional practices.
+Mimogear enforces a strict postcss formatting standard. The following example demonstrates [idiomatic css](https://github.com/necolas/idiomatic-css) with some modifications and additional practices.
 
 **Notes**
 
-* Initially formatted using [idiomatic css](https://github.com/necolas/idiomatic-css)
 * Multi value rules (gradients, transforms, transitions) are separated on new lines and indented when appropriate
 * Nested elements are indented to mimic their respective markup
 
@@ -22,6 +21,9 @@ Mimogear enforces a strict postcss formatting standard. The following example de
           rgba(0, 0, 0, 0),
           rgba(0, 0, 0, .25) 100%
       );
+    box-shadow:
+      0 0 0 em(20) #000,
+      0 0 0 em(40) #ffa;
     transform:
       translate(-50%, -50%)
       scale(1.25);

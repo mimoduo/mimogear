@@ -12,16 +12,16 @@ Regions are common structural elements that are included on every page by defaul
 
 **Blocks**
 
-* block title
-* block description
-* block additional-stylesheets
+* `block title`
+* `block description`
+* `block additional-stylesheets`
 
 ##Header
 
 While there are no blocks present within the head region, there may be cases where using a block in your project may be useful. Maybe certain pages will need to have different types of navigation or different spotlight images. Keep this in mind while developing your site!
 
-* drawer
 * site logo
+* drawer
 
 ##Footer
 
@@ -32,4 +32,4 @@ While there are no blocks present within the head region, there may be cases whe
 
 **Blocks**
 
-* block additional-scripts
+* `block additional-scripts`

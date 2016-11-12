@@ -4,7 +4,7 @@ Components refer to custom modules that are developed during production.
 
 ##Buttons
 
-Buttons are styled all at once at first and then extended using simple class modifiers. Focus and hover states are also combined to ensure proper keyboard and mouse focus. Disabled styles are also provided to prevent any sort of confusion while interacting with a disabled button.
+Buttons are styled all at once at first and then extended using simple class modifiers. Focus and hover states are also combined to ensure proper keyboard and mouse focus. Disabled styles are also provided to prevent any sort of confusion during interaction.
 
 ```postcss
 .button {
@@ -19,7 +19,7 @@ Buttons are styled all at once at first and then extended using simple class mod
 
 ##Logo
 
-The logo component is an anchor used for your site's logo. The default setup includes the logo as a svg symbol. However, it can also be used in conjunction with an img element or a background image. The site logo label indicating the name of the site is visually hidden but visible to screen readers. This prevents the text from getting in the way of the logo's dimensions. The following example creates a flexible background based logo given a max-width and height.
+The logo component is your site's logo combined with a link. The default setup includes the logo as a svg symbol. It can also be used in conjunction with an img element or a background image. The following example creates a flexible background based logo given a max-width and height.
 
 **Background Based Logo**
 

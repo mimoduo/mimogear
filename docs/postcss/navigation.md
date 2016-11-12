@@ -1,6 +1,6 @@
 #Navigation
 
-Navigational elements help the user browse the site. Each postcss navigation partial should refer to it's respective pug partial. This makes navigation changes easier down the road.
+Each postcss navigation partial should refer to its respective pug partial. This makes navigation changes easier down the road.
 
 ##Behaviors
 
@@ -12,4 +12,4 @@ In practice, each nav can be fairly unique. For that reason, a template navigati
 
 ##Main
 
-The main nav usually includes some more complicated styles compared to other navs. Because of this notion, direct child selectors were used in order to selectively style root links versus child links.
+The main nav usually includes some more complicated styles compared to other navs. Because of this, direct child selectors were used in order to selectively style root links versus child links.

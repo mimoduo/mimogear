@@ -1,6 +1,6 @@
 #Partials
 
-Partials serve as reusable blocks. The content of a partial will never change. Mimogear comes with the following partials which should serve as a formidable start to the beginning of your development.
+Partials serve as reusable blocks. The content of a partial will never change. There are several starter partials to help jump start your pug development process:
 
 * Address
 * Article

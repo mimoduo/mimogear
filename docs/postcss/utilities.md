@@ -2,14 +2,15 @@
 
 There are several utility mixins available within Mimogear for use in production. These were included based on their frequent use and value regardless of the project.
 
-* **visually-hidden**: hide an element from sighted users
-* **reset-visually-hidden**: un-hide an element previously hidden
-* **clearfix**: clear a parent containing floats
-* **compartment**: creates a centered column given a particular width
-* **cover**: completely overlaps an element onto a container
-* **font-face**: imports various font files
-* **list-reset**: resets default browser styles of lists
-* **media-query**: calls the specified media query
+* `visually-hidden`: hide an element from sighted users
+* `reset-visually-hidden`: un-hide an element previously hidden
+* `clearfix`: clear a parent containing floats
+* `compartment`: creates a centered column given a particular width
+* `cover`: completely overlaps an element onto a container
+* `font-face`: imports various font files
+* `list-reset`: resets default browser styles of lists
+* `media`: calls a min-width media query
+* `enlarged-media`: calls a min-width and min-height media query
 
 ##Accessibility
 

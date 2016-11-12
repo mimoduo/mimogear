@@ -26,7 +26,7 @@ Then you'll want to add in some harmonica markup into your pug page:
   article.harmonica-content Donec quam felis.
 ```
 
-##Detailed Javascript Use
+##Module Defaults
 
 The following example shows the defaults for each of the available settings:
 

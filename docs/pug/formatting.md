@@ -1,6 +1,6 @@
 #Formatting
 
-Pug is a strict enforcer of it's own language format. There are is one forgiving aspect that will be addressed to help ensure consistency during production.
+Pug is a strict enforcer of its own language format. There is one forgiving aspect that will be addressed to help ensure consistency during production.
 
 ##Multiple Attributes
 

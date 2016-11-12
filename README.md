@@ -1,6 +1,6 @@
 #Mimogear
 
-Mimogear is a simple static site generator and a development framework. It provides an environment for distributing html template files to the root of your site and a framework to help you write postcss/css and javascript with complete focus.
+_Mimogear is a simple static site generator and a development framework_. It provides an environment for distributing html template files to the root of your site and a framework to help you write postcss/css and javascript with complete focus.
 
 ##Tools Used in Mimogear
 
@@ -29,12 +29,12 @@ The main goal of Mimogear is to strike a balance between simplicity and features
 * Common helper utilities: clearfix, cover, font-face, media etc.
 * Functions for calculating ems and rems
 * [Idiomatic css](https://github.com/necolas/idiomatic-css) formatting
+* Single class structure
 
 ###[Pug](https://pugjs.org/api/getting-started.html) Features
 
 * Starter template
-* Well structured head element setup
-* Several starter partials: address, article, table
+* Several starter partials: main navigation, address, article, table
 * Accessibility measures added into pug partials from: (https://github.com/nhall/Accessible-Components)
 * SVG symbol mixin to complement the svg sprite
 
@@ -48,7 +48,7 @@ The main goal of Mimogear is to strike a balance between simplicity and features
 
 ##Installation
 
-Mimogear uses the node package manager to download all the required dependencies. By downloading and installing [node.js](https://nodejs.org/en/) onto your machine, you'll be able to run a set of commands we'll use to help setup Mimogear's environment. Now that you've installed node, let's enter in the following to get us started.
+Mimogear uses the node package manager to download all the required dependencies. If you haven't already downloaded node, head over to [node.js](https://nodejs.org/en/) and download node to get started. Once you've installed node, let's enter in the following in a terminal to get us started:
 
 ```sh
 cd <folder-of-Mimogear> (drag the folder into your terminal)
@@ -56,9 +56,11 @@ npm install
 gulp
 ```
 
+After that your project will open up in a browser window automatically and you're ready to get started in developing html/pug, css/postcss, and javascript. Head over to /src/to see your new development framework!
+
 ##Optional Installation Steps
 
-If you'd like to dive on the daring side and see some subtle task runner performance improvements, there is an alpha gulpfile that mirrors the tasks of the stable gulpfile. To use this new gulpfile, make sure to download the alpha version of gulp and the newly separated gulp-cli globally. Afterwards, rename the gulpfile-alpha.js to gulpfile.js and rename the original gulpfile to a name of your choice.
+If you'd like to dive in the daring side and see some subtle task runner performance improvements, there is an alpha gulpfile that mirrors the tasks of the stable gulpfile. To use this new gulpfile, make sure to download the alpha version of gulp and the newly separated gulp-cli globally. Afterwards, rename the gulpfile-alpha.js to gulpfile.js and rename the original gulpfile to a name of your choice.
 
 ```sh
 npm install gulpjs/gulp-cli -g

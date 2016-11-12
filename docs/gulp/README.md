@@ -2,7 +2,7 @@
 
 ##Usage
 
-Once you're all [setup](https://github.com/mimoduo/Mimogear/tree/master/docs), there is the "gulp" command to get you started. This command will compile all files into the /dist/ folder, open a new browser window with your site, and begin watching the files within the /src/ folder. In other words, the ultimate static site generator command.
+Once you're all [setup](https://github.com/mimoduo/Mimogear/tree/master/docs), there is the `gulp` command to get you started. This command will compile all files into the /dist/ folder, open a new browser window with your site, and begin watching the files within the /src/ folder. In other words, the ultimate static site generator command.
 
 ```sh
 gulp
