@@ -118,20 +118,26 @@ Sail = {
   determineDisabledStates: function() {
 
     if (s.currentSlide === 0) {
+
       s.vdom.controls.previous.disabled = true;
       s.vdom.controls.previous.setAttribute('aria-disabled', 'true');
       s.vdom.controls.next.disabled = false;
       s.vdom.controls.next.setAttribute('aria-disabled', 'false');
+
     } else if (s.currentSlide < s.slide.length - 1) {
+
       s.vdom.controls.previous.disabled = false;
       s.vdom.controls.previous.setAttribute('aria-disabled', 'false');
       s.vdom.controls.next.disabled = false;
       s.vdom.controls.next.setAttribute('aria-disabled', 'false');
+
     } else if (s.currentSlide == s.slide.length - 1) {
+
       s.vdom.controls.previous.disabled = false;
       s.vdom.controls.previous.setAttribute('aria-disabled', 'false');
       s.vdom.controls.next.disabled = true;
       s.vdom.controls.next.setAttribute('aria-disabled', 'true');
+
     }
 
   },
@@ -139,8 +145,10 @@ Sail = {
   clearClasses: function() {
 
     for (var i = 0; i < s.slide.length; i++) {
+      
       s.slide[i].classList.remove(s.activeSlideClass);
       s.vdom.page[i].classList.remove(s.activePageClass);
+      
     }
 
   }

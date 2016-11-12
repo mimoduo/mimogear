@@ -4,10 +4,10 @@ _Mimogear was built to be simple_. Let's get you started into developing static 
 
 ##Installation
 
-Mimogear uses npm in order to download all of the necessary dependencies. If you haven't used the npm command before, head over to [node.js](https://nodejs.org/en/) to download the latest version of node. Let's cd into the project directory and then download our dependencies using the a terminal.
+Mimogear uses npm in order to download all of the necessary build dependencies. If you haven't downloaded node before, head over to [node.js](https://nodejs.org/en/) to download the latest version of node. Let's `cd` into the project directory and then download our dependencies using the a terminal.
 
 ```sh
-cd <folder-of-Mimogear>
+cd <folder-of-Mimogear> (drag the folder into your terminal)
 npm install
 ```
 
@@ -25,12 +25,12 @@ The meat of Mimogear is the `gulp` command. Within your terminal, type in `gulp`
 gulp
 ```
 
-This will automatically open your browser to your site and also watch for any file changes in the source /src/ folder.
+This will automatically open your browser to your site, compile all of your development assets within /src/, and watch for any file changes in the source /src/ folder.
 
 ##Beginning Development
 
-All files that you'll be working with are in the /src/ folder.
+Once you're all set with getting `gulp` to make its first big _gulp_. Either head over to the /src/ folder if you're getting jittery reading all this and start cracking away at development, or check out Mimogear's /src/ documentation using the list below:
 
-* For CSS (using postcss) development: start in the [postcss documentation](https://github.com/mimoduo/Mimogear/tree/master/docs/postcss)
+* For CSS (using postcss) development, start in the [postcss documentation](https://github.com/mimoduo/Mimogear/tree/master/docs/postcss)
 * For HTML (using pug) development, start in the [pug documentation](https://github.com/mimoduo/Mimogear/tree/master/docs/pug)
-* For javascript development, start in the [javascript documentation](https://github.com/mimoduo/Mimogear/tree/master/docs/js)
+* For javascript development, start in the [javascript documentation](https://github.com/mimoduo/Mimogear/tree/master/docs/javascript)

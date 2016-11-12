@@ -56,8 +56,10 @@ Harmonica = {
       h.headings[i].insertBefore(indicator, h.headings[i].firstChild);
 
       h.headings[i].addEventListener('click', function(event) {
+        
         Harmonica.clearClasses();
         Harmonica.assignClasses(event);
+        
       });
     }
 
