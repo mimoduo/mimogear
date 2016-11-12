@@ -31,6 +31,6 @@ This will automatically open your browser to your site and also watch for any fi
 
 All files that you'll be working with are in the /src/ folder.
 
-* For CSS (using postcss) development, begin working in the /src/postcss/ folder
-* For HTML (using pug) development, begin working in the /src/pug/ folder
-* For javascript development, begin working in the src/js/site folder
+* For CSS (using postcss) development: start in the [postcss documentation](https://github.com/mimoduo/Mimogear/tree/master/docs/postcss)
+* For HTML (using pug) development, start in the [pug documentation](https://github.com/mimoduo/Mimogear/tree/master/docs/pug)
+* For javascript development, start in the [javascript documentation](https://github.com/mimoduo/Mimogear/tree/master/docs/js)
