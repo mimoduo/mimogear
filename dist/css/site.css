@@ -1196,7 +1196,7 @@ template {
 // ============= */
 
 .mimo-theme .sail-slide {
-  height: 12.222222222222221em;
+  height: 13.333333333333334em;
   margin-bottom: 1.1111111111111112em;
   padding: 3.3333333333333335em 1.1111111111111112em;
   background: #E8EAF6;
@@ -1204,7 +1204,7 @@ template {
   color: #7986CB;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 900px) {
 
   .mimo-theme .sail-slide {
     padding-right: 2.2222222222222223em;
@@ -1325,25 +1325,27 @@ template {
 
 .mimo-theme .reason-bubble {
   display: none;
-  vertical-align: top;
-  padding-right: 1.1111111111111112em;
 }
 
 @media screen and (min-width: 300px) {
 
   .mimo-theme .reason-bubble {
-    display: table-cell;
+    position: absolute;
+    top: 0;
+    display: block;
   }
 }
 
 .mimo-theme .symbol-reason {
-  height: 2.111111111111111em;
-  width: 2.111111111111111em;
+  height: 1.6666666666666667em;
+  width: 1.6666666666666667em;
 }
 
-.mimo-theme .reason-details {
-  display: table-cell;
-  vertical-align: top;
+@media screen and (min-width: 300px) {
+
+  .mimo-theme .reason-details {
+    padding-left: 2.5em;
+  }
 }
 
 /* ================

@@ -332,14 +332,14 @@ $m2: #E8EAF6;
 .mimo-theme {
 
   .sail-slide {
-    height: em(220, 18);
+    height: em(240, 18);
     margin-bottom: em(20, 18);
     padding: em(60, 18) em(20, 18);
     background: $m2;
     border-radius: em(20, 35);
     color: $m1;
 
-    @mixin media $medium {
+    @mixin media $huge {
       padding-right: em(40, 18);
       padding-left: em(40, 18);
     }
@@ -443,27 +443,31 @@ $m2: #E8EAF6;
       padding: 0;
       transform: none;
     }
+    
   }
 
   .reason-bubble {
     display: none;
-    vertical-align: top;
-    padding-right: em(20, 18);
 
     @mixin media $mini {
-      display: table-cell;
+      position: absolute;
+      top: 0;
+      display: block;
     }
 
   }
 
     .symbol-reason {
-      height: em(38, 18);
-      width: em(38, 18);
+      height: em(30, 18);
+      width: em(30, 18);
     }
 
   .reason-details {
-    display: table-cell;
-    vertical-align: top;
+
+    @mixin media $mini {
+      padding-left: em(45, 18);
+    }
+
   }
 
 }
