@@ -1,10 +1,10 @@
 #Quickstart Guide
 
-_Mimogear was built to be simple_. Let's get you started into developing static sites with the quick start up guide below.
+_Mimogear was built to be simple_. And simple it'll be! Let's get you started into developing static sites with the quick start up guide below.
 
 ##Installation
 
-Mimogear uses npm in order to download all of the necessary build dependencies. If you haven't downloaded node before, head over to [node.js](https://nodejs.org/en/) to download the latest version of node. Let's `cd` into the project directory and then download our dependencies using the a terminal.
+Mimogear uses node package manager in order to download all of the necessary build dependencies. If you haven't downloaded node before, head over to [node.js](https://nodejs.org/en/) to download the latest version of node. Once you've installed node and have downloaded Mimogear, let's `cd` into the project directory and then download our dependencies using the a terminal:
 
 ```sh
 cd <folder-of-Mimogear> (drag the folder into your terminal)
@@ -13,7 +13,7 @@ npm install
 
 ##Updating Configuration
 
-If you just want to dive in, move down to _Running Gulp_.
+If you just want to dive right into development, move down to _Running Gulp_.
 
 Now that you've downloaded all of the dependencies, let's take a moment to setup any variables that will help theme your site. Within the root of Mimogear, you'll find a list of variables within configuration.js. The main target of your configuration will be the font and heading style variables.
 
@@ -25,7 +25,7 @@ The meat of Mimogear is the `gulp` command. Within your terminal, type in `gulp`
 gulp
 ```
 
-This will automatically open your browser to your site, compile all of your development assets within /src/, and watch for any file changes in the source /src/ folder.
+**This will automatically open your browser to your site, compile all of your development assets within /src/, and watch for any file changes in the source /src/ folder.**
 
 ##Beginning Development
 

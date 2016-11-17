@@ -48,7 +48,7 @@ The main goal of Mimogear is to strike a balance between simplicity and features
 
 ##Installation
 
-Mimogear uses node package manager in order to download all of the necessary build dependencies. If you haven't already downloaded node, head over to [node.js](https://nodejs.org/en/) and download node to get started. Once you've installed node, let's enter in the following in a terminal to get us started:
+Mimogear uses node package manager in order to download all of the necessary build dependencies. If you haven't downloaded node before, head over to [node.js](https://nodejs.org/en/) to download the latest version of node. Once you've installed node and have downloaded Mimogear, let's `cd` into the project directory and then download our dependencies using the a terminal:
 
 ```sh
 cd <folder-of-Mimogear> (drag the folder into your terminal)
