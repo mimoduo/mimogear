@@ -1778,14 +1778,14 @@ table {
   margin: 1.25em 0;
 }
 
-tr:nth-of-type(even) td {
-  background: rgba(0, 0, 0, .025);
-}
+tr {
+    vertical-align: top;
 
-th,
-    td {
-      vertical-align: top;
-    }
+  }
+
+tr:nth-of-type(even) {
+  background: rgba(0, 0, 0, .05);
+}
 
 th {
       padding: 1.25em 1.25rem;

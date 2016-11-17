@@ -75,17 +75,13 @@ table {
 }
 
   tr {
+    vertical-align: top;
 
-    &:nth-of-type(even) td {
-      background: rgba(0, 0, 0, .025);
+    &:nth-of-type(even) {
+      background: rgba(0, 0, 0, .05);
     }
 
   }
-
-    th,
-    td {
-      vertical-align: top;
-    }
 
     th {
       padding: em(20) rem(20);
