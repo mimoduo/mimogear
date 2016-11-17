@@ -991,6 +991,14 @@ template {
   }
 }
 
+@media print {
+
+  .mimo-theme .site-logo {
+    max-width: 11.11111111111111em;
+    padding-left: 0;
+  }
+}
+
 .mimo-theme .symbol-logo {
   display: block;
   height: 100%;
@@ -1115,13 +1123,6 @@ template {
 
 .mimo-theme .section {
   color: #7986CB;
-}
-
-@media print {
-
-  .mimo-theme .section {
-    padding: 1.25em 0;
-  }
 }
 
 .mimo-theme .section:nth-of-type(odd) {
@@ -1719,6 +1720,14 @@ body {
 
 .section {
   padding: 2.5em 1.25em;
+
+}
+
+@media print {
+
+  .section {
+    padding: 1.25em 0;
+  }
 }
 
 .compartment {

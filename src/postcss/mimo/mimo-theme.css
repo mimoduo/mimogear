@@ -148,6 +148,11 @@ $m2: #E8EAF6;
       padding-left: 0;
     }
 
+    @media print {
+      max-width: em(200, 18);
+      padding-left: 0;
+    }
+
   }
 
     .symbol-logo {
@@ -270,11 +275,7 @@ $m2: #E8EAF6;
 
   .section {
     color: $m1;
-
-    @media print {
-      padding: em(20) 0;
-    }
-
+    
     &:nth-of-type(odd) {
       background: $m1;
       color: $m2;

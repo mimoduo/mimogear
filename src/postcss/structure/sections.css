@@ -4,6 +4,11 @@
 
 .section {
   padding: em(40) em(20);
+
+  @media print {
+    padding: em(20) 0;
+  }
+
 }
 
   .compartment {
