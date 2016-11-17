@@ -6,6 +6,11 @@
 .lantern-light {
   cursor: zoom-in;
   user-select: none;
+
+  @media print {
+    max-width: em(200);
+  }
+
 }
 
 .lantern {

@@ -777,6 +777,14 @@ template {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
+}
+
+@media print {
+
+  .lantern-light {
+    max-width: 12.5em;
+  }
 }
 
 .lantern {
@@ -1109,6 +1117,13 @@ template {
   color: #7986CB;
 }
 
+@media print {
+
+  .mimo-theme .section {
+    padding: 1.25em 0;
+  }
+}
+
 .mimo-theme .section:nth-of-type(odd) {
   background: #7986CB;
   color: #E8EAF6;
@@ -1200,7 +1215,7 @@ template {
   margin-bottom: 1.1111111111111112em;
   padding: 3.3333333333333335em 1.1111111111111112em;
   background: #E8EAF6;
-  border-radius: 0.5714285714285714em;
+  border-radius: 1.1111111111111112em;
   color: #7986CB;
 }
 
@@ -1222,7 +1237,8 @@ template {
 @media print {
 
   .mimo-theme .sail-slide {
-    padding: 0.2857142857142857em;
+    height: auto;
+    padding: 0.5555555555555556em 0;
   }
 }
 
@@ -1320,6 +1336,14 @@ template {
     padding: 0;
     -webkit-transform: none;
     transform: none;
+  }
+}
+
+@media print {
+
+  .mimo-theme .reason {
+    position: relative;
+    padding: 0;
   }
 }
 

@@ -271,6 +271,10 @@ $m2: #E8EAF6;
   .section {
     color: $m1;
 
+    @media print {
+      padding: em(20) 0;
+    }
+
     &:nth-of-type(odd) {
       background: $m1;
       color: $m2;
@@ -336,7 +340,7 @@ $m2: #E8EAF6;
     margin-bottom: em(20, 18);
     padding: em(60, 18) em(20, 18);
     background: $m2;
-    border-radius: em(20, 35);
+    border-radius: em(20, 18);
     color: $m1;
 
     @mixin media $huge {
@@ -349,7 +353,8 @@ $m2: #E8EAF6;
     }
 
     @media print {
-      padding: em(10, 35);
+      height: auto;
+      padding: em(10, 18) 0;
     }
 
     &:nth-of-type(even) {
@@ -443,7 +448,12 @@ $m2: #E8EAF6;
       padding: 0;
       transform: none;
     }
-    
+
+    @media print {
+      position: relative;
+      padding: 0;
+    }
+
   }
 
   .reason-bubble {
