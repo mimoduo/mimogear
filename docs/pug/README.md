@@ -1,6 +1,6 @@
 #Using Pug in Mimogear
 
-Mimogear uses pug in order to create static pages and get the markup work done. Pug is a stripped down markup language, with powerful template capabilities, that compiles into HTML. Luckily for us that means we'll be focusing more on writing unique markup rather than repeating ourselves to recreate templates.
+Mimogear uses pug in order to create static pages and get the markup work done. Pug is a stripped down markup language, with powerful template capabilities, that compiles into HTML. Luckily for us that means we'll be focusing more on writing unique markup rather than repeating ourselves to recreate templates. All of the scaffolding revolved around distributing pages has already been taken care of for you.
 
 ##Recommended Workflow
 

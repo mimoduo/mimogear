@@ -1,6 +1,6 @@
 #Using Postcss in Mimogear
 
-Mimogear uses an extended CSS language called postcss to get the job done. This means you'll be writing much of the same CSS as before but with some advanced features like variables and nesting found in popular pre-processor frameworks like SASS.
+Mimogear uses an extended CSS language called postcss to get the job done. This means you'll be writing much of the same CSS as before but with some advanced features like variables and nesting found in popular pre-processor frameworks like SASS. Most of the skeleton work revolved around scaffolding a css project has already been taken care of for you.
 
 ##Recommended Workflow
 

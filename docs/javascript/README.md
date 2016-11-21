@@ -1,6 +1,6 @@
 #Using Javascript in Mimogear
 
-Mimogear uses straight up javascript to get the job done. All the work for creating slideshows, ligthboxes, accordions, tabs, and drawers is already done for you.
+Mimogear uses straight up javascript to get the job done. All the work for creating slideshows, ligthboxes, accordions, tabs, and drawers has already been taken care of for you.
 
 ##Mimo Modules
 
