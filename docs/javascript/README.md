@@ -13,4 +13,7 @@ Since all the mimo modules described in the introductory paragraph above are ena
 
 ##Recommended Workflow
 
-To get started with your own modules, either add your common javascript into /src/site/main.js, or start creating separate .js files within /src/site/. It's a good idea to keep your javascript files separate to help visually encapsulate each module.
+To get started with your own modules, either add your common javascript into /src/js/site/main.js, or start creating separate .js files within /src/js/site/. It's a good idea to keep your javascript files separate to help visually encapsulate each module. Places to develop in:
+
+* _/src/js/site/_ - to add module specific javascript files
+* _/src/js/vendor/_ - to add external vendor scripts
