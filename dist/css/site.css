@@ -1075,6 +1075,25 @@ template {
   }
 }
 
+.mimo-theme .drawer:before {
+  display: inline-block;
+  border-bottom: 0.16666666666666666em solid #7986CB;
+  font-size: 1.2222222222222223em;
+  font-weight: 700;
+  line-height: 1.0909090909090908em;
+  margin-bottom: 0.5555555555555556em;
+  margin-left: 0.5555555555555556em;
+  padding-bottom: 0.2222222222222222em;
+  content: "Basic Drawer";
+}
+
+@media screen and (min-width: 1000px) {
+
+  .mimo-theme .drawer:before {
+    display: none;
+  }
+}
+
 /* ================
 // Navigation
 // ============= */

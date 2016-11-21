@@ -215,6 +215,22 @@ $m2: #E8EAF6;
       background: none;
     }
 
+    &:before {
+      display: inline-block;
+      border-bottom: em(3, 18) solid $m1;
+      font-size: em(22, 18);
+      font-weight: 700;
+      line-height: em(24, 22);
+      margin-bottom: em(10, 18);
+      margin-left: em(10, 18);
+      padding-bottom: em(4, 18);
+      content: "Basic Drawer";
+
+      @mixin media $aldnoah {
+        display: none;
+      }
+    }
+
   }
 
 }
@@ -275,7 +291,7 @@ $m2: #E8EAF6;
 
   .section {
     color: $m1;
-    
+
     &:nth-of-type(odd) {
       background: $m1;
       color: $m2;

@@ -21,6 +21,8 @@ gulp watch
 
 ##Plugin List
 
+If you'd like to modify some of the pre-existing tasks in Mimogear, check out the complete plugin list below:
+
 * [**autoprefixer**](https://github.com/postcss/autoprefixer)
 * [**browser-sync**](https://github.com/BrowserSync/browser-sync) / [official site](https://www.browsersync.io/)
 * [**gulp**](https://github.com/gulpjs/gulp) / [official site](http://gulpjs.com/)

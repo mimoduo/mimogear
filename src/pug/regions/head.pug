@@ -25,6 +25,11 @@ head
     content= description
   )
 
+  //- ================
+  //- Recommended Sizes
+  //-   16, 32, 48, 62
+  //- ================
+
   mixin favicon(size)
     link(
       rel="icon"
@@ -32,11 +37,6 @@ head
       sizes=size + "x" + size
       type="image/png"
     )
-
-  +favicon(16)
-  +favicon(32)
-  +favicon(48)
-  +favicon(62)
 
   link(
     rel="stylesheet"
