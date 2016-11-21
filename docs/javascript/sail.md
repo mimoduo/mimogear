@@ -12,7 +12,7 @@ To get started with sails, add in the following line inside the anonymous functi
 Sail.init();
 ```
 
-Then you'll want to add in some sail markup into your pug page:
+Then you'll want to add in some sail markup into your pug page. This example uses the markup that is required by default:
 
 **Pug**
 

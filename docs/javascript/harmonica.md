@@ -12,7 +12,7 @@ To get started with harmonicas, add in the following line inside the anonymous f
 Harmonica.init();
 ```
 
-Then you'll want to add in some harmonica markup into your pug page:
+Then you'll want to add in some harmonica markup into your pug page. This example uses the markup that is required by default:
 
 **Pug**
 

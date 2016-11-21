@@ -12,7 +12,7 @@ To get started with lanterns, add in the following line inside the anonymous fun
 Lantern.init();
 ```
 
-Then you'll want to add in some lantern markup into your pug page:
+Then you'll want to add in some lantern markup into your pug page. This example uses the markup that is required by default:
 
 **Pug**
 

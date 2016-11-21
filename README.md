@@ -34,7 +34,7 @@ The main goal of Mimogear is to strike a balance between simplicity and features
 ###[Pug](https://pugjs.org/api/getting-started.html) Features
 
 * Starter template
-* Several starter partials: main navigation, address, article, table
+* Starter partials: main navigation, address, article, table
 * Accessibility measures added into pug partials from: (https://github.com/nhall/Accessible-Components)
 * SVG symbol mixin to complement the svg sprite
 
