@@ -15,8 +15,8 @@ Since all the mimo modules described in the introductory paragraph above are _en
 
 To add a new module to integrate into the main javascript file, add additional javascript files into /src/js/site/. Mimogear follows the module pattern as written in the [Oneone javascript file](https://github.com/mimoduo/Oneone/blob/master/src/script.js).
 
-##Adding Vendor Javascript File
+##Adding a Vendor Javascript File
 
 Any javascript that comes from a source outside of Mimogear should be included in /src/js/vender/.
 
-_If you have a question about what something is, there is a detailed set of docs found in /docs/javascript/._
+**If you have a question about what something is, there is a detailed set of docs found in /docs/javascript/.**

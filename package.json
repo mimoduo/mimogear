@@ -20,7 +20,7 @@
     "framework",
     "static site generator"
   ],
-	"devDependencies": {
+  "devDependencies": {
     "autoprefixer": "^6.5.3",
     "browser-sync": "^2.18.2",
     "gulp": "^3.9.1",

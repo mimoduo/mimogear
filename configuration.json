@@ -1,4 +1,22 @@
-module.exports = {
+{
+  "links": {
+    "mainNav": [
+      {
+        "href": "https://github.com/mimoduo/Mimogear",
+        "name": "View on Github"
+      },
+      {
+        "href": "https://github.com/mimoduo/Mimogear/tree/master/docs",
+        "name": "Documentation"
+      }
+    ],
+    "socialNav": [
+      {
+        "href": "twitter.com",
+        "name": "Twitter"
+      }
+    ]
+  },
 
   "sansSerif": "'Open Sans', sans-serif",
   "serif": "'Playfair Display', serif",
@@ -40,5 +58,4 @@ module.exports = {
   "gamagori": "1200px",
 
   "harmonica-view": "900px"
-
 }

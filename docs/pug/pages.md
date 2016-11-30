@@ -1,10 +1,10 @@
 #Pages
 
-Pug pages are the bread and butter of your site. These pages will be compiled into the html files that represent your site. The default pages (index.pug and style-guide.pug) extend the default site template and pass in extra content via the content block.
+Pug pages are the bread and butter of your site. These pages will be compiled into the html files that represent your site. The default pages (index.pug, starter.pug, and style-guide.pug) extend the default site template and pass in extra content via the content block.
 
 ##Adding in Content
 
-To add content and component markup to your page, there is a content block that is setup by default on each of the default pages (index.pug and style-guide.pug) within Mimogear. This content will be nested directly into the main element of your site as dictated within the default site template.
+To add content and component markup to your page, there is a content block that is setup by default on each of the default pages (index.pug, starter.pug, and style-guide.pug) within Mimogear. This content will be nested directly into the main element of your site as dictated within the default site template.
 
 ```pug
 block content
@@ -13,12 +13,12 @@ block content
 
 ##Extending a Template
 
-Each page extends the default site.pug template as the first command within a pug page. Make sure this is included on your page!
+Each page extends the default template.pug template as the first command within a pug page. Make sure this is included on your page!
 
 **Base Level**
 
 ```pug
-extends ../templates/site.pug
+extends ../template.pug
 ```
 
 In the case of adding a subfolder within /src/pug/pages/, make sure to correct the path the extend function looks for.
@@ -26,7 +26,7 @@ In the case of adding a subfolder within /src/pug/pages/, make sure to correct t
 **Within 1 Subfolder**
 
 ```pug
-extends ../../templates/site.pug
+extends ../../template.pug
 ```
 
 ##Changing the Theme

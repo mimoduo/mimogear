@@ -1,50 +1,29 @@
 #Mimogear
 
-**Mimogear is a simple static site generator and a development framework** that will _automatically compile, distribute, and watch development assets_. This provides an environment for distributing html/pug template files to the root of your site and a framework to help you write postcss/css and javascript with complete focus.
+> A dead simple static site generator and web development framework
 
-##The Goal of Mimogear
+##What is Mimogear?
 
-The main goal of Mimogear is to strike a balance between simplicity and features, to secure quality and consistency, and to be as developer friendly as possible. To achieve those goals, there are a few tools under the hood. Mimogear uses [gulp](http://gulpjs.com/) as a task runner, [pug](https://pugjs.org/api/getting-started.html) as a HTML pre-processor, [postcss](http://postcss.org/) as a CSS post-processer, and standard javascript.
+**Mimogear is a simple static site generator and web development framework** that will _automatically compile, distribute, and watch development assets_. Under the hood, Mimogear uses **gulp**, a popular task runner, **pug** a powerful html template engine, **postcss** a css post-processer, and simply javascript.
 
-###[Gulp](http://gulpjs.com/) Features
+##Why Mimogear?
 
-* Pug to html compilation
-* Postcss to css compilation with autoprefixing and minification
-* JS concatenation and uglification
-* Image optimization
-* SVG Sprite Generation
-* Browsersync auto reloading
+After looking through all the cool static site generators out there, you may have realized that they are fairly complex. Mimogear aims to be the simplest static site generator out there while balancing a useful feature set.
 
-###Javascript Features
+##Highlights
 
-* [Slideshow/Sail](http://codepen.io/mimoduo/pen/gabWmN)
-* [Accordion/Harmonica](http://codepen.io/mimoduo/pen/epZaMq)
-* [Lightbox/Lantern](http://codepen.io/mimoduo/pen/EPerjv)
-* [classList](https://github.com/remy/polyfills) polyfill
-* [html5shiv](https://github.com/aFarkas/html5shiv) polyfill
-
-###[Postcss](http://postcss.org/) Features
-
-* [Postcss-simple-grid](https://github.com/iamfrntdv/postcss-simple-grid) integration with flexbox
-* Common helper utilities: clearfix, cover, font-face, media etc.
-* Functions for calculating ems and rems
-* [Idiomatic css](https://github.com/necolas/idiomatic-css) formatting
-* Single class structure
-
-###[Pug](https://pugjs.org/api/getting-started.html) Features
-
-* Starter template
-* Starter partials: main navigation, address, article, table
-* Accessibility measures added into pug partials from: (https://github.com/nhall/Accessible-Components)
-* SVG symbol mixin to complement the svg sprite
+* Full asset compilation, distribution, and watch
+* Complete pug framework for generating html files
+* Clean skeleton postcss framework for quick style development
+* Thoroughly tested javascript components
 
 ##Browser Support
 
-| Chrome | Firefox | Safari | IE* | Opera |
+| Chrome | Firefox | Safari | IE  | Opera |
 |--------|---------|--------|-----|-------|
 | 29+    | 29+     | 6.2+   | 10+ | 16+   |
 
-\* Excludes harmonica support
+Excludes harmonica support
 
 ##Installation
 
@@ -56,15 +35,7 @@ npm install
 gulp
 ```
 
-After that your project will open up in a browser window automatically and you're ready to get started in developing html/pug, css/postcss, and javascript. Head over to /src/to see your new development framework!
-
-###Optional Installation Steps
-
-If you'd like to dive in the daring side and see some subtle task runner performance improvements, there is an alpha gulpfile that mirrors the tasks of the stable gulpfile. To use this new gulpfile, make sure to download the alpha version of gulp and the newly separated gulp-cli globally. Afterwards, rename the gulpfile-alpha.js to gulpfile.js and rename the original gulpfile to a name of your choice.
-
-```sh
-npm install gulpjs/gulp-cli -g
-```
+After that your project will open up in a browser window automatically and you're ready to get started in developing html/pug, css/postcss, and javascript. Head over to /src/ to see your shiny new development framework! If you're feeling stuck, check out [/docs/](https://github.com/mimoduo/Mimogear/tree/master/docs).
 
 ##Share Your Sites Using Mimogear
 

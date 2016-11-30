@@ -3,31 +3,11 @@
 //- ================
 
 ol
-  li
-    a(
-      href="facebook.com"
-      itemprop="url"
-      target="_blank"
-    )
-      span.visible-for-screen-readers Facebook
-  li
-    a(
-      href="twitter.com"
-      itemprop="url"
-      target="_blank"
-    )
-      span.visible-for-screen-readers Twitter
-  li
-    a(
-      href="instgram.com"
-      itemprop="url"
-      target="_blank"
-    )
-      span.visible-for-screen-readers Instagram
-  li
-    a(
-      href="youtube.com"
-      itemprop="url"
-      target="_blank"
-    )
-      span.visible-for-screen-readers Youtube
+  each link in siteLinks.socialNav
+    li
+      a(
+        href=link.href
+        itemprop="url"
+        target="_blank"
+      )
+        span.visible-for-screen-readers= link.name

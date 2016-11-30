@@ -5,7 +5,7 @@
 var site = 'dist/';
 var gulp = require('gulp'),
     packageJSON = require('./package.json'),
-    configuration = require('./configuration'),
+    configuration = require('./configuration.json'),
     browserSync = require('browser-sync').create(),
     pug = require('gulp-pug'),
     postcss = require('gulp-postcss'),
@@ -28,6 +28,7 @@ gulp.task('pug', ['sprite'], function() {
       locals: {
         siteTitle: packageJSON.name,
         siteDescription: packageJSON.description,
+        siteLinks: configuration.links
       },
       pretty: true
     }))
@@ -198,6 +199,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('watch', function() {
 
+	gulp.watch('src/pug/template.pug', ['pug']);
   gulp.watch('src/pug/**/*.pug', ['pug']);
   gulp.watch('src/postcss/**/*.css', ['postcss']);
   gulp.watch('src/js/**/*.js', ['js']);

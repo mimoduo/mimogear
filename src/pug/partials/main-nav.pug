@@ -3,13 +3,9 @@
 //- ================
 
 ol
-  li
-    a(
-      href="https://github.com/mimoduo/Mimogear"
-      itemprop="url"
-    ) View on Github
-  li
-    a(
-      href="https://github.com/mimoduo/Mimogear/tree/master/docs"
-      itemprop="url"
-    ) Documentation
+  each link in siteLinks.mainNav
+    li
+      a(
+        href=link.href
+        itemprop="url"
+      )= link.name

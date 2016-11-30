@@ -2,8 +2,8 @@
 //- Site Template
 //- ================
 
-include ../mixins/symbol.pug
-include ../mixins/section.pug
+include mixins/symbol.pug
+include mixins/section.pug
 
 block theme
   - var themeName = ""
@@ -13,12 +13,12 @@ html(
   lang="en"
   class=themeName
 )
-  include ../regions/head.pug
+  include regions/head.pug
   body
     a.skip-link(href="#site-main") Skip to main content
-    include ../regions/header.pug
+    figure.site-sprite(style="display: none;")
+      include ../../dist/svg/sprite.symbol.svg
+    include regions/header.pug
     main.site-main#site-main(role="main")
       block main
-    figure.site-sprite(style="display: none;")
-      include ../../../dist/svg/sprite.symbol.svg
-    include ../regions/footer.pug
+    include regions/footer.pug
