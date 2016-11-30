@@ -1,14 +1,16 @@
 #Using Gulp in Mimogear
 
-Mimogear uses gulp, a popular task runner, in order to get the job done. All the work for compiling stylesheets, compiling markup, concatenating and minifying javascript, creating a sprite, optimizing images, and watching assets has already been taken care of for you.
+Mimogear uses gulp, a popular task runner. All the work for compiling stylesheets, compiling markup, concatenating and minifying javascript, creating a sprite, optimizing images, and watching assets has already been setup for you.
 
-##Recommended Workflow
+##Running Gulp
 
 Once you're all [setup](https://github.com/mimoduo/Mimogear/tree/master/docs), there is the `gulp` command to get you started. This command will compile all files into the /dist/ folder, open a new browser window with your site, and begin watching the files within the /src/ folder. In other words, the ultimate static site generator command.
 
 ```sh
 gulp
 ```
+
+##Specific Gulp Commands
 
 Sometimes you may want to build only a particular set of files or watch without building. In that case, there are several commands you can run.
 

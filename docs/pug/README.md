@@ -1,11 +1,17 @@
 #Using Pug in Mimogear
 
-Mimogear uses pug in order to create static pages and get the markup work done. Pug is a stripped down markup language, with powerful template capabilities, that compiles into HTML. Luckily for us that means we'll be focusing more on writing unique markup rather than repeating ourselves to recreate templates. All of the scaffolding revolved around distributing pages has already been taken care of for you.
+Mimogear uses pug in order to create static HTML pages based on a base template. Pug let's us write a simpler form of HTML while also giving us the ability to use template inheritance, variables, and mixins. All of the scaffolding revolved around distributing pages has already been setup for you.
 
-##Recommended Workflow
+##Modifying the Base Template
 
-The foundation for pug is already laid out for you in the shape of templates, regions, and pages. To get started, take a look at /src/pug/templates/site.pug to found the skeleton of your site. Make the necessary changes if necessary then move over to /pug/regions/ to start working on your head, header, and footer. Once you're ready to start working with components and pages, begin creating pages in /src/pug/pages/ that extend the site.pug template. There's already a blank starter.pug to quickstart your markup development. Good places to start in:
+The base template is what is used as the foundation for each page. This template can be found in /src/pug/templates/site.pug. Take note that any changes you make to this file will also be applied to every page that uses this template!
 
-1. _/src/pug/templates/site.pug_ - to modify the base template
-2. _/src/pug/regions/_ - to modify the repeated regions
-3. _/src/pug/pages/_ - to add in new pages to your site
+##Adjusting the Head, Header, and Footer
+
+Every site has a head section. Most sites have a header and footer. To adjust these files, which are included on every page by default, head over to /src/pug/regions/.
+
+##Creating a Page
+
+Once you've adjusted the base template file and the region files to your liking, head over to /src/pug/pages/. Any pug file you create here will be compiled to its respective path in the root of Mimogear. This will also be the place to add in all your components. There's a starter.pug file to serve as the simplest form of a pug page available.
+
+_If you have a question about what something is, there is a detailed set of docs found in /docs/pug/._

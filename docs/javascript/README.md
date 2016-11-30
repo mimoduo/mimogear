@@ -1,19 +1,22 @@
 #Using Javascript in Mimogear
 
-Mimogear uses straight up javascript to get the job done. All the work for creating slideshows, ligthboxes, accordions, tabs, and drawers has already been taken care of for you.
+Mimogear uses straight up javascript. All the work for creating slideshows, ligthboxes, accordions, tabs, and drawers has already been setup for you.
 
-##Mimo Modules
+##Using Mimo Modules
 
-Since all the mimo modules described in the introductory paragraph above are enabled by default, all you'll need to do on your end is to add the markup to your page that matches what the mimo modules require. To get an idea of what each module needs check out the individual docs in the list below:
+Since all the mimo modules described in the introductory paragraph above are _enabled by default_, all you'll need to do on your end is to add the markup to your page that matches what the mimo modules require. To get an idea of what each module needs check out the individual docs in the list below:
 
 * [Slideshow](https://github.com/mimoduo/Mimogear/blob/master/docs/javascript/sail.md)
 * [Ligthbox](https://github.com/mimoduo/Mimogear/blob/master/docs/javascript/lantern.md)
 * [Accordions/Tabs](https://github.com/mimoduo/Mimogear/blob/master/docs/javascript/harmonica.md)
 * [Triggers](https://github.com/mimoduo/Mimogear/blob/master/docs/javascript/trigger.md)
 
-##Recommended Workflow
+##Creating a New Module
 
-To get started with your own modules, either add your common javascript into /src/js/site/main.js, or start creating separate .js files within /src/js/site/. It's a good idea to keep your javascript files separate to help visually encapsulate each module. Places to develop in:
+To add a new module to integrate into the main javascript file, add additional javascript files into /src/js/site/. Mimogear follows the module pattern as written in the [Oneone javascript file](https://github.com/mimoduo/Oneone/blob/master/src/script.js).
 
-* _/src/js/site/_ - to add module specific javascript files
-* _/src/js/vendor/_ - to add external vendor scripts
+##Adding Vendor Javascript File
+
+Any javascript that comes from a source outside of Mimogear should be included in /src/js/vender/.
+
+_If you have a question about what something is, there is a detailed set of docs found in /docs/javascript/._
