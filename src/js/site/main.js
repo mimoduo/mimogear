@@ -9,8 +9,6 @@
     activeBodyClass: 'drawer-activated'
   });
 
-  Harmonica.init();
-
   Lantern.init();
 
   Sail.init();

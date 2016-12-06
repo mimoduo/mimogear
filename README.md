@@ -17,21 +17,14 @@ After looking through all the cool static site generators out there, you may hav
 * Clean skeleton postcss framework for quick style development
 * Thoroughly tested javascript components
 
-##Browser Support
-
-| Chrome | Firefox | Safari | IE  | Opera |
-|--------|---------|--------|-----|-------|
-| 29+    | 29+     | 6.2+   | 10+ | 16+   |
-
-Excludes harmonica support
-
 ##Installation
 
-Mimogear uses node package manager in order to download all of the necessary build dependencies. If you haven't downloaded node before, head over to [node.js](https://nodejs.org/en/) to download the latest version of node. Once you've installed node and have downloaded Mimogear, let's `cd` into the project directory and then download our dependencies using the a terminal:
+Mimogear uses npm in order to download all of the necessary build dependencies. If you haven't downloaded node before, head over to [node.js](https://nodejs.org/en/) to download the latest version of node. Once you've installed node and have downloaded Mimogear, let's `cd` into the project directory and then download our dependencies using the a terminal:
 
 ```sh
 cd <folder-of-Mimogear> (drag the folder into your terminal)
 npm install
+npm install gulp-cli -g
 gulp
 ```
 

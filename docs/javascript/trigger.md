@@ -12,7 +12,7 @@ To get started with triggers, add in the following line inside the anonymous fun
 Trigger.init();
 ```
 
-Then you'll want to add in some harmonica markup into your pug page. This example uses the markup that is required by default:
+Then you'll want to add in some trigger markup into your pug page. This example uses the markup that is required by default:
 
 **Pug**
 

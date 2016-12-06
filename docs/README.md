@@ -4,7 +4,7 @@ _Mimogear was built to be simple_. And simple it'll be! Let's get you started in
 
 ##Installation
 
-Mimogear uses node package manager in order to download all of the necessary build dependencies. If you haven't downloaded node before, head over to [node.js](https://nodejs.org/en/) to download the latest version of node. Once you've installed node and have downloaded Mimogear, let's `cd` into the project directory and then download our dependencies using the a terminal:
+Mimogear uses npm in order to download all of the necessary build dependencies. If you haven't downloaded node before, head over to [node.js](https://nodejs.org/en/) to download the latest version of node. Once you've installed node and have downloaded Mimogear, let's `cd` into the project directory and then download our dependencies using the a terminal:
 
 ```sh
 cd <folder-of-Mimogear> (drag the folder into your terminal)
@@ -19,9 +19,10 @@ Now that you've downloaded all of the dependencies, let's take a moment to setup
 
 ##Running Gulp
 
-The meat of Mimogear is the `gulp` command. Within your terminal, type in `gulp` to help process a distribution /dist/ folder for your site.
+The meat of Mimogear is the `gulp` command. Before we run gulp, bring up your terminal and make sure you have the gulp command line interface installed with `npm install gulp-cli -g`. Afterwards, type in `gulp` to help process a distribution /dist/ folder for your site.
 
 ```sh
+npm install gulp-cli -g
 gulp
 ```
 

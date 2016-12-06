@@ -12,7 +12,6 @@ Variables are located in the configuration.js file within the root of Mimogear. 
 * **media queries**
   * compartment boundary
   * query widths / incremented by 100
-  * harmonica view
 
 ##Colors
 

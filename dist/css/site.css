@@ -680,92 +680,6 @@ template {
 }
 
 /* ================
-// Harmonica
-// ============= */
-
-@media screen and (min-width: 900px) {
-
-  .harmonica {
-    display: -webkit-box;
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
-.harmonica-header {
-    width: 100%;
-    cursor: pointer;
-
-  }
-
-@media screen and (min-width: 900px) {
-
-  .harmonica-header {
-    -webkit-box-flex: 1;
-    flex: auto;
-    -webkit-box-ordinal-group: 2;
-    order: 1;
-    width: auto;
-  }
-}
-
-.harmonica-indicator {
-      display: table-cell;
-      vertical-align: middle;
-      padding-right: 0.625em;
-
-    }
-
-@media screen and (min-width: 900px) {
-
-  .harmonica-indicator {
-    display: none;
-  }
-}
-
-.harmonica-header-active .symbol-harmonica-open {
-  display: none;
-}
-
-.symbol-harmonica-close {
-        display: none;
-
-      }
-
-.harmonica-header-active .symbol-harmonica-close {
-  display: block;
-}
-
-.harmonica-heading {
-      display: table-cell;
-    }
-
-.harmonica-content {
-    display: none;
-
-  }
-
-@media screen and (min-width: 900px) {
-
-  .harmonica-content {
-    -webkit-box-ordinal-group: 3;
-    order: 2;
-    width: 100%;
-  }
-}
-
-@media print {
-
-  .harmonica-content {
-    display: block;
-  }
-}
-
-.harmonica-header-active + .harmonica-content {
-  display: block;
-}
-
-/* ================
 // Lantern Lightbox
 // ============= */
 
@@ -868,8 +782,8 @@ template {
 }
 
 .mimo-theme body {
-  font-size: 1.125em;
-  line-height: 1.5555555555555556;
+  font-size: 1em;
+  line-height: 1.75;
 }
 
 .mimo-theme h2,
@@ -881,28 +795,28 @@ template {
   display: inline-block;
   border-bottom: 0.1875rem solid currentColor;
   margin: 0;
-  padding-bottom: 0.3333333333333333em;
-  font-size: 1.3333333333333333em;
+  padding-bottom: 0.375em;
+  font-size: 1.5em;
 }
 
 @media screen and (min-width: 400px) {
 
   .mimo-theme h2 {
-    font-size: 1.8888888888888888em;
+    font-size: 2.125em;
     line-height: 1.0588235294117647;
   }
 }
 
 .mimo-theme h4 {
   margin: 0 0 0.625rem;
-  font-size: 1.2222222222222223em;
+  font-size: 1.375em;
   line-height: 1.0909090909090908em;
 }
 
 @media screen and (min-width: 400px) {
 
   .mimo-theme h4 {
-    font-size: 1.4444444444444444em;
+    font-size: 1.625em;
   }
 }
 
@@ -913,7 +827,7 @@ template {
 @media screen and (min-width: 400px) {
 
   .mimo-theme .lead {
-    font-size: 1.1111111111111112em;
+    font-size: 1.25em;
   }
 }
 
@@ -934,8 +848,8 @@ template {
 // ============= */
 
 .mimo-theme .symbol {
-  height: 1.1111111111111112em;
-  width: 1.1111111111111112em;
+  height: 1.25em;
+  width: 1.25em;
   fill: currentColor;
 }
 
@@ -947,7 +861,7 @@ template {
   max-width: 65rem;
   margin-right: auto;
   margin-left: auto;
-  padding: 1.1111111111111112em;
+  padding: 1.25em;
 }
 
 .mimo-theme .site-header:after {
@@ -957,8 +871,7 @@ template {
 }
 
 .mimo-theme .site-footer {
-  background: #E8EAF6;
-  padding: 1.1111111111111112em;
+  display: none;
 }
 
 /* ================
@@ -976,17 +889,17 @@ template {
 // ============= */
 
 .mimo-theme .site-logo {
-  height: 3.5555555555555554em;
-  max-width: 24.444444444444443em;
+  height: 4em;
+  max-width: 27.5em;
   width: 100%;
-  padding-left: 3.3333333333333335em;
+  padding-left: 3.75em;
 }
 
 @media screen and (min-width: 1000px) {
 
   .mimo-theme .site-logo {
     float: left;
-    max-width: 21.11111111111111em;
+    max-width: 23.75em;
     padding-left: 0;
   }
 }
@@ -994,7 +907,7 @@ template {
 @media print {
 
   .mimo-theme .site-logo {
-    max-width: 11.11111111111111em;
+    max-width: 12.5em;
     padding-left: 0;
   }
 }
@@ -1014,7 +927,7 @@ template {
   position: absolute;
   top: 50%;
   left: 1.25em;
-  font-size: 0.8888888888888888em;
+  font-size: 1em;
   background: #E8EAF6;
   border: 0.125em solid #7986CB;
   border-radius: 100%;
@@ -1047,7 +960,7 @@ template {
 }
 
 .mimo-theme .drawer {
-  padding: 1.1111111111111112em 0.5555555555555556em;
+  padding: 1.25em 0.625em;
   background: #E8EAF6;
   color: #7986CB;
 }
@@ -1077,13 +990,13 @@ template {
 
 .mimo-theme .drawer:before {
   display: inline-block;
-  border-bottom: 0.16666666666666666em solid #7986CB;
-  font-size: 1.2222222222222223em;
+  border-bottom: 0.1875em solid #7986CB;
+  font-size: 1.375em;
   font-weight: 700;
   line-height: 1.0909090909090908em;
-  margin-bottom: 0.5555555555555556em;
-  margin-left: 0.5555555555555556em;
-  padding-bottom: 0.2222222222222222em;
+  margin-bottom: 0.625em;
+  margin-left: 0.625em;
+  padding-bottom: 0.25em;
   content: "Basic Drawer";
 }
 
@@ -1107,10 +1020,10 @@ template {
 
 .mimo-theme .main-nav a {
   display: block;
-  padding: 0.2222222222222222em 0.5555555555555556em;
+  padding: 0.25em 0.625em;
   font-weight: 700;
   text-decoration: none;
-  border-radius: 0.5555555555555556em;
+  border-radius: 0.625em;
   color: inherit;
   -webkit-transition: background .25s,
           box-shadow .25s,
@@ -1124,7 +1037,7 @@ template {
 @media screen and (min-width: 1000px) {
 
   .mimo-theme .main-nav a {
-    padding: 1em 1.1111111111111112em;
+    padding: 1.125em 1.25em;
     color: #7986CB;
   }
 }
@@ -1132,7 +1045,7 @@ template {
 .mimo-theme .main-nav a:focus,
         .mimo-theme .main-nav a:hover {
   background: #E8EAF6;
-  box-shadow: inset 0 0 0 0.2222222222222222em #7986CB;
+  box-shadow: inset 0 0 0 0.25em #7986CB;
   color: #7986CB;
 }
 
@@ -1154,12 +1067,12 @@ template {
 // ============= */
 
 .mimo-theme .grid {
-  margin: 0 -1.1111111111111112em;
+  margin: 0 -1.25em;
 }
 
 .mimo-theme .column {
-  margin-bottom: 1.1111111111111112em;
-  padding: 0 1.1111111111111112em;
+  margin-bottom: 1.25em;
+  padding: 0 1.25em;
 }
 
 @media screen and (min-width: 700px) {
@@ -1220,9 +1133,9 @@ template {
 .mimo-theme code {
   display: block;
   overflow-x: auto;
-  padding: 1.1111111111111112em;
+  padding: 1.25em;
   background: #E8EAF6;
-  border-radius: 0.5555555555555556em;
+  border-radius: 0.625em;
   color: #7986CB;
 }
 
@@ -1231,19 +1144,19 @@ template {
 // ============= */
 
 .mimo-theme .sail-slide {
-  height: 13.333333333333334em;
-  margin-bottom: 1.1111111111111112em;
-  padding: 3.3333333333333335em 1.1111111111111112em;
+  height: 15em;
+  margin-bottom: 1.25em;
+  padding: 3.75em 1.25em;
   background: #E8EAF6;
-  border-radius: 1.1111111111111112em;
+  border-radius: 1.25em;
   color: #7986CB;
 }
 
 @media screen and (min-width: 900px) {
 
   .mimo-theme .sail-slide {
-    padding-right: 2.2222222222222223em;
-    padding-left: 2.2222222222222223em;
+    padding-right: 2.5em;
+    padding-left: 2.5em;
   }
 }
 
@@ -1258,24 +1171,25 @@ template {
 
   .mimo-theme .sail-slide {
     height: auto;
-    padding: 0.5555555555555556em 0;
+    padding: 0.625em 0;
   }
 }
 
 .mimo-theme .sail-slide:nth-of-type(even) {
-  background: #7986CB;
+  background: none;
+  box-shadow: inset 0 0 0 0.25em #E8EAF6;
   color: #E8EAF6;
 }
 
 .mimo-theme .sail-controls {
-  margin-bottom: 0.5555555555555556em;
+  margin-bottom: 0.625em;
   text-align: center;
 }
 
 .mimo-theme .sail-control {
   border: 0;
   padding: 0 0.2857142857142857em;
-  font-size: 1.9444444444444444em;
+  font-size: 2.1875em;
   background: none;
   color: inherit;
   -webkit-transition: opacity .25s,
@@ -1309,11 +1223,11 @@ template {
 }
 
 .mimo-theme .sail-page {
-  height: 1.1111111111111112em;
-  width: 1.1111111111111112em;
+  height: 1.25em;
+  width: 1.25em;
   background: none;
-  border: 0.16666666666666666em solid;
-  margin: 0 0.3333333333333333em;
+  border: 0.1875em solid;
+  margin: 0 0.375em;
   border-radius: 100%;
   color: currentColor;
   -webkit-transition: background .25s;
@@ -1343,7 +1257,7 @@ template {
   top: 50%;
   left: 0;
   width: 100%;
-  padding: 0 1.1111111111111112em;
+  padding: 0 1.25em;
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
@@ -1381,14 +1295,14 @@ template {
 }
 
 .mimo-theme .symbol-reason {
-  height: 1.6666666666666667em;
-  width: 1.6666666666666667em;
+  height: 1.875em;
+  width: 1.875em;
 }
 
 @media screen and (min-width: 300px) {
 
   .mimo-theme .reason-details {
-    padding-left: 2.5em;
+    padding-left: 2.8125em;
   }
 }
 
@@ -1397,12 +1311,12 @@ template {
 // ============= */
 
 .mimo-theme .lantern-light {
-  border-radius: 1.1111111111111112em;
+  border-radius: 1.25em;
 }
 
 .mimo-theme .lantern {
-  padding: 2.2222222222222223em;
-  padding-bottom: 3.3333333333333335em;
+  padding: 2.5em;
+  padding-bottom: 3.75em;
   background: rgba(255, 255, 255, .75);
 }
 
@@ -1411,15 +1325,16 @@ template {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 0.2222222222222222em 0.5555555555555556em;
+  padding: 0.25em 0.625em;
   text-align: center;
   background: #7986CB;
+  color: #E8EAF6;
   content: attr(title);
 }
 
 .mimo-theme .lantern-holder {
-  border: 0.2777777777777778em solid #fff;
-  border-radius: 1.1111111111111112em;
+  border: 0.3125em solid #fff;
+  border-radius: 1.25em;
 }
 
 .mimo-theme .lantern-control {
@@ -1455,65 +1370,13 @@ template {
 }
 
 .mimo-theme .lantern-previous {
-  -webkit-transform: translate(calc(-100% - 0.2777777777777778em), -50%);
-  transform: translate(calc(-100% - 0.2777777777777778em), -50%);
+  -webkit-transform: translate(calc(-100% - 0.3125em), -50%);
+  transform: translate(calc(-100% - 0.3125em), -50%);
 }
 
 .mimo-theme .lantern-next {
-  -webkit-transform: translate(calc(100% + 0.2777777777777778em), -50%);
-  transform: translate(calc(100% + 0.2777777777777778em), -50%);
-}
-
-/* ================
-// Harmonica
-// ============= */
-
-.mimo-theme .harmonica-header {
-  border: 0;
-  margin: 0 0 1.1111111111111112em;
-  padding: 0.5em 1.1111111111111112em;
-  text-align: left;
-  background: #E8EAF6;
-  border-radius: 2.7777777777777777em;
-  color: inherit;
-  -webkit-transition: box-shadow .25s;
-  transition: box-shadow .25s;
-}
-
-@media screen and (min-width: 900px) {
-
-  .mimo-theme .harmonica-header {
-    text-align: center;
-    border-radius: 0;
-  }
-}
-
-@media screen and (min-width: 900px) {
-
-  .mimo-theme .harmonica-header:first-of-type {
-    border-radius: 1.6666666666666667em 0 0 1.6666666666666667em;
-  }
-}
-
-@media screen and (min-width: 900px) {
-
-  .mimo-theme .harmonica-header:last-of-type {
-    border-radius: 0 1.6666666666666667em 1.6666666666666667em 0;
-  }
-}
-
-.mimo-theme .harmonica-header:focus,
-    .mimo-theme .harmonica-header:hover {
-  box-shadow: inset 0 0 0 0.2222222222222222em #7986CB;
-}
-
-.mimo-theme .harmonica-header-active {
-  background: #7986CB;
-  color: #E8EAF6;
-}
-
-.mimo-theme .harmonica-content {
-  margin-bottom: 1.25em;
+  -webkit-transform: translate(calc(100% + 0.3125em), -50%);
+  transform: translate(calc(100% + 0.3125em), -50%);
 }
 
 /* ================
@@ -1529,16 +1392,16 @@ template {
 
 .mimo-theme .action-link-item {
   display: inline-block;
-  margin-right: 0.2222222222222222em;
-  margin-bottom: 0.5555555555555556em;
+  margin-right: 0.25em;
+  margin-bottom: 0.625em;
 }
 
 .mimo-theme .action-link {
   display: inline-block;
-  padding: 0.5555555555555556em 1.1111111111111112em;
+  padding: 0.625em 1.25em;
   font-weight: 700;
   text-decoration: none;
-  border-radius: 2.7777777777777777em;
+  border-radius: 3.125em;
   -webkit-transition: background .25s,
           box-shadow .25s,
           color .25s;
@@ -1563,7 +1426,7 @@ template {
 .mimo-theme .action-link-github:focus,
           .mimo-theme .action-link-github:hover {
   background: #7986CB;
-  box-shadow: inset 0 0 0 0.2222222222222222em #E8EAF6;
+  box-shadow: inset 0 0 0 0.25em #E8EAF6;
   color: #E8EAF6;
 }
 
@@ -1575,16 +1438,16 @@ template {
 .mimo-theme .action-link-share:focus,
           .mimo-theme .action-link-share:hover {
   background: #E8EAF6;
-  box-shadow: inset 0 0 0 0.2222222222222222em #7986CB;
+  box-shadow: inset 0 0 0 0.25em #7986CB;
   color: #7986CB;
 }
 
 .mimo-theme .symbol-action {
   display: inline-block;
   vertical-align: middle;
-  height: 1.4444444444444444em;
-  width: 1.4444444444444444em;
-  margin-right: 0.2777777777777778em;
+  height: 1.625em;
+  width: 1.625em;
+  margin-right: 0.3125em;
 }
 
 .mimo-theme .action-link-label {

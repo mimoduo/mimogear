@@ -8,7 +8,6 @@ Since all the mimo modules described in the introductory paragraph above are _en
 
 * [Slideshow](https://github.com/mimoduo/Mimogear/blob/master/docs/javascript/sail.md)
 * [Ligthbox](https://github.com/mimoduo/Mimogear/blob/master/docs/javascript/lantern.md)
-* [Accordions/Tabs](https://github.com/mimoduo/Mimogear/blob/master/docs/javascript/harmonica.md)
 * [Triggers](https://github.com/mimoduo/Mimogear/blob/master/docs/javascript/trigger.md)
 
 ##Creating a New Module

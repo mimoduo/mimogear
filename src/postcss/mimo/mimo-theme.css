@@ -15,8 +15,8 @@ $m2: #E8EAF6;
   color: $m1;
 
   body {
-    font-size: em(18);
-    line-height: nu(28, 18);
+    font-size: em(16);
+    line-height: nu(28);
   }
 
   h2,
@@ -28,11 +28,11 @@ $m2: #E8EAF6;
     display: inline-block;
     border-bottom: rem(3) solid currentColor;
     margin: 0;
-    padding-bottom: em(6, 18);
-    font-size: em(24, 18);
+    padding-bottom: em(6);
+    font-size: em(24);
 
     @mixin media $tiny {
-      font-size: em(34, 18);
+      font-size: em(34);
       line-height: nu(36, 34);
     }
 
@@ -40,11 +40,11 @@ $m2: #E8EAF6;
 
   h4 {
     margin: 0 0 rem(10);
-    font-size: em(22, 18);
+    font-size: em(22);
     line-height: em(24, 22);
 
     @mixin media $tiny {
-      font-size: em(26, 18);
+      font-size: em(26);
     }
 
   }
@@ -53,7 +53,7 @@ $m2: #E8EAF6;
     margin-bottom: rem(40);
 
     @mixin media $tiny {
-      font-size: em(20, 18);
+      font-size: em(20);
     }
 
   }
@@ -85,8 +85,8 @@ $m2: #E8EAF6;
 .mimo-theme {
 
   .symbol {
-    height: em(20, 18);
-    width: em(20, 18);
+    height: em(20);
+    width: em(20);
     fill: currentColor;
   }
 
@@ -101,7 +101,7 @@ $m2: #E8EAF6;
 
   .site-header {
     @mixin compartment 1040;
-    padding: em(20, 18);
+    padding: em(20);
 
     &:after {
       @mixin clearfix;
@@ -110,8 +110,7 @@ $m2: #E8EAF6;
   }
 
   .site-footer {
-    background: $m2;
-    padding: em(20, 18);
+    display: none;
   }
 
 }
@@ -137,19 +136,19 @@ $m2: #E8EAF6;
 .mimo-theme {
 
   .site-logo {
-    height: em(64, 18);
-    max-width: em(440, 18);
+    height: em(64);
+    max-width: em(440);
     width: 100%;
-    padding-left: em(60, 18);
+    padding-left: em(60);
 
     @mixin media $aldnoah {
       float: left;
-      max-width: em(380, 18);
+      max-width: em(380);
       padding-left: 0;
     }
 
     @media print {
-      max-width: em(200, 18);
+      max-width: em(200);
       padding-left: 0;
     }
 
@@ -175,7 +174,7 @@ $m2: #E8EAF6;
     position: absolute;
     top: 50%;
     left: em(20, 16);
-    font-size: em(16, 18);
+    font-size: em(16);
     background: $m2;
     border: em(2, 16) solid $m1;
     border-radius: 100%;
@@ -203,7 +202,7 @@ $m2: #E8EAF6;
   }
 
   .drawer {
-    padding: em(20, 18) em(10, 18);
+    padding: em(20) em(10);
     background: $m2;
     color: $m1;
 
@@ -217,13 +216,13 @@ $m2: #E8EAF6;
 
     &:before {
       display: inline-block;
-      border-bottom: em(3, 18) solid $m1;
-      font-size: em(22, 18);
+      border-bottom: em(3) solid $m1;
+      font-size: em(22);
       font-weight: 700;
       line-height: em(24, 22);
-      margin-bottom: em(10, 18);
-      margin-left: em(10, 18);
-      padding-bottom: em(4, 18);
+      margin-bottom: em(10);
+      margin-left: em(10);
+      padding-bottom: em(4);
       content: "Basic Drawer";
 
       @mixin media $aldnoah {
@@ -254,10 +253,10 @@ $m2: #E8EAF6;
 
       a {
         display: block;
-        padding: em(4, 18) em(10, 18);
+        padding: em(4) em(10);
         font-weight: 700;
         text-decoration: none;
-        border-radius: em(10, 18);
+        border-radius: em(10);
         color: inherit;
         transition:
           background .25s,
@@ -265,14 +264,14 @@ $m2: #E8EAF6;
           color .25s;
 
         @mixin media $aldnoah {
-          padding: em(18, 18) em(20, 18);
+          padding: em(18) em(20);
           color: $m1;
         }
 
         &:focus,
         &:hover {
           background: $m2;
-          box-shadow: inset 0 0 0 em(4, 18) $m1;
+          box-shadow: inset 0 0 0 em(4) $m1;
           color: $m1;
         }
 
@@ -309,12 +308,12 @@ $m2: #E8EAF6;
 .mimo-theme {
 
   .grid {
-    margin: 0 em(-20, 18);
+    margin: 0 em(-20);
   }
 
     .column {
-      margin-bottom: em(20, 18);
-      padding: 0 em(20, 18);
+      margin-bottom: em(20);
+      padding: 0 em(20);
     }
 
     @mixin media $big {
@@ -337,9 +336,9 @@ $m2: #E8EAF6;
   code {
     display: block;
     overflow-x: auto;
-    padding: em(20, 18);
+    padding: em(20);
     background: $m2;
-    border-radius: em(10, 18);
+    border-radius: em(10);
     color: $m1;
   }
 
@@ -353,16 +352,16 @@ $m2: #E8EAF6;
 .mimo-theme {
 
   .sail-slide {
-    height: em(240, 18);
-    margin-bottom: em(20, 18);
-    padding: em(60, 18) em(20, 18);
+    height: em(240);
+    margin-bottom: em(20);
+    padding: em(60) em(20);
     background: $m2;
-    border-radius: em(20, 18);
+    border-radius: em(20);
     color: $m1;
 
     @mixin media $huge {
-      padding-right: em(40, 18);
-      padding-left: em(40, 18);
+      padding-right: em(40);
+      padding-left: em(40);
     }
 
     @mixin media $large {
@@ -371,25 +370,26 @@ $m2: #E8EAF6;
 
     @media print {
       height: auto;
-      padding: em(10, 18) 0;
+      padding: em(10) 0;
     }
 
     &:nth-of-type(even) {
-      background: $m1;
+      background: none;
+      box-shadow: inset 0 0 0 em(4) $m2;
       color: $m2;
     }
 
   }
 
   .sail-controls {
-    margin-bottom: em(10, 18);
+    margin-bottom: em(10);
     text-align: center;
   }
 
     .sail-control {
       border: 0;
       padding: 0 em(10, 35);
-      font-size: em(35, 18);
+      font-size: em(35);
       background: none;
       color: inherit;
       transition:
@@ -416,11 +416,11 @@ $m2: #E8EAF6;
   }
 
     .sail-page {
-      height: em(20, 18);
-      width: em(20, 18);
+      height: em(20);
+      width: em(20);
       background: none;
-      border: em(3, 18) solid;
-      margin: 0 em(6, 18);
+      border: em(3) solid;
+      margin: 0 em(6);
       border-radius: 100%;
       color: currentColor;
       transition: background .25s;
@@ -456,7 +456,7 @@ $m2: #E8EAF6;
     top: 50%;
     left: 0;
     width: 100%;
-    padding: 0 em(20, 18);
+    padding: 0 em(20);
     transform: translate(0, -50%);
 
     @mixin media $large {
@@ -485,14 +485,14 @@ $m2: #E8EAF6;
   }
 
     .symbol-reason {
-      height: em(30, 18);
-      width: em(30, 18);
+      height: em(30);
+      width: em(30);
     }
 
   .reason-details {
 
     @mixin media $mini {
-      padding-left: em(45, 18);
+      padding-left: em(45);
     }
 
   }
@@ -507,12 +507,12 @@ $m2: #E8EAF6;
 .mimo-theme {
 
   .lantern-light {
-    border-radius: em(20, 18);
+    border-radius: em(20);
   }
 
   .lantern {
-    padding: em(40, 18);
-    padding-bottom: em(60, 18);
+    padding: em(40);
+    padding-bottom: em(60);
     background: rgba(255, 255, 255, .75);
   }
 
@@ -523,17 +523,18 @@ $m2: #E8EAF6;
         bottom: 0;
         left: 0;
         width: 100%;
-        padding: em(4, 18) em(10, 18);
+        padding: em(4) em(10);
         text-align: center;
         background: $m1;
+        color: $m2;
         content: attr(title);
       }
 
     }
 
       .lantern-holder {
-        border: em(5, 18) solid #fff;
-        border-radius: em(20, 18);
+        border: em(5) solid #fff;
+        border-radius: em(20);
       }
 
       .lantern-control {
@@ -566,68 +567,12 @@ $m2: #E8EAF6;
         }
 
       .lantern-previous {
-        transform: translate(calc(-100% - em(5, 18)), -50%);
+        transform: translate(calc(-100% - em(5)), -50%);
       }
 
       .lantern-next {
-        transform: translate(calc(100% + em(5, 18)), -50%);
+        transform: translate(calc(100% + em(5)), -50%);
       }
-
-}
-
-
-/* ================
-// Harmonica
-// ============= */
-
-.mimo-theme {
-
-  .harmonica-header {
-    border: 0;
-    margin: 0 0 em(20, 18);
-    padding: em(9, 18) em(20, 18);
-    text-align: left;
-    background: $m2;
-    border-radius: em(50, 18);
-    color: inherit;
-    transition: box-shadow .25s;
-
-    @mixin media $harmonica-view {
-      text-align: center;
-      border-radius: 0;
-    }
-
-    &:first-of-type {
-
-      @mixin media $harmonica-view {
-        border-radius: em(30, 18) 0 0 em(30, 18);
-      }
-
-    }
-
-    &:last-of-type {
-
-      @mixin media $harmonica-view {
-        border-radius: 0 em(30, 18) em(30, 18) 0;
-      }
-
-    }
-
-    &:focus,
-    &:hover {
-      box-shadow: inset 0 0 0 em(4, 18) $m1;
-    }
-
-    &-active {
-      background: $m1;
-      color: $m2;
-    }
-
-  }
-
-  .harmonica-content {
-    margin-bottom: em(20);
-  }
 
 }
 
@@ -644,16 +589,16 @@ $m2: #E8EAF6;
 
     .action-link-item {
       display: inline-block;
-      margin-right: em(4, 18);
-      margin-bottom: em(10, 18);
+      margin-right: em(4);
+      margin-bottom: em(10);
     }
 
       .action-link {
         display: inline-block;
-        padding: em(10, 18) em(20, 18);
+        padding: em(10) em(20);
         font-weight: 700;
         text-decoration: none;
-        border-radius: em(50, 18);
+        border-radius: em(50);
         transition:
           background .25s,
           box-shadow .25s,
@@ -670,7 +615,7 @@ $m2: #E8EAF6;
           &:focus,
           &:hover {
             background: $m1;
-            box-shadow: inset 0 0 0 em(4, 18) $m2;
+            box-shadow: inset 0 0 0 em(4) $m2;
             color: $m2;
           }
 
@@ -683,7 +628,7 @@ $m2: #E8EAF6;
           &:focus,
           &:hover {
             background: $m2;
-            box-shadow: inset 0 0 0 em(4, 18) $m1;
+            box-shadow: inset 0 0 0 em(4) $m1;
             color: $m1;
           }
 
@@ -694,9 +639,9 @@ $m2: #E8EAF6;
         .symbol-action {
           display: inline-block;
           vertical-align: middle;
-          height: em(26, 18);
-          width: em(26, 18);
-          margin-right: em(5, 18);
+          height: em(26);
+          width: em(26);
+          margin-right: em(5);
         }
 
         .action-link-label {

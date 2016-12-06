@@ -67,10 +67,6 @@ There are three mixins available within the drawer partial as well as default st
 }
 ```
 
-##Harmonica
-
-The harmonica partial styles the ordering of active content within an accordion/harmonica. If harmonicas are not needed but accordions are, delete the media queries within the harmonica partial. The `$harmonica-view` variable within configuration.js dictates when accordions on smaller screens become a harmonica on larger screens. If you change the `$harmonica-view` variable within configuration.js, make sure to also update the `harmonicaView` option when the harmonica is initiated in the js.
-
 ##Lantern
 
 The lantern partial styles the lightbox, dictates recommended controller positions, and makes sure that images will fit properly within the viewport. It's possible to show the caption of an image by accessing the title attribute of the lantern-content. The following example, also used in the mimo-theme, uses &:after to extract the title from lantern-content:
