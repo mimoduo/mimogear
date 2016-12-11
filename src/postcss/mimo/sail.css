@@ -59,11 +59,11 @@
       cursor: not-allowed;
     }
 
+    &-previous {}
+
+    &-next {}
+
   }
-
-  .sail-prev {}
-
-  .sail-next {}
 
 
 /* ================

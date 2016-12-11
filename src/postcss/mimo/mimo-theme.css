@@ -135,7 +135,7 @@ $m2: #009688;
         padding-top: em(60);
         padding-bottom: em(60);
       }
-      
+
     }
 
   }
@@ -343,6 +343,10 @@ $m2: #009688;
           background: $m1;
           box-shadow: inset 0 0 0 em(4) $m2;
           color: $m2;
+        }
+
+        &-github {
+          padding: em(10) em(11);
         }
 
       }

@@ -1155,6 +1155,10 @@ template {
   color: #009688;
 }
 
+.mimo-theme .action-link-github {
+  padding: 0.625em 0.6875em;
+}
+
 .mimo-theme .symbol-action {
   display: inline-block;
   vertical-align: middle;
