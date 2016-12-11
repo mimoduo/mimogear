@@ -3,7 +3,8 @@
 //- ================
 
 footer.site-footer(role="contentinfo")
-  include ../partials/address.pug
+  block footer
+    include ../partials/address.pug
 
 script(src="./dist/js/site.js")
 block additional-scripts

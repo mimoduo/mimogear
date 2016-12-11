@@ -49,7 +49,7 @@ Sail = {
 
     var previous = document.createElement('button');
     previous.classList.add('sail-control');
-    previous.classList.add('sail-previous');
+    previous.classList.add('sail-control-previous');
     previous.innerHTML = '<svg class="symbol symbol-sail symbol-sail-previous">' +
     '<use xlink:href="' + s.symbols.previous + '"></use>' +
     '</svg>';
@@ -61,7 +61,7 @@ Sail = {
 
     var next = document.createElement('button');
     next.classList.add('sail-control');
-    next.classList.add('sail-next');
+    next.classList.add('sail-control-next');
     next.innerHTML = '<svg class="symbol symbol-sail symbol-sail-next">' +
     '<use xlink:href="' + s.symbols.next + '"></use>' +
     '</svg>';
@@ -145,10 +145,10 @@ Sail = {
   clearClasses: function() {
 
     for (var i = 0; i < s.slide.length; i++) {
-      
+
       s.slide[i].classList.remove(s.activeSlideClass);
       s.vdom.page[i].classList.remove(s.activePageClass);
-      
+
     }
 
   }

@@ -2,8 +2,8 @@
 // Variables
 // ============= */
 
-$m1: #7986CB;
-$m2: #E8EAF6;
+$m1: #E0F2F1;
+$m2: #009688;
 
 
 /* ================
@@ -11,46 +11,59 @@ $m2: #E8EAF6;
 // ============= */
 
 .mimo-theme {
-  font-family: 'Quicksand';
-  color: $m1;
+  font-family: 'Poppins';
 
   body {
-    font-size: em(16);
     line-height: nu(28);
   }
 
   h2,
-  h4 {
+  h4,
+  h5 {
     font-weight: 700;
   }
 
   h2 {
     display: inline-block;
-    border-bottom: rem(3) solid currentColor;
     margin: 0;
     padding-bottom: em(6);
     font-size: em(24);
 
     @mixin media $tiny {
       font-size: em(34);
-      line-height: nu(36, 34);
     }
 
   }
 
-  h4 {
-    margin: 0 0 rem(10);
-    font-size: em(22);
-    line-height: em(24, 22);
+  h3 {
+    font-size: em(20);
 
     @mixin media $tiny {
+      font-size: em(28);
+    }
+
+    @mixin media $aldnoah {
+      font-size: em(32);
+    }
+  }
+
+  h4 {
+    margin: 0 0 rem(10);
+    font-size: em(20);
+
+    @mixin media $aldnoah {
       font-size: em(26);
     }
 
   }
 
+  h5 {
+    font-size: em(16);
+    margin: 0;
+  }
+
   .lead {
-    margin-bottom: rem(40);
+    margin-bottom: rem(30);
 
     @mixin media $tiny {
       font-size: em(20);
@@ -88,42 +101,43 @@ $m2: #E8EAF6;
     height: em(20);
     width: em(20);
     fill: currentColor;
-  }
 
-}
-
-
-/* ================
-// Regions
-// ============= */
-
-.mimo-theme {
-
-  .site-header {
-    @mixin compartment 1040;
-    padding: em(20);
-
-    &:after {
-      @mixin clearfix;
+    &-plus {
+      vertical-align: middle;
+      margin-right: rem(10);
     }
 
   }
 
-  .site-footer {
-    display: none;
-  }
-
 }
 
 
 /* ================
-// Address
+// Section
 // ============= */
 
 .mimo-theme {
 
-  .vcard {
-    @mixin compartment 1000;
+  .section {
+    color: $m2;
+
+    @mixin media $aldnoah {
+      padding-top: em(60);
+      padding-bottom: em(60);
+    }
+
+    &:first-child {
+      padding-top: 8vh;
+      padding-bottom: 8vh;
+      background: $m1;
+
+      @media print {
+        padding-top: em(60);
+        padding-bottom: em(60);
+      }
+      
+    }
+
   }
 
 }
@@ -136,29 +150,26 @@ $m2: #E8EAF6;
 .mimo-theme {
 
   .site-logo {
-    height: em(64);
-    max-width: em(440);
-    width: 100%;
-    padding-left: em(60);
-
-    @mixin media $aldnoah {
-      float: left;
-      max-width: em(380);
-      padding-left: 0;
-    }
+    padding-left: rem(60);
+    font-size: em(30);
+    font-weight: 700;
 
     @media print {
       max-width: em(200);
+    }
+
+    @mixin media $aldnoah {
       padding-left: 0;
+      font-size: em(80);
+      line-height: 1.2;
     }
 
   }
 
-    .symbol-logo {
+    .site-logo-label {
+      @mixin reset-visually-hidden;
       display: block;
-      height: 100%;
-      width: 100%;
-      fill: $m1;
+      text-transform: capitalize;
     }
 
 }
@@ -172,16 +183,15 @@ $m2: #E8EAF6;
 
   .drawer-trigger {
     position: absolute;
-    top: 50%;
-    left: em(20, 16);
-    font-size: em(16);
+    top: 0;
+    left: 0;
     background: $m2;
-    border: em(2, 16) solid $m1;
-    border-radius: 100%;
+    border: em(2) solid $m2;
+    border-radius: 50%;
     color: $m1;
-    transform: translate(0, -50%);
     transition:
       background .25s,
+      border-color .25s,
       color .25s;
 
     @mixin media $aldnoah {
@@ -190,44 +200,44 @@ $m2: #E8EAF6;
 
     &:before,
     &:after {
-      height: em(3, 16);
+      height: em(3);
     }
 
     &:focus,
     &:hover {
       background: $m1;
+      border-color: $m2;
       color: $m2;
     }
 
   }
 
   .drawer {
-    padding: em(20) em(10);
+    top: 0;
+    left: em(-20);
+    margin-top: em(70);
+    padding: em(30) em(10);
     background: $m2;
+    border-radius: 0 em(10) em(10) 0;
     color: $m1;
 
     @mixin media $aldnoah {
-      @mixin reset-drawer;
-      float: right;
-      width: auto;
-      padding: 0;
-      background: none;
+      display: none;
     }
 
     &:before {
       display: inline-block;
-      border-bottom: em(3) solid $m1;
       font-size: em(22);
       font-weight: 700;
       line-height: em(24, 22);
-      margin-bottom: em(10);
-      margin-left: em(10);
-      padding-bottom: em(4);
-      content: "Basic Drawer";
+      margin-bottom: em(15, 22);
+      margin-left: em(10, 22);
+      content: "Included Drawer";
 
       @mixin media $aldnoah {
         display: none;
       }
+
     }
 
   }
@@ -243,57 +253,25 @@ $m2: #E8EAF6;
 
   .main-nav {
 
-    li {
+    a {
+      display: block;
+      padding: em(4) em(10);
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: em(10);
+      color: inherit;
+      transition:
+        background .25s,
+        box-shadow .25s,
+        color .25s;
 
-      @mixin media $aldnoah {
-        display: inline-block;
+      &:focus,
+      &:hover {
+        background: $m2;
+        box-shadow: inset 0 0 0 em(4) $m1;
+        color: $m1;
       }
 
-    }
-
-      a {
-        display: block;
-        padding: em(4) em(10);
-        font-weight: 700;
-        text-decoration: none;
-        border-radius: em(10);
-        color: inherit;
-        transition:
-          background .25s,
-          box-shadow .25s,
-          color .25s;
-
-        @mixin media $aldnoah {
-          padding: em(18) em(20);
-          color: $m1;
-        }
-
-        &:focus,
-        &:hover {
-          background: $m2;
-          box-shadow: inset 0 0 0 em(4) $m1;
-          color: $m1;
-        }
-
-      }
-
-  }
-
-}
-
-
-/* ================
-// Section
-// ============= */
-
-.mimo-theme {
-
-  .section {
-    color: $m1;
-
-    &:nth-of-type(odd) {
-      background: $m1;
-      color: $m2;
     }
 
   }
@@ -328,6 +306,64 @@ $m2: #E8EAF6;
 
 
 /* ================
+// Action Links
+// ============= */
+
+.mimo-theme {
+
+  .action-links {
+    @mixin list-reset;
+  }
+
+    .action-link-item {
+      display: inline-block;
+      margin-right: em(4);
+      margin-bottom: em(10);
+    }
+
+      .action-link {
+        display: inline-block;
+        padding: em(10) em(20);
+        font-weight: 700;
+        text-decoration: none;
+        background: $m2;
+        color: $m1;
+        border-radius: em(50);
+        transition:
+          background .25s,
+          box-shadow .25s,
+          color .25s;
+
+        @mixin media $medium {
+          display: inline-block;
+        }
+
+        &:focus,
+        &:hover {
+          background: $m1;
+          box-shadow: inset 0 0 0 em(4) $m2;
+          color: $m2;
+        }
+
+      }
+
+        .symbol-action {
+          display: inline-block;
+          vertical-align: middle;
+          height: em(26);
+          width: em(26);
+        }
+
+        .action-link-label {
+          display: inline-block;
+          vertical-align: middle;
+          margin-left: em(5);
+        }
+
+}
+
+
+/* ================
 // Code
 // ============= */
 
@@ -336,10 +372,16 @@ $m2: #E8EAF6;
   code {
     display: block;
     overflow-x: auto;
+    margin-bottom: em(40);
     padding: em(20);
-    background: $m2;
+    background: $m1;
     border-radius: em(10);
-    color: $m1;
+    color: $m2;
+
+    @mixin media $aldnoah {
+      margin-bottom: em(60);
+    }
+
   }
 
 }
@@ -351,96 +393,124 @@ $m2: #E8EAF6;
 
 .mimo-theme {
 
-  .sail-slide {
-    height: em(240);
-    margin-bottom: em(20);
-    padding: em(60) em(20);
-    background: $m2;
-    border-radius: em(20);
-    color: $m1;
+  .sail-slides {
+    margin-bottom: em(40);
+  }
 
-    @mixin media $huge {
-      padding-right: em(40);
-      padding-left: em(40);
-    }
-
-    @mixin media $large {
-      height: auto;
-    }
-
-    @media print {
-      height: auto;
-      padding: em(10) 0;
-    }
-
-    &:nth-of-type(even) {
-      background: none;
-      box-shadow: inset 0 0 0 em(4) $m2;
+    .sail-slide {
+      height: em(220);
+      margin-bottom: em(20);
+      padding: em(50) em(20);
+      background: $m1;
+      border-radius: em(20);
       color: $m2;
-    }
 
-  }
-
-  .sail-controls {
-    margin-bottom: em(10);
-    text-align: center;
-  }
-
-    .sail-control {
-      border: 0;
-      padding: 0 em(10, 35);
-      font-size: em(35);
-      background: none;
-      color: inherit;
-      transition:
-        opacity .25s,
-        transform .25s;
-
-      &:not([disabled]):focus,
-      &:not([disabled]):hover {
-        transform: scale(1.25);
+      @media print {
+        height: auto;
+        padding: em(10) 0;
       }
 
-      &[disabled] {
-        opacity: .25;
+      @mixin media $large {
+        height: auto;
+        padding-right: em(40);
+        padding-left: em(40);
       }
 
     }
 
-      .symbol-sail {
-        font-size: 85%;
-      }
+    .sail-controls {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+    }
 
-  .sail-pages {
-    text-align: center;
-  }
+      .sail-control {
+        position: absolute;
+        top: 0;
+        border: 0;
+        height: em(30);
+        width: em(30);
+        background: #fff;
+        border-radius: 50%;
+        color: inherit;
+        transition:
+          opacity .25s,
+          transform .25s;
 
-    .sail-page {
-      height: em(20);
-      width: em(20);
-      background: none;
-      border: em(3) solid;
-      margin: 0 em(6);
-      border-radius: 100%;
-      color: currentColor;
-      transition: background .25s;
+        &-previous {
+          right: 100%;
+          transform: translate(50%, -50%);
 
-      &:focus,
-      &:hover {
-        background: $m2;
-      }
+          &:not([disabled]):focus,
+          &:not([disabled]):hover {
+            transform:
+              translate(50%, -50%)
+              scale(1.15);
+          }
 
-      &-active {
-        background: currentColor;
+        }
 
-        &:focus,
-        &:hover {
-          background: currentColor;
+        &-next {
+          left: 100%;
+          transform: translate(-50%, -50%);
+
+          &:not([disabled]):focus,
+          &:not([disabled]):hover {
+            transform:
+              translate(-50%, -50%)
+              scale(1.15);
+          }
+
+        }
+
+        &[disabled] {
+          color: $m1;
         }
 
       }
 
+        .symbol-sail {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+    .sail-pages {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
+
+      .sail-page {
+        height: em(20);
+        width: em(20);
+        background: none;
+        border: em(3) solid;
+        margin: 0 em(6);
+        background: #fff;
+        border-radius: 50%;
+        color: currentColor;
+        transition: background .25s;
+
+        &:focus,
+        &:hover {
+          background: $m2;
+        }
+
+        &-active {
+          background: currentColor;
+
+          &:focus,
+          &:hover {
+            background: currentColor;
+          }
+
+        }
+
+      }
 
 }
 
@@ -456,43 +526,19 @@ $m2: #E8EAF6;
     top: 50%;
     left: 0;
     width: 100%;
-    padding: 0 em(20);
+    padding: 0 em(40);
     transform: translate(0, -50%);
-
-    @mixin media $large {
-      position: relative;
-      top: 0;
-      padding: 0;
-      transform: none;
-    }
 
     @media print {
       position: relative;
       padding: 0;
     }
 
-  }
-
-  .reason-bubble {
-    display: none;
-
-    @mixin media $mini {
-      position: absolute;
+    @mixin media $large {
+      position: relative;
       top: 0;
-      display: block;
-    }
-
-  }
-
-    .symbol-reason {
-      height: em(30);
-      width: em(30);
-    }
-
-  .reason-details {
-
-    @mixin media $mini {
-      padding-left: em(45);
+      padding: 0;
+      transform: none;
     }
 
   }
@@ -525,8 +571,8 @@ $m2: #E8EAF6;
         width: 100%;
         padding: em(4) em(10);
         text-align: center;
-        background: $m1;
-        color: $m2;
+        background: $m2;
+        color: $m1;
         content: attr(title);
       }
 
@@ -541,9 +587,9 @@ $m2: #E8EAF6;
         height: em(25);
         width: em(25);
         border: 0;
-        background: $m1;
-        border-radius: 100%;
-        color: $m2;
+        background: $m2;
+        border-radius: 50%;
+        color: $m1;
         transition:
           background .25s,
           box-shadow .25s,
@@ -551,9 +597,9 @@ $m2: #E8EAF6;
 
         &:focus,
         &:hover {
-          background: $m2;
-          box-shadow: 0 0 0 em(2) $m1;
-          color: $m1;
+          background: $m1;
+          box-shadow: 0 0 0 em(2) $m2;
+          color: $m2;
         }
 
       }
@@ -573,80 +619,5 @@ $m2: #E8EAF6;
       .lantern-next {
         transform: translate(calc(100% + em(5)), -50%);
       }
-
-}
-
-
-/* ================
-// Action Links
-// ============= */
-
-.mimo-theme {
-
-  .action-links {
-    @mixin list-reset;
-  }
-
-    .action-link-item {
-      display: inline-block;
-      margin-right: em(4);
-      margin-bottom: em(10);
-    }
-
-      .action-link {
-        display: inline-block;
-        padding: em(10) em(20);
-        font-weight: 700;
-        text-decoration: none;
-        border-radius: em(50);
-        transition:
-          background .25s,
-          box-shadow .25s,
-          color .25s;
-
-        @mixin media $medium {
-          display: inline-block;
-        }
-
-        &-github {
-          background: $m2;
-          color: $m1;
-
-          &:focus,
-          &:hover {
-            background: $m1;
-            box-shadow: inset 0 0 0 em(4) $m2;
-            color: $m2;
-          }
-
-        }
-
-        &-share {
-          background: $m1;
-          color: $m2;
-
-          &:focus,
-          &:hover {
-            background: $m2;
-            box-shadow: inset 0 0 0 em(4) $m1;
-            color: $m1;
-          }
-
-        }
-
-      }
-
-        .symbol-action {
-          display: inline-block;
-          vertical-align: middle;
-          height: em(26);
-          width: em(26);
-          margin-right: em(5);
-        }
-
-        .action-link-label {
-          display: inline-block;
-          vertical-align: middle;
-        }
 
 }

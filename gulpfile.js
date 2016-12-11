@@ -199,7 +199,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('watch', function() {
 
-	gulp.watch('src/pug/template.pug', ['pug']);
+  gulp.watch('src/pug/template.pug', ['pug']);
   gulp.watch('src/pug/**/*.pug', ['pug']);
   gulp.watch('src/postcss/**/*.css', ['postcss']);
   gulp.watch('src/js/**/*.js', ['js']);
