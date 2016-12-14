@@ -14,7 +14,8 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
-    svgSprite = require('gulp-svg-sprite');
+    svgSprite = require('gulp-svg-sprite'),
+    deploy = require('gulp-gh-pages');
 
 
 /* ================
@@ -32,7 +33,8 @@ gulp.task('pug', ['sprite'], function() {
       },
       pretty: true
     }))
-    .pipe(gulp.dest('./'))
+		.pipe(gulp.dest('./'))
+    .pipe(gulp.dest(site))
     .pipe(browserSync.stream({
       once: true
     }));
@@ -191,6 +193,24 @@ gulp.task('browser-sync', function() {
   });
 
 });
+
+
+/* ================
+// Deploy Task
+// ============= */
+
+gulp.task('deploy', [
+	'images',
+	'sprite',
+	'postcss',
+	'js',
+	'pug'
+], function () {
+
+	return gulp.src('./dist/**/*')
+    .pipe(deploy());
+
+})
 
 
 /* ================

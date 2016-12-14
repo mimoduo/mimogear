@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="mimo-theme" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mimogear</title>
+    <meta name="description" content="Mimogear is a dead simple static site generator and web development framework">
+    <link rel="stylesheet" href="./dist/css/site.css"><link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+  </head>
+  <body><a class="skip-link" href="#site-main">Skip to main content</a>
+    <figure class="site-sprite" style="display: none"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 32 32" id="arrow-back"><path d="M12.586 27.414l-10-10a2 2 0 0 1 0-2.828l10-10a2 2 0 1 1 2.828 2.828L8.828 14H28a2 2 0 1 1 0 4H8.828l6.586 6.586c.39.39.586.902.586 1.414s-.195 1.024-.586 1.414a2 2 0 0 1-2.828 0z"/></symbol><symbol viewBox="0 0 32 32" id="arrow-forward"><path d="M19.414 27.414l10-10a2 2 0 0 0 0-2.828l-10-10a2 2 0 1 0-2.828 2.828L23.172 14H4a2 2 0 1 0 0 4h19.172l-6.586 6.586c-.39.39-.586.902-.586 1.414s.195 1.024.586 1.414a2 2 0 0 0 2.828 0z"/></symbol><symbol viewBox="0 0 24 24" id="close"><path d="M18.984 6.422L13.406 12l5.578 5.578-1.406 1.406L12 13.406l-5.578 5.578-1.406-1.406L10.594 12 5.016 6.422l1.406-1.406L12 10.594l5.578-5.578z"/></symbol><symbol viewBox="0 0 380 80" id="logo"><title>Site</title><desc>Site logo</desc><text font-size="80" font-weight="700"><tspan x="0" y="50">Site</tspan></text></symbol><symbol viewBox="0 0 24 24" id="open"><path d="M18.984 12.984h-6v6h-1.969v-6h-6v-1.969h6v-6h1.969v6h6v1.969z"/></symbol></svg></figure>
+    <header class="site-header" role="banner">
+    </header>
+    <main class="site-main" id="site-main" role="main">
+      <div class="section">
+        <div class="compartment"><a class="site-logo" href="./"><span class="site-logo-label">mimogear</span></a>
+          <button class="drawer-trigger"></button>
+          <div class="drawer">
+            <nav class="main-nav">
+              <ol>
+                <li><a href="https://github.com/mimoduo/Mimogear" itemprop="url">View on Github</a></li>
+                <li><a href="https://github.com/mimoduo/Mimogear/tree/master/docs" itemprop="url">Documentation</a></li>
+              </ol>
+            </nav>
+          </div>
+          <h3>A Static Site Generator & Web Development Framework</h3>
+          <p class="lead">Mimogear was built from the ground up as a static site generator & a skeleton framework for pug:html, postcss:css, and javascript. By mixing in Gulp, popular task runner, <strong>Mimogear will automatically compile, distribute, and watch development assets</strong>.</p>
+          <ol class="action-links">
+            <li class="action-link-item"><a class="action-link action-link-github" href="https://github.com/mimoduo/Mimogear" target="_blank"><svg class="symbol symbol-action symbol-github" viewBox="0 0 32 32">
+<title>github</title>
+<path class="path1" d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path>
+</svg></a></li>
+            <li class="action-link-item"><a class="action-link" href="https://github.com/mimoduo/Mimogear/fork" target="_blank"><svg class="symbol symbol-action symbol-repo-forked" viewBox="0 0 24 32">
+<title>repo-forked</title>
+<path class="path1" d="M24 4c0-2.219-1.781-4-4-4s-4 1.781-4 4c0 1.469 0.813 2.781 2 3.469v3.313l-6 6.625-6-6.625v-3.313c1.188-0.688 2-1.969 2-3.469 0-2.219-1.781-4-4-4s-4 1.781-4 4c0 1.469 0.813 2.781 2 3.469v4.875l8 8.813v3.406c-1.188 0.688-2 1.969-2 3.469 0 2.219 1.781 4 4 4s4-1.781 4-4c0-1.469-0.813-2.781-2-3.469v-3.406l8-8.813v-4.875c1.188-0.688 2-1.969 2-3.469zM4 2.031c1.063 0 1.938 0.875 1.938 1.938s-0.875 1.938-1.938 1.938-1.938-0.875-1.938-1.938 0.875-1.938 1.938-1.938zM12 29.875c-1.063 0-1.938-0.875-1.938-1.938s0.875-1.938 1.938-1.938 1.938 0.875 1.938 1.938-0.875 1.938-1.938 1.938zM20 2.031c1.063 0 1.938 0.875 1.938 1.938s-0.875 1.938-1.938 1.938-1.938-0.875-1.938-1.938 0.875-1.938 1.938-1.938z"></path>
+</svg><span class="action-link-label">Fork</span></a></li>
+            <li class="action-link-item"><a class="action-link" href="https://github.com/mimoduo/Mimogear/stargazers" target="_blank"><svg class="symbol symbol-action symbol-star" viewBox="0 0 26 28">
+<title>star</title>
+<path class="path1" d="M26 10.109c0 0.281-0.203 0.547-0.406 0.75l-5.672 5.531 1.344 7.812c0.016 0.109 0.016 0.203 0.016 0.313 0 0.406-0.187 0.781-0.641 0.781-0.219 0-0.438-0.078-0.625-0.187l-7.016-3.687-7.016 3.687c-0.203 0.109-0.406 0.187-0.625 0.187-0.453 0-0.656-0.375-0.656-0.781 0-0.109 0.016-0.203 0.031-0.313l1.344-7.812-5.688-5.531c-0.187-0.203-0.391-0.469-0.391-0.75 0-0.469 0.484-0.656 0.875-0.719l7.844-1.141 3.516-7.109c0.141-0.297 0.406-0.641 0.766-0.641s0.625 0.344 0.766 0.641l3.516 7.109 7.844 1.141c0.375 0.063 0.875 0.25 0.875 0.719z"></path>
+</svg><span class="action-link-label">Star</span></a></li>
+            <li class="action-link-item"><a class="action-link" href="https://github.com/mimoduo/Mimogear/tree/master/docs" target="_blank"><svg class="symbol symbol-action symbol-docs" viewBox="0 0 24 24">
+<title>docs</title>
+<path class="path1" d="M17.016 9v-2.016h-10.031v2.016h10.031zM17.016 12.984v-1.969h-10.031v1.969h10.031zM14.016 17.016v-2.016h-7.031v2.016h7.031zM12 3c-0.563 0-0.984 0.422-0.984 0.984s0.422 1.031 0.984 1.031 0.984-0.469 0.984-1.031-0.422-0.984-0.984-0.984zM18.984 3c1.078 0 2.016 0.938 2.016 2.016v13.969c0 1.078-0.938 2.016-2.016 2.016h-13.969c-1.078 0-2.016-0.938-2.016-2.016v-13.969c0-1.078 0.938-2.016 2.016-2.016h4.172c0.422-1.172 1.5-2.016 2.813-2.016s2.391 0.844 2.813 2.016h4.172z"></path>
+</svg><span class="action-link-label">Docs</span></a></li>
+          </ol>
+        </div>
+      </div>
+      <div class="section">
+        <div class="compartment">
+          <h4>Give Mimogear a try with a few setup commands in your terminal:</h4><code>$ git <em>clone</em> https://github.com/mimoduo/Mimogear.git<br>
+            $ <em>cd</em> Mimogear<br>
+            $ npm install<br>
+            $ npm install gulp-cli -g<br>
+            $ gulp</code>
+          <h3><svg class="symbol symbol-plus" viewBox="0 0 24 28">
+<title>plus-circle</title>
+<path class="path1" d="M19 15v-2c0-0.547-0.453-1-1-1h-4v-4c0-0.547-0.453-1-1-1h-2c-0.547 0-1 0.453-1 1v4h-4c-0.547 0-1 0.453-1 1v2c0 0.547 0.453 1 1 1h4v4c0 0.547 0.453 1 1 1h2c0.547 0 1-0.453 1-1v-4h4c0.547 0 1-0.453 1-1zM24 14c0 6.625-5.375 12-12 12s-12-5.375-12-12 5.375-12 12-12 12 5.375 12 12z"></path>
+</svg><span>Mimogear has a few Javascript Goodies too:</span>
+          </h3>
+          <h4>Bundled Slideshow</h4>
+          <ol class="sail-slides">
+            <li>
+              <div class="reason">
+                <div class="reason-details">
+                  <h5>Extendable Postcss Framework</h5><span>A full skeleton CSS framework with a pluggable set of features</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="reason">
+                <div class="reason-details">
+                  <h5>Flexible Pug Framework</h5><span>A complete and customizable HTML template foundation</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="reason">
+                <div class="reason-details">
+                  <h5>Handy Javascript Modules</h5><span>One simple slideshow + one responsive lightbox</span>
+                </div>
+              </div>
+            </li>
+          </ol>
+          <h4>Bundled Lightbox</h4>
+          <div class="grid">
+            <div class="column column-big-6"><img class="lantern-light" src="./dist/images/super-couple.jpg" alt="A powerful gundam exia next to a cute yellow beetle" title="Don't mess with the best!"></div>
+            <div class="column column-big-6"><img class="lantern-light" src="./dist/images/port-clyde.jpg" alt="A symmetrical scene of a lamp between two beds at a b&amp;b at Port Clyde" title="Quite a charming room"></div>
+          </div>
+          <div class="lantern"></div>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer" role="contentinfo">
+    </footer>
+    <script src="./dist/js/site.js"></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-66664949-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+  </body>
+</html>
