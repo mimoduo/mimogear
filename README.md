@@ -16,7 +16,7 @@ After looking through all the cool static site generators out there, you may hav
 
 * Full asset compilation, distribution, and watch
 * Complete pug framework for generating html files
-* Clean skeleton postcss framework for quick style development
+* Clean skeleton postcss framework for quick css development
 * Thoroughly tested javascript components
 
 ##Installation
@@ -30,7 +30,7 @@ npm install gulp-cli -g
 gulp
 ```
 
-After that your project will open up in a browser window automatically and you're ready to get started in developing html/pug, css/postcss, and javascript. Head over to /src/ to see your shiny new development framework! If you're feeling stuck, check out [/docs/](https://github.com/mimoduo/Mimogear/tree/master/docs).
+After that your project will open up in a browser window automatically and you're ready to get started in developing html:pug, css:postcss, and javascript. Head over to /src/ to see your shiny new development framework! If you're feeling stuck, check out [/docs/](https://github.com/mimoduo/Mimogear/tree/master/docs).
 
 ##Share Your Sites Using Mimogear
 

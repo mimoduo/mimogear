@@ -15,10 +15,12 @@
   "keywords": [
     "mimogear",
     "mimoduo",
-    "responsive",
     "starter kit",
+    "static site generator",
     "framework",
-    "static site generator"
+    "gulp",
+		"pug",
+		"postcss"
   ],
   "devDependencies": {
     "autoprefixer": "^6.5.3",
