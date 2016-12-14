@@ -1,5 +1,7 @@
 #Mimogear
 
+[![Build Status](https://travis-ci.org/mimoduo/Mimogear.svg?branch=master)](https://travis-ci.org/mimoduo/Mimogear)
+
 > A dead simple static site generator and web development framework
 
 ##What is Mimogear?
