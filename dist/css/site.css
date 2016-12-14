@@ -896,7 +896,7 @@ template {
 .mimo-theme .section:first-child {
   padding-top: 8vh;
   padding-bottom: 8vh;
-  background: #E0F2F1;
+  background-color: #E0F2F1;
 }
 
 @media print {
@@ -950,7 +950,7 @@ template {
   position: absolute;
   top: 0;
   left: 0;
-  background: #009688;
+  background-color: #009688;
   border: 0.125em solid #009688;
   border-radius: 50%;
   color: #E0F2F1;
@@ -977,7 +977,7 @@ template {
 
 .mimo-theme .drawer-trigger:focus,
     .mimo-theme .drawer-trigger:hover {
-  background: #E0F2F1;
+  background-color: #E0F2F1;
   border-color: #009688;
   color: #009688;
 }
@@ -987,7 +987,7 @@ template {
   left: -1.25em;
   margin-top: 4.375em;
   padding: 1.875em 0.625em;
-  background: #009688;
+  background-color: #009688;
   border-radius: 0 0.625em 0.625em 0;
   color: #E0F2F1;
 }
@@ -1038,7 +1038,7 @@ template {
 
 .mimo-theme .main-nav a:focus,
       .mimo-theme .main-nav a:hover {
-  background: #009688;
+  background-color: #009688;
   box-shadow: inset 0 0 0 0.25em #E0F2F1;
   color: #E0F2F1;
 }
@@ -1129,7 +1129,7 @@ template {
   padding: 0.625em 1.25em;
   font-weight: 700;
   text-decoration: none;
-  background: #009688;
+  background-color: #009688;
   color: #E0F2F1;
   border-radius: 3.125em;
   -webkit-transition: background .25s,
@@ -1150,7 +1150,7 @@ template {
 
 .mimo-theme .action-link:focus,
         .mimo-theme .action-link:hover {
-  background: #E0F2F1;
+  background-color: #E0F2F1;
   box-shadow: inset 0 0 0 0.25em #009688;
   color: #009688;
 }
@@ -1181,7 +1181,7 @@ template {
   overflow-x: auto;
   margin-bottom: 2.5em;
   padding: 1.25em;
-  background: #E0F2F1;
+  background-color: #E0F2F1;
   border-radius: 0.625em;
   color: #009688;
 }
@@ -1205,7 +1205,7 @@ template {
   height: 13.75em;
   margin-bottom: 1.25em;
   padding: 3.125em 1.25em;
-  background: #E0F2F1;
+  background-color: #E0F2F1;
   border-radius: 1.25em;
   color: #009688;
 }
@@ -1240,7 +1240,7 @@ template {
   border: 0;
   height: 1.875em;
   width: 1.875em;
-  background: #fff;
+  background-color: #fff;
   border-radius: 50%;
   color: inherit;
   -webkit-transition: opacity .25s,
@@ -1310,10 +1310,9 @@ template {
 .mimo-theme .sail-page {
   height: 1.25em;
   width: 1.25em;
-  background: none;
   border: 0.1875em solid;
   margin: 0 0.375em;
-  background: #fff;
+  background-color: #fff;
   border-radius: 50%;
   color: currentColor;
   -webkit-transition: background .25s;
@@ -1322,16 +1321,16 @@ template {
 
 .mimo-theme .sail-page:focus,
         .mimo-theme .sail-page:hover {
-  background: #009688;
+  background-color: #009688;
 }
 
 .mimo-theme .sail-page-active {
-  background: currentColor;
+  background-color: currentColor;
 }
 
 .mimo-theme .sail-page-active:focus,
           .mimo-theme .sail-page-active:hover {
-  background: currentColor;
+  background-color: currentColor;
 }
 
 /* ================
@@ -1378,7 +1377,7 @@ template {
 .mimo-theme .lantern {
   padding: 2.5em;
   padding-bottom: 3.75em;
-  background: rgba(255, 255, 255, .75);
+  background-color: rgba(255, 255, 255, .75);
 }
 
 .mimo-theme .lantern-content:after {
@@ -1388,7 +1387,7 @@ template {
   width: 100%;
   padding: 0.25em 0.625em;
   text-align: center;
-  background: #009688;
+  background-color: #009688;
   color: #E0F2F1;
   content: attr(title);
 }
@@ -1402,7 +1401,7 @@ template {
   height: 1.5625em;
   width: 1.5625em;
   border: 0;
-  background: #009688;
+  background-color: #009688;
   border-radius: 50%;
   color: #E0F2F1;
   -webkit-transition: background .25s,
@@ -1416,7 +1415,7 @@ template {
 
 .mimo-theme .lantern-control:focus,
         .mimo-theme .lantern-control:hover {
-  background: #E0F2F1;
+  background-color: #E0F2F1;
   box-shadow: 0 0 0 0.125em #009688;
   color: #009688;
 }

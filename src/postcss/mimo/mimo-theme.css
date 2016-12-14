@@ -129,7 +129,7 @@ $m2: #009688;
     &:first-child {
       padding-top: 8vh;
       padding-bottom: 8vh;
-      background: $m1;
+      background-color: $m1;
 
       @media print {
         padding-top: em(60);
@@ -185,7 +185,7 @@ $m2: #009688;
     position: absolute;
     top: 0;
     left: 0;
-    background: $m2;
+    background-color: $m2;
     border: em(2) solid $m2;
     border-radius: 50%;
     color: $m1;
@@ -205,7 +205,7 @@ $m2: #009688;
 
     &:focus,
     &:hover {
-      background: $m1;
+      background-color: $m1;
       border-color: $m2;
       color: $m2;
     }
@@ -217,7 +217,7 @@ $m2: #009688;
     left: em(-20);
     margin-top: em(70);
     padding: em(30) em(10);
-    background: $m2;
+    background-color: $m2;
     border-radius: 0 em(10) em(10) 0;
     color: $m1;
 
@@ -267,7 +267,7 @@ $m2: #009688;
 
       &:focus,
       &:hover {
-        background: $m2;
+        background-color: $m2;
         box-shadow: inset 0 0 0 em(4) $m1;
         color: $m1;
       }
@@ -326,7 +326,7 @@ $m2: #009688;
         padding: em(10) em(20);
         font-weight: 700;
         text-decoration: none;
-        background: $m2;
+        background-color: $m2;
         color: $m1;
         border-radius: em(50);
         transition:
@@ -340,7 +340,7 @@ $m2: #009688;
 
         &:focus,
         &:hover {
-          background: $m1;
+          background-color: $m1;
           box-shadow: inset 0 0 0 em(4) $m2;
           color: $m2;
         }
@@ -378,7 +378,7 @@ $m2: #009688;
     overflow-x: auto;
     margin-bottom: em(40);
     padding: em(20);
-    background: $m1;
+    background-color: $m1;
     border-radius: em(10);
     color: $m2;
 
@@ -405,7 +405,7 @@ $m2: #009688;
       height: em(220);
       margin-bottom: em(20);
       padding: em(50) em(20);
-      background: $m1;
+      background-color: $m1;
       border-radius: em(20);
       color: $m2;
 
@@ -435,7 +435,7 @@ $m2: #009688;
         border: 0;
         height: em(30);
         width: em(30);
-        background: #fff;
+        background-color: #fff;
         border-radius: 50%;
         color: inherit;
         transition:
@@ -491,25 +491,24 @@ $m2: #009688;
       .sail-page {
         height: em(20);
         width: em(20);
-        background: none;
         border: em(3) solid;
         margin: 0 em(6);
-        background: #fff;
+        background-color: #fff;
         border-radius: 50%;
         color: currentColor;
         transition: background .25s;
 
         &:focus,
         &:hover {
-          background: $m2;
+          background-color: $m2;
         }
 
         &-active {
-          background: currentColor;
+          background-color: currentColor;
 
           &:focus,
           &:hover {
-            background: currentColor;
+            background-color: currentColor;
           }
 
         }
@@ -563,7 +562,7 @@ $m2: #009688;
   .lantern {
     padding: em(40);
     padding-bottom: em(60);
-    background: rgba(255, 255, 255, .75);
+    background-color: rgba(255, 255, 255, .75);
   }
 
     .lantern-content {
@@ -575,7 +574,7 @@ $m2: #009688;
         width: 100%;
         padding: em(4) em(10);
         text-align: center;
-        background: $m2;
+        background-color: $m2;
         color: $m1;
         content: attr(title);
       }
@@ -591,7 +590,7 @@ $m2: #009688;
         height: em(25);
         width: em(25);
         border: 0;
-        background: $m2;
+        background-color: $m2;
         border-radius: 50%;
         color: $m1;
         transition:
@@ -601,7 +600,7 @@ $m2: #009688;
 
         &:focus,
         &:hover {
-          background: $m1;
+          background-color: $m1;
           box-shadow: 0 0 0 em(2) $m2;
           color: $m2;
         }
