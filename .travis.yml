@@ -8,4 +8,8 @@ install:
   - npm install -g gulp
   - npm install
 script:
-  - gulp
+  - gulp images
+  - gulp sprite
+  - gulp postcss
+  - gulp js
+  - gulp pug
