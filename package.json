@@ -19,8 +19,8 @@
     "static site generator",
     "framework",
     "gulp",
-		"pug",
-		"postcss"
+    "pug",
+    "postcss"
   ],
   "devDependencies": {
     "autoprefixer": "^6.5.3",

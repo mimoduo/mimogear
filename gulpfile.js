@@ -33,7 +33,7 @@ gulp.task('pug', ['sprite'], function() {
       },
       pretty: true
     }))
-		.pipe(gulp.dest('./'))
+    .pipe(gulp.dest('./'))
     .pipe(gulp.dest(site))
     .pipe(browserSync.stream({
       once: true
@@ -200,14 +200,14 @@ gulp.task('browser-sync', function() {
 // ============= */
 
 gulp.task('deploy', [
-	'images',
-	'sprite',
-	'postcss',
-	'js',
-	'pug'
+  'images',
+  'sprite',
+  'postcss',
+  'js',
+  'pug'
 ], function () {
 
-	return gulp.src('./dist/**/*')
+  return gulp.src('./dist/**/*')
     .pipe(deploy());
 
 })
