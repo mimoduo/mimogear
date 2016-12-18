@@ -31,7 +31,8 @@ gulp.task('pug', ['sprite'], function() {
       locals: {
         siteTitle: packageJSON.name,
         siteDescription: packageJSON.description,
-        siteLinks: configuration.links
+        siteLinks: configuration.links,
+        base: util.env.base
       },
       pretty: true
     }))
