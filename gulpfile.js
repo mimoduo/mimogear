@@ -7,6 +7,8 @@ var gulp = require('gulp'),
     packageJSON = require('./package.json'),
     configuration = require('./configuration.json'),
     browserSync = require('browser-sync').create(),
+    util = require('gulp-util'),
+    gulpif = require('gulp-if'),
     pug = require('gulp-pug'),
     postcss = require('gulp-postcss'),
     cssnano = require('gulp-cssnano'),
@@ -34,7 +36,7 @@ gulp.task('pug', ['sprite'], function() {
       pretty: true
     }))
     .pipe(gulp.dest('./'))
-    .pipe(gulp.dest(site))
+    .pipe(gulpif(util.env.production, gulp.dest(site)))
     .pipe(browserSync.stream({
       once: true
     }));
@@ -91,12 +93,12 @@ gulp.task('postcss', function() {
     ]))
     .pipe(gulp.dest(site + 'css'))
     .pipe(browserSync.stream())
-    .pipe(cssnano())
-    .pipe(rename(function(path) {
+    .pipe(gulpif(util.env.production, cssnano()))
+    .pipe(gulpif(util.env.production, rename(function(path) {
       path.basename += '.min';
-    }))
-    .pipe(gulp.dest(site + 'css'))
-    .pipe(browserSync.stream());
+     })))
+    .pipe(gulpif(util.env.production, gulp.dest(site + 'css')))
+    .pipe(gulpif(util.env.production, browserSync.stream()));
 
 });
 
@@ -115,14 +117,14 @@ gulp.task('js', function() {
     .pipe(concat('site.js'))
     .pipe(gulp.dest(site + 'js'))
     .pipe(browserSync.stream())
-    .pipe(uglify({
+    .pipe(gulpif(util.env.production, uglify({
       mangle: false
-    }))
-    .pipe(rename(function(path) {
+    })))
+    .pipe(gulpif(util.env.production, rename(function(path) {
       path.basename += '.min';
-    }))
-    .pipe(gulp.dest(site + 'js'))
-    .pipe(browserSync.stream());
+    })))
+    .pipe(gulpif(util.env.production, gulp.dest(site + 'js')))
+    .pipe(gulpif(util.env.production, browserSync.stream()));
 
 });
 
