@@ -4,20 +4,33 @@ Mimogear uses gulp, a popular task runner. All the work for compiling stylesheet
 
 ##Running Gulp
 
-Once you're all [setup](https://github.com/mimoduo/Mimogear/tree/master/docs), there is the `gulp` command to get you started. This command will compile all files into the /dist/ folder, open a new browser window with your site, and begin watching the files within the /src/ folder. In other words, the ultimate static site generator command.
+Once you're all [setup](https://github.com/mimoduo/Mimogear/tree/master/docs), there's a default gulp task to get your started:
 
 ```sh
 gulp
 ```
 
+**This will automatically open your browser to your site, compile all of your development assets within /src/, and watch for any file changes in the source /src/ folder.**
+
+##Advanced Gulp
+
+There's an advanced gulp task that will minify assets to ready them for production. Simply pass in the `--production` flag to set an environment variable for gulp to use:
+
+```sh
+gulp --production
+```
+
 ##Specific Gulp Commands
 
-Sometimes you may want to build only a particular set of files or watch without building. In that case, there are several commands you can run.
+Sometimes you may want to build only a particular set of files or watch without building. In that case, there are several commands you can run. Tasks with `--production` towards the end indicate that the task will run minifying scripts.
 
 ```sh
 gulp pug
+gulp pug --production
 gulp postcss
+gulp postcss --production
 gulp js
+gulp js --production
 gulp images
 gulp sprite
 gulp watch
@@ -32,12 +45,15 @@ If you'd like to modify some of the pre-existing tasks in Mimogear, check out th
 * [**gulp**](https://github.com/gulpjs/gulp) / [official site](http://gulpjs.com/)
 * [**gulp-concat**](https://github.com/contra/gulp-concat)
 * [**gulp-cssnano**](https://github.com/ben-eb/gulp-cssnano) / [official site](http://cssnano.co/)
+* [**gulp-gh-pages**](https://github.com/shinnn/gulp-gh-pages)
+* [**gulp-if**](https://github.com/robrich/gulp-if)
 * [**gulp-imagemin**](https://github.com/sindresorhus/gulp-imagemin)
 * [**gulp-postcss**](https://github.com/postcss/gulp-postcss) / [official site](http://postcss.org/)
 * [**gulp-pug**](https://github.com/jamen/gulp-pug)
 * [**gulp-rename**](https://github.com/hparra/gulp-rename)
 * [**gulp-svg-sprite**](https://github.com/jkphl/gulp-svg-sprite)
 * [**gulp-uglify**](https://github.com/terinjokes/gulp-uglify)
+* [**gulp-util**](https://github.com/gulpjs/gulp-util)
 * [**postcss-discard-empty**](https://github.com/ben-eb/postcss-discard-empty)
 * [**postcss-easy-import**](https://github.com/TrySound/postcss-easy-import)
 * [**postcss-functions**](https://github.com/andyjansson/postcss-functions)

@@ -28,6 +28,14 @@ gulp
 
 **This will automatically open your browser to your site, compile all of your development assets within /src/, and watch for any file changes in the source /src/ folder.**
 
+##Advanced Gulp
+
+There's an advanced gulp task that will minify assets to ready them for production. Simply pass in the `--production` flag to set an environment variable for gulp to use:
+
+```sh
+gulp --production
+```
+
 ##Beginning Development
 
 Once you're all set with getting `gulp` to make its first big _gulp_. Either head over to the /src/ folder if you're getting jittery reading all this and start cracking away at development, or check out Mimogear's /src/ documentation using the list below:
