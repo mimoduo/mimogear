@@ -19,6 +19,10 @@ var gulp = require('gulp'),
     svgSprite = require('gulp-svg-sprite'),
     deploy = require('gulp-gh-pages');
 
+if (util.env.base == null) {
+  var files = "dist/"
+}
+
 
 /* ================
 // Compile Pug
@@ -32,7 +36,7 @@ gulp.task('pug', ['sprite'], function() {
         siteTitle: packageJSON.name,
         siteDescription: packageJSON.description,
         siteLinks: configuration.links,
-        base: util.env.base
+        base: files
       },
       pretty: true
     }))
