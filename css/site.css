@@ -933,13 +933,43 @@ template {
   }
 }
 
+.mimo-theme .site-logo .symbol-gear {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0.3125rem;
+  font-size: 75%;
+  -webkit-animation: spin 10s infinite linear;
+  animation: spin 10s infinite linear;
+  fill: #009688;
+}
+
 .mimo-theme .site-logo-label {
   position: relative;
   clip: auto;
   height: auto;
   width: auto;
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.3125em;
   text-transform: capitalize;
+}
+
+@-webkit-keyframes spin {
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+
+}
+
+@keyframes spin {
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+
 }
 
 /* ================
@@ -1139,13 +1169,6 @@ template {
           background .25s,
           box-shadow .25s,
           color .25s;
-}
-
-@media screen and (min-width: 600px) {
-
-  .mimo-theme .action-link {
-    display: inline-block;
-  }
 }
 
 .mimo-theme .action-link:focus,
@@ -1887,7 +1910,7 @@ nav li ol, menu li ol {
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 20;
+  z-index: 200;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity .25s,
