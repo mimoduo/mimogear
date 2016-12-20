@@ -164,13 +164,32 @@ $m2: #009688;
       line-height: 1.2;
     }
 
+    .symbol-gear {
+      display: inline-block;
+      vertical-align: middle;
+      padding: rem(5);
+      font-size: 75%;
+      animation: spin 10s infinite linear;
+      fill: $m2;
+    }
+
   }
 
     .site-logo-label {
       @mixin reset-visually-hidden;
-      display: block;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: em(5);
       text-transform: capitalize;
     }
+
+}
+
+@keyframes spin {
+
+  100% {
+    transform: rotate(360deg);
+  }
 
 }
 
@@ -333,10 +352,6 @@ $m2: #009688;
           background .25s,
           box-shadow .25s,
           color .25s;
-
-        @mixin media $medium {
-          display: inline-block;
-        }
 
         &:focus,
         &:hover {

@@ -25,7 +25,7 @@ menu {
         position: absolute;
         top: 100%;
         left: 0;
-        z-index: 20;
+        z-index: 200;
         opacity: 0;
         visibility: hidden;
         transition:
