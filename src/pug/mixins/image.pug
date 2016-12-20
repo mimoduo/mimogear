@@ -1,0 +1,12 @@
+//- ================
+//- Image Mixin
+//- ================
+
+mixin image(file, className)
+  if className
+    img(
+      src=base + "images/" + file
+      class=className
+    )
+  else
+    img(src=base + "images/" + file)
