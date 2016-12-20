@@ -2,11 +2,15 @@
 //- Image Mixin
 //- ================
 
-mixin image(file, className)
+mixin image(file, alt, className)
   if className
     img(
       src=base + "images/" + file
+      alt=alt
       class=className
     )
   else
-    img(src=base + "images/" + file)
+    img(
+      src=base + "images/" + file
+      alt=alt
+    )
