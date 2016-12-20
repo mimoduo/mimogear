@@ -20,7 +20,9 @@ var gulp = require('gulp'),
     deploy = require('gulp-gh-pages');
 
 if (util.env.base == null) {
-  var files = "./dist/"
+  var files = "./dist/";
+} else {
+  var files = util.env.base;
 }
 
 
