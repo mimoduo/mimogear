@@ -35,7 +35,7 @@ if (options.base) {
   files = './';
 }
 
-if (options.env) {
+if (options.production) {
   production = true;
 }
 
