@@ -78,6 +78,23 @@ $s2: #424242;
 
 
 /* ================
+// Resets
+// ============= */
+
+.mimo-theme {
+
+  .drawer-trigger {
+    display: none;
+  }
+
+  .site-logo {
+    display: none;
+  }
+
+}
+
+
+/* ================
 // Header
 // ============= */
 
@@ -97,44 +114,6 @@ $s2: #424242;
 
 
 /* ================
-// Drawer
-// ============= */
-
-.mimo-theme {
-
-  .drawer-trigger {
-    display: none;
-  }
-
-}
-
-
-/* ================
-// Main
-// ============= */
-
-.mimo-theme {
-
-  .site-main {
-
-    &:before {
-      display: block;
-      height: em(2);
-      content: '';
-      background:
-        radial-gradient(
-          ellipse at center,
-            $m4,
-            $m3 100%
-        );
-    }
-
-  }
-
-}
-
-
-/* ================
 // Actions
 // ============= */
 
@@ -146,16 +125,29 @@ $s2: #424242;
 
     .action-link {
       display: inline-block;
-      border-left: 1px solid $s1;
       padding: em(16, 14) em(14, 14) em(15, 14);
       font-size: em(14);
       text-decoration: none;
-      box-shadow: em(1, 14) 0 0 0 $s1;
       color: inherit;
       transition: background .25s;
 
       @mixin media $small {
         padding: em(15, 14) em(20, 14);
+      }
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 1px;
+        content: '';
+        background:
+          linear-gradient(
+            to bottom,
+              $m4,
+              $m3 100%
+          );
       }
 
       &:focus,
@@ -187,13 +179,60 @@ $s2: #424242;
 
 
 /* ================
-// Logo
+// Main
 // ============= */
 
 .mimo-theme {
 
-  .site-logo {
-    display: none;
+  .site-main {
+
+    &:before {
+      display: block;
+      height: em(1);
+      content: '';
+      background:
+        radial-gradient(
+          ellipse at center,
+            $m4,
+            $m3 100%
+        );
+    }
+
+  }
+
+}
+
+
+/* ================
+// Section
+// ============= */
+
+.mimo-theme {
+
+  .section {
+
+    &-intro {
+      overflow: hidden;
+      padding: 14vmin em(10) 10vmin;
+      text-align: center;
+    }
+
+    &-terminal {
+
+      .compartment {
+        max-width: rem(640);
+        padding: em(10);
+        background:
+          linear-gradient(
+            45deg,
+              $m1,
+              $m2 100%
+          );
+        border-radius: em(4);
+      }
+
+    }
+
   }
 
 }
@@ -243,7 +282,7 @@ $s2: #424242;
           rotate(-20deg)
           skewX(-80deg);
       }
-      
+
     }
 
     .site-flare {
@@ -321,41 +360,6 @@ $s2: #424242;
 
 
 /* ================
-// Section
-// ============= */
-
-.mimo-theme {
-
-  .section {
-
-    &-intro {
-      overflow: hidden;
-      padding: 14vh em(10);
-      text-align: center;
-    }
-
-    &-terminal {
-
-      .compartment {
-        max-width: rem(700);
-        padding: em(10);
-        background:
-          linear-gradient(
-            45deg,
-              $m1,
-              $m2 100%
-          );
-        border-radius: em(4);
-      }
-
-    }
-
-  }
-
-}
-
-
-/* ================
 // Key Tech
 // ============= */
 
@@ -405,15 +409,6 @@ $s2: #424242;
       }
 
       &:nth-child(4) {
-        border-bottom-color: $m3;
-
-        .symbol-gear {
-          fill: $m3;
-        }
-
-      }
-
-      &:nth-child(5) {
         border-bottom-color: $m4;
 
         .symbol-gear {
@@ -448,5 +443,13 @@ $s2: #424242;
       overflow: hidden;
       overflow-x: auto;
     }
+
+      .code {
+        display: block;
+        border: em(1) solid $s2;
+        border-top-width: em(10);
+        border-radius: em(4);
+        padding: em(10);
+      }
 
 }

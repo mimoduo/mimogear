@@ -2,27 +2,41 @@
 // Required Plugins
 // ============= */
 
-var site = 'dist/';
 var gulp = require('gulp'),
     packageJSON = require('./package.json'),
     configuration = require('./configuration.json'),
     browserSync = require('browser-sync').create(),
+    minimist = require('minimist'),
     util = require('gulp-util'),
     gulpif = require('gulp-if'),
     pug = require('gulp-pug'),
     postcss = require('gulp-postcss'),
     cssnano = require('gulp-cssnano'),
-    rename = require('gulp-rename'),
+    extReplace = require('gulp-ext-replace'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
     svgSprite = require('gulp-svg-sprite'),
     deploy = require('gulp-gh-pages');
 
-if (util.env.base == null) {
-  var files = "./dist/";
-} else {
-  var files = util.env.base;
+
+/* ================
+// Setup Environment
+// ============= */
+
+var site = 'dist/';
+
+var options = minimist(process.argv.slice(2));
+
+var files = './dist/',
+    production = false;
+
+if (options.base) {
+  files = './';
+}
+
+if (options.env) {
+  production = true;
 }
 
 
@@ -43,7 +57,7 @@ gulp.task('pug', ['sprite'], function() {
       pretty: true
     }))
     .pipe(gulp.dest('./'))
-    .pipe(gulpif(util.env.production, gulp.dest(site)))
+    .pipe(gulpif(production, gulp.dest(site)))
     .pipe(browserSync.stream({
       once: true
     }));
@@ -100,12 +114,10 @@ gulp.task('postcss', function() {
     ]))
     .pipe(gulp.dest(site + 'css'))
     .pipe(browserSync.stream())
-    .pipe(gulpif(util.env.production, cssnano()))
-    .pipe(gulpif(util.env.production, rename(function(path) {
-      path.basename += '.min';
-     })))
-    .pipe(gulpif(util.env.production, gulp.dest(site + 'css')))
-    .pipe(gulpif(util.env.production, browserSync.stream()));
+    .pipe(gulpif(production, cssnano()))
+    .pipe(gulpif(production, extReplace('.min.css')))
+    .pipe(gulpif(production, gulp.dest(site + 'css')))
+    .pipe(gulpif(production, browserSync.stream()));
 
 });
 
@@ -124,14 +136,12 @@ gulp.task('js', function() {
     .pipe(concat('site.js'))
     .pipe(gulp.dest(site + 'js'))
     .pipe(browserSync.stream())
-    .pipe(gulpif(util.env.production, uglify({
+    .pipe(gulpif(production, uglify({
       mangle: false
     })))
-    .pipe(gulpif(util.env.production, rename(function(path) {
-      path.basename += '.min';
-    })))
-    .pipe(gulpif(util.env.production, gulp.dest(site + 'js')))
-    .pipe(gulpif(util.env.production, browserSync.stream()));
+    .pipe(gulpif(production, extReplace('.min.js')))
+    .pipe(gulpif(production, gulp.dest(site + 'js')))
+    .pipe(gulpif(production, browserSync.stream()));
 
 });
 

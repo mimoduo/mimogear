@@ -11,7 +11,7 @@ before_script:
   - git config --global user.email "mimoduo@gmail.com"
   - git config --global user.name "Travis-CI"
 script:
-  - gulp deploy --base="./" --production
+  - gulp deploy --base --production
 env:
   global:
     - secure: KG5eoE94gXAGrVXlCq2cR3aZdqZnGnAmSG/2dss+TF+mxyPHJN5h6uALusZCZUbz0rzVbR8HrQId4BU1OJY6CtyV8VerTAEje3ZC2vCyGCRN/BtXW6EQQNtbplxGAPuEd9Ji7col23KfI/fj2lrWz0SMT6d+h46xRhqWHRlRO9/yNpMOAo2SdqoOvaghuPgaNKwJu1uCFxHi/aQiZckoE89wF+AFhLm5uroW9mGx9GVn8ZE2Sm3F+ISE575hWgEbhXgNG9WcfaFku7t6PzAdHEu3WDLwkq2guQdAWPRDdkfwyj+b3AokDjrI6ft4Is08oorbTSdzbToz44uVHSd6Z+EQvHW3xZ0dSOTGpqe6WNQ2ln2j+y5rVg02mCvZHNvQcrhLS2VA4yHY4EnvDNZsEtEUaE7YP8WhsOUGwGn5oVaNRuUb5nQsTWAEoYlx+1NPtAaFf5IiAgXfX4S102GKA2grMeaVXcDyTtT8bQ+BG+lI3SS0qI76gQ/LA0sHauYde04sjA8EewFbD/xe0nSA46dMtfCj1pqP56xDRR5wChMvB0Osdoy34CHMv3ILFMqIenRkn/65Im1sphSK52ln+Xme25GC+fdcLek/kuWHbgidYQtw7LySDDwnNLQD5xk34LkfBNegRHMyQgFllaYHZHjs/cJC9h72zKBnArJrZDQ=
