@@ -1,3 +1,5 @@
+![Mimogear logo of a flowering gear and two wings](http://image.prntscr.com/image/0627c9a187134b38a1afff6fd9cb30c7.png)
+
 #Mimogear
 
 [![Build Status](https://travis-ci.org/mimoduo/Mimogear.svg?branch=master)](https://travis-ci.org/mimoduo/Mimogear)

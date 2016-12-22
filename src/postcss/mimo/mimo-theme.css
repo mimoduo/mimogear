@@ -2,8 +2,13 @@
 // Variables
 // ============= */
 
-$m1: #E0F2F1;
-$m2: #009688;
+$m1: #0277BD;
+$m2: #64FFDA;
+$m3: #FFFF00;
+$m4: #F57F17;
+
+$s1: #E0E0E0;
+$s2: #424242;
 
 
 /* ================
@@ -11,62 +16,38 @@ $m2: #009688;
 // ============= */
 
 .mimo-theme {
-  font-family: 'Poppins';
 
   body {
-    line-height: nu(28);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
   }
 
   h2,
-  h4,
-  h5 {
+  h3 {
+    font-weight: 400;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 15vmin;
     font-weight: 700;
   }
 
   h2 {
-    display: inline-block;
-    margin: 0;
-    padding-bottom: em(6);
-    font-size: em(24);
-
-    @mixin media $tiny {
-      font-size: em(34);
-    }
-
+    margin: 0 0 3vmin;
+    font-size: 6.85vmin;
   }
 
   h3 {
-    font-size: em(20);
-
-    @mixin media $tiny {
-      font-size: em(28);
-    }
-
-    @mixin media $aldnoah {
-      font-size: em(32);
-    }
-  }
-
-  h4 {
-    margin: 0 0 rem(10);
-    font-size: em(20);
-
-    @mixin media $aldnoah {
-      font-size: em(26);
-    }
-
-  }
-
-  h5 {
-    font-size: em(16);
-    margin: 0;
+    margin-top: 0;
+    font-size: 4vmin;
   }
 
   .lead {
-    margin-bottom: rem(30);
+    letter-spacing: em(1);
 
-    @mixin media $tiny {
-      font-size: em(20);
+    @mixin media $small {
+      letter-spacing: em(1.25);
     }
 
   }
@@ -75,36 +56,20 @@ $m2: #009688;
 
 
 /* ================
-// HTML
-// ============= */
-
-.mimo-theme {
-
-  a {
-    color: inherit;
-  }
-
-  p {
-    margin: rem(10) 0;
-  }
-
-}
-
-
-/* ================
-// Icons
+// Symbols
 // ============= */
 
 .mimo-theme {
 
   .symbol {
+    display: inline-block;
+    vertical-align: middle;
     height: em(20);
     width: em(20);
     fill: currentColor;
 
-    &-plus {
-      vertical-align: middle;
-      margin-right: rem(10);
+    &-logo {
+      display: none;
     }
 
   }
@@ -113,82 +78,19 @@ $m2: #009688;
 
 
 /* ================
-// Section
+// Header
 // ============= */
 
 .mimo-theme {
 
-  .section {
-    color: $m2;
+  .site-header {
+    border-top: 1px solid $s1;
+    text-align: center;
 
-    @mixin media $aldnoah {
-      padding-top: em(60);
-      padding-bottom: em(60);
+    &:after {
+      @mixin clearfix;
     }
 
-    &:first-child {
-      padding-top: 8vh;
-      padding-bottom: 8vh;
-      background-color: $m1;
-
-      @media print {
-        padding-top: em(60);
-        padding-bottom: em(60);
-      }
-
-    }
-
-  }
-
-}
-
-
-/* ================
-// Logo
-// ============= */
-
-.mimo-theme {
-
-  .site-logo {
-    padding-left: rem(60);
-    font-size: em(30);
-    font-weight: 700;
-
-    @media print {
-      max-width: em(200);
-    }
-
-    @mixin media $aldnoah {
-      padding-left: 0;
-      font-size: em(80);
-      line-height: 1.2;
-    }
-
-    .symbol-gear {
-      display: inline-block;
-      vertical-align: middle;
-      padding: rem(5);
-      font-size: 75%;
-      animation: spin 10s infinite linear;
-      fill: $m2;
-    }
-
-  }
-
-    .site-logo-label {
-      @mixin reset-visually-hidden;
-      display: inline-block;
-      vertical-align: middle;
-      margin-left: em(5);
-      text-transform: capitalize;
-    }
-
-}
-
-@keyframes spin {
-
-  100% {
-    transform: rotate(360deg);
   }
 
 }
@@ -201,62 +103,30 @@ $m2: #009688;
 .mimo-theme {
 
   .drawer-trigger {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: $m2;
-    border: em(2) solid $m2;
-    border-radius: 50%;
-    color: $m1;
-    transition:
-      background .25s,
-      border-color .25s,
-      color .25s;
-
-    @mixin media $aldnoah {
-      display: none;
-    }
-
-    &:before,
-    &:after {
-      height: em(3);
-    }
-
-    &:focus,
-    &:hover {
-      background-color: $m1;
-      border-color: $m2;
-      color: $m2;
-    }
-
+    display: none;
   }
 
-  .drawer {
-    top: 0;
-    left: em(-20);
-    margin-top: em(70);
-    padding: em(30) em(10);
-    background-color: $m2;
-    border-radius: 0 em(10) em(10) 0;
-    color: $m1;
+}
 
-    @mixin media $aldnoah {
-      display: none;
-    }
+
+/* ================
+// Main
+// ============= */
+
+.mimo-theme {
+
+  .site-main {
 
     &:before {
-      display: inline-block;
-      font-size: em(22);
-      font-weight: 700;
-      line-height: em(24, 22);
-      margin-bottom: em(15, 22);
-      margin-left: em(10, 22);
-      content: "Included Drawer";
-
-      @mixin media $aldnoah {
-        display: none;
-      }
-
+      display: block;
+      height: em(2);
+      content: '';
+      background:
+        radial-gradient(
+          ellipse at center,
+            $m4,
+            $m3 100%
+        );
     }
 
   }
@@ -265,377 +135,318 @@ $m2: #009688;
 
 
 /* ================
-// Navigation
+// Actions
 // ============= */
 
 .mimo-theme {
 
-  .main-nav {
+  .actions {
+    text-align: center;
+  }
 
-    a {
-      display: block;
-      padding: em(4) em(10);
-      font-weight: 700;
+    .action-link {
+      display: inline-block;
+      border-left: 1px solid $s1;
+      padding: em(16, 14) em(14, 14) em(15, 14);
+      font-size: em(14);
       text-decoration: none;
-      border-radius: em(10);
+      box-shadow: em(1, 14) 0 0 0 $s1;
       color: inherit;
-      transition:
-        background .25s,
-        box-shadow .25s,
-        color .25s;
+      transition: background .25s;
+
+      @mixin media $small {
+        padding: em(15, 14) em(20, 14);
+      }
 
       &:focus,
       &:hover {
-        background-color: $m2;
-        box-shadow: inset 0 0 0 em(4) $m1;
-        color: $m1;
+        background: $s1;
       }
 
     }
 
-  }
+      .symbol-action {
 
-}
-
-
-/* ================
-// Grid
-// ============= */
-
-.mimo-theme {
-
-  .grid {
-    margin: 0 em(-20);
-  }
-
-    .column {
-      margin-bottom: em(20);
-      padding: 0 em(20);
-    }
-
-    @mixin media $big {
-
-      .column-big {
-        create-grid: 12;
-      }
-
-    }
-
-}
-
-
-/* ================
-// Action Links
-// ============= */
-
-.mimo-theme {
-
-  .action-links {
-    @mixin list-reset;
-  }
-
-    .action-link-item {
-      display: inline-block;
-      margin-right: em(4);
-      margin-bottom: em(10);
-    }
-
-      .action-link {
-        display: inline-block;
-        padding: em(10) em(20);
-        font-weight: 700;
-        text-decoration: none;
-        background-color: $m2;
-        color: $m1;
-        border-radius: em(50);
-        transition:
-          background .25s,
-          box-shadow .25s,
-          color .25s;
-
-        &:focus,
-        &:hover {
-          background-color: $m1;
-          box-shadow: inset 0 0 0 em(4) $m2;
-          color: $m2;
-        }
-
-        &-github {
-          padding: em(10) em(11);
+        @mixin media $small {
+          margin-right: em(5, 14);
         }
 
       }
 
-        .symbol-action {
+      .action-link-label {
+        display: none;
+
+        @mixin media $small {
           display: inline-block;
           vertical-align: middle;
-          height: em(26);
-          width: em(26);
         }
 
-        .action-link-label {
-          display: inline-block;
-          vertical-align: middle;
-          margin-left: em(5);
-        }
+      }
 
 }
 
 
 /* ================
-// Code
+// Logo
 // ============= */
 
 .mimo-theme {
 
-  code {
-    display: block;
-    overflow-x: auto;
-    margin-bottom: em(40);
-    padding: em(20);
-    background-color: $m1;
-    border-radius: em(10);
-    color: $m2;
-
-    @mixin media $aldnoah {
-      margin-bottom: em(60);
-    }
-
+  .site-logo {
+    display: none;
   }
 
 }
 
 
 /* ================
-// Slideshow
+// Flare
 // ============= */
 
 .mimo-theme {
 
-  .sail-slides {
-    margin-bottom: em(40);
+  .site-flag {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6vmin;
   }
 
-    .sail-slide {
-      height: em(220);
-      margin-bottom: em(20);
-      padding: em(50) em(20);
-      background-color: $m1;
-      border-radius: em(20);
-      color: $m2;
+    .site-lace {
+      flex: 1;
+      height: em(20);
+      border-radius: 50%;
 
-      @media print {
-        height: auto;
-        padding: em(10) 0;
+      &:first-child {
+        background:
+          linear-gradient(
+            -45deg,
+              $m1,
+              $m2 15%,
+              transparent 25%
+          );
+        transform-origin: right bottom;
+        transform:
+          rotate(20deg)
+          skewX(80deg);
       }
 
-      @mixin media $large {
-        height: auto;
-        padding-right: em(40);
-        padding-left: em(40);
+      &:last-child {
+        background:
+          linear-gradient(
+            45deg,
+              $m1,
+              $m2 15%,
+              transparent 25%
+          );
+        transform-origin: left bottom;
+        transform:
+          rotate(-20deg)
+          skewX(-80deg);
       }
-
+      
     }
 
-    .sail-controls {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 100%;
-    }
+    .site-flare {
+      z-index: 2;
+      height: 80px;
+      width: 80px;
+      margin: 0 auto;
+      background:
+        linear-gradient(
+          -25deg,
+            $m4,
+            $m3 100%
+        );
+      border-radius: 0;
+      transform: rotate(45deg);
 
-      .sail-control {
+      &:before,
+      &:after {
         position: absolute;
-        top: 0;
-        border: 0;
-        height: em(30);
-        width: em(30);
-        background-color: #fff;
-        border-radius: 50%;
-        color: inherit;
-        transition:
-          opacity .25s,
-          transform .25s;
-
-        &-previous {
-          right: 100%;
-          transform: translate(50%, -50%);
-
-          &:not([disabled]):focus,
-          &:not([disabled]):hover {
-            transform:
-              translate(50%, -50%)
-              scale(1.15);
-          }
-
-        }
-
-        &-next {
-          left: 100%;
-          transform: translate(-50%, -50%);
-
-          &:not([disabled]):focus,
-          &:not([disabled]):hover {
-            transform:
-              translate(-50%, -50%)
-              scale(1.15);
-          }
-
-        }
-
-        &[disabled] {
-          color: $m1;
-        }
-
+        top: 50%;
+        left: 50%;
+        height: 94%;
+        width: 94%;
+        content: "";
+        border-radius: 15%;
       }
 
-        .symbol-sail {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
-
-    .sail-pages {
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-      .sail-page {
-        height: em(20);
-        width: em(20);
-        border: em(3) solid;
-        margin: 0 em(6);
-        background-color: #fff;
-        border-radius: 50%;
-        color: currentColor;
-        transition: background .25s;
-
-        &:focus,
-        &:hover {
-          background-color: $m2;
-        }
-
-        &-active {
-          background-color: currentColor;
-
-          &:focus,
-          &:hover {
-            background-color: currentColor;
-          }
-
-        }
-
+      &:before {
+        background:
+          linear-gradient(
+            25deg,
+              $m1,
+              $m2 100%
+          );
+        transform:
+          translate(-50%, -50%)
+          rotate(-20deg);
       }
-
-}
-
-
-/* ================
-// Reasons
-// ============= */
-
-.mimo-theme {
-
-  .reason {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    padding: 0 em(40);
-    transform: translate(0, -50%);
-
-    @media print {
-      position: relative;
-      padding: 0;
-    }
-
-    @mixin media $large {
-      position: relative;
-      top: 0;
-      padding: 0;
-      transform: none;
-    }
-
-  }
-
-}
-
-
-/* ================
-// Lantern
-// ============= */
-
-.mimo-theme {
-
-  .lantern-light {
-    border-radius: em(20);
-  }
-
-  .lantern {
-    padding: em(40);
-    padding-bottom: em(60);
-    background-color: rgba(255, 255, 255, .75);
-  }
-
-    .lantern-content {
 
       &:after {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        padding: em(4) em(10);
-        text-align: center;
-        background-color: $m2;
-        color: $m1;
-        content: attr(title);
+        background:
+          radial-gradient(
+            ellipse at 50% 50%,
+              $m1,
+              $m2 em(20),
+              transparent em(20)
+          ),
+          linear-gradient(
+            25deg,
+              $m1,
+              $m2 100%
+          );
+        transform:
+          translate(-50%, -50%)
+          rotate(20deg);
       }
 
     }
 
-      .lantern-holder {
-        border: em(5) solid #fff;
-        border-radius: em(20);
+}
+
+
+/* ================
+// Site Name
+// ============= */
+
+.mimo-theme {
+
+  .site-link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+}
+
+
+/* ================
+// Section
+// ============= */
+
+.mimo-theme {
+
+  .section {
+
+    &-intro {
+      overflow: hidden;
+      padding: 14vh em(10);
+      text-align: center;
+    }
+
+    &-terminal {
+
+      .compartment {
+        max-width: rem(700);
+        padding: em(10);
+        background:
+          linear-gradient(
+            45deg,
+              $m1,
+              $m2 100%
+          );
+        border-radius: em(4);
       }
 
-      .lantern-control {
-        height: em(25);
-        width: em(25);
-        border: 0;
-        background-color: $m2;
-        border-radius: 50%;
-        color: $m1;
-        transition:
-          background .25s,
-          box-shadow .25s,
-          color .25s;
+    }
 
-        &:focus,
-        &:hover {
-          background-color: $m1;
-          box-shadow: 0 0 0 em(2) $m2;
-          color: $m2;
+  }
+
+}
+
+
+/* ================
+// Key Tech
+// ============= */
+
+.mimo-theme {
+
+  .key-tech {
+    max-width: em(100);
+    margin: 0 auto;
+    padding-left: 0;
+    text-align: left;
+    white-space: nowrap;
+    list-style: none;
+
+    @mixin media $small {
+      display: flex;
+      justify-content: center;
+      max-width: 100%;
+      text-align: center;
+    }
+
+  }
+
+    .key-tech-item {
+      border-bottom: 3px solid;
+      padding: em(10) 0;
+
+      @mixin media $small {
+        padding: 0 em(18) em(10);
+      }
+
+      &:nth-child(2) {
+        border-bottom-color: $m1;
+
+        .symbol-gear {
+          fill: $m1;
         }
 
       }
 
-        .symbol-lantern {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          display: block;
-          transform: translate(-50%, -50%);
+      &:nth-child(3) {
+        border-bottom-color: $m2;
+
+        .symbol-gear {
+          fill: $m2;
         }
 
-      .lantern-previous {
-        transform: translate(calc(-100% - em(5)), -50%);
       }
 
-      .lantern-next {
-        transform: translate(calc(100% + em(5)), -50%);
+      &:nth-child(4) {
+        border-bottom-color: $m3;
+
+        .symbol-gear {
+          fill: $m3;
+        }
+
       }
+
+      &:nth-child(5) {
+        border-bottom-color: $m4;
+
+        .symbol-gear {
+          fill: $m4;
+        }
+
+      }
+
+    }
+
+      .key-tech-label {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+}
+
+
+/* ================
+// Terminal
+// ============= */
+
+.mimo-theme {
+
+  .terminal-pillow {
+    padding: em(20);
+    background: #fff;
+    border-radius: em(4);
+  }
+
+    .code-pillow {
+      overflow: hidden;
+      overflow-x: auto;
+    }
 
 }
