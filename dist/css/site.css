@@ -776,7 +776,7 @@ template {
 // ============= */
 
 .mimo-theme body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
 }
 
@@ -789,6 +789,8 @@ template {
   margin: 0;
   font-size: 15vmin;
   font-weight: 700;
+  letter-spacing: 0.125em;
+  text-shadow: 0 0.1875rem 0 #64FFDA;
 }
 
 .mimo-theme h2 {
@@ -808,7 +810,7 @@ template {
 @media screen and (min-width: 500px) {
 
   .mimo-theme .lead {
-    letter-spacing: 0.078125em;
+    letter-spacing: 0.15625em;
   }
 }
 
@@ -880,7 +882,8 @@ template {
   }
 }
 
-.mimo-theme .action-link:before {
+.mimo-theme .action-link:before,
+      .mimo-theme .action-link:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -890,20 +893,25 @@ template {
   background:
           -webkit-linear-gradient(
             top,
-              #F57F17,
-              #FFFF00 100%
+              #64FFDA,
+              #0277BD 100%
           );
   background:
           linear-gradient(
             to bottom,
-              #F57F17,
-              #FFFF00 100%
+              #64FFDA,
+              #0277BD 100%
           );
 }
 
 .mimo-theme .action-link:focus,
       .mimo-theme .action-link:hover {
-  background: #E0E0E0;
+  background: #FFF59D;
+}
+
+.mimo-theme .action-link:last-child:after {
+  right: 0;
+  left: auto;
 }
 
 @media screen and (min-width: 500px) {
@@ -937,14 +945,14 @@ template {
         -webkit-radial-gradient(
           center,
             ellipse,
-            #F57F17,
-            #FFFF00 100%
+            #0277BD,
+            #64FFDA 100%
         );
   background:
         radial-gradient(
           ellipse at center,
-            #F57F17,
-            #FFFF00 100%
+            #0277BD,
+            #64FFDA 100%
         );
 }
 
@@ -954,7 +962,7 @@ template {
 
 .mimo-theme .section-intro {
   overflow: hidden;
-  padding: 14vmin 0.625em 10vmin;
+  padding: 10vmin 0.625em 4vmin;
   text-align: center;
 }
 
@@ -974,6 +982,17 @@ template {
               #64FFDA 100%
           );
   border-radius: 0.25em;
+}
+
+.mimo-theme .section-terminal .symbol-gear {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  font-size: 20vmin;
+  fill: #64FFDA;
+  mix-blend-mode: hard-light;
+  -webkit-transform: translate(-50%, -40%);
+  transform: translate(-50%, -40%);
 }
 
 /* ================
@@ -1143,69 +1162,30 @@ template {
 }
 
 /* ================
-// Key Tech
+// Call to Action
 // ============= */
 
-.mimo-theme .key-tech {
-  max-width: 6.25em;
-  margin: 0 auto;
-  padding-left: 0;
-  text-align: left;
-  white-space: nowrap;
-  list-style: none;
+.mimo-theme .call-to-action {
+  color: inherit;
 }
 
-@media screen and (min-width: 500px) {
-
-  .mimo-theme .key-tech {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    max-width: 100%;
-    text-align: center;
-  }
+.mimo-theme .call-to-action .symbol-github {
+  margin: 0 0.5em;
+  font-size: 200%;
 }
 
-.mimo-theme .key-tech-item {
-  border-bottom: 3px solid;
-  padding: 0.625em 0;
-}
+/* ================
+// Summary
+// ============= */
 
-@media screen and (min-width: 500px) {
-
-  .mimo-theme .key-tech-item {
-    padding: 0 1.125em 0.625em;
-  }
-}
-
-.mimo-theme .key-tech-item:nth-child(2) {
-  border-bottom-color: #0277BD;
-}
-
-.mimo-theme .key-tech-item:nth-child(2) .symbol-gear {
-  fill: #0277BD;
-}
-
-.mimo-theme .key-tech-item:nth-child(3) {
-  border-bottom-color: #64FFDA;
-}
-
-.mimo-theme .key-tech-item:nth-child(3) .symbol-gear {
-  fill: #64FFDA;
-}
-
-.mimo-theme .key-tech-item:nth-child(4) {
-  border-bottom-color: #F57F17;
-}
-
-.mimo-theme .key-tech-item:nth-child(4) .symbol-gear {
-  fill: #F57F17;
-}
-
-.mimo-theme .key-tech-label {
-  display: inline-block;
-  vertical-align: middle;
+.mimo-theme .summary {
+  max-width: 82vmin;
+  width: 100%;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  padding-bottom: 0.625em;
+  font-size: 1.5em;
 }
 
 /* ================
@@ -1221,14 +1201,15 @@ template {
 .mimo-theme .code-pillow {
   overflow: hidden;
   overflow-x: auto;
-}
-
-.mimo-theme .code {
-  display: block;
   border: 0.0625em solid #424242;
   border-top-width: 0.625em;
   border-radius: 0.25em;
   padding: 0.625em;
+}
+
+.mimo-theme .code {
+  display: block;
+  white-space: nowrap;
 }
 
 /* ================

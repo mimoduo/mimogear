@@ -18,7 +18,7 @@ $s2: #424242;
 .mimo-theme {
 
   body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
   }
 
@@ -31,6 +31,8 @@ $s2: #424242;
     margin: 0;
     font-size: 15vmin;
     font-weight: 700;
+    letter-spacing: em(2);
+    text-shadow: 0 rem(3) 0 $m2;
   }
 
   h2 {
@@ -47,7 +49,7 @@ $s2: #424242;
     letter-spacing: em(1);
 
     @mixin media $small {
-      letter-spacing: em(1.25);
+      letter-spacing: em(2.5);
     }
 
   }
@@ -135,7 +137,8 @@ $s2: #424242;
         padding: em(15, 14) em(20, 14);
       }
 
-      &:before {
+      &:before,
+      &:after {
         position: absolute;
         top: 0;
         left: 0;
@@ -145,14 +148,22 @@ $s2: #424242;
         background:
           linear-gradient(
             to bottom,
-              $m4,
-              $m3 100%
+              $m2,
+              $m1 100%
           );
       }
 
       &:focus,
       &:hover {
-        background: $s1;
+        background: #FFF59D;
+      }
+
+      &:last-child {
+
+        &:after {
+          right: 0;
+          left: auto;
+        }
       }
 
     }
@@ -193,8 +204,8 @@ $s2: #424242;
       background:
         radial-gradient(
           ellipse at center,
-            $m4,
-            $m3 100%
+            $m1,
+            $m2 100%
         );
     }
 
@@ -213,7 +224,7 @@ $s2: #424242;
 
     &-intro {
       overflow: hidden;
-      padding: 14vmin em(10) 10vmin;
+      padding: 10vmin em(10) 4vmin;
       text-align: center;
     }
 
@@ -230,6 +241,16 @@ $s2: #424242;
           );
         border-radius: em(4);
       }
+
+        .symbol-gear {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          font-size: 20vmin;
+          fill: $m2;
+          mix-blend-mode: hard-light;
+          transform: translate(-50%, -40%);
+        }
 
     }
 
@@ -360,69 +381,40 @@ $s2: #424242;
 
 
 /* ================
-// Key Tech
+// Call to Action
 // ============= */
 
 .mimo-theme {
 
-  .key-tech {
-    max-width: em(100);
-    margin: 0 auto;
-    padding-left: 0;
-    text-align: left;
-    white-space: nowrap;
-    list-style: none;
+  .call-to-action {
+    color: inherit;
 
-    @mixin media $small {
-      display: flex;
-      justify-content: center;
-      max-width: 100%;
-      text-align: center;
+    .symbol-github {
+      margin: 0 em(8);
+      font-size: 200%;
     }
 
   }
 
-    .key-tech-item {
-      border-bottom: 3px solid;
-      padding: em(10) 0;
+}
 
-      @mixin media $small {
-        padding: 0 em(18) em(10);
-      }
 
-      &:nth-child(2) {
-        border-bottom-color: $m1;
+/* ================
+// Summary
+// ============= */
 
-        .symbol-gear {
-          fill: $m1;
-        }
 
-      }
+.mimo-theme {
 
-      &:nth-child(3) {
-        border-bottom-color: $m2;
-
-        .symbol-gear {
-          fill: $m2;
-        }
-
-      }
-
-      &:nth-child(4) {
-        border-bottom-color: $m4;
-
-        .symbol-gear {
-          fill: $m4;
-        }
-
-      }
-
-    }
-
-      .key-tech-label {
-        display: inline-block;
-        vertical-align: middle;
-      }
+  .summary {
+    max-width: 82vmin;
+    width: 100%;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    padding-bottom: em(10);
+    font-size: em(24);
+  }
 
 }
 
@@ -442,14 +434,15 @@ $s2: #424242;
     .code-pillow {
       overflow: hidden;
       overflow-x: auto;
+      border: em(1) solid $s2;
+      border-top-width: em(10);
+      border-radius: em(4);
+      padding: em(10);
     }
 
       .code {
         display: block;
-        border: em(1) solid $s2;
-        border-top-width: em(10);
-        border-radius: em(4);
-        padding: em(10);
+        white-space: nowrap;
       }
 
 }
