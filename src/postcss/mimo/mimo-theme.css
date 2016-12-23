@@ -8,7 +8,7 @@ $m3: #FFFF00;
 $m4: #F57F17;
 
 $s1: #E0E0E0;
-$s2: #424242;
+$s2: #9E9E9E;
 
 
 /* ================
@@ -103,7 +103,6 @@ $s2: #424242;
 .mimo-theme {
 
   .site-header {
-    border-top: 1px solid $s1;
     text-align: center;
 
     &:after {
@@ -122,6 +121,7 @@ $s2: #424242;
 .mimo-theme {
 
   .actions {
+    display: inline-block;
     text-align: center;
   }
 
@@ -129,52 +129,41 @@ $s2: #424242;
       display: inline-block;
       padding: em(16, 14) em(14, 14) em(15, 14);
       font-size: em(14);
+      text-align: center;
       text-decoration: none;
       color: inherit;
       transition: background .25s;
 
       @mixin media $small {
-        padding: em(15, 14) em(20, 14);
+        padding: em(15, 14) em(30, 14);
+        letter-spacing: em(2, 14);
       }
 
-      &:before,
       &:after {
         position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 1px;
-        content: '';
-        background:
-          linear-gradient(
-            to bottom,
-              $m2,
-              $m1 100%
-          );
-      }
-
-      &:focus,
-      &:hover {
-        background: #FFF59D;
+        top: 50%;
+        right: 0;
+        z-index: 20;
+        content: '\2022';
+        color: $s2;
+        filter: none;
+        transform: translate(50%, -50%);
       }
 
       &:last-child {
 
         &:after {
-          right: 0;
-          left: auto;
+          display: none;
         }
+
+      }
+
+      .symbol {
+        display: block;
+        margin: 0 auto;
       }
 
     }
-
-      .symbol-action {
-
-        @mixin media $small {
-          margin-right: em(5, 14);
-        }
-
-      }
 
       .action-link-label {
         display: none;
@@ -182,34 +171,10 @@ $s2: #424242;
         @mixin media $small {
           display: inline-block;
           vertical-align: middle;
+          text-transform: uppercase;
         }
 
       }
-
-}
-
-
-/* ================
-// Main
-// ============= */
-
-.mimo-theme {
-
-  .site-main {
-
-    &:before {
-      display: block;
-      height: em(1);
-      content: '';
-      background:
-        radial-gradient(
-          ellipse at center,
-            $m1,
-            $m2 100%
-        );
-    }
-
-  }
 
 }
 
@@ -224,7 +189,7 @@ $s2: #424242;
 
     &-intro {
       overflow: hidden;
-      padding: 10vmin em(10) 4vmin;
+      padding: em(60) em(10) em(40);
       text-align: center;
     }
 
@@ -247,13 +212,26 @@ $s2: #424242;
           top: 0;
           left: 50%;
           font-size: 20vmin;
+          animation: gear-spin 40s infinite linear;
           fill: $m2;
           mix-blend-mode: hard-light;
-          transform: translate(-50%, -40%);
+          transform:
+            translate(-50%, -50%)
+            rotate(0);
         }
 
     }
 
+  }
+
+}
+
+@keyframes gear-spin {
+
+  100% {
+    transform:
+      translate(-50%, -50%)
+      rotate(360deg);
   }
 
 }
@@ -275,8 +253,10 @@ $s2: #424242;
       flex: 1;
       height: em(20);
       border-radius: 50%;
+      opacity: 0;
 
       &:first-child {
+        animation: site-lace-one 2s .85s forwards;
         background:
           linear-gradient(
             -45deg,
@@ -286,11 +266,12 @@ $s2: #424242;
           );
         transform-origin: right bottom;
         transform:
-          rotate(20deg)
+          rotate(10deg)
           skewX(80deg);
       }
 
       &:last-child {
+        animation: site-lace-two 2s .85s forwards;
         background:
           linear-gradient(
             45deg,
@@ -300,7 +281,7 @@ $s2: #424242;
           );
         transform-origin: left bottom;
         transform:
-          rotate(-20deg)
+          rotate(-10deg)
           skewX(-80deg);
       }
 
@@ -311,6 +292,7 @@ $s2: #424242;
       height: 80px;
       width: 80px;
       margin: 0 auto;
+      animation: spin-flare 1.5s forwards;
       background:
         linear-gradient(
           -25deg,
@@ -318,7 +300,9 @@ $s2: #424242;
             $m3 100%
         );
       border-radius: 0;
-      transform: rotate(45deg);
+      transform:
+        rotate(-45deg)
+        scale(0);
 
       &:before,
       &:after {
@@ -332,6 +316,7 @@ $s2: #424242;
       }
 
       &:before {
+        animation: spin-flare-layer-one 1.5s .15s forwards;
         background:
           linear-gradient(
             25deg,
@@ -340,10 +325,12 @@ $s2: #424242;
           );
         transform:
           translate(-50%, -50%)
-          rotate(-20deg);
+          rotate(-60deg)
+          scale(0);
       }
 
       &:after {
+        animation: spin-flare-layer-two 1.5s .3s forwards;
         background:
           radial-gradient(
             ellipse at 50% 50%,
@@ -358,12 +345,68 @@ $s2: #424242;
           );
         transform:
           translate(-50%, -50%)
-          rotate(20deg);
+          rotate(-20deg)
+          scale(0);
       }
 
     }
 
 }
+
+@keyframes site-lace-one {
+
+  100% {
+    opacity: 1;
+    transform:
+      rotate(20deg)
+      skewX(80deg);
+  }
+
+}
+
+@keyframes site-lace-two {
+
+  100% {
+    opacity: 1;
+    transform:
+      rotate(-20deg)
+      skewX(-80deg);
+  }
+
+}
+
+@keyframes spin-flare {
+
+  100% {
+    transform:
+      rotate(45deg)
+      scale(1);
+  }
+
+}
+
+@keyframes spin-flare-layer-one {
+
+  100% {
+    transform:
+      translate(-50%, -50%)
+      rotate(-20deg)
+      scale(1);
+  }
+
+}
+
+@keyframes spin-flare-layer-two {
+
+  100% {
+    transform:
+      translate(-50%, -50%)
+      rotate(20deg)
+      scale(1);
+  }
+
+}
+
 
 
 /* ================
@@ -388,10 +431,38 @@ $s2: #424242;
 
   .call-to-action {
     color: inherit;
+    transition: filter .25s;
 
-    .symbol-github {
-      margin: 0 em(8);
-      font-size: 200%;
+    &:focus,
+    &:hover {
+      filter: drop-shadow(0 2px 0 $m2);
+
+      .symbol {
+
+        &:nth-child(-n+2) {
+          transform: translate(-50%, 0);
+        }
+
+        &-github {
+          transform: scale(1.5);
+        }
+
+        &:nth-child(n+4) {
+          transform: translate(50%, 0);
+        }
+
+      }
+
+    }
+
+    .symbol {
+      transition: transform .25s;
+
+      &-github {
+        margin: 0 em(8);
+        font-size: 200%;
+      }
+
     }
 
   }
@@ -407,7 +478,7 @@ $s2: #424242;
 .mimo-theme {
 
   .summary {
-    max-width: 82vmin;
+    max-width: rem(520);
     width: 100%;
     margin-right: auto;
     margin-bottom: 0;
