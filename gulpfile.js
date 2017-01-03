@@ -7,9 +7,11 @@ var gulp = require('gulp'),
     configuration = require('./configuration.json'),
     browserSync = require('browser-sync').create(),
     minimist = require('minimist'),
-    util = require('gulp-util'),
     gulpif = require('gulp-if'),
+    cached = require('gulp-cached'),
+    changed = require('gulp-changed'),
     pug = require('gulp-pug'),
+    pugInheritance = require('gulp-pug-inheritance'),
     postcss = require('gulp-postcss'),
     cssnano = require('gulp-cssnano'),
     extReplace = require('gulp-ext-replace'),
@@ -28,7 +30,7 @@ var site = 'dist/';
 
 var options = minimist(process.argv.slice(2));
 
-var files = './dist/',
+var files = './' + site,
     production = false;
 
 if (options.base) {
@@ -44,9 +46,17 @@ if (options.production) {
 // Compile Pug
 // ============= */
 
-gulp.task('pug', ['sprite'], function() {
+gulp.task('pug', function() {
 
   return gulp.src('src/pug/pages/**/*.pug')
+    .pipe(changed(site, {
+      extension: '.html'
+    }))
+    .pipe(cached('pug'))
+    .pipe(pugInheritance({
+      basedir: 'src/pug/pages',
+      skip: 'node_modules'
+    }))
     .pipe(pug({
       locals: {
         siteTitle: packageJSON.name,
@@ -58,9 +68,7 @@ gulp.task('pug', ['sprite'], function() {
     }))
     .pipe(gulp.dest('./'))
     .pipe(gulpif(production, gulp.dest(site)))
-    .pipe(browserSync.stream({
-      once: true
-    }));
+    .pipe(browserSync.stream());
 
 });
 
@@ -153,6 +161,7 @@ gulp.task('js', function() {
 gulp.task('images', function() {
 
   return gulp.src('src/images/*')
+    .pipe(changed(site + 'images'))
     .pipe(imagemin())
     .pipe(gulp.dest(site + 'images'))
     .pipe(browserSync.stream());
@@ -172,10 +181,6 @@ gulp.task('sprite', function() {
         inline: true,
         symbol: {
           dest: site
-        },
-        view: {
-          dest: site,
-          bust: false
         }
       },
       svg: {
@@ -224,7 +229,7 @@ gulp.task('deploy', [
   'postcss',
   'js',
   'pug'
-], function () {
+], function() {
 
   return gulp.src('./dist/**/*')
     .pipe(deploy());

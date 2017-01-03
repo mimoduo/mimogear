@@ -1,6 +1,6 @@
 #Vendor
 
-The vendor folder contains any vendor css components that you wish to add to the site.
+The vendor folder contains any vendor css components that you wish to add to the site. Just add in a new vendor css file here and it will be automatically compiled into the main stylesheet.
 
 ##Normalize
 

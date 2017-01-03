@@ -31,6 +31,8 @@ Mimogear enforces a strict postcss formatting standard. The following example de
       color .25s,
       transform .25s;
 
+    @media print {}
+
     @mixin media $yatterman {}
 
     &:before {}
@@ -42,7 +44,7 @@ Mimogear enforces a strict postcss formatting standard. The following example de
 
     }
 
-    &-in-view {
+    &-state {
 
       @mixin media $yatterman {}
 

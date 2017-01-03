@@ -1,6 +1,6 @@
 #Sail
 
-A sail (slideshow) is a slideshow of elements that works based on a series of controllable active classes.
+A sail is a slideshow of elements that works based on a series of controllable active classes.
 
 ##Quick Use
 

@@ -3,9 +3,9 @@
 Partials serve as reusable blocks. The content of a partial will never change. There are several starter partials to help jump start your pug development process:
 
 * Address
-* Nav Main
-* Nav Social
+* Main Nav
 * Search
+* Social Nav
 * Table
 
 In order to include a partial onto a page, you'll need to use pug's include functionality.

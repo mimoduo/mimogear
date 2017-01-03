@@ -4,7 +4,7 @@ _Mimogear was built to be simple_. And simple it'll be! Let's get you started in
 
 ##Installation
 
-Mimogear uses npm in order to download all of the necessary build dependencies. If you haven't downloaded node before, head over to [node.js](https://nodejs.org/en/) to download the latest version of node. Once you've installed node and have downloaded Mimogear, let's `cd` into the project directory and then download our dependencies using the a terminal:
+Mimogear uses _node package manager_ in order to download all of the necessary build dependencies. If you haven't downloaded node before, head over to [node.js](https://nodejs.org/en/) to download the latest version of node. Once you've installed node and have downloaded Mimogear, let's `cd` into the project directory and then download our dependencies using the a terminal:
 
 ```sh
 cd <folder-of-Mimogear> (drag the folder into your terminal)
@@ -13,9 +13,7 @@ npm install
 
 ##Updating Configuration
 
-If you just want to dive right into development, move down to _Running Gulp_.
-
-Now that you've downloaded all of the dependencies, let's take a moment to setup any variables that will help theme your site. Within the root of Mimogear, you'll find a list of variables within configuration.js. The main target of your configuration will be the font and heading style variables.
+Now that you've downloaded all of the dependencies, let's take a moment to setup any variables that will help theme your site. Within the root of Mimogear, you'll find a list of variables within configuration.js. The main target of your configuration will be the navigation, font, and heading variables.
 
 ##Running Gulp
 
@@ -28,9 +26,7 @@ gulp
 
 **This will automatically open your browser to your site, compile all of your development assets within /src/, and watch for any file changes in the source /src/ folder.**
 
-##Advanced Gulp
-
-There's an advanced gulp task that will minify assets to ready them for production. Simply pass in the `--production` flag to set an environment variable for gulp to use:
+There's also an advanced gulp task that will _minify assets_ to ready them for production. Simply pass in the `--production` flag to set an environment variable for gulp to use:
 
 ```sh
 gulp --production
@@ -43,3 +39,7 @@ Once you're all set with getting `gulp` to make its first big _gulp_. Either hea
 * For CSS (using postcss) development, start in the [postcss documentation](https://github.com/mimoduo/Mimogear/tree/master/docs/postcss)
 * For HTML (using pug) development, start in the [pug documentation](https://github.com/mimoduo/Mimogear/tree/master/docs/pug)
 * For javascript development, start in the [javascript documentation](https://github.com/mimoduo/Mimogear/tree/master/docs/javascript)
+
+##Readying Deployment
+
+[See Deployment section for getting set up with github and travis ci](http://blog.crushingpennies.com/a-static-site-generator-with-gulp-proseio-and-travis-ci.html)

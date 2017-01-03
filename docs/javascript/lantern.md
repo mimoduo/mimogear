@@ -1,6 +1,6 @@
 #Lantern
 
-A lantern (lightbox) allows the user to see an enlarged picture after interacting with a smaller thumbnail.
+A lantern is a lightbox that allows the user to see an enlarged picture after interacting with a smaller thumbnail.
 
 ##Quick Use
 

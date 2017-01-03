@@ -98,7 +98,7 @@ The compartment mixin ensures that a container will be horizontally centered and
 
 ##Cover
 
-The cover mixin is used to blanket an element on top of another element. All elements have position relative on them therefore it is not necessary to make sure position: relative is on the parent element of a cover element.
+The cover mixin is used to blanket an element on top of another element. Since position: relative is on every element by default, a cover will never flow outside its parent.
 
 **Postcss**
 

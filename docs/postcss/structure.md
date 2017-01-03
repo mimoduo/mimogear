@@ -4,7 +4,7 @@ Structure elements are high level components that usually contain styles for spa
 
 ##Root
 
-The root partial styles universal elements, the html element, and the body element. It also makes sure that all elements have position: relative and box-sizing: border-box by default. Font-size was placed on the body element in order to preserve rem calculations during production.
+The root partial styles universal elements, the html element, and the body element. It also makes sure that all elements have `position: relative` and `box-sizing: border-box` by default. Font-size was placed on the body element in order to preserve rem calculations during production.
 
 ##Regions
 

@@ -3,6 +3,7 @@
 #Mimogear
 
 [![Build Status](https://travis-ci.org/mimoduo/Mimogear.svg?branch=master)](https://travis-ci.org/mimoduo/Mimogear)
+[![devDependencies Status](https://david-dm.org/mimoduo/Mimogear/dev-status.svg)](https://david-dm.org/Mimoduo/Mimogear#info=devDependencies)
 
 > A dead simple static site generator and web development framework
 
@@ -23,7 +24,7 @@ After looking through all the cool static site generators out there, you may hav
 
 ##Installation
 
-Mimogear uses npm in order to download all of the necessary build dependencies. If you haven't downloaded node before, head over to [node.js](https://nodejs.org/en/) to download the latest version of node. Once you've installed node and have downloaded Mimogear, let's `cd` into the project directory and then download our dependencies using the a terminal:
+Mimogear uses node package manager in order to download all of the necessary build dependencies. If you haven't downloaded node before, head over to [node.js](https://nodejs.org/en/) to download the latest version of node. Once you've installed node and have downloaded Mimogear, let's `cd` into the project directory and then download our dependencies using the a terminal:
 
 ```sh
 cd <folder-of-Mimogear> (drag the folder into your terminal)

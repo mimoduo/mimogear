@@ -246,7 +246,7 @@ $s2: #9E9E9E;
   .site-flag {
     display: flex;
     align-items: center;
-    margin-bottom: 6vmin;
+    margin-bottom: em(20);
   }
 
     .site-lace {
@@ -289,8 +289,8 @@ $s2: #9E9E9E;
 
     .site-flare {
       z-index: 2;
-      height: 80px;
-      width: 80px;
+      height: em(55);
+      width: em(55);
       margin: 0 auto;
       animation: spin-flare 1.5s forwards;
       background:
@@ -335,8 +335,8 @@ $s2: #9E9E9E;
           radial-gradient(
             ellipse at 50% 50%,
               $m1,
-              $m2 em(20),
-              transparent em(20)
+              $m2 em(15),
+              transparent em(15)
           ),
           linear-gradient(
             25deg,

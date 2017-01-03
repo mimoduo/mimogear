@@ -6,6 +6,10 @@ Mimogear uses pug in order to create static HTML pages based on a base template.
 
 Pug is super strict with indentation - so strict it will throw an error if you're using anything other than 2 spaces for indentation. Make sure to update your editor's configuration before you start developing in pug!
 
+##Customizing Navigation
+
+Navigation in pug is handled through a few loops that use configuration.json as a data set. By customizing the associative arrays found in configuration.json, you can alter the output of each navigation partial.
+
 ##Modifying the Base Template
 
 The base template is what is used as the foundation for each page. This template can be found in /src/pug/template.pug. Take note that any changes you make to this file will also be applied to every page that uses this template!

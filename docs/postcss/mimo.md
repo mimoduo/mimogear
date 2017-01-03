@@ -1,6 +1,6 @@
 #Mimo
 
-The mimo partials refer to the slideshow, lightbox, and accordion available within Mimogear.
+The mimo partials refer to the slideshow and lightbox available within Mimogear.
 
 ##Grid
 
@@ -36,6 +36,8 @@ The Mimogear grid system is setup using the [Postcss-simple-grid](https://github
 }
 ```
 
+To use these newly generated columns in your template, add a default column class to your container and then the unique column class you wish to use:
+
 **Pug**
 
 ```pug
@@ -69,7 +71,7 @@ There are three mixins available within the drawer partial as well as default st
 
 ##Lantern
 
-The lantern partial styles the lightbox, dictates recommended controller positions, and makes sure that images will fit properly within the viewport. It's possible to show the caption of an image by accessing the title attribute of the lantern-content. The following example, also used in the mimo-theme, uses &:after to extract the title from lantern-content:
+The lantern partial styles the lightbox, dictates recommended controller positions, and makes sure that images will fit properly within the viewport. It's possible to show the caption of an image by accessing the title attribute of the lantern-content:
 
 ```postcss
 .lantern-content {
@@ -84,4 +86,4 @@ The lantern partial styles the lightbox, dictates recommended controller positio
 
 ##Mimo Theme
 
-The mimo-theme styles the main index page that is shown by default. _This theme is safe to delete_ during production. There are some useful examples in the mimo-theme of mixins, functions, and common ways to style mimo modules if you're up for some exploration!
+The mimo-theme styles the main index page that is shown by default. _This theme is safe to delete_ during production.

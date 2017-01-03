@@ -1,6 +1,6 @@
 #Using Gulp in Mimogear
 
-Mimogear uses gulp, a popular task runner. All the work for compiling stylesheets, compiling markup, concatenating and minifying javascript, creating a sprite, optimizing images, and watching assets has already been setup for you.
+All the work for compiling stylesheets, compiling markup, concatenating and minifying javascript, creating a sprite, optimizing images, and watching assets has already been setup for you.
 
 ##Running Gulp
 
@@ -43,6 +43,8 @@ If you'd like to modify some of the pre-existing tasks in Mimogear, check out th
 * [**autoprefixer**](https://github.com/postcss/autoprefixer)
 * [**browser-sync**](https://github.com/BrowserSync/browser-sync) / [official site](https://www.browsersync.io/)
 * [**gulp**](https://github.com/gulpjs/gulp) / [official site](http://gulpjs.com/)
+* [**gulp-cached**](https://github.com/contra/gulp-cached)
+* [**gulp-changed**](https://github.com/sindresorhus/gulp-changed)
 * [**gulp-concat**](https://github.com/contra/gulp-concat)
 * [**gulp-cssnano**](https://github.com/ben-eb/gulp-cssnano) / [official site](http://cssnano.co/)
 * [**gulp-ext-replace**](https://github.com/tjeastmond/gulp-ext-replace)
@@ -51,6 +53,7 @@ If you'd like to modify some of the pre-existing tasks in Mimogear, check out th
 * [**gulp-imagemin**](https://github.com/sindresorhus/gulp-imagemin)
 * [**gulp-postcss**](https://github.com/postcss/gulp-postcss) / [official site](http://postcss.org/)
 * [**gulp-pug**](https://github.com/jamen/gulp-pug)
+* [**gulp-pug-inheritance**](https://github.com/pure180/gulp-pug-inheritance)
 * [**gulp-svg-sprite**](https://github.com/jkphl/gulp-svg-sprite)
 * [**gulp-uglify**](https://github.com/terinjokes/gulp-uglify)
 * [**gulp-util**](https://github.com/gulpjs/gulp-util)
