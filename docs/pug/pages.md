@@ -7,7 +7,7 @@ Pug pages are the bread and butter of your site. These pages will be compiled in
 To add content and component markup to your page, there is a content block that is setup by default on each of the default pages (index.pug, starter.pug, and style-guide.pug) within Mimogear. This content will be nested directly into the main element of your site as dictated within the default site template.
 
 ```pug
-block content
+block main
   p Any pug code can be nested here
 ```
 

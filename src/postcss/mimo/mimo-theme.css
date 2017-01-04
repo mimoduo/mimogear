@@ -42,7 +42,7 @@ $s2: #9E9E9E;
 
   h3 {
     margin-top: 0;
-    font-size: 4vmin;
+    font-size: em(28);
   }
 
   .lead {
@@ -189,37 +189,8 @@ $s2: #9E9E9E;
 
     &-intro {
       overflow: hidden;
-      padding: em(60) em(10) em(40);
+      padding: em(80) em(10) em(40);
       text-align: center;
-    }
-
-    &-terminal {
-
-      .compartment {
-        max-width: rem(640);
-        padding: em(10);
-        background:
-          linear-gradient(
-            45deg,
-              $m1,
-              $m2 100%
-          );
-        border-radius: em(4);
-      }
-
-        .symbol-gear {
-          position: absolute;
-          top: 0;
-          left: 50%;
-          font-size: 20vmin;
-          animation: gear-spin 40s infinite linear;
-          fill: $m2;
-          mix-blend-mode: hard-light;
-          transform:
-            translate(-50%, -50%)
-            rotate(0);
-        }
-
     }
 
   }
@@ -478,13 +449,13 @@ $s2: #9E9E9E;
 .mimo-theme {
 
   .summary {
-    max-width: rem(520);
+    max-width: rem(640);
     width: 100%;
     margin-right: auto;
-    margin-bottom: 0;
+    margin-bottom: em(40, 24);
     margin-left: auto;
     padding-bottom: em(10);
-    font-size: em(24);
+    font-size: em(28);
   }
 
 }
@@ -496,24 +467,38 @@ $s2: #9E9E9E;
 
 .mimo-theme {
 
-  .terminal-pillow {
-    padding: em(20);
-    background: #fff;
+  .terminal {
+    max-width: rem(640);
+    margin-right: auto;
+    margin-left: auto;
+    padding: em(10);
+    text-align: left;
+    background:
+      linear-gradient(
+        45deg,
+          $m1,
+          $m2 100%
+      );
     border-radius: em(4);
   }
 
-    .code-pillow {
-      overflow: hidden;
-      overflow-x: auto;
-      border: em(1) solid $s2;
-      border-top-width: em(10);
-      border-radius: em(4);
-      padding: em(10);
+    .terminal-pillow {
+      padding: em(20);
+      background: #fff;
     }
 
-      .code {
-        display: block;
-        white-space: nowrap;
+      .code-pillow {
+        overflow: hidden;
+        overflow-x: auto;
+        border: em(1) solid $s2;
+        border-top-width: em(10);
+        border-radius: em(4);
+        padding: em(10);
       }
+
+        .code {
+          display: block;
+          white-space: nowrap;
+        }
 
 }

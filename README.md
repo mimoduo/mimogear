@@ -1,4 +1,4 @@
-![Mimogear logo of a flowering gear and two wings](http://image.prntscr.com/image/0627c9a187134b38a1afff6fd9cb30c7.png)
+![Mimogear logo of a flowering gear and two wings](http://image.prntscr.com/image/c1989297e97d45c69817e85947647862.png)
 
 #Mimogear
 
