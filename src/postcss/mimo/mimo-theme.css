@@ -32,11 +32,10 @@ $s2: #9E9E9E;
     font-size: 15vmin;
     font-weight: 700;
     letter-spacing: em(2);
-    text-shadow: 0 rem(3) 0 $m2;
   }
 
   h2 {
-    margin: 0 0 3vmin;
+    margin: 0 0 2vmin;
     font-size: 6.85vmin;
   }
 
@@ -129,6 +128,7 @@ $s2: #9E9E9E;
       display: inline-block;
       padding: em(16, 14) em(14, 14) em(15, 14);
       font-size: em(14);
+      font-weight: normal;
       text-align: center;
       text-decoration: none;
       color: inherit;
@@ -136,7 +136,7 @@ $s2: #9E9E9E;
 
       @mixin media $small {
         padding: em(15, 14) em(30, 14);
-        letter-spacing: em(2, 14);
+        letter-spacing: em(3, 14);
       }
 
       &:after {
@@ -161,6 +161,12 @@ $s2: #9E9E9E;
       .symbol {
         display: block;
         margin: 0 auto;
+
+        @mixin media $big {
+          float: left;
+          margin-right: em(8);
+        }
+
       }
 
     }
@@ -189,20 +195,15 @@ $s2: #9E9E9E;
 
     &-intro {
       overflow: hidden;
-      padding: em(80) em(10) em(40);
+      padding: em(40) em(10);
       text-align: center;
+
+      @mixin media $big {
+        padding-top: em(60);
+      }
+
     }
 
-  }
-
-}
-
-@keyframes gear-spin {
-
-  100% {
-    transform:
-      translate(-50%, -50%)
-      rotate(360deg);
   }
 
 }
@@ -218,6 +219,11 @@ $s2: #9E9E9E;
     display: flex;
     align-items: center;
     margin-bottom: em(20);
+
+    @mixin media $big {
+      margin-bottom: em(10);
+    }
+
   }
 
     .site-lace {
@@ -379,7 +385,6 @@ $s2: #9E9E9E;
 }
 
 
-
 /* ================
 // Site Name
 // ============= */
@@ -388,6 +393,7 @@ $s2: #9E9E9E;
 
   .site-link {
     text-decoration: none;
+    text-shadow: 0 rem(3) 0 $m2;
     color: inherit;
   }
 
@@ -401,21 +407,24 @@ $s2: #9E9E9E;
 .mimo-theme {
 
   .call-to-action {
+    display: inline-block;
+    margin-bottom: em(60);
+    font-size: 80%;
     color: inherit;
     transition: filter .25s;
 
+    @mixin media $mini {
+      font-size: 100%;
+    }
+
     &:focus,
     &:hover {
-      filter: drop-shadow(0 2px 0 $m2);
+      filter: drop-shadow(0 rem(3) 0 $m2);
 
-      .symbol {
+      > .symbol {
 
         &:nth-child(-n+2) {
           transform: translate(-50%, 0);
-        }
-
-        &-github {
-          transform: scale(1.5);
         }
 
         &:nth-child(n+4) {
@@ -424,19 +433,36 @@ $s2: #9E9E9E;
 
       }
 
+      .call-to-action-bubble {
+        transform: scale(1.25);
+      }
+
     }
 
     .symbol {
       transition: transform .25s;
 
       &-github {
-        margin: 0 em(8);
         font-size: 200%;
       }
 
     }
 
   }
+
+    .call-to-action-bubble {
+      display: inline-block;
+      vertical-align: middle;
+      border: 1px solid $s1;
+      margin: 0 em(10);
+      padding: em(10) em(20) em(5);
+      transition: transform .25s;
+    }
+
+      .call-to-action-label {
+        display: block;
+        margin-top: em(5);
+      }
 
 }
 
@@ -445,18 +471,36 @@ $s2: #9E9E9E;
 // Summary
 // ============= */
 
-
 .mimo-theme {
 
   .summary {
     max-width: rem(640);
     width: 100%;
-    margin-right: auto;
-    margin-bottom: em(40, 24);
-    margin-left: auto;
-    padding-bottom: em(10);
-    font-size: em(28);
+    margin: 0 auto rem(20);
+    padding-right: rem(10);
+    padding-left: rem(10);
+    font-size: em(20);
+
+    @mixin media $medium {
+      font-size: em(26);
+    }
+
+    a {
+      color: inherit;
+      transition: color .25s;
+
+      &:focus,
+      &:hover {
+        color: $m1;
+      }
+
+    }
+
   }
+
+    .summary-name {
+      font-weight: 700;
+    }
 
 }
 
@@ -479,7 +523,6 @@ $s2: #9E9E9E;
           $m1,
           $m2 100%
       );
-    border-radius: em(4);
   }
 
     .terminal-pillow {
@@ -492,7 +535,6 @@ $s2: #9E9E9E;
         overflow-x: auto;
         border: em(1) solid $s2;
         border-top-width: em(10);
-        border-radius: em(4);
         padding: em(10);
       }
 

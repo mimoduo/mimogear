@@ -1,7 +1,3 @@
-/* ================
-// Grid System
-// ============= */
-
 .grid {
   display: flex;
   flex-wrap: wrap;

@@ -1,39 +1,36 @@
-/* ================
-// Trigger
-// ============= */
+var Trigger = (function() {
 
-var t,
-Trigger = {
-
-  settings: {
+  var s = {
     trigger: '.trigger',
     activeBodyClass: 'trigger-activated'
-  },
+  };
 
-  init: function(options) {
-
-    t = this.settings;
-
+  var init = function(options) {
     for (var key in options) {
       if (options.hasOwnProperty(key)) {
-        t[key] = options[key];
+        s[key] = options[key];
       }
     }
 
-    t.trigger = document.querySelector(t.trigger);
+    selectTrigger();
+  };
 
-    if(document.body.contains(t.trigger)) {
+  var selectTrigger = function() {
+    trigger = document.querySelector(s.trigger);
 
-      t.trigger.addEventListener('click', function() {
-        Trigger.activateTrigger(t.activeBodyClass);
-      });
-
+    if(document.body.contains(trigger)) {
+      trigger.addEventListener('click', activateTrigger);
     }
+  };
 
-  },
+  var activateTrigger = function() {
+  
+    document.body.classList.toggle(s.activeBodyClass);
 
-  activateTrigger: function(className) {
-    document.body.classList.toggle(className);
-  }
+  };
 
-};
+  return {
+    init: init
+  };
+
+})();

@@ -1,6 +1,6 @@
 #Using Gulp in Mimogear
 
-All the work for compiling stylesheets, compiling markup, concatenating and minifying javascript, creating a sprite, optimizing images, and watching assets has already been setup for you.
+Gulp works in Mimogear by compiling stylesheets, compiling markup, concatenating and minifying javascript, creating a sprite, optimizing images, watching assets, and deploying files.
 
 ##Running Gulp
 
@@ -14,7 +14,7 @@ gulp
 
 ##Advanced Gulp
 
-There's an advanced gulp task that will minify assets to ready them for production. Simply pass in the `--production` flag to set an environment variable for gulp to use:
+There's an advanced gulp task that will minify assets to ready them for production. By using a flag, gulp will run tasks that normally wouldn't have run in the first place. This helps speed up development on your local machine. Simply pass in the `--production` flag to set an environment variable for gulp to use:
 
 ```sh
 gulp --production

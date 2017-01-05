@@ -45,7 +45,7 @@ The spotlight (also commonly referred to as the hero image) can be using by plac
 
 ##Sprite
 
-The sprite partial is used to add the width and height for each symbol that is included in the generated svg sprite. The example below styles a symbol called "mage" with a given width and height. This selector should be nested within `.symbol {}` inside the sprite partial.
+The sprite partial is used to add a width and height for each symbol that is included in the generated svg sprite. The example below styles a symbol called "mage" with a given width and height. This selector should be nested within `.symbol {}` inside the sprite partial.
 
 **Postcss**
 

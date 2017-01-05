@@ -1,7 +1,3 @@
-/* ================
-// Main Site Anonymous Function
-// ============= */
-
 (function() {
 
   Trigger.init({

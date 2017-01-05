@@ -1,11 +1,8 @@
-//- ================
-//- Main Nav Partial
-//- ================
-
-ol
-  each link in siteLinks.mainNav
-    li
-      a(
-        href=link.href
-        itemprop="url"
-      )= link.name
+nav.main-nav
+  ol
+    each link in siteLinks.mainNav
+      li
+        a(
+          href=link.href
+          itemprop="url"
+        )= link.name

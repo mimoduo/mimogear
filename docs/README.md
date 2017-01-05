@@ -4,7 +4,7 @@ _Mimogear was built to be simple_. And simple it'll be! Let's get you started in
 
 ##Installation
 
-Mimogear uses _node package manager_ in order to download all of the necessary build dependencies. If you haven't downloaded node before, head over to [node.js](https://nodejs.org/en/) to download the latest version of node. Once you've installed node and have downloaded Mimogear, let's `cd` into the project directory and then download our dependencies using the a terminal:
+Mimogear uses _node package manager_ in order to download all of the necessary build dependencies. If you haven't downloaded node before, head over to [node.js](https://nodejs.org/en/) to download the latest version of node. Once you've installed node and have downloaded Mimogear, let's `cd` into the project directory and then download our dependencies using a terminal:
 
 ```sh
 cd <folder-of-Mimogear> (drag the folder into your terminal)
@@ -39,6 +39,8 @@ Once you're all set with getting `gulp` to make its first big _gulp_. Either hea
 * For CSS (using postcss) development, start in the [postcss documentation](https://github.com/mimoduo/Mimogear/tree/master/docs/postcss)
 * For HTML (using pug) development, start in the [pug documentation](https://github.com/mimoduo/Mimogear/tree/master/docs/pug)
 * For javascript development, start in the [javascript documentation](https://github.com/mimoduo/Mimogear/tree/master/docs/javascript)
+
+**Wondering where all those styles came from? You might want to delete the mimo-theme found in /src/postcss/mimo/**
 
 ##Readying Deployment
 

@@ -1,10 +1,10 @@
 #Pages
 
-Pug pages are the bread and butter of your site. These pages will be compiled into the html files that represent your site. The default pages (index.pug, starter.pug, and style-guide.pug) extend the default site template and pass in extra content via the content block.
+Pug pages are the bread and butter of your site. These pages will be compiled into the html files that represent your site. The default pages (index.pug, starter.pug, and style-guide.pug) extend the default site template and pass in extra content via `block main`.
 
 ##Adding in Content
 
-To add content and component markup to your page, there is a content block that is setup by default on each of the default pages (index.pug, starter.pug, and style-guide.pug) within Mimogear. This content will be nested directly into the main element of your site as dictated within the default site template.
+To add content and component markup to your page, there is a main block that is setup by default on each of the default pages (index.pug, starter.pug, and style-guide.pug) within Mimogear. This content will be nested directly into the main element of your site as dictated within the default site template.
 
 ```pug
 block main

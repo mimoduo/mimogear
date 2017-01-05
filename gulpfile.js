@@ -31,10 +31,12 @@ var site = 'dist/';
 var options = minimist(process.argv.slice(2));
 
 var files = './' + site,
+    min = '',
     production = false;
 
 if (options.base) {
   files = './';
+  min = '.min';
 }
 
 if (options.production) {
@@ -62,7 +64,8 @@ gulp.task('pug', function() {
         siteTitle: packageJSON.name,
         siteDescription: packageJSON.description,
         siteLinks: configuration.links,
-        base: files
+        base: files,
+        deployMin: min
       },
       pretty: true
     }))

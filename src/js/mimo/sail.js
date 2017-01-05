@@ -1,11 +1,6 @@
-/* ================
-// Sail Slideshow
-// ============= */
+var Sail = (function() {
 
-var s,
-Sail = {
-
-  settings: {
+  var s = {
     slides: '.sail-slides',
     slide: '.sail-slides li',
     currentSlide: 0,
@@ -16,12 +11,9 @@ Sail = {
     vdom: {},
     activeSlideClass: 'sail-slide-active',
     activePageClass: 'sail-page-active'
-  },
+  };
 
-  init: function(options) {
-
-    s = this.settings;
-
+  var init = function(options) {
     for (var key in options) {
       if (options.hasOwnProperty(key)) {
         s[key] = options[key];
@@ -33,14 +25,13 @@ Sail = {
 
     if(document.body.contains(s.slides)) {
 
-      Sail.constructSail();
-      Sail.sailTo(s.currentSlide);
+      constructSail();
+      sailTo(s.currentSlide);
 
     }
+  };
 
-  },
-
-  constructSail: function() {
+  var constructSail = function() {
 
     var controls = document.createElement('div');
     controls.classList.add('sail-controls');
@@ -54,7 +45,7 @@ Sail = {
     '<use xlink:href="' + s.symbols.previous + '"></use>' +
     '</svg>';
     previous.addEventListener('click', function() {
-      Sail.sailThrough(-1);
+      sailThrough(-1);
     });
     s.vdom.controls.appendChild(previous);
     s.vdom.controls.previous = previous;
@@ -66,7 +57,7 @@ Sail = {
     '<use xlink:href="' + s.symbols.next + '"></use>' +
     '</svg>';
     next.addEventListener('click', function() {
-      Sail.sailThrough(1);
+      sailThrough(1);
     });
     s.vdom.controls.appendChild(next);
     s.vdom.controls.next = next;
@@ -82,40 +73,40 @@ Sail = {
 
       var page = document.createElement('button');
       page.classList.add('sail-page');
-      page.addEventListener('click', Sail.sailTo.bind(null, i));
+      page.addEventListener('click', sailTo.bind(null, i));
       s.vdom.pages.appendChild(page);
       s.vdom.page.push(page);
     }
 
-  },
+  };
 
-  sailThrough: function(modifier) {
+  var sailThrough = function(modifier) {
 
     s.currentSlide += modifier;
 
-    Sail.sail(s.currentSlide);
+    sail(s.currentSlide);
 
-  },
+  };
 
-  sailTo: function(i) {
+  var sailTo = function(i) {
 
     s.currentSlide = i;
 
-    Sail.sail(i);
+    sail(i);
 
-  },
+  };
 
-  sail: function(i) {
+  var sail = function(i) {
 
-    Sail.determineDisabledStates();
+    determineDisabledStates();
 
-    Sail.clearClasses();
+    clearClasses();
     s.slide[i].classList.add(s.activeSlideClass);
     s.vdom.page[i].classList.add(s.activePageClass);
 
-  },
+  };
 
-  determineDisabledStates: function() {
+  var determineDisabledStates = function() {
 
     if (s.currentSlide === 0) {
 
@@ -140,9 +131,9 @@ Sail = {
 
     }
 
-  },
+  };
 
-  clearClasses: function() {
+  var clearClasses = function() {
 
     for (var i = 0; i < s.slide.length; i++) {
 
@@ -151,6 +142,10 @@ Sail = {
 
     }
 
-  }
+  };
 
-};
+  return {
+    init: init
+  };
+
+})();

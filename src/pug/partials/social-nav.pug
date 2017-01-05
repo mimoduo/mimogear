@@ -1,13 +1,11 @@
-//- ================
-//- Social Nav Partial
-//- ================
-
-ol
-  each link in siteLinks.socialNav
-    li
-      a(
-        href=link.href
-        itemprop="url"
-        target="_blank"
-      )
-        span.visible-for-screen-readers= link.name
+nav.social-nav
+  ol
+    each link in siteLinks.socialNav
+      li
+        a(
+          href=link.href
+          itemprop="url"
+          target="_blank"
+        )
+          span.visible-for-screen-readers= link.name
+          +symbol(link.name)

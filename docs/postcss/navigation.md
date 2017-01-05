@@ -1,6 +1,6 @@
 #Navigation
 
-Each postcss navigation partial should refer to its respective pug partial. This makes navigation changes easier down the road.
+Each postcss navigation partial should refer to its respective pug partial. This makes navigation changes easier down the road. If you're wondering where some of the links are coming from, they are populated via configuration.json.
 
 ##Behaviors
 

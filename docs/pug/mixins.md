@@ -1,6 +1,12 @@
 #Mixins
 
-Mixins are a great way to take shortcuts with pug. The available Mimogear mixins are already included into the main template file. This will allow you to use the default mixins within each page that extends the default site template.
+Mixins are a great way to take shortcuts with pug. The available Mimogear mixins are already included into the main template file.
+
+**Available Mixins**
+
+* `+image`: generates an image given a file name, alt label, and optional class name
+* `+section`: generates a section container given an optional class name
+* `+symbol`: generates an svg related to an svg in the site sprite
 
 ##Adding a New Mixin
 
@@ -12,9 +18,25 @@ include mixins/section.pug
 include mixins/new-mixin.pug
 ```
 
-##The Section Mixin
+##+image
 
-The section mixin allows you to pass in content to a common structural element. By default it's a container element with a nested compartment that keeps content within a predefined boundary.
+The image mixin generates an image element given a file name, alt label, and an optional class name. The image path changes based on whether or not the files are being used in regular production or being deployed to gh-pages.
+
+**Pug**
+
+```pug
++image("image.jpg", "A descriptive alt label", ".class-name")
+```
+
+**HTML Output**
+
+```html
+<img src="./dist/images/image.jpg" alt="A descriptive alt label" class="class-name" />
+```
+
+##+section
+
+The section mixin generates markup for a generic container given an optional class name parameter. By default it's a container element with a nested compartment that keeps content within a predefined boundary.
 
 **Pug**
 
@@ -52,9 +74,9 @@ Sometimes you may need to modify a section beyond its default styling. By passin
 </div>
 ```
 
-##The Symbol Mixin
+##+symbol
 
-The symbol mixin allows you to add icons into your html by linking to svg symbols within the automatically generated svg-sprite.
+The symbol mixin generates an svg symbol given the name of an imported svg. The result links with the automatically generated sprite.
 
 **Pug**
 

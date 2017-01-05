@@ -23,7 +23,7 @@ Mimogear enforces a strict postcss formatting standard. The following example de
       );
     box-shadow:
       0 0 0 em(20) #000,
-      0 0 0 em(40) #ffa;
+      0 0 0 em(40) #fff;
     transform:
       translate(-50%, -50%)
       scale(1.25);
@@ -52,7 +52,7 @@ Mimogear enforces a strict postcss formatting standard. The following example de
 
   }
 
-    .module-subcomponent {
+    .module-child {
       /* styles */
     }
 ```

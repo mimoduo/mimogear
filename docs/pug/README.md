@@ -1,6 +1,6 @@
 #Using Pug in Mimogear
 
-Mimogear uses pug in order to create static HTML pages based on a base template. Pug let's us write a simpler form of HTML while also giving us the ability to use template inheritance, variables, and mixins. All of the scaffolding revolved around distributing pages has already been setup for you.
+Pug let's us write a simpler form of HTML while also giving us the ability to use template inheritance, variables, and mixins. All of the scaffolding revolved around distributing pages has already been setup for you.
 
 ##Before You Start
 

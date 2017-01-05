@@ -1,6 +1,6 @@
 #Mimo
 
-The mimo partials refer to the slideshow and lightbox available within Mimogear.
+The mimo partials refer to the grid, slideshow, lightbox, and mimo-theme available within Mimogear.
 
 ##Grid
 
