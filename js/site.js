@@ -396,14 +396,9 @@ defineElementGetter(Element.prototype, 'classList', function () {
 
 }(typeof window !== "undefined" ? window : this, document));
 
-/* ================
-// Lantern Lightbox
-// ============= */
+var Lantern = (function() {
 
-var l,
-Lantern = {
-
-  settings: {
+  var s = {
     lantern: '.lantern',
     lanternLights: '.lantern-light',
     lightCollection: [],
@@ -415,9 +410,9 @@ Lantern = {
     },
     vdom: {},
     activeClass: 'lantern-visible'
-  },
+  };
 
-  init: function(options) {
+  var init = function(options) {
 
     l = this.settings;
 
@@ -427,149 +422,148 @@ Lantern = {
       }
     }
 
-    l.lantern = document.querySelector(l.lantern);
-    l.lanternLights = document.querySelectorAll(l.lanternLights);
+    s.lantern = document.querySelector(s.lantern);
+    s.lanternLights = document.querySelectorAll(s.lanternLights);
 
-    if(document.body.contains(l.lantern)) {
-      Lantern.constructLantern();
+    if(document.body.contains(s.lantern)) {
+      constructLantern();
     }
 
-  },
+  };
 
-  constructLantern: function() {
+  var constructLantern = function() {
 
     var content = document.createElement('div');
     content.classList.add('lantern-content');
-    l.lantern.appendChild(content);
-    l.vdom.content = content;
+    s.lantern.appendChild(content);
+    s.vdom.content = content;
 
     var holder = document.createElement('img');
     holder.classList.add('lantern-holder');
     content.appendChild(holder);
-    l.vdom.holder = holder;
+    s.vdom.holder = holder;
 
     var previous = document.createElement('button');
     previous.classList.add('lantern-control');
     previous.classList.add('lantern-previous');
     previous.innerHTML = '<svg class="symbol symbol-lantern symbol-lantern-previous">' +
-    '<use xlink:href="' + l.symbols.previous + '"></use>' +
+    '<use xlink:href="' + s.symbols.previous + '"></use>' +
     '</svg>';
     previous.addEventListener('click', function() {
-      Lantern.previousLight();
+      previousLight();
     });
     content.appendChild(previous);
-    l.vdom.previous = previous;
+    s.vdom.previous = previous;
 
     var next = document.createElement('button');
     next.classList.add('lantern-control');
     next.classList.add('lantern-next');
     next.innerHTML = '<svg class="symbol symbol-lantern symbol-lantern-next">' +
-    '<use xlink:href="' + l.symbols.next + '"></use>' +
+    '<use xlink:href="' + s.symbols.next + '"></use>' +
     '</svg>';
     next.addEventListener('click', function() {
-      Lantern.nextLight();
+      nextLight();
     });
     content.appendChild(next);
-    l.vdom.next = next;
+    s.vdom.next = next;
 
     var close = document.createElement('button');
     close.classList.add('lantern-control');
     close.classList.add('lantern-close');
     close.innerHTML = '<svg class="symbol symbol-lantern symbol-lantern-close">' +
-    '<use xlink:href="' + l.symbols.close + '"></use>' +
+    '<use xlink:href="' + s.symbols.close + '"></use>' +
     '</svg>';
     close.addEventListener('click', function() {
-      Lantern.removeLight();
+      removeLight();
     });
     content.appendChild(close);
-    l.vdom.close = close;
+    s.vdom.close = close;
 
-    for (var i = 0; i < l.lanternLights.length; i++) {
-      l.lanternLights[i].setAttribute('tabindex', '0');
+    for (var i = 0; i < s.lanternLights.length; i++) {
+      s.lanternLights[i].setAttribute('tabindex', '0');
 
-      l.lanternLights[i].addEventListener('click', function(event) {
-        Lantern.displayLight(event);
+      s.lanternLights[i].addEventListener('click', function(event) {
+        displayLight(event);
       });
 
-      l.lightCollection[i] = [];
-      l.lightCollection[i].push(
-        l.lanternLights[i].getAttribute('src'),
-        l.lanternLights[i].getAttribute('alt')
+      s.lightCollection[i] = [];
+      s.lightCollection[i].push(
+        s.lanternLights[i].getAttribute('src'),
+        s.lanternLights[i].getAttribute('alt')
       );
     }
 
-  },
+  };
 
-  removeLight: function() {
+  var removeLight = function() {
 
-    l.lantern.classList.remove(l.activeClass);
+    s.lantern.classList.remove(s.activeClass);
 
-  },
+  };
 
-  previousLight: function() {
+  var previousLight = function() {
 
-    if (l.lightIndex === 0) {
-      l.lightIndex = l.lightCollection.length - 1;
+    if (s.lightIndex === 0) {
+      s.lightIndex = s.lightCollection.length - 1;
     } else {
-      l.lightIndex--;
+      s.lightIndex--;
     }
 
-    Lantern.setLight();
+    setLight();
 
-  },
+  };
 
-  nextLight: function() {
+  var nextLight = function() {
 
-    if (l.lightIndex == l.lightCollection.length - 1) {
-      l.lightIndex = 0;
+    if (s.lightIndex == s.lightCollection.length - 1) {
+      s.lightIndex = 0;
     } else {
-      l.lightIndex++;
+      s.lightIndex++;
     }
 
-    Lantern.setLight();
+    setLight();
 
-  },
+  };
 
-  displayLight: function(light) {
+  var displayLight = function(light) {
 
-    Lantern.grabLight(light);
-    Lantern.setLight();
+    grabLight(light);
+    setLight();
 
-    l.lantern.classList.add(l.activeClass);
+    s.lantern.classList.add(s.activeClass);
 
-  },
+  };
 
-  grabLight: function(light) {
+  var grabLight = function(light) {
 
-    for (i = 0; i < l.lightCollection.length; i++) {
-      
-      if (light.target.getAttribute('src') == l.lightCollection[i][0]) {
-        l.lightIndex = i;
+    for (i = 0; i < s.lightCollection.length; i++) {
+
+      if (light.target.getAttribute('src') == s.lightCollection[i][0]) {
+        s.lightIndex = i;
       }
 
     }
 
-  },
+  };
 
-  setLight: function() {
+  var setLight = function() {
 
-    l.vdom.holder.setAttribute('src', l.lightCollection[l.lightIndex][0]);
-    l.vdom.holder.setAttribute('alt', l.lightCollection[l.lightIndex][1]);
-    l.vdom.holder.setAttribute('title', l.lightCollection[l.lightIndex][1]);
-    l.vdom.content.setAttribute('title', l.lightCollection[l.lightIndex][1]);
+    s.vdom.holder.setAttribute('src', s.lightCollection[s.lightIndex][0]);
+    s.vdom.holder.setAttribute('alt', s.lightCollection[s.lightIndex][1]);
+    s.vdom.holder.setAttribute('title', s.lightCollection[s.lightIndex][1]);
+    s.vdom.content.setAttribute('title', s.lightCollection[s.lightIndex][1]);
 
-  }
+  };
 
-};
+  return {
+    init: init
+  };
 
-/* ================
-// Sail Slideshow
-// ============= */
+})();
 
-var s,
-Sail = {
+var Sail = (function() {
 
-  settings: {
+  var s = {
     slides: '.sail-slides',
     slide: '.sail-slides li',
     currentSlide: 0,
@@ -580,12 +574,9 @@ Sail = {
     vdom: {},
     activeSlideClass: 'sail-slide-active',
     activePageClass: 'sail-page-active'
-  },
+  };
 
-  init: function(options) {
-
-    s = this.settings;
-
+  var init = function(options) {
     for (var key in options) {
       if (options.hasOwnProperty(key)) {
         s[key] = options[key];
@@ -597,14 +588,13 @@ Sail = {
 
     if(document.body.contains(s.slides)) {
 
-      Sail.constructSail();
-      Sail.sailTo(s.currentSlide);
+      constructSail();
+      sailTo(s.currentSlide);
 
     }
+  };
 
-  },
-
-  constructSail: function() {
+  var constructSail = function() {
 
     var controls = document.createElement('div');
     controls.classList.add('sail-controls');
@@ -618,7 +608,7 @@ Sail = {
     '<use xlink:href="' + s.symbols.previous + '"></use>' +
     '</svg>';
     previous.addEventListener('click', function() {
-      Sail.sailThrough(-1);
+      sailThrough(-1);
     });
     s.vdom.controls.appendChild(previous);
     s.vdom.controls.previous = previous;
@@ -630,7 +620,7 @@ Sail = {
     '<use xlink:href="' + s.symbols.next + '"></use>' +
     '</svg>';
     next.addEventListener('click', function() {
-      Sail.sailThrough(1);
+      sailThrough(1);
     });
     s.vdom.controls.appendChild(next);
     s.vdom.controls.next = next;
@@ -646,40 +636,40 @@ Sail = {
 
       var page = document.createElement('button');
       page.classList.add('sail-page');
-      page.addEventListener('click', Sail.sailTo.bind(null, i));
+      page.addEventListener('click', sailTo.bind(null, i));
       s.vdom.pages.appendChild(page);
       s.vdom.page.push(page);
     }
 
-  },
+  };
 
-  sailThrough: function(modifier) {
+  var sailThrough = function(modifier) {
 
     s.currentSlide += modifier;
 
-    Sail.sail(s.currentSlide);
+    sail(s.currentSlide);
 
-  },
+  };
 
-  sailTo: function(i) {
+  var sailTo = function(i) {
 
     s.currentSlide = i;
 
-    Sail.sail(i);
+    sail(i);
 
-  },
+  };
 
-  sail: function(i) {
+  var sail = function(i) {
 
-    Sail.determineDisabledStates();
+    determineDisabledStates();
 
-    Sail.clearClasses();
+    clearClasses();
     s.slide[i].classList.add(s.activeSlideClass);
     s.vdom.page[i].classList.add(s.activePageClass);
 
-  },
+  };
 
-  determineDisabledStates: function() {
+  var determineDisabledStates = function() {
 
     if (s.currentSlide === 0) {
 
@@ -704,9 +694,9 @@ Sail = {
 
     }
 
-  },
+  };
 
-  clearClasses: function() {
+  var clearClasses = function() {
 
     for (var i = 0; i < s.slide.length; i++) {
 
@@ -715,53 +705,50 @@ Sail = {
 
     }
 
-  }
+  };
 
-};
+  return {
+    init: init
+  };
 
-/* ================
-// Trigger
-// ============= */
+})();
 
-var t,
-Trigger = {
+var Trigger = (function() {
 
-  settings: {
+  var s = {
     trigger: '.trigger',
     activeBodyClass: 'trigger-activated'
-  },
+  };
 
-  init: function(options) {
-
-    t = this.settings;
-
+  var init = function(options) {
     for (var key in options) {
       if (options.hasOwnProperty(key)) {
-        t[key] = options[key];
+        s[key] = options[key];
       }
     }
 
-    t.trigger = document.querySelector(t.trigger);
+    selectTrigger();
+  };
 
-    if(document.body.contains(t.trigger)) {
+  var selectTrigger = function() {
+    trigger = document.querySelector(s.trigger);
 
-      t.trigger.addEventListener('click', function() {
-        Trigger.activateTrigger(t.activeBodyClass);
-      });
-
+    if(document.body.contains(trigger)) {
+      trigger.addEventListener('click', activateTrigger);
     }
+  };
 
-  },
+  var activateTrigger = function() {
+  
+    document.body.classList.toggle(s.activeBodyClass);
 
-  activateTrigger: function(className) {
-    document.body.classList.toggle(className);
-  }
+  };
 
-};
+  return {
+    init: init
+  };
 
-/* ================
-// Main Site Anonymous Function
-// ============= */
+})();
 
 (function() {
 
