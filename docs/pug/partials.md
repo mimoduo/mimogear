@@ -1,4 +1,4 @@
-#Partials
+# Partials
 
 Pug partials serve as reusable blocks for your site. The content of a partial will never change. There are several starter partials to help jump start your pug development process:
 
@@ -24,7 +24,7 @@ In the case of adding a subfolder of pug pages, make sure to correct the path th
 include ../../partials/nav-main.pug
 ```
 
-##Navigation Partials
+## Navigation Partials
 
 Navigation in pug is automatically generated using manually entered data from configuration.json. When adding a new navigation partial, you'll also want to add a new representativ associative array in the links object of configuration.json:
 

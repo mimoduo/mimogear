@@ -1,4 +1,4 @@
-#Mixins
+# Mixins
 
 Mixins are a great way to take shortcuts with pug. The available Mimogear mixins are already included into the main template file.
 
@@ -8,7 +8,7 @@ Mixins are a great way to take shortcuts with pug. The available Mimogear mixins
 * `+section`: generates a section container given an optional class name
 * `+symbol`: generates an svg related to an svg in the site sprite
 
-##Adding a New Mixin
+## Adding a New Mixin
 
 To add a new mixin, first create a pug file within /src/pug/mixins/. The pug.js site contains some awesome documentation on [how to create and use a mixin](https://pugjs.org/language/mixins.html). After you've successfully created your mixin, make sure to add it to your desired template near the very top of the file:
 
@@ -18,7 +18,7 @@ include mixins/section.pug
 include mixins/new-mixin.pug
 ```
 
-##+image
+## +image
 
 The image mixin generates an image element given a file name, alt label, and an optional class name. The image path changes based on whether or not the files are being used in regular production or being deployed to gh-pages.
 
@@ -34,7 +34,7 @@ The image mixin generates an image element given a file name, alt label, and an 
 <img src="./dist/images/image.jpg" alt="A descriptive alt label" class="class-name" />
 ```
 
-##+section
+## +section
 
 The section mixin generates markup for a generic container given an optional class name parameter. By default it's a container element with a nested compartment that keeps content within a predefined boundary.
 
@@ -74,7 +74,7 @@ Sometimes you may need to modify a section beyond its default styling. By passin
 </div>
 ```
 
-##+symbol
+## +symbol
 
 The symbol mixin generates an svg symbol given the name of an imported svg. The result links with the automatically generated sprite.
 

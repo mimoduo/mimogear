@@ -1,8 +1,8 @@
-#Sail
+# Sail
 
 A sail is a slideshow of elements that allows the user to cycle through sets of content. It works based on a series of controllable active classes.
 
-##Quick Use
+## Quick Use
 
 To get started with sails, add in the following line inside the anonymous function found in /src/site/main.js:
 
@@ -24,7 +24,7 @@ ol.sail-slides
   li Four
 ```
 
-##Module Defaults
+## Module Defaults
 
 The following example shows the defaults for each of the available settings:
 
@@ -32,13 +32,13 @@ The following example shows the defaults for each of the available settings:
 
 ```js
 Sail.init({
-  slides: '.sail-slides', // Class String: The container for all slides
-  slide: '.sail-slides li', // Class String: The selector of each slide
-  symbols: {
-    previous: '#arrow-back', // Link String: The previous control svg
-    next: '#arrow-forward' // Link String: The next control svg
+  slides: '.sail-slides', // selector of the sail slideshow
+  slide: '.sail-slides li', // selector for each sail slide
+  symbols: { // svg symbols to append to slideshow controls
+    previous: '#arrow-back',
+    next: '#arrow-forward'
   },
-  activeSlideClass: 'sail-slide-active', // String: The class applied to an active slide
-  activePageClass: 'sail-page-active' // String: The class applied to an active page
+  activeSlideClass: 'sail-slide-active',
+  activePageClass: 'sail-page-active'
 })
 ```

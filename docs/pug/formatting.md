@@ -1,10 +1,10 @@
-#Formatting
+# Formatting
 
 Pug is a strict enforcer of its own language format. There is one forgiving aspect that will be addressed to help ensure consistency during production.
 
 **Make sure that you are writing using 2 spaces.** Pug will throw an error otherwise!
 
-##Multiple Attributes
+## Multiple Attributes
 
 If your element has multiple attributes, make sure they are entered on a new line, declared with double quotes, and separated without commas.
 

@@ -15,12 +15,9 @@ var Lantern = (function() {
   };
 
   var init = function(options) {
-
-    l = this.settings;
-
     for (var key in options) {
       if (options.hasOwnProperty(key)) {
-        l[key] = options[key];
+        s[key] = options[key];
       }
     }
 
@@ -30,7 +27,6 @@ var Lantern = (function() {
     if(document.body.contains(s.lantern)) {
       constructLantern();
     }
-
   };
 
   var constructLantern = function() {

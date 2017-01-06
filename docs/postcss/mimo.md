@@ -1,8 +1,8 @@
-#Mimo
+# Mimo
 
 The mimo partials refer to the grid, slideshow, lightbox, and mimo-theme available within Mimogear.
 
-##Grid
+## Grid
 
 The Mimogear grid system is setup using the [Postcss-simple-grid](https://github.com/iamfrntdv/postcss-simple-grid) module. Let's setup a grid example for the gamagori breakpoint (1200px):
 
@@ -48,11 +48,11 @@ To use these newly generated columns in your template, add a default column clas
     p Grid column content
 ```
 
-##Sail
+## Sail
 
 The sail partial contains styles that animate slides and help dictate mouse interaction. Make sure to style the previous control, next control, and pagination if they are in use.
 
-##Drawer
+## Drawer
 
 There are three mixins available within the drawer partial as well as default styles for the drawer and respective drawer trigger. By default the drawer will be translated 20% of itself to the left. The following example will demonstrate the use of the reset drawer mixins in order to display drawer content on larger screens in its original stacking order.
 
@@ -69,7 +69,7 @@ There are three mixins available within the drawer partial as well as default st
 }
 ```
 
-##Lantern
+## Lantern
 
 The lantern partial styles the lightbox, dictates recommended controller positions, and makes sure that images will fit properly within the viewport. It's possible to show the caption of an image by accessing the title attribute of the lantern-content:
 
@@ -84,6 +84,6 @@ The lantern partial styles the lightbox, dictates recommended controller positio
 }
 ```
 
-##Mimo Theme
+## Mimo Theme
 
 The mimo-theme styles the main index page that is shown by default. _This theme is safe to delete_ during production.

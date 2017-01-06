@@ -1,8 +1,8 @@
-#Elements
+# Elements
 
 Elements refer to standard html elements.
 
-##Forms
+## Forms
 
 * form
 * fieldset
@@ -15,7 +15,7 @@ Elements refer to standard html elements.
 * select
 * textarea
 
-##HTML
+## HTML
 
 * anchors
 * blockquotes
@@ -24,7 +24,7 @@ Elements refer to standard html elements.
 * paragraphs
 * tables
 
-##Media
+## Media
 
 * images
 * figures
@@ -43,7 +43,7 @@ The spotlight (also commonly referred to as the hero image) can be using by plac
   h1 Page Title
 ```
 
-##Sprite
+## Sprite
 
 The sprite partial is used to add a width and height for each symbol that is included in the generated svg sprite. The example below styles a symbol called "mage" with a given width and height. This selector should be nested within `.symbol {}` inside the sprite partial.
 
@@ -70,7 +70,7 @@ The sprite partial is used to add a width and height for each symbol that is inc
 }
 ```
 
-##Type
+## Type
 
 The type partial contains styles for headings 1-6. Each heading is styled using a respective mixin. By using a mixin, you are able to use these heading styles on elements that aren't headers.
 

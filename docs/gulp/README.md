@@ -1,8 +1,8 @@
-#Using Gulp in Mimogear
+# Using Gulp in Mimogear
 
 Gulp works in Mimogear by compiling stylesheets, compiling markup, concatenating and minifying javascript, creating a sprite, optimizing images, watching assets, and deploying files.
 
-##Running Gulp
+## Running Gulp
 
 Once you're all [setup](https://github.com/mimoduo/Mimogear/tree/master/docs), there's a default gulp task to get your started:
 
@@ -12,7 +12,7 @@ gulp
 
 **This will automatically open your browser to your site, compile all of your development assets within /src/, and watch for any file changes in the source /src/ folder.**
 
-##Advanced Gulp
+## Advanced Gulp
 
 There's an advanced gulp task that will minify assets to ready them for production. By using a flag, gulp will run tasks that normally wouldn't have run in the first place. This helps speed up development on your local machine. Simply pass in the `--production` flag to set an environment variable for gulp to use:
 
@@ -20,7 +20,7 @@ There's an advanced gulp task that will minify assets to ready them for producti
 gulp --production
 ```
 
-##Specific Gulp Commands
+## Specific Gulp Commands
 
 Sometimes you may want to build only a particular set of files or watch without building. In that case, there are several commands you can run. Tasks with `--production` towards the end indicate that the task will run minifying scripts.
 
@@ -36,7 +36,7 @@ gulp sprite
 gulp watch
 ```
 
-##Plugin List
+## Plugin List
 
 If you'd like to modify some of the pre-existing tasks in Mimogear, check out the complete plugin list below:
 

@@ -1,4 +1,4 @@
-#Utilities
+# Utilities
 
 There are several utility mixins available within Mimogear for use in production. These were included based on their frequent use and value regardless of the project.
 
@@ -12,7 +12,7 @@ There are several utility mixins available within Mimogear for use in production
 * `media`: calls a min-width media query
 * `enlarged-media`: calls a min-width and min-height media query
 
-##Accessibility
+## Accessibility
 
 There are two accessibility mixins both of which refer to visually hiding and unhiding elements from the page. By visually hiding an element, it will be rendered visible only to screen readers. An example of using both in tandem can be found on the skip link included by default into Mimogear. The following example visually hides the map-label and is then reset on focus.
 
@@ -48,7 +48,7 @@ There are two accessibility mixins both of which refer to visually hiding and un
 }
 ```
 
-##Clearfix
+## Clearfix
 
 The clearfix mixin prevents the collapse of any containers that have floated elements within them. The mimo grid uses the clearfix mixin as a fallback for floated columns. When using the clearfix mixin, make sure the mixin is declared within the after psuedo selector.
 
@@ -74,7 +74,7 @@ The clearfix mixin prevents the collapse of any containers that have floated ele
 }
 ```
 
-##Compartment
+## Compartment
 
 The compartment mixin ensures that a container will be horizontally centered and never exceed the maximum width specified. The compartment class, which makes use of the compartment mixin, is available within the sections partial. By default, the max-width parameter is the value of the site-boundary specified within configuration.js.
 
@@ -96,7 +96,7 @@ The compartment mixin ensures that a container will be horizontally centered and
 }
 ```
 
-##Cover
+## Cover
 
 The cover mixin is used to blanket an element on top of another element. Since position: relative is on every element by default, a cover will never flow outside its parent.
 
@@ -120,7 +120,7 @@ The cover mixin is used to blanket an element on top of another element. Since p
 }
 ```
 
-##Font Face
+## Font Face
 
 The font-face mixin helps include local font files into your project. To call a font file, make sure it is placed within dist/fonts/. There are 2 key parameters and 2 additional yet optional parameters.
 
@@ -150,7 +150,7 @@ The font-face mixin helps include local font files into your project. To call a 
 }
 ```
 
-##List Reset
+## List Reset
 
 The list-reset mixin is available to help reset the default browser styles of lists. The following example assumes the class of sorted-cards is either an ol or ul element.
 
@@ -173,7 +173,7 @@ The list-reset mixin is available to help reset the default browser styles of li
 }
 ```
 
-##Media Query
+## Media Query
 
 There are two available media query mixins for use within Mimogear, _media_ and _enlarged-media_.
 

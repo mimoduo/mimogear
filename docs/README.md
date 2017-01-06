@@ -41,7 +41,3 @@ Once you're all set with getting `gulp` to make its first big _gulp_. Either hea
 * For javascript development, start in the [javascript documentation](https://github.com/mimoduo/Mimogear/tree/master/docs/javascript)
 
 **Wondering where all those styles came from? You might want to delete the mimo-theme found in /src/postcss/mimo/**
-
-##Readying Deployment
-
-[See Deployment section for getting set up with github and travis ci](http://blog.crushingpennies.com/a-static-site-generator-with-gulp-proseio-and-travis-ci.html)

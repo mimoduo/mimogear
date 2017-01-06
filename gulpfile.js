@@ -226,13 +226,7 @@ gulp.task('browser-sync', function() {
 // Deploy Task
 // ============= */
 
-gulp.task('deploy', [
-  'images',
-  'sprite',
-  'postcss',
-  'js',
-  'pug'
-], function() {
+gulp.task('deploy', ['build'], function() {
 
   return gulp.src('./dist/**/*')
     .pipe(deploy());
@@ -257,15 +251,19 @@ gulp.task('watch', function() {
 
 
 /* ================
-// Default Gulp Task
+// Gulp Task Sets
 // ============= */
 
-gulp.task('default', [
+gulp.task('build', [
   'images',
   'sprite',
   'postcss',
   'js',
-  'pug',
+  'pug'
+]);
+
+gulp.task('default', [
+  'build',
   'watch',
   'browser-sync'
 ]);

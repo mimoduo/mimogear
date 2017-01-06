@@ -1,8 +1,8 @@
-#Lantern
+# Lantern
 
 A lantern is a lightbox that allows the user to see an enlarged picture after interacting with a smaller thumbnail. It works but grabbing the data from identifiable lantern images and then cycling through that set of data.
 
-##Quick Use
+## Quick Use
 
 To get started with lanterns, add in the following line inside the anonymous function found in /src/site/main.js:
 
@@ -28,7 +28,7 @@ img.lantern-light(
 .lantern
 ```
 
-##Module Defaults
+## Module Defaults
 
 The following example shows the defaults for each of the available settings:
 
@@ -36,13 +36,13 @@ The following example shows the defaults for each of the available settings:
 
 ```js
 Lantern.init({
-  lantern: '.lantern', // Class String: The selector of the lantern content container
-  lanternLights: '.lantern-light', // Class String: The class of the image to inject into the lantern content container
+  lantern: '.lantern', // selector of lantern container
+  lanternLights: '.lantern-light', // class of injected image
   symbols: {
-    previous: '#arrow-back', // Link String: The previous control svg in lantern view
-    next: '#arrow-forward', // Link String: The next control svg in lantern view
-    close: '#close' // Link String: The close control svg in lantern view
+    previous: '#arrow-back', // previous control svg symbol
+    next: '#arrow-forward', // next control svg symbol
+    close: '#close' // close control svg symbol
   },
-  activeClass: 'lantern-visible' // String: The class applied to an active lantern
+  activeClass: 'lantern-visible' // class to apply to a visible lantern
 });
 ```
