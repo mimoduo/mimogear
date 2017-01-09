@@ -33,11 +33,11 @@ Navigation in pug is automatically generated using manually entered data from co
   "mainNav": [],
   "newNav": [
     {
-      "href": "https://github.com/mimoduo/Mimogear",
+      "href": "https://github.com/mimoduo/mimogear",
       "name": "View on Github"
     },
     {
-      "href": "https://github.com/mimoduo/Mimogear/tree/master/docs",
+      "href": "https://github.com/mimoduo/mimogear/tree/master/docs",
       "name": "Documentation"
     }
   ]

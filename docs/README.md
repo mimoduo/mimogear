@@ -36,8 +36,8 @@ gulp --production
 
 Once you're all set with getting `gulp` to make its first big _gulp_. Either head over to the /src/ folder if you're getting jittery reading all this and start cracking away at development, or check out Mimogear's /src/ documentation using the list below:
 
-* For CSS (using postcss) development, start in the [postcss documentation](https://github.com/mimoduo/Mimogear/tree/master/docs/postcss)
-* For HTML (using pug) development, start in the [pug documentation](https://github.com/mimoduo/Mimogear/tree/master/docs/pug)
-* For javascript development, start in the [javascript documentation](https://github.com/mimoduo/Mimogear/tree/master/docs/javascript)
+* For CSS (using postcss) development, start in the [postcss documentation](https://github.com/mimoduo/mimogear/tree/master/docs/postcss)
+* For HTML (using pug) development, start in the [pug documentation](https://github.com/mimoduo/mimogear/tree/master/docs/pug)
+* For javascript development, start in the [javascript documentation](https://github.com/mimoduo/mimogear/tree/master/docs/javascript)
 
 **Wondering where all those styles came from? You might want to delete the mimo-theme found in /src/postcss/mimo/**

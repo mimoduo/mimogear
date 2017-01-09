@@ -4,7 +4,7 @@ Gulp works in Mimogear by compiling stylesheets, compiling markup, concatenating
 
 ## Running Gulp
 
-Once you're all [setup](https://github.com/mimoduo/Mimogear/tree/master/docs), there's a default gulp task to get your started:
+Once you're all [setup](https://github.com/mimoduo/mimogear/tree/master/docs), there's a default gulp task to get your started:
 
 ```sh
 gulp
@@ -26,13 +26,12 @@ Sometimes you may want to build only a particular set of files or watch without 
 
 ```sh
 gulp pug
-gulp pug --production
 gulp postcss
-gulp postcss --production
 gulp js
-gulp js --production
 gulp images
 gulp sprite
+gulp ghPages
+gulp surge
 gulp watch
 ```
 
@@ -54,6 +53,7 @@ If you'd like to modify some of the pre-existing tasks in Mimogear, check out th
 * [**gulp-postcss**](https://github.com/postcss/gulp-postcss) / [official site](http://postcss.org/)
 * [**gulp-pug**](https://github.com/jamen/gulp-pug)
 * [**gulp-pug-inheritance**](https://github.com/pure180/gulp-pug-inheritance)
+* [**gulp-surge**](https://github.com/surge-sh/gulp-surge)
 * [**gulp-svg-sprite**](https://github.com/jkphl/gulp-svg-sprite)
 * [**gulp-uglify**](https://github.com/terinjokes/gulp-uglify)
 * [**gulp-util**](https://github.com/gulpjs/gulp-util)
@@ -65,3 +65,4 @@ If you'd like to modify some of the pre-existing tasks in Mimogear, check out th
 * [**postcss-nesting**](https://github.com/jonathantneal/postcss-nesting)
 * [**postcss-simple-grid**](https://github.com/iamfrntdv/postcss-simple-grid)
 * [**postcss-simple-vars**](https://github.com/postcss/postcss-simple-vars)
+* [**surge**](https://github.com/sintaxi/surge)

@@ -2,7 +2,7 @@
 
 # Mimogear
 
-[![Build Status](https://travis-ci.org/mimoduo/Mimogear.svg?branch=master)](https://travis-ci.org/mimoduo/Mimogear)
+[![Build Status](https://travis-ci.org/mimoduo/mimogear.svg?branch=master)](https://travis-ci.org/mimoduo/mimogear)
 
 > A dead simple static site generator and web development boilerplate
 
@@ -32,13 +32,13 @@ npm install gulp-cli -g
 gulp
 ```
 
-After that your project will open up in a browser window automatically and you're ready to get started in developing html:pug, css:postcss, and javascript. Head over to /src/ to see your shiny new development boilerplate! If you're feeling stuck, check out [/docs/](https://github.com/mimoduo/Mimogear/tree/master/docs).
+After that your project will open up in a browser window automatically and you're ready to get started in developing html:pug, css:postcss, and javascript. Head over to /src/ to see your shiny new development boilerplate! If you're feeling stuck, check out [/docs/](https://github.com/mimoduo/mimogear/tree/master/docs).
 
 ## Share Your Sites Using Mimogear
 
 If you have used Mimogear and you'd love to share it here, feel free to create a pull request and add it to the list below:
 
-* [mimogear](http://mimoduo.github.io/Mimogear/)
+* [mimogear](http://mimoduo.github.io/mimogear/)
 
 ## Thank You, Everyone!
 

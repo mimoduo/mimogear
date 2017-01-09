@@ -2,7 +2,7 @@ var El = (function() {
 
   var s = {
     kind: 'div',
-    className: 'generated'
+    class: 'generated'
   };
 
   /* Run through user settings and compare with El settings */
@@ -20,7 +20,13 @@ var El = (function() {
 
     var newEl = document.createElement(s.kind);
 
-    newEl.classList.add(s.className);
+    if (Array.isArray(s.class)) {
+      s.class.forEach(function(className) {
+        newEl.classList.add(className);
+      });
+    } else {
+      newEl.classList.add(s.class);
+    }
 
     if (s.type) newEl.type = s.type;
     if (s.value) newEl.value = s.value;
@@ -31,6 +37,8 @@ var El = (function() {
         newEl.setAttribute(attr.toString(), s.attributes[attr]);
       }
     }
+
+    if (s.on) newEl.addEventListener(s.on[0], s.on[1], false);
 
     return newEl;
   };

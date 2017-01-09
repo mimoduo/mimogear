@@ -19,7 +19,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
     svgSprite = require('gulp-svg-sprite'),
-    deploy = require('gulp-gh-pages');
+    ghPages = require('gulp-gh-pages'),
+    surge = require('gulp-surge');
 
 
 /* ================
@@ -223,19 +224,33 @@ gulp.task('browser-sync', function() {
 
 
 /* ================
-// Deploy Task
+// Github Pages Deployment
 // ============= */
 
-gulp.task('deploy', ['build'], function() {
+gulp.task('ghPages', ['build'], function() {
 
   return gulp.src('./dist/**/*')
-    .pipe(deploy());
+    .pipe(ghPages());
 
-})
+});
 
 
 /* ================
-// Watch Task
+// Surge Direct Deployment
+// ============= */
+
+gulp.task('surge', ['build'], function() {
+
+  return surge({
+    project: './',
+    domain: 'mimogear.surge.sh'
+  });
+
+});
+
+
+/* ================
+// Watch Files
 // ============= */
 
 gulp.task('watch', function() {

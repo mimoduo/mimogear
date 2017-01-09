@@ -158,7 +158,9 @@ $s2: #9E9E9E;
 
       }
 
-      .symbol {
+    }
+
+      .action-link-symbol {
         display: block;
         margin: 0 auto;
 
@@ -168,8 +170,6 @@ $s2: #9E9E9E;
         }
 
       }
-
-    }
 
       .action-link-label {
         display: none;
@@ -276,7 +276,6 @@ $s2: #9E9E9E;
             $m4,
             $m3 100%
         );
-      border-radius: 0;
       transform:
         rotate(-45deg)
         scale(0);
@@ -421,14 +420,14 @@ $s2: #9E9E9E;
     &:hover {
       filter: drop-shadow(0 rem(3) 0 $m2);
 
-      > .symbol {
+      .call-to-action-symbol {
 
         &:nth-child(-n+2) {
-          transform: translate(-50%, 0);
+          transform: translate(-75%, 0);
         }
 
         &:nth-child(n+4) {
-          transform: translate(50%, 0);
+          transform: translate(75%, 0);
         }
 
       }
@@ -439,16 +438,16 @@ $s2: #9E9E9E;
 
     }
 
-    .symbol {
+  }
+
+    .call-to-action-symbol {
       transition: transform .25s;
 
       &-github {
         font-size: 200%;
       }
-
+      
     }
-
-  }
 
     .call-to-action-bubble {
       display: inline-block;
@@ -485,7 +484,9 @@ $s2: #9E9E9E;
       font-size: em(26);
     }
 
-    a {
+  }
+
+    .summary-link {
       color: inherit;
       transition: color .25s;
 
@@ -495,8 +496,6 @@ $s2: #9E9E9E;
       }
 
     }
-
-  }
 
     .summary-name {
       font-weight: 700;
@@ -523,6 +522,26 @@ $s2: #9E9E9E;
           $m1,
           $m2 100%
       );
+
+    &:before {
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      height: em(50);
+      width: em(50);
+      margin-bottom: em(-10);
+      content: '';
+      background:
+        linear-gradient(
+          -45deg,
+            $m1,
+            $m2 100%
+        );
+      transform:
+        translate(-50%, 50%)
+        rotate(45deg);
+    }
+
   }
 
     .terminal-pillow {
@@ -533,7 +552,7 @@ $s2: #9E9E9E;
       .code-pillow {
         overflow: hidden;
         overflow-x: auto;
-        border: em(1) solid $s2;
+        border: em(1) solid $m1;
         border-top-width: em(10);
         padding: em(10);
       }

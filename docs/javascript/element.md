@@ -10,7 +10,7 @@ To get started with Element, add in the following line inside the anonymous func
 
 ```js
 var newEl = El.create({
-  className: "my-class"
+  className: 'my-class'
 });
 ```
 
@@ -28,14 +28,15 @@ The following example shows a complete use case for the Element function:
 
 ```js
 var newEl = El.create({
-  kind: "p", // kind of element you're creating
-  className: "my-class", // class of the new el
-  type: "text", // type of input
-  value: "value of input", // value of the input
-  innerHTML: "Lots of Text", // any html to add into new el
-  attributes: { // an object of attribute: "value" pairs to add to new el
-    anyLabel: "value of attribute",
-    anotherLabel: "value of attribute"
-  }
+  kind: 'p', // kind of element you're creating
+  class: 'my-class', // class of the new el, accepts an array of classes as well
+  type: 'text', // type of input
+  value: 'value of input', // value of the input
+  innerHTML: 'Lots of Text', // any html to add into new el
+  attributes: { // an object of attribute: 'value' pairs to add to new el
+    anyLabel: 'value of attribute',
+    anotherLabel: 'value of attribute'
+  },
+  on: ['click', functionToRun] // array: 'event', function
 })
 ```
