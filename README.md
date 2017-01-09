@@ -16,10 +16,11 @@ After looking through all the cool static site generators out there, you may hav
 
 ## Highlights
 
-* Full asset compilation, distribution, watch, and deployment
-* Complete pug boilerplate for generating html files
-* Clean skeleton postcss boilerplate for quick css development
-* Thoroughly tested javascript components
+* Full asset compilation, distribution, and watch using [gulp](http://gulpjs.com/)
+* Deployment setup for [gh-pages](https://pages.github.com/), [surge.sh](https://surge.sh/), and [netlify](https://www.netlify.com/)
+* Complete [pug](https://pugjs.org/api/getting-started.html) boilerplate for generating html files
+* Clean skeleton [postcss](http://postcss.org/) boilerplate for quick css development
+* Starter javascript components
 
 ## Installation
 
@@ -27,8 +28,8 @@ Mimogear uses _node package manager_ in order to download all of the necessary b
 
 ```sh
 cd <folder-of-Mimogear> (drag the folder into your terminal)
-npm install
 npm install gulp-cli -g
+npm install
 gulp
 ```
 
