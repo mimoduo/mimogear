@@ -10,7 +10,7 @@ To get started with Element, add in the following line inside the anonymous func
 
 ```js
 var newEl = El.create({
-  className: 'my-class'
+  class: 'my-class'
 });
 ```
 

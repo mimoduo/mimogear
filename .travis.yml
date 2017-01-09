@@ -4,7 +4,7 @@ branches:
 language: node_js
 node_js: stable
 install:
-  - npm install -g gulp
+  - npm install gulp-cli -g
   - npm install
 before_script:
   - git remote set-url origin "https://${GH_TOKEN}@github.com/mimoduo/mimogear.git"

@@ -14,7 +14,7 @@ var El = (function() {
     }
   };
 
-  /* Create a new element given a set of options */
+  /* Create a new element given an object of options */
   var create = function(options) {
     override(options);
 
