@@ -12,17 +12,17 @@ gulp
 
 **This will automatically open your browser to your site, compile all of your development assets within /src/, and watch for any file changes in the source /src/ folder.**
 
-## Advanced Gulp
+## Running Optional Gulp Flags
 
-There's an advanced gulp task that will minify assets to ready them for production. By using a flag, gulp will run tasks that normally wouldn't have run in the first place. This helps speed up development on your local machine. Simply pass in the `--production` flag to set an environment variable for gulp to use:
+There are a few flags available within gulp to help with deployment and speed up development. These can be added to a `gulp` command but for development only purposes they can be excluded.
 
-```sh
-gulp --production
-```
+* `--base`: tells pug to look in the root
+* `--min`: tells pug to look for minified assets
+* `--production`: tells gulp to run production facing minification tasks
 
 ## Specific Gulp Commands
 
-Sometimes you may want to build only a particular set of files or watch without building. In that case, there are several commands you can run. Tasks with `--production` towards the end indicate that the task will run minifying scripts.
+Sometimes you may want to build only a particular set of files or watch without building. In that case, there are several tasks you can run.
 
 ```sh
 gulp pug

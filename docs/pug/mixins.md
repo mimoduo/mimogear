@@ -113,7 +113,7 @@ The symbol mixin can also be nested within other elements.
 </div>
 ```
 
-Sometimes you may need to modify a symbol beyond its default styling. By passing in an extra string parameter, separated by a comma, the symbol mixin will generate an alternate class.
+Sometimes you may need to modify a symbol beyond its default styling. By passing in an extra string parameter, separated by a comma, the symbol mixin will generate an additional class.
 
 **Pug**
 

@@ -4,7 +4,7 @@ A lantern is a lightbox that allows the user to see an enlarged picture after in
 
 ## Quick Use
 
-To get started with lanterns, add in the following line inside the anonymous function found in /src/site/main.js:
+To get started with Lantern, add in the following line inside the anonymous function found in /src/site/main.js:
 
 **Javascript**
 

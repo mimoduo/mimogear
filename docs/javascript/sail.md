@@ -4,7 +4,7 @@ A sail is a slideshow of elements that allows the user to cycle through sets of 
 
 ## Quick Use
 
-To get started with sails, add in the following line inside the anonymous function found in /src/site/main.js:
+To get started with Sail, add in the following line inside the anonymous function found in /src/site/main.js:
 
 **Javascript**
 

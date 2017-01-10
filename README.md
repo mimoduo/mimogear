@@ -18,13 +18,19 @@ After looking through all the cool static site generators out there, you may hav
 
 * Full asset compilation, distribution, and watch using [gulp](http://gulpjs.com/)
 * Deployment setup for [gh-pages](https://pages.github.com/), [surge.sh](https://surge.sh/), and [netlify](https://www.netlify.com/)
-* Complete [pug](https://pugjs.org/api/getting-started.html) boilerplate for generating html files
+* Complete [pug](https://pugjs.org/api/getting-started.html) template boilerplate, with Markdown support, for generating html files
 * Clean skeleton [postcss](http://postcss.org/) boilerplate for quick css development
 * Starter javascript components
 
 ## Installation
 
-Mimogear uses _node package manager_ in order to download all of the necessary build dependencies. If you haven't downloaded node before, head over to [node.js](https://nodejs.org/en/) to download the latest version of node. Once you've installed node and have downloaded Mimogear, let's `cd` into the project directory and then download our dependencies using a terminal:
+Before we start setting up Mimogear, make sure you've copied over Mimogear from github:
+
+* [download mimogear.zip](https://github.com/mimoduo/mimogear/archive/master.zip)
+* use https://github.com/mimoduo/mimogear.git to clone with a git program
+* type `git clone https://github.com/mimoduo/mimogear.git` in your terminal
+
+After successfully cloning Mimogear, we'll need to download _node.js_ from [node's website](https://nodejs.org/en/) to help with managing Mimogear's dependencies:
 
 ```sh
 cd <folder-of-Mimogear> (drag the folder into your terminal)
@@ -33,7 +39,7 @@ npm install
 gulp
 ```
 
-After that your project will open up in a browser window automatically and you're ready to get started in developing html:pug, css:postcss, and javascript. Head over to /src/ to see your shiny new development boilerplate! If you're feeling stuck, check out [/docs/](https://github.com/mimoduo/mimogear/tree/master/docs).
+After that your project will open up in a browser window automatically and you're ready to get started in developing html:pug, css:postcss, and javascript. Check out /src/ to see your shiny new development boilerplate! If you're feeling stuck, check out [/docs/](https://github.com/mimoduo/mimogear/tree/master/docs).
 
 ## Share Your Sites Using Mimogear
 

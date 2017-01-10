@@ -13,13 +13,14 @@
     "url": "https://github.com/mimoduo/mimogear/issues"
   },
   "keywords": [
-    "mimogear",
     "mimoduo",
+    "mimogear",
     "static site generator",
-    "starter kit",
     "boilerplate",
+    "starter kit",
     "gulp",
     "pug",
+    "markdown",
     "postcss"
   ],
   "devDependencies": {
@@ -40,6 +41,7 @@
     "gulp-surge": "^0.1.0",
     "gulp-svg-sprite": "^1.3.6",
     "gulp-uglify": "^2.0.0",
+    "jstransformer-markdown": "^1.1.1",
     "minimist": "^1.2.0",
     "postcss-discard-empty": "^2.1.0",
     "postcss-easy-import": "^1.0.1",

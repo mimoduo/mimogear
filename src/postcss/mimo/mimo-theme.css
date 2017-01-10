@@ -22,11 +22,6 @@ $s2: #9E9E9E;
     font-weight: 300;
   }
 
-  h2,
-  h3 {
-    font-weight: 400;
-  }
-
   h1 {
     margin: 0;
     font-size: 15vmin;
@@ -37,11 +32,13 @@ $s2: #9E9E9E;
   h2 {
     margin: 0 0 2vmin;
     font-size: 6.85vmin;
+    font-weight: 400;
   }
 
   h3 {
     margin-top: 0;
     font-size: em(28);
+    font-weight: 700;
   }
 
   .lead {
@@ -409,6 +406,7 @@ $s2: #9E9E9E;
     display: inline-block;
     margin-bottom: em(60);
     font-size: 80%;
+    font-weight: normal;
     color: inherit;
     transition: filter .25s;
 
@@ -446,7 +444,7 @@ $s2: #9E9E9E;
       &-github {
         font-size: 200%;
       }
-      
+
     }
 
     .call-to-action-bubble {
@@ -514,7 +512,7 @@ $s2: #9E9E9E;
     max-width: rem(640);
     margin-right: auto;
     margin-left: auto;
-    padding: em(10);
+    padding: em(15);
     text-align: left;
     background:
       linear-gradient(
@@ -527,9 +525,9 @@ $s2: #9E9E9E;
       position: absolute;
       bottom: 100%;
       left: 50%;
-      height: em(50);
-      width: em(50);
-      margin-bottom: em(-10);
+      height: em(60);
+      width: em(60);
+      margin-bottom: em(-15);
       content: '';
       background:
         linear-gradient(

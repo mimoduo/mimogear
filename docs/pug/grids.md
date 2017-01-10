@@ -23,23 +23,3 @@ The mimogear grid system is setup using the [Postcss-simple-grid](https://github
 
 }
 ```
-
-By calling the create-grid property, postcss-simple-grid will then automatically compile the resulting css containing widths for 12 columns:
-
-**CSS Output**
-
-```css
-@media screen and (min-width: 1200px) {
-
-  .column-gamagori-1 {
-    width: 8.33333%;
-  }
-
-  /* ...generated rules for columns 2-11... */
-
-  .column-gamagori-12 {
-    width: 100%;
-  }
-
-}
-```

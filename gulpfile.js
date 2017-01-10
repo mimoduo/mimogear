@@ -29,20 +29,15 @@ var gulp = require('gulp'),
 
 var site = 'dist/';
 
-var options = minimist(process.argv.slice(2));
-
-var files = './' + site,
+var base = './' + site,
     min = '',
     production = false;
 
-if (options.base) {
-  files = './';
-  min = '.min';
-}
+var options = minimist(process.argv.slice(2));
 
-if (options.production) {
-  production = true;
-}
+if (options.base) base = './';
+if (options.min) min = '.min';
+if (options.production) production = true;
 
 
 /* ================
@@ -65,8 +60,8 @@ gulp.task('pug', function() {
         siteTitle: packageJSON.name,
         siteDescription: packageJSON.description,
         siteLinks: configuration.links,
-        base: files,
-        deployMin: min
+        base: base,
+        min: min
       },
       pretty: true
     }))
@@ -242,7 +237,7 @@ gulp.task('ghPages', ['build'], function() {
 gulp.task('surge', ['build'], function() {
 
   return surge({
-    project: './',
+    project: './dist/',
     domain: 'mimogear.surge.sh'
   });
 

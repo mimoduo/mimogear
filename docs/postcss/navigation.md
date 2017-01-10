@@ -2,7 +2,7 @@
 
 Each postcss navigation partial should refer to its respective pug partial. This makes navigation changes easier down the road.
 
-**If you're wondering where the nav links are coming from, they are populated using date from configuration.json.**
+**Wondering where the nav links are coming from? They are populated using data from configuration.json.**
 
 ## Behaviors
 
