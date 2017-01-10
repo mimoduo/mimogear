@@ -753,11 +753,6 @@ template {
   font-weight: 300;
 }
 
-.mimo-theme h2,
-  .mimo-theme h3 {
-  font-weight: 400;
-}
-
 .mimo-theme h1 {
   margin: 0;
   font-size: 15vmin;
@@ -768,11 +763,13 @@ template {
 .mimo-theme h2 {
   margin: 0 0 2vmin;
   font-size: 6.85vmin;
+  font-weight: 400;
 }
 
 .mimo-theme h3 {
   margin-top: 0;
   font-size: 1.75em;
+  font-weight: 700;
 }
 
 .mimo-theme .lead {
@@ -1259,6 +1256,7 @@ template {
   display: inline-block;
   margin-bottom: 3.75em;
   font-size: 80%;
+  font-weight: normal;
   color: inherit;
   -webkit-transition: -webkit-filter .25s;
   transition: -webkit-filter .25s;
@@ -1365,7 +1363,7 @@ template {
   max-width: 40rem;
   margin-right: auto;
   margin-left: auto;
-  padding: 0.625em;
+  padding: 0.9375em;
   text-align: left;
   background:
       -webkit-linear-gradient(
@@ -1385,9 +1383,9 @@ template {
   position: absolute;
   bottom: 100%;
   left: 50%;
-  height: 3.125em;
-  width: 3.125em;
-  margin-bottom: -0.625em;
+  height: 3.75em;
+  width: 3.75em;
+  margin-bottom: -0.9375em;
   content: '';
   background:
         -webkit-linear-gradient(
