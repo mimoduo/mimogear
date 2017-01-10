@@ -24,13 +24,15 @@ After looking through all the cool static site generators out there, you may hav
 
 ## Installation
 
-Before we start setting up Mimogear, make sure you've copied over Mimogear from github:
+Before we start setting up Mimogear, make sure you've cloned Mimogear from github:
 
 * [download mimogear.zip](https://github.com/mimoduo/mimogear/archive/master.zip)
 * use https://github.com/mimoduo/mimogear.git to clone with a git program
 * type `git clone https://github.com/mimoduo/mimogear.git` in your terminal
 
-After successfully cloning Mimogear, we'll need to download _node.js_ from [node's website](https://nodejs.org/en/) to help with managing Mimogear's dependencies:
+After successfully cloning Mimogear, we'll need to download _node.js_ from [node's website](https://nodejs.org/en/) to help with managing Mimogear's dependencies.
+
+Now that we have all the goodies ready for us, open up your terminal and enter in the following:
 
 ```sh
 cd <folder-of-Mimogear> (drag the folder into your terminal)
@@ -39,11 +41,11 @@ npm install
 gulp
 ```
 
-After that your project will open up in a browser window automatically and you're ready to get started in developing html:pug, css:postcss, and javascript. Check out /src/ to see your shiny new development boilerplate! If you're feeling stuck, check out [/docs/](https://github.com/mimoduo/mimogear/tree/master/docs).
+Your site will open up in a browser window automatically and you're ready to get started in developing html:pug, css:postcss, and javascript. Check out /src/ to see your shiny new development boilerplate! If you're feeling stuck, check out [/docs/](https://github.com/mimoduo/mimogear/tree/master/docs).
 
 ## Share Your Sites Using Mimogear
 
-If you have used Mimogear and you'd love to share it here, feel free to create a pull request and add it to the list below:
+If you have built a site with Mimogear and you'd love to share it here, feel free to create a pull request and add it to the list below:
 
 * [mimogear](http://mimoduo.github.io/mimogear/)
 

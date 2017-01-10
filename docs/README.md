@@ -10,7 +10,9 @@ Before we start setting up Mimogear, make sure you've cloned Mimogear from githu
 * use https://github.com/mimoduo/mimogear.git to clone with a git program
 * type `git clone https://github.com/mimoduo/mimogear.git` in your terminal
 
-After successfully cloning Mimogear, we'll need to download _node.js_ from [node's website](https://nodejs.org/en/) to help with managing Mimogear's dependencies:
+After successfully cloning Mimogear, we'll need to download _node.js_ from [node's website](https://nodejs.org/en/) to help with managing Mimogear's dependencies.
+
+Now that we have all the goodies ready for us, open up your terminal and enter in the following:
 
 ```sh
 cd <folder-of-Mimogear> (drag the folder into your terminal)
@@ -32,7 +34,7 @@ npm install gulp-cli -g
 gulp
 ```
 
-**This will automatically open your browser to your site, compile all of your development assets within /src/, and watch for any file changes in the source /src/ folder.**
+**Gulp will automatically open your browser to your site, compile all of your development assets within /src/, and watch for any file changes in the source /src/ folder.**
 
 ## Beginning Development
 
