@@ -19,17 +19,15 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
     svgSprite = require('gulp-svg-sprite'),
-    ghPages = require('gulp-gh-pages'),
-    surge = require('gulp-surge');
+    ghPages = require('gulp-gh-pages');
 
 
 /* ================
 // Setup Environment
 // ============= */
 
-var site = 'dist/';
-
-var base = './' + site,
+var dist = 'dist/',
+    base = './' + dist,
     min = '',
     production = false;
 
@@ -47,7 +45,7 @@ if (options.production) production = true;
 gulp.task('pug', function() {
 
   return gulp.src('src/pug/pages/**/*.pug')
-    .pipe(changed(site, {
+    .pipe(changed(dist, {
       extension: '.html'
     }))
     .pipe(cached('pug'))
@@ -66,7 +64,7 @@ gulp.task('pug', function() {
       pretty: true
     }))
     .pipe(gulp.dest('./'))
-    .pipe(gulpif(production, gulp.dest(site)))
+    .pipe(gulpif(production, gulp.dest(dist)))
     .pipe(browserSync.stream());
 
 });
@@ -119,11 +117,11 @@ gulp.task('postcss', function() {
       }),
       require('postcss-discard-empty')
     ]))
-    .pipe(gulp.dest(site + 'css'))
+    .pipe(gulp.dest(dist + 'css'))
     .pipe(browserSync.stream())
     .pipe(gulpif(production, cssnano()))
     .pipe(gulpif(production, extReplace('.min.css')))
-    .pipe(gulpif(production, gulp.dest(site + 'css')))
+    .pipe(gulpif(production, gulp.dest(dist + 'css')))
     .pipe(gulpif(production, browserSync.stream()));
 
 });
@@ -141,13 +139,13 @@ gulp.task('js', function() {
     'src/js/site/*.js'
   ])
     .pipe(concat('site.js'))
-    .pipe(gulp.dest(site + 'js'))
+    .pipe(gulp.dest(dist + 'js'))
     .pipe(browserSync.stream())
     .pipe(gulpif(production, uglify({
       mangle: false
     })))
     .pipe(gulpif(production, extReplace('.min.js')))
-    .pipe(gulpif(production, gulp.dest(site + 'js')))
+    .pipe(gulpif(production, gulp.dest(dist + 'js')))
     .pipe(gulpif(production, browserSync.stream()));
 
 });
@@ -160,9 +158,9 @@ gulp.task('js', function() {
 gulp.task('images', function() {
 
   return gulp.src('src/images/*')
-    .pipe(changed(site + 'images'))
+    .pipe(changed(dist + 'images'))
     .pipe(imagemin())
-    .pipe(gulp.dest(site + 'images'))
+    .pipe(gulp.dest(dist + 'images'))
     .pipe(browserSync.stream());
 
 });
@@ -179,7 +177,7 @@ gulp.task('sprite', function() {
       mode: {
         inline: true,
         symbol: {
-          dest: site
+          dest: dist
         }
       },
       svg: {

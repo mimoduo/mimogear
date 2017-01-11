@@ -40,5 +40,5 @@ Sail.init({
   },
   activeSlideClass: 'sail-slide-active',
   activePageClass: 'sail-page-active'
-})
+});
 ```

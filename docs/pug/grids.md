@@ -1,6 +1,6 @@
 # Grids
 
-The mimogear grid system is setup using the [Postcss-simple-grid](https://github.com/iamfrntdv/postcss-simple-grid) module. Let's setup a grid example for the gamagori breakpoint (1200px):
+The Mimogear grid system is setup using the [Postcss-simple-grid](https://github.com/iamfrntdv/postcss-simple-grid) module. Let's setup a grid example for the gamagori breakpoint (1200px):
 
 **Pug**
 

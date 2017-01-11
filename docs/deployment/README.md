@@ -1,6 +1,6 @@
 # Deployments
 
-Mimogear integrates with gh-pages, netlify, and surge for hosting deployments. Travis CI is used to trigger builds and deployments. Most of the setup required to host and deploy can be a little tricky but Mimogear aims to make it as simple as possible.
+Mimogear integrates with [github pages](https://pages.github.com/), [surge.sh]((https://surge.sh/)), and [netlify](https://www.netlify.com/) for hosting deployments. [Travis CI](https://travis-ci.org/) is used to trigger builds and deployments meaning Mimogear works well with [Prose.io](http://prose.io/). Most of the setup required to host and deploy can be a little tricky but Mimogear aims to make it as simple as possible. Of course, feel free to choose the service that works for you.
 
 ## Creating Oauth Tokens
 

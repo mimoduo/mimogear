@@ -1,13 +1,13 @@
 # Pages
 
-Pug pages are the bread, butter, and markup of your site. The default pages (index.pug, starter.pug, and style-guide.pug) extend the default site template and pass in extra content via `block main`.
+Pug pages are the bread, butter, and markup of your site. The default pages (index.pug, starter.pug, and style-guide.pug) extend the default site template and pass in extra content via `block content`.
 
 ## Adding in Content
 
-To add content and component markup to your page, simply pass in content to `block main`. This content will be nested directly into the main element of your site in the same place as main is written in your site template. You'll also find examples of this written in the default pug pages.
+To add content and component markup to your page, simply pass in content to `block content`. This content will be nested directly into the main element of your site in the same place as main is written in your site template. You'll also find examples of this written in the default pug pages.
 
 ```pug
-block main
+block content
   p Any pug code can be nested here
 ```
 
@@ -16,7 +16,7 @@ block main
 Mimogear include jstransformer-markdown to add the ability to write content in Markdown. Any content nested in the `:markdown` filter will then be compiled to HTML.
 
 ```pug
-block main
+block content
   :markdown
     # A Big Header
     A simple paragraph with a [link](http://google.com)

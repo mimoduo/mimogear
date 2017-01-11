@@ -16,7 +16,7 @@ gulp
 
 There are a few flags available within gulp to help with deployment and speed up development. These can be added to a `gulp` command but for development only purposes they can be excluded.
 
-* `--base`: tells pug to look in the root
+* `--base`: tells pug to look in the root file path
 * `--min`: tells pug to look for minified assets
 * `--production`: tells gulp to run production facing minification tasks
 
@@ -57,6 +57,7 @@ If you'd like to modify some of the pre-existing tasks in Mimogear, check out th
 * [**gulp-svg-sprite**](https://github.com/jkphl/gulp-svg-sprite)
 * [**gulp-uglify**](https://github.com/terinjokes/gulp-uglify)
 * [**gulp-util**](https://github.com/gulpjs/gulp-util)
+* [**jstransformer-markdown**](https://github.com/jstransformers/jstransformer-markdown)
 * [**minimist**](https://github.com/substack/minimist)
 * [**postcss-discard-empty**](https://github.com/ben-eb/postcss-discard-empty)
 * [**postcss-easy-import**](https://github.com/TrySound/postcss-easy-import)

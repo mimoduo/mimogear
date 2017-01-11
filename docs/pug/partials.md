@@ -8,15 +8,13 @@ Pug partials serve as reusable blocks for your site. The content of a partial wi
 * Social Nav: uses `"socialNav"` data from configuration.json
 * Table
 
-In order to include a partial onto a page, you'll need to use pug's include functionality.
+To add a partial onto a page, use pug's `include` function:
 
 **Base Level**
 
 ```pug
 include ../partials/nav-main.pug
 ```
-
-In the case of adding a subfolder of pug pages, make sure to correct the path the include function looks for.
 
 **Within 1 Subfolder**
 
@@ -26,7 +24,7 @@ include ../../partials/nav-main.pug
 
 ## Navigation Partials
 
-Navigation in pug is automatically generated using manually entered data from configuration.json. When adding a new navigation partial, you'll also want to add a new representativ associative array in the links object of configuration.json:
+Navigation in pug is generated using manually entered data from configuration.json. Whenever you make a new navigation array, make sure it follows the same associative array pattern as the others:
 
 ```json
 "links": {
@@ -44,7 +42,7 @@ Navigation in pug is automatically generated using manually entered data from co
 }
 ```
 
-Then you'll be able to use this new data in your newly created navigation partial using the `siteLinks` object:
+After adding in a new associative array, you'll be able to use this new data in your newly created navigation partial using the `siteLinks` object:
 
 ```pug
 ol
@@ -54,10 +52,4 @@ ol
         href=link.href
         itemprop="url"
       )= link.name
-```
-
-The following example shows the navigation partial being included on a page. A working example can be found within the header region under src/pug/regions/header.pug.
-
-```pug
-include ../partials/nav-main.pug
 ```

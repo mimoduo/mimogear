@@ -4,7 +4,7 @@ Mimogear uses gulp-gh-pages to help push to the gh-pages branch of your github r
 
 ## Direct Deployment
 
-Deploying sites directly to gh-pages can be accomplished through the command line rather than through Travis CI:
+Deploying sites directly to the gh-pages branch can be accomplished through the command line rather than through Travis CI:
 
 ```sh
 gulp ghPages --base --min --production

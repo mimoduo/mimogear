@@ -38,5 +38,5 @@ var newEl = El.create({
     anotherLabel: 'value of attribute'
   },
   on: ['click', functionToRun] // array: 'event', function
-})
+});
 ```
