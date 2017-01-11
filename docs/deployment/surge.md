@@ -7,7 +7,7 @@ Mimogear integrates with surge using a surge cli, gulp-surge, and Travis CI.
 Deploying sites directly to domain.surge.sh can be accomplished through the command line rather through Travis CI. Make sure to change the domain in .travis.yml before you run this task.
 
 ```sh
-gulp surge --min --production
+gulp surge --base --min --production
 ```
 
 ## Travis CI Deployment

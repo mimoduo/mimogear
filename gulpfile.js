@@ -19,7 +19,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
     svgSprite = require('gulp-svg-sprite'),
-    ghPages = require('gulp-gh-pages');
+    ghPages = require('gulp-gh-pages'),
+    surge = require('gulp-surge');
 
 
 /* ================
@@ -42,7 +43,28 @@ if (options.production) production = true;
 // Compile Pug
 // ============= */
 
+var pugLocals = {
+  siteTitle: packageJSON.name,
+  siteDescription: packageJSON.description,
+  siteLinks: configuration.links,
+  base: base,
+  min: min
+};
+
 gulp.task('pug', function() {
+
+  return gulp.src('src/pug/pages/**/*.pug')
+    .pipe(pug({
+      locals: pugLocals,
+      pretty: true
+    }))
+    .pipe(gulp.dest('./'))
+    .pipe(gulpif(production, gulp.dest(dist)))
+    .pipe(browserSync.stream());
+
+});
+
+gulp.task('pug-pages', function() {
 
   return gulp.src('src/pug/pages/**/*.pug')
     .pipe(changed(dist, {
@@ -54,17 +76,10 @@ gulp.task('pug', function() {
       skip: 'node_modules'
     }))
     .pipe(pug({
-      locals: {
-        siteTitle: packageJSON.name,
-        siteDescription: packageJSON.description,
-        siteLinks: configuration.links,
-        base: base,
-        min: min
-      },
+      locals: pugLocals,
       pretty: true
     }))
     .pipe(gulp.dest('./'))
-    .pipe(gulpif(production, gulp.dest(dist)))
     .pipe(browserSync.stream());
 
 });
@@ -235,7 +250,7 @@ gulp.task('ghPages', ['build'], function() {
 gulp.task('surge', ['build'], function() {
 
   return surge({
-    project: './dist/',
+    project: './dist',
     domain: 'mimogear.surge.sh'
   });
 
@@ -248,8 +263,8 @@ gulp.task('surge', ['build'], function() {
 
 gulp.task('watch', function() {
 
-  gulp.watch('src/pug/template.pug', ['pug']);
-  gulp.watch('src/pug/**/*.pug', ['pug']);
+  gulp.watch(['src/pug/**/*.pug', '!src/pug/pages/**/*.pug'], ['pug']);
+  gulp.watch('src/pug/pages/**/*.pug', ['pug-pages']);
   gulp.watch('src/postcss/**/*.css', ['postcss']);
   gulp.watch('src/js/**/*.js', ['js']);
   gulp.watch('src/images/*', ['images']);
