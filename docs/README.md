@@ -23,7 +23,7 @@ npm install
 
 Now that you've downloaded all of the dependencies, let's take a moment to setup configuration.json. Here you'll find a complete list of variables used in Mimogear.
 
-**The "links": {} object passes data to pug to help generate your site's navigation markup**
+**The "links": {} object passes data to pug to help generate your site's navigation markup.**
 
 ## Running Gulp
 
@@ -34,7 +34,7 @@ npm install gulp-cli -g
 gulp
 ```
 
-**Gulp will automatically open your browser to your site, compile all of your development assets within /src/, and watch for any file changes in the source /src/ folder.**
+**Gulp will automatically open your browser to your site, compile all of your development assets within /src/, and watch for any file changes in the /src/ folder.**
 
 ## Beginning Development
 
@@ -44,4 +44,4 @@ Once you're all set with getting `gulp` to make its first big _gulp_. Either hea
 * [HTML:Pug documentation](https://github.com/mimoduo/mimogear/tree/master/docs/pug)
 * [Javascript documentation](https://github.com/mimoduo/mimogear/tree/master/docs/javascript)
 
-**Wondering where all those styles came from? You might want to delete the mimo-theme found in /src/postcss/mimo/**
+**Wondering where all those styles came from? You might want to delete the mimo-theme found in the /src/postcss/mimo/ folder.**

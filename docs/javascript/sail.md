@@ -1,6 +1,6 @@
 # Sail
 
-A sail is a slideshow of elements that allows the user to cycle through sets of content. It works based on a series of controllable active classes.
+A sail is a slideshow of elements that allows the user to cycle through sets of content.
 
 ## Quick Use
 
@@ -33,12 +33,8 @@ The following example shows the defaults for each of the available settings:
 ```js
 Sail.init({
   slides: '.sail-slides', // selector of the sail slideshow
-  slide: '.sail-slides li', // selector for each sail slide
-  symbols: { // svg symbols to append to slideshow controls
-    previous: '#arrow-back',
-    next: '#arrow-forward'
-  },
-  activeSlideClass: 'sail-slide-active',
-  activePageClass: 'sail-page-active'
+  slide: 'li', // selector for each sail slide
+  previous: '#arrow-back', // svg symbol for the previous control
+  next: '#arrow-forward' // svg symbol for the next control
 });
 ```

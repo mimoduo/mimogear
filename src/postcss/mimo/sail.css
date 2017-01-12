@@ -2,38 +2,22 @@
 // Sail Slideshow
 // ============= */
 
-@define-mixin active-slide {
-  position: relative;
-  pointer-events: auto;
-  opacity: 1;
-  visibility: visible;
+.sail {
+  overflow: hidden;
 }
 
-.sail-slides {
-  @mixin list-reset;
-}
+  .sail-slides {
+    @mixin list-reset;
 
-  .sail-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    pointer-events: none;
-    opacity: 0;
-    visibility: hidden;
-    transition:
-      opacity .5s,
-      visibility .5s;
-
-    @media print {
-      @mixin active-slide;
-    }
-
-    &-active {
-      @mixin active-slide;
-    }
-
+    white-space: nowrap;
+    transition: transform .5s;
   }
+
+    .sail-slide {
+      display: inline-block;
+      width: 100%;
+      margin-right: em(-5);
+    }
 
 
 /* ================
@@ -51,13 +35,6 @@
 
   .sail-control {
     cursor: pointer;
-
-    &:not([disabled]):focus,
-    &:not([disabled]):hover {}
-
-    &[disabled] {
-      cursor: not-allowed;
-    }
 
     &-previous {}
 

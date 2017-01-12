@@ -129,7 +129,7 @@ $s2: #9E9E9E;
       text-align: center;
       text-decoration: none;
       color: inherit;
-      transition: background .25s;
+      transition: color .25s;
 
       @mixin media $small {
         padding: em(15, 14) em(30, 14);
@@ -145,6 +145,11 @@ $s2: #9E9E9E;
         color: $s2;
         filter: none;
         transform: translate(50%, -50%);
+      }
+
+      &:focus,
+      &:hover {
+        color: $m1;
       }
 
       &:last-child {
@@ -559,5 +564,21 @@ $s2: #9E9E9E;
           display: block;
           white-space: nowrap;
         }
+
+}
+
+
+/* ================
+// Ad
+// ============= */
+
+.mimo-theme {
+
+  .ad-pillow {
+    overflow: hidden;
+    max-width: rem(640);
+    margin-right: auto;
+    margin-left: auto;
+  }
 
 }

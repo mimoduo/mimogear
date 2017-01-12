@@ -842,8 +842,8 @@ template {
   text-align: center;
   text-decoration: none;
   color: inherit;
-  -webkit-transition: background .25s;
-  transition: background .25s;
+  -webkit-transition: color .25s;
+  transition: color .25s;
 }
 
 @media screen and (min-width: 500px) {
@@ -865,6 +865,11 @@ template {
   filter: none;
   -webkit-transform: translate(50%, -50%);
   transform: translate(50%, -50%);
+}
+
+.mimo-theme .action-link:focus,
+      .mimo-theme .action-link:hover {
+  color: #0277BD;
 }
 
 .mimo-theme .action-link:last-child:after {
@@ -1426,48 +1431,42 @@ template {
 }
 
 /* ================
+// Ad
+// ============= */
+
+.mimo-theme .ad-pillow {
+  overflow: hidden;
+  max-width: 40rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* ================
 // Sail Slideshow
 // ============= */
 
-.sail-slides {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style: none;
+.sail {
+  overflow: hidden;
 }
+
+.sail-slides {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+
+    white-space: nowrap;
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
+  }
 
 .sail-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    pointer-events: none;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: opacity .5s,
-      visibility .5s;
-    transition:
-      opacity .5s,
-      visibility .5s;
-
-  }
-
-@media print {
-
-  .sail-slide {
-    position: relative;
-    pointer-events: auto;
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-.sail-slide-active {
-  position: relative;
-  pointer-events: auto;
-  opacity: 1;
-  visibility: visible;
-}
+      display: inline-block;
+      width: 100%;
+      margin-right: -0.3125em;
+    }
 
 /* ================
 // Sail Controls
@@ -1492,10 +1491,6 @@ template {
     cursor: pointer;
 
   }
-
-.sail-control[disabled] {
-  cursor: not-allowed;
-}
 
 /* ================
 // Sail Pagination

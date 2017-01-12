@@ -2,16 +2,12 @@ var Sail = (function() {
 
   var s = {
     slides: '.sail-slides',
-    slide: '.sail-slides li',
-    currentSlide: 0,
-    symbols: {
-      previous: '#arrow-back',
-      next: '#arrow-forward'
-    },
-    vdom: {},
-    activeSlideClass: 'sail-slide-active',
-    activePageClass: 'sail-page-active'
+    slide: 'li',
+    previous: '#arrow-back',
+    next: '#arrow-forward'
   };
+
+  var currentSlide = 0;
 
   var init = function(options) {
     for (var key in options) {
@@ -20,132 +16,124 @@ var Sail = (function() {
       }
     }
 
+    s.slide = document.querySelectorAll(s.slides + ' ' + s.slide);
     s.slides = document.querySelector(s.slides);
-    s.slide = document.querySelectorAll(s.slide);
 
     if(document.body.contains(s.slides)) {
 
       constructSail();
-      sailTo(s.currentSlide);
+      constructControls();
+      constructPager();
+      detailSlides();
+      shift(0);
 
     }
   };
 
   var constructSail = function() {
+    s.sail = document.createElement('div');
+    s.sail.classList.add('sail');
 
+    s.slides.parentNode.insertBefore(s.sail, s.slides);
+
+    s.sail.appendChild(s.slides);
+  };
+
+  var detailSlides = function() {
+    for (var i = 0; i < s.slide.length; i++) {
+      s.slide[i].classList.add('sail-slide');
+    }
+  };
+
+  var constructControls = function() {
     var controls = document.createElement('div');
     controls.classList.add('sail-controls');
-    s.slides.appendChild(controls);
-    s.vdom.controls = controls;
 
     var previous = document.createElement('button');
     previous.classList.add('sail-control');
     previous.classList.add('sail-control-previous');
-    previous.innerHTML = '<svg class="symbol symbol-sail symbol-sail-previous">' +
-    '<use xlink:href="' + s.symbols.previous + '"></use>' +
-    '</svg>';
-    previous.addEventListener('click', function() {
-      sailThrough(-1);
-    });
-    s.vdom.controls.appendChild(previous);
-    s.vdom.controls.previous = previous;
+    previous.innerHTML = '<svg class="symbol symbol-sail-previous"><use xlink:href="' + s.previous + '"></use></svg>';
+    previous.addEventListener('click', shift.bind(null, 'previous'), false);
 
     var next = document.createElement('button');
     next.classList.add('sail-control');
     next.classList.add('sail-control-next');
-    next.innerHTML = '<svg class="symbol symbol-sail symbol-sail-next">' +
-    '<use xlink:href="' + s.symbols.next + '"></use>' +
-    '</svg>';
-    next.addEventListener('click', function() {
-      sailThrough(1);
-    });
-    s.vdom.controls.appendChild(next);
-    s.vdom.controls.next = next;
+    next.innerHTML = '<svg class="symbol symbol-sail-next"><use xlink:href="' + s.next + '"></use></svg>';
+    next.addEventListener('click', shift.bind(null, 'next'), false);
 
-    var pages = document.createElement('div');
-    pages.classList.add('sail-pages');
-    s.slides.appendChild(pages);
-    s.vdom.pages = pages;
-    s.vdom.page = [];
+    controls.appendChild(previous);
+    controls.appendChild(next);
+    s.sail.appendChild(controls);
+  };
+
+  var constructPager = function() {
+    var pager = document.createElement('div');
+    pager.classList.add('sail-pager');
+
+    s.pages = [];
 
     for (var i = 0; i < s.slide.length; i++) {
-      s.slide[i].classList.add('sail-slide');
-
       var page = document.createElement('button');
       page.classList.add('sail-page');
-      page.addEventListener('click', sailTo.bind(null, i));
-      s.vdom.pages.appendChild(page);
-      s.vdom.page.push(page);
+      page.addEventListener('click', shift.bind(null, i), false);
+      s.pages.push(page);
+      pager.appendChild(page);
     }
 
+    s.sail.appendChild(pager);
   };
 
-  var sailThrough = function(modifier) {
-
-    s.currentSlide += modifier;
-
-    sail(s.currentSlide);
-
-  };
-
-  var sailTo = function(i) {
-
-    s.currentSlide = i;
-
-    sail(i);
-
-  };
-
-  var sail = function(i) {
-
-    determineDisabledStates();
-
-    clearClasses();
-    s.slide[i].classList.add(s.activeSlideClass);
-    s.vdom.page[i].classList.add(s.activePageClass);
-
-  };
-
-  var determineDisabledStates = function() {
-
-    if (s.currentSlide === 0) {
-
-      s.vdom.controls.previous.disabled = true;
-      s.vdom.controls.previous.setAttribute('aria-disabled', 'true');
-      s.vdom.controls.next.disabled = false;
-      s.vdom.controls.next.setAttribute('aria-disabled', 'false');
-
-    } else if (s.currentSlide < s.slide.length - 1) {
-
-      s.vdom.controls.previous.disabled = false;
-      s.vdom.controls.previous.setAttribute('aria-disabled', 'false');
-      s.vdom.controls.next.disabled = false;
-      s.vdom.controls.next.setAttribute('aria-disabled', 'false');
-
-    } else if (s.currentSlide == s.slide.length - 1) {
-
-      s.vdom.controls.previous.disabled = false;
-      s.vdom.controls.previous.setAttribute('aria-disabled', 'false');
-      s.vdom.controls.next.disabled = true;
-      s.vdom.controls.next.setAttribute('aria-disabled', 'true');
-
+  var shift = function(type) {
+    if(type == 'previous' && currentSlide > 0) {
+      currentSlide--;
+    } else if(type == 'next' && currentSlide < s.slide.length - 1) {
+      currentSlide++;
+    } else if(Number.isInteger(type)) {
+      currentSlide = type;
     }
 
+    var move = currentSlide * -100 + '%';
+    s.slides.setAttribute('style', '-webkit-transform: translate(' + move + ', 0); transform: translate(' + move + ', 0);');
+
+    activateSlides(currentSlide);
   };
 
-  var clearClasses = function() {
+  var deactivateSlides = function() {
+    for (var i = 0; i < s.slide.length; i++) {
+      s.slide[i].classList.remove('sail-slide-previous');
+      s.slide[i].classList.remove('sail-slide-active');
+      s.slide[i].classList.remove('sail-slide-next');
+
+      s.pages[i].classList.remove('sail-page-previous');
+      s.pages[i].classList.remove('sail-page-active');
+      s.pages[i].classList.remove('sail-page-next');
+    }
+  };
+
+  var activateSlides = function(slide) {
+    deactivateSlides();
 
     for (var i = 0; i < s.slide.length; i++) {
+      if(i == slide) {
+        if(i >= 1) {
+          s.slide[i - 1].classList.add('sail-slide-previous');
+          s.pages[i - 1].classList.add('sail-page-previous');
+        }
 
-      s.slide[i].classList.remove(s.activeSlideClass);
-      s.vdom.page[i].classList.remove(s.activePageClass);
+        s.slide[i].classList.add('sail-slide-active');
+        s.pages[i].classList.add('sail-page-active');
 
+        if(i < s.slide.length) {
+          s.slide[i + 1].classList.add('sail-slide-next');
+          s.pages[i + 1].classList.add('sail-page-next');
+        }
+      }
     }
-
   };
 
   return {
-    init: init
+    init: init,
+    shift: shift
   };
 
 })();
