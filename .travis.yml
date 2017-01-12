@@ -7,7 +7,7 @@ install:
   - npm install gulp-cli -g
   - npm install
 before_script:
-  - git remote set-url origin "https://${GITHUB_TOKEN}@github.com/mimoduo/mimogear.git"
+  - git remote set-url origin "https://$GITHUB_TOKEN@github.com/mimoduo/mimogear.git"
   - git config --global user.email "mimoduo@gmail.com"
   - git config --global user.name "Travis-CI"
 script:
