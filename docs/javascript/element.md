@@ -22,7 +22,7 @@ var newEl = El.create({
 
 ## Module Defaults
 
-The following example shows a complete use case for the Element function:
+The following example shows a complete set of options within Element:
 
 **Javascript**
 

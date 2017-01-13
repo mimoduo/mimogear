@@ -738,6 +738,8 @@ template {
 .lantern-close {
       top: 0;
       right: 0;
+      -webkit-transform: none;
+      transform: none;
     }
 
 /* ================
@@ -755,32 +757,17 @@ template {
 
 .mimo-theme h1 {
   margin: 0;
-  font-size: 15vmin;
   font-weight: 700;
-  letter-spacing: 0.125em;
 }
 
 .mimo-theme h2 {
-  margin: 0 0 2vmin;
-  font-size: 6.85vmin;
-  font-weight: 400;
+  margin: 0;
 }
 
 .mimo-theme h3 {
-  margin-top: 0;
+  margin: 0;
   font-size: 1.75em;
   font-weight: 700;
-}
-
-.mimo-theme .lead {
-  letter-spacing: 0.0625em;
-}
-
-@media screen and (min-width: 500px) {
-
-  .mimo-theme .lead {
-    letter-spacing: 0.15625em;
-  }
 }
 
 /* ================
@@ -908,7 +895,7 @@ template {
 
 .mimo-theme .section-intro {
   overflow: hidden;
-  padding: 2.5em 0.625em;
+  padding: 2.5em 1.25em;
   text-align: center;
 }
 
@@ -1002,8 +989,8 @@ template {
 
 .mimo-theme .site-flare {
   z-index: 2;
-  height: 3.4375em;
-  width: 3.4375em;
+  height: 2.8125em;
+  width: 2.8125em;
   margin: 0 auto;
   -webkit-animation: spin-flare 1.5s forwards;
   animation: spin-flare 1.5s forwards;
@@ -1071,8 +1058,8 @@ template {
             50% 50%,
               ellipse,
               #0277BD,
-              #64FFDA 0.9375em,
-              transparent 0.9375em
+              #64FFDA 0.75em,
+              transparent 0.75em
           ),
           -webkit-linear-gradient(
             65deg,
@@ -1083,8 +1070,8 @@ template {
           radial-gradient(
             ellipse at 50% 50%,
               #0277BD,
-              #64FFDA 0.9375em,
-              transparent 0.9375em
+              #64FFDA 0.75em,
+              transparent 0.75em
           ),
           linear-gradient(
             25deg,
@@ -1247,10 +1234,56 @@ template {
 // Site Name
 // ============= */
 
+.mimo-theme .site-name {
+  font-size: 15vmin;
+  letter-spacing: 0.125em;
+}
+
+@media screen and (min-width: 500px) {
+
+  .mimo-theme .site-name {
+    font-size: 4.6875em;
+  }
+}
+
+@media screen and (min-width: 700px) {
+
+  .mimo-theme .site-name {
+    font-size: 5.875em;
+  }
+}
+
 .mimo-theme .site-link {
   text-decoration: none;
   text-shadow: 0 0.1875rem 0 #64FFDA;
   color: inherit;
+}
+
+/* ================
+// Lead
+// ============= */
+
+.mimo-theme .lead {
+  margin: 0 0 0.3125em;
+  font-size: 6.85vmin;
+  letter-spacing: 0.15625em;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 500px) {
+
+  .mimo-theme .lead {
+    font-size: 2.1875em;
+    letter-spacing: 0.15714285714285714em;
+  }
+}
+
+@media screen and (min-width: 700px) {
+
+  .mimo-theme .lead {
+    font-size: 2.625em;
+    letter-spacing: 0.16666666666666666em;
+  }
 }
 
 /* ================
@@ -1330,18 +1363,23 @@ template {
 // ============= */
 
 .mimo-theme .summary {
-  max-width: 40rem;
   width: 100%;
   margin: 0 auto 1.25rem;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
   font-size: 1.25em;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
 
   .mimo-theme .summary {
-    font-size: 1.625em;
+    max-width: 25rem;
+    font-size: 1.4375em;
+  }
+}
+
+@media screen and (min-width: 700px) {
+
+  .mimo-theme .summary {
+    max-width: 30.625rem;
   }
 }
 

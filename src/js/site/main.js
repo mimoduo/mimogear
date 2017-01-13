@@ -1,8 +1,8 @@
 (function() {
 
-  Trigger.init({
+  var drawerTrigger = Trigger.init({
     trigger: '.drawer-trigger',
-    activeBodyClass: 'drawer-activated'
+    bodyClass: 'drawer-activated'
   });
 
   Lantern.init();

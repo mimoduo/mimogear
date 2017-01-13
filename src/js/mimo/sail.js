@@ -1,6 +1,7 @@
 var Sail = (function() {
 
-  var s = {
+  var s = {};
+  var o = {
     slides: '.sail-slides',
     slide: 'li',
     previous: '#arrow-back',
@@ -10,6 +11,8 @@ var Sail = (function() {
   var currentSlide = 0;
 
   var init = function(options) {
+    s = o;
+
     for (var key in options) {
       if (options.hasOwnProperty(key)) {
         s[key] = options[key];
@@ -20,6 +23,8 @@ var Sail = (function() {
     s.slides = document.querySelector(s.slides);
 
     if(document.body.contains(s.slides)) {
+
+      currentSlide = 0;
 
       constructSail();
       constructControls();

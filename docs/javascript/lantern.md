@@ -30,7 +30,7 @@ img.lantern-light(
 
 ## Module Defaults
 
-The following example shows the defaults for each of the available settings:
+The following example shows a complete set of options within Lantern:
 
 **Javascript**
 
@@ -38,11 +38,9 @@ The following example shows the defaults for each of the available settings:
 Lantern.init({
   lantern: '.lantern', // selector of lantern container
   lanternLights: '.lantern-light', // class of injected image
-  symbols: {
-    previous: '#arrow-back', // previous control svg symbol
-    next: '#arrow-forward', // next control svg symbol
-    close: '#close' // close control svg symbol
-  },
+  previous: '#arrow-back', // previous control svg symbol
+  next: '#arrow-forward', // next control svg symbol
+  close: '#close' // close control svg symbol
   activeClass: 'lantern-visible' // class to apply to a visible lantern
 });
 ```

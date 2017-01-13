@@ -1,20 +1,21 @@
 var Lantern = (function() {
 
-  var s = {
+  var s = {};
+  var o = {
     lantern: '.lantern',
     lanternLights: '.lantern-light',
     lightCollection: [],
     lightIndex: 0,
-    symbols: {
-      previous: '#arrow-back',
-      next: '#arrow-forward',
-      close: '#close'
-    },
+    previous: '#arrow-back',
+    next: '#arrow-forward',
+    close: '#close',
     vdom: {},
     activeClass: 'lantern-visible'
   };
 
   var init = function(options) {
+    s = o;
+
     for (var key in options) {
       if (options.hasOwnProperty(key)) {
         s[key] = options[key];
@@ -45,7 +46,7 @@ var Lantern = (function() {
     previous.classList.add('lantern-control');
     previous.classList.add('lantern-previous');
     previous.innerHTML = '<svg class="symbol symbol-lantern symbol-lantern-previous">' +
-    '<use xlink:href="' + s.symbols.previous + '"></use>' +
+    '<use xlink:href="' + s.previous + '"></use>' +
     '</svg>';
     previous.addEventListener('click', function() {
       previousLight();
@@ -57,7 +58,7 @@ var Lantern = (function() {
     next.classList.add('lantern-control');
     next.classList.add('lantern-next');
     next.innerHTML = '<svg class="symbol symbol-lantern symbol-lantern-next">' +
-    '<use xlink:href="' + s.symbols.next + '"></use>' +
+    '<use xlink:href="' + s.next + '"></use>' +
     '</svg>';
     next.addEventListener('click', function() {
       nextLight();
@@ -69,7 +70,7 @@ var Lantern = (function() {
     close.classList.add('lantern-control');
     close.classList.add('lantern-close');
     close.innerHTML = '<svg class="symbol symbol-lantern symbol-lantern-close">' +
-    '<use xlink:href="' + s.symbols.close + '"></use>' +
+    '<use xlink:href="' + s.close + '"></use>' +
     '</svg>';
     close.addEventListener('click', function() {
       removeLight();

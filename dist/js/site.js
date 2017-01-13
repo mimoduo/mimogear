@@ -398,13 +398,16 @@ defineElementGetter(Element.prototype, 'classList', function () {
 
 var El = (function() {
 
-  var s = {
+  var s = {};
+  var o = {
     kind: 'div',
     class: 'generated'
   };
 
   /* Run through user settings and compare with El settings */
   var override = function(options) {
+    s = o;
+
     for (var key in options) {
       if (options.hasOwnProperty(key)) {
         s[key] = options[key];
@@ -449,21 +452,22 @@ var El = (function() {
 
 var Lantern = (function() {
 
-  var s = {
+  var s = {};
+  var o = {
     lantern: '.lantern',
     lanternLights: '.lantern-light',
     lightCollection: [],
     lightIndex: 0,
-    symbols: {
-      previous: '#arrow-back',
-      next: '#arrow-forward',
-      close: '#close'
-    },
+    previous: '#arrow-back',
+    next: '#arrow-forward',
+    close: '#close',
     vdom: {},
     activeClass: 'lantern-visible'
   };
 
   var init = function(options) {
+    s = o;
+
     for (var key in options) {
       if (options.hasOwnProperty(key)) {
         s[key] = options[key];
@@ -494,7 +498,7 @@ var Lantern = (function() {
     previous.classList.add('lantern-control');
     previous.classList.add('lantern-previous');
     previous.innerHTML = '<svg class="symbol symbol-lantern symbol-lantern-previous">' +
-    '<use xlink:href="' + s.symbols.previous + '"></use>' +
+    '<use xlink:href="' + s.previous + '"></use>' +
     '</svg>';
     previous.addEventListener('click', function() {
       previousLight();
@@ -506,7 +510,7 @@ var Lantern = (function() {
     next.classList.add('lantern-control');
     next.classList.add('lantern-next');
     next.innerHTML = '<svg class="symbol symbol-lantern symbol-lantern-next">' +
-    '<use xlink:href="' + s.symbols.next + '"></use>' +
+    '<use xlink:href="' + s.next + '"></use>' +
     '</svg>';
     next.addEventListener('click', function() {
       nextLight();
@@ -518,7 +522,7 @@ var Lantern = (function() {
     close.classList.add('lantern-control');
     close.classList.add('lantern-close');
     close.innerHTML = '<svg class="symbol symbol-lantern symbol-lantern-close">' +
-    '<use xlink:href="' + s.symbols.close + '"></use>' +
+    '<use xlink:href="' + s.close + '"></use>' +
     '</svg>';
     close.addEventListener('click', function() {
       removeLight();
@@ -610,7 +614,8 @@ var Lantern = (function() {
 
 var Sail = (function() {
 
-  var s = {
+  var s = {};
+  var o = {
     slides: '.sail-slides',
     slide: 'li',
     previous: '#arrow-back',
@@ -620,6 +625,8 @@ var Sail = (function() {
   var currentSlide = 0;
 
   var init = function(options) {
+    s = o;
+
     for (var key in options) {
       if (options.hasOwnProperty(key)) {
         s[key] = options[key];
@@ -630,6 +637,8 @@ var Sail = (function() {
     s.slides = document.querySelector(s.slides);
 
     if(document.body.contains(s.slides)) {
+
+      currentSlide = 0;
 
       constructSail();
       constructControls();
@@ -750,33 +759,48 @@ var Sail = (function() {
 
 var Trigger = (function() {
 
-  var s = {
-    trigger: '.trigger',
-    activeBodyClass: 'trigger-activated'
+  var s = {};
+  var o = {
+    toggle: true,
+    remove: false
   };
 
   var init = function(options) {
+    s = o;
+
     for (var key in options) {
       if (options.hasOwnProperty(key)) {
         s[key] = options[key];
       }
     }
 
-    selectTrigger();
+    s.element = document.querySelector(s.trigger);
+
+    if(document.body.contains(s.element)) setupTrigger();
+
+    return s;
   };
 
-  var selectTrigger = function() {
-    trigger = document.querySelector(s.trigger);
+  var setupTrigger = function() {
+    s.element.addEventListener('click', distributeClasses, false);
+  };
 
-    if(document.body.contains(trigger)) {
-      trigger.addEventListener('click', activateTrigger);
+  var distributeClasses = function() {
+    if(s.toggle) {
+      if(s.class) s.element.classList.toggle(s.class);
+      if(s.bodyClass) document.body.classList.toggle(s.bodyClass);
+      if(s.parentClass) s.element.parentNode.classList.toggle(s.parentClass);
+    } else {
+      if(s.class) s.element.classList.add(s.class);
+      if(s.bodyClass) document.body.classList.add(s.bodyClass);
+      if(s.parentClass) s.element.parentNode.classList.add(s.parentClass);
     }
-  };
 
-  var activateTrigger = function() {
-  
-    document.body.classList.toggle(s.activeBodyClass);
-
+    if(s.remove) {
+      if(s.target.class) s.target.trigger.classList.remove(s.target.class);
+      if(s.target.bodyClass) document.body.classList.remove(s.target.bodyClass);
+      if(s.target.parentClass) s.target.trigger.parentNode.classList.remove(s.target.parentClass);
+    }
   };
 
   return {
@@ -787,9 +811,9 @@ var Trigger = (function() {
 
 (function() {
 
-  Trigger.init({
+  var drawerTrigger = Trigger.init({
     trigger: '.drawer-trigger',
-    activeBodyClass: 'drawer-activated'
+    bodyClass: 'drawer-activated'
   });
 
   Lantern.init();

@@ -24,30 +24,17 @@ $s2: #9E9E9E;
 
   h1 {
     margin: 0;
-    font-size: 15vmin;
     font-weight: 700;
-    letter-spacing: em(2);
   }
 
   h2 {
-    margin: 0 0 2vmin;
-    font-size: 6.85vmin;
-    font-weight: 400;
+    margin: 0;
   }
 
   h3 {
-    margin-top: 0;
+    margin: 0;
     font-size: em(28);
     font-weight: 700;
-  }
-
-  .lead {
-    letter-spacing: em(1);
-
-    @mixin media $small {
-      letter-spacing: em(2.5);
-    }
-
   }
 
 }
@@ -197,7 +184,7 @@ $s2: #9E9E9E;
 
     &-intro {
       overflow: hidden;
-      padding: em(40) em(10);
+      padding: em(40) em(20);
       text-align: center;
 
       @mixin media $big {
@@ -268,8 +255,8 @@ $s2: #9E9E9E;
 
     .site-flare {
       z-index: 2;
-      height: em(55);
-      width: em(55);
+      height: em(45);
+      width: em(45);
       margin: 0 auto;
       animation: spin-flare 1.5s forwards;
       background:
@@ -313,8 +300,8 @@ $s2: #9E9E9E;
           radial-gradient(
             ellipse at 50% 50%,
               $m1,
-              $m2 em(15),
-              transparent em(15)
+              $m2 em(12),
+              transparent em(12)
           ),
           linear-gradient(
             25deg,
@@ -392,10 +379,51 @@ $s2: #9E9E9E;
 
 .mimo-theme {
 
-  .site-link {
-    text-decoration: none;
-    text-shadow: 0 rem(3) 0 $m2;
-    color: inherit;
+  .site-name {
+    font-size: 15vmin;
+    letter-spacing: em(2);
+
+    @mixin media $small {
+      font-size: em(75);
+    }
+
+    @mixin media $big {
+      font-size: em(94);
+    }
+
+  }
+
+    .site-link {
+      text-decoration: none;
+      text-shadow: 0 rem(3) 0 $m2;
+      color: inherit;
+    }
+
+}
+
+
+/* ================
+// Lead
+// ============= */
+
+.mimo-theme {
+
+  .lead {
+    margin: 0 0 em(5);
+    font-size: 6.85vmin;
+    letter-spacing: em(2.5);
+    white-space: nowrap;
+
+    @mixin media $small {
+      font-size: em(35);
+      letter-spacing: em(5.5, 35);
+    }
+
+    @mixin media $big {
+      font-size: em(42);
+      letter-spacing: em(7, 42);
+    }
+
   }
 
 }
@@ -476,15 +504,17 @@ $s2: #9E9E9E;
 .mimo-theme {
 
   .summary {
-    max-width: rem(640);
     width: 100%;
     margin: 0 auto rem(20);
-    padding-right: rem(10);
-    padding-left: rem(10);
     font-size: em(20);
 
-    @mixin media $medium {
-      font-size: em(26);
+    @mixin media $small {
+      max-width: rem(400);
+      font-size: em(23);
+    }
+
+    @mixin media $big {
+      max-width: rem(490);
     }
 
   }

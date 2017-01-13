@@ -26,7 +26,7 @@ ol.sail-slides
 
 ## Module Defaults
 
-The following example shows the defaults for each of the available settings:
+The following example shows a complete set of options within Sail:
 
 **Javascript**
 

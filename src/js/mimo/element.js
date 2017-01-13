@@ -1,12 +1,15 @@
 var El = (function() {
 
-  var s = {
+  var s = {};
+  var o = {
     kind: 'div',
     class: 'generated'
   };
 
   /* Run through user settings and compare with El settings */
   var override = function(options) {
+    s = o;
+
     for (var key in options) {
       if (options.hasOwnProperty(key)) {
         s[key] = options[key];

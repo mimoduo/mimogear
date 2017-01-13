@@ -1,6 +1,6 @@
 # surge
 
-Mimogear integrates with surge using a surge cli, gulp-surge, and Travis CI.
+surge is a command line driven hosting service. Mimogear integrates with surge using a surge cli, gulp-surge, and Travis CI.
 
 ## Direct Deployment
 
@@ -12,7 +12,7 @@ gulp surge --base --min --production
 
 ## Travis CI Deployment
 
-[Surge](https://surge.sh/) itself has some [excellent documentation]((https://surge.sh/help/integrating-with-travis-ci)) on integrating with Travis CI.
+[Surge](https://surge.sh/) itself has some [excellent documentation](https://surge.sh/help/integrating-with-travis-ci) on integrating with Travis CI. The .travis.yml file is already set for you with the `surge` command but you'll still have to edit the domain surge pushes too.
 
 **Notes**
 
