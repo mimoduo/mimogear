@@ -17,7 +17,7 @@ After looking through all the cool static site generators out there, you may hav
 ## Highlights
 
 * Full asset compilation, distribution, and watch using [gulp](http://gulpjs.com/)
-* Starter kit for [Travis CI](https://travis-ci.org/) for deployments to [github pages](https://pages.github.com/) and [surge.sh](https://surge.sh/) 
+* [Travis CI](https://travis-ci.org/) starter kit for deployments to [github pages](https://pages.github.com/) and [surge.sh](https://surge.sh/) 
 * Documentation for [netlify](https://www.netlify.com/) deployments and hosting
 * Complete [pug](https://pugjs.org/api/getting-started.html) template boilerplate, with Markdown support, for generating html files
 * Clean skeleton [postcss](http://postcss.org/) boilerplate for quick css development
