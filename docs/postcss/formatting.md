@@ -1,6 +1,6 @@
 # Formatting
 
-Mimogear enforces a strict postcss formatting standard. The following example demonstrates [idiomatic css](https://github.com/necolas/idiomatic-css) with some modifications and additional practices.
+Mimogear enforces a strict postcss formatting standard and a classing structure similar to BEM syntax. The following example demonstrates [idiomatic css](https://github.com/necolas/idiomatic-css) with some modifications and additional practices.
 
 **Notes**
 

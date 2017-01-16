@@ -32,7 +32,7 @@ $s2: #9E9E9E;
   }
 
   h3 {
-    margin: 0;
+    margin: 0 0 em(10, 28);
     font-size: em(28);
     font-weight: 700;
   }
@@ -519,6 +519,7 @@ $s2: #9E9E9E;
 
   }
 
+    .summary-name,
     .summary-link {
       color: inherit;
       transition: color .25s;

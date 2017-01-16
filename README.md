@@ -17,7 +17,8 @@ After looking through all the cool static site generators out there, you may hav
 ## Highlights
 
 * Full asset compilation, distribution, and watch using [gulp](http://gulpjs.com/)
-* Deployment setup for [github pages](https://pages.github.com/), [surge.sh](https://surge.sh/), and [netlify](https://www.netlify.com/)
+* Starter kit for [Travis CI](https://travis-ci.org/) for deployments to [github pages](https://pages.github.com/) and [surge.sh](https://surge.sh/) 
+* Documentation for [netlify](https://www.netlify.com/) deployments and hosting
 * Complete [pug](https://pugjs.org/api/getting-started.html) template boilerplate, with Markdown support, for generating html files
 * Clean skeleton [postcss](http://postcss.org/) boilerplate for quick css development
 * Starter javascript components
@@ -41,7 +42,9 @@ npm install
 gulp
 ```
 
-Your site will open up in a browser window automatically and you're ready to get started in developing html:pug, css:postcss, and javascript. Check out /src/ to see your shiny new development boilerplate! If you're feeling stuck, check out [/docs/](https://github.com/mimoduo/mimogear/tree/master/docs).
+Your site will open up in a browser window automatically and you're ready to get started in developing html:pug, css:postcss, and javascript. Check out /src/ to see your shiny new development boilerplate!
+
+**If you're feeling stuck, check out [/docs/](https://github.com/mimoduo/mimogear/tree/master/docs).**
 
 ## Share Your Sites Using Mimogear
 

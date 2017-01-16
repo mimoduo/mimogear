@@ -1,6 +1,6 @@
 # Using Javascript in Mimogear
 
-Mimogear follows the module pattern as written in the [Oneone javascript file](https://github.com/mimoduo/oneone/blob/master/src/script.js). All the work for creating slideshows, ligthboxes, and triggers has already been setup for you.
+Mimogear follows the module pattern as written in the [oneone javascript plugin boilerplate](https://github.com/mimoduo/oneone/blob/master/src/script.js). By default you'll have access to element creation shorthand, slideshows, lightboxes, and triggers.
 
 ## Using Mimo Modules
 

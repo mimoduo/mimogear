@@ -765,7 +765,7 @@ template {
 }
 
 .mimo-theme h3 {
-  margin: 0;
+  margin: 0 0 0.35714285714285715em;
   font-size: 1.75em;
   font-weight: 700;
 }
@@ -1383,13 +1383,16 @@ template {
   }
 }
 
-.mimo-theme .summary-link {
+.mimo-theme .summary-name,
+    .mimo-theme .summary-link {
   color: inherit;
   -webkit-transition: color .25s;
   transition: color .25s;
 }
 
-.mimo-theme .summary-link:focus,
+.mimo-theme .summary-name:focus,
+      .mimo-theme .summary-name:hover,
+      .mimo-theme .summary-link:focus,
       .mimo-theme .summary-link:hover {
   color: #0277BD;
 }
