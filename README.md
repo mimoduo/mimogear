@@ -17,7 +17,7 @@ After looking through all the cool static site generators out there, you may hav
 ## Highlights
 
 * Full asset compilation, distribution, and watch using [gulp](http://gulpjs.com/)
-* [Travis CI](https://travis-ci.org/) starter kit for deployments to [github pages](https://pages.github.com/) and [surge.sh](https://surge.sh/) 
+* [Travis CI](https://travis-ci.org/) starter kit for deployments to [github pages](https://pages.github.com/) and [surge.sh](https://surge.sh/)
 * Documentation for [netlify](https://www.netlify.com/) deployments and hosting
 * Complete [pug](https://pugjs.org/api/getting-started.html) template boilerplate, with Markdown support, for generating html files
 * Clean skeleton [postcss](http://postcss.org/) boilerplate for quick css development
@@ -25,15 +25,9 @@ After looking through all the cool static site generators out there, you may hav
 
 ## Installation
 
-Before we start setting up Mimogear, make sure you've cloned Mimogear from github:
+After successfully downloading Mimogear, we'll need to download and install _node.js_ from [node's website](https://nodejs.org/en/) to help with managing Mimogear's dependencies.
 
-* [download mimogear.zip](https://github.com/mimoduo/mimogear/archive/master.zip)
-* use https://github.com/mimoduo/mimogear.git to clone with a git program
-* type `git clone https://github.com/mimoduo/mimogear.git` in your terminal
-
-After successfully cloning Mimogear, we'll need to download _node.js_ from [node's website](https://nodejs.org/en/) to help with managing Mimogear's dependencies.
-
-Now that we have all the goodies ready for us, open up your terminal and enter in the following:
+Now that we have everything ready to start, open up your terminal and enter in the following:
 
 ```sh
 cd <folder-of-Mimogear> (drag the folder into your terminal)

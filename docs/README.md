@@ -4,15 +4,9 @@
 
 ## Installation
 
-Before we start setting up Mimogear, make sure you've cloned Mimogear from github:
+After successfully downloading Mimogear, we'll need to download and install _node.js_ from [node's website](https://nodejs.org/en/) to help with managing Mimogear's dependencies.
 
-* [download mimogear.zip](https://github.com/mimoduo/mimogear/archive/master.zip)
-* use https://github.com/mimoduo/mimogear.git to clone with a git program
-* type `git clone https://github.com/mimoduo/mimogear.git` in your terminal
-
-After successfully cloning Mimogear, we'll need to download _node.js_ from [node's website](https://nodejs.org/en/) to help with managing Mimogear's dependencies.
-
-Now that we have all the goodies ready for us, open up your terminal and enter in the following:
+Now that we have everything ready to start, open up your terminal and enter in the following:
 
 ```sh
 cd <folder-of-Mimogear> (drag the folder into your terminal)
