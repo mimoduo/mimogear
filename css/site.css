@@ -803,7 +803,12 @@ template {
 // ============= */
 
 .mimo-theme .site-header {
-  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  width: 100%;
+  background: #fff;
 }
 
 .mimo-theme .site-header:after {
@@ -817,13 +822,12 @@ template {
 // ============= */
 
 .mimo-theme .actions {
-  display: inline-block;
   text-align: center;
 }
 
 .mimo-theme .action-link {
   display: inline-block;
-  padding: 1.1428571428571428em 1em 1.0714285714285714em;
+  padding: 1.2142857142857142em 1em 1.1428571428571428em;
   font-size: 0.875em;
   font-weight: normal;
   text-align: center;
@@ -836,8 +840,16 @@ template {
 @media screen and (min-width: 500px) {
 
   .mimo-theme .action-link {
-    padding: 1.0714285714285714em 2.142857142857143em;
+    padding: 0.7142857142857143em 2.142857142857143em;
     letter-spacing: 0.21428571428571427em;
+  }
+}
+
+@media screen and (min-width: 700px) {
+
+  .mimo-theme .action-link {
+    padding-top: 1.0714285714285714em;
+    padding-bottom: 1.0714285714285714em;
   }
 }
 
@@ -895,13 +907,22 @@ template {
 
 .mimo-theme .section-intro {
   overflow: hidden;
+  margin-top: 3.125em;
   padding: 2.5em 1.25em;
   text-align: center;
+}
+
+@media screen and (min-width: 500px) {
+
+  .mimo-theme .section-intro {
+    margin-top: 3.75em;
+  }
 }
 
 @media screen and (min-width: 700px) {
 
   .mimo-theme .section-intro {
+    margin-top: 3.125em;
     padding-top: 3.75em;
   }
 }
