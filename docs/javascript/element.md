@@ -9,7 +9,7 @@ To get started with Element, add in the following line inside the anonymous func
 **Javascript**
 
 ```js
-var newEl = El.create({
+var newEl = El.create('div', {
   class: 'my-class'
 });
 ```
@@ -27,8 +27,7 @@ The following example shows a complete set of options within Element:
 **Javascript**
 
 ```js
-var newEl = El.create({
-  kind: 'p', // kind of element you're creating
+var newEl = El.create('kind', { // html element to create
   class: 'my-class', // class of the new el, accepts an array of classes as well
   type: 'text', // type of input
   value: 'value of input', // value of the input

@@ -86,7 +86,12 @@ $s2: #9E9E9E;
 .mimo-theme {
 
   .site-header {
-    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width: 100%;
+    background: #fff;
 
     &:after {
       @mixin clearfix;
@@ -104,13 +109,12 @@ $s2: #9E9E9E;
 .mimo-theme {
 
   .actions {
-    display: inline-block;
     text-align: center;
   }
 
     .action-link {
       display: inline-block;
-      padding: em(16, 14) em(14, 14) em(15, 14);
+      padding: em(17, 14) em(14, 14) em(16, 14);
       font-size: em(14);
       font-weight: normal;
       text-align: center;
@@ -119,8 +123,13 @@ $s2: #9E9E9E;
       transition: color .25s;
 
       @mixin media $small {
-        padding: em(15, 14) em(30, 14);
+        padding: em(10, 14) em(30, 14);
         letter-spacing: em(3, 14);
+      }
+
+      @mixin media $big {
+        padding-top: em(15, 14);
+        padding-bottom: em(15, 14);
       }
 
       &:after {
@@ -184,10 +193,16 @@ $s2: #9E9E9E;
 
     &-intro {
       overflow: hidden;
+      margin-top: em(50);
       padding: em(40) em(20);
       text-align: center;
 
+      @mixin media $small {
+        margin-top: em(60);
+      }
+
       @mixin media $big {
+        margin-top: em(50);
         padding-top: em(60);
       }
 

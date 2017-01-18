@@ -2,7 +2,6 @@ var El = (function() {
 
   var s = {};
   var o = {
-    kind: 'div',
     class: 'generated'
   };
 
@@ -18,10 +17,10 @@ var El = (function() {
   };
 
   /* Create a new element given an object of options */
-  var create = function(options) {
+  var create = function(kind, options) {
     override(options);
 
-    var newEl = document.createElement(s.kind);
+    var newEl = document.createElement(kind);
 
     if (Array.isArray(s.class)) {
       s.class.forEach(function(className) {

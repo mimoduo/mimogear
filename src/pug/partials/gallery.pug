@@ -1,0 +1,5 @@
+.gallery
+  each image in gallery
+    figure.gallery-item
+      +image(image.file)
+      figcaption.gallery-item-caption= image.name

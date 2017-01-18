@@ -3,6 +3,7 @@
 // ============= */
 
 var gulp = require('gulp'),
+    fs = require('fs'),
     packageJSON = require('./package.json'),
     configuration = require('./configuration.json'),
     browserSync = require('browser-sync').create(),
@@ -48,8 +49,35 @@ var pugLocals = {
   siteDescription: packageJSON.description,
   siteLinks: configuration.links,
   base: base,
-  min: min
+  min: min,
+  gallery: []
 };
+
+function renameFile(file) {
+  var name = file.replace('-', ' ')
+  name = name.substring(0, name.indexOf('.'));
+
+  return name;
+}
+
+gulp.task('gallery', function() {
+
+  fs.readdir('src/images', function(err, images) {
+    if(err) return console.error(err);
+
+     pugLocals.gallery = [];
+
+    for(var i = 0; i < images.length; i++) {
+      var name = renameFile(images[i]);
+
+      pugLocals.gallery.push({
+        file: images[i],
+        name: name
+      });
+    }
+  });
+
+});
 
 gulp.task('pug', function() {
 
@@ -267,7 +295,7 @@ gulp.task('watch', function() {
   gulp.watch('src/pug/pages/**/*.pug', ['pug-pages']);
   gulp.watch('src/postcss/**/*.css', ['postcss']);
   gulp.watch('src/js/**/*.js', ['js']);
-  gulp.watch('src/images/*', ['images']);
+  gulp.watch('src/images/*', ['images', 'gallery']);
   gulp.watch('src/svg/*', ['sprite']);
 
 });
@@ -282,6 +310,7 @@ gulp.task('build', [
   'sprite',
   'postcss',
   'js',
+  'gallery',
   'pug'
 ]);
 

@@ -38,7 +38,14 @@ gulp
 
 Your site will open up in a browser window automatically and you're ready to get started in developing html:pug, css:postcss, and javascript. Check out /src/ to see your shiny new development boilerplate!
 
-**If you're feeling stuck, check out [/docs/](https://github.com/mimoduo/mimogear/tree/master/docs).**
+**If you're feeling stuck, Mimogear has a bunch of documentation ready for ya:**
+
+* [Quickstart Guide](https://github.com/mimoduo/mimogear/tree/master/docs)
+* [Deployment](https://github.com/mimoduo/mimogear/tree/master/docs/deployment)
+* [Gulp](https://github.com/mimoduo/mimogear/tree/master/docs/gulp)
+* [Javascript](https://github.com/mimoduo/mimogear/tree/master/docs/javascript)
+* [CSS:Postcss](https://github.com/mimoduo/mimogear/tree/master/docs/postcss)
+* [HTML:Pug](https://github.com/mimoduo/mimogear/tree/master/docs/pug)
 
 ## Share Your Sites Using Mimogear
 
