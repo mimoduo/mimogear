@@ -554,6 +554,44 @@ $s2: #9E9E9E;
 
 
 /* ================
+// Bubbles
+// ============= */
+
+.mimo-theme {
+
+  .bubbles {
+    @mixin compartment 340;
+
+    margin-bottom: em(70);
+
+    @mixin media $huge {
+      display: flex;
+      max-width: rem(900);
+    }
+    
+  }
+
+    .bubble {
+
+      @mixin media $huge {
+        padding: 0 em(20);
+      }
+
+    }
+
+      .bubble-title {
+        margin-bottom: 0;
+      }
+
+      .bubble-caption {
+        margin-top: 0;
+        font-size: em(18);
+      }
+
+}
+
+
+/* ================
 // Terminal
 // ============= */
 

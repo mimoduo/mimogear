@@ -38,7 +38,7 @@ mixin docs-symbol(className)
   </svg>
 
 block title
-  - title = "Home"
+  - title = "static site generator"
 
 block theme
   - themeName = "mimo-theme"
@@ -98,13 +98,23 @@ block content
         span.call-to-action-label View on Github
       +gear-outlined-symbol("call-to-action-symbol")
       +gear-filled-symbol("call-to-action-symbol")
+    .bubbles
+      .bubble
+        h3.bubble-title Fresh Boilerplates
+        p.bubble-caption All the templates, styles, and scripts you need to start are already setup as structured boilerplates
+      .bubble
+        h3.bubble-title Speedy Compilation
+        p.bubble-caption #[em Assets are compiled intelligently] based on the build environment and which files were changed
+      .bubble
+        h3.bubble-title Docs up the Yazoo
+        p.bubble-caption Any questions you have during development will have an equal set of docs to match
     .terminal
       .terminal-pillow
         h3.terminal-title Whip out a terminal and tryout Mimogear:
         .code-pillow
           code.code
             | $ git #[em clone] https://github.com/mimoduo/mimogear.git#[br]
-            | $ #[em cd] Mimogear#[br]
+            | $ #[em cd] mimogear#[br]
             | $ npm install#[br]
             | $ npm install gulp-cli -g#[br]
             | $ gulp

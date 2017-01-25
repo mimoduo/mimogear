@@ -1423,6 +1423,42 @@ template {
 }
 
 /* ================
+// Bubbles
+// ============= */
+
+.mimo-theme .bubbles {
+  max-width: 21.25rem;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 4.375em;
+}
+
+@media screen and (min-width: 900px) {
+
+  .mimo-theme .bubbles {
+    display: -webkit-box;
+    display: flex;
+    max-width: 56.25rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+
+  .mimo-theme .bubble {
+    padding: 0 1.25em;
+  }
+}
+
+.mimo-theme .bubble-title {
+  margin-bottom: 0;
+}
+
+.mimo-theme .bubble-caption {
+  margin-top: 0;
+  font-size: 1.125em;
+}
+
+/* ================
 // Terminal
 // ============= */
 
