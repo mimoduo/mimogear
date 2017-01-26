@@ -60,22 +60,37 @@ function renameFile(file) {
   return name;
 }
 
-gulp.task('gallery', function() {
+function readGallery(dir, key, nest) {
 
-  fs.readdir('src/images', function(err, images) {
+  fs.readdir(dir, function(err, images) {
     if(err) return console.error(err);
 
-     pugLocals.gallery = [];
+    if(key == null) key = 'root';
+    if(nest == null) nest = '';
 
-    for(var i = 0; i < images.length; i++) {
-      var name = renameFile(images[i]);
+    pugLocals.gallery[key] = [];
 
-      pugLocals.gallery.push({
-        file: images[i],
-        name: name
-      });
+    for(var i in images) {
+      if(fs.statSync(dir + '/' + images[i]).isDirectory()) {
+        readGallery(dir + '/' + images[i], images[i], images[i] + '/');
+      } else {
+        var name = renameFile(images[i]);
+
+        pugLocals.gallery[key].push({
+          file: nest + images[i],
+          name: name
+        });
+      }
     }
   });
+
+}
+
+gulp.task('gallery', function() {
+
+  pugLocals.gallery = {};
+
+  readGallery('src/images/');
 
 });
 
@@ -200,7 +215,7 @@ gulp.task('js', function() {
 
 gulp.task('images', function() {
 
-  return gulp.src('src/images/*')
+  return gulp.src('src/images/**/*')
     .pipe(changed(dist + 'images'))
     .pipe(imagemin())
     .pipe(gulp.dest(dist + 'images'))
@@ -295,7 +310,7 @@ gulp.task('watch', function() {
   gulp.watch('src/pug/pages/**/*.pug', ['pug-pages']);
   gulp.watch('src/postcss/**/*.css', ['postcss']);
   gulp.watch('src/js/**/*.js', ['js']);
-  gulp.watch('src/images/*', ['images', 'gallery']);
+  gulp.watch('src/images/**/*', ['images', 'gallery']);
   gulp.watch('src/svg/*', ['sprite']);
 
 });

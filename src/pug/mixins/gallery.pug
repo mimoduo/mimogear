@@ -1,0 +1,6 @@
+mixin gallery(directory)
+  .gallery
+    each image in directory
+      figure.gallery-item
+        +image(image.file)
+        figcaption.gallery-item-caption= image.name

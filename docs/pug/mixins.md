@@ -4,6 +4,7 @@ Mixins are a great way to take shortcuts with pug. The available Mimogear mixins
 
 **Available Mixins**
 
+* `+gallery`: generates a list of images based on a given directory inside /images/
 * `+image`: generates an image given a file name, alt label, and optional class name
 * `+section`: generates a section container given an optional class name
 * `+symbol`: generates an svg related to an svg in the site sprite
@@ -16,6 +17,24 @@ To add a new mixin, first create a pug file within /src/pug/mixins/. The pug.js 
 include mixins/symbol.pug
 include mixins/section.pug
 include mixins/new-mixin.pug
+```
+
+## +gallery
+
+The gallery mixin generates a list of images given a particular directory within the /images folder. This mixin uses the gallery object that is passed in from the gulpfile. The root level can be called with `gallery.root`.
+
+**Pug**
+
+```pug
++gallery(gallery.root);
+```
+
+If you have a folder within the src/images/ folder, you'll be able to call it using that particular folder name.
+
+**Pug**
+
+```pug
++gallery(gallery.myFolder)
 ```
 
 ## +image

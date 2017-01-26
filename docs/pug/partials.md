@@ -3,7 +3,6 @@
 Pug partials serve as reusable blocks for your site. The content of a partial will never change. There are several starter partials to help jump start your pug development process:
 
 * Address
-* Gallery: uses data from the /src/images folder
 * Main Nav: uses `"mainNav"` data from configuration.json
 * Search
 * Social Nav: uses `"socialNav"` data from configuration.json
