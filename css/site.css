@@ -799,6 +799,29 @@ template {
 }
 
 /* ================
+// Grid
+// ============= */
+
+@media screen and (min-width: 1100px) {
+
+  .mimo-theme .column-yatterman-1 {
+    width: 25%;
+  }
+
+  .mimo-theme .column-yatterman-2 {
+    width: 50%;
+  }
+
+  .mimo-theme .column-yatterman-3 {
+    width: 75%;
+  }
+
+  .mimo-theme .column-yatterman-4 {
+    width: 100%;
+  }
+}
+
+/* ================
 // Header
 // ============= */
 
@@ -827,7 +850,8 @@ template {
 
 .mimo-theme .action-link {
   display: inline-block;
-  padding: 1.2142857142857142em 1em 1.1428571428571428em;
+  vertical-align: top;
+  padding: 1em 1.2857142857142858em 0.9285714285714286em;
   font-size: 0.875em;
   font-weight: normal;
   text-align: center;
@@ -848,8 +872,8 @@ template {
 @media screen and (min-width: 700px) {
 
   .mimo-theme .action-link {
-    padding-top: 1.0714285714285714em;
-    padding-bottom: 1.0714285714285714em;
+    padding-top: 0.7857142857142857em;
+    padding-bottom: 0.7857142857142857em;
   }
 }
 
@@ -868,7 +892,7 @@ template {
 
 .mimo-theme .action-link:focus,
       .mimo-theme .action-link:hover {
-  color: #0277BD;
+  color: #536DFE;
 }
 
 .mimo-theme .action-link:last-child:after {
@@ -907,7 +931,7 @@ template {
 
 .mimo-theme .section-intro {
   overflow: hidden;
-  margin-top: 3.125em;
+  margin-top: 2.75em;
   padding: 2.5em 1.25em;
   text-align: center;
 }
@@ -922,8 +946,8 @@ template {
 @media screen and (min-width: 700px) {
 
   .mimo-theme .section-intro {
-    margin-top: 3.125em;
-    padding-top: 3.75em;
+    margin-top: 2.75em;
+    padding-top: 4.375em;
   }
 }
 
@@ -960,14 +984,14 @@ template {
   background:
           -webkit-linear-gradient(
             135deg,
-              #0277BD,
+              #536DFE,
               #64FFDA 15%,
               transparent 25%
           );
   background:
           linear-gradient(
             -45deg,
-              #0277BD,
+              #536DFE,
               #64FFDA 15%,
               transparent 25%
           );
@@ -987,14 +1011,14 @@ template {
   background:
           -webkit-linear-gradient(
             45deg,
-              #0277BD,
+              #536DFE,
               #64FFDA 15%,
               transparent 25%
           );
   background:
           linear-gradient(
             45deg,
-              #0277BD,
+              #536DFE,
               #64FFDA 15%,
               transparent 25%
           );
@@ -1052,13 +1076,13 @@ template {
   background:
           -webkit-linear-gradient(
             65deg,
-              #0277BD,
+              #536DFE,
               #64FFDA 100%
           );
   background:
           linear-gradient(
             25deg,
-              #0277BD,
+              #536DFE,
               #64FFDA 100%
           );
   -webkit-transform:
@@ -1078,25 +1102,25 @@ template {
           -webkit-radial-gradient(
             50% 50%,
               ellipse,
-              #0277BD,
+              #536DFE,
               #64FFDA 0.75em,
               transparent 0.75em
           ),
           -webkit-linear-gradient(
             65deg,
-              #0277BD,
+              #536DFE,
               #64FFDA 100%
           );
   background:
           radial-gradient(
             ellipse at 50% 50%,
-              #0277BD,
+              #536DFE,
               #64FFDA 0.75em,
               transparent 0.75em
           ),
           linear-gradient(
             25deg,
-              #0277BD,
+              #536DFE,
               #64FFDA 100%
           );
   -webkit-transform:
@@ -1252,6 +1276,17 @@ template {
 }
 
 /* ================
+// Identity
+// ============= */
+
+@media screen and (min-width: 1100px) {
+
+  .mimo-theme .site-identity {
+    padding: 1.25em 0 2.5em;
+  }
+}
+
+/* ================
 // Site Name
 // ============= */
 
@@ -1276,7 +1311,9 @@ template {
 
 .mimo-theme .site-link {
   text-decoration: none;
-  text-shadow: 0 0.1875rem 0 #64FFDA;
+  text-shadow:
+        0 0.125rem 0.125rem #536DFE,
+        0 0.375rem 0.125rem #64FFDA;
   color: inherit;
 }
 
@@ -1352,6 +1389,7 @@ template {
 }
 
 .mimo-theme .call-to-action-symbol {
+  fill: #536DFE;
   -webkit-transition: -webkit-transform .25s;
   transition: -webkit-transform .25s;
   transition: transform .25s;
@@ -1365,18 +1403,36 @@ template {
 .mimo-theme .call-to-action-bubble {
   display: inline-block;
   vertical-align: middle;
-  border: 1px solid #E0E0E0;
   margin: 0 0.625em;
-  padding: 0.625em 1.25em 0.3125em;
+  padding: 0.3125em;
+  background:
+        -webkit-linear-gradient(
+          45deg,
+            #536DFE,
+            #64FFDA 100%
+        );
+  background:
+        linear-gradient(
+          45deg,
+            #536DFE,
+            #64FFDA 100%
+        );
   -webkit-transition: -webkit-transform .25s;
   transition: -webkit-transform .25s;
   transition: transform .25s;
   transition: transform .25s, -webkit-transform .25s;
 }
 
+.mimo-theme .call-to-action-content {
+  display: block;
+  padding: 0.625em 1.25em 0.3125em;
+  background: #fff;
+}
+
 .mimo-theme .call-to-action-label {
   display: block;
   margin-top: 0.3125em;
+  font-weight: 700;
 }
 
 /* ================
@@ -1384,7 +1440,6 @@ template {
 // ============= */
 
 .mimo-theme .summary {
-  width: 100%;
   margin: 0 auto 1.25rem;
   font-size: 1.25em;
 }
@@ -1404,6 +1459,16 @@ template {
   }
 }
 
+@media screen and (min-width: 1100px) {
+
+  .mimo-theme .summary {
+    max-width: 100%;
+    margin-bottom: 0;
+    padding-left: 3.0434782608695654em;
+    text-align: left;
+  }
+}
+
 .mimo-theme .summary-name,
     .mimo-theme .summary-link {
   color: inherit;
@@ -1415,7 +1480,7 @@ template {
       .mimo-theme .summary-name:hover,
       .mimo-theme .summary-link:focus,
       .mimo-theme .summary-link:hover {
-  color: #0277BD;
+  color: #536DFE;
 }
 
 .mimo-theme .summary-name {
@@ -1471,13 +1536,13 @@ template {
   background:
       -webkit-linear-gradient(
         45deg,
-          #0277BD,
+          #536DFE,
           #64FFDA 100%
       );
   background:
       linear-gradient(
         45deg,
-          #0277BD,
+          #536DFE,
           #64FFDA 100%
       );
 }
@@ -1493,13 +1558,13 @@ template {
   background:
         -webkit-linear-gradient(
           135deg,
-            #0277BD,
+            #536DFE,
             #64FFDA 100%
         );
   background:
         linear-gradient(
           -45deg,
-            #0277BD,
+            #536DFE,
             #64FFDA 100%
         );
   -webkit-transform:
@@ -1518,7 +1583,7 @@ template {
 .mimo-theme .code-pillow {
   overflow: hidden;
   overflow-x: auto;
-  border: 0.0625em solid #0277BD;
+  border: 0.0625em solid #536DFE;
   border-top-width: 0.625em;
   padding: 0.625em;
 }
@@ -1904,14 +1969,6 @@ h6 {
 }
 
 .site-logo-label {
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    width: 1px;
-  }
-
-.site-search-label {
     position: absolute;
     overflow: hidden;
     clip: rect(0 0 0 0);
