@@ -23,7 +23,6 @@ var Sail = (function() {
     s.slides = document.querySelector(s.slides);
 
     if(document.body.contains(s.slides)) {
-
       currentSlide = 0;
 
       constructSail();
@@ -31,7 +30,6 @@ var Sail = (function() {
       constructPager();
       detailSlides();
       shift(0);
-
     }
   };
 

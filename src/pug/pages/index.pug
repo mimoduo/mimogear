@@ -79,14 +79,16 @@ block content
       .site-lace
       .site-flare
       .site-lace
-    h1.site-name
-      a.site-link(
-        href="https://github.com/mimoduo/mimogear"
-        target="_blank"
-      ) Mimogear
-    h2.lead
-      span Static Site Generator
-    p.summary #[strong #[a.summary-name(href="https://github.com/mimoduo/mimogear" target="_blank") Mimogear] compiles, distributes, watches, & deploys] a #[a.summary-link(href="https://pugjs.org/api/getting-started.html" target="_blank") pug] template boilerplate, a #[a.summary-link(href="http://postcss.org/" target="_blank") postcss] skeleton stylesheet, and a javascript module bundle with #[a.summary-link(href="http://gulpjs.com/" target="_blank") gulp] & #[a.summary-link(href="https://travis-ci.org/" target="_blank") travis ci].
+    .site-identity.grid.grid-centered
+      .column.column-yatterman-2
+        h1.site-name
+          a.site-link(
+            href="https://github.com/mimoduo/mimogear"
+            target="_blank"
+          ) Mimogear
+        h2.lead
+          span Static Site Generator
+      p.summary.column.column-yatterman-2 #[strong #[a.summary-name(href="https://github.com/mimoduo/mimogear" target="_blank") Mimogear] compiles, distributes, watches, & deploys] a #[a.summary-link(href="https://pugjs.org/api/getting-started.html" target="_blank") pug] template boilerplate, a #[a.summary-link(href="http://postcss.org/" target="_blank") postcss] skeleton stylesheet, and a javascript module bundle with #[a.summary-link(href="http://gulpjs.com/" target="_blank") gulp] & #[a.summary-link(href="https://travis-ci.org/" target="_blank") travis ci].
     a.call-to-action(
       href="https://github.com/mimoduo/mimogear"
       target="_blank"
@@ -94,20 +96,21 @@ block content
       +gear-filled-symbol("call-to-action-symbol")
       +gear-outlined-symbol("call-to-action-symbol")
       span.call-to-action-bubble
-        +github-symbol("call-to-action-symbol-github")
-        span.call-to-action-label View on Github
+        span.call-to-action-content
+          +github-symbol("call-to-action-symbol-github")
+          span.call-to-action-label View on Github
       +gear-outlined-symbol("call-to-action-symbol")
       +gear-filled-symbol("call-to-action-symbol")
     .bubbles
       .bubble
         h3.bubble-title Fresh Boilerplates
-        p.bubble-caption All the templates, styles, and scripts you need to start are already setup as structured boilerplates
+        p.bubble-caption All the templates, styles, and scripts you need to start are already setup as highly structured & clean boilerplates
       .bubble
         h3.bubble-title Speedy Compilation
         p.bubble-caption #[em Assets are compiled intelligently] based on the build environment and which files were changed
       .bubble
         h3.bubble-title Docs up the Yazoo
-        p.bubble-caption Any questions you have during development will have an equal set of docs to match
+        p.bubble-caption Forget being stuck. Documentation is maintained with thoroughness and ease of understanding in mind.
     .terminal
       .terminal-pillow
         h3.terminal-title Whip out a terminal and tryout Mimogear:
@@ -120,18 +123,9 @@ block content
             | $ gulp
   +section
     .ad-pillow
-      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1767497260647210" data-ad-slot="1647576338" data-ad-format="auto"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      include ../partials/ad.pug
 
 block footer
 
 block additional-scripts
-  | <script>
-  | (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  | (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  | m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  | })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  | ga('create', 'UA-66664949-1', 'auto');
-  | ga('send', 'pageview');
-  | </script>
+  include ../partials/analytics.pug

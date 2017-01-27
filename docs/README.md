@@ -4,9 +4,7 @@
 
 ## Installation
 
-After successfully downloading Mimogear, we'll need to download and install _node.js_ from [node's website](https://nodejs.org/en/) to help with managing Mimogear's dependencies.
-
-Now that we have everything ready to start, open up your terminal and enter in the following:
+After successfully downloading Mimogear, we'll need to download and install _node.js_ from [node's website](https://nodejs.org/en/) to help with managing Mimogear's dependencies. With node.js installed, open up your terminal and enter in the following:
 
 ```sh
 cd <folder-of-Mimogear> (drag the folder into your terminal)

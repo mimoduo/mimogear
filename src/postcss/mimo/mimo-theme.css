@@ -2,7 +2,7 @@
 // Variables
 // ============= */
 
-$m1: #0277BD;
+$m1: #536DFE;
 $m2: #64FFDA;
 $m3: #FFFF00;
 $m4: #F57F17;
@@ -80,6 +80,23 @@ $s2: #9E9E9E;
 
 
 /* ================
+// Grid
+// ============= */
+
+.mimo-theme {
+
+  @mixin media $yatterman {
+
+    .column-yatterman {
+      create-grid: 4;
+    }
+
+  }
+
+}
+
+
+/* ================
 // Header
 // ============= */
 
@@ -114,7 +131,8 @@ $s2: #9E9E9E;
 
     .action-link {
       display: inline-block;
-      padding: em(17, 14) em(14, 14) em(16, 14);
+      vertical-align: top;
+      padding: em(14, 14) em(18, 14) em(13, 14);
       font-size: em(14);
       font-weight: normal;
       text-align: center;
@@ -128,8 +146,8 @@ $s2: #9E9E9E;
       }
 
       @mixin media $big {
-        padding-top: em(15, 14);
-        padding-bottom: em(15, 14);
+        padding-top: em(11, 14);
+        padding-bottom: em(11, 14);
       }
 
       &:after {
@@ -193,7 +211,7 @@ $s2: #9E9E9E;
 
     &-intro {
       overflow: hidden;
-      margin-top: em(50);
+      margin-top: em(44);
       padding: em(40) em(20);
       text-align: center;
 
@@ -202,8 +220,8 @@ $s2: #9E9E9E;
       }
 
       @mixin media $big {
-        margin-top: em(50);
-        padding-top: em(60);
+        margin-top: em(44);
+        padding-top: em(70);
       }
 
     }
@@ -389,6 +407,23 @@ $s2: #9E9E9E;
 
 
 /* ================
+// Identity
+// ============= */
+
+.mimo-theme {
+
+  .site-identity {
+
+    @mixin media $yatterman {
+      padding: em(20) 0 em(40);
+    }
+
+  }
+
+}
+
+
+/* ================
 // Site Name
 // ============= */
 
@@ -410,7 +445,9 @@ $s2: #9E9E9E;
 
     .site-link {
       text-decoration: none;
-      text-shadow: 0 rem(3) 0 $m2;
+      text-shadow:
+        0 rem(2) rem(2) $m1,
+        0 rem(6) rem(2) $m2;
       color: inherit;
     }
 
@@ -487,6 +524,7 @@ $s2: #9E9E9E;
   }
 
     .call-to-action-symbol {
+      fill: $m1;
       transition: transform .25s;
 
       &-github {
@@ -498,16 +536,28 @@ $s2: #9E9E9E;
     .call-to-action-bubble {
       display: inline-block;
       vertical-align: middle;
-      border: 1px solid $s1;
       margin: 0 em(10);
-      padding: em(10) em(20) em(5);
+      padding: em(5);
+      background:
+        linear-gradient(
+          45deg,
+            $m1,
+            $m2 100%
+        );
       transition: transform .25s;
     }
 
-      .call-to-action-label {
+      .call-to-action-content {
         display: block;
-        margin-top: em(5);
+        padding: em(10) em(20) em(5);
+        background: #fff;
       }
+
+        .call-to-action-label {
+          display: block;
+          margin-top: em(5);
+          font-weight: 700;
+        }
 
 }
 
@@ -519,7 +569,6 @@ $s2: #9E9E9E;
 .mimo-theme {
 
   .summary {
-    width: 100%;
     margin: 0 auto rem(20);
     font-size: em(20);
 
@@ -530,6 +579,13 @@ $s2: #9E9E9E;
 
     @mixin media $big {
       max-width: rem(490);
+    }
+
+    @mixin media $yatterman {
+      max-width: 100%;
+      margin-bottom: 0;
+      padding-left: em(70, 23);
+      text-align: left;
     }
 
   }
@@ -568,7 +624,7 @@ $s2: #9E9E9E;
       display: flex;
       max-width: rem(900);
     }
-    
+
   }
 
     .bubble {

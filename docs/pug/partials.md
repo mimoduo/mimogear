@@ -4,7 +4,6 @@ Pug partials serve as reusable blocks for your site. The content of a partial wi
 
 * Address
 * Main Nav: uses `"mainNav"` data from configuration.json
-* Search
 * Social Nav: uses `"socialNav"` data from configuration.json
 * Table
 

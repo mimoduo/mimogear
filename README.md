@@ -3,12 +3,13 @@
 # Mimogear
 
 [![Build Status](https://travis-ci.org/mimoduo/mimogear.svg?branch=master)](https://travis-ci.org/mimoduo/mimogear)
+[![Join Gitter Chat](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg?style=flat)](https://gitter.im/mimogear/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 > A dead simple static site generator and web development boilerplate
 
 ## What is Mimogear?
 
-**Mimogear is a simple static site generator and web development boilerplate** that will _automatically compile, distribute, watch, and deploy development assets_.
+**Mimogear is a simple static site generator and web development boilerplate** that will _automatically compile, distribute, watch, and deploy assets_.
 
 ## Why Mimogear?
 
@@ -25,9 +26,7 @@ After looking through all the cool static site generators out there, you may hav
 
 ## Installation
 
-After successfully downloading Mimogear, we'll need to download and install _node.js_ from [node's website](https://nodejs.org/en/) to help with managing Mimogear's dependencies.
-
-Now that we have everything ready to start, open up your terminal and enter in the following:
+After successfully downloading Mimogear, we'll need to download and install _node.js_ from [node's website](https://nodejs.org/en/) to help with managing Mimogear's dependencies. With node.js installed, open up your terminal and enter in the following:
 
 ```sh
 cd <folder-of-Mimogear> (drag the folder into your terminal)

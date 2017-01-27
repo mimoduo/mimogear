@@ -1,9 +1,0 @@
-.site-search {}
-
-  .site-search-label {
-    @mixin visually-hidden;
-  }
-
-  .site-search-input {}
-
-  .site-search-submit {}

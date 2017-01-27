@@ -36,6 +36,9 @@
   .sail-control {
     cursor: pointer;
 
+    &:focus,
+    &:hover {}
+
     &-previous {}
 
     &-next {}
