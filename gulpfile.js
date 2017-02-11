@@ -96,7 +96,10 @@ gulp.task('gallery', function() {
 
 gulp.task('pug', function() {
 
-  return gulp.src('src/pug/pages/**/*.pug')
+  return gulp.src([
+    'src/pug/pages/**/*.pug',
+    '!src/pug/pages/**/_*.pug'
+  ])
     .pipe(pug({
       locals: pugLocals,
       pretty: true
@@ -109,7 +112,10 @@ gulp.task('pug', function() {
 
 gulp.task('pug-pages', function() {
 
-  return gulp.src('src/pug/pages/**/*.pug')
+  return gulp.src([
+    'src/pug/pages/**/*.pug',
+    '!src/pug/pages/**/_*.pug'
+  ])
     .pipe(changed(dist, {
       extension: '.html'
     }))

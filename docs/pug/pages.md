@@ -1,6 +1,6 @@
 # Pages
 
-Pug pages are the bread, butter, and markup of your site. The default pages (index.pug, starter.pug, and style-guide.pug) extend the default site template and pass in extra content via `block content`.
+Pug pages are the bread, butter, and markup of your site. The default pages (index.pug, starter.pug, search.pug, and style-guide.pug) extend the default site template and pass in extra content via `block content`. Any page files prefixed with `_` will not be compiled and can be thought of as a private draft.
 
 ## Adding in Content
 
