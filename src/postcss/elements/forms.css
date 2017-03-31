@@ -29,6 +29,11 @@ input {
 
 }
 
-select {}
+select {
+  appearance: none;
+  background: url('') no-repeat calc(100% - 20px) 50%;
+}
 
-textarea {}
+textarea {
+  min-height: em(220);
+}

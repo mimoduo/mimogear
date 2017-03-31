@@ -1759,6 +1759,17 @@ fieldset {
 // Form Elements
 // ============= */
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url('') no-repeat calc(100% - 20px) 50%;
+}
+
+textarea {
+  min-height: 13.75em;
+}
+
 /* ================
 // Anchors
 // ============= */

@@ -1,9 +1,8 @@
-![Mimogear logo of a flowering gear and two wings](http://image.prntscr.com/image/c1989297e97d45c69817e85947647862.png)
+![Mimogear logo of a flowering gear and two wings](http://image.prntscr.com/image/e86217163ef747b3af55d3e2b29be4dc.png)
 
 # Mimogear
 
 [![Build Status](https://travis-ci.org/mimoduo/mimogear.svg?branch=master)](https://travis-ci.org/mimoduo/mimogear)
-[![Join Gitter Chat](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg?style=flat)](https://gitter.im/mimogear/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 > A dead simple static site generator and web development boilerplate
 
