@@ -1,0 +1,5 @@
+@mixin clearfix {
+  display: table;
+  clear: both;
+  content: '';
+}

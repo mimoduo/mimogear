@@ -26,7 +26,7 @@ Sometimes you may want to build only a particular set of files or watch without 
 
 ```sh
 gulp pug
-gulp postcss
+gulp sass
 gulp js
 gulp images
 gulp sprite
@@ -50,6 +50,8 @@ If you'd like to modify some of the pre-existing tasks in Mimogear, check out th
 * [**gulp-gh-pages**](https://github.com/shinnn/gulp-gh-pages)
 * [**gulp-if**](https://github.com/robrich/gulp-if)
 * [**gulp-imagemin**](https://github.com/sindresorhus/gulp-imagemin)
+* [**gulp-sass**](https://github.com/dlmanning/gulp-sass)
+* [**gulp-sass-glob**](https://github.com/mikevercoelen/gulp-sass-glob)
 * [**gulp-postcss**](https://github.com/postcss/gulp-postcss) / [official site](http://postcss.org/)
 * [**gulp-pug**](https://github.com/jamen/gulp-pug)
 * [**gulp-pug-inheritance**](https://github.com/pure180/gulp-pug-inheritance)
@@ -60,10 +62,4 @@ If you'd like to modify some of the pre-existing tasks in Mimogear, check out th
 * [**jstransformer-markdown**](https://github.com/jstransformers/jstransformer-markdown)
 * [**minimist**](https://github.com/substack/minimist)
 * [**postcss-discard-empty**](https://github.com/ben-eb/postcss-discard-empty)
-* [**postcss-easy-import**](https://github.com/TrySound/postcss-easy-import)
-* [**postcss-functions**](https://github.com/andyjansson/postcss-functions)
-* [**postcss-mixins**](https://github.com/postcss/postcss-mixins)
-* [**postcss-nesting**](https://github.com/jonathantneal/postcss-nesting)
-* [**postcss-simple-grid**](https://github.com/iamfrntdv/postcss-simple-grid)
-* [**postcss-simple-vars**](https://github.com/postcss/postcss-simple-vars)
 * [**surge**](https://github.com/sintaxi/surge)

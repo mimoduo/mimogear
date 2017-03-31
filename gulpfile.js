@@ -14,6 +14,8 @@ var gulp = require('gulp'),
     pug = require('gulp-pug'),
     pugInheritance = require('gulp-pug-inheritance'),
     postcss = require('gulp-postcss'),
+    sass = require('gulp-sass'),
+    sassGlob = require('gulp-sass-glob'),
     cssnano = require('gulp-cssnano'),
     extReplace = require('gulp-ext-replace'),
     concat = require('gulp-concat'),
@@ -135,54 +137,23 @@ gulp.task('pug-pages', function() {
 
 
 /* ================
-// Compile Postcss
+// Compile Sass
 // ============= */
 
-gulp.task('postcss', function() {
+gulp.task('sass', function() {
 
-  return gulp.src('src/postcss/site.css')
-    .pipe(postcss([
-      require('postcss-easy-import')({
-        glob: true
-      }),
-      require('postcss-mixins'),
-      require('postcss-nested'),
-      require('postcss-simple-grid')({
-        separator: '-'
-      }),
-      require('postcss-simple-vars')({
-        variables: configuration
-      }),
-      require('postcss-functions')({
-        functions: {
-          em: function(value, context) {
-            if(context == null) {
-              context = configuration.bodySize;
-            }
-            var emValue = value / context;
-            return emValue + 'em';
-          },
-          rem: function(value) {
-            var emValue = value / 16;
-            return emValue + 'rem';
-          },
-          nu: function(value, context) {
-            if(context == null) {
-              context = configuration.bodySize;
-            }
-            var nuValue = value / context;
-            return nuValue;
-          }
-        }
-      }),
+  return gulp.src('src/sass/site.scss')
+    .pipe(sassGlob())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(dist + 'css'))
+    .pipe(browserSync.stream())
+    .pipe(gulpif(production, postcss([
       require('autoprefixer')({
         browsers: ['> 1%'],
         cascade: false
       }),
       require('postcss-discard-empty')
-    ]))
-    .pipe(gulp.dest(dist + 'css'))
-    .pipe(browserSync.stream())
+    ])))
     .pipe(gulpif(production, cssnano()))
     .pipe(gulpif(production, extReplace('.min.css')))
     .pipe(gulpif(production, gulp.dest(dist + 'css')))
@@ -314,7 +285,7 @@ gulp.task('watch', function() {
 
   gulp.watch(['src/pug/**/*.pug', '!src/pug/pages/**/*.pug'], ['pug']);
   gulp.watch('src/pug/pages/**/*.pug', ['pug-pages']);
-  gulp.watch('src/postcss/**/*.css', ['postcss']);
+  gulp.watch('src/sass/**/*.scss', ['sass']);
   gulp.watch('src/js/**/*.js', ['js']);
   gulp.watch('src/images/**/*', ['images', 'gallery']);
   gulp.watch('src/svg/*', ['sprite']);
@@ -329,7 +300,7 @@ gulp.task('watch', function() {
 gulp.task('build', [
   'images',
   'sprite',
-  'postcss',
+  'sass',
   'js',
   'gallery',
   'pug'

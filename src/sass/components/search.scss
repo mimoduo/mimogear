@@ -1,0 +1,59 @@
+.site-search {
+
+  .gsc-control-cse {
+    font-family: inherit;
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+    form.gsc-search-box {
+      margin-bottom: 0;
+      font-size: inherit;
+    }
+
+      table.gsc-search-box {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+        td.gsc-input {
+          padding: 0;
+        }
+
+          .gsc-input-box {
+            height: auto;
+            border-color: #f2f2f2;
+            box-shadow: inherit;
+          }
+
+            .gstl_50 {
+              margin: 0;
+            }
+
+              .gsib_a {
+                padding: 0;
+              }
+
+                input.gsc-input {
+                  height: auto !important;
+                  padding: 25px 20px !important;
+                  text-indent: 0 !important;
+                  background: none !important;
+                }
+
+        td.gsc-search-button {
+          padding: 0;
+        }
+
+          input.gsc-search-button {
+            height: auto;
+            min-width: auto;
+            width: auto;
+            border: 0;
+            margin-left: 0;
+            padding: 20px;
+            font-size: inherit;
+            font-weight: inherit;
+            background-color: #ddd;
+          }
+}

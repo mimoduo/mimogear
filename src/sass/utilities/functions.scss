@@ -1,0 +1,17 @@
+@function em($value, $base: 16) {
+  $newValue: $value / $base * 1em;
+
+  @return $newValue;
+}
+
+@function rem($value) {
+  $newValue: $value / $bodySize * 1rem;
+
+  @return $newValue;
+}
+
+@function nu($value, $base) {
+  $newValue: $value / $base;
+
+  @return $newValue;
+}

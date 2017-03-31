@@ -1,0 +1,13 @@
+.template-nav {
+
+  ol {}
+
+    li {}
+
+      a {
+
+        &:focus,
+        &:hover {}
+
+      }
+}

@@ -1,0 +1,20 @@
+.symbol {
+  fill: currentColor;
+  transition: fill .25s;
+
+  @media print {
+    display: none;
+  }
+
+  $symbols: (
+    (logo, 100, 150)
+  );
+
+  @each $label, $w, $h in $symbols {
+
+    &-#{$label} {
+      height: $h;
+      width: $w;
+    }
+  }
+}

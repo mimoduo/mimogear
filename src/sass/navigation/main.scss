@@ -1,0 +1,15 @@
+.main-nav {
+
+  > ol {
+
+    > li {
+
+      > a {
+
+        &:focus,
+        &:hover {}
+
+      }
+    }
+  }
+}

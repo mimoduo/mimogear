@@ -1,0 +1,90 @@
+/* ================
+// Anchors
+// ============= */
+
+a {
+
+  &:focus,
+  &:hover {}
+
+  &:visited {}
+}
+
+
+/* ================
+// Blockquote / Cite
+// ============= */
+
+blockquote {
+  margin: em(20) 0;
+
+  &:before,
+  &:after {
+    speak: none;
+  }
+
+  &:before {
+    content: '\201C';
+  }
+
+  &:after {
+    content: '\201D';
+  }
+}
+
+cite {
+  font-style: normal;
+
+  &:before {
+    content: '';
+    speak: none;
+  }
+}
+
+
+/* ================
+// Lists
+// ============= */
+
+ul,
+ol {}
+
+  li {}
+
+
+/* ================
+// Paragraphs
+// ============= */
+
+p {
+  margin: em(20) 0;
+}
+
+
+/* ================
+// Table
+// ============= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: em(20) 0;
+}
+
+  tr {
+    vertical-align: top;
+
+    &:nth-of-type(even) {
+      background: rgba(0, 0, 0, .05);
+    }
+  }
+
+    th {
+      padding: em(20) rem(20);
+      font-weight: normal;
+      text-align: left;
+    }
+
+    td {
+      padding: em(20) rem(20);
+    }

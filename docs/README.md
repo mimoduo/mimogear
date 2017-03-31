@@ -32,8 +32,8 @@ gulp
 
 Once you're all set with getting `gulp` to make its first big _gulp_. Either head over to the /src/ folder if you're getting jittery reading all this and start cracking away at development, or check out Mimogear's documentation using the list below:
 
-* [CSS:Postcss](https://github.com/mimoduo/mimogear/tree/master/docs/postcss)
+* [CSS:Sass](https://github.com/mimoduo/mimogear/tree/master/docs/sass)
 * [HTML:Pug](https://github.com/mimoduo/mimogear/tree/master/docs/pug)
 * [Javascript](https://github.com/mimoduo/mimogear/tree/master/docs/javascript)
 
-**Wondering where all those styles came from? You might want to delete the mimo-theme found in the /src/postcss/mimo/ folder.**
+**Wondering where all those styles came from? You might want to delete the mimo-theme found in the /src/sass/mimo/ folder.**

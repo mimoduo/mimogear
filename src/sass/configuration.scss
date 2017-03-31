@@ -1,0 +1,38 @@
+$sansSerif: 'Open Sans', sans-serif;
+$serif: 'Playfair Display', serif;
+$slab: null;
+
+$bodySize: 16;
+$bodyLine: 24;
+$bodyColor: #222;
+
+$h1Size: 40;
+$h1Line: 50;
+
+$h2Size: 35;
+$h2Line: 45;
+
+$h3Size: 30;
+$h3Line: 40;
+
+$h4Size: 25;
+$h4Line: 35;
+
+$h5Size: 20;
+$h5Line: 30;
+
+$h6Size: 16;
+$h6Line: 22;
+
+$boundary: 1000;
+
+$mini: "screen and (min-width:" + (300px) + ")";
+$tiny: "screen and (min-width:" + (400px) + ")";
+$small: "screen and (min-width:" + (500px) + ")";
+$medium: "screen and (min-width:" + (600px) + ")";
+$big: "screen and (min-width:" + (700px) + ")";
+$large: "screen and (min-width:" + (800px) + ")";
+$huge: "screen and (min-width:" + (900px) + ")";
+$aldnoah: "screen and (min-width:" + (1000px) + ")";
+$yatterman: "screen and (min-width:" + (1100px) + ")";
+$gamagori: "screen and (min-width:" + (1200px) + ")";
