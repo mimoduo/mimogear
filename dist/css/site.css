@@ -410,7 +410,7 @@ template {
   left: 0;
   z-index: 200;
   max-width: 25em;
-  transition: opacity .3s, visibility .3s, transform .3s; }
+  transition: opacity .3s, visibility .3s, transform .3s; }
   .drawer-activated .drawer {
     pointer-events: auto;
     opacity: 1;
@@ -444,7 +444,7 @@ template {
     background: currentColor;
     color: inherit;
     transform: translate(-50%, -50%);
-    transition: background .25s, box-shadow .25s, margin .25s, transform .25s; }
+    transition: background .25s, box-shadow .25s, margin .25s, transform .25s; }
   .drawer-trigger:before {
     margin-top: -0.375em; }
     .drawer-activated .drawer-trigger:before {
@@ -488,7 +488,7 @@ template {
   width: 100%;
   opacity: 0;
   visibility: hidden;
-  transition: opacity .25s, visibility .25s; }
+  transition: opacity .25s, visibility .25s; }
   .lantern-visible {
     opacity: 1;
     visibility: visible; }
@@ -1265,7 +1265,7 @@ menu li ol {
   z-index: 200;
   opacity: 0;
   visibility: hidden;
-  transition: opacity .25s, visibility .25s; }
+  transition: opacity .25s, visibility .25s; }
 
 nav a,
 menu a {

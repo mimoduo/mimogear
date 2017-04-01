@@ -151,8 +151,7 @@ gulp.task('sass', function() {
       require('autoprefixer')({
         browsers: ['> 1%'],
         cascade: false
-      }),
-      require('postcss-discard-empty')
+      })
     ])))
     .pipe(gulpif(production, cssnano()))
     .pipe(gulpif(production, extReplace('.min.css')))
