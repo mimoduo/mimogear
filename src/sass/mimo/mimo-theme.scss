@@ -84,7 +84,7 @@ $s2: #9E9E9E;
   @media #{$yatterman} {
 
     @for $i from 1 through 4 {
-      
+
       .column-yatterman-#{$i} {
         width: $i * (100% / 4);
       }
@@ -596,6 +596,42 @@ $s2: #9E9E9E;
         padding: 0 em(20);
       }
     }
+
+      .bubble-icon-nest {
+        z-index: 2;
+        height: em(50);
+        width: em(50);
+        display: inline-block;
+        margin-bottom: em(10);
+        background:
+          linear-gradient(
+            45deg,
+              $m1,
+              $m2
+          );
+        border-radius: 50%;
+
+        &:after {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: -2;
+          height: calc(100% - #{em(4)});
+          width: calc(100% - #{em(4)});
+          content: '';
+          background: #fff;
+          border-radius: inherit;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+        .bubble-icon {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          display: inline-block;
+          transform: translate(-50%, -50%);
+        }
 
       .bubble-title {
         margin-bottom: 0;

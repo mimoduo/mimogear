@@ -37,6 +37,24 @@ mixin docs-symbol(className)
   <path class="path1" d="M17.016 9v-2.016h-10.031v2.016h10.031zM17.016 12.984v-1.969h-10.031v1.969h10.031zM14.016 17.016v-2.016h-7.031v2.016h7.031zM12 3c-0.563 0-0.984 0.422-0.984 0.984s0.422 1.031 0.984 1.031 0.984-0.469 0.984-1.031-0.422-0.984-0.984-0.984zM18.984 3c1.078 0 2.016 0.938 2.016 2.016v13.969c0 1.078-0.938 2.016-2.016 2.016h-13.969c-1.078 0-2.016-0.938-2.016-2.016v-13.969c0-1.078 0.938-2.016 2.016-2.016h4.172c0.422-1.172 1.5-2.016 2.813-2.016s2.391 0.844 2.813 2.016h4.172z"></path>
   </svg>
 
+mixin leaf(className)
+  <svg class="symbol symbol-leaf #{className}" viewBox="0 0 20 20">
+  <title>leaf</title>
+  <path d="M19.025 3.587c-4.356 2.556-4.044 7.806-7.096 10.175-2.297 1.783-5.538 0.88-7.412 0.113 0 0-1.27 1.603-2.181 3.74-0.305 0.717-1.644-0.073-1.409-0.68 2.978-7.685 13.11-11.519 13.11-11.519s-7.149-0.303-11.927 5.94c-0.128-1.426-0.34-5.284 3.36-7.65 5.016-3.211 14.572-0.715 13.555-0.119z"></path>
+  </svg>
+
+mixin speed(className)
+  <svg class="symbol symbol-speed #{className}" viewBox="0 0 32 32">
+  <title>speed</title>
+  <path d="M22 2l-10 10h-6l-6 8c0 0 6.357-1.77 10.065-0.94l-10.065 12.94 13.184-10.255c1.839 4.208-1.184 10.255-1.184 10.255l8-6v-6l10-10 2-10-10 2z"></path>
+  </svg>
+
+mixin book(className)
+  <svg class="symbol symbol-book #{className}" viewBox="0 0 20 20">
+  <title>book</title>
+  <path d="M17 5.95v10.351c0 0.522-0.452 0.771-1 1.16-0.44 0.313-1-0.075-1-0.587 0 0 0-9.905 0-10.114 0-0.211-0.074-0.412-0.314-0.535s-7.738-4.065-7.738-4.065c-0.121-0.045-0.649-0.378-1.353-0.016-0.669 0.344-1.033 0.718-1.126 0.894l8.18 4.482c0.217 0.114 0.351 0.29 0.351 0.516v10.802c0 0.23-0.142 0.476-0.369 0.585-0.104 0.052-0.219 0.077-0.333 0.077-0.135 0-0.271-0.033-0.386-0.104-0.215-0.131-7.774-4.766-8.273-5.067-0.24-0.144-0.521-0.439-0.527-0.658l-0.112-10.286c0-0.198-0.023-0.547 0.289-1.032 0.697-1.084 3.129-2.317 4.36-1.678l8.999 4.555c0.217 0.112 0.352 0.336 0.352 0.72z"></path>
+  </svg>
+
 block title
   - title = "static site generator"
 
@@ -103,12 +121,21 @@ block content
       +gear-filled-symbol("call-to-action-symbol")
     .bubbles
       .bubble
+        span.bubble-icon-nest
+          span.bubble-icon
+            +leaf
         h3.bubble-title Fresh Boilerplates
         p.bubble-caption All the templates, styles, and scripts you need to start are already setup as highly structured & clean boilerplates.
       .bubble
+        span.bubble-icon-nest
+          span.bubble-icon
+            +speed
         h3.bubble-title Speedy Compilation
         p.bubble-caption #[em Assets are compiled intelligently] based on the build environment and which files were changed.
       .bubble
+        span.bubble-icon-nest
+          span.bubble-icon
+            +book
         h3.bubble-title Docs up the Yazoo
         p.bubble-caption Forget being stuck. Documentation is maintained with thoroughness and ease of understanding in mind.
     .terminal
