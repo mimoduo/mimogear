@@ -877,6 +877,33 @@ template {
   .mimo-theme .bubble {
     padding: 0 1.25em; } }
 
+.mimo-theme .bubble-icon-nest {
+  z-index: 2;
+  height: 3.125em;
+  width: 3.125em;
+  display: inline-block;
+  margin-bottom: 0.625em;
+  background: linear-gradient(45deg, #536DFE, #64FFDA);
+  border-radius: 50%; }
+  .mimo-theme .bubble-icon-nest:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -2;
+    height: calc(100% - 0.25em);
+    width: calc(100% - 0.25em);
+    content: '';
+    background: #fff;
+    border-radius: inherit;
+    transform: translate(-50%, -50%); }
+
+.mimo-theme .bubble-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  transform: translate(-50%, -50%); }
+
 .mimo-theme .bubble-title {
   margin-bottom: 0; }
 
