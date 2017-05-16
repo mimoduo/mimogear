@@ -24,8 +24,8 @@
     "markdown"
   ],
   "devDependencies": {
-    "autoprefixer": "^7.0.1",
-    "browser-sync": "^2.18.8",
+    "autoprefixer": "^7.1.0",
+    "browser-sync": "^2.18.11",
     "gulp": "^3.9.1",
     "gulp-cached": "^1.1.1",
     "gulp-changed": "^3.1.0",
