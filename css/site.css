@@ -392,9 +392,6 @@ template {
 /* Mimo
 // ::::::::::::: */
 /* ================
-// Drawer Mixin
-// ============= */
-/* ================
 // Drawer
 // ============= */
 .drawer {
@@ -456,6 +453,9 @@ template {
       box-shadow: 0 0 0 0 transparent;
       transform: translate(-50%, -50%) rotate(45deg); }
 
+/* ================
+// Grid
+// ============= */
 .grid {
   display: flex;
   flex-wrap: wrap; }
@@ -1034,6 +1034,9 @@ body {
   font-size: 1em;
   line-height: 1.5; }
 
+/* ================
+// Sections
+// ============= */
 .section {
   padding: 2.5em 1.25em; }
   @media print {
@@ -1147,6 +1150,9 @@ iframe {
   background-repeat: no-repeat;
   background-size: cover; }
 
+/* ================
+// Symbols
+// ============= */
 .symbol {
   fill: currentColor;
   transition: fill .25s; }
@@ -1154,6 +1160,9 @@ iframe {
     .symbol {
       display: none; } }
 
+/* ================
+// Type
+// ============= */
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal; }
 
@@ -1195,6 +1204,9 @@ h6 {
 
 /* Components
 // ::::::::::::: */
+/* ================
+// Buttons
+// ============= */
 .button {
   display: inline-block;
   vertical-align: top;
@@ -1202,15 +1214,20 @@ h6 {
   margin: 0 0.625em 0.625em 0;
   padding: 0.625em 1.25em;
   cursor: pointer;
-  text-align: center; }
+  text-align: center;
+  background: #eee; }
   .button[disabled] {
     cursor: not-allowed;
     pointer-events: none; }
 
+/* ================
+// Site Logo
+// ============= */
 .site-logo {
   display: block;
   overflow: hidden;
-  text-decoration: none; }
+  text-decoration: none;
+  white-space: nowrap; }
 
 .site-logo-label {
   position: absolute;
@@ -1219,6 +1236,9 @@ h6 {
   height: 1px;
   width: 1px; }
 
+/* ================
+// Site Search
+// ============= */
 .site-search .gsc-control-cse {
   font-family: inherit;
   border-color: transparent;

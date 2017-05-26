@@ -476,7 +476,7 @@ var Lantern = (function() {
     s.lantern = document.querySelector(s.lantern);
     s.lanternLights = document.querySelectorAll(s.lanternLights);
 
-    if(document.body.contains(s.lantern)) {
+    if (document.body.contains(s.lantern)) {
       constructLantern();
     }
   };
@@ -635,7 +635,7 @@ var Sail = (function() {
     s.slide = document.querySelectorAll(s.slides + ' ' + s.slide);
     s.slides = document.querySelector(s.slides);
 
-    if(document.body.contains(s.slides)) {
+    if (document.body.contains(s.slides)) {
       currentSlide = 0;
 
       constructSail();
@@ -700,11 +700,11 @@ var Sail = (function() {
   };
 
   var shift = function(type) {
-    if(type == 'previous' && currentSlide > 0) {
+    if (type == 'previous' && currentSlide > 0) {
       currentSlide--;
-    } else if(type == 'next' && currentSlide < s.slide.length - 1) {
+    } else if (type == 'next' && currentSlide < s.slide.length - 1) {
       currentSlide++;
-    } else if(Number.isInteger(type)) {
+    } else if (Number.isInteger(type)) {
       currentSlide = type;
     }
 
@@ -730,8 +730,8 @@ var Sail = (function() {
     deactivateSlides();
 
     for (var i = 0; i < s.slide.length; i++) {
-      if(i == slide) {
-        if(i >= 1) {
+      if (i == slide) {
+        if (i >= 1) {
           s.slide[i - 1].classList.add('sail-slide-previous');
           s.pages[i - 1].classList.add('sail-page-previous');
         }
@@ -739,7 +739,7 @@ var Sail = (function() {
         s.slide[i].classList.add('sail-slide-active');
         s.pages[i].classList.add('sail-page-active');
 
-        if(i < s.slide.length) {
+        if (i < s.slide.length) {
           s.slide[i + 1].classList.add('sail-slide-next');
           s.pages[i + 1].classList.add('sail-page-next');
         }
@@ -773,7 +773,7 @@ var Trigger = (function() {
 
     s.element = document.querySelector(s.trigger);
 
-    if(document.body.contains(s.element)) setupTrigger();
+    if (document.body.contains(s.element)) setupTrigger();
 
     return s;
   };
@@ -783,20 +783,20 @@ var Trigger = (function() {
   };
 
   var distributeClasses = function() {
-    if(s.toggle) {
-      if(s.class) s.element.classList.toggle(s.class);
-      if(s.bodyClass) document.body.classList.toggle(s.bodyClass);
-      if(s.parentClass) s.element.parentNode.classList.toggle(s.parentClass);
+    if (s.toggle) {
+      if (s.class) s.element.classList.toggle(s.class);
+      if (s.bodyClass) document.body.classList.toggle(s.bodyClass);
+      if (s.parentClass) s.element.parentNode.classList.toggle(s.parentClass);
     } else {
-      if(s.class) s.element.classList.add(s.class);
-      if(s.bodyClass) document.body.classList.add(s.bodyClass);
-      if(s.parentClass) s.element.parentNode.classList.add(s.parentClass);
+      if (s.class) s.element.classList.add(s.class);
+      if (s.bodyClass) document.body.classList.add(s.bodyClass);
+      if (s.parentClass) s.element.parentNode.classList.add(s.parentClass);
     }
 
-    if(s.remove) {
-      if(s.target.class) s.target.trigger.classList.remove(s.target.class);
-      if(s.target.bodyClass) document.body.classList.remove(s.target.bodyClass);
-      if(s.target.parentClass) s.target.trigger.parentNode.classList.remove(s.target.parentClass);
+    if (s.remove) {
+      if (s.target.class) s.target.trigger.classList.remove(s.target.class);
+      if (s.target.bodyClass) document.body.classList.remove(s.target.bodyClass);
+      if (s.target.parentClass) s.target.trigger.parentNode.classList.remove(s.target.parentClass);
     }
   };
 
