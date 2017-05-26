@@ -14,8 +14,9 @@ html(
   include regions/head.pug
   body
     a.skip-link(href="#site-main") Skip to main content
-    figure.site-sprite(style="display: none;")
-      include ../../dist/svg/sprite.symbol.svg
+    block sprite
+      figure.site-sprite(style="display: none;")
+        include ../../dist/svg/sprite.symbol.svg
     include regions/header.pug
     main.site-main#site-main(role="main")
       block content

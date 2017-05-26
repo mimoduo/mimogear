@@ -1,3 +1,7 @@
+/* ================
+// Buttons
+// ============= */
+
 .button {
   display: inline-block;
   vertical-align: top;
@@ -6,6 +10,7 @@
   padding: em(10) em(20);
   cursor: pointer;
   text-align: center;
+  background: #eee;
 
   &:focus,
   &:hover {}

@@ -22,7 +22,7 @@ var Sail = (function() {
     s.slide = document.querySelectorAll(s.slides + ' ' + s.slide);
     s.slides = document.querySelector(s.slides);
 
-    if(document.body.contains(s.slides)) {
+    if (document.body.contains(s.slides)) {
       currentSlide = 0;
 
       constructSail();
@@ -87,11 +87,11 @@ var Sail = (function() {
   };
 
   var shift = function(type) {
-    if(type == 'previous' && currentSlide > 0) {
+    if (type == 'previous' && currentSlide > 0) {
       currentSlide--;
-    } else if(type == 'next' && currentSlide < s.slide.length - 1) {
+    } else if (type == 'next' && currentSlide < s.slide.length - 1) {
       currentSlide++;
-    } else if(Number.isInteger(type)) {
+    } else if (Number.isInteger(type)) {
       currentSlide = type;
     }
 
@@ -117,8 +117,8 @@ var Sail = (function() {
     deactivateSlides();
 
     for (var i = 0; i < s.slide.length; i++) {
-      if(i == slide) {
-        if(i >= 1) {
+      if (i == slide) {
+        if (i >= 1) {
           s.slide[i - 1].classList.add('sail-slide-previous');
           s.pages[i - 1].classList.add('sail-page-previous');
         }
@@ -126,7 +126,7 @@ var Sail = (function() {
         s.slide[i].classList.add('sail-slide-active');
         s.pages[i].classList.add('sail-page-active');
 
-        if(i < s.slide.length) {
+        if (i < s.slide.length) {
           s.slide[i + 1].classList.add('sail-slide-next');
           s.pages[i + 1].classList.add('sail-page-next');
         }

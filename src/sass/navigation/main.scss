@@ -1,15 +1,12 @@
 .main-nav {
 
-  > ol {
+  &-group {}
 
-    > li {
+    &-item {}
 
-      > a {
+      &-link {
 
         &:focus,
         &:hover {}
-
       }
-    }
-  }
 }

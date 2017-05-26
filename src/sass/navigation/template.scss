@@ -1,13 +1,12 @@
-.template-nav {
+.nav-template {
 
-  ol {}
+  &-group {}
 
-    li {}
+    &-item {}
 
-      a {
+      &-link {
 
         &:focus,
         &:hover {}
-
       }
 }

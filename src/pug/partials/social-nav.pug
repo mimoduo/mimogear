@@ -1,11 +1,12 @@
 nav.social-nav
-  ol
+  ol.social-nav-group
     each link in siteLinks.socialNav
-      li
-        a(
+      li.social-nav-item
+        a.social-nav-link(
           href=link.href
           itemprop="url"
           target="_blank"
         )
-          span.visible-for-screen-readers= link.name
-          +symbol(link.name)
+          span.social-nav-label.visible-for-screen-readers= link.name
+          span.social-nav-icon
+            +symbol(link.name)

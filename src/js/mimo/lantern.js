@@ -25,7 +25,7 @@ var Lantern = (function() {
     s.lantern = document.querySelector(s.lantern);
     s.lanternLights = document.querySelectorAll(s.lanternLights);
 
-    if(document.body.contains(s.lantern)) {
+    if (document.body.contains(s.lantern)) {
       constructLantern();
     }
   };

@@ -1,8 +1,8 @@
 nav.main-nav
-  ol
+  ol.main-nav-group
     each link in siteLinks.mainNav
-      li
-        a(
+      li.main-nav-item
+        a.main-nav-link(
           href=link.href
           itemprop="url"
         )= link.name
