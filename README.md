@@ -1,6 +1,8 @@
 ![Mimogear logo of a flowering gear and two wings](http://image.prntscr.com/image/e86217163ef747b3af55d3e2b29be4dc.png)
 
-# Mimogear [![Build Status](https://travis-ci.org/mimoduo/mimogear.svg?branch=master)](https://travis-ci.org/mimoduo/mimogear)
+# Mimogear
+
+[![Build Status](https://travis-ci.org/mimoduo/mimogear.svg?branch=master)](https://travis-ci.org/mimoduo/mimogear)
 
 > **Mimogear is a simple static site generator and web development boilerplate** that will _automatically compile, distribute, watch, and deploy assets_.
 
