@@ -1,4 +1,4 @@
-<div style="max-width: 340px; margin: 0 auto;">![Mimogear logo of a flowering gear and two wings](http://image.prntscr.com/image/e86217163ef747b3af55d3e2b29be4dc.png)</div>
+![Mimogear logo of a flowering gear and two wings](http://image.prntscr.com/image/e86217163ef747b3af55d3e2b29be4dc.png)
 
 # Mimogear [![Build Status](https://travis-ci.org/mimoduo/mimogear.svg?branch=master)](https://travis-ci.org/mimoduo/mimogear)
 
