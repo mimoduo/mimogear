@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/mimoduo/mimogear.svg?branch=master)](https://travis-ci.org/mimoduo/mimogear)
 
-> **Mimogear is a simple static site generator and web development boilerplate** that will _automatically compile, distribute, watch, and deploy assets_.
+> **Mimogear compiles, distributes, watches, & deploys a pug template boilerplate, a sass skeleton stylesheet, and a javascript module bundle with gulp & travis ci.**
 
 ## Highlights
 
