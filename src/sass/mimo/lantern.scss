@@ -49,18 +49,18 @@
       top: 50%;
       cursor: pointer;
       transform: translate(0, -50%);
-    }
 
-    .lantern-previous {
-      left: 0;
-    }
+      &-previous {
+        left: 0;
+      }
 
-    .lantern-next {
-      right: 0;
-    }
+      &-next {
+        right: 0;
+      }
 
-    .lantern-close {
-      top: 0;
-      right: 0;
-      transform: none;
+      &-close {
+        top: 0;
+        right: 0;
+        transform: none;
+      }
     }

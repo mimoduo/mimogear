@@ -36,7 +36,9 @@ var El = (function() {
 
     if (s.attributes) {
       for (var attr in s.attributes) {
-        newEl.setAttribute(attr.toString(), s.attributes[attr]);
+        if (s.attributes.hasOwnProperty(attr)) {
+          newEl.setAttribute(attr.toString(), s.attributes[attr]);
+        }
       }
     }
 

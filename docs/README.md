@@ -13,7 +13,7 @@ npm install
 
 ## Updating Configuration
 
-Now that you've downloaded all of the dependencies, let's take a moment to setup configuration.json. Here you'll find a complete list of variables used in Mimogear.
+Now that you've downloaded all of the dependencies, let's take a moment to setup configuration.json. Here you'll find the sitemap used in Mimogear.
 
 **The "links": {} object passes data to pug to help generate your site's navigation markup.**
 

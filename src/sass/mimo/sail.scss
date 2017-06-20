@@ -8,15 +8,25 @@
 
   .sail-slides {
     @include list-reset;
-
-    white-space: nowrap;
-    transition: transform .5s;
+    position: relative;
   }
 
     .sail-slide {
-      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      margin-right: em(-5);
+      opacity: 0;
+      visibility: hidden;
+      transition:
+        opacity .25s,
+        visibility .25s;
+
+      &-active {
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+      }
     }
 
 

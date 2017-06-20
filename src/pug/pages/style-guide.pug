@@ -8,7 +8,7 @@ block theme
 
 block content
   +section
-    h1 Headings
+    h2 Headings
     h1 H1 All their equipment and instruments are alive.
     p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
 
@@ -31,7 +31,7 @@ block content
     h6 H6 It was going to be a lonely trip back.
     p Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
   +section
-    h1 Unordered/Ordered Lists
+    h2 Unordered/Ordered Lists
     ul
       li Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
       li hasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
@@ -49,13 +49,13 @@ block content
       li Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
       li Nulla consequat massa quis enim.
   +section
-    h1 Buttons
+    h2 Buttons
     p Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
     a.button(href="") Button
     a.button(href="") Button
     p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
   +section
-    h1 Forms
+    h2 Forms
     form
       fieldset
         label Input Label
@@ -96,11 +96,32 @@ block content
           value="Submit"
         )
   +section
-    h1 Inline Type
+    h2 Inline Type
     p #[em Lorem ipsum dolor sit amet], consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
     p #[strong Donec pede justo], fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
     p #[a(href="#") Aenean leo ligula], porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
     blockquote Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
   +section
-    h1 Tables
+    h2 Tables
     include ../partials/table.pug
+  +section
+    h2 iframe
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Ee15gbUiqfs" frameborder="0" allowfullscreen></iframe>
+  +section
+    h2 Sail Slides
+    ol.sail-slides
+      li One
+      li Two
+      li Three
+      li Four
+  +section
+    h2 Lantern Lightbox
+    img.lantern-light(
+      src="http://i.imgur.com/TN4ivtD.jpg"
+      title="The 'Cathedral Cliffs' of Kauai's Na Pali Coast. Kauai, Hawaii"
+    )
+    img.lantern-light(
+      src="http://i.imgur.com/SOABm96.jpg"
+      title="Petrified Forest National Park, Arizona"
+    )
+    .lantern

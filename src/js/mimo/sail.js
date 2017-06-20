@@ -95,9 +95,6 @@ var Sail = (function() {
       currentSlide = type;
     }
 
-    var move = currentSlide * -100 + '%';
-    s.slides.setAttribute('style', '-webkit-transform: translate(' + move + ', 0); transform: translate(' + move + ', 0);');
-
     activateSlides(currentSlide);
   };
 
@@ -126,7 +123,7 @@ var Sail = (function() {
         s.slide[i].classList.add('sail-slide-active');
         s.pages[i].classList.add('sail-page-active');
 
-        if (i < s.slide.length) {
+        if (i < s.slide.length - 1) {
           s.slide[i + 1].classList.add('sail-slide-next');
           s.pages[i + 1].classList.add('sail-page-next');
         }

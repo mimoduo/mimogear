@@ -27,56 +27,46 @@ var Lantern = (function() {
 
     if (document.body.contains(s.lantern)) {
       constructLantern();
+      bindControls();
+      bindLights();
     }
   };
 
   var constructLantern = function() {
 
-    var content = document.createElement('div');
-    content.classList.add('lantern-content');
-    s.lantern.appendChild(content);
-    s.vdom.content = content;
+    s.lantern.innerHTML = '<div class="lantern-content">' +
+      '<img class="lantern-holder">' +
+      '<button class="lantern-control lantern-control-previous"><svg class="symbol symbol-lantern symbol-lantern-previous"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' + s.previous + '"></use></svg></button>' +
+      '<button class="lantern-control lantern-control-next"><svg class="symbol symbol-lantern symbol-lantern-next"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' + s.next + '"></use></svg></button>' +
+      '<button class="lantern-control lantern-control-close"><svg class="symbol symbol-lantern symbol-lantern-close"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></button>' +
+    '</div>';
 
-    var holder = document.createElement('img');
-    holder.classList.add('lantern-holder');
-    content.appendChild(holder);
-    s.vdom.holder = holder;
+    s.vdom.content = document.querySelector('.lantern-content');
+    s.vdom.holder = document.querySelector('.lantern-holder');
 
-    var previous = document.createElement('button');
-    previous.classList.add('lantern-control');
-    previous.classList.add('lantern-previous');
-    previous.innerHTML = '<svg class="symbol symbol-lantern symbol-lantern-previous">' +
-    '<use xlink:href="' + s.previous + '"></use>' +
-    '</svg>';
-    previous.addEventListener('click', function() {
+    s.vdom.previous = document.querySelector('.lantern-control-previous');
+    s.vdom.next = document.querySelector('.lantern-control-next');
+    s.vdom.close = document.querySelector('.lantern-control-close');
+
+  };
+
+  var bindControls = function() {
+
+    s.vdom.previous.addEventListener('click', function() {
       previousLight();
     });
-    content.appendChild(previous);
-    s.vdom.previous = previous;
 
-    var next = document.createElement('button');
-    next.classList.add('lantern-control');
-    next.classList.add('lantern-next');
-    next.innerHTML = '<svg class="symbol symbol-lantern symbol-lantern-next">' +
-    '<use xlink:href="' + s.next + '"></use>' +
-    '</svg>';
-    next.addEventListener('click', function() {
+    s.vdom.next.addEventListener('click', function() {
       nextLight();
     });
-    content.appendChild(next);
-    s.vdom.next = next;
 
-    var close = document.createElement('button');
-    close.classList.add('lantern-control');
-    close.classList.add('lantern-close');
-    close.innerHTML = '<svg class="symbol symbol-lantern symbol-lantern-close">' +
-    '<use xlink:href="' + s.close + '"></use>' +
-    '</svg>';
-    close.addEventListener('click', function() {
+    s.vdom.close.addEventListener('click', function() {
       removeLight();
     });
-    content.appendChild(close);
-    s.vdom.close = close;
+
+  };
+
+  var bindLights = function() {
 
     for (var i = 0; i < s.lanternLights.length; i++) {
       s.lanternLights[i].setAttribute('tabindex', '0');
@@ -88,7 +78,7 @@ var Lantern = (function() {
       s.lightCollection[i] = [];
       s.lightCollection[i].push(
         s.lanternLights[i].getAttribute('src'),
-        s.lanternLights[i].getAttribute('alt')
+        s.lanternLights[i].getAttribute('title')
       );
     }
 
@@ -155,7 +145,8 @@ var Lantern = (function() {
   };
 
   return {
-    init: init
+    init: init,
+    displayLight: displayLight
   };
 
 })();

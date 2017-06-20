@@ -1,4 +1,4 @@
-@import 'configuration.scss';
+@import 'configuration';
 @import 'utilities/*';
 
 /* Vendor
@@ -9,7 +9,11 @@
 /* Mimo
 // ::::::::::::: */
 
-@import 'mimo/*';
+@import 'mimo/drawer';
+@import 'mimo/grid';
+@import 'mimo/lantern';
+@import 'mimo/mimo-theme';
+@import 'mimo/sail';
 
 /* Structure
 // ::::::::::::: */

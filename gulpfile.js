@@ -149,7 +149,10 @@ gulp.task('sass', function() {
     .pipe(browserSync.stream())
     .pipe(gulpif(production, postcss([
       require('autoprefixer')({
-        browsers: ['> 1%'],
+        browsers: [
+          '> 1%',
+          'last 2 versions'
+        ],
         cascade: false
       })
     ])))
@@ -240,7 +243,7 @@ gulp.task('browser-sync', function() {
       styles: {
         top: 'auto',
         bottom: '0',
-        padding: '4px',
+        padding: '4px 8px',
         fontSize: '12px',
         borderBottomLeftRadius: '0'
       }

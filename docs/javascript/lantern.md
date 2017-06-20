@@ -19,7 +19,7 @@ Then you'll want to add in some lantern markup into your pug page. This example 
 ```pug
 img.lantern-light(
   src="http://i.imgur.com/TN4ivtD.jpg"
-  title="The 'Cathedral Cliffs' of Kauai's Na Pali Coast. Kauai, Hawaii "
+  title="The 'Cathedral Cliffs' of Kauai's Na Pali Coast. Kauai, Hawaii"
 )
 img.lantern-light(
   src="http://i.imgur.com/SOABm96.jpg"
