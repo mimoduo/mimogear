@@ -4,14 +4,14 @@
 
 [![Build Status](https://travis-ci.org/mimoduo/mimogear.svg?branch=master)](https://travis-ci.org/mimoduo/mimogear)
 
-> **Mimogear is a complete web development boilerplate for developing static sites. Each boilerplate for sass, pug, and javascript is developed using best practices and refined to provide the best experiences across devices. From newcomers to professionals alike, you'll feel right at home starting with Mimogear!**
+> **Mimogear is a complete web development boilerplate for developing static sites. Each boilerplate for sass, pug, and javascript is developed using best practices and refined to provide an easy to use development environment. From newcomers to professionals alike, you'll feel right at home starting with Mimogear!**
 
 ## Highlights
 
 * Responsive skeleton [sass](http://sass-lang.com/) boilerplate for quick css development
 * Complete [pug](https://pugjs.org/api/getting-started.html) template boilerplate, with Markdown support, for generating html files
 * Optional starter javascript slideshow, lightbox, and trigger
-* Sass compilation, Autoprefixer, css minification, pug compilation, javascript concatenation & uglification, asset watching on save, and browser sync live reload and device syncronization via [gulp](http://gulpjs.com/)
+* Sass compilation, Autoprefixer, css minification, pug compilation, javascript concatenation & uglification, and asset reloading on save via [gulp](http://gulpjs.com/)
 * [Sample style guide](http://mimoduo.github.io/mimogear/style-guide.html) with common HTML elements
 * [Travis CI](https://travis-ci.org/) starter kit for deployments to [github pages](https://pages.github.com/) and [surge.sh](https://surge.sh/)
 * Documentation for [netlify](https://www.netlify.com/) deployments and hosting
