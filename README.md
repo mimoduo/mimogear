@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/mimoduo/mimogear.svg?branch=master)](https://travis-ci.org/mimoduo/mimogear)
 
-> **Mimogear is a complete web development boilerplate for developing static sites. Each boilerplate for sass, pug, and javascript is developed using best practices and refined to provide an easy to use development environment. From newcomers to professionals alike, you'll feel right at home starting with Mimogear!**
+> **Mimogear** is a complete web development boilerplate for developing static sites. By pairing with **gulp**, a powerful node based task runner, Mimogear automatically compiles a responsive **sass** skeleton boilerplate, renders a **pug** template boilerplate, concatenates & uglifies an optional javascript module bundle, and begins watching assets for changes. Newcomers and professionals alike will feel right at home with a solid start for any static site!
 
 ## Highlights
 
