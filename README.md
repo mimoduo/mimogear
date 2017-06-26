@@ -21,7 +21,8 @@
 Mimogear uses [npm](https://docs.npmjs.com/getting-started/installing-node) so make sure to get that before you start! Once you're ready, whip out your terminal and enter in the following goodies:
 
 ```sh
-cd <folder-of-Mimogear> (drag the folder into your terminal)
+git clone https://github.com/mimoduo/mimogear.git
+cd mimogear
 npm install gulp-cli -g
 npm install
 gulp
