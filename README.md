@@ -15,14 +15,14 @@
   </tr>
   <tr>
     <td>Gulp Boilerplate</td>
-    <td>[Gulp](http://gulpjs.com/) intelligently handles compilation and optimization tasks based on the environment for speedier Sass, Pug, and js development.</td>
+    <td><a href="http://gulpjs.com/">Gulp</a> intelligently handles compilation and optimization tasks based on the environment for speedier Sass, Pug, and js development.</td>
   </tr>
   <tr>
     <td>Responsive Sass Boilerplate</td>
-    <td>A flexible [Sass](http://sass-lang.com/) boilerplate with various [mixins](https://github.com/mimoduo/mimogear/tree/master/src/sass/utilities), a simpler form of BEM, and a platform agnostic approach.</td>
+    <td>A flexible <a href="http://sass-lang.com/">Sass</a> boilerplate with various <a href="https://github.com/mimoduo/mimogear/tree/master/src/sass/utilities">mixins</a>, a simpler form of BEM, and a platform agnostic approach.</td>
   </tr>
   <tr>
-    <td>Base [Pug](https://pugjs.org/api/getting-started.html) Template Boilerplate</td>
+    <td>Base <a href="https://pugjs.org/api/getting-started.html">Pug</a> Template Boilerplate</td>
     <td>Generate HTML files faster with Pug's condensed syntax, a highly structured HTML template setup, markdown support, and starter partials.</td>
   </tr>
   <tr>
@@ -42,12 +42,12 @@
     <td>BrowserSync synchronizes actions across devices for quicker testing.</td>
   </tr>
   <tr>
-    <td>[Style Guide Generator](http://mimoduo.github.io/mimogear/style-guide.html)</td>
+    <td><a href="http://mimoduo.github.io/mimogear/style-guide.html">Style Guide Generator</a></td>
     <td>A page for core HTML elements is created by default for easier site styling and future referencing.</td>
   </tr>
   <tr>
     <td>Deployments Starter Kit</td>
-    <td>Deploy your site with boilerplates for [github pages](https://pages.github.com/), and [surge](https://surge.sh/) with a [Travis CI](https://travis-ci.org/) starter kit.</td>
+    <td>Deploy your site with boilerplates for <a href="https://pages.github.com/">github pages</a>, and <a href="https://surge.sh/">surge</a> with a <a href="https://travis-ci.org/">Travis CI</a> starter kit.</td>
   </tr>
 </table>
 
