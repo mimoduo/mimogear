@@ -4,21 +4,56 @@
 
 [![Build Status](https://travis-ci.org/mimoduo/mimogear.svg?branch=master)](https://travis-ci.org/mimoduo/mimogear)
 
-> **Mimogear** is a complete web development boilerplate for developing static sites. By pairing with **gulp**, a powerful node based task runner, Mimogear automatically compiles a responsive **sass** skeleton boilerplate, renders a **pug** template boilerplate, concatenates & uglifies an optional javascript module bundle, and begins watching assets for changes. Newcomers and professionals alike will feel right at home with a solid start for any static site!
+> **Mimogear** is a complete web development boilerplate for developing static sites. Packed inside Mimogear you'll find **Gulp**, **Sass**, and **Pug** boilerplates to get you started. Newcomers and professionals alike will feel right at home with a solid start for any static site! Just run `gulp` and get buildin!
 
 ## Highlights
 
-* Responsive skeleton [sass](http://sass-lang.com/) boilerplate for quick css development
-* Complete [pug](https://pugjs.org/api/getting-started.html) template boilerplate, with Markdown support, for generating html files
-* Optional starter javascript slideshow, lightbox, and trigger
-* Sass compilation, Autoprefixer, css minification, pug compilation, javascript concatenation & uglification, and asset reloading on save via [gulp](http://gulpjs.com/)
-* [Sample style guide](http://mimoduo.github.io/mimogear/style-guide.html) with common HTML elements
-* [Travis CI](https://travis-ci.org/) starter kit for deployments to [github pages](https://pages.github.com/) and [surge.sh](https://surge.sh/)
-* Documentation for [netlify](https://www.netlify.com/) deployments and hosting
+<table>
+  <tr>
+    <th>Feature</th>
+    <th>Summary</th>
+  </tr>
+  <tr>
+    <td>Gulp Boilerplate</td>
+    <td>[Gulp](http://gulpjs.com/) intelligently handles compilation and optimization tasks based on the environment for speedier Sass, Pug, and js development.</td>
+  </tr>
+  <tr>
+    <td>Responsive Sass Boilerplate</td>
+    <td>A flexible [Sass](http://sass-lang.com/) boilerplate with various [mixins](https://github.com/mimoduo/mimogear/tree/master/src/sass/utilities), a simpler form of BEM, and a platform agnostic approach.</td>
+  </tr>
+  <tr>
+    <td>Base [Pug](https://pugjs.org/api/getting-started.html) Template Boilerplate</td>
+    <td>Generate HTML files faster with Pug's condensed syntax, a highly structured HTML template setup, markdown support, and starter partials.</td>
+  </tr>
+  <tr>
+    <td>Optional Javascript Modules</td>
+    <td>Completely optional javascript modules to create slideshows, lightboxes, triggers, and elements on the fly.</td>
+  </tr>
+  <tr>
+    <td>Performance Optimizations</td>
+    <td>Gulp will minify CSS, concatenate & uglify javascript, and optimize images to produce performant static pages.</td>
+  </tr>
+  <tr>
+    <td>Live Reloading</td>
+    <td>Reloads the browser whenever you make a change to a file.</td>
+  </tr>
+  <tr>
+    <td>Cross-device Synchronization</td>
+    <td>BrowserSync synchronizes actions across devices for quicker testing.</td>
+  </tr>
+  <tr>
+    <td>[Style Guide Generator](http://mimoduo.github.io/mimogear/style-guide.html)</td>
+    <td>A page for core HTML elements is created by default for easier site styling and future referencing.</td>
+  </tr>
+  <tr>
+    <td>Deployments Starter Kit</td>
+    <td>Deploy your site with boilerplates for [github pages](https://pages.github.com/), and [surge](https://surge.sh/) with a [Travis CI](https://travis-ci.org/) starter kit.</td>
+  </tr>
+</table>
 
 ## Getting Started
 
-Mimogear uses [npm](https://docs.npmjs.com/getting-started/installing-node) so make sure to get that before you start! Once you're ready, whip out your terminal and enter in the following goodies:
+Once you're ready and setup with [npm](https://docs.npmjs.com/getting-started/installing-node), whip out your terminal and enter in the following goodies:
 
 ```sh
 git clone https://github.com/mimoduo/mimogear.git
@@ -30,7 +65,7 @@ gulp
 
 Your site will open up in a browser window automatically, gulp will begin watching your files, and browserSync will automatically reload your changes. Now you're ready to get started in developing html:pug, css:sass, and javascript. Check out /src/ to see your shiny new web development boilerplate!
 
-**Once you're all set, there's a heap of documentation ready for ya:**
+**Once you're all set, there's documentation ready for ya:**
 
 * [Quickstart Guide](https://github.com/mimoduo/mimogear/tree/master/docs)
 * [Deployment](https://github.com/mimoduo/mimogear/tree/master/docs/deployment)
