@@ -10,28 +10,23 @@ form {}
     padding: 0;
   }
 
+    label {}
 
-/* ================
-// Form Elements
-// ============= */
+    input {
 
-label {}
+      &[type='text'] {}
 
-input {
+      &[type='radio'] {}
 
-  &[type='text'] {}
+      &[type='checkbox'] {}
 
-  &[type='radio'] {}
+      &[type='submit'] {}
+    }
 
-  &[type='checkbox'] {}
+    select {
+      appearance: none;
+    }
 
-  &[type='submit'] {}
-}
-
-select {
-  appearance: none;
-}
-
-textarea {
-  min-height: em(220);
-}
+    textarea {
+      min-height: em(220);
+    }
