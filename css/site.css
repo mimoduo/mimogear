@@ -111,19 +111,9 @@ abbr[title] {
   text-decoration: underline dotted;
   /* 2 */ }
 
-/**
- * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
- */
 b,
 strong {
-  font-weight: inherit; }
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-b,
-strong {
-  font-weight: bolder; }
+  font-weight: bold; }
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -1161,10 +1151,22 @@ iframe {
 .symbol {
   display: block;
   fill: currentColor;
-  transition: fill .25s; }
+  transition: fill .25s, stroke .25s; }
   @media print {
     .symbol {
       display: none; } }
+  .symbol-logo {
+    height: 150px;
+    width: 100px; }
+  .symbol-arrow-left {
+    height: 20px;
+    width: 20px; }
+  .symbol-arrow-right {
+    height: 20px;
+    width: 20px; }
+  .symbol-close {
+    height: 20px;
+    width: 20px; }
 
 /* ================
 // Type
@@ -1297,20 +1299,28 @@ h6 {
 /* ================
 // Generic Navigation & Menu Behaviors
 // ============= */
+nav ul,
 nav ol,
+menu ul,
 menu ol {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
   list-style: none; }
 
-nav li:focus ol, nav li:hover ol,
+nav li:focus ul,
+nav li:focus ol, nav li:hover ul,
+nav li:hover ol,
+menu li:focus ul,
 menu li:focus ol,
+menu li:hover ul,
 menu li:hover ol {
   opacity: 1;
   visibility: visible; }
 
+nav li ul,
 nav li ol,
+menu li ul,
 menu li ol {
   position: absolute;
   top: 100%;
