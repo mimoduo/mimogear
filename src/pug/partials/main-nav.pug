@@ -6,3 +6,11 @@ nav.main-nav
           href=link.href
           itemprop="url"
         )= link.name
+        if link.children
+          ol.main-nav-children
+            each child in link.children
+              li.main-nav-child-item
+                a.main-nav-child-link(
+                  href=child.href
+                  itemprop="url"
+                )= child.name

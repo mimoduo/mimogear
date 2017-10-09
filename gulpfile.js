@@ -4,9 +4,11 @@
 
 var gulp = require('gulp'),
     fs = require('fs'),
+    reload = require('require-reload')(require),
     packageJSON = require('./package.json'),
     configuration = require('./configuration.json'),
     browserSync = require('browser-sync').create(),
+    del = require('del'),
     minimist = require('minimist'),
     gulpif = require('gulp-if'),
     cached = require('gulp-cached'),
@@ -252,12 +254,52 @@ gulp.task('browser-sync', function() {
 
 });
 
+gulp.task('reload', function() {
+
+	browserSync.reload();
+
+});
+
+
+/* ================
+// Reset Build
+// ============= */
+
+gulp.task('reset', function() {
+
+  try {
+    packageJSON = reload('./package.json');
+    configuration = reload('./configuration.json');
+    pugLocals.siteLinks = configuration.links;
+  } catch (e) {
+    console.error("Failed to reload package.json! Error: ", e);
+  }
+
+});
+
+
+/* ================
+// Clean Dist
+// ============= */
+
+gulp.task('clean', function() {
+
+  del([
+    '*.html',
+    'dist/**',
+    '!dist',
+    '!dist/svg',
+    '!dist/svg/**'
+  ]);
+
+});
+
 
 /* ================
 // Github Pages Deployment
 // ============= */
 
-gulp.task('ghPages', ['build'], function() {
+gulp.task('ghPages', ['clean', 'build'], function() {
 
   return gulp.src('./dist/**/*')
     .pipe(ghPages());
@@ -269,7 +311,7 @@ gulp.task('ghPages', ['build'], function() {
 // Surge Direct Deployment
 // ============= */
 
-gulp.task('surge', ['build'], function() {
+gulp.task('surge', ['clean', 'build'], function() {
 
   return surge({
     project: './dist',
@@ -285,6 +327,7 @@ gulp.task('surge', ['build'], function() {
 
 gulp.task('watch', function() {
 
+  gulp.watch(['configuration.json', 'package.json'], ['reset', 'build']);
   gulp.watch(['src/pug/**/*.pug', '!src/pug/pages/**/*.pug'], ['pug']);
   gulp.watch('src/pug/pages/**/*.pug', ['pug-pages']);
   gulp.watch('src/sass/**/*.scss', ['sass']);

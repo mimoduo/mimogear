@@ -55,13 +55,13 @@ var Sail = (function() {
     var previous = document.createElement('button');
     previous.classList.add('sail-control');
     previous.classList.add('sail-control-previous');
-    previous.innerHTML = '<svg class="symbol symbol-sail-previous"><use xlink:href="' + s.previous + '"></use></svg>';
+    previous.innerHTML = '<svg class="symbol symbol-arrow-left"><use xlink:href="' + s.previous + '"></use></svg>';
     previous.addEventListener('click', shift.bind(null, 'previous'), false);
 
     var next = document.createElement('button');
     next.classList.add('sail-control');
     next.classList.add('sail-control-next');
-    next.innerHTML = '<svg class="symbol symbol-sail-next"><use xlink:href="' + s.next + '"></use></svg>';
+    next.innerHTML = '<svg class="symbol symbol-arrow-right"><use xlink:href="' + s.next + '"></use></svg>';
     next.addEventListener('click', shift.bind(null, 'next'), false);
 
     controls.appendChild(previous);

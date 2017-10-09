@@ -5,6 +5,7 @@
 nav,
 menu {
 
+  ul,
   ol {
     @include list-reset;
   }
@@ -14,12 +15,14 @@ menu {
       &:focus,
       &:hover {
 
+        ul,
         ol {
           opacity: 1;
           visibility: visible;
         }
       }
 
+      ul,
       ol {
         position: absolute;
         top: 100%;

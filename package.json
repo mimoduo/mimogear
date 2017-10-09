@@ -1,6 +1,6 @@
 {
   "name": "mimogear",
-  "version": "1.5.0",
+  "version": "1.8.0",
   "homepage": "https://github.com/mimoduo/mimogear",
   "author": "Bryan Stoner",
   "description": "Mimogear is a super simple static site generator and web development boilerplate",
@@ -24,8 +24,9 @@
     "markdown"
   ],
   "devDependencies": {
-    "autoprefixer": "^7.1.4",
+    "autoprefixer": "^7.1.5",
     "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-cached": "^1.1.1",
     "gulp-changed": "^3.1.0",
@@ -34,7 +35,7 @@
     "gulp-ext-replace": "^0.3.0",
     "gulp-gh-pages": "^0.5.4",
     "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^3.3.0",
+    "gulp-imagemin": "^3.4.0",
     "gulp-postcss": "^7.0.0",
     "gulp-pug": "^3.3.0",
     "gulp-pug-inheritance": "^0.2.1",
@@ -45,6 +46,7 @@
     "gulp-uglify": "^3.0.0",
     "jstransformer-markdown": "^1.2.1",
     "minimist": "^1.2.0",
+    "require-reload": "^0.2.2",
     "surge": "^0.19.0"
   }
 }
