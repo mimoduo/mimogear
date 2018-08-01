@@ -24,8 +24,8 @@
     "markdown"
   ],
   "devDependencies": {
-    "autoprefixer": "^8.5.0",
-    "browser-sync": "^2.24.4",
+    "autoprefixer": "^9.0.2",
+    "browser-sync": "^2.24.6",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-cached": "^1.1.1",
@@ -43,7 +43,7 @@
     "gulp-sass-glob": "^1.0.9",
     "gulp-surge": "^0.1.0",
     "gulp-svg-sprite": "^1.4.0",
-    "gulp-uglify": "^3.0.0",
+    "gulp-uglify": "^3.0.1",
     "jstransformer-markdown": "^1.2.1",
     "minimist": "^1.2.0",
     "require-reload": "^0.2.2",
