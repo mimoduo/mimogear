@@ -1,12 +1,11 @@
-.main-nav {
+.main-nav {}
 
-  &-group {}
+  .main-nav-group {}
 
-    &-item {}
+    .main-nav-item {}
 
-      &-link {
+      .main-nav-link {
 
         &:focus,
         &:hover {}
       }
-}

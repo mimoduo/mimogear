@@ -351,8 +351,12 @@ gulp.task('build', [
   'pug'
 ]);
 
-gulp.task('default', [
-  'build',
+gulp.task('dev'), [
   'watch',
   'browser-sync'
+]);
+
+gulp.task('default', [
+  'build',
+  'dev'
 ]);

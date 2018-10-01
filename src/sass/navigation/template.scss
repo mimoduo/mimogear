@@ -1,12 +1,11 @@
-.template-nav {
+.template-nav {}
 
-  &-group {}
+  .template-nav-group {}
 
-    &-item {}
+    .template-nav-item {}
 
-      &-link {
+      .template-nav-link {
 
         &:focus,
         &:hover {}
       }
-}

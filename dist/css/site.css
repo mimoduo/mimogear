@@ -1048,6 +1048,22 @@ body {
 /* Elements
 // ::::::::::::: */
 /* ================
+// Buttons
+// ============= */
+.button {
+  display: inline-block;
+  vertical-align: top;
+  border: 0;
+  margin: 0 0.625em 0.625em 0;
+  padding: 0.625em 1.25em;
+  cursor: pointer;
+  text-align: center;
+  background: #eee; }
+  .button[disabled] {
+    cursor: not-allowed;
+    pointer-events: none; }
+
+/* ================
 // Form Container
 // ============= */
 fieldset {
@@ -1112,6 +1128,22 @@ th {
 
 td {
   padding: 1.25em 1.25rem; }
+
+/* ================
+// Site Logo
+// ============= */
+.site-logo {
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  white-space: nowrap; }
+
+.site-logo-label {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px; }
 
 /* ================
 // Common Media
@@ -1212,38 +1244,6 @@ h6 {
 
 /* Components
 // ::::::::::::: */
-/* ================
-// Buttons
-// ============= */
-.button {
-  display: inline-block;
-  vertical-align: top;
-  border: 0;
-  margin: 0 0.625em 0.625em 0;
-  padding: 0.625em 1.25em;
-  cursor: pointer;
-  text-align: center;
-  background: #eee; }
-  .button[disabled] {
-    cursor: not-allowed;
-    pointer-events: none; }
-
-/* ================
-// Site Logo
-// ============= */
-.site-logo {
-  display: block;
-  overflow: hidden;
-  text-decoration: none;
-  white-space: nowrap; }
-
-.site-logo-label {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px; }
-
 /* ================
 // Site Search
 // ============= */
