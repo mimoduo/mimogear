@@ -1,6 +1,6 @@
-mixin image(file, alt, className)
+mixin image(className, file, alt)
   img(
+    class=(className ? classname : "")
     src=base + "images/" + file
     alt=alt
-    class=(className ? classname : "")
   )

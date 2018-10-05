@@ -1,3 +1,4 @@
-mixin icon(name, modifier)
-  svg.icon(class="icon-" + name + (modifier ? + " icon-" + name + "-" + modifier : ""))
-    use(xlink:href="#" + name)
+mixin icon(className, file)
+  span(class=className)
+    svg.icon(class="icon icon-" + file)
+      use(xlink:href="#" + file)

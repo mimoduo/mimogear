@@ -5,7 +5,7 @@ Mixins are a great way to take shortcuts with pug. The available Mimogear mixins
 **Available Mixins**
 
 * `+gallery`: generates a list of images based on a given directory inside /images/
-* `+image`: generates an image given a file name, alt label, and optional class name
+* `+image`: generates an image given a class name, file name, and alt label
 * `+section`: generates a section container given an optional class name
 * `+icon`: generates an svg related to an svg in the site sprite
 
@@ -44,13 +44,13 @@ The image mixin generates an image element given a file name, alt label, and an 
 **Pug**
 
 ```pug
-+image("image.jpg", "A descriptive alt label", ".class-name")
++image("class-name", "image.jpg", "A descriptive alt label")
 ```
 
 **HTML Output**
 
 ```html
-<img src="./dist/images/image.jpg" alt="A descriptive alt label" class="class-name" />
+<img class="class-name" src="./dist/images/image.jpg" alt="A descriptive alt label"/>
 ```
 
 ## +section
@@ -95,58 +95,20 @@ Sometimes you may need to modify a section beyond its default styling. By passin
 
 ## +icon
 
-The icon mixin generates an svg icon given the name of an imported svg. The result links with the automatically generated sprite.
+The icon mixin generates an svg icon given the name of an imported svg. The result links with the automatically generated sprite. Note: it's better practice to style the span surrounding an svg than the svg itself.
 
 **Pug**
 
 ```pug
-+icon("arrow-forward")
++icon("link-icon", "arrow-forward")
 ```
 
 **HTML Output**
 
 ```html
-<svg class="icon icon-arrow-forward">
-  <use xlink:href="#arrow-forward"></use>
-</svg>
-```
-
-The icon mixin can also be nested within other elements.
-
-**Pug**
-
-```pug
-.reason
-  span.reason-label Awesome
-  +icon("arrow-forward")
-```
-
-**HTML Output**
-
-```html
-<div class="reason">
-  <span class="reason-label">Awesome</span>
+<span class="link-icon">
   <svg class="icon icon-arrow-forward">
     <use xlink:href="#arrow-forward"></use>
   </svg>
-</div>
-```
-
-Sometimes you may need to modify a icon beyond its default styling. By passing in an extra string parameter, separated by a comma, the icon mixin will generate an additional class.
-
-**Pug**
-
-```pug
-+icon(
-  "arrow-forward",
-  "larger"
-)
-```
-
-**HTML Output**
-
-```html
-<svg class="icon icon-arrow-forward icon-arrow-forward-larger">
-  <use xlink:href="#arrow-forward"></use>
-</svg>
+</span>
 ```
