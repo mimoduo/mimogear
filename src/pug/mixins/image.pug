@@ -1,12 +1,6 @@
 mixin image(file, alt, className)
-  if className
-    img(
-      src=base + "images/" + file
-      alt=alt
-      class=className
-    )
-  else
-    img(
-      src=base + "images/" + file
-      alt=alt
-    )
+  img(
+    src=base + "images/" + file
+    alt=alt
+    class=(className ? classname : "")
+  )
