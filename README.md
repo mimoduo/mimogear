@@ -1,6 +1,6 @@
 # Mimogear
 
-> **Mimogear** is a complete web development boilerplate for developing static sites. Packed inside Mimogear you'll find **Gulp**, **Sass**, and **Pug** boilerplates to get you started. Newcomers and professionals alike will feel right at home with a solid start for any static site! Just run `gulp` and get building!
+> **Mimogear** is a complete web development boilerplate for developing static sites. Packed inside Mimogear you'll find [Gulp](https://gulpjs.com/), [Sass](https://sass-lang.com/), and [Pug](https://pugjs.org/api/getting-started.html) boilerplates to get you started. Newcomers and professionals alike will feel right at home with a solid start for any static site! Just run `gulp` and get building!
 
 ## Highlights
 
@@ -59,7 +59,7 @@ npm install
 gulp
 ```
 
-Your site will open up in a browser window automatically, gulp will begin watching your files, and Browsersync will automatically reload your changes. Now you're ready to get started in developing html:pug, css:sass, and javascript. Check out /src/ to see your shiny new web development boilerplate!
+Your site will open up in a browser window automatically, gulp will begin watching your files, and Browsersync will automatically reload your changes. Check out /src/ to see your shiny new web development boilerplate!
 
 **Once you're all set, there's documentation ready for you:**
 
