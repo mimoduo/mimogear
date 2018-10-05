@@ -1,9 +1,4 @@
 mixin section(modifier)
-  if modifier
-    .section(class="section-" + modifier)
-      .compartment
-        block
-  else
-    .section
-      .compartment
-        block
+  .section(class=(modifier ? "section-" + modifier : ""))
+    .compartment
+      block
