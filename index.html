@@ -6,104 +6,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>static site generator - mimogear</title>
     <meta name="description" content="Mimogear is a super simple static site generator and web development boilerplate">
-    <link rel="stylesheet" href="./dist/css/site.css"><link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/css/site.css">
   </head>
   <body><a class="skip-link" href="#site-main">Skip to main content</a>
     <figure class="site-sprite" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 32 32" id="arrow-back" xmlns="http://www.w3.org/2000/svg"><path d="M12.586 27.414l-10-10a2 2 0 0 1 0-2.828l10-10a2 2 0 1 1 2.828 2.828L8.828 14H28a2 2 0 1 1 0 4H8.828l6.586 6.586c.39.39.586.902.586 1.414s-.195 1.024-.586 1.414a2 2 0 0 1-2.828 0z"/></symbol><symbol viewBox="0 0 32 32" id="arrow-forward" xmlns="http://www.w3.org/2000/svg"><path d="M19.414 27.414l10-10a2 2 0 0 0 0-2.828l-10-10a2 2 0 1 0-2.828 2.828L23.172 14H4a2 2 0 1 0 0 4h19.172l-6.586 6.586c-.39.39-.586.902-.586 1.414s.195 1.024.586 1.414a2 2 0 0 0 2.828 0z"/></symbol><symbol viewBox="0 0 24 24" id="close" xmlns="http://www.w3.org/2000/svg"><path d="M18.984 6.422L13.406 12l5.578 5.578-1.406 1.406L12 13.406l-5.578 5.578-1.406-1.406L10.594 12 5.016 6.422l1.406-1.406L12 10.594l5.578-5.578z"/></symbol><symbol viewBox="0 0 380 80" id="logo" xmlns="http://www.w3.org/2000/svg"><text font-size="80" font-weight="700"><tspan x="0" y="50">Site</tspan></text></symbol><symbol viewBox="0 0 24 24" id="open" xmlns="http://www.w3.org/2000/svg"><path d="M18.984 12.984h-6v6h-1.969v-6h-6v-1.969h6v-6h1.969v6h6v1.969z"/></symbol></svg></figure>
     <header class="site-header" role="banner">
       <div class="section">
         <div class="compartment">
-          <div class="site-header-ribbon"><a class="site-logo" href="./"><span class="site-logo-label">mimogear</span>
-              <svg class="icon icon-logo">
-                <use xlink:href="#logo"></use>
-              </svg></a>
-            <button class="menu-trigger"></button>
-            <div class="menu">
-              <nav class="main-nav">
-                <ol class="main-nav-group">
-                  <li class="main-nav-item"><a class="main-nav-link" href="https://github.com/mimoduo/Mimogear" itemprop="url">View on Github</a>
-                  </li>
-                  <li class="main-nav-item"><a class="main-nav-link" href="https://github.com/mimoduo/Mimogear/tree/master/docs" itemprop="url">Documentation</a>
-                  </li>
-                </ol>
-              </nav>
-            </div>
-            <div class="actions"><a class="action-link" href="https://github.com/mimoduo/mimogear" target="_blank"><span class="action-link-label">Github</span><svg class="icon icon-github action-link-icon" viewBox="0 0 32 32">
+          <div class="site-header-ribbon">
+            <div class="actions"><a class="action-link" href="https://github.com/mimoduo/mimogear" target="_blank"><span class="action-link-icon"><svg class="icon icon-github action-link-svg" viewBox="0 0 32 32">
 <title>github</title>
 <path class="path1" d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path>
-</svg></a><a class="action-link" href="https://github.com/mimoduo/mimogear/fork" target="_blank"><span class="action-link-label">Fork</span><svg class="icon icon-repo-forked action-link-icon" viewBox="0 0 24 32">
+</svg></span><span class="action-link-label">Github</span></a><a class="action-link" href="https://github.com/mimoduo/mimogear/fork" target="_blank"><span class="action-link-icon"><svg class="icon icon-repo-forked action-link-svg" viewBox="0 0 24 32">
 <title>repo-forked</title>
 <path class="path1" d="M24 4c0-2.219-1.781-4-4-4s-4 1.781-4 4c0 1.469 0.813 2.781 2 3.469v3.313l-6 6.625-6-6.625v-3.313c1.188-0.688 2-1.969 2-3.469 0-2.219-1.781-4-4-4s-4 1.781-4 4c0 1.469 0.813 2.781 2 3.469v4.875l8 8.813v3.406c-1.188 0.688-2 1.969-2 3.469 0 2.219 1.781 4 4 4s4-1.781 4-4c0-1.469-0.813-2.781-2-3.469v-3.406l8-8.813v-4.875c1.188-0.688 2-1.969 2-3.469zM4 2.031c1.063 0 1.938 0.875 1.938 1.938s-0.875 1.938-1.938 1.938-1.938-0.875-1.938-1.938 0.875-1.938 1.938-1.938zM12 29.875c-1.063 0-1.938-0.875-1.938-1.938s0.875-1.938 1.938-1.938 1.938 0.875 1.938 1.938-0.875 1.938-1.938 1.938zM20 2.031c1.063 0 1.938 0.875 1.938 1.938s-0.875 1.938-1.938 1.938-1.938-0.875-1.938-1.938 0.875-1.938 1.938-1.938z"></path>
-</svg></a><a class="action-link" href="https://github.com/mimoduo/mimogear/stargazers" target="_blank"><span class="action-link-label">Star</span><svg class="icon icon-star action-link-icon" viewBox="0 0 24 24">
+</svg></span><span class="action-link-label">Fork</span></a><a class="action-link" href="https://github.com/mimoduo/mimogear/stargazers" target="_blank"><span class="action-link-icon"><svg class="icon icon-star action-link-svg" viewBox="0 0 24 24">
 <title>star</title>
 <path class="path1" d="M12 17.25l-6.188 3.75 1.641-7.031-5.438-4.734 7.172-0.609 2.813-6.609 2.813 6.609 7.172 0.609-5.438 4.734 1.641 7.031z"></path>
-</svg></a><a class="action-link" href="https://github.com/mimoduo/mimogear/tree/master/docs" target="_blank"><span class="action-link-label">Docs</span><svg class="icon icon-docs action-link-icon" viewBox="0 0 24 24">
+</svg></span><span class="action-link-label">Star</span></a><a class="action-link" href="https://github.com/mimoduo/mimogear/tree/master/docs" target="_blank"><span class="action-link-icon"><svg class="icon icon-docs action-link-svg" viewBox="0 0 24 24">
 <title>docs</title>
 <path class="path1" d="M17.016 9v-2.016h-10.031v2.016h10.031zM17.016 12.984v-1.969h-10.031v1.969h10.031zM14.016 17.016v-2.016h-7.031v2.016h7.031zM12 3c-0.563 0-0.984 0.422-0.984 0.984s0.422 1.031 0.984 1.031 0.984-0.469 0.984-1.031-0.422-0.984-0.984-0.984zM18.984 3c1.078 0 2.016 0.938 2.016 2.016v13.969c0 1.078-0.938 2.016-2.016 2.016h-13.969c-1.078 0-2.016-0.938-2.016-2.016v-13.969c0-1.078 0.938-2.016 2.016-2.016h4.172c0.422-1.172 1.5-2.016 2.813-2.016s2.391 0.844 2.813 2.016h4.172z"></path>
-</svg></a></div>
+</svg></span><span class="action-link-label">Docs</span></a></div>
           </div>
         </div>
       </div>
     </header>
     <main class="site-main" id="site-main" role="main">
-      <div class="section section-intro">
-        <div class="compartment">
-          <div class="site-flag">
-            <div class="site-lace"></div>
-            <div class="site-flare"></div>
-            <div class="site-lace"></div>
-          </div>
-          <div class="site-identity grid grid-centered">
-            <div class="column column-yatterman-2">
-              <h1 class="site-name"><a class="site-link" href="https://github.com/mimoduo/mimogear" target="_blank">Mimogear</a></h1>
-              <h2 class="lead"><span>Static Site Generator</span></h2>
-            </div>
-            <p class="summary column column-yatterman-2"><strong><a class="summary-name" href="https://github.com/mimoduo/mimogear" target="_blank">Mimogear</a> is a web starter kit that compiles, distributes, watches, & deploys</strong> a <a class="summary-link" href="https://pugjs.org/api/getting-started.html" target="_blank">pug</a> template boilerplate, a <a class="summary-link" href="http://sass-lang.com/" target="_blank">sass</a> skeleton stylesheet, and an optional javascript module bundle with <a class="summary-link" href="http://gulpjs.com/" target="_blank">gulp</a> & <a class="summary-link" href="https://travis-ci.org/" target="_blank">travis ci</a>.</p>
-          </div><a class="call-to-action" href="https://github.com/mimoduo/mimogear" target="_blank"><svg class="icon icon-gear call-to-action-icon" viewBox="0 0 24 24">
-<title>cog</title>
-<path class="path1" d="M9.387 17.548l0.371 1.482c0.133 0.533 0.692 0.97 1.242 0.97h1c0.55 0 1.109-0.437 1.242-0.97l0.371-1.482c0.133-0.533 0.675-0.846 1.203-0.694l1.467 0.42c0.529 0.151 1.188-0.114 1.462-0.591l0.5-0.867c0.274-0.477 0.177-1.179-0.219-1.562l-1.098-1.061c-0.396-0.383-0.396-1.008 0.001-1.39l1.096-1.061c0.396-0.382 0.494-1.084 0.22-1.561l-0.501-0.867c-0.275-0.477-0.933-0.742-1.461-0.591l-1.467 0.42c-0.529 0.151-1.070-0.161-1.204-0.694l-0.37-1.48c-0.133-0.532-0.692-0.969-1.242-0.969h-1c-0.55 0-1.109 0.437-1.242 0.97l-0.37 1.48c-0.134 0.533-0.675 0.846-1.204 0.695l-1.467-0.42c-0.529-0.152-1.188 0.114-1.462 0.59l-0.5 0.867c-0.274 0.477-0.177 1.179 0.22 1.562l1.096 1.059c0.395 0.383 0.395 1.008 0 1.391l-1.098 1.061c-0.395 0.383-0.494 1.085-0.219 1.562l0.501 0.867c0.274 0.477 0.933 0.742 1.462 0.591l1.467-0.42c0.528-0.153 1.070 0.16 1.203 0.693zM11.5 10.5c1.104 0 2 0.895 2 2s-0.896 2-2 2-2-0.896-2-2c0-1.105 0.896-2 2-2z"></path>
-</svg><svg class="icon icon-gear call-to-action-icon" viewBox="0 0 24 24">
-<title>cog-outline</title>
-<path class="path1" d="M13 5l0.855 3.42 3.389-0.971 1.501 2.6-2.535 2.449 2.535 2.451-1.5 2.6-3.39-0.971-0.855 3.422h-3l-0.855-3.422-3.39 0.971-1.501-2.6 2.535-2.451-2.534-2.449 1.5-2.6 3.39 0.971 0.855-3.42h3zM13 3h-3c-0.918 0-1.718 0.625-1.939 1.516l-0.354 1.412-1.4-0.4c-0.184-0.053-0.369-0.078-0.552-0.078-0.7 0-1.368 0.37-1.731 1l-1.5 2.6c-0.459 0.796-0.317 1.802 0.342 2.438l1.047 1.011-1.048 1.015c-0.66 0.637-0.802 1.643-0.343 2.438l1.502 2.6c0.363 0.631 1.031 1 1.731 1 0.183 0 0.368-0.025 0.552-0.076l1.399-0.401 0.354 1.415c0.222 0.885 1.022 1.51 1.94 1.51h3c0.918 0 1.718-0.625 1.939-1.516l0.354-1.414 1.399 0.4c0.184 0.053 0.369 0.077 0.552 0.077 0.7 0 1.368-0.37 1.731-1l1.5-2.6c0.459-0.796 0.317-1.8-0.342-2.438l-1.047-1.013 1.047-1.013c0.66-0.637 0.801-1.644 0.342-2.438l-1.5-2.6c-0.365-0.631-1.031-1-1.732-1-0.184 0-0.368 0.025-0.551 0.076l-1.4 0.401-0.354-1.413c-0.22-0.884-1.020-1.509-1.938-1.509z"></path>
-<path class="path2" d="M11.5 10.5c1.104 0 2 0.895 2 2s-0.896 2-2 2-2-0.896-2-2c0-1.105 0.896-2 2-2zM11.5 9.5c-1.654 0-3 1.346-3 3s1.346 3 3 3 3-1.346 3-3-1.346-3-3-3z"></path>
-</svg><span class="call-to-action-bubble"><span class="call-to-action-content"><svg class="icon icon-github call-to-action-icon-github" viewBox="0 0 32 32">
+      <div class="site-details">
+        <div class="section">
+          <div class="compartment">
+            <div class="site-details-inner">
+              <h1 class="site-name"><a class="site-link" href="https://github.com/mimoduo/mimogear" target="_blank"> <strong class="site-link-label">Mimogear</strong></a></h1>
+              <h2 class="site-caption"> <em class="site-caption-label">Complete Static Site Generator</em></h2>
+              <p class="site-summary"><strong><a class="site-summary-name" href="https://github.com/mimoduo/mimogear" target="_blank">Mimogear</a> is a web starter kit that compiles, distributes, watches, & deploys</strong> a <a class="site-summary-link" href="https://pugjs.org/api/getting-started.html" target="_blank">pug</a> template boilerplate, a <a class="site-summary-link" href="http://sass-lang.com/" target="_blank">sass</a> skeleton stylesheet, and an optional javascript module bundle with <a class="site-summary-link" href="http://gulpjs.com/" target="_blank">gulp</a> & <a class="site-summary-link" href="https://travis-ci.org/" target="_blank">travis ci</a>.</p><a class="call-to-action" href="https://github.com/mimoduo/mimogear" target="_blank">
+                <div class="call-to-action-icon"><svg class="icon icon-github call-to-action-svg" viewBox="0 0 32 32">
 <title>github</title>
 <path class="path1" d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path>
-</svg><span class="call-to-action-label">View on Github</span></span></span><svg class="icon icon-gear call-to-action-icon" viewBox="0 0 24 24">
-<title>cog-outline</title>
-<path class="path1" d="M13 5l0.855 3.42 3.389-0.971 1.501 2.6-2.535 2.449 2.535 2.451-1.5 2.6-3.39-0.971-0.855 3.422h-3l-0.855-3.422-3.39 0.971-1.501-2.6 2.535-2.451-2.534-2.449 1.5-2.6 3.39 0.971 0.855-3.42h3zM13 3h-3c-0.918 0-1.718 0.625-1.939 1.516l-0.354 1.412-1.4-0.4c-0.184-0.053-0.369-0.078-0.552-0.078-0.7 0-1.368 0.37-1.731 1l-1.5 2.6c-0.459 0.796-0.317 1.802 0.342 2.438l1.047 1.011-1.048 1.015c-0.66 0.637-0.802 1.643-0.343 2.438l1.502 2.6c0.363 0.631 1.031 1 1.731 1 0.183 0 0.368-0.025 0.552-0.076l1.399-0.401 0.354 1.415c0.222 0.885 1.022 1.51 1.94 1.51h3c0.918 0 1.718-0.625 1.939-1.516l0.354-1.414 1.399 0.4c0.184 0.053 0.369 0.077 0.552 0.077 0.7 0 1.368-0.37 1.731-1l1.5-2.6c0.459-0.796 0.317-1.8-0.342-2.438l-1.047-1.013 1.047-1.013c0.66-0.637 0.801-1.644 0.342-2.438l-1.5-2.6c-0.365-0.631-1.031-1-1.732-1-0.184 0-0.368 0.025-0.551 0.076l-1.4 0.401-0.354-1.413c-0.22-0.884-1.020-1.509-1.938-1.509z"></path>
-<path class="path2" d="M11.5 10.5c1.104 0 2 0.895 2 2s-0.896 2-2 2-2-0.896-2-2c0-1.105 0.896-2 2-2zM11.5 9.5c-1.654 0-3 1.346-3 3s1.346 3 3 3 3-1.346 3-3-1.346-3-3-3z"></path>
-</svg><svg class="icon icon-gear call-to-action-icon" viewBox="0 0 24 24">
-<title>cog</title>
-<path class="path1" d="M9.387 17.548l0.371 1.482c0.133 0.533 0.692 0.97 1.242 0.97h1c0.55 0 1.109-0.437 1.242-0.97l0.371-1.482c0.133-0.533 0.675-0.846 1.203-0.694l1.467 0.42c0.529 0.151 1.188-0.114 1.462-0.591l0.5-0.867c0.274-0.477 0.177-1.179-0.219-1.562l-1.098-1.061c-0.396-0.383-0.396-1.008 0.001-1.39l1.096-1.061c0.396-0.382 0.494-1.084 0.22-1.561l-0.501-0.867c-0.275-0.477-0.933-0.742-1.461-0.591l-1.467 0.42c-0.529 0.151-1.070-0.161-1.204-0.694l-0.37-1.48c-0.133-0.532-0.692-0.969-1.242-0.969h-1c-0.55 0-1.109 0.437-1.242 0.97l-0.37 1.48c-0.134 0.533-0.675 0.846-1.204 0.695l-1.467-0.42c-0.529-0.152-1.188 0.114-1.462 0.59l-0.5 0.867c-0.274 0.477-0.177 1.179 0.22 1.562l1.096 1.059c0.395 0.383 0.395 1.008 0 1.391l-1.098 1.061c-0.395 0.383-0.494 1.085-0.219 1.562l0.501 0.867c0.274 0.477 0.933 0.742 1.462 0.591l1.467-0.42c0.528-0.153 1.070 0.16 1.203 0.693zM11.5 10.5c1.104 0 2 0.895 2 2s-0.896 2-2 2-2-0.896-2-2c0-1.105 0.896-2 2-2z"></path>
-</svg></a>
-          <div class="bubbles">
-            <div class="bubble"><span class="bubble-icon-nest"><span class="bubble-icon"><svg class="icon icon-leaf " viewBox="0 0 20 20">
-<title>leaf</title>
-<path d="M19.025 3.587c-4.356 2.556-4.044 7.806-7.096 10.175-2.297 1.783-5.538 0.88-7.412 0.113 0 0-1.27 1.603-2.181 3.74-0.305 0.717-1.644-0.073-1.409-0.68 2.978-7.685 13.11-11.519 13.11-11.519s-7.149-0.303-11.927 5.94c-0.128-1.426-0.34-5.284 3.36-7.65 5.016-3.211 14.572-0.715 13.555-0.119z"></path>
-</svg></span></span>
-              <h3 class="bubble-title">Fresh Boilerplates</h3>
-              <p class="bubble-caption">All the templates, styles, and scripts you need to start are already setup as highly structured & clean boilerplates.</p>
-            </div>
-            <div class="bubble"><span class="bubble-icon-nest"><span class="bubble-icon"><svg class="icon icon-speed " viewBox="0 0 32 32">
-<title>speed</title>
-<path d="M22 2l-10 10h-6l-6 8c0 0 6.357-1.77 10.065-0.94l-10.065 12.94 13.184-10.255c1.839 4.208-1.184 10.255-1.184 10.255l8-6v-6l10-10 2-10-10 2z"></path>
-</svg></span></span>
-              <h3 class="bubble-title">Speedy Compilation</h3>
-              <p class="bubble-caption"><em>Assets are compiled intelligently</em> based on the build environment and which files were changed then reloaded with browserSync.</p>
-            </div>
-            <div class="bubble"><span class="bubble-icon-nest"><span class="bubble-icon"><svg class="icon icon-book " viewBox="0 0 20 20">
-<title>book</title>
-<path d="M17 5.95v10.351c0 0.522-0.452 0.771-1 1.16-0.44 0.313-1-0.075-1-0.587 0 0 0-9.905 0-10.114 0-0.211-0.074-0.412-0.314-0.535s-7.738-4.065-7.738-4.065c-0.121-0.045-0.649-0.378-1.353-0.016-0.669 0.344-1.033 0.718-1.126 0.894l8.18 4.482c0.217 0.114 0.351 0.29 0.351 0.516v10.802c0 0.23-0.142 0.476-0.369 0.585-0.104 0.052-0.219 0.077-0.333 0.077-0.135 0-0.271-0.033-0.386-0.104-0.215-0.131-7.774-4.766-8.273-5.067-0.24-0.144-0.521-0.439-0.527-0.658l-0.112-10.286c0-0.198-0.023-0.547 0.289-1.032 0.697-1.084 3.129-2.317 4.36-1.678l8.999 4.555c0.217 0.112 0.352 0.336 0.352 0.72z"></path>
-</svg></span></span>
-              <h3 class="bubble-title">Docs up the Yazoo</h3>
-              <p class="bubble-caption">Forget being stuck. Documentation is maintained with thoroughness and ease of understanding in mind.</p>
+</svg>
+                </div><span class="call-to-action-label">View on Github</span></a>
             </div>
           </div>
-          <div class="terminal">
-            <div class="terminal-pillow">
+        </div>
+      </div>
+      <div class="bubbles">
+        <div class="section">
+          <div class="compartment">
+            <div class="bubbles-inner">
+              <div class="bubble">
+                <h3 class="bubble-title"> <span class="bubble-icon"><svg class="icon icon-leaf bubble-svg" viewBox="0 0 20 20">
+<title>leaf</title>
+<path d="M19.025 3.587c-4.356 2.556-4.044 7.806-7.096 10.175-2.297 1.783-5.538 0.88-7.412 0.113 0 0-1.27 1.603-2.181 3.74-0.305 0.717-1.644-0.073-1.409-0.68 2.978-7.685 13.11-11.519 13.11-11.519s-7.149-0.303-11.927 5.94c-0.128-1.426-0.34-5.284 3.36-7.65 5.016-3.211 14.572-0.715 13.555-0.119z"></path>
+</svg></span><span class="bubble-label">Fresh Boilerplates</span></h3>
+                <p class="bubble-caption">All the templates, styles, and scripts you need to start a bangin' site are already setup as highly structured & clean boilerplates.</p>
+              </div>
+              <div class="bubble">
+                <h3 class="bubble-title"> <span class="bubble-icon"><svg class="icon icon-speed bubble-svg" viewBox="0 0 32 32">
+<title>speed</title>
+<path d="M22 2l-10 10h-6l-6 8c0 0 6.357-1.77 10.065-0.94l-10.065 12.94 13.184-10.255c1.839 4.208-1.184 10.255-1.184 10.255l8-6v-6l10-10 2-10-10 2z"></path>
+</svg></span><span class="bubble-labelSpeedy">Compilation</span></h3>
+                <p class="bubble-caption"><em>Assets are compiled intelligently</em> based on the build environment and which files were changed then reloaded with browserSync.</p>
+              </div>
+              <div class="bubble">
+                <h3 class="bubble-title"> <span class="bubble-icon"><svg class="icon icon-book bubble-svg" viewBox="0 0 20 20">
+<title>book</title>
+<path d="M17 5.95v10.351c0 0.522-0.452 0.771-1 1.16-0.44 0.313-1-0.075-1-0.587 0 0 0-9.905 0-10.114 0-0.211-0.074-0.412-0.314-0.535s-7.738-4.065-7.738-4.065c-0.121-0.045-0.649-0.378-1.353-0.016-0.669 0.344-1.033 0.718-1.126 0.894l8.18 4.482c0.217 0.114 0.351 0.29 0.351 0.516v10.802c0 0.23-0.142 0.476-0.369 0.585-0.104 0.052-0.219 0.077-0.333 0.077-0.135 0-0.271-0.033-0.386-0.104-0.215-0.131-7.774-4.766-8.273-5.067-0.24-0.144-0.521-0.439-0.527-0.658l-0.112-10.286c0-0.198-0.023-0.547 0.289-1.032 0.697-1.084 3.129-2.317 4.36-1.678l8.999 4.555c0.217 0.112 0.352 0.336 0.352 0.72z"></path>
+</svg></span><span class="bubble-label">Docs up the Yazoo</span></h3>
+                <p class="bubble-caption">Forget being stuck. Documentation is maintained with thoroughness and ease of understanding in mind.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="terminal">
+        <div class="section">
+          <div class="compartment">
+            <div class="terminal-inner">
               <h3 class="terminal-title">Whip out a terminal and tryout Mimogear:</h3>
-              <div class="code-pillow"><code class="code">$ git <em>clone</em> https://github.com/mimoduo/mimogear.git<br>
+              <div class="terminal-code-wrapper"><code class="terminal-code">$ git <em>clone</em> https://github.com/mimoduo/mimogear.git<br>
                   $ <em>cd</em> mimogear<br>
                   $ npm install<br>
                   $ npm install gulp-cli -g<br>
@@ -112,11 +91,13 @@
           </div>
         </div>
       </div>
-      <div class="section">
-        <div class="compartment">
-          <div class="ad-pillow"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <div class="ad">
+        <div class="section">
+          <div class="compartment">
+            <div class="ad-inner"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1767497260647210" data-ad-slot="1647576338" data-ad-format="auto"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
           </div>
         </div>
       </div>

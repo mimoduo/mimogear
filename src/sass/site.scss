@@ -1,5 +1,5 @@
 @import 'configuration';
-@import 'utilities/*';
+@import 'mixins/*';
 
 /* Vendor
 // ::::::::::::: */
@@ -12,7 +12,7 @@
 @import 'mimo/menu';
 @import 'mimo/grid';
 @import 'mimo/lantern';
-@import 'mimo/mimo-theme';
+@import 'mimo/theme';
 @import 'mimo/sail';
 
 /* Structure

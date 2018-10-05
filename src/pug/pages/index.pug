@@ -62,95 +62,97 @@ block theme
   - themeName = "mimo-theme"
 
 block additional-stylesheets
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700" rel="stylesheet">
 
-block append header
+block header
   .actions
     a.action-link(
       href="https://github.com/mimoduo/mimogear"
       target="_blank"
     )
+      span.action-link-icon
+        +github-icon("action-link-svg")
       span.action-link-label Github
-      +github-icon("action-link-icon")
     a.action-link(
       href="https://github.com/mimoduo/mimogear/fork"
       target="_blank"
     )
+      span.action-link-icon
+        +repo-icon("action-link-svg")
       span.action-link-label Fork
-      +repo-icon("action-link-icon")
     a.action-link(
       href="https://github.com/mimoduo/mimogear/stargazers"
       target="_blank"
     )
+      span.action-link-icon
+        +star-icon("action-link-svg")
       span.action-link-label Star
-      +star-icon("action-link-icon")
     a.action-link(
       href="https://github.com/mimoduo/mimogear/tree/master/docs"
       target="_blank"
     )
+      span.action-link-icon
+        +docs-icon("action-link-svg")
       span.action-link-label Docs
-      +docs-icon("action-link-icon")
 
 block content
-  +section("intro")
-    .site-flag
-      .site-lace
-      .site-flare
-      .site-lace
-    .site-identity.grid.grid-centered
-      .column.column-yatterman-2
+  .site-details
+    +section
+      .site-details-inner
         h1.site-name
           a.site-link(
             href="https://github.com/mimoduo/mimogear"
             target="_blank"
-          ) Mimogear
-        h2.lead
-          span Static Site Generator
-      p.summary.column.column-yatterman-2 #[strong #[a.summary-name(href="https://github.com/mimoduo/mimogear" target="_blank") Mimogear] is a web starter kit that compiles, distributes, watches, & deploys] a #[a.summary-link(href="https://pugjs.org/api/getting-started.html" target="_blank") pug] template boilerplate, a #[a.summary-link(href="http://sass-lang.com/" target="_blank") sass] skeleton stylesheet, and an optional javascript module bundle with #[a.summary-link(href="http://gulpjs.com/" target="_blank") gulp] & #[a.summary-link(href="https://travis-ci.org/" target="_blank") travis ci].
-    a.call-to-action(
-      href="https://github.com/mimoduo/mimogear"
-      target="_blank"
-    )
-      +gear-filled-icon("call-to-action-icon")
-      +gear-outlined-icon("call-to-action-icon")
-      span.call-to-action-bubble
-        span.call-to-action-content
-          +github-icon("call-to-action-icon-github")
+          ) 
+            strong.site-link-label Mimogear
+        h2.site-caption 
+          em.site-caption-label Complete Static Site Generator
+        p.site-summary #[strong #[a.site-summary-name(href="https://github.com/mimoduo/mimogear" target="_blank") Mimogear] is a web starter kit that compiles, distributes, watches, & deploys] a #[a.site-summary-link(href="https://pugjs.org/api/getting-started.html" target="_blank") pug] template boilerplate, a #[a.site-summary-link(href="http://sass-lang.com/" target="_blank") sass] skeleton stylesheet, and an optional javascript module bundle with #[a.site-summary-link(href="http://gulpjs.com/" target="_blank") gulp] & #[a.site-summary-link(href="https://travis-ci.org/" target="_blank") travis ci].
+        a.call-to-action(
+          href="https://github.com/mimoduo/mimogear"
+          target="_blank"
+        )
+          .call-to-action-icon
+            +github-icon("call-to-action-svg")
           span.call-to-action-label View on Github
-      +gear-outlined-icon("call-to-action-icon")
-      +gear-filled-icon("call-to-action-icon")
-    .bubbles
-      .bubble
-        span.bubble-icon-nest
-          span.bubble-icon
-            +leaf
-        h3.bubble-title Fresh Boilerplates
-        p.bubble-caption All the templates, styles, and scripts you need to start are already setup as highly structured & clean boilerplates.
-      .bubble
-        span.bubble-icon-nest
-          span.bubble-icon
-            +speed
-        h3.bubble-title Speedy Compilation
-        p.bubble-caption #[em Assets are compiled intelligently] based on the build environment and which files were changed then reloaded with browserSync.
-      .bubble
-        span.bubble-icon-nest
-          span.bubble-icon
-            +book
-        h3.bubble-title Docs up the Yazoo
-        p.bubble-caption Forget being stuck. Documentation is maintained with thoroughness and ease of understanding in mind.
-    .terminal
-      .terminal-pillow
+
+  .bubbles
+    +section
+      .bubbles-inner
+        .bubble
+          h3.bubble-title 
+            span.bubble-icon
+              +leaf("bubble-svg")
+            span.bubble-label Fresh Boilerplates
+          p.bubble-caption All the templates, styles, and scripts you need to start a bangin' site are already setup as highly structured & clean boilerplates.
+        .bubble
+          h3.bubble-title 
+            span.bubble-icon
+              +speed("bubble-svg")
+            span.bubble-labelSpeedy Compilation
+          p.bubble-caption #[em Assets are compiled intelligently] based on the build environment and which files were changed then reloaded with browserSync.
+        .bubble
+          h3.bubble-title 
+            span.bubble-icon
+              +book("bubble-svg")
+            span.bubble-label Docs up the Yazoo
+          p.bubble-caption Forget being stuck. Documentation is maintained with thoroughness and ease of understanding in mind.
+
+  .terminal
+    +section
+      .terminal-inner
         h3.terminal-title Whip out a terminal and tryout Mimogear:
-        .code-pillow
-          code.code
+        .terminal-code-wrapper
+          code.terminal-code
             | $ git #[em clone] https://github.com/mimoduo/mimogear.git#[br]
             | $ #[em cd] mimogear#[br]
             | $ npm install#[br]
             | $ npm install gulp-cli -g#[br]
             | $ gulp
-  +section
-    .ad-pillow
-      include ../partials/ad.pug
+
+  .ad
+    +section
+      .ad-inner
+        include ../partials/ad.pug
 
 block footer
 

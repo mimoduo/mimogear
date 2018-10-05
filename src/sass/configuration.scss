@@ -28,13 +28,9 @@ $h6Line: 22;
 
 $boundary: 1000;
 
-$mini: "screen and (min-width:" + (300px) + ")";
-$tiny: "screen and (min-width:" + (400px) + ")";
-$small: "screen and (min-width:" + (500px) + ")";
-$medium: "screen and (min-width:" + (600px) + ")";
-$big: "screen and (min-width:" + (700px) + ")";
-$large: "screen and (min-width:" + (800px) + ")";
-$huge: "screen and (min-width:" + (900px) + ")";
-$aldnoah: "screen and (min-width:" + (1000px) + ")";
-$yatterman: "screen and (min-width:" + (1100px) + ")";
-$gamagori: "screen and (min-width:" + (1200px) + ")";
+$xs: "screen and (min-width:" + (300px) + ")";
+$sm: "screen and (min-width:" + (500px) + ")";
+$md: "screen and (min-width:" + (700px) + ")";
+$lg: "screen and (min-width:" + (900px) + ")";
+$xl: "screen and (min-width:" + (1100px) + ")";
+$xxl: "screen and (min-width:" + (1300px) + ")";

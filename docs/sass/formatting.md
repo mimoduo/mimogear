@@ -33,19 +33,19 @@ Mimogear enforces a strict Sass formatting standard and a classing structure sim
 
     @media print {}
 
-    @media #{$yatterman} {}
+    @media #{$xl} {}
 
     &:before {}
 
     &:focus,
     &:hover {
 
-      @media #{yatterman} {}
+      @media #{$xl} {}
     }
 
     &-state {
 
-      @media #{yatterman} {}
+      @media #{$xl} {}
     }
   }
 
