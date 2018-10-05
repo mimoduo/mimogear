@@ -18,7 +18,7 @@ Buttons are styled all at once at first and then extended using simple class mod
 
 ## Logo
 
-The logo component is your site's logo nested in a link. The default setup includes the logo as a svg symbol. Although, it can also be used in conjunction with an img element or a background image. The following example creates a flexible background based logo given a max-width and height.
+The logo component is your site's logo nested in a link. The default setup includes the logo as a svg icon. Although, it can also be used in conjunction with an img element or a background image. The following example creates a flexible background based logo given a max-width and height.
 
 **Background Based Logo**
 

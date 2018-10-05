@@ -535,15 +535,15 @@ template {
   font-weight: 700; }
 
 /* ================
-  // Symbols
+  // Icons
   // ============= */
-.mimo-theme .symbol {
+.mimo-theme .icon {
   display: inline-block;
   vertical-align: middle;
   height: 1.25em;
   width: 1.25em;
   fill: currentColor; }
-  .mimo-theme .symbol-logo {
+  .mimo-theme .icon-logo {
     display: none; }
 
 /* ================
@@ -624,11 +624,11 @@ template {
   .mimo-theme .action-link:last-child:after {
     display: none; }
 
-.mimo-theme .action-link-symbol {
+.mimo-theme .action-link-icon {
   display: block;
   margin: 0 auto; }
   @media screen and (min-width: 700px) {
-    .mimo-theme .action-link-symbol {
+    .mimo-theme .action-link-icon {
       float: left;
       margin-right: 0.5em; } }
 
@@ -787,17 +787,17 @@ template {
       font-size: 100%; } }
   .mimo-theme .call-to-action:focus, .mimo-theme .call-to-action:hover {
     filter: drop-shadow(0 0.1875rem 0 #64FFDA); }
-    .mimo-theme .call-to-action:focus .call-to-action-symbol:nth-child(-n+2), .mimo-theme .call-to-action:hover .call-to-action-symbol:nth-child(-n+2) {
+    .mimo-theme .call-to-action:focus .call-to-action-icon:nth-child(-n+2), .mimo-theme .call-to-action:hover .call-to-action-icon:nth-child(-n+2) {
       transform: translate(-75%, 0); }
-    .mimo-theme .call-to-action:focus .call-to-action-symbol:nth-child(n+4), .mimo-theme .call-to-action:hover .call-to-action-symbol:nth-child(n+4) {
+    .mimo-theme .call-to-action:focus .call-to-action-icon:nth-child(n+4), .mimo-theme .call-to-action:hover .call-to-action-icon:nth-child(n+4) {
       transform: translate(75%, 0); }
     .mimo-theme .call-to-action:focus .call-to-action-bubble, .mimo-theme .call-to-action:hover .call-to-action-bubble {
       transform: scale(1.25); }
 
-.mimo-theme .call-to-action-symbol {
+.mimo-theme .call-to-action-icon {
   fill: #536DFE;
   transition: transform .25s; }
-  .mimo-theme .call-to-action-symbol-github {
+  .mimo-theme .call-to-action-icon-github {
     font-size: 200%; }
 
 .mimo-theme .call-to-action-bubble {
@@ -1178,25 +1178,25 @@ iframe {
   background-size: cover; }
 
 /* ================
-// Symbols
+// Icons
 // ============= */
-.symbol {
+.icon {
   display: block;
   fill: currentColor;
   transition: fill .25s, stroke .25s; }
   @media print {
-    .symbol {
+    .icon {
       display: none; } }
-  .symbol-logo {
+  .icon-logo {
     height: 150px;
     width: 100px; }
-  .symbol-arrow-left {
+  .icon-arrow-left {
     height: 20px;
     width: 20px; }
-  .symbol-arrow-right {
+  .icon-arrow-right {
     height: 20px;
     width: 20px; }
-  .symbol-close {
+  .icon-close {
     height: 20px;
     width: 20px; }
 

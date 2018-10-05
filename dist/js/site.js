@@ -489,9 +489,9 @@ var Lantern = (function() {
 
     s.lantern.innerHTML = '<div class="lantern-content">' +
       '<img class="lantern-holder">' +
-      '<button class="lantern-control lantern-control-previous"><svg class="symbol symbol-arrow-left"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' + s.previous + '"></use></svg></button>' +
-      '<button class="lantern-control lantern-control-next"><svg class="symbol symbol-arrow-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' + s.next + '"></use></svg></button>' +
-      '<button class="lantern-control lantern-control-close"><svg class="symbol symbol-close"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></button>' +
+      '<button class="lantern-control lantern-control-previous"><svg class="icon icon-arrow-left"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' + s.previous + '"></use></svg></button>' +
+      '<button class="lantern-control lantern-control-next"><svg class="icon icon-arrow-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' + s.next + '"></use></svg></button>' +
+      '<button class="lantern-control lantern-control-close"><svg class="icon icon-close"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></button>' +
     '</div>';
 
     s.vdom.content = document.querySelector('.lantern-content');
@@ -661,13 +661,13 @@ var Sail = (function() {
     var previous = document.createElement('button');
     previous.classList.add('sail-control');
     previous.classList.add('sail-control-previous');
-    previous.innerHTML = '<svg class="symbol symbol-arrow-left"><use xlink:href="' + s.previous + '"></use></svg>';
+    previous.innerHTML = '<svg class="icon icon-arrow-left"><use xlink:href="' + s.previous + '"></use></svg>';
     previous.addEventListener('click', shift.bind(null, 'previous'), false);
 
     var next = document.createElement('button');
     next.classList.add('sail-control');
     next.classList.add('sail-control-next');
-    next.innerHTML = '<svg class="symbol symbol-arrow-right"><use xlink:href="' + s.next + '"></use></svg>';
+    next.innerHTML = '<svg class="icon icon-arrow-right"><use xlink:href="' + s.next + '"></use></svg>';
     next.addEventListener('click', shift.bind(null, 'next'), false);
 
     controls.appendChild(previous);

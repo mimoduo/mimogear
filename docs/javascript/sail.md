@@ -34,7 +34,7 @@ The following example shows a complete set of options within Sail:
 Sail.init({
   slides: '.sail-slides', // selector of the sail slideshow
   slide: 'li', // selector for each sail slide
-  previous: '#arrow-back', // svg symbol for the previous control
-  next: '#arrow-forward' // svg symbol for the next control
+  previous: '#arrow-back', // svg icon for the previous control
+  next: '#arrow-forward' // svg icon for the next control
 });
 ```

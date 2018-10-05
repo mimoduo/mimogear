@@ -1,7 +1,0 @@
-mixin symbol(name, modifier)
-  if modifier
-    svg.symbol(class="symbol-" + name + " symbol-" + name + "-" + modifier)
-      use(xlink:href="#" + name)
-  else
-    svg.symbol(class="symbol-" + name)
-      use(xlink:href="#" + name)

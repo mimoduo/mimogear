@@ -7,14 +7,14 @@ Mixins are a great way to take shortcuts with pug. The available Mimogear mixins
 * `+gallery`: generates a list of images based on a given directory inside /images/
 * `+image`: generates an image given a file name, alt label, and optional class name
 * `+section`: generates a section container given an optional class name
-* `+symbol`: generates an svg related to an svg in the site sprite
+* `+icon`: generates an svg related to an svg in the site sprite
 
 ## Adding a New Mixin
 
 To add a new mixin, first create a pug file within /src/pug/mixins/. The pug.js site contains some awesome documentation on [how to create and use a mixin](https://pugjs.org/language/mixins.html). After you've successfully created your mixin, make sure to add it to your desired template near the very top of the file:
 
 ```pug
-include mixins/symbol.pug
+include mixins/icon.pug
 include mixins/section.pug
 include mixins/new-mixin.pug
 ```
@@ -93,51 +93,51 @@ Sometimes you may need to modify a section beyond its default styling. By passin
 </div>
 ```
 
-## +symbol
+## +icon
 
-The symbol mixin generates an svg symbol given the name of an imported svg. The result links with the automatically generated sprite.
+The icon mixin generates an svg icon given the name of an imported svg. The result links with the automatically generated sprite.
 
 **Pug**
 
 ```pug
-+symbol("arrow-forward")
++icon("arrow-forward")
 ```
 
 **HTML Output**
 
 ```html
-<svg class="symbol symbol-arrow-forward">
+<svg class="icon icon-arrow-forward">
   <use xlink:href="#arrow-forward"></use>
 </svg>
 ```
 
-The symbol mixin can also be nested within other elements.
+The icon mixin can also be nested within other elements.
 
 **Pug**
 
 ```pug
 .reason
-  +symbol("arrow-forward")
   span.reason-label Awesome
+  +icon("arrow-forward")
 ```
 
 **HTML Output**
 
 ```html
 <div class="reason">
-  <svg class="symbol symbol-arrow-forward">
+  <span class="reason-label">Awesome</span>
+  <svg class="icon icon-arrow-forward">
     <use xlink:href="#arrow-forward"></use>
   </svg>
-  <span class="reason-label">Awesome</span>
 </div>
 ```
 
-Sometimes you may need to modify a symbol beyond its default styling. By passing in an extra string parameter, separated by a comma, the symbol mixin will generate an additional class.
+Sometimes you may need to modify a icon beyond its default styling. By passing in an extra string parameter, separated by a comma, the icon mixin will generate an additional class.
 
 **Pug**
 
 ```pug
-+symbol(
++icon(
   "arrow-forward",
   "larger"
 )
@@ -146,7 +146,7 @@ Sometimes you may need to modify a symbol beyond its default styling. By passing
 **HTML Output**
 
 ```html
-<svg class="symbol symbol-arrow-forward symbol-arrow-forward-larger">
+<svg class="icon icon-arrow-forward icon-arrow-forward-larger">
   <use xlink:href="#arrow-forward"></use>
 </svg>
 ```

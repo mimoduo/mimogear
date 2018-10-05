@@ -211,7 +211,7 @@ gulp.task('images', function() {
 
 gulp.task('sprite', function() {
 
-  return gulp.src('src/svg/*.svg')
+  return gulp.src('src/icons/*.svg')
     .pipe(svgSprite({
       mode: {
         inline: true,
@@ -333,7 +333,7 @@ gulp.task('watch', function() {
   gulp.watch('src/sass/**/*.scss', ['sass']);
   gulp.watch('src/js/**/*.js', ['js']);
   gulp.watch('src/images/**/*', ['images', 'gallery']);
-  gulp.watch('src/svg/*', ['sprite']);
+  gulp.watch('src/icons/*', ['sprite']);
 
 });
 

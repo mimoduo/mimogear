@@ -38,9 +38,9 @@ The following example shows a complete set of options within Lantern:
 Lantern.init({
   lantern: '.lantern', // selector of lantern container
   lanternLights: '.lantern-light', // class of injected image
-  previous: '#arrow-back', // previous control svg symbol
-  next: '#arrow-forward', // next control svg symbol
-  close: '#close' // close control svg symbol
+  previous: '#arrow-back', // previous control svg icon
+  next: '#arrow-forward', // next control svg icon
+  close: '#close' // close control svg icon
   activeClass: 'lantern-visible' // class to apply to a visible lantern
 });
 ```

@@ -1,8 +1,8 @@
 /* ================
-// Symbols
+// Icons
 // ============= */
 
-.symbol {
+.icon {
   display: block;
   fill: currentColor;
   transition:
@@ -13,14 +13,14 @@
     display: none;
   }
 
-  $symbols: (
+  $icons: (
     (logo, 100, 150),
     (arrow-left, 20, 20),
     (arrow-right, 20, 20),
     (close, 20, 20)
   );
 
-  @each $label, $w, $h in $symbols {
+  @each $label, $w, $h in $icons {
 
     &-#{$label} {
       height: $h * 1px;
