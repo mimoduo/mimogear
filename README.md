@@ -1,8 +1,4 @@
-![Mimogear logo of a flowering gear and two wings](http://image.prntscr.com/image/e86217163ef747b3af55d3e2b29be4dc.png)
-
 # Mimogear
-
-[![Build Status](https://travis-ci.org/mimoduo/mimogear.svg?branch=master)](https://travis-ci.org/mimoduo/mimogear)
 
 > **Mimogear** is a complete web development boilerplate for developing static sites. Packed inside Mimogear you'll find **Gulp**, **Sass**, and **Pug** boilerplates to get you started. Newcomers and professionals alike will feel right at home with a solid start for any static site! Just run `gulp` and get building!
 
@@ -47,9 +43,7 @@
   </tr>
   <tr>
     <td>Deployments Starter Kit</td>
-    <td>Deploy your site with boilerplates for <a href="https://pages.
-      
-      .com/">GitHub pages</a> and <a href="https://surge.sh/">surge</a> with a <a href="https://travis-ci.org/">Travis CI</a> starter kit.</td>
+    <td>Deploy your site to <a href="https://pages.github.com/">GitHub pages</a> and <a href="https://surge.sh/">surge</a> with a <a href="https://travis-ci.org/">Travis CI</a> starter kit.</td>
   </tr>
 </table>
 
