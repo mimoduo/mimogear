@@ -1,14 +1,14 @@
 /* ================
-// Site Logo
+// Logo
 // ============= */
 
-.site-logo {
+.logo {
   display: block;
   overflow: hidden;
   text-decoration: none;
   white-space: nowrap;
 }
 
-  .site-logo-label {
+  .logo-label {
     @include visually-hidden;
   }

@@ -1,24 +1,4 @@
-@mixin menu($translate-value: -20%) {
-  position: absolute;
-  min-height: 100%;
-  width: 100%;
-  pointer-events: none;
-  opacity: 0;
-  visibility: hidden;
-  transform: translate($translate-value, 0);
-  transform: translate3d($translate-value, 0, 0);
-}
-
-@mixin active-menu {
-  pointer-events: auto;
-  opacity: 1;
-  visibility: visible;
-  transform: translate(0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
 @mixin reset-menu {
-  @include active-menu;
   position: relative;
   top: auto;
   max-width: inherit;
@@ -32,18 +12,28 @@
 // ============= */
 
 .menu {
-  @include menu(-20%);
+  position: absolute;
   top: 100%;
   left: 0;
   z-index: 200;
   max-width: em(400);
+  min-height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate($translate-value, 0);
+  transform: translate3d($translate-value, 0, 0);
+  will-change: transform;
   transition:
     opacity .3s,
     visibility .3s,
     transform .3s;
 
   .menu-activated & {
-    @include active-menu;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 

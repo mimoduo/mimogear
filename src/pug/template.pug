@@ -13,11 +13,11 @@ html(
 )
   include regions/head.pug
   body
-    a.skip-link(href="#site-main") Skip to main content
+    a.skip-link(href="#main") Skip to main content
     block sprite
-      figure.site-sprite(style="display: none;")
+      figure.sprite(style="display: none;")
         include ../../dist/svg/sprite.symbol.svg
     include regions/header.pug
-    main.site-main#site-main(role="main")
+    main.main#main(role="main")
       block content
     include regions/footer.pug

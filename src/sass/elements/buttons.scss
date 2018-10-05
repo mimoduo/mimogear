@@ -12,13 +12,13 @@
   text-align: center;
   background: #eee;
 
-  &:focus,
-  &:hover {}
-
   &[disabled] {
     cursor: not-allowed;
     pointer-events: none;
   }
+
+  &:focus,
+  &:hover {}
 
   &-modifier {}
 }

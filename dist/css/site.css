@@ -313,6 +313,7 @@ template {
   visibility: hidden;
   transform: translate(-20%, 0);
   transform: translate3d(-20%, 0, 0);
+  will-change: transform;
   top: 100%;
   left: 0;
   z-index: 200;
@@ -731,15 +732,15 @@ td {
   padding: 1.25em 1.25rem; }
 
 /* ================
-// Site Logo
+// Logo
 // ============= */
-.site-logo {
+.logo {
   display: block;
   overflow: hidden;
   text-decoration: none;
   white-space: nowrap; }
 
-.site-logo-label {
+.logo-label {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
