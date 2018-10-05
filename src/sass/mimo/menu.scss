@@ -1,4 +1,4 @@
-@mixin drawer($translate-value: -20%) {
+@mixin menu($translate-value: -20%) {
   position: absolute;
   min-height: 100%;
   width: 100%;
@@ -9,7 +9,7 @@
   transform: translate3d($translate-value, 0, 0);
 }
 
-@mixin active-drawer {
+@mixin active-menu {
   pointer-events: auto;
   opacity: 1;
   visibility: visible;
@@ -17,8 +17,8 @@
   transform: translate3d(0, 0, 0);
 }
 
-@mixin reset-drawer {
-  @include active-drawer;
+@mixin reset-menu {
+  @include active-menu;
   position: relative;
   top: auto;
   max-width: inherit;
@@ -28,11 +28,11 @@
 
 
 /* ================
-// Drawer
+// Menu
 // ============= */
 
-.drawer {
-  @include drawer(-20%);
+.menu {
+  @include menu(-20%);
   top: 100%;
   left: 0;
   z-index: 200;
@@ -42,17 +42,17 @@
     visibility .3s,
     transform .3s;
 
-  .drawer-activated & {
-    @include active-drawer;
+  .menu-activated & {
+    @include active-menu;
   }
 }
 
 
 /* ================
-// Drawer Trigger
+// Menu Trigger
 // ============= */
 
-.drawer-trigger {
+.menu-trigger {
   position: relative;
   z-index: 400;
   height: em(50);
@@ -88,7 +88,7 @@
   &:before {
     margin-top: em(-6);
 
-    .drawer-activated & {
+    .menu-activated & {
       margin-top: 0;
       transform:
         translate(-50%, -50%)
@@ -99,7 +99,7 @@
   &:after {
     box-shadow: 0 em(6) 0 0 currentColor;
 
-    .drawer-activated & {
+    .menu-activated & {
       box-shadow: 0 0 0 0 transparent;
       transform:
         translate(-50%, -50%)

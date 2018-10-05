@@ -1,8 +1,10 @@
 header.site-header(role="banner")
-  block header
-    a.site-logo(href="./")
-      span.site-logo-label= siteTitle
-      +icon("logo")
-    button.drawer-trigger
-    .drawer
-      include ../partials/main-nav.pug
+  +section
+    .site-header-ribbon
+      block header
+        a.site-logo(href="./")
+          span.site-logo-label= siteTitle
+          +icon("logo")
+        button.menu-trigger
+        .menu
+          include ../partials/main-nav.pug

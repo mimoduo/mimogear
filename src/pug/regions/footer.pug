@@ -1,6 +1,7 @@
 footer.site-footer(role="contentinfo")
-  block footer
-    include ../partials/address.pug
+  +section
+    block footer
+      include ../partials/address.pug
 
 script(src=base + "js/site" + min + ".js")
 block additional-scripts

@@ -8,18 +8,18 @@ The mimo partials refer to the grid, slideshow, lightbox, and mimo-theme availab
 
 The sail partial contains styles that animate slides and help dictate mouse interaction. Make sure to style the previous control, next control, and pagination if they are in use.
 
-## Drawer
+## Menu
 
-There are three mixins available within the drawer partial as well as default styles for the drawer and respective drawer trigger. By default the drawer will be translated 20% of itself to the left. The following example will demonstrate the use of the reset drawer mixins in order to display drawer content on larger screens in its original stacking order.
+There are three mixins available within the menu partial as well as default styles for the menu and respective menu trigger. By default the menu will be translated 20% of itself to the left. The following example will demonstrate the use of the reset menu mixins in order to display menu content on larger screens in its original stacking order.
 
 **Sass**
 
 ```sass
-.drawer {
+.menu {
   /* styles */
 
   @media $aldnoah {
-    @include reset-drawer;
+    @include reset-menu;
   }
 
 }

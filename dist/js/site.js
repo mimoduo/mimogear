@@ -798,9 +798,9 @@ var Trigger = (function() {
 
 (function() {
 
-  var drawerTrigger = Trigger.init({
-    trigger: '.drawer-trigger',
-    bodyClass: 'drawer-activated'
+  var menuTrigger = Trigger.init({
+    trigger: '.menu-trigger',
+    bodyClass: 'menu-activated'
   });
 
   Lantern.init();
