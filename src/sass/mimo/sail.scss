@@ -6,28 +6,28 @@
   overflow: hidden;
 }
 
-  .sail-slides {
-    @include list-reset;
+.sail-slides {
+  @include list-reset;
+  position: relative;
+}
+
+.sail-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity .25s,
+    visibility .25s;
+
+  &-active {
     position: relative;
+    opacity: 1;
+    visibility: visible;
   }
-
-    .sail-slide {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      opacity: 0;
-      visibility: hidden;
-      transition:
-        opacity .25s,
-        visibility .25s;
-
-      &-active {
-        position: relative;
-        opacity: 1;
-        visibility: visible;
-      }
-    }
+}
 
 
 /* ================
@@ -42,16 +42,16 @@
   }
 }
 
-  .sail-control {
-    cursor: pointer;
+.sail-control {
+  cursor: pointer;
 
-    &:focus,
-    &:hover {}
+  &:focus,
+  &:hover {}
 
-    &-previous {}
+  &-previous {}
 
-    &-next {}
-  }
+  &-next {}
+}
 
 
 /* ================
@@ -66,12 +66,12 @@
   }
 }
 
-  .sail-page {
-    display: inline-block;
-    cursor: pointer;
+.sail-page {
+  display: inline-block;
+  cursor: pointer;
 
-    &:focus,
-    &:hover {}
+  &:focus,
+  &:hover {}
 
-    &-active {}
-  }
+  &-active {}
+}

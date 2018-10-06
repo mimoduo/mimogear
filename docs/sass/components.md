@@ -23,7 +23,7 @@ The logo component is your site's logo nested in a link. The default setup inclu
 **Background Based Logo**
 
 ```sass
-.site-logo {
+.logo {
   height: em(80);
   max-width: em(380);
   width: 100%;
@@ -34,4 +34,4 @@ The logo component is your site's logo nested in a link. The default setup inclu
 
 ## Search
 
-The search component contains selectors for the default pug search partial that isn't integrated into any particular search platform.
+The search component contains selectors for the default pug search partial that are initially hooked up to Google CSE.

@@ -4,10 +4,6 @@ Each Sass navigation partial should refer to its respective pug partial. This ma
 
 **Wondering where the nav links are coming from? They are populated using data from configuration.json.**
 
-## Behaviors
-
-Behaviors dictate how each navigation will look by default, includes interactivity for dropdowns, and also styles the skip link that is included on every page.
-
 ## Template
 
 In practice, each nav can be fairly unique. For that reason, a template navigation partial was created in order to have a go-to partial to copy into another unique partial for your new nav.

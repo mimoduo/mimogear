@@ -45,48 +45,26 @@ The spotlight (also commonly referred to as the hero image) can be using by plac
 
 ## Sprite
 
-The sprite partial is used to add a width and height for each icon that is included in the generated svg sprite. The example below styles a icon called "mage" with a given width and height. This selector should be nested within `.icon {}` inside the sprite partial.
+The sprite partial is used to add a width and height for each icon that is included in the generated svg sprite. All image dimensions are entered in the default list within this partial. If you need to change the size, you can utilize the transform: scale(1); property. Just make sure to utilize the +icon() mixin in pug and transform the available span. If you need to add a new icon, just add one to the $icons list variable within this file:
 
 **Sass**
 
 ```sass
-.icon {
-  /* styles */
-
-  &-mage {
-    height: em(20);
-    width: em(20);
-  }
-}
+/* (file-name, width, height) */
+$icons: (
+  (logo, 100, 150)
+);
 ```
 
 **CSS Output**
 
 ```css
-.icon-mage {
-  height: 1.25em;
-  width: 1.25em;
+.icon-logo {
+  height: 100px;
+  width: 150px;
 }
 ```
 
 ## Type
 
 The type partial contains styles for headings 1-6. Each heading is styled using a respective mixin. By using a mixin, you are able to use these heading styles on elements that aren't headers.
-
-**Sass**
-
-```sass
-cite {
-  @include h6;
-}
-```
-
-**CSS Output**
-
-```css
-cite {
-  margin: 1.25rem 0;
-  font-size: 1rem;
-  line-height: 1.375;
-}
-```

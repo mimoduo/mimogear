@@ -1,8 +1,8 @@
 # Mimo
 
-The mimo partials refer to the grid, slideshow, lightbox, and mimo-theme available within Mimogear.
+The mimo partials refer to the grid, slideshow, lightbox, and theme available within Mimogear.
 
-**Wondering where all those styles came from? You might want to delete the mimo-theme found in /src/sass/mimo/**
+**Wondering where all those styles came from? You might want to delete the theme found in /src/sass/mimo/theme or set $keepMimoTheme to false in /src/sass/configuration.
 
 ## Sail
 
@@ -10,7 +10,7 @@ The sail partial contains styles that animate slides and help dictate mouse inte
 
 ## Menu
 
-There are three mixins available within the menu partial as well as default styles for the menu and respective menu trigger. By default the menu will be translated 20% of itself to the left. The following example will demonstrate the use of the reset menu mixins in order to display menu content on larger screens in its original stacking order.
+By default the menu will be translated 20% of itself to the left. The following example will demonstrate the use of the reset menu mixins in order to display menu content on larger screens in its original stacking order.
 
 **Sass**
 
@@ -18,10 +18,9 @@ There are three mixins available within the menu partial as well as default styl
 .menu {
   /* styles */
 
-  @media $aldnoah {
+  @media #{$xl} {
     @include reset-menu;
   }
-
 }
 ```
 
@@ -36,10 +35,9 @@ The lantern partial styles the lightbox, dictates recommended controller positio
   &:after {
     content: attr(title);
   }
-
 }
 ```
 
 ## Mimo Theme
 
-The mimo-theme styles the main index page that is shown by default. _This theme is safe to delete_ during production.
+The theme styles the main index page that is shown by default. _This theme is safe to delete_ during production and can be disabled by setting $keepMimoTheme to false in /src/sass/configuration.

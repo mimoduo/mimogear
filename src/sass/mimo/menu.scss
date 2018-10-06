@@ -21,8 +21,8 @@
   width: 100%;
   opacity: 0;
   visibility: hidden;
-  transform: translate($translate-value, 0);
-  transform: translate3d($translate-value, 0, 0);
+  transform: translate(-20%, 0);
+  transform: translate3d(-20%, 0, 0);
   will-change: transform;
   transition:
     opacity .3s,

@@ -29,7 +29,7 @@ There aren't any favicon references added by default, but there is a favicon mix
 
 **Elements**
 
-* site logo
+* logo
 * menu
 
 **Blocks**

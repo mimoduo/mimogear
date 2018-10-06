@@ -27,40 +27,40 @@
   }
 }
 
-  .lantern-content {
-    height: 100%;
-    width: 100%;
+.lantern-content {
+  height: 100%;
+  width: 100%;
+}
+
+/* Lantern Image Container */
+.lantern-holder {
+  top: 50%;
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  user-select: none;
+  transform: translate(0, -50%);
+}
+
+/* Lantern User Controls */
+.lantern-control {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  transform: translate(0, -50%);
+
+  &-previous {
+    left: 0;
   }
 
-    /* Lantern Image Container */
-    .lantern-holder {
-      top: 50%;
-      display: block;
-      max-height: 100%;
-      max-width: 100%;
-      margin: 0 auto;
-      user-select: none;
-      transform: translate(0, -50%);
-    }
+  &-next {
+    right: 0;
+  }
 
-    /* Lantern User Controls */
-    .lantern-control {
-      position: absolute;
-      top: 50%;
-      cursor: pointer;
-      transform: translate(0, -50%);
-
-      &-previous {
-        left: 0;
-      }
-
-      &-next {
-        right: 0;
-      }
-
-      &-close {
-        top: 0;
-        right: 0;
-        transform: none;
-      }
-    }
+  &-close {
+    top: 0;
+    right: 0;
+    transform: none;
+  }
+}

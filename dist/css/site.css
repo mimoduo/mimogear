@@ -306,21 +306,19 @@ template {
 // ============= */
 .menu {
   position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 200;
+  max-width: 25em;
   min-height: 100%;
   width: 100%;
-  pointer-events: none;
   opacity: 0;
   visibility: hidden;
   transform: translate(-20%, 0);
   transform: translate3d(-20%, 0, 0);
   will-change: transform;
-  top: 100%;
-  left: 0;
-  z-index: 200;
-  max-width: 25em;
   transition: opacity .3s, visibility .3s, transform .3s; }
   .menu-activated .menu {
-    pointer-events: auto;
     opacity: 1;
     visibility: visible;
     transform: translate(0, 0);
@@ -666,17 +664,33 @@ body {
     pointer-events: none; }
 
 /* ================
-// Form Container
+// Skip Link
 // ============= */
-fieldset {
+.skip-link {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  display: inline-block; }
+  .skip-link:focus {
+    position: relative;
+    clip: auto;
+    height: auto;
+    width: auto; }
+
+/* ================
+// Forms
+// ============= */
+.typography fieldset {
   border: 0;
   margin: 0;
   padding: 0; }
 
-select {
+.typography select {
   appearance: none; }
 
-textarea {
+.typography textarea {
   min-height: 13.75em; }
 
 /* ================
@@ -685,18 +699,18 @@ textarea {
 /* ================
 // Blockquote / Cite
 // ============= */
-blockquote {
+.typography blockquote {
   margin: 1.25em 0; }
-  blockquote:before, blockquote:after {
+  .typography blockquote:before, .typography blockquote:after {
     speak: none; }
-  blockquote:before {
+  .typography blockquote:before {
     content: '\201C'; }
-  blockquote:after {
+  .typography blockquote:after {
     content: '\201D'; }
 
-cite {
+.typography cite {
   font-style: normal; }
-  cite:before {
+  .typography cite:before {
     content: '';
     speak: none; }
 
@@ -706,29 +720,29 @@ cite {
 /* ================
 // Paragraphs
 // ============= */
-p {
+.typography p {
   margin: 1.25em 0; }
 
 /* ================
 // Table
 // ============= */
-table {
+.typography table {
   width: 100%;
   border-collapse: collapse;
   margin: 1.25em 0; }
 
-tr {
+.typography tr {
   vertical-align: top; }
-  tr:nth-of-type(even) {
+  .typography tr:nth-of-type(even) {
     background: rgba(0, 0, 0, 0.05); }
 
-th {
+.typography th {
   padding: 1.25em 1.25rem;
   font-weight: normal;
   text-align: left;
   background: rgba(0, 0, 0, 0.15); }
 
-td {
+.typography td {
   padding: 1.25em 1.25rem; }
 
 /* ================
@@ -750,34 +764,26 @@ td {
 /* ================
 // Common Media
 // ============= */
-img,
-video,
-canvas,
-iframe {
+.typography img,
+.typography video,
+.typography canvas,
+.typography iframe {
   max-width: 100%; }
 
 /* ================
 // Images
 // ============= */
-img {
+.typography img {
   display: block; }
 
-figure {
+.typography figure {
   margin: 0; }
 
 /* ================
 // Iframes
 // ============= */
-iframe {
+.typography iframe {
   border: 0; }
-
-/* ================
-// Spotlights
-// ============= */
-.spotlight {
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover; }
 
 /* ================
 // Icons
@@ -805,45 +811,41 @@ iframe {
 /* ================
 // Type
 // ============= */
-h1, h2, h3, h4, h5, h6 {
+.typography h1, .typography h2, .typography h3, .typography h4, .typography h5, .typography h6 {
   font-weight: normal; }
 
-/* h1:Heading One */
-h1 {
+.typography h1 {
   margin: 1.25rem 0;
   font-size: 2.5rem;
   line-height: 1.25; }
 
-/* h2:Heading Two */
-h2 {
+.typography h2 {
   margin: 1.25rem 0;
   font-size: 2.1875rem;
   line-height: 1.28571; }
 
-/* h3:Heading Three */
-h3 {
+.typography h3 {
   margin: 1.25rem 0;
   font-size: 1.875rem;
   line-height: 1.33333; }
 
-/* h4:Heading Four */
-h4 {
+.typography h4 {
   margin: 1.25rem 0;
   font-size: 1.5625rem;
   line-height: 1.4; }
 
-/* h5:Heading Five */
-h5 {
+.typography h5 {
   margin: 1.25rem 0;
   font-size: 1.25rem;
   line-height: 1.5; }
 
-/* h6:Heading Six */
-h6 {
+.typography h6 {
   margin: 1.25rem 0;
   font-size: 1rem;
   line-height: 1.375; }
 
+/* Navigation
+// ::::::::::::: */
 /* Components
 // ::::::::::::: */
 /* ================
@@ -895,59 +897,3 @@ h6 {
   font-size: inherit;
   font-weight: inherit;
   background-color: #ddd; }
-
-/* Navigation
-// ::::::::::::: */
-/* ================
-// Generic Navigation & Menu Behaviors
-// ============= */
-nav ul,
-nav ol,
-menu ul,
-menu ol {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style: none; }
-
-nav li:focus ul,
-nav li:focus ol, nav li:hover ul,
-nav li:hover ol,
-menu li:focus ul,
-menu li:focus ol,
-menu li:hover ul,
-menu li:hover ol {
-  opacity: 1;
-  visibility: visible; }
-
-nav li ul,
-nav li ol,
-menu li ul,
-menu li ol {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 200;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .25s, visibility .25s; }
-
-nav a,
-menu a {
-  display: block; }
-
-/* ================
-// Skip Link
-// ============= */
-.skip-link {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  display: inline-block; }
-  .skip-link:focus {
-    position: relative;
-    clip: auto;
-    height: auto;
-    width: auto; }

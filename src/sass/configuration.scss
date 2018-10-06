@@ -33,3 +33,10 @@ $md: "screen and (min-width:" + (700px) + ")";
 $lg: "screen and (min-width:" + (900px) + ")";
 $xl: "screen and (min-width:" + (1100px) + ")";
 $xxl: "screen and (min-width:" + (1300px) + ")";
+
+$max-xs: "screen and (min-width:" + (299px) + ")";
+$max-sm: "screen and (min-width:" + (499px) + ")";
+$max-md: "screen and (min-width:" + (699px) + ")";
+$max-lg: "screen and (min-width:" + (899px) + ")";
+$max-xl: "screen and (min-width:" + (1099px) + ")";
+$max-xxl: "screen and (min-width:" + (1299px) + ")";
