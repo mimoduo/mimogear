@@ -1,8 +1,10 @@
 /* ================
-// Form Container
+// Forms
 // ============= */
 
-form {}
+.typography {
+
+  form {}
 
   fieldset {
     border: 0;
@@ -10,23 +12,24 @@ form {}
     padding: 0;
   }
 
-    label {}
+  label {}
 
-    input {
+  input {
 
-      &[type='text'] {}
+    &[type='text'] {}
 
-      &[type='radio'] {}
+    &[type='radio'] {}
 
-      &[type='checkbox'] {}
+    &[type='checkbox'] {}
 
-      &[type='submit'] {}
-    }
+    &[type='submit'] {}
+  }
 
-    select {
-      appearance: none;
-    }
+  select {
+    appearance: none;
+  }
 
-    textarea {
-      min-height: em(220);
-    }
+  textarea {
+    min-height: em(220);
+  }
+}

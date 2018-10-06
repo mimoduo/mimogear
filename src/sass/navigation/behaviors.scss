@@ -40,17 +40,3 @@ menu {
         display: block;
       }
 }
-
-
-/* ================
-// Skip Link
-// ============= */
-
-.skip-link {
-  @include visually-hidden;
-  display: inline-block;
-
-  &:focus {
-    @include reset-visually-hidden;
-  }
-}

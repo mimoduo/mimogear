@@ -23,7 +23,7 @@ html {
   box-sizing: inherit;
 }
 
-  body {
-    font-size: em($bodySize, 16);
-    line-height: nu($bodyLine, $bodySize);
-  }
+body {
+  font-size: em($bodySize, 16);
+  line-height: nu($bodyLine, $bodySize);
+}

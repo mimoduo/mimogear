@@ -2,12 +2,15 @@
 // Anchors
 // ============= */
 
-a {
+.typography {
 
-  &:focus,
-  &:hover {}
+  a {
 
-  &:visited {}
+    &:focus,
+    &:hover {}
+
+    &:visited {}
+  }
 }
 
 
@@ -15,29 +18,32 @@ a {
 // Blockquote / Cite
 // ============= */
 
-blockquote {
-  margin: em(20) 0;
+.typography {
+    
+  blockquote {
+    margin: em(20) 0;
 
-  &:before,
-  &:after {
-    speak: none;
+    &:before,
+    &:after {
+      speak: none;
+    }
+
+    &:before {
+      content: '\201C';
+    }
+
+    &:after {
+      content: '\201D';
+    }
   }
 
-  &:before {
-    content: '\201C';
-  }
+  cite {
+    font-style: normal;
 
-  &:after {
-    content: '\201D';
-  }
-}
-
-cite {
-  font-style: normal;
-
-  &:before {
-    content: '';
-    speak: none;
+    &:before {
+      content: '';
+      speak: none;
+    }
   }
 }
 
@@ -46,18 +52,24 @@ cite {
 // Lists
 // ============= */
 
-ul,
-ol {}
+.typography {
 
-  li {}
+  ul,
+  ol {}
+
+    li {}
+}
 
 
 /* ================
 // Paragraphs
 // ============= */
 
-p {
-  margin: em(20) 0;
+.typography {
+
+  p {
+    margin: em(20) 0;
+  }
 }
 
 
@@ -65,11 +77,13 @@ p {
 // Table
 // ============= */
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: em(20) 0;
-}
+.typography {
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: em(20) 0;
+  }
 
   tr {
     vertical-align: top;
@@ -79,13 +93,14 @@ table {
     }
   }
 
-    th {
-      padding: em(20) rem(20);
-      font-weight: normal;
-      text-align: left;
-      background: rgba(0, 0, 0, .15);
-    }
+  th {
+    padding: em(20) rem(20);
+    font-weight: normal;
+    text-align: left;
+    background: rgba(0, 0, 0, .15);
+  }
 
-    td {
-      padding: em(20) rem(20);
-    }
+  td {
+    padding: em(20) rem(20);
+  }
+}

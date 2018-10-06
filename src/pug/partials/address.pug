@@ -2,9 +2,9 @@
   itemscope
   itemtype="http://schema.org/Organization"
 )
-  .org(itemprop="name") Organization
+  .org(itemprop="name") Organization Name
   a.email(
-    href="mailto:"
+    href="mailto:@"
     itemprop="email"
   ) organization at gmail.com
   address(
@@ -13,7 +13,8 @@
     itemtype="http://schema.org/PostalAddress"
   )
     .street-address(itemprop="streetAddress") 82 West Pegasus St.
-    span.locality(itemprop="addressLocality") Washington,&nbsp;
-    span.region(itemprop="addressRegion") MA&nbsp;
-    span.postal-code(itemprop="postalCode") 480124
+    .street-address-details
+      span.locality(itemprop="addressLocality") Washington,&nbsp;
+      span.region(itemprop="addressRegion") MA&nbsp;
+      span.postal-code(itemprop="postalCode") 480124
   .tel(itemprop="telephone") 428-242-2020

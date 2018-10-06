@@ -7,6 +7,5 @@ nav.social-nav
           itemprop="url"
           target="_blank"
         )
-          span.social-nav-label.visible-for-screen-readers= link.name
-          span.social-nav-icon
-            +icon(link.name)
+          +icon("social-nav-icon", link.name)
+          span.social-nav-label= link.name

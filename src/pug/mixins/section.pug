@@ -1,4 +1,4 @@
-mixin section
-  .section
+mixin section(className)
+  .section(class=(className ? className : ""))
     .compartment
       block

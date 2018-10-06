@@ -2,11 +2,14 @@
 // Common Media
 // ============= */
 
-img,
-video,
-canvas,
-iframe {
-  max-width: 100%;
+.typography {
+
+  img,
+  video,
+  canvas,
+  iframe {
+    max-width: 100%;
+  }
 }
 
 
@@ -14,32 +17,27 @@ iframe {
 // Images
 // ============= */
 
-img {
-  display: block;
-}
+.typography {
 
-figure {
-  margin: 0;
-}
+  img {
+    display: block;
+  }
+
+  figure {
+    margin: 0;
+  }
 
   figcaption {}
+}
 
 
 /* ================
 // Iframes
 // ============= */
 
-iframe {
-  border: 0;
-}
+.typography {
 
-
-/* ================
-// Spotlights
-// ============= */
-
-.spotlight {
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
+  iframe {
+    border: 0;
+  }
 }

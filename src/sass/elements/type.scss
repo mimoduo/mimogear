@@ -2,72 +2,69 @@
 // Type
 // ============= */
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-}
-
-/* h1:Heading One */
 @mixin h1 {
   margin: rem(20) 0;
   font-size: rem($h1Size);
   line-height: nu($h1Line, $h1Size);
 }
 
-h1 {
-  @include h1;
-}
-
-/* h2:Heading Two */
 @mixin h2 {
   margin: rem(20) 0;
   font-size: rem($h2Size);
   line-height: nu($h2Line, $h2Size);
 }
 
-h2 {
-  @include h2;
-}
-
-/* h3:Heading Three */
 @mixin h3 {
   margin: rem(20) 0;
   font-size: rem($h3Size);
   line-height: nu($h3Line, $h3Size);
 }
 
-h3 {
-  @include h3;
-}
-
-/* h4:Heading Four */
 @mixin h4 {
   margin: rem(20) 0;
   font-size: rem($h4Size);
   line-height: nu($h4Line, $h4Size);
 }
 
-h4 {
-  @include h4;
-}
-
-/* h5:Heading Five */
 @mixin h5 {
   margin: rem(20) 0;
   font-size: rem($h5Size);
   line-height: nu($h5Line, $h5Size);
 }
 
-h5 {
-  @include h5;
-}
-
-/* h6:Heading Six */
 @mixin h6 {
   margin: rem(20) 0;
   font-size: rem($h6Size);
   line-height: nu($h6Line, $h6Size);
 }
 
-h6 {
-  @include h6;
+.typography {
+    
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+  }
+
+  h1 {
+    @include h1;
+  }
+
+  h2 {
+    @include h2;
+  }
+
+  h3 {
+    @include h3;
+  }
+
+  h4 {
+    @include h4;
+  }
+
+  h5 {
+    @include h5;
+  }
+
+  h6 {
+    @include h6;
+  }
 }
