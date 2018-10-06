@@ -11,7 +11,7 @@ before_script:
   - git config --global user.email "mimoduo@gmail.com"
   - git config --global user.name "Travis-CI"
 script:
-  - gulp ghPages --base --production
+  - gulp ghPages --base --min --production
 after_success:
   - surge --project ./dist --domain mimogear.surge.sh
 env:
