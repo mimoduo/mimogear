@@ -526,7 +526,7 @@ template {
 
 .bubble-icon {
   position: absolute;
-  top: 0.3125rem;
+  top: 0;
   left: 0; }
 
 .bubble-svg {
