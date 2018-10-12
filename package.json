@@ -25,7 +25,7 @@
   ],
   "devDependencies": {
     "autoprefixer": "^9.1.5",
-    "browser-sync": "^2.24.7",
+    "browser-sync": "^2.26.0",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-cached": "^1.1.1",
