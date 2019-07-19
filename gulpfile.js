@@ -2,8 +2,8 @@
 // Required Plugins
 // ============= */
 
-var gulp = require('gulp'),
-    fs = require('fs'),
+const { src, dest, lastRun, series, parallel, watch } = require('gulp');
+var fs = require('fs'),
     reload = require('require-reload')(require),
     packageJSON = require('./package.json'),
     configuration = require('./configuration.json'),
@@ -65,7 +65,6 @@ function renameFile(file) {
 }
 
 function readGallery(dir, key, nest) {
-
   fs.readdir(dir, function(err, images) {
     if(err) return console.error(err);
 
@@ -87,20 +86,18 @@ function readGallery(dir, key, nest) {
       }
     }
   });
-
 }
 
-gulp.task('gallery', function() {
-
+function gallery(done) {
   pugLocals.gallery = {};
 
   readGallery('src/images/');
 
-});
+  done();
+}
 
-gulp.task('pug', function() {
-
-  return gulp.src([
+function compilePug() {
+  return src([
     'src/pug/pages/**/*.pug',
     '!src/pug/pages/**/_*.pug'
   ])
@@ -108,15 +105,13 @@ gulp.task('pug', function() {
       locals: pugLocals,
       pretty: true
     }))
-    .pipe(gulp.dest('./'))
-    .pipe(gulpif(production, gulp.dest(dist)))
+    .pipe(dest('./'))
+    .pipe(gulpif(production, dest(dist)))
     .pipe(browserSync.stream());
+}
 
-});
-
-gulp.task('pug-pages', function() {
-
-  return gulp.src([
+function pugPages() {
+  return src([
     'src/pug/pages/**/*.pug',
     '!src/pug/pages/**/_*.pug'
   ])
@@ -132,86 +127,72 @@ gulp.task('pug-pages', function() {
       locals: pugLocals,
       pretty: true
     }))
-    .pipe(gulp.dest('./'))
+    .pipe(dest('./'))
     .pipe(browserSync.stream());
-
-});
+}
 
 
 /* ================
 // Compile Sass
 // ============= */
 
-gulp.task('sass', function() {
-
-  return gulp.src('src/sass/site.scss')
+function compileSass() {
+  return src('src/sass/site.scss')
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest(dist + 'css'))
+    .pipe(dest(dist + 'css'))
     .pipe(browserSync.stream())
     .pipe(gulpif(production, postcss([
-      require('autoprefixer')({
-        browsers: [
-          '> 1%',
-          'last 2 versions'
-        ],
-        cascade: false
-      })
+      require('autoprefixer')()
     ])))
     .pipe(gulpif(production, cssnano()))
     .pipe(gulpif(production, extReplace('.min.css')))
-    .pipe(gulpif(production, gulp.dest(dist + 'css')))
+    .pipe(gulpif(production, dest(dist + 'css')))
     .pipe(gulpif(production, browserSync.stream()));
-
-});
+}
 
 
 /* ================
 // Compile JS
 // ============= */
 
-gulp.task('js', function() {
-
-  return gulp.src([
+function compileJs() {
+  return src([
     'src/js/vendor/*.js',
     'src/js/mimo/*.js',
     'src/js/site/*.js'
   ])
     .pipe(concat('site.js'))
-    .pipe(gulp.dest(dist + 'js'))
+    .pipe(dest(dist + 'js'))
     .pipe(browserSync.stream())
     .pipe(gulpif(production, uglify({
       mangle: false
     })))
     .pipe(gulpif(production, extReplace('.min.js')))
-    .pipe(gulpif(production, gulp.dest(dist + 'js')))
+    .pipe(gulpif(production, dest(dist + 'js')))
     .pipe(gulpif(production, browserSync.stream()));
-
-});
+}
 
 
 /* ================
 // Optimize Images
 // ============= */
 
-gulp.task('images', function() {
-
-  return gulp.src('src/images/**/*')
+function images() {
+  return src('src/images/**/*')
     .pipe(changed(dist + 'images'))
     .pipe(imagemin())
-    .pipe(gulp.dest(dist + 'images'))
+    .pipe(dest(dist + 'images'))
     .pipe(browserSync.stream());
-
-});
+}
 
 
 /* ================
 // Create Sprite
 // ============= */
 
-gulp.task('sprite', function() {
-
-  return gulp.src('src/icons/*.svg')
+function sprite() {
+  return src('src/icons/*.svg')
     .pipe(svgSprite({
       mode: {
         inline: true,
@@ -225,18 +206,16 @@ gulp.task('sprite', function() {
         dimensionAttributes: false
       }
     }))
-    .pipe(gulp.dest('.'))
+    .pipe(dest('.'))
     .pipe(browserSync.stream());
-
-});
+}
 
 
 /* ================
 // Sync Changes
 // ============= */
 
-gulp.task('browser-sync', function() {
-
+function runBrowserSync(done) {
   browserSync.init({
     logPrefix: packageJSON.name,
     ui: false,
@@ -252,21 +231,20 @@ gulp.task('browser-sync', function() {
     }
   });
 
-});
+}
 
-gulp.task('reload', function() {
+function reload(done) {
+  browserSync.reload();
 
-	browserSync.reload();
-
-});
+  done();
+}
 
 
 /* ================
 // Reset Build
 // ============= */
 
-gulp.task('reset', function() {
-
+function reset(done) {
   try {
     packageJSON = reload('./package.json');
     configuration = reload('./configuration.json');
@@ -275,15 +253,15 @@ gulp.task('reset', function() {
     console.error("Failed to reload package.json! Error: ", e);
   }
 
-});
+  done();
+}
 
 
 /* ================
 // Clean Dist
 // ============= */
 
-gulp.task('clean', function() {
-
+function clean(done) {
   del([
     '*.html',
     'dist/**',
@@ -292,71 +270,89 @@ gulp.task('clean', function() {
     '!dist/svg/**'
   ]);
 
-});
+  done();
+}
 
 
 /* ================
 // Github Pages Deployment
 // ============= */
 
-gulp.task('ghPages', ['clean', 'build'], function() {
-
-  return gulp.src('./dist/**/*')
+function runGhPages() {
+  return src('./dist/**/*')
     .pipe(ghPages());
-
-});
+}
 
 
 /* ================
 // Surge Direct Deployment
 // ============= */
 
-gulp.task('surge', ['clean', 'build'], function() {
-
+function runSurge() {
   return surge({
     project: './dist',
     domain: 'mimogear.surge.sh'
   });
-
-});
+}
 
 
 /* ================
 // Watch Files
 // ============= */
 
-gulp.task('watch', function() {
-
-  gulp.watch(['configuration.json', 'package.json'], ['reset', 'build']);
-  gulp.watch(['src/pug/**/*.pug', '!src/pug/pages/**/*.pug'], ['pug']);
-  gulp.watch('src/pug/pages/**/*.pug', ['pug-pages']);
-  gulp.watch('src/sass/**/*.scss', ['sass']);
-  gulp.watch('src/js/**/*.js', ['js']);
-  gulp.watch('src/images/**/*', ['images', 'gallery']);
-  gulp.watch('src/icons/*', ['sprite']);
-
-});
+function watchFiles() {
+  watch(['configuration.json', 'package.json'], series(reset, series(
+    images,
+    sprite,
+    compileSass,
+    compileJs,
+    gallery,
+    compilePug
+  )));
+  watch(['src/pug/**/*.pug', '!src/pug/pages/**/*.pug'], series(compilePug));
+  watch('src/pug/pages/**/*.pug', series(pugPages));
+  watch('src/sass/**/*.scss', series(compileSass));
+  watch('src/js/**/*.js', series(compileJs));
+  watch('src/images/**/*', series(images, gallery));
+  watch('src/icons/*', series(sprite));
+}
 
 
 /* ================
 // Gulp Task Sets
 // ============= */
 
-gulp.task('build', [
-  'images',
-  'sprite',
-  'sass',
-  'js',
-  'gallery',
-  'pug'
-]);
+exports.compilePug = compilePug;
+exports.compileSass = compileSass;
+exports.compileJs = compileJs;
 
-gulp.task('dev', [
-  'watch',
-  'browser-sync'
-]);
+exports.clean = clean;
+exports.runGhPages = runGhPages;
+exports.runSurge = runSurge;
 
-gulp.task('default', [
-  'build',
-  'dev'
-]);
+exports.build = series(
+  images,
+  sprite,
+  compileSass,
+  compileJs,
+  gallery,
+  compilePug
+);
+
+exports.dev = parallel(
+  watchFiles,
+  runBrowserSync
+);
+
+exports.default = series(
+  images,
+  sprite,
+  compileSass,
+  compileJs,
+  gallery,
+  compilePug,
+  parallel(
+    watchFiles,
+    runBrowserSync
+  )
+);
