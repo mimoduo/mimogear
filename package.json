@@ -45,7 +45,7 @@
     "gulp-svg-sprite": "^1.5.0",
     "gulp-uglify": "^3.0.2",
     "jstransformer-markdown": "^1.2.1",
-    "minimist": "^1.2.3",
+    "minimist": "^1.2.6",
     "require-reload": "^0.2.2",
     "surge": "^0.21.3"
   },
